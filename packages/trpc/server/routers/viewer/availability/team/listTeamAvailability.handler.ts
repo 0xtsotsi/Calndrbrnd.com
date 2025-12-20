@@ -1,10 +1,10 @@
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import type { DateRange } from "@calcom/features/schedules/lib/date-ranges";
-import { buildDateRanges } from "@calcom/features/schedules/lib/date-ranges";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { prisma } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import type { DateRange } from "@calndrbrnd/features/schedules/lib/date-ranges";
+import { buildDateRanges } from "@calndrbrnd/features/schedules/lib/date-ranges";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,7 +1,7 @@
 import z from "zod";
 
-import { ZColumnFilter, ZSorting } from "@calcom/features/data-table/lib/types";
-import type { ColumnFilter, Sorting } from "@calcom/features/data-table/lib/types";
+import { ZColumnFilter, ZSorting } from "@calndrbrnd/features/data-table/lib/types";
+import type { ColumnFilter, Sorting } from "@calndrbrnd/features/data-table/lib/types";
 
 export type RawDataInput = {
   startDate: string;

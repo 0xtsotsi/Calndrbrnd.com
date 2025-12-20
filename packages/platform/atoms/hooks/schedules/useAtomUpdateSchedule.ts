@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import type { UpdateScheduleResponse } from "@calcom/features/schedules/services/ScheduleService";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiErrorResponse, UpdateAtomScheduleDto } from "@calcom/platform-types";
+import type { UpdateScheduleResponse } from "@calndrbrnd/features/schedules/services/ScheduleService";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiResponse, ApiErrorResponse, UpdateAtomScheduleDto } from "@calndrbrnd/platform-types";
 
 import http from "../../lib/http";
 import { QUERY_KEY as ScheduleQueryKey } from "./useAtomSchedule";

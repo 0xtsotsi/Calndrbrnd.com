@@ -27,7 +27,7 @@ import {
 import { ApiHeader, ApiOperation, ApiTags } from "@nestjs/swagger";
 import { Request } from "express";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 import { CreateRoutingFormResponseInput } from "../inputs/create-routing-form-response.input";
 import { GetRoutingFormResponsesParams } from "../inputs/get-routing-form-responses-params.input";

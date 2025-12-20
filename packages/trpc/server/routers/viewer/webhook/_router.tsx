@@ -1,4 +1,4 @@
-import type { Webhook } from "@calcom/features/webhooks/lib/dto/types";
+import type { Webhook } from "@calndrbrnd/features/webhooks/lib/dto/types";
 
 import { router } from "../../../trpc";
 import { ZCreateInputSchema } from "./create.schema";

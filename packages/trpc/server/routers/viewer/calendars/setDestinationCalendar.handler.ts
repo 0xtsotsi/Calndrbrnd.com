@@ -1,11 +1,11 @@
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@calndrbrnd/app-store/delegationCredential";
 import {
   getCalendarCredentials,
   getConnectedCalendars,
-} from "@calcom/features/calendars/lib/CalendarManager";
-import { DestinationCalendarRepository } from "@calcom/features/calendars/repositories/DestinationCalendarRepository";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+} from "@calndrbrnd/features/calendars/lib/CalendarManager";
+import { DestinationCalendarRepository } from "@calndrbrnd/features/calendars/repositories/DestinationCalendarRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

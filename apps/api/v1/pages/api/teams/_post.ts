@@ -1,14 +1,14 @@
 import type { NextApiRequest } from "next";
 
-import { getStripeCustomerIdFromUserId } from "@calcom/app-store/stripepayment/lib/customer";
-import { getDubCustomer } from "@calcom/features/auth/lib/dub";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { IS_PRODUCTION } from "@calcom/lib/constants";
-import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calcom/lib/constants";
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { getStripeCustomerIdFromUserId } from "@calndrbrnd/app-store/stripepayment/lib/customer";
+import { getDubCustomer } from "@calndrbrnd/features/auth/lib/dub";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { IS_PRODUCTION } from "@calndrbrnd/lib/constants";
+import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { schemaMembershipPublic } from "~/lib/validations/membership";
 import { schemaTeamCreateBodyParams, schemaTeamReadPublic } from "~/lib/validations/team";

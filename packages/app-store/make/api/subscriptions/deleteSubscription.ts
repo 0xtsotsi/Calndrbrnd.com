@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import z from "zod";
 
-import findValidApiKey from "@calcom/features/ee/api-keys/lib/findValidApiKey";
-import { deleteSubscription } from "@calcom/features/webhooks/lib/scheduleTrigger";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
+import findValidApiKey from "@calndrbrnd/features/ee/api-keys/lib/findValidApiKey";
+import { deleteSubscription } from "@calndrbrnd/features/webhooks/lib/scheduleTrigger";
+import { defaultHandler } from "@calndrbrnd/lib/server/defaultHandler";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
 
 const querySchema = z.object({
   apiKey: z.string(),

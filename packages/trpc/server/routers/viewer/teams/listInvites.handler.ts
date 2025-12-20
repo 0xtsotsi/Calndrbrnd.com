@@ -1,5 +1,5 @@
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { prisma } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 type ListInvitesOptions = {
   ctx: {

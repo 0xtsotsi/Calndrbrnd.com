@@ -1,5 +1,5 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
 
 import { type Container, createModule } from "../di";
 

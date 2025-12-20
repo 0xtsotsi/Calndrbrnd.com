@@ -2,16 +2,16 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 
 import { getBannerUrl } from "./update.handler";
 
-vi.mock("@calcom/lib/server/avatar", () => ({
+vi.mock("@calndrbrnd/lib/server/avatar", () => ({
   uploadLogo: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/server/resizeBase64Image", () => ({
+vi.mock("@calndrbrnd/lib/server/resizeBase64Image", () => ({
   resizeBase64Image: vi.fn((input) => input),
 }));
 
-const { uploadLogo } = await import("@calcom/lib/server/avatar");
-const { resizeBase64Image } = await import("@calcom/lib/server/resizeBase64Image");
+const { uploadLogo } = await import("@calndrbrnd/lib/server/avatar");
+const { resizeBase64Image } = await import("@calndrbrnd/lib/server/resizeBase64Image");
 
 describe("getBannerUrl", () => {
   const mockTeamId = 123;

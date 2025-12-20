@@ -1,7 +1,7 @@
 "use client";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 export const SkeletonLoader = () => {
   const { t } = useLocale();

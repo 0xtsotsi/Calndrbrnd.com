@@ -2,7 +2,7 @@ import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
 import { Type } from "class-transformer";
 import { IsNumber, IsBoolean, IsString, ValidateNested, IsIn, IsOptional } from "class-validator";
 
-import { WorkflowActions, WorkflowTemplates } from "@calcom/platform-libraries";
+import { WorkflowActions, WorkflowTemplates } from "@calndrbrnd/platform-libraries";
 
 export const EMAIL_HOST = "email_host";
 export const EMAIL_ATTENDEE = "email_attendee";

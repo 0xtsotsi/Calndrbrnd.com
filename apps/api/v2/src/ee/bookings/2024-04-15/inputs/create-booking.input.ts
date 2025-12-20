@@ -15,7 +15,7 @@ import {
 } from "class-validator";
 import { ValidationOptions, registerDecorator } from "class-validator";
 
-import { RESCHEDULED_BY_DOCS } from "@calcom/platform-types";
+import { RESCHEDULED_BY_DOCS } from "@calndrbrnd/platform-types";
 
 type BookingName = { firstName: string; lastName: string };
 

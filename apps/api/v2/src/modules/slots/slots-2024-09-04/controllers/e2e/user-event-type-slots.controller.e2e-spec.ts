@@ -34,12 +34,12 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_09_04 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_09_04 } from "@calndrbrnd/platform-constants";
 import type {
   CreateScheduleInput_2024_06_11,
   ReserveSlotOutput_2024_09_04 as ReserveSlotOutputData_2024_09_04,
-} from "@calcom/platform-types";
-import type { EventType, User, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { EventType, User, Team } from "@calndrbrnd/prisma/client";
 
 describe("Slots 2024-09-04 Endpoints", () => {
   describe("User event type slots", () => {

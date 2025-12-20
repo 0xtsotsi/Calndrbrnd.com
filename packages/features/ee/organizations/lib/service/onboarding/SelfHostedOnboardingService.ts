@@ -1,16 +1,16 @@
-import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { DeploymentRepository } from "@calcom/features/ee/deployment/repositories/DeploymentRepository";
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { findUserToBeOrgOwner } from "@calcom/features/ee/organizations/lib/server/orgCreationUtils";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import type { Team, User } from "@calcom/prisma/client";
-import { BillingPeriod } from "@calcom/prisma/enums";
-import { orgOnboardingInvitedMembersSchema, orgOnboardingTeamsSchema } from "@calcom/prisma/zod-utils";
+import { LicenseKeySingleton } from "@calndrbrnd/ee/common/server/LicenseKeyService";
+import { DeploymentRepository } from "@calndrbrnd/features/ee/deployment/repositories/DeploymentRepository";
+import { getOrganizationRepository } from "@calndrbrnd/features/ee/organizations/di/OrganizationRepository.container";
+import { findUserToBeOrgOwner } from "@calndrbrnd/features/ee/organizations/lib/server/orgCreationUtils";
+import { OrganizationOnboardingRepository } from "@calndrbrnd/features/organizations/repositories/OrganizationOnboardingRepository";
+import { IS_SELF_HOSTED } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Team, User } from "@calndrbrnd/prisma/client";
+import { BillingPeriod } from "@calndrbrnd/prisma/enums";
+import { orgOnboardingInvitedMembersSchema, orgOnboardingTeamsSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { BaseOnboardingService } from "./BaseOnboardingService";
 import type {

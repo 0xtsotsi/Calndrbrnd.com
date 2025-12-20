@@ -19,9 +19,9 @@ import {
   GOOGLE_MEET,
   GOOGLE_MEET_TYPE,
   SUCCESS_STATUS,
-} from "@calcom/platform-constants";
-import type { ApiSuccessResponse } from "@calcom/platform-types";
-import type { User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-constants";
+import type { ApiSuccessResponse } from "@calndrbrnd/platform-types";
+import type { User } from "@calndrbrnd/prisma/client";
 
 describe("Conferencing Endpoints", () => {
   describe("conferencing controller e2e tests", () => {

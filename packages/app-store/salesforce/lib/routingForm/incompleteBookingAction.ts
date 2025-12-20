@@ -1,5 +1,5 @@
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import logger from "@calcom/lib/logger";
+import { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
+import logger from "@calndrbrnd/lib/logger";
 
 import { routingFormIncompleteBookingDataSchema } from "../../zod";
 import SalesforceCRMService from "../CrmService";

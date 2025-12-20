@@ -2,7 +2,7 @@ import { ApiPropertyOptional } from "@nestjs/swagger";
 import { Transform } from "class-transformer";
 import { ArrayMaxSize, ArrayNotEmpty, IsEmail, IsOptional } from "class-validator";
 
-import { SkipTakePagination } from "@calcom/platform-types";
+import { SkipTakePagination } from "@calndrbrnd/platform-types";
 
 export class GetTeamMembershipsInput extends SkipTakePagination {
   @IsOptional()

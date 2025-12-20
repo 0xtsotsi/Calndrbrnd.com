@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import React, { forwardRef, useCallback, useId, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { Alert } from "../../alert";
 import { Icon } from "../../icon";

@@ -31,7 +31,7 @@ vi.mock("next/server", () => ({
   },
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {
     booking: {
       findUnique: vi.fn(),
@@ -43,15 +43,15 @@ vi.mock("@calcom/prisma", () => ({
   },
 }));
 
-vi.mock("@calcom/trpc/server/createContext", () => ({
+vi.mock("@calndrbrnd/trpc/server/createContext", () => ({
   createContext: vi.fn().mockResolvedValue({}),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/bookings/_router", () => ({
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/bookings/_router", () => ({
   bookingsRouter: {},
 }));
 
-vi.mock("@calcom/trpc/server/trpc", () => ({
+vi.mock("@calndrbrnd/trpc/server/trpc", () => ({
   createCallerFactory: vi.fn().mockReturnValue(() => ({
     confirm: vi.fn().mockResolvedValue({}),
   })),

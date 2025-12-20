@@ -1,8 +1,8 @@
 import type { NextApiRequest } from "next";
 
-import isAuthorized from "@calcom/features/auth/lib/oAuthAuthorization";
-import findValidApiKey from "@calcom/features/ee/api-keys/lib/findValidApiKey";
-import { HttpError } from "@calcom/lib/http-error";
+import isAuthorized from "@calndrbrnd/features/auth/lib/oAuthAuthorization";
+import findValidApiKey from "@calndrbrnd/features/ee/api-keys/lib/findValidApiKey";
+import { HttpError } from "@calndrbrnd/lib/http-error";
 
 export async function validateAccountOrApiKey(req: NextApiRequest, requiredScopes: string[] = []) {
   const apiKey = req.query.apiKey as string;

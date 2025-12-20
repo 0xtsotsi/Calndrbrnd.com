@@ -205,25 +205,25 @@ const nextConfig = (phase) => {
     ],
     experimental: {
       // externalize server-side node_modules with size > 1mb, to improve dev mode performance/RAM usage
-      optimizePackageImports: ["@calcom/ui"],
+      optimizePackageImports: ["@calndrbrnd/ui"],
       webpackMemoryOptimizations: true,
       webpackBuildWorker: true,
     },
     productionBrowserSourceMaps: true,
     transpilePackages: [
-      "@calcom/app-store",
-      "@calcom/dayjs",
-      "@calcom/emails",
-      "@calcom/embed-core",
-      "@calcom/features",
-      "@calcom/lib",
-      "@calcom/prisma",
-      "@calcom/trpc",
+      "@calndrbrnd/app-store",
+      "@calndrbrnd/dayjs",
+      "@calndrbrnd/emails",
+      "@calndrbrnd/embed-core",
+      "@calndrbrnd/features",
+      "@calndrbrnd/lib",
+      "@calndrbrnd/prisma",
+      "@calndrbrnd/trpc",
       "@coss/ui",
     ],
     modularizeImports: {
-      "@calcom/features/insights/components": {
-        transform: "@calcom/features/insights/components/{{member}}",
+      "@calndrbrnd/features/insights/components": {
+        transform: "@calndrbrnd/features/insights/components/{{member}}",
         skipDefaultConversion: true,
         preventFullImport: true,
       },

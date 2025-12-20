@@ -1,15 +1,15 @@
 // or wherever it's from
 import { vi, describe, it, expect, beforeEach } from "vitest";
 
-import { SchedulingType } from "@calcom/prisma/enums";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
 
 import { buildEventForTeamEventType } from "../../service/RegularBookingService";
 
-vi.mock("@calcom/lib/server/i18n", () => ({
+vi.mock("@calndrbrnd/lib/server/i18n", () => ({
   getTranslation: vi.fn().mockResolvedValue("translated"),
 }));
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     default: vi.fn(),
     prisma: {},
@@ -19,7 +19,7 @@ vi.mock("@calcom/prisma", () => {
 const withTeamSpy = vi.fn().mockReturnThis();
 const withDestinationCalendarSpy = vi.fn().mockReturnThis();
 
-vi.mock("@calcom/features/CalendarEventBuilder", () => {
+vi.mock("@calndrbrnd/features/CalendarEventBuilder", () => {
   return {
     CalendarEventBuilder: {
       fromEvent: vi.fn().mockImplementation((_evt) => ({
@@ -34,7 +34,7 @@ vi.mock("@calcom/features/CalendarEventBuilder", () => {
   };
 });
 
-vi.mock("@calcom/app-store/_utils/calendars/processExternalId", () => ({
+vi.mock("@calndrbrnd/app-store/_utils/calendars/processExternalId", () => ({
   default: vi.fn((dc) => `external-${dc?.externalId ?? "id"}`),
 }));
 

@@ -9,7 +9,7 @@ import {
 } from "../CalEventParser";
 import { buildCalendarEvent, buildVideoCallData } from "./builder";
 
-vi.mock("@calcom/lib/constants", () => ({
+vi.mock("@calndrbrnd/lib/constants", () => ({
   WEBAPP_URL: "http://localhost:3000",
   APP_NAME: "Calndrbrnd.com",
 }));

@@ -1,13 +1,13 @@
 import type { Dispatch } from "react";
 import { shallow } from "zustand/shallow";
 
-import { useOrgBranding } from "@calcom/ee/organizations/context/provider";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Sheet, SheetContent, SheetBody, SheetHeader, SheetFooter } from "@calcom/ui/components/sheet";
-import { Loader } from "@calcom/ui/components/skeleton";
+import { useOrgBranding } from "@calndrbrnd/ee/organizations/context/provider";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Sheet, SheetContent, SheetBody, SheetHeader, SheetFooter } from "@calndrbrnd/ui/components/sheet";
+import { Loader } from "@calndrbrnd/ui/components/skeleton";
 
 import type { UserTableAction, UserTableState } from "../types";
 import { DisplayInfo } from "./DisplayInfo";

@@ -1,11 +1,11 @@
 import { describe, it, expect, vi } from "vitest";
-import { BookingStatus, WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import { BookingStatus, WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import type { BookingWebhookEventDTO, EventTypeInfo } from "../../../dto/types";
 import { BookingPayloadBuilder } from "./BookingPayloadBuilder";
 
-vi.mock("@calcom/lib/dayjs", () => ({
+vi.mock("@calndrbrnd/lib/dayjs", () => ({
   getUTCOffsetByTimezone: vi.fn(() => 0),
 }));
 

@@ -6,30 +6,30 @@ import {
   TestData,
   createBookingScenario,
   createOrganization,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
 import {
   expectSMSWorkflowToBeTriggered,
   expectSMSWorkflowToBeNotTriggered,
-} from "@calcom/web/test/utils/bookingScenario/expects";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@calndrbrnd/web/test/utils/bookingScenario/expects";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { v4 as uuidv4 } from "uuid";
 import { describe, expect, beforeAll, vi, beforeEach } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { scheduleBookingReminders } from "@calcom/features/ee/workflows/lib/scheduleBookingReminders";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import tasker from "@calcom/features/tasker";
-import * as rateLimitModule from "@calcom/lib/checkRateLimitAndThrowError";
-import type { Prisma } from "@calcom/prisma/client";
+import dayjs from "@calndrbrnd/dayjs";
+import { scheduleBookingReminders } from "@calndrbrnd/features/ee/workflows/lib/scheduleBookingReminders";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import tasker from "@calndrbrnd/features/tasker";
+import * as rateLimitModule from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 import {
   BookingStatus,
   WorkflowMethods,
   TimeUnit,
   WorkflowTriggerEvents,
   WorkflowActions,
-} from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+} from "@calndrbrnd/prisma/enums";
+import { test } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 import { deleteWorkfowRemindersOfRemovedMember } from "../../../teams/lib/deleteWorkflowRemindersOfRemovedMember";
 import { deleteRemindersOfActiveOnIds } from "../deleteRemindersOfActiveOnIds";
@@ -254,8 +254,8 @@ async function createWorkflowRemindersAndTasksForWorkflow(workflowName: string) 
   return workflow;
 }
 
-vi.mock("@calcom/lib/constants", async () => {
-  const actual = (await vi.importActual("@calcom/lib/constants")) as typeof import("@calcom/lib/constants");
+vi.mock("@calndrbrnd/lib/constants", async () => {
+  const actual = (await vi.importActual("@calndrbrnd/lib/constants")) as typeof import("@calndrbrnd/lib/constants");
   return {
     ...actual,
     IS_SMS_CREDITS_ENABLED: false,

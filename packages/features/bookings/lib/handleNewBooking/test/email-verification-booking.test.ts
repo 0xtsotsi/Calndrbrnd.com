@@ -11,17 +11,17 @@ import {
   getOrganizer,
   TestData,
   getScenarioData,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { getMockRequestDataForBooking } from "@calndrbrnd/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { vi, describe, expect, beforeEach } from "vitest";
 
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { test } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 
-vi.mock("@calcom/features/auth/lib/verifyCodeUnAuthenticated", () => ({
+vi.mock("@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated", () => ({
   verifyCodeUnAuthenticated: vi.fn(),
 }));
 
@@ -40,7 +40,7 @@ describe("handleNewBooking - Email Verification", () => {
       async () => {
         const handleNewBooking = getNewBookingHandler();
         const { verifyCodeUnAuthenticated } = await import(
-          "@calcom/features/auth/lib/verifyCodeUnAuthenticated"
+          "@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated"
         );
 
         const booker = getBooker({
@@ -102,7 +102,7 @@ describe("handleNewBooking - Email Verification", () => {
       async () => {
         const handleNewBooking = getNewBookingHandler();
         const { verifyCodeUnAuthenticated } = await import(
-          "@calcom/features/auth/lib/verifyCodeUnAuthenticated"
+          "@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated"
         );
 
         vi.mocked(verifyCodeUnAuthenticated).mockRejectedValue(new Error("Invalid verification code"));
@@ -167,7 +167,7 @@ describe("handleNewBooking - Email Verification", () => {
       async () => {
         const handleNewBooking = getNewBookingHandler();
         const { verifyCodeUnAuthenticated } = await import(
-          "@calcom/features/auth/lib/verifyCodeUnAuthenticated"
+          "@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated"
         );
 
         vi.mocked(verifyCodeUnAuthenticated).mockResolvedValue(undefined);
@@ -230,7 +230,7 @@ describe("handleNewBooking - Email Verification", () => {
       async () => {
         const handleNewBooking = getNewBookingHandler();
         const { verifyCodeUnAuthenticated } = await import(
-          "@calcom/features/auth/lib/verifyCodeUnAuthenticated"
+          "@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated"
         );
 
         const rateLimitError = new Error("Rate limit exceeded");
@@ -297,7 +297,7 @@ describe("handleNewBooking - Email Verification", () => {
       async () => {
         const handleNewBooking = getNewBookingHandler();
         const { verifyCodeUnAuthenticated } = await import(
-          "@calcom/features/auth/lib/verifyCodeUnAuthenticated"
+          "@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated"
         );
 
         const booker = getBooker({
@@ -357,7 +357,7 @@ describe("handleNewBooking - Email Verification", () => {
       async () => {
         const handleNewBooking = getNewBookingHandler();
         const { verifyCodeUnAuthenticated } = await import(
-          "@calcom/features/auth/lib/verifyCodeUnAuthenticated"
+          "@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated"
         );
 
         const booker = getBooker({

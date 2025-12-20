@@ -2,18 +2,18 @@ import type { Params } from "app/_types";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import type { CalendarSubscriptionProvider } from "@calcom/features/calendar-subscription/adapters/AdaptersFactory";
-import { DefaultAdapterFactory } from "@calcom/features/calendar-subscription/adapters/AdaptersFactory";
-import { CalendarSubscriptionService } from "@calcom/features/calendar-subscription/lib/CalendarSubscriptionService";
-import { CalendarCacheEventRepository } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheEventRepository";
-import { CalendarCacheEventService } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheEventService";
-import { CalendarSyncService } from "@calcom/features/calendar-subscription/lib/sync/CalendarSyncService";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import logger from "@calcom/lib/logger";
-import { SelectedCalendarRepository } from "@calcom/features/selectedCalendar/repositories/SelectedCalendarRepository";
-import { prisma } from "@calcom/prisma";
-import { defaultResponderForAppDir } from "@calcom/web/app/api/defaultResponderForAppDir";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import type { CalendarSubscriptionProvider } from "@calndrbrnd/features/calendar-subscription/adapters/AdaptersFactory";
+import { DefaultAdapterFactory } from "@calndrbrnd/features/calendar-subscription/adapters/AdaptersFactory";
+import { CalendarSubscriptionService } from "@calndrbrnd/features/calendar-subscription/lib/CalendarSubscriptionService";
+import { CalendarCacheEventRepository } from "@calndrbrnd/features/calendar-subscription/lib/cache/CalendarCacheEventRepository";
+import { CalendarCacheEventService } from "@calndrbrnd/features/calendar-subscription/lib/cache/CalendarCacheEventService";
+import { CalendarSyncService } from "@calndrbrnd/features/calendar-subscription/lib/sync/CalendarSyncService";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import logger from "@calndrbrnd/lib/logger";
+import { SelectedCalendarRepository } from "@calndrbrnd/features/selectedCalendar/repositories/SelectedCalendarRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import { defaultResponderForAppDir } from "@calndrbrnd/web/app/api/defaultResponderForAppDir";
 
 const log = logger.getSubLogger({ prefix: ["calendar-webhook"] });
 

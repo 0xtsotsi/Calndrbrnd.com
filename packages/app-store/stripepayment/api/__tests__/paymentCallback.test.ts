@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import sendVerificationRequest from "@calcom/features/auth/lib/sendVerificationRequest";
-import { HttpError } from "@calcom/lib/http-error";
-import { VerificationTokenService } from "@calcom/lib/server/service/VerificationTokenService";
-import { prisma } from "@calcom/prisma";
+import sendVerificationRequest from "@calndrbrnd/features/auth/lib/sendVerificationRequest";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { VerificationTokenService } from "@calndrbrnd/lib/server/service/VerificationTokenService";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { getCustomerAndCheckoutSession } from "../../lib/getCustomerAndCheckoutSession";
 
 // Mock dependencies
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {
     user: {
       findFirst: vi.fn(),
@@ -19,8 +19,8 @@ vi.mock("@calcom/prisma", () => ({
 }));
 
 vi.mock("../../lib/getCustomerAndCheckoutSession");
-vi.mock("@calcom/features/auth/lib/sendVerificationRequest");
-vi.mock("@calcom/lib/server/service/VerificationTokenService");
+vi.mock("@calndrbrnd/features/auth/lib/sendVerificationRequest");
+vi.mock("@calndrbrnd/lib/server/service/VerificationTokenService");
 
 const mockGetCustomerAndCheckoutSession = vi.mocked(getCustomerAndCheckoutSession);
 const mockSendVerificationRequest = vi.mocked(sendVerificationRequest);

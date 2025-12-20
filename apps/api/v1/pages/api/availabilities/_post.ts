@@ -1,8 +1,8 @@
 import type { NextApiRequest } from "next";
 
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
 
 import {
   schemaAvailabilityCreateBodyParams,

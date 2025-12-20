@@ -43,7 +43,7 @@ import { ClassSerializerInterceptor } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 import { plainToInstance } from "class-transformer";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 @Controller({
   path: "/v2/organizations/:orgId",

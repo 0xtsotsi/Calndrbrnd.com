@@ -1,6 +1,6 @@
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { MembershipRole } from "@calcom/prisma/enums";
+import type { PermissionString } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

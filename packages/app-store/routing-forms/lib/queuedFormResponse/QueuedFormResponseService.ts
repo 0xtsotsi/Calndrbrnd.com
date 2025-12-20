@@ -1,4 +1,4 @@
-import type logger from "@calcom/lib/logger";
+import type logger from "@calndrbrnd/lib/logger";
 
 import type { QueuedFormResponseRepositoryInterface } from "./QueuedFormResponseRepository.interface";
 

@@ -4,17 +4,17 @@ import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import posthog from "posthog-js";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { DialogFooter } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
-import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import slugify from "@calndrbrnd/lib/slugify";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogFooter } from "@calndrbrnd/ui/components/dialog";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { revalidateEventTypesList } from "@calndrbrnd/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
+import { revalidateTeamsList } from "@calndrbrnd/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 
 import { useOrgBranding } from "../../organizations/context/provider";
 import { subdomainSuffix } from "../../organizations/lib/orgDomains";

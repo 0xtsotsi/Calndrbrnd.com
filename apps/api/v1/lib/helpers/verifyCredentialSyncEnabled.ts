@@ -1,6 +1,6 @@
 import type { NextMiddleware } from "next-api-middleware";
 
-import { APP_CREDENTIAL_SHARING_ENABLED } from "@calcom/lib/constants";
+import { APP_CREDENTIAL_SHARING_ENABLED } from "@calndrbrnd/lib/constants";
 
 export const verifyCredentialSyncEnabled: NextMiddleware = async (req, res, next) => {
   const { isSystemWideAdmin } = req;

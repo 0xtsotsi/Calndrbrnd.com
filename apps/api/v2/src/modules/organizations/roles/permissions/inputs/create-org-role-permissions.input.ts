@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsArray, IsString, Validate } from "class-validator";
 
-import type { PermissionString } from "@calcom/platform-libraries/pbac";
+import type { PermissionString } from "@calndrbrnd/platform-libraries/pbac";
 
 import { orgPermissionEnum } from "../../inputs/base-org-role.input";
 import { OrgPermissionStringValidator } from "./validators/org-permission-string.validator";

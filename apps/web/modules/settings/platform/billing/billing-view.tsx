@@ -2,14 +2,14 @@
 
 import { usePathname } from "next/navigation";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import Shell from "@calcom/features/shell/Shell";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
-import { PlatformPricing } from "@calcom/web/components/settings/platform/pricing/platform-pricing/index";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogTrigger, ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { PlatformPricing } from "@calndrbrnd/web/components/settings/platform/pricing/platform-pricing/index";
 
 import { useUnsubscribeTeamToStripe } from "@lib/hooks/settings/platform/billing/useUnsubscribeTeamToStripe";
 

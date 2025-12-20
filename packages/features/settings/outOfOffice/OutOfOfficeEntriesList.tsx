@@ -10,7 +10,7 @@ import {
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 import {
   DataTableWrapper,
   DataTableToolbar,
@@ -21,21 +21,21 @@ import {
   ZDateRangeFilterValue,
   DataTableFilters,
   DataTableSegment,
-} from "@calcom/features/data-table";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/features/data-table";
+import { useSegments } from "@calndrbrnd/features/data-table/hooks/useSegments";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import ServerTrans from "@calndrbrnd/lib/components/ServerTrans";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import CreateNewOutOfOfficeEntryButton from "./CreateNewOutOfOfficeEntryButton";
 import type { BookingRedirectForm } from "./CreateOrEditOutOfOfficeModal";

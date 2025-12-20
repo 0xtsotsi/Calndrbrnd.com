@@ -1,12 +1,12 @@
-import { getBillingProviderService } from "@calcom/ee/billing/di/containers/Billing";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { TeamService } from "@calcom/features/ee/teams/services/teamService";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import prisma from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getBillingProviderService } from "@calndrbrnd/ee/billing/di/containers/Billing";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { TeamService } from "@calndrbrnd/features/ee/teams/services/teamService";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import prisma from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

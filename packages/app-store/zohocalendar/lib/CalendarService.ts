@@ -1,9 +1,9 @@
 import { stringify } from "querystring";
 
-import dayjs from "@calcom/dayjs";
-import { getLocation } from "@calcom/lib/CalEventParser";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
+import dayjs from "@calndrbrnd/dayjs";
+import { getLocation } from "@calndrbrnd/lib/CalEventParser";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
 import type {
   Calendar,
   CalendarServiceEvent,
@@ -11,8 +11,8 @@ import type {
   EventBusyDate,
   IntegrationCalendar,
   NewCalendarEventType,
-} from "@calcom/types/Calendar";
-import type { CredentialPayload } from "@calcom/types/Credential";
+} from "@calndrbrnd/types/Calendar";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
 
 import getAppKeysFromSlug from "../../_utils/getAppKeysFromSlug";
 import type { ZohoAuthCredentials, FreeBusy, ZohoCalendarListResp } from "../types/ZohoCalendar";

@@ -1,12 +1,12 @@
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { UserPermissionRole } from "@calcom/kysely/types";
-import { ORGANIZATION_SELF_SERVE_PRICE } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
+import { getOrganizationRepository } from "@calndrbrnd/features/ee/organizations/di/OrganizationRepository.container";
+import { UserPermissionRole } from "@calndrbrnd/kysely/types";
+import { ORGANIZATION_SELF_SERVE_PRICE } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { ErrorWithCode } from "@calndrbrnd/lib/errors";
 
 import type { OnboardingUser } from "./service/onboarding/types";
 

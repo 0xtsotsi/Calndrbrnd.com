@@ -1,5 +1,5 @@
-import prisma from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 export const getBookingRequest = async ({
   bookerEmail,

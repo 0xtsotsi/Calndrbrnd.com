@@ -1,31 +1,31 @@
 import { describe, expect, vi, beforeEach, test } from "vitest";
 
-import type { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import type { WorkflowReminderRepository } from "@calcom/features/ee/workflows/repositories/WorkflowReminderRepository";
+import type { BookingSeatRepository } from "@calndrbrnd/features/bookings/repositories/BookingSeatRepository";
+import type { WorkflowReminderRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowReminderRepository";
 import {
   SchedulingType,
   TimeUnit,
   WorkflowActions,
   WorkflowTemplates,
   WorkflowTriggerEvents,
-} from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+} from "@calndrbrnd/prisma/enums";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import { EmailWorkflowService } from "./EmailWorkflowService";
 
-vi.mock("@calcom/emails/workflow-email-service", () => ({
+vi.mock("@calndrbrnd/emails/workflow-email-service", () => ({
   sendCustomWorkflowEmail: vi.fn(),
 }));
 
-vi.mock("@calcom/features/profile/lib/hideBranding", () => ({
+vi.mock("@calndrbrnd/features/profile/lib/hideBranding", () => ({
   getHideBranding: vi.fn().mockResolvedValue(false),
 }));
 
-vi.mock("@calcom/lib/server/i18n", () => ({
+vi.mock("@calndrbrnd/lib/server/i18n", () => ({
   getTranslation: vi.fn().mockResolvedValue((key: string) => key),
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {},
   prisma: {},
 }));

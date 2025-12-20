@@ -2,9 +2,9 @@ import "../__mocks__/CalendarAuth";
 
 import { beforeEach, describe, expect, test, vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import type { SelectedCalendar } from "@calcom/prisma/client";
-import type { CredentialForCalendarServiceWithEmail } from "@calcom/types/Credential";
+import dayjs from "@calndrbrnd/dayjs";
+import type { SelectedCalendar } from "@calndrbrnd/prisma/client";
+import type { CredentialForCalendarServiceWithEmail } from "@calndrbrnd/types/Credential";
 
 import { GoogleCalendarSubscriptionAdapter } from "../GoogleCalendarSubscription.adapter";
 

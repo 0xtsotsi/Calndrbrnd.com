@@ -3,12 +3,12 @@
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
-import Shell from "@calcom/features/shell/Shell";
-import { WebhookForm } from "@calcom/features/webhooks/components";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { DEFAULT_WEBHOOK_VERSION } from "@calcom/features/webhooks/lib/interface/IWebhookRepository";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { showToast } from "@calcom/ui/components/toast";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { WebhookForm } from "@calndrbrnd/features/webhooks/components";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { DEFAULT_WEBHOOK_VERSION } from "@calndrbrnd/features/webhooks/lib/interface/IWebhookRepository";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import {
   useOAuthClientWebhooks,

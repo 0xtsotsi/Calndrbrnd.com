@@ -2,21 +2,21 @@ import type { EmbedProps } from "app/WithEmbedSSR";
 import type { GetServerSidePropsContext } from "next";
 import { z } from "zod";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getBookingForReschedule, getMultipleDurationValue } from "@calcom/features/bookings/lib/get-booking";
-import type { GetBookingType } from "@calcom/features/bookings/lib/get-booking";
-import { orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { EventRepository } from "@calcom/features/eventtypes/repositories/EventRepository";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getBookingForReschedule, getMultipleDurationValue } from "@calndrbrnd/features/bookings/lib/get-booking";
+import type { GetBookingType } from "@calndrbrnd/features/bookings/lib/get-booking";
+import { orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { EventRepository } from "@calndrbrnd/features/eventtypes/repositories/EventRepository";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
 import {
   shouldHideBrandingForTeamEvent,
   shouldHideBrandingForUserEvent,
-} from "@calcom/features/profile/lib/hideBranding";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { HashedLinkService } from "@calcom/features/hashedLink/lib/service/HashedLinkService";
-import slugify from "@calcom/lib/slugify";
-import prisma from "@calcom/prisma";
-import { RedirectType } from "@calcom/prisma/enums";
+} from "@calndrbrnd/features/profile/lib/hideBranding";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { HashedLinkService } from "@calndrbrnd/features/hashedLink/lib/service/HashedLinkService";
+import slugify from "@calndrbrnd/lib/slugify";
+import prisma from "@calndrbrnd/prisma";
+import { RedirectType } from "@calndrbrnd/prisma/enums";
 
 import { getRedirectWithOriginAndSearchString } from "@lib/handleOrgRedirect";
 import type { inferSSRProps } from "@lib/types/inferSSRProps";

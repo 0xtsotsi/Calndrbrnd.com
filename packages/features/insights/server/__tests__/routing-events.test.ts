@@ -1,10 +1,10 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { readonlyPrisma } from "@calcom/prisma";
+import { readonlyPrisma } from "@calndrbrnd/prisma";
 
 import { RoutingEventsInsights } from "../routing-events";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   readonlyPrisma: {
     team: {
       findMany: vi.fn(),

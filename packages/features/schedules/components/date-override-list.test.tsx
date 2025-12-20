@@ -5,9 +5,9 @@ import { noop } from "lodash";
 import { useFieldArray, useForm, FormProvider } from "react-hook-form";
 import { vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import DateOverrideList from "@calcom/features/schedules/components/DateOverrideList";
-import type { TimeRange } from "@calcom/types/schedule";
+import dayjs from "@calndrbrnd/dayjs";
+import DateOverrideList from "@calndrbrnd/features/schedules/components/DateOverrideList";
+import type { TimeRange } from "@calndrbrnd/types/schedule";
 
 vi.mock("next/navigation", async (importOriginal) => {
   const actual = await importOriginal<typeof import("next/navigation")>();

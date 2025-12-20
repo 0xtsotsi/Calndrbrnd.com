@@ -8,46 +8,46 @@ import { vi } from "vitest";
 import "vitest-fetch-mock";
 import type { z } from "zod";
 
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
-import { handleStripePaymentSuccess } from "@calcom/features/ee/payments/api/webhook";
-import { distributedTracing } from "@calcom/lib/tracing/factory";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { weekdayToWeekIndex, type WeekDays } from "@calcom/lib/dayjs";
-import type { HttpError } from "@calcom/lib/http-error";
-import type { IntervalLimit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { BookingReference, Attendee, Booking, Membership } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import type { WebhookTriggerEvents } from "@calcom/prisma/client";
+import { appStoreMetadata } from "@calndrbrnd/app-store/appStoreMetaData";
+import { handleStripePaymentSuccess } from "@calndrbrnd/features/ee/payments/api/webhook";
+import { distributedTracing } from "@calndrbrnd/lib/tracing/factory";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { weekdayToWeekIndex, type WeekDays } from "@calndrbrnd/lib/dayjs";
+import type { HttpError } from "@calndrbrnd/lib/http-error";
+import type { IntervalLimit } from "@calndrbrnd/lib/intervalLimits/intervalLimitSchema";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import type { BookingReference, Attendee, Booking, Membership } from "@calndrbrnd/prisma/client";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { WebhookTriggerEvents } from "@calndrbrnd/prisma/client";
 import type {
   WorkflowActions,
   WorkflowTemplates,
   WorkflowTriggerEvents,
   WorkflowMethods,
-} from "@calcom/prisma/client";
-import type { PaymentOption, SchedulingType, SMSLockState, TimeUnit } from "@calcom/prisma/enums";
-import type { BookingStatus } from "@calcom/prisma/enums";
-import type { teamMetadataSchema } from "@calcom/prisma/zod-utils";
-import type { userMetadataType } from "@calcom/prisma/zod-utils";
-import type { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
-import type { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import type { AppMeta } from "@calcom/types/App";
+} from "@calndrbrnd/prisma/client";
+import type { PaymentOption, SchedulingType, SMSLockState, TimeUnit } from "@calndrbrnd/prisma/enums";
+import type { BookingStatus } from "@calndrbrnd/prisma/enums";
+import type { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { userMetadataType } from "@calndrbrnd/prisma/zod-utils";
+import type { eventTypeBookingFields } from "@calndrbrnd/prisma/zod-utils";
+import type { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { AppMeta } from "@calndrbrnd/types/App";
 import type {
   Calendar,
   CalendarEvent,
   IntegrationCalendar,
   NewCalendarEventType,
   EventBusyDate,
-} from "@calcom/types/Calendar";
-import type { CredentialPayload } from "@calcom/types/Credential";
-import type { VideoApiAdapter } from "@calcom/types/VideoApiAdapter";
+} from "@calndrbrnd/types/Calendar";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
+import type { VideoApiAdapter } from "@calndrbrnd/types/VideoApiAdapter";
 
 import { getMockPaymentService } from "./MockPaymentService";
 import type { getMockRequestDataForBooking } from "./getMockRequestDataForBooking";
 
 type NonNullableVideoApiAdapter = NonNullable<VideoApiAdapter>;
-vi.mock("@calcom/app-store/calendar.services.generated", () => ({
+vi.mock("@calndrbrnd/app-store/calendar.services.generated", () => ({
   CalendarServiceMap: {
     googlecalendar: Promise.resolve({ default: vi.fn() }),
     office365calendar: Promise.resolve({ default: vi.fn() }),
@@ -58,7 +58,7 @@ vi.mock("@calcom/app-store/calendar.services.generated", () => ({
 
 const mockVideoAdapterRegistry: Record<string, unknown> = {};
 
-vi.mock("@calcom/app-store/video.adapters.generated", () => ({
+vi.mock("@calndrbrnd/app-store/video.adapters.generated", () => ({
   VideoApiAdapterMap: new Proxy(
     {},
     {
@@ -73,12 +73,12 @@ vi.mock("@calcom/app-store/video.adapters.generated", () => ({
 }));
 
 // We don't need to test it. Also, it causes Formbricks error when imported
-vi.mock("@calcom/lib/raqb/findTeamMembersMatchingAttributeLogic", () => ({
+vi.mock("@calndrbrnd/lib/raqb/findTeamMembersMatchingAttributeLogic", () => ({
   default: {},
 }));
 
-vi.mock("@calcom/lib/crypto", async (importOriginal) => {
-  const actual = await importOriginal<typeof import("@calcom/lib/crypto")>();
+vi.mock("@calndrbrnd/lib/crypto", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@calndrbrnd/lib/crypto")>();
   return {
     ...actual,
     symmetricEncrypt: vi.fn((serviceAccountKey) => serviceAccountKey),
@@ -1826,7 +1826,7 @@ export async function mockCalendar(
   const getAvailabilityCalls: GetAvailabilityMethodMockCall[] = [];
   const app = appStoreMetadata[metadataLookupKey as keyof typeof appStoreMetadata];
 
-  const { CalendarServiceMap } = await import("@calcom/app-store/calendar.services.generated");
+  const { CalendarServiceMap } = await import("@calndrbrnd/app-store/calendar.services.generated");
   const calendarServiceKey = appStoreLookupKey as keyof typeof CalendarServiceMap;
 
   const calendarServicePromise = CalendarServiceMap[calendarServiceKey];
@@ -2209,8 +2209,8 @@ export function mockCrmApp(
   const eventsCreated: boolean[] = [];
 
   // Mock the CrmServiceMap directly instead of using the old app-store index approach
-  vi.doMock("@calcom/app-store/crm.apps.generated", async (importOriginal) => {
-    const original = await importOriginal<typeof import("@calcom/app-store/crm.apps.generated")>();
+  vi.doMock("@calndrbrnd/app-store/crm.apps.generated", async (importOriginal) => {
+    const original = await importOriginal<typeof import("@calndrbrnd/app-store/crm.apps.generated")>();
 
     class MockCrmService {
       constructor() {

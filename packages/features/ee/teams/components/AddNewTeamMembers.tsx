@@ -6,22 +6,22 @@ import { useRouter } from "next/navigation";
 import { useState, useMemo } from "react";
 import posthog from "posthog-js";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import InviteLinkSettingsModal from "@calcom/features/ee/teams/components/InviteLinkSettingsModal";
-import { MemberInvitationModalWithoutMembers } from "@calcom/features/ee/teams/components/MemberInvitationModal";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { UserAvatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
+import { useOrgBranding } from "@calndrbrnd/features/ee/organizations/context/provider";
+import InviteLinkSettingsModal from "@calndrbrnd/features/ee/teams/components/InviteLinkSettingsModal";
+import { MemberInvitationModalWithoutMembers } from "@calndrbrnd/features/ee/teams/components/MemberInvitationModal";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { UserAvatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 type TeamMember = RouterOutputs["viewer"]["teams"]["listMembers"]["members"][number];
 

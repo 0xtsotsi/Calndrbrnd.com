@@ -2,12 +2,12 @@
 
 import { usePathname } from "next/navigation";
 
-import { DataTableProvider } from "@calcom/features/data-table";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import MakeTeamPrivateSwitch from "@calcom/features/ee/teams/components/MakeTeamPrivateSwitch";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { DataTableProvider } from "@calndrbrnd/features/data-table";
+import { useSegments } from "@calndrbrnd/features/data-table/hooks/useSegments";
+import LicenseRequired from "@calndrbrnd/features/ee/common/components/LicenseRequired";
+import MakeTeamPrivateSwitch from "@calndrbrnd/features/ee/teams/components/MakeTeamPrivateSwitch";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
 
 import { BlocklistTable } from "~/settings/organizations/privacy/blocklist-table";
 

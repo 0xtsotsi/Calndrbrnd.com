@@ -7,16 +7,16 @@ import { TeamsRepository } from "@/modules/teams/teams/teams.repository";
 import { UsersRepository } from "@/modules/users/users.repository";
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 
-import { SchedulingType } from "@calcom/platform-libraries";
-import { slugifyLenient } from "@calcom/platform-libraries";
-import { EventTypeMetadata } from "@calcom/platform-libraries/event-types";
+import { SchedulingType } from "@calndrbrnd/platform-libraries";
+import { slugifyLenient } from "@calndrbrnd/platform-libraries";
+import { EventTypeMetadata } from "@calndrbrnd/platform-libraries/event-types";
 import {
   CreateTeamEventTypeInput_2024_06_14,
   UpdateTeamEventTypeInput_2024_06_14,
   HostPriority,
   EmailSettings_2024_06_14,
-} from "@calcom/platform-types";
-import type { EventType } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { EventType } from "@calndrbrnd/prisma/client";
 
 export const HOSTS_REQUIRED_WHEN_SWITCHING_SCHEDULING_TYPE_ERROR =
   "Hosts required when switching schedulingType. Please provide 'hosts' or set 'assignAllTeamMembers: true' to specify how hosts should be configured for the new scheduling type.";

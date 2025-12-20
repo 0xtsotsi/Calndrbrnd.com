@@ -5,13 +5,13 @@ import { unstable_cache } from "next/cache";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { AvailabilitySliderTable } from "@calcom/features/timezone-buddy/components/AvailabilitySliderTable";
-import { getScheduleListItemData } from "@calcom/lib/schedules/transformers/getScheduleListItemData";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { availabilityRouter } from "@calcom/trpc/server/routers/viewer/availability/_router";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getOrganizationRepository } from "@calndrbrnd/features/ee/organizations/di/OrganizationRepository.container";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { AvailabilitySliderTable } from "@calndrbrnd/features/timezone-buddy/components/AvailabilitySliderTable";
+import { getScheduleListItemData } from "@calndrbrnd/lib/schedules/transformers/getScheduleListItemData";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { availabilityRouter } from "@calndrbrnd/trpc/server/routers/viewer/availability/_router";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

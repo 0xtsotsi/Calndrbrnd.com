@@ -14,13 +14,13 @@ import { InjectQueue } from "@nestjs/bull";
 import { Injectable, NotFoundException, Logger } from "@nestjs/common";
 import { Queue } from "bull";
 
-import { encryptServiceAccountKey } from "@calcom/platform-libraries";
+import { encryptServiceAccountKey } from "@calndrbrnd/platform-libraries";
 import {
   addDelegationCredential,
   toggleDelegationCredentialEnabled,
   type TServiceAccountKeySchema,
-} from "@calcom/platform-libraries/app-store";
-import type { User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-libraries/app-store";
+import type { User } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class OrganizationsDelegationCredentialService {

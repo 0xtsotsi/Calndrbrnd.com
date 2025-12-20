@@ -1,20 +1,20 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { PrismaBookingReportRepository } from "@calcom/features/bookingReport/repositories/PrismaBookingReportRepository";
-import handleCancelBooking from "@calcom/features/bookings/lib/handleCancelBooking";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { BookingAccessService } from "@calcom/features/bookings/services/BookingAccessService";
-import { BookingStatus, BookingReportReason } from "@calcom/prisma/enums";
+import { PrismaBookingReportRepository } from "@calndrbrnd/features/bookingReport/repositories/PrismaBookingReportRepository";
+import handleCancelBooking from "@calndrbrnd/features/bookings/lib/handleCancelBooking";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { BookingAccessService } from "@calndrbrnd/features/bookings/services/BookingAccessService";
+import { BookingStatus, BookingReportReason } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
 import { reportBookingHandler } from "./reportBooking.handler";
 
-vi.mock("@calcom/features/bookingReport/repositories/PrismaBookingReportRepository");
-vi.mock("@calcom/features/bookings/lib/handleCancelBooking");
-vi.mock("@calcom/features/bookings/repositories/BookingRepository");
-vi.mock("@calcom/features/bookings/services/BookingAccessService");
-vi.mock("@calcom/lib/logger", () => ({
+vi.mock("@calndrbrnd/features/bookingReport/repositories/PrismaBookingReportRepository");
+vi.mock("@calndrbrnd/features/bookings/lib/handleCancelBooking");
+vi.mock("@calndrbrnd/features/bookings/repositories/BookingRepository");
+vi.mock("@calndrbrnd/features/bookings/services/BookingAccessService");
+vi.mock("@calndrbrnd/lib/logger", () => ({
   default: {
     getSubLogger: () => ({
       warn: vi.fn(),

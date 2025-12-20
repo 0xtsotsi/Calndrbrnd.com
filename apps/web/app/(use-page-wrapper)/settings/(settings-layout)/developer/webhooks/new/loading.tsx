@@ -1,4 +1,4 @@
-import { SkeletonLoader } from "@calcom/features/webhooks/pages/webhook-new-skeleton";
+import { SkeletonLoader } from "@calndrbrnd/features/webhooks/pages/webhook-new-skeleton";
 
 export default function Loading() {
   return <SkeletonLoader />;

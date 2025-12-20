@@ -1,9 +1,9 @@
-import { CrudAction, Scope } from "@calcom/features/pbac/domain/types/permission-registry";
-import { getPermissionsForScope } from "@calcom/features/pbac/domain/types/permission-registry";
+import { CrudAction, Scope } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { getPermissionsForScope } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
 import {
   getTransitiveDependencies,
   getTransitiveDependents,
-} from "@calcom/features/pbac/utils/permissionTraversal";
+} from "@calndrbrnd/features/pbac/utils/permissionTraversal";
 
 export type PermissionLevel = "none" | "read" | "all";
 

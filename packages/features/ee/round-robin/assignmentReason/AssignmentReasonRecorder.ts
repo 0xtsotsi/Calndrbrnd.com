@@ -1,10 +1,10 @@
-import { acrossQueryValueCompatiblity } from "@calcom/app-store/_utils/raqb/raqbUtils";
-import type { FormResponse, Fields } from "@calcom/app-store/routing-forms/types/types";
-import { zodRoutes } from "@calcom/app-store/routing-forms/zod";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { getUsersAttributes } from "@calcom/lib/service/attribute/server/getAttributes";
-import prisma from "@calcom/prisma";
-import { AssignmentReasonEnum } from "@calcom/prisma/enums";
+import { acrossQueryValueCompatiblity } from "@calndrbrnd/app-store/_utils/raqb/raqbUtils";
+import type { FormResponse, Fields } from "@calndrbrnd/app-store/routing-forms/types/types";
+import { zodRoutes } from "@calndrbrnd/app-store/routing-forms/zod";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import { getUsersAttributes } from "@calndrbrnd/lib/service/attribute/server/getAttributes";
+import prisma from "@calndrbrnd/prisma";
+import { AssignmentReasonEnum } from "@calndrbrnd/prisma/enums";
 
 const { getAttributesQueryValue } = acrossQueryValueCompatiblity;
 

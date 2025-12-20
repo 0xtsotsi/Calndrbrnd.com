@@ -2,20 +2,20 @@ import type { Kysely } from "kysely";
 import { type SelectQueryBuilder } from "kysely";
 import { jsonObjectFrom, jsonArrayFrom } from "kysely/helpers/postgres";
 
-import dayjs from "@calcom/dayjs";
-import getAllUserBookings from "@calcom/features/bookings/lib/getAllUserBookings";
-import { isTextFilterValue } from "@calcom/features/data-table/lib/utils";
-import type { DB } from "@calcom/kysely";
-import kysely from "@calcom/kysely";
-import { parseEventTypeColor } from "@calcom/lib/isEventTypeColor";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Booking, Prisma, Prisma as PrismaClientType } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import getAllUserBookings from "@calndrbrnd/features/bookings/lib/getAllUserBookings";
+import { isTextFilterValue } from "@calndrbrnd/features/data-table/lib/utils";
+import type { DB } from "@calndrbrnd/kysely";
+import kysely from "@calndrbrnd/kysely";
+import { parseEventTypeColor } from "@calndrbrnd/lib/isEventTypeColor";
+import { parseRecurringEvent } from "@calndrbrnd/lib/isRecurringEvent";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { Booking, Prisma, Prisma as PrismaClientType } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 

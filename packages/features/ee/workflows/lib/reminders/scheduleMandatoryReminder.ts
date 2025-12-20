@@ -1,11 +1,11 @@
-import type { getEventTypeResponse } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import { scheduleEmailReminder } from "@calcom/features/ee/workflows/lib/reminders/emailReminderManager";
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
-import type { getDefaultEvent } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import type { TraceContext } from "@calcom/lib/tracing";
-import { distributedTracing } from "@calcom/lib/tracing/factory";
-import { WorkflowTriggerEvents, TimeUnit, WorkflowActions, WorkflowTemplates } from "@calcom/prisma/enums";
+import type { getEventTypeResponse } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import { scheduleEmailReminder } from "@calndrbrnd/features/ee/workflows/lib/reminders/emailReminderManager";
+import type { Workflow } from "@calndrbrnd/features/ee/workflows/lib/types";
+import type { getDefaultEvent } from "@calndrbrnd/features/eventtypes/lib/defaultEvents";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import type { TraceContext } from "@calndrbrnd/lib/tracing";
+import { distributedTracing } from "@calndrbrnd/lib/tracing/factory";
+import { WorkflowTriggerEvents, TimeUnit, WorkflowActions, WorkflowTemplates } from "@calndrbrnd/prisma/enums";
 
 import type { ExtendedCalendarEvent } from "./reminderScheduler";
 

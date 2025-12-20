@@ -4,18 +4,18 @@
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import type { UseFormReturn } from "react-hook-form";
 
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
-import type { ChildrenEventType } from "@calcom/features/eventtypes/components/ChildrenEventTypeSelect";
+import type { Workflow } from "@calndrbrnd/features/ee/workflows/lib/types";
+import type { ChildrenEventType } from "@calndrbrnd/features/eventtypes/components/ChildrenEventTypeSelect";
 import type {
   TabMap,
   EventTypeSetupProps,
   FormValues,
   EventTypeApps,
-} from "@calcom/features/eventtypes/lib/types";
-import type { customInputSchema } from "@calcom/prisma/zod-utils";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Form } from "@calcom/ui/components/form";
-import type { VerticalTabItemProps } from "@calcom/ui/components/navigation";
+} from "@calndrbrnd/features/eventtypes/lib/types";
+import type { customInputSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Form } from "@calndrbrnd/ui/components/form";
+import type { VerticalTabItemProps } from "@calndrbrnd/ui/components/navigation";
 
 import { EventTypeSingleLayout } from "./EventTypeLayout";
 

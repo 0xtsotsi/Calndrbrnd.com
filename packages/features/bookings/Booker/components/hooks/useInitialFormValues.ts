@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import type { z } from "zod";
 
-import { useBookerStore } from "@calcom/features/bookings/Booker/store";
-import type getBookingResponsesSchema from "@calcom/features/bookings/lib/getBookingResponsesSchema";
-import { getBookingResponsesPartialSchema } from "@calcom/features/bookings/lib/getBookingResponsesSchema";
-import type { BookerEvent } from "@calcom/features/bookings/types";
+import { useBookerStore } from "@calndrbrnd/features/bookings/Booker/store";
+import type getBookingResponsesSchema from "@calndrbrnd/features/bookings/lib/getBookingResponsesSchema";
+import { getBookingResponsesPartialSchema } from "@calndrbrnd/features/bookings/lib/getBookingResponsesSchema";
+import type { BookerEvent } from "@calndrbrnd/features/bookings/types";
 
 export type useInitialFormValuesReturnType = ReturnType<typeof useInitialFormValues>;
 

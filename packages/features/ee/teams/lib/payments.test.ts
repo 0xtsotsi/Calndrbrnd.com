@@ -2,8 +2,8 @@ import prismock from "../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { BillingPeriod } from "@calcom/prisma/zod-utils";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { BillingPeriod } from "@calndrbrnd/prisma/zod-utils";
 
 import {
   getTeamWithPaymentMetadata,
@@ -28,7 +28,7 @@ afterEach(async () => {
   await prismock.reset();
 });
 
-vi.mock("@calcom/app-store/stripepayment/lib/customer", () => {
+vi.mock("@calndrbrnd/app-store/stripepayment/lib/customer", () => {
   return {
     getStripeCustomerIdFromUserId: function () {
       return "CUSTOMER_ID";
@@ -36,7 +36,7 @@ vi.mock("@calcom/app-store/stripepayment/lib/customer", () => {
   };
 });
 
-vi.mock("@calcom/features/ee/payments/server/stripe", () => {
+vi.mock("@calndrbrnd/features/ee/payments/server/stripe", () => {
   return {
     default: {
       checkout: {

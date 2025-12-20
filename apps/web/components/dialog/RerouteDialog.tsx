@@ -8,28 +8,28 @@ import type { z } from "zod";
 
 import FormInputFields, {
   FormInputFieldsSkeleton,
-} from "@calcom/app-store/routing-forms/components/FormInputFields";
-import { getAbsoluteEventTypeRedirectUrl } from "@calcom/app-store/routing-forms/getEventTypeRedirectUrl";
-import { findMatchingRoute } from "@calcom/app-store/routing-forms/lib/processRoute";
-import { substituteVariables } from "@calcom/app-store/routing-forms/lib/substituteVariables";
-import type { FormResponse, LocalRoute } from "@calcom/app-store/routing-forms/types/types";
-import { RouteActionType } from "@calcom/app-store/routing-forms/zod";
-import dayjs from "@calcom/dayjs";
-import { useBookerUrl } from "@calcom/features/bookings/hooks/useBookerUrl";
-import { createBooking } from "@calcom/features/bookings/lib/create-booking";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { getUrlSearchParamsToForwardForReroute } from "@calcom/features/routing-forms/lib/getUrlSearchParamsToForward";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { EventType, User, Team, Attendee, Booking as PrismaBooking } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import type { Ensure } from "@calcom/types/utils";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/app-store/routing-forms/components/FormInputFields";
+import { getAbsoluteEventTypeRedirectUrl } from "@calndrbrnd/app-store/routing-forms/getEventTypeRedirectUrl";
+import { findMatchingRoute } from "@calndrbrnd/app-store/routing-forms/lib/processRoute";
+import { substituteVariables } from "@calndrbrnd/app-store/routing-forms/lib/substituteVariables";
+import type { FormResponse, LocalRoute } from "@calndrbrnd/app-store/routing-forms/types/types";
+import { RouteActionType } from "@calndrbrnd/app-store/routing-forms/zod";
+import dayjs from "@calndrbrnd/dayjs";
+import { useBookerUrl } from "@calndrbrnd/features/bookings/hooks/useBookerUrl";
+import { createBooking } from "@calndrbrnd/features/bookings/lib/create-booking";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { getUrlSearchParamsToForwardForReroute } from "@calndrbrnd/features/routing-forms/lib/getUrlSearchParamsToForward";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { EventType, User, Team, Attendee, Booking as PrismaBooking } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { bookingMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { Ensure } from "@calndrbrnd/types/utils";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogHeader } from "@calndrbrnd/ui/components/dialog";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 const enum ReroutingStatusEnum {
   REROUTING_NOT_INITIATED = "not_initiated",

@@ -1,9 +1,9 @@
 import type { GetServerSidePropsContext } from "next";
 import z from "zod";
 
-import { getSlugOrRequestedSlug } from "@calcom/features/ee/organizations/lib/orgDomains";
-import slugify from "@calcom/lib/slugify";
-import prisma from "@calcom/prisma";
+import { getSlugOrRequestedSlug } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import slugify from "@calndrbrnd/lib/slugify";
+import prisma from "@calndrbrnd/prisma";
 
 import { getServerSideProps as GSSTeamTypePage } from "@lib/team/[slug]/[type]/getServerSideProps";
 

@@ -2,9 +2,9 @@
 
 import { useMemo } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { buttonClasses } from "@calcom/ui/components/button";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { buttonClasses } from "@calndrbrnd/ui/components/button";
 import {
   Command,
   CommandInput,
@@ -13,8 +13,8 @@ import {
   CommandItem,
   CommandSeparator,
   CommandGroup,
-} from "@calcom/ui/components/command";
-import { Icon } from "@calcom/ui/components/icon";
+} from "@calndrbrnd/ui/components/command";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import { useDataTable, useFilterValue } from "../../hooks";
 import type {
@@ -22,7 +22,7 @@ import type {
   FilterableColumn as _FilterableColumn,
   FilterValueSchema,
 } from "../../lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import type { FilterType } from "@calndrbrnd/types/data-table";
 
 type FilterableColumn = Extract<
   _FilterableColumn,

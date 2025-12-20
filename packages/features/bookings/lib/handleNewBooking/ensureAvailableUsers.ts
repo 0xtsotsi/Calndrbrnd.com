@@ -1,18 +1,18 @@
 import type { Logger } from "tslog";
 
-import dayjs from "@calcom/dayjs";
-import type { Dayjs } from "@calcom/dayjs";
-import { checkForConflicts } from "@calcom/features/bookings/lib/conflictChecker/checkForConflicts";
-import { getBusyTimesService } from "@calcom/features/di/containers/BusyTimes";
-import { getUserAvailabilityService } from "@calcom/features/di/containers/GetUserAvailability";
-import { buildDateRanges } from "@calcom/features/schedules/lib/date-ranges";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { parseBookingLimit } from "@calcom/lib/intervalLimits/isBookingLimits";
-import { parseDurationLimit } from "@calcom/lib/intervalLimits/isDurationLimits";
-import { getPiiFreeUser } from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import prisma from "@calcom/prisma";
+import dayjs from "@calndrbrnd/dayjs";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import { checkForConflicts } from "@calndrbrnd/features/bookings/lib/conflictChecker/checkForConflicts";
+import { getBusyTimesService } from "@calndrbrnd/features/di/containers/BusyTimes";
+import { getUserAvailabilityService } from "@calndrbrnd/features/di/containers/GetUserAvailability";
+import { buildDateRanges } from "@calndrbrnd/features/schedules/lib/date-ranges";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { parseBookingLimit } from "@calndrbrnd/lib/intervalLimits/isBookingLimits";
+import { parseDurationLimit } from "@calndrbrnd/lib/intervalLimits/isDurationLimits";
+import { getPiiFreeUser } from "@calndrbrnd/lib/piiFreeData";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import prisma from "@calndrbrnd/prisma";
 
 import type { getEventTypeResponse } from "./getEventTypesFromDB";
 import type { BookingType } from "./originalRescheduledBookingUtils";

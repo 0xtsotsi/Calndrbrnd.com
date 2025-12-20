@@ -1,10 +1,10 @@
 import { z } from "zod";
 
-import type { AppFlags } from "@calcom/features/flags/config";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { prisma } from "@calcom/prisma";
-import publicProcedure from "@calcom/trpc/server/procedures/publicProcedure";
-import { router } from "@calcom/trpc/server/trpc";
+import type { AppFlags } from "@calndrbrnd/features/flags/config";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { prisma } from "@calndrbrnd/prisma";
+import publicProcedure from "@calndrbrnd/trpc/server/procedures/publicProcedure";
+import { router } from "@calndrbrnd/trpc/server/trpc";
 
 import { map } from "./procedures/map";
 

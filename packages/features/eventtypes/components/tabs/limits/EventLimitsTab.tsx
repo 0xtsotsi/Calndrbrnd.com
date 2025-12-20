@@ -6,22 +6,22 @@ import type { UseFormRegisterReturn, UseFormReturn } from "react-hook-form";
 import { Controller, useFormContext } from "react-hook-form";
 import type { SingleValue } from "react-select";
 
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
-import { getDefinedBufferTimes } from "@calcom/features/eventtypes/lib/getDefinedBufferTimes";
-import type { FormValues, EventTypeSetupProps, InputClassNames } from "@calcom/features/eventtypes/lib/types";
-import type { SelectClassNames, SettingsToggleClassNames } from "@calcom/features/eventtypes/lib/types";
-import CheckboxField from "@calcom/features/form/components/CheckboxField";
-import { ROLLING_WINDOW_PERIOD_MAX_DAYS_TO_CHECK } from "@calcom/lib/constants";
-import type { DurationType } from "@calcom/lib/convertToNewDurationType";
-import convertToNewDurationType from "@calcom/lib/convertToNewDurationType";
-import findDurationType from "@calcom/lib/findDurationType";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { ascendingLimitKeys, intervalLimitKeyToUnit } from "@calcom/lib/intervalLimits/intervalLimit";
-import type { IntervalLimit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import { PeriodType } from "@calcom/prisma/enums";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import { LearnMoreLink } from "@calndrbrnd/features/eventtypes/components/LearnMoreLink";
+import { getDefinedBufferTimes } from "@calndrbrnd/features/eventtypes/lib/getDefinedBufferTimes";
+import type { FormValues, EventTypeSetupProps, InputClassNames } from "@calndrbrnd/features/eventtypes/lib/types";
+import type { SelectClassNames, SettingsToggleClassNames } from "@calndrbrnd/features/eventtypes/lib/types";
+import CheckboxField from "@calndrbrnd/features/form/components/CheckboxField";
+import { ROLLING_WINDOW_PERIOD_MAX_DAYS_TO_CHECK } from "@calndrbrnd/lib/constants";
+import type { DurationType } from "@calndrbrnd/lib/convertToNewDurationType";
+import convertToNewDurationType from "@calndrbrnd/lib/convertToNewDurationType";
+import findDurationType from "@calndrbrnd/lib/findDurationType";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { ascendingLimitKeys, intervalLimitKeyToUnit } from "@calndrbrnd/lib/intervalLimits/intervalLimit";
+import type { IntervalLimit } from "@calndrbrnd/lib/intervalLimits/intervalLimitSchema";
+import { PeriodType } from "@calndrbrnd/prisma/enums";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   InputField,
   DateRangePicker,
@@ -29,9 +29,9 @@ import {
   TextField,
   Select,
   SettingsToggle,
-} from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import MaxActiveBookingsPerBookerController from "./MaxActiveBookingsPerBookerController";
 

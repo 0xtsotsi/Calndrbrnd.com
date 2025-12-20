@@ -14,9 +14,9 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { GetSchedulesOutput_2024_06_11 } from "@calcom/platform-types";
-import type { User, Team, Schedule } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { GetSchedulesOutput_2024_06_11 } from "@calndrbrnd/platform-types";
+import type { User, Team, Schedule } from "@calndrbrnd/prisma/client";
 
 describe("Teams Schedules Endpoints", () => {
   describe("User Authentication - User is Team Admin", () => {

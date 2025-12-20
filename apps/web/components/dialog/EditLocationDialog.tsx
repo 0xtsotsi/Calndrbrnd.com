@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Controller, useForm, useWatch, useFormContext } from "react-hook-form";
 import { z } from "zod";
 
-import type { EventLocationType, LocationObject } from "@calcom/app-store/locations";
+import type { EventLocationType, LocationObject } from "@calndrbrnd/app-store/locations";
 import {
   getEventLocationType,
   getHumanReadableLocationValue,
@@ -13,17 +13,17 @@ import {
   isAttendeeInputRequired,
   LocationType,
   OrganizerDefaultConferencingAppType,
-} from "@calcom/app-store/locations";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import PhoneInput from "@calcom/features/components/phone-input";
-import type { LocationOption } from "@calcom/features/form/components/LocationSelect";
-import LocationSelect from "@calcom/features/form/components/LocationSelect";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Form, Input } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+} from "@calndrbrnd/app-store/locations";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import PhoneInput from "@calndrbrnd/features/components/phone-input";
+import type { LocationOption } from "@calndrbrnd/features/form/components/LocationSelect";
+import LocationSelect from "@calndrbrnd/features/form/components/LocationSelect";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogHeader } from "@calndrbrnd/ui/components/dialog";
+import { Form, Input } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import { QueryCell } from "../../lib/QueryCell";
 

@@ -9,10 +9,10 @@ import {
   DateRangeFilter,
   ColumnFilterType,
   type FilterableColumn,
-} from "@calcom/features/data-table";
-import type { FilterType } from "@calcom/types/data-table";
-import { useDataTable } from "@calcom/features/data-table/hooks/useDataTable";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
+} from "@calndrbrnd/features/data-table";
+import type { FilterType } from "@calndrbrnd/types/data-table";
+import { useDataTable } from "@calndrbrnd/features/data-table/hooks/useDataTable";
+import { useSegments } from "@calndrbrnd/features/data-table/hooks/useSegments";
 import {
   AverageEventDurationChart,
   BookingKPICards,
@@ -32,15 +32,15 @@ import {
   RecentNoShowGuestsChart,
   RecentFeedbackTable,
   TimezoneBadge,
-} from "@calcom/features/insights/components/booking";
-import { InsightsOrgTeamsProvider } from "@calcom/features/insights/context/InsightsOrgTeamsProvider";
-import { DateTargetSelector, type DateTarget } from "@calcom/features/insights/filters/DateTargetSelector";
-import { Download } from "@calcom/features/insights/filters/Download";
-import { OrgTeamsFilter } from "@calcom/features/insights/filters/OrgTeamsFilter";
-import { useInsightsBookings } from "@calcom/features/insights/hooks/useInsightsBookings";
-import { useInsightsOrgTeams } from "@calcom/features/insights/hooks/useInsightsOrgTeams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+} from "@calndrbrnd/features/insights/components/booking";
+import { InsightsOrgTeamsProvider } from "@calndrbrnd/features/insights/context/InsightsOrgTeamsProvider";
+import { DateTargetSelector, type DateTarget } from "@calndrbrnd/features/insights/filters/DateTargetSelector";
+import { Download } from "@calndrbrnd/features/insights/filters/Download";
+import { OrgTeamsFilter } from "@calndrbrnd/features/insights/filters/OrgTeamsFilter";
+import { useInsightsBookings } from "@calndrbrnd/features/insights/hooks/useInsightsBookings";
+import { useInsightsOrgTeams } from "@calndrbrnd/features/insights/hooks/useInsightsOrgTeams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
 
 export default function InsightsPage({ timeZone }: { timeZone: string }) {
   const pathname = usePathname();

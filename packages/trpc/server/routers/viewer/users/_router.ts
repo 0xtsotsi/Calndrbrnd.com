@@ -1,10 +1,10 @@
 import { z } from "zod";
 
-import { getOrgFullOrigin } from "@calcom/ee/organizations/lib/orgDomains";
-import { RedirectType, CreationSource } from "@calcom/prisma/enums";
-import { UserSchema } from "@calcom/prisma/zod/modelSchema/UserSchema";
-import { authedAdminProcedure } from "@calcom/trpc/server/procedures/authedProcedure";
-import { router } from "@calcom/trpc/server/trpc";
+import { getOrgFullOrigin } from "@calndrbrnd/ee/organizations/lib/orgDomains";
+import { RedirectType, CreationSource } from "@calndrbrnd/prisma/enums";
+import { UserSchema } from "@calndrbrnd/prisma/zod/modelSchema/UserSchema";
+import { authedAdminProcedure } from "@calndrbrnd/trpc/server/procedures/authedProcedure";
+import { router } from "@calndrbrnd/trpc/server/trpc";
 
 import { TRPCError } from "@trpc/server";
 import type { inferRouterOutputs } from "@trpc/server";

@@ -2,25 +2,25 @@ import type { Calendar as OfficeCalendar, User, Event } from "@microsoft/microso
 import type { DefaultBodyType } from "msw";
 import { findIana } from "windows-iana";
 
-import { MSTeamsLocationType } from "@calcom/app-store/constants";
-import dayjs from "@calcom/dayjs";
-import { triggerDelegationCredentialErrorWebhook } from "@calcom/features/webhooks/lib/triggerDelegationCredentialErrorWebhook";
-import { getLocation, getRichDescriptionHTML } from "@calcom/lib/CalEventParser";
+import { MSTeamsLocationType } from "@calndrbrnd/app-store/constants";
+import dayjs from "@calndrbrnd/dayjs";
+import { triggerDelegationCredentialErrorWebhook } from "@calndrbrnd/features/webhooks/lib/triggerDelegationCredentialErrorWebhook";
+import { getLocation, getRichDescriptionHTML } from "@calndrbrnd/lib/CalEventParser";
 import {
   CalendarAppDelegationCredentialInvalidGrantError,
   CalendarAppDelegationCredentialConfigurationError,
-} from "@calcom/lib/CalendarAppError";
-import { handleErrorsJson, handleErrorsRaw } from "@calcom/lib/errors";
-import logger from "@calcom/lib/logger";
-import type { BufferedBusyTime } from "@calcom/types/BufferedBusyTime";
+} from "@calndrbrnd/lib/CalendarAppError";
+import { handleErrorsJson, handleErrorsRaw } from "@calndrbrnd/lib/errors";
+import logger from "@calndrbrnd/lib/logger";
+import type { BufferedBusyTime } from "@calndrbrnd/types/BufferedBusyTime";
 import type {
   Calendar,
   CalendarServiceEvent,
   EventBusyDate,
   IntegrationCalendar,
   NewCalendarEventType,
-} from "@calcom/types/Calendar";
-import type { CredentialForCalendarServiceWithTenantId } from "@calcom/types/Credential";
+} from "@calndrbrnd/types/Calendar";
+import type { CredentialForCalendarServiceWithTenantId } from "@calndrbrnd/types/Credential";
 
 import { OAuthManager } from "../../_utils/oauth/OAuthManager";
 import { getTokenObjectFromCredential } from "../../_utils/oauth/getTokenObjectFromCredential";

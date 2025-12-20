@@ -2,10 +2,10 @@ import type { MouseEventHandler } from "react";
 import { useContext } from "react";
 import { useStore } from "zustand";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import type { DateRange } from "@calcom/features/schedules/lib/date-ranges";
-import classNames from "@calcom/ui/classNames";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import type { DateRange } from "@calndrbrnd/features/schedules/lib/date-ranges";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { DAY_CELL_WIDTH } from "../constants";
 import { TBContext } from "../store";

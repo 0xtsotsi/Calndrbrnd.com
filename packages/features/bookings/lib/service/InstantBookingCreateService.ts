@@ -2,29 +2,29 @@ import { randomBytes } from "crypto";
 import short from "short-uuid";
 import { v5 as uuidv5 } from "uuid";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 import type {
   CreateInstantBookingData,
   InstantBookingCreateResult,
-} from "@calcom/features/bookings/lib/dto/types";
-import getBookingDataSchema from "@calcom/features/bookings/lib/getBookingDataSchema";
-import { getBookingFieldsWithSystemFields } from "@calcom/features/bookings/lib/getBookingFields";
-import { getBookingData } from "@calcom/features/bookings/lib/handleNewBooking/getBookingData";
-import { getCustomInputsResponses } from "@calcom/features/bookings/lib/handleNewBooking/getCustomInputsResponses";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import type { IBookingCreateService } from "@calcom/features/bookings/lib/interfaces/IBookingCreateService";
-import { createInstantMeetingWithCalVideo } from "@calcom/features/conferencing/lib/videoClient";
-import { getFullName } from "@calcom/features/form-builder/utils";
-import { sendNotification } from "@calcom/features/notifications/sendNotification";
-import { sendGenericWebhookPayload } from "@calcom/features/webhooks/lib/sendPayload";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { isPrismaObjOrUndefined } from "@calcom/lib/isPrismaObj";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import type { PrismaClient } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { BookingStatus, WebhookTriggerEvents } from "@calcom/prisma/enums";
+} from "@calndrbrnd/features/bookings/lib/dto/types";
+import getBookingDataSchema from "@calndrbrnd/features/bookings/lib/getBookingDataSchema";
+import { getBookingFieldsWithSystemFields } from "@calndrbrnd/features/bookings/lib/getBookingFields";
+import { getBookingData } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getBookingData";
+import { getCustomInputsResponses } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getCustomInputsResponses";
+import { getEventTypesFromDB } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import type { IBookingCreateService } from "@calndrbrnd/features/bookings/lib/interfaces/IBookingCreateService";
+import { createInstantMeetingWithCalVideo } from "@calndrbrnd/features/conferencing/lib/videoClient";
+import { getFullName } from "@calndrbrnd/features/form-builder/utils";
+import { sendNotification } from "@calndrbrnd/features/notifications/sendNotification";
+import { sendGenericWebhookPayload } from "@calndrbrnd/features/webhooks/lib/sendPayload";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import getOrgIdFromMemberOrTeamId from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import { isPrismaObjOrUndefined } from "@calndrbrnd/lib/isPrismaObj";
+import logger from "@calndrbrnd/lib/logger";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import { BookingStatus, WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import { instantMeetingSubscriptionSchema as subscriptionSchema } from "../dto/schema";
 

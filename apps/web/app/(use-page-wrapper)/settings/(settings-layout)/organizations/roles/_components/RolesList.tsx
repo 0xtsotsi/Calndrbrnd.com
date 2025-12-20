@@ -1,16 +1,16 @@
 "use client";
 
-import type { Scope } from "@calcom/features/pbac/domain/types/permission-registry";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import type { Scope } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   Dropdown,
   DropdownMenuContent,
   DropdownItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
+} from "@calndrbrnd/ui/components/dropdown";
 
 import { useRoleStates } from "../hooks/useRoleQueryStates";
 import { DeleteRoleModal } from "./DeleteRoleModal";

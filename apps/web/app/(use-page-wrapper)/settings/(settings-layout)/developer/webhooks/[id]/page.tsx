@@ -1,9 +1,9 @@
 import type { PageProps } from "app/_types";
 import { _generateMetadata } from "app/_utils";
 
-import { WebhookRepository } from "@calcom/features/webhooks/lib/repository/WebhookRepository";
-import { EditWebhookView } from "@calcom/features/webhooks/pages/webhook-edit-view";
-import { APP_NAME } from "@calcom/lib/constants";
+import { WebhookRepository } from "@calndrbrnd/features/webhooks/lib/repository/WebhookRepository";
+import { EditWebhookView } from "@calndrbrnd/features/webhooks/pages/webhook-edit-view";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
 
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) =>
   await _generateMetadata(

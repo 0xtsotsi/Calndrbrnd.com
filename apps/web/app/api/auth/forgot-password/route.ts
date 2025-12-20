@@ -3,11 +3,11 @@ import { parseRequestData } from "app/api/parseRequestData";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import { passwordResetRequest } from "@calcom/features/auth/lib/passwordResetRequest";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { emailSchema } from "@calcom/lib/emailSchema";
-import prisma from "@calcom/prisma";
-import { piiHasher } from "@calcom/lib/server/PiiHasher";
+import { passwordResetRequest } from "@calndrbrnd/features/auth/lib/passwordResetRequest";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import { emailSchema } from "@calndrbrnd/lib/emailSchema";
+import prisma from "@calndrbrnd/prisma";
+import { piiHasher } from "@calndrbrnd/lib/server/PiiHasher";
 
 async function handler(req: NextRequest) {
   const body = await parseRequestData(req);

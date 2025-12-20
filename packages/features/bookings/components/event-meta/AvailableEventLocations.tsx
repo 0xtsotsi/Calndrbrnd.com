@@ -2,14 +2,14 @@ import type {
   DefaultEventLocationType,
   EventLocationTypeFromApp,
   LocationObject,
-} from "@calcom/app-store/locations";
-import { getEventLocationType, getTranslatedLocation } from "@calcom/app-store/locations";
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import invertLogoOnDark from "@calcom/lib/invertLogoOnDark";
-import classNames from "@calcom/ui/classNames";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/app-store/locations";
+import { getEventLocationType, getTranslatedLocation } from "@calndrbrnd/app-store/locations";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import invertLogoOnDark from "@calndrbrnd/lib/invertLogoOnDark";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 const excludeNullValues = (value: unknown) => !!value;
 

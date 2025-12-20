@@ -1,17 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { getBillingProviderService } from "@calcom/features/ee/billing/di/containers/Billing";
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { OnboardingPathService } from "@calcom/features/onboarding/lib/onboarding-path.service";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { IS_STRIPE_ENABLED } from "@calcom/lib/constants";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { CreationSource } from "@calcom/prisma/enums";
-import { userMetadata } from "@calcom/prisma/zod-utils";
-import { inviteMembersWithNoInviterPermissionCheck } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
+import dayjs from "@calndrbrnd/dayjs";
+import { getBillingProviderService } from "@calndrbrnd/features/ee/billing/di/containers/Billing";
+import { getOrganizationRepository } from "@calndrbrnd/features/ee/organizations/di/OrganizationRepository.container";
+import { OnboardingPathService } from "@calndrbrnd/features/onboarding/lib/onboarding-path.service";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { IS_STRIPE_ENABLED } from "@calndrbrnd/lib/constants";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { CreationSource } from "@calndrbrnd/prisma/enums";
+import { userMetadata } from "@calndrbrnd/prisma/zod-utils";
+import { inviteMembersWithNoInviterPermissionCheck } from "@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
 
 const verifySchema = z.object({
   token: z.string(),

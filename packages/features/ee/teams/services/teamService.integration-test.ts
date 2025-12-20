@@ -1,13 +1,13 @@
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
-import prisma from "@calcom/prisma";
-import type { Team, User } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import type { Team, User } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TeamService } from "./teamService";
 
 // Mock the DI container
-vi.mock("@calcom/ee/billing/di/containers/Billing", () => {
+vi.mock("@calndrbrnd/ee/billing/di/containers/Billing", () => {
   const mockUpdateQuantity = vi.fn().mockResolvedValue(undefined);
   const mockTeamBillingService = {
     updateQuantity: mockUpdateQuantity,
@@ -956,7 +956,7 @@ describe("TeamService.removeMembers Integration Tests", () => {
 
   describe("Common Behaviors and Edge Cases", () => {
     it("should call TeamBillingService.updateQuantity for each team", async () => {
-      const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+      const { getTeamBillingServiceFactory } = await import("@calndrbrnd/ee/billing/di/containers/Billing");
 
       await TeamService.removeMembers({
         teamIds: [regularTeamTestData.team.id],

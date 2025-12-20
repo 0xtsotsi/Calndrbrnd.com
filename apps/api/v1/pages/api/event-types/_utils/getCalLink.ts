@@ -1,4 +1,4 @@
-import { WEBSITE_URL } from "@calcom/lib/constants";
+import { WEBSITE_URL } from "@calndrbrnd/lib/constants";
 
 export default function getCalLink(eventType: {
   team?: { slug: string | null } | null;

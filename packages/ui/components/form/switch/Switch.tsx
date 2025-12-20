@@ -4,7 +4,7 @@ import * as PrimitiveSwitch from "@radix-ui/react-switch";
 import type { ReactNode } from "react";
 import React from "react";
 
-import cx from "@calcom/ui/classNames";
+import cx from "@calndrbrnd/ui/classNames";
 
 import { Tooltip } from "../../tooltip";
 

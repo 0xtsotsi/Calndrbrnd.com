@@ -7,6 +7,6 @@ export const getCredentialForSelectedCalendar = vi.fn().mockResolvedValue({
   delegatedTo: null,
 });
 
-vi.doMock("@calcom/app-store/delegationCredential", () => ({
+vi.doMock("@calndrbrnd/app-store/delegationCredential", () => ({
   getCredentialForSelectedCalendar,
 }));

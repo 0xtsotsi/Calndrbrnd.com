@@ -5,19 +5,19 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { setShowNewOrgModalFlag } from "@calcom/features/ee/organizations/hooks/useWelcomeModal";
-import { useOnboarding } from "@calcom/features/ee/organizations/lib/onboardingStore";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc";
-import { trpc } from "@calcom/trpc";
-import { Alert } from "@calcom/ui/components/alert";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { TextField } from "@calcom/ui/components/form";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { setShowNewOrgModalFlag } from "@calndrbrnd/features/ee/organizations/hooks/useWelcomeModal";
+import { useOnboarding } from "@calndrbrnd/features/ee/organizations/lib/onboardingStore";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc";
+import { trpc } from "@calndrbrnd/trpc";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 type TeamMember = RouterOutputs["viewer"]["teams"]["listMembers"]["members"][number];
 

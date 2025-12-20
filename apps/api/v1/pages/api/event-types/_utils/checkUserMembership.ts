@@ -1,7 +1,7 @@
 import type { NextApiRequest } from "next";
 
-import { HttpError } from "@calcom/lib/http-error";
-import prisma from "@calcom/prisma";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import prisma from "@calndrbrnd/prisma";
 
 /**
  * Checks if a user, identified by the provided userId, is a member of the team associated

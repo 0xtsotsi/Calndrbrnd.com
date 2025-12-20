@@ -1,20 +1,20 @@
-import dayjs from "@calcom/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 import {
   getAttendeeToBeUsedInSMS,
   getSMSMessageWithVariables,
   shouldUseTwilio,
-} from "@calcom/ee/workflows/lib/reminders/utils";
-import type { CreditCheckFn } from "@calcom/features/ee/billing/credit-service";
-import { getSubmitterEmail } from "@calcom/features/tasker/tasks/triggerFormSubmittedNoEvent/formSubmissionValidation";
-import { SENDER_ID } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import type { PrismaClient } from "@calcom/prisma";
-import prisma from "@calcom/prisma";
-import { WorkflowTemplates, WorkflowActions, WorkflowMethods } from "@calcom/prisma/enums";
-import { WorkflowTriggerEvents } from "@calcom/prisma/enums";
+} from "@calndrbrnd/ee/workflows/lib/reminders/utils";
+import type { CreditCheckFn } from "@calndrbrnd/features/ee/billing/credit-service";
+import { getSubmitterEmail } from "@calndrbrnd/features/tasker/tasks/triggerFormSubmittedNoEvent/formSubmissionValidation";
+import { SENDER_ID } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import prisma from "@calndrbrnd/prisma";
+import { WorkflowTemplates, WorkflowActions, WorkflowMethods } from "@calndrbrnd/prisma/enums";
+import { WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import { isAttendeeAction } from "../actionHelperFunctions";
 import { getSenderId } from "../alphanumericSenderIdSupport";

@@ -1,5 +1,5 @@
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { symmetricEncrypt } from "@calcom/lib/crypto";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { symmetricEncrypt } from "@calndrbrnd/lib/crypto";
 
 import { CallToAction, Separator, CallToActionTable } from "../components";
 import { OrganizerScheduledEmail } from "./OrganizerScheduledEmail";

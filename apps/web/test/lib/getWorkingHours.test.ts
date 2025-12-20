@@ -1,7 +1,7 @@
 import { expect, it, vi, beforeAll } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { getWorkingHours } from "@calcom/lib/availability";
+import dayjs from "@calndrbrnd/dayjs";
+import { getWorkingHours } from "@calndrbrnd/lib/availability";
 
 beforeAll(() => {
   vi.setSystemTime(new Date("2021-06-20T11:59:59Z"));

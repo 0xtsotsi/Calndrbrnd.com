@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { MembershipRole, UserPermissionRole } from "@calcom/prisma/enums";
-import { createContext } from "@calcom/trpc/server/createContext";
-import { viewerTeamsRouter } from "@calcom/trpc/server/routers/viewer/teams/_router";
-import { createCallerFactory } from "@calcom/trpc/server/trpc";
-import type { UserProfile } from "@calcom/types/UserProfile";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultHandler } from "@calndrbrnd/lib/server/defaultHandler";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import { MembershipRole, UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import { createContext } from "@calndrbrnd/trpc/server/createContext";
+import { viewerTeamsRouter } from "@calndrbrnd/trpc/server/routers/viewer/teams/_router";
+import { createCallerFactory } from "@calndrbrnd/trpc/server/trpc";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
 
 import { TRPCError } from "@trpc/server";
 import { getHTTPStatusCodeFromError } from "@trpc/server/http";

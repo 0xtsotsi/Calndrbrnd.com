@@ -1,8 +1,8 @@
-import useApp from "@calcom/features/apps/hooks/useApp";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { showToast } from "@calcom/ui/components/toast";
+import useApp from "@calndrbrnd/features/apps/hooks/useApp";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { InstallAppButton } from "../InstallAppButton";
 import useAddAppMutation from "../_utils/useAddAppMutation";

@@ -1,5 +1,5 @@
-import { Prisma, PrismaClient } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { Prisma, PrismaClient } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 interface _AgentRawResult {
   id: string;

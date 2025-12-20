@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 
-import _dayjs from "@calcom/dayjs";
-import prisma from "@calcom/prisma";
+import _dayjs from "@calndrbrnd/dayjs";
+import prisma from "@calndrbrnd/prisma";
 
 import { test } from "./lib/fixtures";
 

@@ -3,12 +3,12 @@ import prismaMock from "../../../tests/libs/__mocks__/prismaMock";
 
 import { vi, describe, it, beforeAll, afterAll, expect, beforeEach, afterEach } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import * as CalcomEmails from "@calcom/emails/organization-email-service";
-import { getNoSlotsNotificationService } from "@calcom/features/di/containers/NoSlotsNotification";
-import { RedisService } from "@calcom/features/redis/RedisService";
+import dayjs from "@calndrbrnd/dayjs";
+import * as CalcomEmails from "@calndrbrnd/emails/organization-email-service";
+import { getNoSlotsNotificationService } from "@calndrbrnd/features/di/containers/NoSlotsNotification";
+import { RedisService } from "@calndrbrnd/features/redis/RedisService";
 
-vi.mock("@calcom/features/redis/RedisService", () => {
+vi.mock("@calndrbrnd/features/redis/RedisService", () => {
   const mockedRedis = vi.fn();
   mockedRedis.prototype.lrange = vi.fn();
   mockedRedis.prototype.lpush = vi.fn();
@@ -18,7 +18,7 @@ vi.mock("@calcom/features/redis/RedisService", () => {
   };
 });
 
-vi.mock("@calcom/features/flags/features.repository", () => ({
+vi.mock("@calndrbrnd/features/flags/features.repository", () => ({
   FeaturesRepository: vi.fn().mockImplementation(() => ({
     checkIfFeatureIsEnabledGlobally: vi.fn().mockResolvedValue(false),
   })),

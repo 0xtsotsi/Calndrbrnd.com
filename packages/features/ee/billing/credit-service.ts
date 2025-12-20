@@ -1,14 +1,14 @@
 import type { TFunction } from "i18next";
 
-import dayjs from "@calcom/dayjs";
-import { CreditsRepository } from "@calcom/features/credits/repositories/CreditsRepository";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { IS_SMS_CREDITS_ENABLED } from "@calcom/lib/constants";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import logger from "@calcom/lib/logger";
-import { prisma, type PrismaTransaction } from "@calcom/prisma";
-import { CreditUsageType, CreditType } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { CreditsRepository } from "@calndrbrnd/features/credits/repositories/CreditsRepository";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { IS_SMS_CREDITS_ENABLED } from "@calndrbrnd/lib/constants";
+import getOrgIdFromMemberOrTeamId from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import logger from "@calndrbrnd/lib/logger";
+import { prisma, type PrismaTransaction } from "@calndrbrnd/prisma";
+import { CreditUsageType, CreditType } from "@calndrbrnd/prisma/enums";
 
 import { getBillingProviderService, getTeamBillingServiceFactory } from "./di/containers/Billing";
 import { SubscriptionStatus } from "./repository/billing/IBillingRepository";
@@ -498,7 +498,7 @@ export class CreditService {
         return null; // user has limit already reached or team has already reached limit this month
       }
 
-      const { getTranslation } = await import("@calcom/lib/server/i18n");
+      const { getTranslation } = await import("@calndrbrnd/lib/server/i18n");
 
       const teamWithAdmins = creditBalance?.team
         ? {
@@ -596,7 +596,7 @@ export class CreditService {
 
     try {
       if (result.type === "LIMIT_REACHED") {
-        const { sendCreditBalanceLimitReachedEmails } = await import("@calcom/emails/billing-email-service");
+        const { sendCreditBalanceLimitReachedEmails } = await import("@calndrbrnd/emails/billing-email-service");
 
         const promises: Promise<unknown>[] = [
           sendCreditBalanceLimitReachedEmails({
@@ -610,7 +610,7 @@ export class CreditService {
 
         if (!result.creditFor || result.creditFor === CreditUsageType.SMS) {
           const { cancelScheduledMessagesAndScheduleEmails } = await import(
-            "@calcom/features/ee/workflows/lib/reminders/reminderScheduler"
+            "@calndrbrnd/features/ee/workflows/lib/reminders/reminderScheduler"
           );
           promises.push(
             cancelScheduledMessagesAndScheduleEmails({
@@ -627,7 +627,7 @@ export class CreditService {
 
         await Promise.all(promises);
       } else if (result.type === "WARNING") {
-        const { sendCreditBalanceLowWarningEmails } = await import("@calcom/emails/billing-email-service");
+        const { sendCreditBalanceLowWarningEmails } = await import("@calndrbrnd/emails/billing-email-service");
         await sendCreditBalanceLowWarningEmails({
           balance: result.balance,
           team: result.team,

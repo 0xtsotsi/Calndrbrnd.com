@@ -1,13 +1,13 @@
 import type { TFunction } from "i18next";
 
-import type { PaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import type { EventTypeAppsList } from "@calcom/app-store/utils";
-import type { GetUserAvailabilityResult } from "@calcom/features/availability/lib/getUserAvailability";
-import type { userSelect } from "@calcom/prisma";
-import type { App } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import type { SelectedCalendar } from "@calcom/prisma/client";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import type { PaymentAppData } from "@calndrbrnd/app-store/_utils/payments/getPaymentAppData";
+import type { EventTypeAppsList } from "@calndrbrnd/app-store/utils";
+import type { GetUserAvailabilityResult } from "@calndrbrnd/features/availability/lib/getUserAvailability";
+import type { userSelect } from "@calndrbrnd/prisma";
+import type { App } from "@calndrbrnd/prisma/client";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { SelectedCalendar } from "@calndrbrnd/prisma/client";
+import type { CredentialForCalendarService } from "@calndrbrnd/types/Credential";
 
 type User = Omit<Prisma.UserGetPayload<{ select: typeof userSelect }>, "selectedCalendars">;
 

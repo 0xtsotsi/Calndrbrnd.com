@@ -12,19 +12,19 @@ import {
   getScenarioData,
   getGoogleCalendarCredential,
   mockCalendarToHaveNoBusySlots,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { getMockRequestDataForBooking } from "@calndrbrnd/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { afterEach, beforeEach, vi } from "vitest";
 import { describe, expect } from "vitest";
 
-import { BookingStatus } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { test } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 
-vi.mock("@calcom/features/auth/lib/verifyCodeUnAuthenticated", () => ({
+vi.mock("@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated", () => ({
   verifyCodeUnAuthenticated: vi.fn(),
 }));
 
@@ -32,7 +32,7 @@ const { mockFindManyByEmailsWithEmailVerificationSettings } = vi.hoisted(() => (
   mockFindManyByEmailsWithEmailVerificationSettings: vi.fn(),
 }));
 
-vi.mock("@calcom/features/users/repositories/UserRepository", async (importOriginal) => {
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository", async (importOriginal) => {
   const actual = await importOriginal();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const OriginalUserRepository = (actual as any).UserRepository;
@@ -555,7 +555,7 @@ describe("Booking Validation Specifications", () => {
     test("should create booking when main booker provides valid verification code", async () => {
       const handleNewBooking = getNewBookingHandler();
       const { verifyCodeUnAuthenticated } = await import(
-        "@calcom/features/auth/lib/verifyCodeUnAuthenticated"
+        "@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated"
       );
 
       vi.mocked(verifyCodeUnAuthenticated).mockResolvedValue(true);
@@ -1070,7 +1070,7 @@ describe("Booking Validation Specifications", () => {
     test("should throw error when invalid verification code is provided", async () => {
       const handleNewBooking = getNewBookingHandler();
       const { verifyCodeUnAuthenticated } = await import(
-        "@calcom/features/auth/lib/verifyCodeUnAuthenticated"
+        "@calndrbrnd/features/auth/lib/verifyCodeUnAuthenticated"
       );
 
       vi.mocked(verifyCodeUnAuthenticated).mockResolvedValue(false);

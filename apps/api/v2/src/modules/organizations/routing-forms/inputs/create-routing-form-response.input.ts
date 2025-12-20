@@ -2,7 +2,7 @@ import { ApiPropertyOptional } from "@nestjs/swagger";
 import { Transform } from "class-transformer";
 import { IsBoolean, IsOptional } from "class-validator";
 
-import { GetAvailableSlotsInput_2024_09_04 } from "@calcom/platform-types";
+import { GetAvailableSlotsInput_2024_09_04 } from "@calndrbrnd/platform-types";
 
 export class CreateRoutingFormResponseInput extends GetAvailableSlotsInput_2024_09_04 {
   @Transform(({ value }: { value: string | boolean }) => {

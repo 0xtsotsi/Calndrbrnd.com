@@ -1,7 +1,7 @@
-import { prisma } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import type { TServiceAccountKeySchema } from "@calcom/prisma/zod-utils";
-import { serviceAccountKeySchema } from "@calcom/prisma/zod-utils";
+import { prisma } from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import type { TServiceAccountKeySchema } from "@calndrbrnd/prisma/zod-utils";
+import { serviceAccountKeySchema } from "@calndrbrnd/prisma/zod-utils";
 
 type WorkspacePlatformServiceAccountKey = TServiceAccountKeySchema | null;
 const safeWorkspacePlatformSelect = {

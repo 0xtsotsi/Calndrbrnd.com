@@ -1,13 +1,13 @@
 import type { Calendar as OfficeCalendar } from "@microsoft/microsoft-graph-types-beta";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { renewSelectedCalendarCredentialId } from "@calcom/lib/connectedCalendar";
-import { WEBAPP_URL, WEBAPP_URL_FOR_OAUTH } from "@calcom/lib/constants";
-import { handleErrorsJson } from "@calcom/lib/errors";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+import { renewSelectedCalendarCredentialId } from "@calndrbrnd/lib/connectedCalendar";
+import { WEBAPP_URL, WEBAPP_URL_FOR_OAUTH } from "@calndrbrnd/lib/constants";
+import { handleErrorsJson } from "@calndrbrnd/lib/errors";
+import { getSafeRedirectUrl } from "@calndrbrnd/lib/getSafeRedirectUrl";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
 
 import getAppKeysFromSlug from "../../_utils/getAppKeysFromSlug";
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";

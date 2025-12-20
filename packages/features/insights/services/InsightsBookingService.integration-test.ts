@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import { ColumnFilterType } from "@calcom/features/data-table/lib/types";
-import prisma from "@calcom/prisma";
-import type { Team, User, Membership } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import { BookingStatus, MembershipRole } from "@calcom/prisma/enums";
+import { ColumnFilterType } from "@calndrbrnd/features/data-table/lib/types";
+import prisma from "@calndrbrnd/prisma";
+import type { Team, User, Membership } from "@calndrbrnd/prisma/client";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import { BookingStatus, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import {
   InsightsBookingBaseService as InsightsBookingService,

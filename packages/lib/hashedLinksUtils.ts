@@ -1,5 +1,5 @@
-import dayjs from "@calcom/dayjs";
-import { ErrorCode } from "@calcom/lib/errorCodes";
+import dayjs from "@calndrbrnd/dayjs";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
 
 export type EventTypeForTimezone = {
   userId?: number | null;

@@ -1,5 +1,5 @@
-import { type Container, createModule, ModuleLoader } from "@calcom/features/di/di";
-import { IS_TEAM_BILLING_ENABLED } from "@calcom/lib/constants";
+import { type Container, createModule, ModuleLoader } from "@calndrbrnd/features/di/di";
+import { IS_TEAM_BILLING_ENABLED } from "@calndrbrnd/lib/constants";
 
 import { DI_TOKENS } from "../tokens";
 

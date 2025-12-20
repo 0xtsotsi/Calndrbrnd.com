@@ -2,9 +2,9 @@
 
 import { useRouter } from "next/navigation";
 
-import { CreateButtonWithTeamsList } from "@calcom/features/ee/teams/components/createButton/CreateButtonWithTeamsList";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { CreateButtonWithTeamsList } from "@calndrbrnd/features/ee/teams/components/createButton/CreateButtonWithTeamsList";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 export const CreateNewWebhookButton = () => {
   const router = useRouter();

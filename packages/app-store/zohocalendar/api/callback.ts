@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { stringify } from "querystring";
 
-import { renewSelectedCalendarCredentialId } from "@calcom/lib/connectedCalendar";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
-import logger from "@calcom/lib/logger";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+import { renewSelectedCalendarCredentialId } from "@calndrbrnd/lib/connectedCalendar";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getSafeRedirectUrl } from "@calndrbrnd/lib/getSafeRedirectUrl";
+import logger from "@calndrbrnd/lib/logger";
+import { defaultHandler } from "@calndrbrnd/lib/server/defaultHandler";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
 
 import getAppKeysFromSlug from "../../_utils/getAppKeysFromSlug";
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";

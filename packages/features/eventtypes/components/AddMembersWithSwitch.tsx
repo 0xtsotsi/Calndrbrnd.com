@@ -3,20 +3,20 @@ import { useFormContext } from "react-hook-form";
 import { Controller } from "react-hook-form";
 import type { Options } from "react-select";
 
-import { AddMembersWithSwitchPlatformWrapper } from "@calcom/atoms/add-members-switch/AddMembersWithSwitchPlatformWrapper";
-import { AddMembersWithSwitchWebWrapper } from "@calcom/atoms/add-members-switch/AddMembersWithSwitchWebWrapper";
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { Segment } from "@calcom/features/Segment";
+import { AddMembersWithSwitchPlatformWrapper } from "@calndrbrnd/atoms/add-members-switch/AddMembersWithSwitchPlatformWrapper";
+import { AddMembersWithSwitchWebWrapper } from "@calndrbrnd/atoms/add-members-switch/AddMembersWithSwitchWebWrapper";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import { Segment } from "@calndrbrnd/features/Segment";
 import type {
   FormValues,
   Host,
   SettingsToggleClassNames,
   TeamMember,
-} from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { Label } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
+} from "@calndrbrnd/features/eventtypes/lib/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { AttributesQueryValue } from "@calndrbrnd/lib/raqb/types";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { SettingsToggle } from "@calndrbrnd/ui/components/form";
 
 import AssignAllTeamMembers from "./AssignAllTeamMembers";
 import CheckedTeamSelect from "./CheckedTeamSelect";

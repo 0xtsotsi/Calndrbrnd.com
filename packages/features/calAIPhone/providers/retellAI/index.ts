@@ -94,7 +94,7 @@ export interface RetellAIPhoneServiceProviderTypeMap {
 // REFACTORED ARCHITECTURE - Multiple usage patterns available:
 
 // 1. BACKWARD COMPATIBLE - Existing code works unchanged
-import { RetellAIService } from '@calcom/features/calAIPhone/providers/retellAI';
+import { RetellAIService } from '@calndrbrnd/features/calAIPhone/providers/retellAI';
 
 const service = new RetellAIService(
   repository,
@@ -117,7 +117,7 @@ const phoneNumber = await service.importPhoneNumber({
 });
 
 // 2. FOCUSED SERVICE USAGE - Recommended for new modular code
-import { RetellAIService } from '@calcom/features/calAIPhone/providers/retellAI';
+import { RetellAIService } from '@calndrbrnd/features/calAIPhone/providers/retellAI';
 
 const service = new RetellAIService(
   repository,
@@ -134,7 +134,7 @@ import {
   AIConfigurationService,
   PhoneNumberService,
   BillingService
-} from '@calcom/features/calAIPhone/providers/retellAI';
+} from '@calndrbrnd/features/calAIPhone/providers/retellAI';
 
 // Use only what you need
 const aiConfigService = new AIConfigurationService(repository);

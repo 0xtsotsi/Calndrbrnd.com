@@ -1,7 +1,7 @@
 import { describe, it, vi, expect, beforeEach } from "vitest";
 
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
@@ -24,7 +24,7 @@ const { mockCreateMany } = vi.hoisted(() => {
   return { mockCreateMany: mockCreateManyFn };
 });
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     prisma: {
       membership: {
@@ -34,20 +34,20 @@ vi.mock("@calcom/prisma", () => {
   };
 });
 
-vi.mock("@calcom/features/pbac/utils/isOrganisationAdmin", () => {
+vi.mock("@calndrbrnd/features/pbac/utils/isOrganisationAdmin", () => {
   return {
     isOrganisationAdmin: vi.fn(),
     isOrganisationOwner: vi.fn(),
   };
 });
 
-vi.mock("@calcom/features/pbac/services/permission-check.service", () => {
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service", () => {
   return {
     PermissionCheckService: vi.fn(),
   };
 });
 
-vi.mock("@calcom/lib/logger", () => {
+vi.mock("@calndrbrnd/lib/logger", () => {
   const mockSubLogger = {
     debug: vi.fn(),
     error: vi.fn(),

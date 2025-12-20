@@ -4,11 +4,11 @@ import { _generateMetadata } from "app/_utils";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { APP_NAME } from "@calcom/lib/constants";
-import prisma from "@calcom/prisma";
-import { meRouter } from "@calcom/trpc/server/routers/viewer/me/_router";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import prisma from "@calndrbrnd/prisma";
+import { meRouter } from "@calndrbrnd/trpc/server/routers/viewer/me/_router";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

@@ -3,8 +3,8 @@ import { PrismaReadService } from "@/modules/prisma/prisma-read.service";
 import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { Injectable } from "@nestjs/common";
 
-import type { SortOrderType } from "@calcom/platform-types";
-import type { Prisma } from "@calcom/prisma/client";
+import type { SortOrderType } from "@calndrbrnd/platform-types";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class EventTypesRepository_2024_06_14 {

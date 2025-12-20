@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import type { ParsedUrlQuery } from "querystring";
 import { useEffect, useState } from "react";
 
-import { WEBSITE_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Icon } from "@calcom/ui/components/icon";
+import { WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import AuthContainer from "@components/ui/AuthContainer";
 

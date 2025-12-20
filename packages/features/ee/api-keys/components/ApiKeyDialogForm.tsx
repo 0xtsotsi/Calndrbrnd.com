@@ -2,22 +2,22 @@ import Link from "next/link";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import type { TApiKeys } from "@calcom/ee/api-keys/components/ApiKeyListItem";
-import LicenseRequired from "@calcom/ee/common/components/LicenseRequired";
-import { API_NAME_LENGTH_MAX_LIMIT } from "@calcom/lib/constants";
-import { IS_CALCOM } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogFooter } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { SelectField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { revalidateApiKeysList } from "@calcom/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/api-keys/actions";
+import dayjs from "@calndrbrnd/dayjs";
+import type { TApiKeys } from "@calndrbrnd/ee/api-keys/components/ApiKeyListItem";
+import LicenseRequired from "@calndrbrnd/ee/common/components/LicenseRequired";
+import { API_NAME_LENGTH_MAX_LIMIT } from "@calndrbrnd/lib/constants";
+import { IS_CALCOM } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogFooter } from "@calndrbrnd/ui/components/dialog";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { SelectField } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
+import { revalidateApiKeysList } from "@calndrbrnd/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/api-keys/actions";
 
 export default function ApiKeyDialogForm({
   defaultValues,

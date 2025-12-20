@@ -3,9 +3,9 @@ import { unstable_cache } from "next/cache";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { PrismaApiKeyRepository } from "@calcom/features/ee/api-keys/repositories/PrismaApiKeyRepository";
-import { APP_NAME } from "@calcom/lib/constants";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { PrismaApiKeyRepository } from "@calndrbrnd/features/ee/api-keys/repositories/PrismaApiKeyRepository";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

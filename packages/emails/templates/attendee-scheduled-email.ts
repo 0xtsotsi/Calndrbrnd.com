@@ -1,10 +1,10 @@
 import type { TFunction } from "i18next";
 import { default as cloneDeep } from "lodash/cloneDeep";
 
-import { getRichDescription } from "@calcom/lib/CalEventParser";
-import { getReplyToHeader } from "@calcom/lib/getReplyToHeader";
-import { TimeFormat } from "@calcom/lib/timeFormat";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import { getRichDescription } from "@calndrbrnd/lib/CalEventParser";
+import { getReplyToHeader } from "@calndrbrnd/lib/getReplyToHeader";
+import { TimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { CalendarEvent, Person } from "@calndrbrnd/types/Calendar";
 
 import generateIcsFile, { GenerateIcsRole } from "../lib/generateIcsFile";
 import renderEmail from "../src/renderEmail";

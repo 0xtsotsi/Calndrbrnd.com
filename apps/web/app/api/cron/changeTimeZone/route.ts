@@ -2,9 +2,9 @@ import { defaultResponderForAppDir } from "app/api/defaultResponderForAppDir";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import dayjs from "@calcom/dayjs";
-import { ScheduleRepository } from "@calcom/features/schedules/repositories/ScheduleRepository";
-import prisma from "@calcom/prisma";
+import dayjs from "@calndrbrnd/dayjs";
+import { ScheduleRepository } from "@calndrbrnd/features/schedules/repositories/ScheduleRepository";
+import prisma from "@calndrbrnd/prisma";
 
 const travelScheduleSelect = {
   id: true,

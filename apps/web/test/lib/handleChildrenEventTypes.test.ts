@@ -3,11 +3,11 @@ import prismaMock from "../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, expect, it, vi } from "vitest";
 
-import updateChildrenEventTypes from "@calcom/features/ee/managed-event-types/lib/handleChildrenEventTypes";
-import { buildEventType } from "@calcom/lib/test/builder";
-import type { EventType, User, WorkflowsOnEventTypes } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
+import updateChildrenEventTypes from "@calndrbrnd/features/ee/managed-event-types/lib/handleChildrenEventTypes";
+import { buildEventType } from "@calndrbrnd/lib/test/builder";
+import type { EventType, User, WorkflowsOnEventTypes } from "@calndrbrnd/prisma/client";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
 
 // Helper to setup transaction mock that executes the callback with the prisma mock
 const setupTransactionMock = () => {
@@ -35,13 +35,13 @@ const mockFindFirstEventType = (
   return eventType;
 };
 
-vi.mock("@calcom/emails/integration-email-service", () => {
+vi.mock("@calndrbrnd/emails/integration-email-service", () => {
   return {
     sendSlugReplacementEmail: () => ({}),
   };
 });
 
-vi.mock("@calcom/lib/server/i18n", () => {
+vi.mock("@calndrbrnd/lib/server/i18n", () => {
   return {
     getTranslation: async (locale: string, namespace: string) => {
       const t = (key: string) => key;

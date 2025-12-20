@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import prisma from "@calcom/prisma";
+import prisma from "@calndrbrnd/prisma";
 
 import { withMiddleware } from "~/lib/helpers/withMiddleware";
 import type { PaymentResponse } from "~/lib/types";
@@ -46,7 +46,7 @@ export async function paymentById(
   if (safeQuery.success && method === "GET") {
     const userWithBookings = await prisma.user.findUnique({
       where: { id: userId },
-      // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+      // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
       include: { bookings: true },
     });
     await prisma.payment

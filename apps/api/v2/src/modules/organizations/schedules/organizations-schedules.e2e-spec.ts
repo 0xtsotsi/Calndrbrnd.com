@@ -14,7 +14,7 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 import type {
   CreateScheduleInput_2024_06_11,
   CreateScheduleOutput_2024_06_11,
@@ -24,8 +24,8 @@ import type {
   ScheduleOutput_2024_06_11,
   UpdateScheduleInput_2024_06_11,
   UpdateScheduleOutput_2024_06_11,
-} from "@calcom/platform-types";
-import type { User, Team, Membership, Profile } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { User, Team, Membership, Profile } from "@calndrbrnd/prisma/client";
 
 describe("Organizations Schedules Endpoints", () => {
   describe("User lacks required role", () => {

@@ -5,8 +5,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createMocks } from "node-mocks-http";
 import { describe, expect, test } from "vitest";
 
-import { HttpError } from "@calcom/lib/http-error";
-import type { User } from "@calcom/prisma/client";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import type { User } from "@calndrbrnd/prisma/client";
 
 import handler from "../../../pages/api/selected-calendars/_post";
 

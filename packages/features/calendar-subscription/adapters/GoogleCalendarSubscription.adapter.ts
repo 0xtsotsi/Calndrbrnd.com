@@ -1,11 +1,11 @@
 import type { calendar_v3 } from "@googleapis/calendar";
 import { v4 as uuid } from "uuid";
 
-import { CalendarAuth } from "@calcom/app-store/googlecalendar/lib/CalendarAuth";
-import dayjs from "@calcom/dayjs";
-import { CalendarCacheEventService } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheEventService";
-import logger from "@calcom/lib/logger";
-import type { SelectedCalendar } from "@calcom/prisma/client";
+import { CalendarAuth } from "@calndrbrnd/app-store/googlecalendar/lib/CalendarAuth";
+import dayjs from "@calndrbrnd/dayjs";
+import { CalendarCacheEventService } from "@calndrbrnd/features/calendar-subscription/lib/cache/CalendarCacheEventService";
+import logger from "@calndrbrnd/lib/logger";
+import type { SelectedCalendar } from "@calndrbrnd/prisma/client";
 
 import type {
   ICalendarSubscriptionPort,

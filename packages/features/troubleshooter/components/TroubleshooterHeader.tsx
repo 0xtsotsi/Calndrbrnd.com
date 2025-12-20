@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+import dayjs from "@calndrbrnd/dayjs";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
 
 import { useTroubleshooterStore } from "../store";
 

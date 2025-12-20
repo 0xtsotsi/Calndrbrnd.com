@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma";
+import { prisma } from "@calndrbrnd/prisma";
 
 const reassignAttributes = async () => {
   const orgId = 0;

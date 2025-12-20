@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { timeZoneSchema } from "@calcom/lib/dayjs/timeZone.schema";
+import { timeZoneSchema } from "@calndrbrnd/lib/dayjs/timeZone.schema";
 
 export type TGetMemberAvailabilityInputSchema = {
   teamId: number;

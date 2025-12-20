@@ -1,12 +1,12 @@
 import type { NextApiRequest } from "next";
 import { describe, expect, it, beforeEach, vi, afterEach } from "vitest";
 
-import { getWatchlistFeature } from "@calcom/features/di/watchlist/containers/watchlist";
-import type { WatchlistFeature } from "@calcom/features/watchlist/lib/facade/WatchlistFeature";
+import { getWatchlistFeature } from "@calndrbrnd/features/di/watchlist/containers/watchlist";
+import type { WatchlistFeature } from "@calndrbrnd/features/watchlist/lib/facade/WatchlistFeature";
 
 import { isLockedOrBlocked } from "../../../lib/utils/isLockedOrBlocked";
 
-vi.mock("@calcom/features/di/watchlist/containers/watchlist", () => ({
+vi.mock("@calndrbrnd/features/di/watchlist/containers/watchlist", () => ({
   getWatchlistFeature: vi.fn(),
 }));
 

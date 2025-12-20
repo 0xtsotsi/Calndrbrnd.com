@@ -30,10 +30,10 @@ import {
 } from "@nestjs/common";
 import { ApiTags as DocsTags, ApiExcludeController as DocsExcludeController } from "@nestjs/swagger";
 
-import { ERROR_STATUS, SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { UpdateEventTypeReturn } from "@calcom/platform-libraries/event-types";
-import { PublicEventType } from "@calcom/platform-libraries/event-types";
-import { ApiResponse } from "@calcom/platform-types";
+import { ERROR_STATUS, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { UpdateEventTypeReturn } from "@calndrbrnd/platform-libraries/event-types";
+import { PublicEventType } from "@calndrbrnd/platform-libraries/event-types";
+import { ApiResponse } from "@calndrbrnd/platform-types";
 
 /*
 Event-types endpoints for atoms, split from AtomsController for clarity and maintainability.

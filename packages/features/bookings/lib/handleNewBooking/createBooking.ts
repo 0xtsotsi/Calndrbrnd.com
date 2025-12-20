@@ -1,15 +1,15 @@
 import type short from "short-uuid";
 import type { z } from "zod";
 
-import type { routingFormResponseInDbSchema } from "@calcom/app-store/routing-forms/zod";
-import dayjs from "@calcom/dayjs";
-import { isPrismaObjOrUndefined } from "@calcom/lib/isPrismaObj";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import prisma from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { CreationSource } from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import type { routingFormResponseInDbSchema } from "@calndrbrnd/app-store/routing-forms/zod";
+import dayjs from "@calndrbrnd/dayjs";
+import { isPrismaObjOrUndefined } from "@calndrbrnd/lib/isPrismaObj";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import prisma from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import type { CreationSource } from "@calndrbrnd/prisma/enums";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import type { TgetBookingDataSchema } from "../getBookingDataSchema";
 import type { AwaitedBookingData, EventTypeId } from "./getBookingData";

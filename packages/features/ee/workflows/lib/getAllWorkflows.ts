@@ -1,5 +1,5 @@
-import prisma from "@calcom/prisma";
-import type { WorkflowType } from "@calcom/prisma/client";
+import prisma from "@calndrbrnd/prisma";
+import type { WorkflowType } from "@calndrbrnd/prisma/client";
 
 import type { Workflow } from "./types";
 

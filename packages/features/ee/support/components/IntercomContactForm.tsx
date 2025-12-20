@@ -2,13 +2,13 @@
 
 import React, { useEffect, useState, useCallback } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Label, TextArea } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Popover, PopoverContent, PopoverTrigger } from "@calcom/ui/components/popover";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Label, TextArea } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Popover, PopoverContent, PopoverTrigger } from "@calndrbrnd/ui/components/popover";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 declare global {
   interface Window {

@@ -1,7 +1,7 @@
-import incompleteBookingActionDataSchemas from "@calcom/app-store/routing-forms/lib/incompleteBooking/actionDataSchemas";
-import logger from "@calcom/lib/logger";
-import type { PrismaClient } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import incompleteBookingActionDataSchemas from "@calndrbrnd/app-store/routing-forms/lib/incompleteBooking/actionDataSchemas";
+import logger from "@calndrbrnd/lib/logger";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

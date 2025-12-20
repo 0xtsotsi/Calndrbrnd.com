@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import slugify from "@calcom/lib/slugify";
+import slugify from "@calndrbrnd/lib/slugify";
 
 export type TCreateInputSchema = {
   name: string;

@@ -1,8 +1,8 @@
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { HttpError } from "@calcom/lib/http-error";
-import prisma from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import prisma from "@calndrbrnd/prisma";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 // TODO: Inject.
 export async function getOriginalRescheduledBooking(uid: string, seatsEventType?: boolean) {

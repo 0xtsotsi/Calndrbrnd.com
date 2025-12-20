@@ -19,16 +19,16 @@ import {
   BookingLocations,
   mockSuccessfulVideoMeetingCreation,
   mockCalendarToHaveNoBusySlots,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { expectBookingToBeInDatabase } from "@calcom/web/test/utils/bookingScenario/expects";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { expectBookingToBeInDatabase } from "@calndrbrnd/web/test/utils/bookingScenario/expects";
+import { getMockRequestDataForBooking } from "@calndrbrnd/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, expect, vi } from "vitest";
 
-import { PeriodType } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { PeriodType } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { test } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 

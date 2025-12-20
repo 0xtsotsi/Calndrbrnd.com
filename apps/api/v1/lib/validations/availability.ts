@@ -1,8 +1,8 @@
 import { z } from "zod";
 
-import { denullishShape } from "@calcom/prisma/zod-utils";
-import { AvailabilitySchema } from "@calcom/prisma/zod/modelSchema/AvailabilitySchema";
-import { ScheduleSchema } from "@calcom/prisma/zod/modelSchema/ScheduleSchema";
+import { denullishShape } from "@calndrbrnd/prisma/zod-utils";
+import { AvailabilitySchema } from "@calndrbrnd/prisma/zod/modelSchema/AvailabilitySchema";
+import { ScheduleSchema } from "@calndrbrnd/prisma/zod/modelSchema/ScheduleSchema";
 
 export const schemaAvailabilityBaseBodyParams = /** We make all these properties required */ denullishShape(
   AvailabilitySchema.pick({

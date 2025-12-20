@@ -3,7 +3,7 @@ import { OutputSchedulesService_2024_06_11 } from "@/ee/schedules/schedules_2024
 import { TeamsRepository } from "@/modules/teams/teams/teams.repository";
 import { Injectable } from "@nestjs/common";
 
-import { ScheduleOutput_2024_06_11 } from "@calcom/platform-types";
+import { ScheduleOutput_2024_06_11 } from "@calndrbrnd/platform-types";
 
 @Injectable()
 export class TeamsSchedulesService {

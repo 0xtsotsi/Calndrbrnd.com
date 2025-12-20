@@ -2,12 +2,12 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 
 import { BookingLocationService } from "./bookingLocationService";
 
-vi.mock("@calcom/app-store/utils", () => ({
+vi.mock("@calndrbrnd/app-store/utils", () => ({
   getAppFromSlug: vi.fn(),
 }));
 
-vi.mock("@calcom/app-store/locations", async () => {
-  const actual = await vi.importActual("@calcom/app-store/locations");
+vi.mock("@calndrbrnd/app-store/locations", async () => {
+  const actual = await vi.importActual("@calndrbrnd/app-store/locations");
   return {
     ...actual,
     OrganizerDefaultConferencingAppType: "conferencing",
@@ -15,7 +15,7 @@ vi.mock("@calcom/app-store/locations", async () => {
   };
 });
 
-const { getAppFromSlug } = await import("@calcom/app-store/utils");
+const { getAppFromSlug } = await import("@calndrbrnd/app-store/utils");
 
 describe("BookingLocationService", () => {
   beforeEach(() => {

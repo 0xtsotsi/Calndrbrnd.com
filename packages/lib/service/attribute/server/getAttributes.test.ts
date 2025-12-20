@@ -2,8 +2,8 @@ import prismock from "../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, beforeEach } from "vitest";
 
-import type { AttributeOption } from "@calcom/prisma/client";
-import { AttributeType, MembershipRole } from "@calcom/prisma/enums";
+import type { AttributeOption } from "@calndrbrnd/prisma/client";
+import { AttributeType, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import type { Attribute } from "./getAttributes";
 import { getAttributesForTeam, getAttributesAssignmentData, getUsersAttributes } from "./getAttributes";
@@ -42,7 +42,7 @@ async function createMockAttribute({
 
   const result = await prismock.attribute.findUnique({
     where: { id: attribute.id },
-    // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+    // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
     include: { options: true },
   });
   if (!result) {

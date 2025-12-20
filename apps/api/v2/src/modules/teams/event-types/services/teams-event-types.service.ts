@@ -11,9 +11,9 @@ import { UsersService } from "@/modules/users/services/users.service";
 import { UserWithProfile } from "@/modules/users/users.repository";
 import { Injectable, NotFoundException, Logger } from "@nestjs/common";
 
-import type { SortOrderType } from "@calcom/platform-types";
+import type { SortOrderType } from "@calndrbrnd/platform-types";
 
-import { createEventType, updateEventType } from "@calcom/platform-libraries/event-types";
+import { createEventType, updateEventType } from "@calndrbrnd/platform-libraries/event-types";
 
 @Injectable()
 export class TeamsEventTypesService {

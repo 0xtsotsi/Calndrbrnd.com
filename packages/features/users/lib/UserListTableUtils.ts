@@ -1,7 +1,7 @@
 import type { Table } from "@tanstack/react-table";
 
-import type { UserTableUser } from "@calcom/features/users/components/UserTable/types";
-import { sanitizeValue } from "@calcom/lib/csvUtils";
+import type { UserTableUser } from "@calndrbrnd/features/users/components/UserTable/types";
+import { sanitizeValue } from "@calndrbrnd/lib/csvUtils";
 
 export const generateHeaderFromReactTable = (table: Table<UserTableUser>): string[] | null => {
   const headerGroups = table.getHeaderGroups();

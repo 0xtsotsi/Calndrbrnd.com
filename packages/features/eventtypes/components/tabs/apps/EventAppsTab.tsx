@@ -1,19 +1,19 @@
 import Link from "next/link";
 import { useFormContext } from "react-hook-form";
 
-import { EventTypeAppCard } from "@calcom/app-store/_components/EventTypeAppCardInterface";
-import type { EventTypeAppCardComponentProps } from "@calcom/app-store/types";
-import type { EventTypeAppsList } from "@calcom/app-store/utils";
-import useAppsData from "@calcom/features/apps/hooks/useAppsData";
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import type { FormValues, EventTypeSetupProps, EventTypeApps } from "@calcom/features/eventtypes/lib/types";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Section } from "@calcom/ui/components/section";
+import { EventTypeAppCard } from "@calndrbrnd/app-store/_components/EventTypeAppCardInterface";
+import type { EventTypeAppCardComponentProps } from "@calndrbrnd/app-store/types";
+import type { EventTypeAppsList } from "@calndrbrnd/app-store/utils";
+import useAppsData from "@calndrbrnd/features/apps/hooks/useAppsData";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import type { FormValues, EventTypeSetupProps, EventTypeApps } from "@calndrbrnd/features/eventtypes/lib/types";
+import ServerTrans from "@calndrbrnd/lib/components/ServerTrans";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { Section } from "@calndrbrnd/ui/components/section";
 
 export type EventType = Pick<EventTypeSetupProps, "eventType">["eventType"] &
   EventTypeAppCardComponentProps["eventType"];

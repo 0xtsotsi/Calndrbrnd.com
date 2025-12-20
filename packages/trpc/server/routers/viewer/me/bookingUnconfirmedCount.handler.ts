@@ -1,6 +1,6 @@
-import { prisma } from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { prisma } from "@calndrbrnd/prisma";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 type BookingUnconfirmedCountOptions = {
   ctx: {

@@ -21,7 +21,7 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calndrbrnd/platform-constants";
 import {
   OrganizerScheduledEmail,
   AttendeeScheduledEmail,
@@ -29,15 +29,15 @@ import {
   AttendeeRescheduledEmail,
   OrganizerCancelledEmail,
   AttendeeCancelledEmail,
-} from "@calcom/platform-libraries/emails";
+} from "@calndrbrnd/platform-libraries/emails";
 import type {
   CreateBookingInput_2024_08_13,
   BookingOutput_2024_08_13,
   RescheduleBookingInput_2024_08_13,
   RecurringBookingOutput_2024_08_13,
   CancelBookingInput_2024_08_13,
-} from "@calcom/platform-types";
-import type { User, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { User, Team } from "@calndrbrnd/prisma/client";
 
 jest
   .spyOn(AttendeeScheduledEmail.prototype, "getHtml")

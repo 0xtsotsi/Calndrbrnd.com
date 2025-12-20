@@ -15,15 +15,15 @@ import { UsersService } from "@/modules/users/services/users.service";
 import { UserWithProfile, UsersRepository } from "@/modules/users/users.repository";
 import { BadRequestException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
 
-import { dynamicEvent } from "@calcom/platform-libraries";
+import { dynamicEvent } from "@calndrbrnd/platform-libraries";
 import {
   createEventType,
   updateEventType,
   getEventTypesPublic,
   EventTypesPublic,
-} from "@calcom/platform-libraries/event-types";
-import type { GetEventTypesQuery_2024_06_14, SortOrderType } from "@calcom/platform-types";
-import type { EventType } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-libraries/event-types";
+import type { GetEventTypesQuery_2024_06_14, SortOrderType } from "@calndrbrnd/platform-types";
+import type { EventType } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class EventTypesService_2024_06_14 {

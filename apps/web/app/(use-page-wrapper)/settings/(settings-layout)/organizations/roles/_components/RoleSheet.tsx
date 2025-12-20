@@ -6,18 +6,18 @@ import { useState, useMemo, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import type { Resource } from "@calcom/features/pbac/domain/types/permission-registry";
+import type { Resource } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
 import {
   CrudAction,
   Scope,
   getPermissionsForScope,
-} from "@calcom/features/pbac/domain/types/permission-registry";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Form, TextField, Checkbox, Label } from "@calcom/ui/components/form";
-import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle } from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Form, TextField, Checkbox, Label } from "@calndrbrnd/ui/components/form";
+import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle } from "@calndrbrnd/ui/components/sheet";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { revalidateTeamRoles } from "../actions";
 import { AdvancedPermissionGroup } from "./AdvancedPermissionGroup";

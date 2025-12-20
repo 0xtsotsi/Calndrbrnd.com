@@ -1,8 +1,8 @@
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { generateHashedLink } from "@calcom/lib/generateHashedLink";
-import { CalVideoSettingsRepository } from "@calcom/features/calVideoSettings/repositories/CalVideoSettingsRepository";
-import { prisma } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { generateHashedLink } from "@calndrbrnd/lib/generateHashedLink";
+import { CalVideoSettingsRepository } from "@calndrbrnd/features/calVideoSettings/repositories/CalVideoSettingsRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
 
 import { TRPCError } from "@trpc/server";
 

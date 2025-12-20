@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
-import { HttpError } from "@calcom/lib/http-error";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getSafeRedirectUrl } from "@calndrbrnd/lib/getSafeRedirectUrl";
+import { HttpError } from "@calndrbrnd/lib/http-error";
 
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";
 import getParsedAppKeysFromSlug from "../../_utils/getParsedAppKeysFromSlug";

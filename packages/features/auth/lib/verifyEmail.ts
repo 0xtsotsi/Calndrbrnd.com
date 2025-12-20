@@ -5,16 +5,16 @@ import {
   sendEmailVerificationCode,
   sendEmailVerificationLink,
   sendChangeOfEmailVerificationLink,
-} from "@calcom/emails/auth-email-service";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { sentrySpan } from "@calcom/features/watchlist/lib/telemetry";
-import { checkIfEmailIsBlockedInWatchlistController } from "@calcom/features/watchlist/operations/check-if-email-in-watchlist.controller";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { hashEmail } from "@calcom/lib/server/PiiHasher";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
+} from "@calndrbrnd/emails/auth-email-service";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { sentrySpan } from "@calndrbrnd/features/watchlist/lib/telemetry";
+import { checkIfEmailIsBlockedInWatchlistController } from "@calndrbrnd/features/watchlist/operations/check-if-email-in-watchlist.controller";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { hashEmail } from "@calndrbrnd/lib/server/PiiHasher";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { prisma } from "@calndrbrnd/prisma";
 
 const log = logger.getSubLogger({ prefix: [`[[Auth] `] });
 

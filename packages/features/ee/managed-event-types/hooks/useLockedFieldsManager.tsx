@@ -4,15 +4,15 @@ import type { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import type { Prisma, EventType } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { eventTypeMetaDataSchemaWithoutApps } from "@calcom/prisma/zod-utils";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import type { FormValues } from "@calndrbrnd/features/eventtypes/lib/types";
+import type { Prisma, EventType } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { eventTypeMetaDataSchemaWithoutApps } from "@calndrbrnd/prisma/zod-utils";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 export const LockedSwitch = (
   isManagedEventType: boolean,

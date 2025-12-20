@@ -1,12 +1,12 @@
 {
-  "extends": "@calcom/tsconfig/nextjs.json",
+  "extends": "@calndrbrnd/tsconfig/nextjs.json",
   "compilerOptions": {
     "strict": true,
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "~/*": ["*"],
-      "@prisma/client/*": ["@calcom/prisma/client/*"]
+      "@prisma/client/*": ["@calndrbrnd/prisma/client/*"]
     },
     "experimentalDecorators": true
   },

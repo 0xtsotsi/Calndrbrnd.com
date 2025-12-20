@@ -14,7 +14,7 @@ const rule = createRule({
                 node: item,
                 loc: node.loc,
                 messageId: "dayjs-moved",
-                fix: (fixer) => fixer.replaceText(node, "import dayjs from '@calcom/dayjs'"),
+                fix: (fixer) => fixer.replaceText(node, "import dayjs from '@calndrbrnd/dayjs'"),
               });
             }
             return null;
@@ -30,7 +30,7 @@ const rule = createRule({
       recommended: "warn",
     },
     messages: {
-      "dayjs-moved": `Import dayjs from '@calcom/daysjs' to avoid plugin conflicts.`,
+      "dayjs-moved": `Import dayjs from '@calndrbrnd/daysjs' to avoid plugin conflicts.`,
     },
     type: "suggestion",
     schema: [],

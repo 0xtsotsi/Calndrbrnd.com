@@ -5,8 +5,8 @@ import jwt from "jsonwebtoken";
 import { NextRequest } from "next/server";
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
-import { verifyCodeChallenge } from "@calcom/lib/pkce";
-import { generateSecret } from "@calcom/trpc/server/routers/viewer/oAuth/addClient.handler";
+import { verifyCodeChallenge } from "@calndrbrnd/lib/pkce";
+import { generateSecret } from "@calndrbrnd/trpc/server/routers/viewer/oAuth/addClient.handler";
 
 import { POST } from "../route";
 
@@ -51,11 +51,11 @@ vi.mock("next/server", () => ({
 }));
 
 // Mock dependencies
-vi.mock("@calcom/lib/pkce", () => ({
+vi.mock("@calndrbrnd/lib/pkce", () => ({
   verifyCodeChallenge: vi.fn(),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/oAuth/addClient.handler", () => ({
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/oAuth/addClient.handler", () => ({
   generateSecret: vi.fn(),
 }));
 
@@ -65,7 +65,7 @@ vi.mock("jsonwebtoken", () => ({
   },
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: prismaMock,
 }));
 

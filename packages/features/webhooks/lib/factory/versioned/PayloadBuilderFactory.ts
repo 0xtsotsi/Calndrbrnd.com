@@ -1,5 +1,5 @@
-import logger from "@calcom/lib/logger";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import logger from "@calndrbrnd/lib/logger";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import type { WebhookVersion } from "../../interface/IWebhookRepository";
 

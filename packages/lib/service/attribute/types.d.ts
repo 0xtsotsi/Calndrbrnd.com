@@ -1,4 +1,4 @@
-import type { Attribute, AttributeToUser, AttributeOption } from "@calcom/prisma/client";
+import type { Attribute, AttributeToUser, AttributeOption } from "@calndrbrnd/prisma/client";
 
 export type AttributeName = string;
 export type AttributeId = string;

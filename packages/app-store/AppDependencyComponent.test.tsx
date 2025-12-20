@@ -11,7 +11,7 @@ type MockDependency = {
 };
 
 // Mock the useLocale hook
-vi.mock("@calcom/lib/hooks/useLocale", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useLocale", () => ({
   useLocale: () => ({
     t: (key: string, values?: Record<string, unknown>) => {
       if (key === "app_is_connected") {
@@ -29,11 +29,11 @@ vi.mock("@calcom/lib/hooks/useLocale", () => ({
 }));
 
 // Mock constants and UI components
-vi.mock("@calcom/lib/constants", () => ({
+vi.mock("@calndrbrnd/lib/constants", () => ({
   WEBAPP_URL: "http://localhost:3000",
 }));
 
-vi.mock("@calcom/ui/components/icon", () => ({
+vi.mock("@calndrbrnd/ui/components/icon", () => ({
   Icon: ({ name, className }: { name: string; className?: string }) => (
     <svg data-testid={`${name}-icon`} className={className}>
       {name}

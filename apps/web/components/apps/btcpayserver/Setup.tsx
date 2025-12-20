@@ -7,17 +7,17 @@ import { useForm } from "react-hook-form";
 import { Toaster } from "sonner";
 import { z } from "zod";
 
-import AppNotInstalledMessage from "@calcom/app-store/_components/AppNotInstalledMessage";
-import KeyField from "@calcom/app-store/btcpayserver/components/KeyInput";
-import { btcpayCredentialKeysSchema } from "@calcom/app-store/btcpayserver/lib/btcpayCredentialKeysSchema";
-import type { IBTCPaySetupProps } from "@calcom/app-store/btcpayserver/pages/setup/_getServerSideProps";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Button } from "@calcom/ui/components/button";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import AppNotInstalledMessage from "@calndrbrnd/app-store/_components/AppNotInstalledMessage";
+import KeyField from "@calndrbrnd/app-store/btcpayserver/components/KeyInput";
+import { btcpayCredentialKeysSchema } from "@calndrbrnd/app-store/btcpayserver/lib/btcpayCredentialKeysSchema";
+import type { IBTCPaySetupProps } from "@calndrbrnd/app-store/btcpayserver/pages/setup/_getServerSideProps";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 export default function BTCPaySetup(props: IBTCPaySetupProps) {
   const params = useCompatSearchParams();

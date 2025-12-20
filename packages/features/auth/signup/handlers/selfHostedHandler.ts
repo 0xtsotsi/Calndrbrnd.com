@@ -1,17 +1,17 @@
 import { NextResponse } from "next/server";
 
-import { checkPremiumUsername } from "@calcom/ee/common/lib/checkPremiumUsername";
-import { sendEmailVerification } from "@calcom/features/auth/lib/verifyEmail";
-import { createOrUpdateMemberships } from "@calcom/features/auth/signup/utils/createOrUpdateMemberships";
-import { validateAndGetCorrectedUsernameAndEmail } from "@calcom/features/auth/signup/utils/validateUsername";
-import { hashPassword } from "@calcom/lib/auth/hashPassword";
-import { IS_PREMIUM_USERNAME_ENABLED } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { isUsernameReservedDueToMigration } from "@calcom/lib/server/username";
-import slugify from "@calcom/lib/slugify";
-import prisma from "@calcom/prisma";
-import { IdentityProvider } from "@calcom/prisma/enums";
-import { signupSchema } from "@calcom/prisma/zod-utils";
+import { checkPremiumUsername } from "@calndrbrnd/ee/common/lib/checkPremiumUsername";
+import { sendEmailVerification } from "@calndrbrnd/features/auth/lib/verifyEmail";
+import { createOrUpdateMemberships } from "@calndrbrnd/features/auth/signup/utils/createOrUpdateMemberships";
+import { validateAndGetCorrectedUsernameAndEmail } from "@calndrbrnd/features/auth/signup/utils/validateUsername";
+import { hashPassword } from "@calndrbrnd/lib/auth/hashPassword";
+import { IS_PREMIUM_USERNAME_ENABLED } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { isUsernameReservedDueToMigration } from "@calndrbrnd/lib/server/username";
+import slugify from "@calndrbrnd/lib/slugify";
+import prisma from "@calndrbrnd/prisma";
+import { IdentityProvider } from "@calndrbrnd/prisma/enums";
+import { signupSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { joinAnyChildTeamOnOrgInvite } from "../utils/organization";
 import { prefillAvatar } from "../utils/prefillAvatar";

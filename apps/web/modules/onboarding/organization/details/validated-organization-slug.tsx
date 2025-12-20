@@ -2,9 +2,9 @@
 
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 
-import classNames from "@calcom/ui/classNames";
-import { Label, TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Label, TextField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import { checkSlugAvailability } from "./action/check-slug-availability";
 

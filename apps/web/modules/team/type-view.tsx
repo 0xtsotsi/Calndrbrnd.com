@@ -3,8 +3,8 @@
 import type { EmbedProps } from "app/WithEmbedSSR";
 import { useSearchParams } from "next/navigation";
 
-import { BookerWebWrapper as Booker } from "@calcom/atoms/booker";
-import { getBookerWrapperClasses } from "@calcom/features/bookings/Booker/utils/getBookerWrapperClasses";
+import { BookerWebWrapper as Booker } from "@calndrbrnd/atoms/booker";
+import { getBookerWrapperClasses } from "@calndrbrnd/features/bookings/Booker/utils/getBookerWrapperClasses";
 
 import type { getServerSideProps } from "@lib/team/[slug]/[type]/getServerSideProps";
 import type { inferSSRProps } from "@lib/types/inferSSRProps";

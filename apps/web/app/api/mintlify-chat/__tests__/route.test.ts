@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import * as mintlifyChatValidation from "@calcom/lib/server/mintlifyChatValidation";
+import * as mintlifyChatValidation from "@calndrbrnd/lib/server/mintlifyChatValidation";
 
 import { POST as topicPOST } from "../topic/route";
 import { POST as messagePOST } from "../message/route";

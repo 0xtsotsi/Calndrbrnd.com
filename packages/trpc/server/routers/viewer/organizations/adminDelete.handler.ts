@@ -1,7 +1,7 @@
-import { deleteDomain } from "@calcom/lib/domainManager/organization";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
-import { RedirectType } from "@calcom/prisma/enums";
+import { deleteDomain } from "@calndrbrnd/lib/domainManager/organization";
+import logger from "@calndrbrnd/lib/logger";
+import { prisma } from "@calndrbrnd/prisma";
+import { RedirectType } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

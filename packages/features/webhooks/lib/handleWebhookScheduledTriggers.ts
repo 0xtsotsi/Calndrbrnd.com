@@ -1,6 +1,6 @@
-import dayjs from "@calcom/dayjs";
-import logger from "@calcom/lib/logger";
-import type { PrismaClient } from "@calcom/prisma";
+import dayjs from "@calndrbrnd/dayjs";
+import logger from "@calndrbrnd/lib/logger";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 import { createWebhookSignature, jsonParse } from "./sendPayload";
 

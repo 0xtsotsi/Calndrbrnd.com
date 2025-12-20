@@ -1,14 +1,14 @@
-import { enrichUsersWithDelegationCredentials } from "@calcom/app-store/delegationCredential";
-import dayjs from "@calcom/dayjs";
-import { ensureAvailableUsers } from "@calcom/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
-import type { IsFixedAwareUser } from "@calcom/features/bookings/lib/handleNewBooking/types";
-import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import logger from "@calcom/lib/logger";
-import type { PrismaClient } from "@calcom/prisma";
-import { userSelect } from "@calcom/prisma";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { enrichUsersWithDelegationCredentials } from "@calndrbrnd/app-store/delegationCredential";
+import dayjs from "@calndrbrnd/dayjs";
+import { ensureAvailableUsers } from "@calndrbrnd/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
+import type { IsFixedAwareUser } from "@calndrbrnd/features/bookings/lib/handleNewBooking/types";
+import { withSelectedCalendars } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import logger from "@calndrbrnd/lib/logger";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { userSelect } from "@calndrbrnd/prisma";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TGetRoundRobinHostsToReassignInputSchema } from "./getRoundRobinHostsToReasign.schema";
 

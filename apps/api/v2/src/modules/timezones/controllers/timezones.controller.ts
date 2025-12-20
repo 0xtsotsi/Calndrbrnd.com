@@ -3,9 +3,9 @@ import { TimezonesService } from "@/modules/timezones/services/timezones.service
 import { Controller, Get } from "@nestjs/common";
 import { ApiExcludeController, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { CityTimezones } from "@calcom/platform-libraries";
-import { ApiResponse } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { CityTimezones } from "@calndrbrnd/platform-libraries";
+import { ApiResponse } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/timezones",

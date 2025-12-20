@@ -1,13 +1,13 @@
 import type { NextApiRequest } from "next";
 
-import { getRequestedSlugError } from "@calcom/app-store/stripepayment/lib/team-billing";
-import { purchaseTeamOrOrgSubscription } from "@calcom/features/ee/teams/lib/payments";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calcom/lib/constants";
-import { getTrackingFromCookies } from "@calcom/lib/tracking";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
+import { getRequestedSlugError } from "@calndrbrnd/app-store/stripepayment/lib/team-billing";
+import { purchaseTeamOrOrgSubscription } from "@calndrbrnd/features/ee/teams/lib/payments";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getTrackingFromCookies } from "@calndrbrnd/lib/tracking";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { teamMetadataStrictSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 

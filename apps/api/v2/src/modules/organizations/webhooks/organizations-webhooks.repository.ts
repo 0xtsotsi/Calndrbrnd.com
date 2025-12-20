@@ -3,7 +3,7 @@ import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { Injectable } from "@nestjs/common";
 import { v4 as uuidv4 } from "uuid";
 
-import type { Webhook } from "@calcom/prisma/client";
+import type { Webhook } from "@calndrbrnd/prisma/client";
 
 type WebhookInputData = Pick<
   Webhook,

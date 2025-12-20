@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiSuccessResponse, TeamEventTypeOutput_2024_06_14 } from "@calcom/platform-types";
-import type { ApiResponse } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiSuccessResponse, TeamEventTypeOutput_2024_06_14 } from "@calndrbrnd/platform-types";
+import type { ApiResponse } from "@calndrbrnd/platform-types";
 
 import http from "../../../lib/http";
 import { useAtomsContext } from "../../useAtomsContext";

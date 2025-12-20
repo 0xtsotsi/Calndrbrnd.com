@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import type { Prisma, Team, User, Membership, Profile } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma, Team, User, Membership, Profile } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import inviteMemberHandler, { inviteMembersWithNoInviterPermissionCheck } from "./inviteMember.handler";
 
@@ -118,13 +118,13 @@ vi.mock("node-fetch", () => ({
 }));
 
 // Mock email sending
-vi.mock("@calcom/emails/organization-email-service", () => ({
+vi.mock("@calndrbrnd/emails/organization-email-service", () => ({
   sendTeamInviteEmail: vi.fn(() => Promise.resolve()),
   sendOrganizationAutoJoinEmail: vi.fn(() => Promise.resolve()),
 }));
 
 // Mock for getTranslation
-vi.mock("@calcom/lib/server/i18n", () => ({
+vi.mock("@calndrbrnd/lib/server/i18n", () => ({
   getTranslation: vi.fn(() => Promise.resolve((key: string) => key)),
 }));
 

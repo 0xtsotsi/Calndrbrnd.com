@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 
-import type { Resource } from "@calcom/features/pbac/domain/types/permission-registry";
+import type { Resource } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
 import {
   Scope,
   CrudAction,
   getPermissionsForScope,
-} from "@calcom/features/pbac/domain/types/permission-registry";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Checkbox, Label } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Checkbox, Label } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { usePermissions } from "./usePermissions";
 

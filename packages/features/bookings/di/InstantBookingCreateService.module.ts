@@ -1,7 +1,7 @@
-import { InstantBookingCreateService } from "@calcom/features/bookings/lib/service/InstantBookingCreateService";
-import { createModule, bindModuleToClassOnToken } from "@calcom/features/di/di";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { moduleLoader as prismaModuleLoader } from "@calcom/features/di/modules/Prisma";
+import { InstantBookingCreateService } from "@calndrbrnd/features/bookings/lib/service/InstantBookingCreateService";
+import { createModule, bindModuleToClassOnToken } from "@calndrbrnd/features/di/di";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { moduleLoader as prismaModuleLoader } from "@calndrbrnd/features/di/modules/Prisma";
 
 export const instantBookingCreateServiceModule = createModule();
 const token = DI_TOKENS.INSTANT_BOOKING_CREATE_SERVICE;

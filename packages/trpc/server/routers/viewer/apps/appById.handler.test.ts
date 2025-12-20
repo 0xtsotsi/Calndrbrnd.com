@@ -6,11 +6,11 @@ import { appByIdHandler } from "./appById.handler";
 import type { TAppByIdInputSchema } from "./appById.schema";
 
 // Mock the dependencies
-vi.mock("@calcom/app-store/delegationCredential", () => ({
+vi.mock("@calndrbrnd/app-store/delegationCredential", () => ({
   getUsersCredentialsIncludeServiceAccountKey: vi.fn(),
 }));
 
-vi.mock("@calcom/app-store/utils", () => ({
+vi.mock("@calndrbrnd/app-store/utils", () => ({
   default: vi.fn(),
   sanitizeAppForViewer: vi.fn((app) => {
     const { key: _, credential: _1, credentials: _2, ...sanitized } = app;
@@ -18,11 +18,11 @@ vi.mock("@calcom/app-store/utils", () => ({
   }),
 }));
 
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import getApps, { sanitizeAppForViewer } from "@calcom/app-store/utils";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@calndrbrnd/app-store/delegationCredential";
+import getApps, { sanitizeAppForViewer } from "@calndrbrnd/app-store/utils";
 
-import type { CredentialDataWithTeamName, LocationOption } from "@calcom/app-store/utils";
-import type { App } from "@calcom/types/App";
+import type { CredentialDataWithTeamName, LocationOption } from "@calndrbrnd/app-store/utils";
+import type { App } from "@calndrbrnd/types/App";
 
 describe("appByIdHandler", () => {
   const mockUser = {

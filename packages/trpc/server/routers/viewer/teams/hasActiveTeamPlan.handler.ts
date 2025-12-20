@@ -1,10 +1,10 @@
-import { getTeamBillingServiceFactory } from "@calcom/ee/billing/di/containers/Billing";
-import { SubscriptionStatus } from "@calcom/ee/billing/repository/billing/IBillingRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getTeamBillingServiceFactory } from "@calndrbrnd/ee/billing/di/containers/Billing";
+import { SubscriptionStatus } from "@calndrbrnd/ee/billing/repository/billing/IBillingRepository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { IS_SELF_HOSTED } from "@calndrbrnd/lib/constants";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { THasActiveTeamPlanInputSchema } from "./hasActiveTeamPlan.schema";
 

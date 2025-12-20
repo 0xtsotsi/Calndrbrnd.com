@@ -1,6 +1,6 @@
 "use client";
 
-import NoSSR from "@calcom/lib/components/NoSSR";
+import NoSSR from "@calndrbrnd/lib/components/NoSSR";
 
 import { UsersTable } from "../components/UsersTable";
 

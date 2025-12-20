@@ -1,10 +1,10 @@
 import { z } from "zod";
 
-import { getHumanReadableLocationValue } from "@calcom/app-store/locations";
+import { getHumanReadableLocationValue } from "@calndrbrnd/app-store/locations";
 import { StringChangeSchema } from "../common/changeSchemas";
 import { AuditActionServiceHelper } from "./AuditActionServiceHelper";
 import type { IAuditActionService, TranslationWithParams, GetDisplayTitleParams } from "./IAuditActionService";
-import { getTranslation } from "@calcom/lib/server/i18n";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
 /**
  * Location Changed Audit Action Service
  * Handles LOCATION_CHANGED action with per-action versioning

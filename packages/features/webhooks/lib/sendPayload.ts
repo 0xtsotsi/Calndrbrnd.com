@@ -1,12 +1,12 @@
 import { createHmac } from "crypto";
 import { compile } from "handlebars";
 
-import type { TGetTranscriptAccessLink } from "@calcom/app-store/dailyvideo/zod";
-import { getHumanReadableLocationValue } from "@calcom/app-store/locations";
-import type { WebhookSubscriber, PaymentData } from "@calcom/features/webhooks/lib/dto/types";
-import { DelegationCredentialErrorPayloadType } from "@calcom/features/webhooks/lib/dto/types";
-import { getUTCOffsetByTimezone } from "@calcom/lib/dayjs";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import type { TGetTranscriptAccessLink } from "@calndrbrnd/app-store/dailyvideo/zod";
+import { getHumanReadableLocationValue } from "@calndrbrnd/app-store/locations";
+import type { WebhookSubscriber, PaymentData } from "@calndrbrnd/features/webhooks/lib/dto/types";
+import { DelegationCredentialErrorPayloadType } from "@calndrbrnd/features/webhooks/lib/dto/types";
+import { getUTCOffsetByTimezone } from "@calndrbrnd/lib/dayjs";
+import type { CalendarEvent, Person } from "@calndrbrnd/types/Calendar";
 
 // Minimal webhook shape for sending payloads (subset of WebhookSubscriber)
 type WebhookForPayload = Pick<WebhookSubscriber, "subscriberUrl" | "appId" | "payloadTemplate">;

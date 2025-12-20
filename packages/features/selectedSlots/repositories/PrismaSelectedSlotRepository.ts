@@ -1,5 +1,5 @@
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import type { ISelectedSlotRepository } from "./ISelectedSlotRepository";
 import type { TimeSlot } from "./ISelectedSlotRepository";

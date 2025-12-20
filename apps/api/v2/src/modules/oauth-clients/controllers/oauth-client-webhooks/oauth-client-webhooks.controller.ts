@@ -19,10 +19,10 @@ import { Controller, Post, Body, UseGuards, Get, Param, Query, Delete, Patch } f
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 import { plainToClass } from "class-transformer";
 
-import { SUCCESS_STATUS, X_CAL_SECRET_KEY } from "@calcom/platform-constants";
-import { MembershipRole } from "@calcom/platform-libraries";
-import { SkipTakePagination } from "@calcom/platform-types";
-import type { Webhook } from "@calcom/prisma/client";
+import { SUCCESS_STATUS, X_CAL_SECRET_KEY } from "@calndrbrnd/platform-constants";
+import { MembershipRole } from "@calndrbrnd/platform-libraries";
+import { SkipTakePagination } from "@calndrbrnd/platform-types";
+import type { Webhook } from "@calndrbrnd/prisma/client";
 
 import { OAuthClientGuard } from "../../guards/oauth-client-guard";
 

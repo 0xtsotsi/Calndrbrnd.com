@@ -1,19 +1,19 @@
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import type { Props } from "react-select";
 
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import type { SelectClassNames } from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { UserProfile } from "@calcom/types/UserProfile";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { Select } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import type { SelectClassNames } from "@calndrbrnd/features/eventtypes/lib/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 export type ChildrenEventType = {
   value: string;

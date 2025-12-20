@@ -1,7 +1,7 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Dialog, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import { Dialog, ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useDataTable } from "../../hooks";
 import type { FilterSegmentOutput } from "../../lib/types";

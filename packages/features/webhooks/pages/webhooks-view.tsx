@@ -2,14 +2,14 @@
 
 import { useRouter } from "next/navigation";
 
-import { useBookerUrl } from "@calcom/features/bookings/hooks/useBookerUrl";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { APP_NAME, WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { useBookerUrl } from "@calndrbrnd/features/bookings/hooks/useBookerUrl";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { APP_NAME, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
 
 import { WebhookListItem, CreateNewWebhookButton } from "../components";
 

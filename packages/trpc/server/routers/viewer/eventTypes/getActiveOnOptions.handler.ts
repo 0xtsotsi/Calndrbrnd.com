@@ -1,12 +1,12 @@
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { PrismaRoutingFormRepository } from "@calcom/features/routing-forms/repositories/PrismaRoutingFormRepository";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole, SchedulingType } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { PrismaRoutingFormRepository } from "@calndrbrnd/features/routing-forms/repositories/PrismaRoutingFormRepository";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { MembershipRole, SchedulingType } from "@calndrbrnd/prisma/enums";
+import { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 

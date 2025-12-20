@@ -1,22 +1,22 @@
 import { type TFunction } from "i18next";
 
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { workflowSelect } from "@calcom/features/ee/workflows/lib/getAllWorkflows";
-import { getAllWorkflowsFromEventType } from "@calcom/features/ee/workflows/lib/getAllWorkflowsFromEventType";
-import type { ExtendedCalendarEvent } from "@calcom/features/ee/workflows/lib/reminders/reminderScheduler";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { WebhookService } from "@calcom/features/webhooks/lib/WebhookService";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import { prisma } from "@calcom/prisma";
-import { WebhookTriggerEvents, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import { bookingMetadataSchema, type PlatformClientParams } from "@calcom/prisma/zod-utils";
-import type { TNoShowInputSchema } from "@calcom/trpc/server/routers/loggedInViewer/markNoShow.schema";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { CreditService } from "@calndrbrnd/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@calndrbrnd/features/ee/organizations/lib/getBookerUrlServer";
+import { workflowSelect } from "@calndrbrnd/features/ee/workflows/lib/getAllWorkflows";
+import { getAllWorkflowsFromEventType } from "@calndrbrnd/features/ee/workflows/lib/getAllWorkflowsFromEventType";
+import type { ExtendedCalendarEvent } from "@calndrbrnd/features/ee/workflows/lib/reminders/reminderScheduler";
+import { WorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/WorkflowService";
+import { WebhookService } from "@calndrbrnd/features/webhooks/lib/WebhookService";
+import getOrgIdFromMemberOrTeamId from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import { prisma } from "@calndrbrnd/prisma";
+import { WebhookTriggerEvents, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
+import { bookingMetadataSchema, type PlatformClientParams } from "@calndrbrnd/prisma/zod-utils";
+import type { TNoShowInputSchema } from "@calndrbrnd/trpc/server/routers/loggedInViewer/markNoShow.schema";
 
 import handleSendingAttendeeNoShowDataToApps from "./noShow/handleSendingAttendeeNoShowDataToApps";
 

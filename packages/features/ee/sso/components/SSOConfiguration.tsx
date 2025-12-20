@@ -1,11 +1,11 @@
-import ConnectionInfo from "@calcom/ee/sso/components/ConnectionInfo";
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import OIDCConnection from "@calcom/features/ee/sso/components/OIDCConnection";
-import SAMLConnection from "@calcom/features/ee/sso/components/SAMLConnection";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { SkeletonText, SkeletonContainer } from "@calcom/ui/components/skeleton";
+import ConnectionInfo from "@calndrbrnd/ee/sso/components/ConnectionInfo";
+import LicenseRequired from "@calndrbrnd/features/ee/common/components/LicenseRequired";
+import OIDCConnection from "@calndrbrnd/features/ee/sso/components/OIDCConnection";
+import SAMLConnection from "@calndrbrnd/features/ee/sso/components/SAMLConnection";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { SkeletonText, SkeletonContainer } from "@calndrbrnd/ui/components/skeleton";
 
 const SkeletonLoader = () => {
   return (

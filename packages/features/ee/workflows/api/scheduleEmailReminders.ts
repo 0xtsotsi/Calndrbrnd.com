@@ -5,17 +5,17 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 
-import dayjs from "@calcom/dayjs";
-import generateIcsString from "@calcom/emails/lib/generateIcsString";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import prisma from "@calcom/prisma";
-import { SchedulingType, WorkflowActions, WorkflowTemplates } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import generateIcsString from "@calndrbrnd/emails/lib/generateIcsString";
+import { getCalEventResponses } from "@calndrbrnd/features/bookings/lib/getCalEventResponses";
+import { getBookerBaseUrl } from "@calndrbrnd/features/ee/organizations/lib/getBookerUrlServer";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import prisma from "@calndrbrnd/prisma";
+import { SchedulingType, WorkflowActions, WorkflowTemplates } from "@calndrbrnd/prisma/enums";
+import { bookingMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import {
   getAllRemindersToCancel,

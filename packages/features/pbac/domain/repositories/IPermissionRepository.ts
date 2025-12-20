@@ -1,4 +1,4 @@
-import type { MembershipRole } from "@calcom/prisma/enums";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import type { TeamPermissions } from "../models/Permission";
 import type { PermissionString, Resource, CrudAction, CustomAction } from "../types/permission-registry";

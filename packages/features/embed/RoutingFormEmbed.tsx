@@ -1,9 +1,9 @@
 import type { ComponentProps } from "react";
 
-import { EmbedDialog, EmbedButton } from "@calcom/features/embed/Embed";
-import { IS_CALCOM } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import { EmbedDialog, EmbedButton } from "@calndrbrnd/features/embed/Embed";
+import { IS_CALCOM } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
 
 import { tabs } from "./lib/EmbedTabs";
 import { useEmbedTypes } from "./lib/hooks";

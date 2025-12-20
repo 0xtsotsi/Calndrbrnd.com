@@ -1,15 +1,15 @@
-import { getOrgUsernameFromEmail } from "@calcom/features/auth/signup/utils/getOrgUsernameFromEmail";
-import { getOrgFullOrigin } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import type { Team, User } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import { RedirectType } from "@calcom/prisma/enums";
-import type { MembershipRole } from "@calcom/prisma/enums";
-import { teamMetadataSchema, teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
+import { getOrgUsernameFromEmail } from "@calndrbrnd/features/auth/signup/utils/getOrgUsernameFromEmail";
+import { getOrgFullOrigin } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import prisma from "@calndrbrnd/prisma";
+import type { Team, User } from "@calndrbrnd/prisma/client";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import { RedirectType } from "@calndrbrnd/prisma/enums";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { teamMetadataSchema, teamMetadataStrictSchema } from "@calndrbrnd/prisma/zod-utils";
 
 const log = logger.getSubLogger({ prefix: ["orgMigration"] });
 

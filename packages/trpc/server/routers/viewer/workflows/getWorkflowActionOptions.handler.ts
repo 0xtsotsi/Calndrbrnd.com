@@ -1,6 +1,6 @@
-import { getWorkflowActionOptions } from "@calcom/features/ee/workflows/lib/getOptions";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getWorkflowActionOptions } from "@calndrbrnd/features/ee/workflows/lib/getOptions";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 type GetWorkflowActionOptionsOptions = {
   ctx: {

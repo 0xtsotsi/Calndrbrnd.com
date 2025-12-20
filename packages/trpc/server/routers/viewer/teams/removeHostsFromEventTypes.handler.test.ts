@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, it, beforeEach, vi, expect } from "vitest";
 
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import prisma from "@calcom/prisma";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import prisma from "@calndrbrnd/prisma";
 
 import type { TrpcSessionUser } from "../../../types";
 import removeHostsFromEventTypesHandler from "./removeHostsFromEventTypes.handler";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {
     host: {
       deleteMany: vi.fn(),
@@ -16,11 +16,11 @@ vi.mock("@calcom/prisma", () => ({
   },
 }));
 
-vi.mock("@calcom/features/pbac/services/permission-check.service", () => ({
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service", () => ({
   PermissionCheckService: vi.fn(),
 }));
 
-vi.mock("@calcom/features/membership/repositories/MembershipRepository", () => ({
+vi.mock("@calndrbrnd/features/membership/repositories/MembershipRepository", () => ({
   MembershipRepository: {
     findAcceptedMembershipsByUserIdsInTeam: vi.fn(),
   },

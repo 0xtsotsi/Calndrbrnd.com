@@ -1,10 +1,10 @@
 import z from "zod";
 
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole, type Prisma } from "@calcom/prisma/client";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole, type Prisma } from "@calndrbrnd/prisma/client";
 
 import { TRPCError } from "@trpc/server";
 

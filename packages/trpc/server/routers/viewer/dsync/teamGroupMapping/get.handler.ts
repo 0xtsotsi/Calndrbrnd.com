@@ -1,6 +1,6 @@
-import userCanCreateTeamGroupMapping from "@calcom/features/ee/dsync/lib/server/userCanCreateTeamGroupMapping";
-import prisma from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import userCanCreateTeamGroupMapping from "@calndrbrnd/features/ee/dsync/lib/server/userCanCreateTeamGroupMapping";
+import prisma from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import { V2_ENDPOINTS, SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiSuccessResponse } from "@calcom/platform-types";
+import type { EventTypeSetupProps } from "@calndrbrnd/features/eventtypes/lib/types";
+import { V2_ENDPOINTS, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiResponse, ApiSuccessResponse } from "@calndrbrnd/platform-types";
 
 import { useAtomsContext } from "../../hooks/useAtomsContext";
 import http from "../../lib/http";

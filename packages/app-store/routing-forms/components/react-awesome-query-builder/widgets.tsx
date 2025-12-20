@@ -10,15 +10,15 @@ import type {
   ProviderProps,
 } from "react-awesome-query-builder";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button as CalButton } from "@calcom/ui/components/button";
-import { TextArea } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button as CalButton } from "@calndrbrnd/ui/components/button";
+import { TextArea } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 const Select = dynamic(
-  async () => (await import("@calcom/ui/components/form")).SelectWithValidation
-) as unknown as typeof import("@calcom/ui/components/form").SelectWithValidation;
+  async () => (await import("@calndrbrnd/ui/components/form")).SelectWithValidation
+) as unknown as typeof import("@calndrbrnd/ui/components/form").SelectWithValidation;
 
 export type CommonProps<
   TVal extends

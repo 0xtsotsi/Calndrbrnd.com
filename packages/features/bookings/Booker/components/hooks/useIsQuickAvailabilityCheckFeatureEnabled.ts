@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import { PUBLIC_QUICK_AVAILABILITY_ROLLOUT } from "@calcom/lib/constants";
+import { PUBLIC_QUICK_AVAILABILITY_ROLLOUT } from "@calndrbrnd/lib/constants";
 
 import { isVisitorWithinPercentage } from "../../utils/isFeatureEnabledForVisitor";
 

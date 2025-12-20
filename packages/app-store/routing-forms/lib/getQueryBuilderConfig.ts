@@ -1,4 +1,4 @@
-import { AttributeType } from "@calcom/prisma/enums";
+import { AttributeType } from "@calndrbrnd/prisma/enums";
 
 import type { RoutingForm, Attribute } from "../types/types";
 import { FieldTypes, RoutingFormFieldType } from "./FieldTypes";

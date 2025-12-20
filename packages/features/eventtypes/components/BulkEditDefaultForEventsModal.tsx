@@ -2,12 +2,12 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { CheckboxField } from "@calcom/ui/components/form";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@calndrbrnd/ui/components/dialog";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { CheckboxField } from "@calndrbrnd/ui/components/form";
 
 export const BulkUpdateEventSchema = z.object({
   eventTypeIds: z.array(z.number()),

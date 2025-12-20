@@ -1,5 +1,5 @@
-import { getHolidayService } from "@calcom/lib/holidays";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getHolidayService } from "@calndrbrnd/lib/holidays";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

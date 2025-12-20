@@ -1,7 +1,7 @@
-import { Header } from "@calcom/features/bookings/Booker/components/Header";
-import { BookerSection } from "@calcom/features/bookings/Booker/components/Section";
-import { LargeCalendar } from "@calcom/features/calendar-view/LargeCalendar";
-import { bookerLayoutOptions } from "@calcom/prisma/zod-utils";
+import { Header } from "@calndrbrnd/features/bookings/Booker/components/Header";
+import { BookerSection } from "@calndrbrnd/features/bookings/Booker/components/Section";
+import { LargeCalendar } from "@calndrbrnd/features/calendar-view/LargeCalendar";
+import { bookerLayoutOptions } from "@calndrbrnd/prisma/zod-utils";
 
 import { AtomsWrapper } from "../src/components/atoms-wrapper";
 

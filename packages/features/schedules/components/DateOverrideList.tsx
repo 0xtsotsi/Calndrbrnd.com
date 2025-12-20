@@ -1,14 +1,14 @@
 import { noop } from "@tanstack/react-table";
 import { formatInTimeZone } from "date-fns-tz";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import dayjs from "@calcom/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import type { TimeRange, WorkingHours } from "@calcom/types/schedule";
-import { Button } from "@calcom/ui/components/button";
-import { DialogTrigger } from "@calcom/ui/components/dialog";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import dayjs from "@calndrbrnd/dayjs";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import type { TimeRange, WorkingHours } from "@calndrbrnd/types/schedule";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogTrigger } from "@calndrbrnd/ui/components/dialog";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import DateOverrideInputDialog from "./DateOverrideInputDialog";
 

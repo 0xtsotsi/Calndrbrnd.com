@@ -4,9 +4,9 @@ import { readFileSync } from "fs";
 import { beforeEach, vi } from "vitest";
 import { createPrismock } from "prismock/build/main/lib/client";
 
-import logger from "@calcom/lib/logger";
-import type { PrismaClient } from "@calcom/prisma";
-import * as selects from "@calcom/prisma/selects";
+import logger from "@calndrbrnd/lib/logger";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import * as selects from "@calndrbrnd/prisma/selects";
 
 vi.stubEnv("DATABASE_URL", "postgresql://user:password@localhost:5432/testdb");
 
@@ -73,8 +73,8 @@ const prismaMockProxy = new Proxy(proxyTarget, {
   }
 });
 
-vi.mock("@calcom/prisma", async (importOriginal) => {
-  const original = await importOriginal<typeof import("@calcom/prisma/client")>();
+vi.mock("@calndrbrnd/prisma", async (importOriginal) => {
+  const original = await importOriginal<typeof import("@calndrbrnd/prisma/client")>();
   const { Prisma } = original;
 
   const schemaContent = readFileSync("packages/prisma/schema.prisma", "utf-8");

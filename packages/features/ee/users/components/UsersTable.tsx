@@ -3,24 +3,24 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   DialogContent,
   DialogFooter,
   DialogClose,
   ConfirmationDialogContent,
-} from "@calcom/ui/components/dialog";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { DropdownActions, Table } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/dialog";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { DropdownActions, Table } from "@calndrbrnd/ui/components/table";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { withLicenseRequired } from "../../common/components/LicenseRequired";
 

@@ -1,7 +1,7 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/trpc";
+import { prisma } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/trpc";
 
 import { OrganizationPaymentService } from "./OrganizationPaymentService";
 import type { IOrganizationPermissionService } from "./OrganizationPermissionService";
@@ -20,7 +20,7 @@ const defaultOrgOnboarding = {
   stripeCustomerId: "mock_stripe_customer_id",
 };
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   const prismaMock = {
     organizationOnboarding: {
       findFirst: vi.fn(),
@@ -50,7 +50,7 @@ const mockBillingService = {
   }),
 };
 
-vi.mock("@calcom/features/ee/billing/di/containers/Billing", () => ({
+vi.mock("@calndrbrnd/features/ee/billing/di/containers/Billing", () => ({
   getBillingProviderService: vi.fn(() => mockBillingService),
   getTeamBillingServiceFactory: vi.fn(),
   getTeamBillingDataRepository: vi.fn(),

@@ -9,20 +9,20 @@ import {
   mockCalendarToHaveNoBusySlots,
   getDate,
   BookingLocations,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { expectBookingToBeInDatabase } from "@calcom/web/test/utils/bookingScenario/expects";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { expectBookingToBeInDatabase } from "@calndrbrnd/web/test/utils/bookingScenario/expects";
+import { getMockRequestDataForBooking } from "@calndrbrnd/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import type { Request, Response } from "express";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { describe, expect, beforeEach } from "vitest";
 
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
-import { resetTestEmails } from "@calcom/lib/testEmails";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { appStoreMetadata } from "@calndrbrnd/app-store/appStoreMetaData";
+import { resetTestEmails } from "@calndrbrnd/lib/testEmails";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { test } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "../getNewBookingHandler";
 

@@ -1,45 +1,45 @@
 import type { z } from "zod";
 
-import { DailyLocationType } from "@calcom/app-store/constants";
-import { FAKE_DAILY_CREDENTIAL } from "@calcom/app-store/dailyvideo/lib/VideoApiAdapter";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
-import { sendCancelledEmailsAndSMS } from "@calcom/emails/email-manager";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { processNoShowFeeOnCancellation } from "@calcom/features/bookings/lib/payment/processNoShowFeeOnCancellation";
-import { processPaymentRefund } from "@calcom/features/bookings/lib/payment/processPaymentRefund";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { getAllWorkflowsFromEventType } from "@calcom/features/ee/workflows/lib/getAllWorkflowsFromEventType";
-import { sendCancelledReminders } from "@calcom/features/ee/workflows/lib/reminders/reminderScheduler";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { PrismaOrgMembershipRepository } from "@calcom/features/membership/repositories/PrismaOrgMembershipRepository";
-import type { GetSubscriberOptions } from "@calcom/features/webhooks/lib/getWebhooks";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
+import { DailyLocationType } from "@calndrbrnd/app-store/constants";
+import { FAKE_DAILY_CREDENTIAL } from "@calndrbrnd/app-store/dailyvideo/lib/VideoApiAdapter";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@calndrbrnd/app-store/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import { sendCancelledEmailsAndSMS } from "@calndrbrnd/emails/email-manager";
+import EventManager from "@calndrbrnd/features/bookings/lib/EventManager";
+import { getCalEventResponses } from "@calndrbrnd/features/bookings/lib/getCalEventResponses";
+import { processNoShowFeeOnCancellation } from "@calndrbrnd/features/bookings/lib/payment/processNoShowFeeOnCancellation";
+import { processPaymentRefund } from "@calndrbrnd/features/bookings/lib/payment/processPaymentRefund";
+import { CreditService } from "@calndrbrnd/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@calndrbrnd/features/ee/organizations/lib/getBookerUrlServer";
+import { getAllWorkflowsFromEventType } from "@calndrbrnd/features/ee/workflows/lib/getAllWorkflowsFromEventType";
+import { sendCancelledReminders } from "@calndrbrnd/features/ee/workflows/lib/reminders/reminderScheduler";
+import { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import { PrismaOrgMembershipRepository } from "@calndrbrnd/features/membership/repositories/PrismaOrgMembershipRepository";
+import type { GetSubscriberOptions } from "@calndrbrnd/features/webhooks/lib/getWebhooks";
+import getWebhooks from "@calndrbrnd/features/webhooks/lib/getWebhooks";
 import {
   deleteWebhookScheduledTriggers,
   cancelNoShowTasksForBooking,
-} from "@calcom/features/webhooks/lib/scheduleTrigger";
-import sendPayload from "@calcom/features/webhooks/lib/sendOrSchedulePayload";
-import type { EventTypeInfo } from "@calcom/features/webhooks/lib/sendPayload";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { getTeamIdFromEventType } from "@calcom/lib/getTeamIdFromEventType";
-import { HttpError } from "@calcom/lib/http-error";
-import { isPrismaObjOrUndefined } from "@calcom/lib/isPrismaObj";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
+} from "@calndrbrnd/features/webhooks/lib/scheduleTrigger";
+import sendPayload from "@calndrbrnd/features/webhooks/lib/sendOrSchedulePayload";
+import type { EventTypeInfo } from "@calndrbrnd/features/webhooks/lib/sendPayload";
+import getOrgIdFromMemberOrTeamId from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import { getTeamIdFromEventType } from "@calndrbrnd/lib/getTeamIdFromEventType";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { isPrismaObjOrUndefined } from "@calndrbrnd/lib/isPrismaObj";
+import { parseRecurringEvent } from "@calndrbrnd/lib/isRecurringEvent";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
 // TODO: Prisma import would be used from DI in a followup PR when we remove `handler` export
-import prisma from "@calcom/prisma";
-import type { Prisma, PrismaClient, WorkflowReminder } from "@calcom/prisma/client";
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { bookingMetadataSchema, bookingCancelInput } from "@calcom/prisma/zod-utils";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma, PrismaClient, WorkflowReminder } from "@calndrbrnd/prisma/client";
+import type { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { bookingMetadataSchema, bookingCancelInput } from "@calndrbrnd/prisma/zod-utils";
+import type { EventTypeMetadata } from "@calndrbrnd/prisma/zod-utils";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import type {
   CancelRegularBookingData,

@@ -1,6 +1,6 @@
 import "server-only";
 
-import type { AppGetServerSideProps } from "@calcom/types/AppGetServerSideProps";
+import type { AppGetServerSideProps } from "@calndrbrnd/types/AppGetServerSideProps";
 
 import { getServerSideProps as getServerSidePropsRoutingLink } from "./getServerSidePropsRoutingLink";
 import { getServerSidePropsForSingleFormView as getServerSidePropsSingleForm } from "./getServerSidePropsSingleForm";

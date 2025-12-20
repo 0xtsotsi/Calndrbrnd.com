@@ -1,10 +1,10 @@
 import { useRouter } from "next/navigation";
 
-import { setShowWelcomeToCalcomModalFlag } from "@calcom/features/shell/hooks/useWelcomeToCalcomModal";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { sessionStorage } from "@calcom/lib/webstorage";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
+import { setShowWelcomeToCalcomModalFlag } from "@calndrbrnd/features/shell/hooks/useWelcomeToCalcomModal";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { sessionStorage } from "@calndrbrnd/lib/webstorage";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 const ORG_MODAL_STORAGE_KEY = "showNewOrgModal";
 

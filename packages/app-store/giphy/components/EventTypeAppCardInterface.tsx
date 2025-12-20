@@ -1,8 +1,8 @@
-import { useAppContextWithSchema } from "@calcom/app-store/EventTypeAppContext";
-import AppCard from "@calcom/app-store/_components/AppCard";
-import useIsAppEnabled from "@calcom/app-store/_utils/useIsAppEnabled";
-import type { EventTypeAppCardComponent } from "@calcom/app-store/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { useAppContextWithSchema } from "@calndrbrnd/app-store/EventTypeAppContext";
+import AppCard from "@calndrbrnd/app-store/_components/AppCard";
+import useIsAppEnabled from "@calndrbrnd/app-store/_utils/useIsAppEnabled";
+import type { EventTypeAppCardComponent } from "@calndrbrnd/app-store/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 import type { appDataSchema } from "../zod";
 import EventTypeAppSettingsInterface from "./EventTypeAppSettingsInterface";

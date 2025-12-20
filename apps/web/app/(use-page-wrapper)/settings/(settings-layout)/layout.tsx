@@ -3,14 +3,14 @@ import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import React from "react";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import type { TeamFeatures } from "@calcom/features/flags/config";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { PermissionMapper } from "@calcom/features/pbac/domain/mappers/PermissionMapper";
-import { Resource, CrudAction, CustomAction } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { prisma } from "@calcom/prisma";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import type { TeamFeatures } from "@calndrbrnd/features/flags/config";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { PermissionMapper } from "@calndrbrnd/features/pbac/domain/mappers/PermissionMapper";
+import { Resource, CrudAction, CustomAction } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

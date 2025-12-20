@@ -1,9 +1,9 @@
 import { expect } from "@playwright/test";
 
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import prisma from "@calcom/prisma";
-import type { EventType } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@calndrbrnd/app-store/zod-utils";
+import prisma from "@calndrbrnd/prisma";
+import type { EventType } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
 
 import { test, todo } from "./lib/fixtures";
 import type { Fixtures } from "./lib/fixtures";

@@ -1,9 +1,9 @@
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { updateTriggerForExistingBookings } from "@calcom/features/webhooks/lib/scheduleTrigger";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { updateTriggerForExistingBookings } from "@calndrbrnd/features/webhooks/lib/scheduleTrigger";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

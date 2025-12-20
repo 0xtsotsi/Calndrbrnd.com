@@ -15,8 +15,8 @@ const rule = createRule({
               return fixer.replaceText(
                 node.source,
                 node.source.raw
-                  .replace('"@prisma/client"', '"@calcom/prisma/client"')
-                  .replace("'@prisma/client'", "'@calcom/prisma/client'")
+                  .replace('"@prisma/client"', '"@calndrbrnd/prisma/client"')
+                  .replace("'@prisma/client'", "'@calndrbrnd/prisma/client'")
               );
             },
           });
@@ -32,7 +32,7 @@ const rule = createRule({
       recommended: "error",
     },
     messages: {
-      "no-direct-prisma-import": `Direct imports from '@prisma/client' are not allowed. Use '@calcom/prisma/client' instead.`,
+      "no-direct-prisma-import": `Direct imports from '@prisma/client' are not allowed. Use '@calndrbrnd/prisma/client' instead.`,
     },
     type: "problem",
     schema: [],

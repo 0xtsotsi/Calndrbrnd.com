@@ -1,6 +1,6 @@
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import Shell from "@calcom/features/shell/Shell";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import LicenseRequired from "@calndrbrnd/features/ee/common/components/LicenseRequired";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 import type { AppPageProps } from "./AppPage";
 import { AppPage } from "./AppPage";

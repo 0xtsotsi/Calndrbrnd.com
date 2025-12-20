@@ -1,5 +1,5 @@
-import { EMAIL_FROM_NAME } from "@calcom/lib/constants";
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { EMAIL_FROM_NAME } from "@calndrbrnd/lib/constants";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
 
 import BaseEmail from "./_base-email";
 

@@ -5,24 +5,24 @@ import {
   TestData,
   getOrganizer,
   getScenarioData,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { expectWebhookToHaveBeenCalledWith } from "@calcom/web/test/utils/bookingScenario/expects";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { expectWebhookToHaveBeenCalledWith } from "@calndrbrnd/web/test/utils/bookingScenario/expects";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, vi, test, expect } from "vitest";
 
-import { appStoreMetadata } from "@calcom/app-store/apps.metadata.generated";
-import dayjs from "@calcom/dayjs";
-import { TimeUnit } from "@calcom/prisma/enums";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { appStoreMetadata } from "@calndrbrnd/app-store/apps.metadata.generated";
+import dayjs from "@calndrbrnd/dayjs";
+import { TimeUnit } from "@calndrbrnd/prisma/enums";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import { calculateMaxStartTime } from "./common";
 import { getMeetingSessionsFromRoomName } from "./getMeetingSessionsFromRoomName";
 import type { TSendNoShowWebhookPayloadSchema } from "./schema";
 import { triggerGuestNoShow } from "./triggerGuestNoShow";
 
-vi.mock("@calcom/features/tasker/tasks/triggerNoShow/getMeetingSessionsFromRoomName", () => ({
+vi.mock("@calndrbrnd/features/tasker/tasks/triggerNoShow/getMeetingSessionsFromRoomName", () => ({
   getMeetingSessionsFromRoomName: vi.fn(),
 }));
 

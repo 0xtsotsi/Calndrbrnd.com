@@ -1,22 +1,22 @@
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 import {
   APP_CREDENTIAL_SHARING_ENABLED,
   CREDENTIAL_SYNC_ENDPOINT,
   CREDENTIAL_SYNC_SECRET,
   CREDENTIAL_SYNC_SECRET_HEADER_NAME,
-} from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { getPiiFreeCalendarEvent } from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { Frequency } from "@calcom/prisma/zod-utils";
-import type { CalendarEvent } from "@calcom/types/Calendar";
-import type { CredentialPayload } from "@calcom/types/Credential";
-import type { PartialReference } from "@calcom/types/EventManager";
-import type { VideoApiAdapter, VideoCallData } from "@calcom/types/VideoApiAdapter";
+} from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { getPiiFreeCalendarEvent } from "@calndrbrnd/lib/piiFreeData";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { Frequency } from "@calndrbrnd/prisma/zod-utils";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
+import type { PartialReference } from "@calndrbrnd/types/EventManager";
+import type { VideoApiAdapter, VideoCallData } from "@calndrbrnd/types/VideoApiAdapter";
 
 import { invalidateCredential } from "../../_utils/invalidateCredential";
 import { OAuthManager } from "../../_utils/oauth/OAuthManager";

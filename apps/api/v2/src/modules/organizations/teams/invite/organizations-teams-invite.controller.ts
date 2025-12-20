@@ -14,8 +14,8 @@ import { IsTeamInOrg } from "@/modules/auth/guards/teams/is-team-in-org.guard";
 import { Controller, UseGuards, Post, Param, ParseIntPipe, HttpCode, HttpStatus } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { TeamService } from "@calcom/platform-libraries";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { TeamService } from "@calndrbrnd/platform-libraries";
 
 import { CreateInviteOutputDto } from "./outputs/invite.output";
 

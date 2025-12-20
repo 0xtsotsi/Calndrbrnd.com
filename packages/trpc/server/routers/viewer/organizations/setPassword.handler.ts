@@ -1,8 +1,8 @@
 import { createHash } from "crypto";
 
-import { verifyPassword } from "@calcom/features/auth/lib/verifyPassword";
-import { hashPassword } from "@calcom/lib/auth/hashPassword";
-import { prisma } from "@calcom/prisma";
+import { verifyPassword } from "@calndrbrnd/features/auth/lib/verifyPassword";
+import { hashPassword } from "@calndrbrnd/lib/auth/hashPassword";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { TRPCError } from "@trpc/server";
 

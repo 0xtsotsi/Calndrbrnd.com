@@ -2,8 +2,8 @@ import { ApiExtraModels, ApiProperty, getSchemaPath } from "@nestjs/swagger";
 import { Expose } from "class-transformer";
 import { IsEnum, ValidateNested, IsString, IsUrl } from "class-validator";
 
-import { ERROR_STATUS, SUCCESS_STATUS } from "@calcom/platform-constants";
-import { TeamOutputDto } from "@calcom/platform-types";
+import { ERROR_STATUS, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { TeamOutputDto } from "@calndrbrnd/platform-types";
 
 class CreateTeamOutputData {
   @Expose()

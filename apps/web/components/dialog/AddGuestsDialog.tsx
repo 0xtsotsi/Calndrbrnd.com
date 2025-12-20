@@ -2,14 +2,14 @@ import type { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { MultiEmail } from "@calcom/ui/components/address";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { MultiEmail } from "@calndrbrnd/ui/components/address";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogHeader } from "@calndrbrnd/ui/components/dialog";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 interface IAddGuestsDialog {
   isOpenDialog: boolean;

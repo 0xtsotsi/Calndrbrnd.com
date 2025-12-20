@@ -2,12 +2,12 @@ import { defaultResponderForAppDir } from "app/api/defaultResponderForAppDir";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import dayjs from "@calcom/dayjs";
-import * as twilio from "@calcom/features/ee/workflows/lib/reminders/providers/twilioProvider";
-import { IS_SMS_CREDITS_ENABLED } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import { CreditType } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import * as twilio from "@calndrbrnd/features/ee/workflows/lib/reminders/providers/twilioProvider";
+import { IS_SMS_CREDITS_ENABLED } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
+import { CreditType } from "@calndrbrnd/prisma/enums";
 
 async function postHandler(req: NextRequest) {
   const apiKey = req.headers.get("authorization") || req.nextUrl.searchParams.get("apiKey");
@@ -37,7 +37,7 @@ async function postHandler(req: NextRequest) {
   });
 
   let pricesUpdated = 0;
-  const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+  const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
 
   const creditService = new CreditService();
 

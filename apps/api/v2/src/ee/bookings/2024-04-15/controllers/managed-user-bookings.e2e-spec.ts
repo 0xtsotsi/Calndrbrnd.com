@@ -26,13 +26,13 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_14 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_14 } from "@calndrbrnd/platform-constants";
 import {
   ApiSuccessResponse,
   CreateEventTypeInput_2024_06_14,
   EventTypeOutput_2024_06_14,
-} from "@calcom/platform-types";
-import type { PlatformOAuthClient, Team, User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { PlatformOAuthClient, Team, User } from "@calndrbrnd/prisma/client";
 
 const CLIENT_REDIRECT_URI = "http://localhost:4321";
 

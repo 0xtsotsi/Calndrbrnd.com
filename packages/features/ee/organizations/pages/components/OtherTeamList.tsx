@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-import type { OrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.module";
-import { trackFormbricksAction } from "@calcom/features/formbricks/formbricks-client";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
+import type { OrganizationRepository } from "@calndrbrnd/features/ee/organizations/di/OrganizationRepository.module";
+import { trackFormbricksAction } from "@calndrbrnd/features/formbricks/formbricks-client";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import OtherTeamListItem from "./OtherTeamListItem";
 

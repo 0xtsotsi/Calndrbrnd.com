@@ -1,6 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import type { readonlyPrisma } from "@calcom/prisma";
+import type { readonlyPrisma } from "@calndrbrnd/prisma";
 
 import { buildBaseWhereCondition } from "./buildBaseWhereCondition";
 

@@ -36,9 +36,9 @@ import {
   ApiHeader,
 } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { MembershipRole } from "@calcom/platform-libraries";
-import { CreateOAuthClientInput, UpdateOAuthClientInput, Pagination } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { MembershipRole } from "@calndrbrnd/platform-libraries";
+import { CreateOAuthClientInput, UpdateOAuthClientInput, Pagination } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/oauth-clients",

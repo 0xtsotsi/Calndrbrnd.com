@@ -1,6 +1,6 @@
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { WorkflowMethods, WorkflowActions } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { WorkflowMethods, WorkflowActions } from "@calndrbrnd/prisma/enums";
 
 export class WorkflowReminderRepository {
   static getFutureScheduledAttendeeSMSReminders(phoneNumber: string) {

@@ -1,5 +1,5 @@
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import type { PrismaClient } from "@calcom/prisma";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 export class OnboardingPathService {
   static async getGettingStartedPath(prisma: PrismaClient): Promise<string> {

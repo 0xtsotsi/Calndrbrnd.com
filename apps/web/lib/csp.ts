@@ -1,5 +1,5 @@
-import { IS_PRODUCTION } from "@calcom/lib/constants";
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { IS_PRODUCTION } from "@calndrbrnd/lib/constants";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
 
 import { buildNonce } from "./buildNonce";
 

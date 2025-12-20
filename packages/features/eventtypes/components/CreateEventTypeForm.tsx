@@ -2,18 +2,18 @@ import type { ReactNode } from "react";
 import { useState } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import type { CreateEventTypeFormValues } from "@calcom/features/eventtypes/hooks/useCreateEventType";
-import { MAX_EVENT_DURATION_MINUTES, MIN_EVENT_DURATION_MINUTES } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { md } from "@calcom/lib/markdownIt";
-import slugify from "@calcom/lib/slugify";
-import turndown from "@calcom/lib/turndownService";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import type { CreateEventTypeFormValues } from "@calndrbrnd/features/eventtypes/hooks/useCreateEventType";
+import { MAX_EVENT_DURATION_MINUTES, MIN_EVENT_DURATION_MINUTES } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { md } from "@calndrbrnd/lib/markdownIt";
+import slugify from "@calndrbrnd/lib/slugify";
+import turndown from "@calndrbrnd/lib/turndownService";
+import { Editor } from "@calndrbrnd/ui/components/editor";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { TextAreaField } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 export default function CreateEventTypeForm({
   form,

@@ -10,27 +10,27 @@ import type { UseFormReturn } from "react-hook-form";
 import { Toaster } from "sonner";
 import type { z } from "zod";
 
-import { buildEmptyQueryValue, raqbQueryValueUtils } from "@calcom/app-store/_utils/raqb/raqbUtils";
-import { routingFormAppComponents } from "@calcom/app-store/routing-forms/appComponents";
-import DynamicAppComponent from "@calcom/app-store/routing-forms/components/DynamicAppComponent";
-import { EmptyState } from "@calcom/app-store/routing-forms/components/_components/EmptyState";
-import { RoutingSkeleton } from "@calcom/app-store/routing-forms/components/_components/RoutingSkeleton";
+import { buildEmptyQueryValue, raqbQueryValueUtils } from "@calndrbrnd/app-store/_utils/raqb/raqbUtils";
+import { routingFormAppComponents } from "@calndrbrnd/app-store/routing-forms/appComponents";
+import DynamicAppComponent from "@calndrbrnd/app-store/routing-forms/components/DynamicAppComponent";
+import { EmptyState } from "@calndrbrnd/app-store/routing-forms/components/_components/EmptyState";
+import { RoutingSkeleton } from "@calndrbrnd/app-store/routing-forms/components/_components/RoutingSkeleton";
 import {
   withRaqbSettingsAndWidgets,
   ConfigFor,
-} from "@calcom/app-store/routing-forms/components/react-awesome-query-builder/config/uiConfig";
-import { RoutingPages } from "@calcom/app-store/routing-forms/lib/RoutingPages";
-import { createFallbackRoute } from "@calcom/app-store/routing-forms/lib/createFallbackRoute";
-import getEventTypeAppMetadata from "@calcom/app-store/routing-forms/lib/getEventTypeAppMetadata";
+} from "@calndrbrnd/app-store/routing-forms/components/react-awesome-query-builder/config/uiConfig";
+import { RoutingPages } from "@calndrbrnd/app-store/routing-forms/lib/RoutingPages";
+import { createFallbackRoute } from "@calndrbrnd/app-store/routing-forms/lib/createFallbackRoute";
+import getEventTypeAppMetadata from "@calndrbrnd/app-store/routing-forms/lib/getEventTypeAppMetadata";
 import {
   getQueryBuilderConfigForFormFields,
   getQueryBuilderConfigForAttributes,
   type FormFieldsQueryBuilderConfigWithRaqbFields,
   type AttributesQueryBuilderConfigWithRaqbFields,
   isDynamicOperandField,
-} from "@calcom/app-store/routing-forms/lib/getQueryBuilderConfig";
-import isRouter from "@calcom/app-store/routing-forms/lib/isRouter";
-import type { RoutingFormWithResponseCount } from "@calcom/app-store/routing-forms/types/types";
+} from "@calndrbrnd/app-store/routing-forms/lib/getQueryBuilderConfig";
+import isRouter from "@calndrbrnd/app-store/routing-forms/lib/isRouter";
+import type { RoutingFormWithResponseCount } from "@calndrbrnd/app-store/routing-forms/types/types";
 import type {
   GlobalRoute,
   LocalRoute,
@@ -38,28 +38,28 @@ import type {
   Attribute,
   EditFormRoute,
   AttributeRoutingConfig,
-} from "@calcom/app-store/routing-forms/types/types";
-import type { zodRoutes } from "@calcom/app-store/routing-forms/zod";
-import { RouteActionType } from "@calcom/app-store/routing-forms/zod";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import type { EventTypesByViewer } from "@calcom/features/eventtypes/lib/getEventTypesByViewer";
-import { areTheySiblingEntities } from "@calcom/lib/entityPermissionUtils.shared";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { Prisma } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { FormCard } from "@calcom/ui/components/card";
-import { SelectWithValidation as Select, TextArea } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { SelectField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import type { IconName } from "@calcom/ui/components/icon";
-import { Icon } from "@calcom/ui/components/icon";
-import type { getServerSidePropsForSingleFormView as getServerSideProps } from "@calcom/web/lib/apps/routing-forms/[...pages]/getServerSidePropsSingleForm";
+} from "@calndrbrnd/app-store/routing-forms/types/types";
+import type { zodRoutes } from "@calndrbrnd/app-store/routing-forms/zod";
+import { RouteActionType } from "@calndrbrnd/app-store/routing-forms/zod";
+import { useOrgBranding } from "@calndrbrnd/features/ee/organizations/context/provider";
+import type { EventTypesByViewer } from "@calndrbrnd/features/eventtypes/lib/getEventTypesByViewer";
+import { areTheySiblingEntities } from "@calndrbrnd/lib/entityPermissionUtils.shared";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { FormCard } from "@calndrbrnd/ui/components/card";
+import { SelectWithValidation as Select, TextArea } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { SelectField } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import type { IconName } from "@calndrbrnd/ui/components/icon";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import type { getServerSidePropsForSingleFormView as getServerSideProps } from "@calndrbrnd/web/lib/apps/routing-forms/[...pages]/getServerSidePropsSingleForm";
 
 import SingleForm from "@components/apps/routing-forms/SingleForm";
 

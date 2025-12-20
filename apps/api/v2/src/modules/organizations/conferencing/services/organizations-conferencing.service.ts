@@ -9,10 +9,10 @@ import { UsersRepository } from "@/modules/users/users.repository";
 import { BadRequestException, InternalServerErrorException, Logger } from "@nestjs/common";
 import { Injectable } from "@nestjs/common";
 
-import { GOOGLE_MEET } from "@calcom/platform-constants";
-import { CONFERENCING_APPS, CAL_VIDEO } from "@calcom/platform-constants";
-import { teamMetadataSchema } from "@calcom/platform-libraries";
-import { handleDeleteCredential } from "@calcom/platform-libraries/app-store";
+import { GOOGLE_MEET } from "@calndrbrnd/platform-constants";
+import { CONFERENCING_APPS, CAL_VIDEO } from "@calndrbrnd/platform-constants";
+import { teamMetadataSchema } from "@calndrbrnd/platform-libraries";
+import { handleDeleteCredential } from "@calndrbrnd/platform-libraries/app-store";
 
 @Injectable()
 export class OrganizationsConferencingService {

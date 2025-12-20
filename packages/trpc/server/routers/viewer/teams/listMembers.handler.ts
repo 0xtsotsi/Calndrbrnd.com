@@ -1,18 +1,18 @@
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
 import {
   Resource,
   CustomAction,
   PermissionString,
-} from "@calcom/features/pbac/domain/types/permission-registry";
-import { getSpecificPermissions } from "@calcom/features/pbac/lib/resource-permissions";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { RoleManagementFactory } from "@calcom/features/pbac/services/role-management.factory";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+} from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { getSpecificPermissions } from "@calndrbrnd/features/pbac/lib/resource-permissions";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { RoleManagementFactory } from "@calndrbrnd/features/pbac/services/role-management.factory";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

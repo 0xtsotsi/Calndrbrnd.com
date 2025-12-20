@@ -1,28 +1,28 @@
-import { organizationScenarios } from "@calcom/features/ee/organizations/__mocks__/organizationMock";
+import { organizationScenarios } from "@calndrbrnd/features/ee/organizations/__mocks__/organizationMock";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import { MembershipRole } from "@calcom/prisma/enums";
-import { CreationSource } from "@calcom/prisma/enums";
-import { inviteMembersWithNoInviterPermissionCheck } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { CreationSource } from "@calndrbrnd/prisma/enums";
+import { inviteMembersWithNoInviterPermissionCheck } from "@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
 
 import { moveUserToMatchingOrg } from "./verify-email";
 
 // TODO: This test passes but coverage is very low.
-vi.mock("@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler");
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler");
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     prisma: vi.fn(),
   };
 });
 
-vi.mock("@calcom/features/ee/billing/stripe-billing-service", () => {
+vi.mock("@calndrbrnd/features/ee/billing/stripe-billing-service", () => {
   return {
     StripeBillingService: vi.fn(),
   };
 });
 
-vi.mock("@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler", () => {
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler", () => {
   return {
     inviteMembersWithNoInviterPermissionCheck: vi.fn(),
   };

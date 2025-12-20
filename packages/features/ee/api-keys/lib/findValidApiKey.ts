@@ -1,5 +1,5 @@
-import { hashAPIKey } from "@calcom/features/ee/api-keys/lib/apiKeys";
-import prisma from "@calcom/prisma";
+import { hashAPIKey } from "@calndrbrnd/features/ee/api-keys/lib/apiKeys";
+import prisma from "@calndrbrnd/prisma";
 
 const findValidApiKey = async (apiKey: string, appId?: string) => {
   const hashedKey = hashAPIKey(apiKey.substring(process.env.API_KEY_PREFIX?.length || 0));

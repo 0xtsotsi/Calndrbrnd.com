@@ -1,8 +1,8 @@
 import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 
-import { prisma } from "@calcom/prisma";
-import { BookingStatus, MembershipRole, SchedulingType } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import { BookingStatus, MembershipRole, SchedulingType } from "@calndrbrnd/prisma/enums";
 
 import { addFilter } from "./filter-helpers";
 import { createTeamEventType } from "./fixtures/users";

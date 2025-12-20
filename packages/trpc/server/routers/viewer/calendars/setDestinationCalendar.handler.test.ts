@@ -1,8 +1,8 @@
 import { describe, it, vi, expect, beforeEach, afterEach } from "vitest";
 
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import { getConnectedCalendars } from "@calcom/features/calendars/lib/CalendarManager";
-import { DestinationCalendarRepository } from "@calcom/features/calendars/repositories/DestinationCalendarRepository";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@calndrbrnd/app-store/delegationCredential";
+import { getConnectedCalendars } from "@calndrbrnd/features/calendars/lib/CalendarManager";
+import { DestinationCalendarRepository } from "@calndrbrnd/features/calendars/repositories/DestinationCalendarRepository";
 
 import { TRPCError } from "@trpc/server";
 
@@ -19,16 +19,16 @@ type MockUser = {
   }>;
 };
 
-vi.mock("@calcom/features/calendars/lib/CalendarManager", () => ({
+vi.mock("@calndrbrnd/features/calendars/lib/CalendarManager", () => ({
   getConnectedCalendars: vi.fn(),
   getCalendarCredentials: vi.fn().mockImplementation((creds) => creds),
 }));
 
-vi.mock("@calcom/app-store/delegationCredential", () => ({
+vi.mock("@calndrbrnd/app-store/delegationCredential", () => ({
   getUsersCredentialsIncludeServiceAccountKey: vi.fn(),
 }));
 
-vi.mock("@calcom/features/calendars/repositories/DestinationCalendarRepository", () => ({
+vi.mock("@calndrbrnd/features/calendars/repositories/DestinationCalendarRepository", () => ({
   DestinationCalendarRepository: {
     upsert: vi.fn(),
   },

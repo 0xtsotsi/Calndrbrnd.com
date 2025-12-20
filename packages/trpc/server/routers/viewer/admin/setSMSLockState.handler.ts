@@ -1,5 +1,5 @@
-import { prisma } from "@calcom/prisma";
-import { SMSLockState } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import { SMSLockState } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

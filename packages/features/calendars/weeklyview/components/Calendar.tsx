@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef } from "react";
 
-import classNames from "@calcom/ui/classNames";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { CalendarStoreContext, createCalendarStore, useCalendarStore } from "../state/store";
 import "../styles/styles.css";

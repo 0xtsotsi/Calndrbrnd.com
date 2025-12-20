@@ -2,9 +2,9 @@
 
 import { Controller } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { RRResetInterval } from "@calcom/prisma/enums";
-import { Select } from "@calcom/ui/components/form";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { RRResetInterval } from "@calndrbrnd/prisma/enums";
+import { Select } from "@calndrbrnd/ui/components/form";
 
 const RoundRobinResetInterval = () => {
   const { t } = useLocale();

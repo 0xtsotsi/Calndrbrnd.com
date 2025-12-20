@@ -3,24 +3,24 @@
 import { useState } from "react";
 import { useForm, Controller, useFormContext } from "react-hook-form";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { ServiceAccountKey } from "@calcom/lib/server/serviceAccountKey";
-import { serviceAccountKeySchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Form } from "@calcom/ui/components/form";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { SelectField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { DropdownActions } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { ServiceAccountKey } from "@calndrbrnd/lib/server/serviceAccountKey";
+import { serviceAccountKeySchema } from "@calndrbrnd/prisma/zod-utils";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { InfoBadge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { TextAreaField } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { SelectField } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { DropdownActions } from "@calndrbrnd/ui/components/table";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 interface DelegationItemProps {
   delegation: {

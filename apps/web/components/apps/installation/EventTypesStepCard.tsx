@@ -3,13 +3,13 @@ import type { FC } from "react";
 import React from "react";
 import { useFieldArray, useFormContext } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ScrollableArea } from "@calcom/ui/components/scrollable";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ScrollableArea } from "@calndrbrnd/ui/components/scrollable";
 
 import type { TEventType, TEventTypesForm, TEventTypeGroup } from "~/apps/installation/[[...step]]/step-view";
 

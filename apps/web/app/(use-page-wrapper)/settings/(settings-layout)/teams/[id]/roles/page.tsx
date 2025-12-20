@@ -3,16 +3,16 @@ import { unstable_cache } from "next/cache";
 import { cookies, headers } from "next/headers";
 import { notFound } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getTeamWithMembers } from "@calcom/features/ee/teams/lib/queries";
-import type { AppFlags } from "@calcom/features/flags/config";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { PermissionMapper } from "@calcom/features/pbac/domain/mappers/PermissionMapper";
-import { Resource, CrudAction, Scope } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { RoleService } from "@calcom/features/pbac/services/role.service";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { prisma } from "@calcom/prisma";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getTeamWithMembers } from "@calndrbrnd/features/ee/teams/lib/queries";
+import type { AppFlags } from "@calndrbrnd/features/flags/config";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { PermissionMapper } from "@calndrbrnd/features/pbac/domain/mappers/PermissionMapper";
+import { Resource, CrudAction, Scope } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { RoleService } from "@calndrbrnd/features/pbac/services/role.service";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

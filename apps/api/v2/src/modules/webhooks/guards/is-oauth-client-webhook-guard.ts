@@ -12,7 +12,7 @@ import {
 } from "@nestjs/common";
 import { Request } from "express";
 
-import type { PlatformOAuthClient, Webhook } from "@calcom/prisma/client";
+import type { PlatformOAuthClient, Webhook } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class IsOAuthClientWebhookGuard implements CanActivate {

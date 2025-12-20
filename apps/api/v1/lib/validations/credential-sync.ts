@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { HttpError } from "@calcom/lib/http-error";
+import { HttpError } from "@calndrbrnd/lib/http-error";
 
 const userId = z.string().transform((val) => {
   const userIdInt = parseInt(val);

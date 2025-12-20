@@ -1,16 +1,16 @@
-import { getOrgFullOrigin } from "@calcom/ee/organizations/lib/orgDomains";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import slugify from "@calcom/lib/slugify";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { CreationSource } from "@calcom/prisma/enums";
-import { MembershipRole, RedirectType } from "@calcom/prisma/enums";
-import { teamMetadataSchema, teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
+import { getOrgFullOrigin } from "@calndrbrnd/ee/organizations/lib/orgDomains";
+import { CreditService } from "@calndrbrnd/features/ee/billing/credit-service";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import slugify from "@calndrbrnd/lib/slugify";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { CreationSource } from "@calndrbrnd/prisma/enums";
+import { MembershipRole, RedirectType } from "@calndrbrnd/prisma/enums";
+import { teamMetadataSchema, teamMetadataStrictSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 

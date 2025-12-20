@@ -1,6 +1,6 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import { WatchlistType, WatchlistAction, WatchlistSource } from "@calcom/prisma/enums";
+import { WatchlistType, WatchlistAction, WatchlistSource } from "@calndrbrnd/prisma/enums";
 
 import type { IOrganizationWatchlistRepository } from "../interface/IWatchlistRepositories";
 import { OrganizationBlockingService } from "./OrganizationBlockingService";

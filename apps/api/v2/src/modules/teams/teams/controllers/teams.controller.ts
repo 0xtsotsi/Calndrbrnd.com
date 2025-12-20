@@ -18,8 +18,8 @@ import { Controller, UseGuards, Get, Param, ParseIntPipe, Delete, Patch, Post, B
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 import { plainToClass } from "class-transformer";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { TeamOutputDto } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { TeamOutputDto } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/teams",

@@ -21,7 +21,7 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calndrbrnd/platform-constants";
 import type {
   CancelBookingInput_2024_08_13,
   CancelSeatedBookingInput_2024_08_13,
@@ -31,8 +31,8 @@ import type {
   GetSeatedBookingOutput_2024_08_13,
   RescheduleSeatedBookingInput_2024_08_13,
   CreateBookingInput_2024_08_13,
-} from "@calcom/platform-types";
-import type { Team, User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { Team, User } from "@calndrbrnd/prisma/client";
 
 describe("Bookings Endpoints 2024-08-13", () => {
   describe("Seated bookings", () => {

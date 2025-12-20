@@ -1,4 +1,4 @@
-import type { PrismaClient } from "@calcom/prisma";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 import type { IAttendeeRepository } from "./IAttendeeRepository";
 
 /**

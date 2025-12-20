@@ -4,10 +4,10 @@ import { UserWithProfile } from "@/modules/users/users.repository";
 import { Logger } from "@nestjs/common";
 import { Injectable } from "@nestjs/common";
 
-import { ScheduleRepository, UpdateScheduleResponse } from "@calcom/platform-libraries/schedules";
-import { updateSchedule } from "@calcom/platform-libraries/schedules";
-import { UpdateAtomScheduleDto } from "@calcom/platform-types";
-import type { PrismaClient } from "@calcom/prisma";
+import { ScheduleRepository, UpdateScheduleResponse } from "@calndrbrnd/platform-libraries/schedules";
+import { updateSchedule } from "@calndrbrnd/platform-libraries/schedules";
+import { UpdateAtomScheduleDto } from "@calndrbrnd/platform-types";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 @Injectable()
 export class SchedulesAtomsService {

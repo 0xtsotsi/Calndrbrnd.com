@@ -1,4 +1,4 @@
-import type { Team } from "@calcom/prisma/client";
+import type { Team } from "@calndrbrnd/prisma/client";
 
 import {
   SubscriptionStatus,

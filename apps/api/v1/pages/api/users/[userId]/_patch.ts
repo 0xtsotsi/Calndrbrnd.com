@@ -1,10 +1,10 @@
 import type { NextApiRequest } from "next";
 
-import { HttpError } from "@calcom/lib/http-error";
-import { uploadAvatar } from "@calcom/lib/server/avatar";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { uploadAvatar } from "@calndrbrnd/lib/server/avatar";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import { schemaQueryUserId } from "~/lib/validations/shared/queryUserId";
 import { schemaUserEditBodyParams, schemaUserReadPublic } from "~/lib/validations/user";
@@ -126,7 +126,7 @@ export async function patchHandler(req: NextApiRequest) {
   if (avatar) {
     body.avatarUrl = await uploadAvatar({
       userId: query.userId,
-      avatar: await (await import("@calcom/lib/server/resizeBase64Image")).resizeBase64Image(avatar),
+      avatar: await (await import("@calndrbrnd/lib/server/resizeBase64Image")).resizeBase64Image(avatar),
     });
   }
 

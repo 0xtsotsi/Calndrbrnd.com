@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-import { timeZoneSchema } from "@calcom/lib/dayjs/timeZone.schema";
-import { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
+import { timeZoneSchema } from "@calndrbrnd/lib/dayjs/timeZone.schema";
+import { teamMetadataStrictSchema } from "@calndrbrnd/prisma/zod-utils";
 
 // Note: orgId has .transform() that converts string to number, so input accepts string | number but output is always number
 

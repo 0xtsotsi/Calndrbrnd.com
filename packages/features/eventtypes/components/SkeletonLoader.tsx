@@ -1,5 +1,5 @@
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonAvatar, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { SkeletonAvatar, SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 function SkeletonLoader() {
   return (

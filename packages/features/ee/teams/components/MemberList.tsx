@@ -17,7 +17,7 @@ import { useQueryState, parseAsBoolean } from "nuqs";
 import { useMemo, useReducer, useRef, useState } from "react";
 import type { Dispatch, SetStateAction } from "react";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
 import {
   DataTableProvider,
   DataTableToolbar,
@@ -28,25 +28,25 @@ import {
   useFetchMoreOnBottomReached,
   useColumnFilters,
   convertFacetedValuesToMap,
-} from "@calcom/features/data-table";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import { DynamicLink } from "@calcom/features/users/components/UserTable/BulkActions/DynamicLink";
-import type { MemberPermissions } from "@calcom/features/users/components/UserTable/types";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+} from "@calndrbrnd/features/data-table";
+import { useOrgBranding } from "@calndrbrnd/features/ee/organizations/context/provider";
+import { DynamicLink } from "@calndrbrnd/features/users/components/UserTable/BulkActions/DynamicLink";
+import type { MemberPermissions } from "@calndrbrnd/features/users/components/UserTable/types";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
 import {
   DialogContent,
   DialogFooter,
   DialogClose,
   ConfirmationDialogContent,
-} from "@calcom/ui/components/dialog";
+} from "@calndrbrnd/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -55,10 +55,10 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Checkbox } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/ui/components/dropdown";
+import { Checkbox } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import DeleteBulkTeamMembers from "./DeleteBulkTeamMembers";
 import { EditMemberSheet } from "./EditMemberSheet";

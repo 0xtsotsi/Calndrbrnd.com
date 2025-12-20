@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
 
 import type { UseCalendarsReturnType } from "../hooks/useCalendars";
 import { useOverlayCalendar } from "../hooks/useOverlayCalendar";

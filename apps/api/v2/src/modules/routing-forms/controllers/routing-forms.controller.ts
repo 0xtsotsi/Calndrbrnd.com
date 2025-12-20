@@ -6,8 +6,8 @@ import { Controller, HttpCode, HttpStatus, Param, Post, Query, Req } from "@nest
 import { ApiHeader, ApiOperation, ApiTags } from "@nestjs/swagger";
 import { Request } from "express";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { GetAvailableSlotsInput_2024_09_04 } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { GetAvailableSlotsInput_2024_09_04 } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/routing-forms/:routingFormId",

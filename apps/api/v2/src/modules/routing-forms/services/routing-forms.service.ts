@@ -3,8 +3,8 @@ import { TeamsEventTypesRepository } from "@/modules/teams/event-types/teams-eve
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { Request } from "express";
 
-import { getRoutedUrl } from "@calcom/platform-libraries";
-import { ById_2024_09_04_type, GetAvailableSlotsInput_2024_09_04 } from "@calcom/platform-types";
+import { getRoutedUrl } from "@calndrbrnd/platform-libraries";
+import { ById_2024_09_04_type, GetAvailableSlotsInput_2024_09_04 } from "@calndrbrnd/platform-types";
 
 @Injectable()
 export class RoutingFormsService {

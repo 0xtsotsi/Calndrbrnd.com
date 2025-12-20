@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { CreationSource } from "@calcom/prisma/enums";
+import { CreationSource } from "@calndrbrnd/prisma/enums";
 
 export const ZCreateTeamsSchema = z.object({
   teamNames: z.string().array(),

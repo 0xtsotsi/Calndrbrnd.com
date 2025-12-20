@@ -31,7 +31,7 @@ import { ApiExcludeController } from "@nestjs/swagger";
 import { Request } from "express";
 import Stripe from "stripe";
 
-import { ApiResponse } from "@calcom/platform-types";
+import { ApiResponse } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/billing",

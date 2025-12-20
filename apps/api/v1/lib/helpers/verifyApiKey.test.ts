@@ -9,23 +9,23 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createMocks } from "node-mocks-http";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import type { ILicenseKeyService } from "@calcom/ee/common/server/LicenseKeyService";
-import LicenseKeyService, { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { PrismaApiKeyRepository } from "@calcom/features/ee/api-keys/repositories/PrismaApiKeyRepository";
-import { ApiKeyService } from "@calcom/features/ee/api-keys/services/ApiKeyService";
-import type { IDeploymentRepository } from "@calcom/features/ee/deployment/repositories/IDeploymentRepository";
-import { UserPermissionRole } from "@calcom/prisma/enums";
+import type { ILicenseKeyService } from "@calndrbrnd/ee/common/server/LicenseKeyService";
+import LicenseKeyService, { LicenseKeySingleton } from "@calndrbrnd/ee/common/server/LicenseKeyService";
+import { PrismaApiKeyRepository } from "@calndrbrnd/features/ee/api-keys/repositories/PrismaApiKeyRepository";
+import { ApiKeyService } from "@calndrbrnd/features/ee/api-keys/services/ApiKeyService";
+import type { IDeploymentRepository } from "@calndrbrnd/features/ee/deployment/repositories/IDeploymentRepository";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
 
 import { isAdminGuard } from "../utils/isAdmin";
 import { isLockedOrBlocked } from "../utils/isLockedOrBlocked";
 import { ScopeOfAdmin } from "../utils/scopeOfAdmin";
 import { verifyApiKey } from "./verifyApiKey";
 
-vi.mock("@calcom/features/ee/api-keys/services/ApiKeyService", () => ({
+vi.mock("@calndrbrnd/features/ee/api-keys/services/ApiKeyService", () => ({
   ApiKeyService: vi.fn(),
 }));
 
-vi.mock("@calcom/features/ee/api-keys/repositories/PrismaApiKeyRepository", () => ({
+vi.mock("@calndrbrnd/features/ee/api-keys/repositories/PrismaApiKeyRepository", () => ({
   PrismaApiKeyRepository: vi.fn(),
 }));
 
@@ -37,7 +37,7 @@ vi.mock("../utils/isLockedOrBlocked", () => ({
   isLockedOrBlocked: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/crypto", () => ({
+vi.mock("@calndrbrnd/lib/crypto", () => ({
   symmetricDecrypt: vi.fn().mockReturnValue("mocked-decrypted-value"),
   symmetricEncrypt: vi.fn().mockReturnValue("mocked-encrypted-value"),
 }));

@@ -1,17 +1,17 @@
 import type { TFunction } from "i18next";
 
-import dayjs from "@calcom/dayjs";
-import { sendRequestRescheduleEmailAndSMS } from "@calcom/emails/email-manager";
-import { deleteMeeting } from "@calcom/features/conferencing/lib/videoClient";
-import { CalendarEventBuilder } from "@calcom/lib/builders/CalendarEvent/builder";
-import { CalendarEventDirector } from "@calcom/lib/builders/CalendarEvent/director";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
-import type { Booking, BookingReference, User } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
-import type { Person } from "@calcom/types/Calendar";
+import dayjs from "@calndrbrnd/dayjs";
+import { sendRequestRescheduleEmailAndSMS } from "@calndrbrnd/emails/email-manager";
+import { deleteMeeting } from "@calndrbrnd/features/conferencing/lib/videoClient";
+import { CalendarEventBuilder } from "@calndrbrnd/lib/builders/CalendarEvent/builder";
+import { CalendarEventDirector } from "@calndrbrnd/lib/builders/CalendarEvent/director";
+import logger from "@calndrbrnd/lib/logger";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import prisma from "@calndrbrnd/prisma";
+import type { Booking, BookingReference, User } from "@calndrbrnd/prisma/client";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import type { EventTypeMetadata } from "@calndrbrnd/prisma/zod-utils";
+import type { Person } from "@calndrbrnd/types/Calendar";
 
 import { getCalendar } from "../../_utils/getCalendar";
 

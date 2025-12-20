@@ -1,15 +1,15 @@
 import { describe, it, expect, beforeEach, vi, type Mock } from "vitest";
 
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { BookingAuditAccessService, BookingAuditErrorCode, BookingAuditPermissionError } from "../BookingAuditAccessService";
 
-vi.mock("@calcom/features/pbac/services/permission-check.service");
-vi.mock("@calcom/features/bookings/repositories/BookingRepository");
-vi.mock("@calcom/features/membership/repositories/MembershipRepository");
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service");
+vi.mock("@calndrbrnd/features/bookings/repositories/BookingRepository");
+vi.mock("@calndrbrnd/features/membership/repositories/MembershipRepository");
 const DB = {
   bookings: {} as Record<string, {
     uid: string;

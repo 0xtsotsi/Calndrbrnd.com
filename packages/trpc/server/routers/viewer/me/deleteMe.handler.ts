@@ -1,12 +1,12 @@
-import { ErrorCode } from "@calcom/features/auth/lib/ErrorCode";
-import { verifyPassword } from "@calcom/features/auth/lib/verifyPassword";
-import { deleteUser } from "@calcom/features/users/lib/deleteUser";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import { HttpError } from "@calcom/lib/http-error";
-import { totpAuthenticatorCheck } from "@calcom/lib/totp";
-import { prisma } from "@calcom/prisma";
-import { IdentityProvider } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { ErrorCode } from "@calndrbrnd/features/auth/lib/ErrorCode";
+import { verifyPassword } from "@calndrbrnd/features/auth/lib/verifyPassword";
+import { deleteUser } from "@calndrbrnd/features/users/lib/deleteUser";
+import { symmetricDecrypt } from "@calndrbrnd/lib/crypto";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { totpAuthenticatorCheck } from "@calndrbrnd/lib/totp";
+import { prisma } from "@calndrbrnd/prisma";
+import { IdentityProvider } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TDeleteMeInputSchema } from "./deleteMe.schema";
 

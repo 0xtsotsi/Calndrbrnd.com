@@ -5,20 +5,20 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import BrandColorsForm from "@calcom/features/ee/components/BrandColorsForm";
-import { AppearanceSkeletonLoader } from "@calcom/features/ee/components/CommonSkeletonLoaders";
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import ThemeLabel from "@calcom/features/settings/ThemeLabel";
-import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@calcom/lib/constants";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
+import BrandColorsForm from "@calndrbrnd/features/ee/components/BrandColorsForm";
+import { AppearanceSkeletonLoader } from "@calndrbrnd/features/ee/components/CommonSkeletonLoaders";
+import SectionBottomActions from "@calndrbrnd/features/settings/SectionBottomActions";
+import ThemeLabel from "@calndrbrnd/features/settings/ThemeLabel";
+import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@calndrbrnd/lib/constants";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { SettingsToggle } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 type BrandColorsFormValues = {
   brandColor: string;

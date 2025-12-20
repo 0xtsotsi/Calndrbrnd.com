@@ -4,14 +4,14 @@ import type { GaxiosResponse } from "googleapis-common";
 import { RRule } from "rrule";
 import { v4 as uuid } from "uuid";
 
-import { MeetLocationType } from "@calcom/app-store/constants";
-import { getLocation, getRichDescription } from "@calcom/lib/CalEventParser";
-import { uniqueBy } from "@calcom/lib/array";
-import { ORGANIZER_EMAIL_EXEMPT_DOMAINS } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { SelectedCalendarRepository } from "@calcom/lib/server/repository/selectedCalendar";
-import type { Prisma } from "@calcom/prisma/client";
+import { MeetLocationType } from "@calndrbrnd/app-store/constants";
+import { getLocation, getRichDescription } from "@calndrbrnd/lib/CalEventParser";
+import { uniqueBy } from "@calndrbrnd/lib/array";
+import { ORGANIZER_EMAIL_EXEMPT_DOMAINS } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { SelectedCalendarRepository } from "@calndrbrnd/lib/server/repository/selectedCalendar";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 import type {
   Calendar,
   CalendarServiceEvent,
@@ -19,9 +19,9 @@ import type {
   EventBusyDate,
   IntegrationCalendar,
   NewCalendarEventType,
-} from "@calcom/types/Calendar";
-import type { SelectedCalendarEventTypeIds } from "@calcom/types/Calendar";
-import type { CredentialForCalendarServiceWithEmail } from "@calcom/types/Credential";
+} from "@calndrbrnd/types/Calendar";
+import type { SelectedCalendarEventTypeIds } from "@calndrbrnd/types/Calendar";
+import type { CredentialForCalendarServiceWithEmail } from "@calndrbrnd/types/Credential";
 
 import { AxiosLikeResponseToFetchResponse } from "../../_utils/oauth/AxiosLikeResponseToFetchResponse";
 import { CalendarAuth } from "./CalendarAuth";

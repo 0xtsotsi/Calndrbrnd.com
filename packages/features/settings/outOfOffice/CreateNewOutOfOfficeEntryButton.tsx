@@ -1,12 +1,12 @@
 "use client";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import type { ButtonProps } from "@calcom/ui/components/button";
-import { Button } from "@calcom/ui/components/button";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import type { ButtonProps } from "@calndrbrnd/ui/components/button";
+import { Button } from "@calndrbrnd/ui/components/button";
 
 import { OutOfOfficeTab } from "./OutOfOfficeToggleGroup";
 

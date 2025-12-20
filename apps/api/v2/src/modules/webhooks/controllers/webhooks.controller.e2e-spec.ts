@@ -18,7 +18,7 @@ import { WebhookRepositoryFixture } from "test/fixtures/repository/webhooks.repo
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import type { Webhook } from "@calcom/prisma/client";
+import type { Webhook } from "@calndrbrnd/prisma/client";
 
 describe("WebhooksController (e2e)", () => {
   let app: INestApplication;

@@ -1,14 +1,14 @@
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import { metadata as googleCalendarMetadata } from "@calcom/app-store/googlecalendar/_metadata";
-import { metadata as googleMeetMetadata } from "@calcom/app-store/googlevideo/_metadata";
-import type { ServiceAccountKey } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import { organizationRepositoryMock } from "@calcom/features/ee/organizations/__mocks__/organizationMock";
-import { SMSLockState, RRTimestampBasis } from "@calcom/prisma/enums";
-import type { CredentialForCalendarService, CredentialPayload } from "@calcom/types/Credential";
+import { metadata as googleCalendarMetadata } from "@calndrbrnd/app-store/googlecalendar/_metadata";
+import { metadata as googleMeetMetadata } from "@calndrbrnd/app-store/googlevideo/_metadata";
+import type { ServiceAccountKey } from "@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { DelegationCredentialRepository } from "@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { organizationRepositoryMock } from "@calndrbrnd/features/ee/organizations/__mocks__/organizationMock";
+import { SMSLockState, RRTimestampBasis } from "@calndrbrnd/prisma/enums";
+import type { CredentialForCalendarService, CredentialPayload } from "@calndrbrnd/types/Credential";
 
 import {
   buildAllCredentials,
@@ -20,12 +20,12 @@ import {
   getAllDelegationCredentialsForUserIncludeServiceAccountKey,
 } from "./delegationCredential";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {},
 }));
 
 // Mock DelegationCredentialRepository
-vi.mock("@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository", () => ({
+vi.mock("@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository", () => ({
   DelegationCredentialRepository: {
     findUniqueByOrgMemberEmailIncludeSensitiveServiceAccountKey: vi.fn(),
     findUniqueByOrganizationIdAndDomainIncludeSensitiveServiceAccountKey: vi.fn(),

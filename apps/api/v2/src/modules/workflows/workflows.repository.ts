@@ -3,11 +3,11 @@ import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { UserWithProfile } from "@/modules/users/users.repository";
 import { Injectable } from "@nestjs/common";
 
-import { TimeUnit, WorkflowTriggerEvents } from "@calcom/platform-libraries";
-import { TUpdateInputSchema } from "@calcom/platform-libraries/workflows";
-import { updateWorkflow } from "@calcom/platform-libraries/workflows";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Workflow, WorkflowStep } from "@calcom/prisma/client";
+import { TimeUnit, WorkflowTriggerEvents } from "@calndrbrnd/platform-libraries";
+import { TUpdateInputSchema } from "@calndrbrnd/platform-libraries/workflows";
+import { updateWorkflow } from "@calndrbrnd/platform-libraries/workflows";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { Workflow, WorkflowStep } from "@calndrbrnd/prisma/client";
 
 export type WorkflowType = Workflow & {
   activeOn: { eventTypeId: number }[];

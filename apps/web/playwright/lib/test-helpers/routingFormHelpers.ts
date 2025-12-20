@@ -1,7 +1,7 @@
 import { uuid } from "short-uuid";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { prisma } from "@calcom/prisma";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { createAttributes } from "./organizationHelpers";
 import { createRoundRobinTeamEventType } from "./teamHelpers";

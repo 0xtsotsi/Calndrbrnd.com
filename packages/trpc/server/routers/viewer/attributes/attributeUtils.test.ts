@@ -1,6 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import type { PrismaClient } from "@calcom/prisma";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 import {
   handleSimpleAttribute,

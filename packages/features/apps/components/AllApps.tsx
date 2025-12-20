@@ -4,14 +4,14 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import type { UIEvent } from "react";
 import { useEffect, useRef, useState } from "react";
 
-import type { UserAdminTeams } from "@calcom/features/users/repositories/UserRepository";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { AppCategories } from "@calcom/prisma/client";
-import type { AppFrontendPayload as App } from "@calcom/types/App";
-import type { CredentialFrontendPayload as Credential } from "@calcom/types/Credential";
-import classNames from "@calcom/ui/classNames";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Icon } from "@calcom/ui/components/icon";
+import type { UserAdminTeams } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { AppCategories } from "@calndrbrnd/prisma/client";
+import type { AppFrontendPayload as App } from "@calndrbrnd/types/App";
+import type { CredentialFrontendPayload as Credential } from "@calndrbrnd/types/Credential";
+import classNames from "@calndrbrnd/ui/classNames";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import { AppCard } from "./AppCard";
 

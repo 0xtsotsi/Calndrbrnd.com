@@ -1,6 +1,6 @@
-import type { getEventTypeResponse } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import type { IsFixedAwareUser } from "@calcom/features/bookings/lib/handleNewBooking/types";
-import { getTranslation } from "@calcom/lib/server/i18n";
+import type { getEventTypeResponse } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import type { IsFixedAwareUser } from "@calndrbrnd/features/bookings/lib/handleNewBooking/types";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
 
 import type { BookingSelectResult } from "./bookingSelect";
 

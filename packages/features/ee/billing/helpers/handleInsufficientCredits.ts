@@ -1,7 +1,7 @@
-import { sendCreditBalanceLimitReachedEmails } from "@calcom/emails/billing-email-service";
-import logger from "@calcom/lib/logger";
-import type { PrismaClient } from "@calcom/prisma";
-import type { CreditUsageType } from "@calcom/prisma/enums";
+import { sendCreditBalanceLimitReachedEmails } from "@calndrbrnd/emails/billing-email-service";
+import logger from "@calndrbrnd/lib/logger";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { CreditUsageType } from "@calndrbrnd/prisma/enums";
 
 import { getUserAndTeamWithBillingPermission } from "./getUserAndTeamWithBillingPermission";
 

@@ -1,6 +1,6 @@
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { prisma } from "@calcom/prisma";
-import type { Prisma, WorkflowStep } from "@calcom/prisma/client";
+import { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma, WorkflowStep } from "@calndrbrnd/prisma/client";
 
 async function getRemindersFromRemovedEventTypes(removedEventTypes: number[], workflowSteps: WorkflowStep[]) {
   const remindersToDeletePromise: Prisma.PrismaPromise<

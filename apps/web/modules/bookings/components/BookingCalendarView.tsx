@@ -2,12 +2,12 @@
 
 import { useMemo, useEffect } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
-import { Calendar } from "@calcom/features/calendars/weeklyview";
-import type { CalendarEvent } from "@calcom/features/calendars/weeklyview/types/events";
-import { useBanners } from "@calcom/features/shell/banners/useBanners";
-import { useGetTheme } from "@calcom/lib/hooks/useTheme";
+import dayjs from "@calndrbrnd/dayjs";
+import { useTimePreferences } from "@calndrbrnd/features/bookings/lib";
+import { Calendar } from "@calndrbrnd/features/calendars/weeklyview";
+import type { CalendarEvent } from "@calndrbrnd/features/calendars/weeklyview/types/events";
+import { useBanners } from "@calndrbrnd/features/shell/banners/useBanners";
+import { useGetTheme } from "@calndrbrnd/lib/hooks/useTheme";
 
 import { useBookingDetailsSheetStore } from "../store/bookingDetailsSheetStore";
 import type { BookingOutput } from "../types";

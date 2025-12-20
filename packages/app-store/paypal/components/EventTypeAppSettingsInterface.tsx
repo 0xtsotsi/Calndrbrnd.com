@@ -4,16 +4,16 @@ import {
   currencyOptions,
   currencySymbols,
   isAcceptedCurrencyCode,
-} from "@calcom/app-store/paypal/lib/currencyOptions";
-import type { EventTypeAppSettingsComponent } from "@calcom/app-store/types";
+} from "@calndrbrnd/app-store/paypal/lib/currencyOptions";
+import type { EventTypeAppSettingsComponent } from "@calndrbrnd/app-store/types";
 import {
   convertToSmallestCurrencyUnit,
   convertFromSmallestToPresentableCurrencyUnit,
-} from "@calcom/lib/currencyConversions";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Alert } from "@calcom/ui/components/alert";
-import { Select } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
+} from "@calndrbrnd/lib/currencyConversions";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
 
 import { PaypalPaymentOptions as paymentOptions } from "../zod";
 

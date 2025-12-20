@@ -1,4 +1,4 @@
-import { emailRegex } from "@calcom/lib/emailSchema";
+import { emailRegex } from "@calndrbrnd/lib/emailSchema";
 
 /**
  * Centralized normalization utilities for emails and domains

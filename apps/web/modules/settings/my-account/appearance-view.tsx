@@ -7,26 +7,26 @@ import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import type { z } from "zod";
 
-import { BookerLayoutSelector } from "@calcom/features/settings/BookerLayoutSelector";
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import ThemeLabel from "@calcom/features/settings/ThemeLabel";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { APP_NAME } from "@calcom/lib/constants";
-import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@calcom/lib/constants";
-import { checkWCAGContrastColor } from "@calcom/lib/getBrandColours";
-import useGetBrandingColours from "@calcom/lib/getBrandColours";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useTheme from "@calcom/lib/hooks/useTheme";
-import { validateBookerLayouts } from "@calcom/lib/validateBookerLayouts";
-import type { userMetadata } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { UpgradeTeamsBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { SettingsToggle, ColorPicker, Form } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { useCalcomTheme } from "@calcom/ui/styles";
+import { BookerLayoutSelector } from "@calndrbrnd/features/settings/BookerLayoutSelector";
+import SectionBottomActions from "@calndrbrnd/features/settings/SectionBottomActions";
+import ThemeLabel from "@calndrbrnd/features/settings/ThemeLabel";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@calndrbrnd/lib/constants";
+import { checkWCAGContrastColor } from "@calndrbrnd/lib/getBrandColours";
+import useGetBrandingColours from "@calndrbrnd/lib/getBrandColours";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import useTheme from "@calndrbrnd/lib/hooks/useTheme";
+import { validateBookerLayouts } from "@calndrbrnd/lib/validateBookerLayouts";
+import type { userMetadata } from "@calndrbrnd/prisma/zod-utils";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { UpgradeTeamsBadge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { SettingsToggle, ColorPicker, Form } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { useCalcomTheme } from "@calndrbrnd/ui/styles";
 
 const useBrandColors = (
   currentTheme: string | null,

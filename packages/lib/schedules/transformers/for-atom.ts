@@ -1,8 +1,8 @@
-import dayjs from "@calcom/dayjs";
-import { getWorkingHours } from "@calcom/lib/availability";
-import { yyyymmdd } from "@calcom/lib/dayjs";
-import type { Availability } from "@calcom/prisma/client";
-import type { Schedule, TimeRange } from "@calcom/types/schedule";
+import dayjs from "@calndrbrnd/dayjs";
+import { getWorkingHours } from "@calndrbrnd/lib/availability";
+import { yyyymmdd } from "@calndrbrnd/lib/dayjs";
+import type { Availability } from "@calndrbrnd/prisma/client";
+import type { Schedule, TimeRange } from "@calndrbrnd/types/schedule";
 
 type ScheduleAvailability = Pick<Availability, "days" | "startTime" | "endTime">[];
 type ScheduleOverride = Pick<Availability, "date" | "startTime" | "endTime">[];

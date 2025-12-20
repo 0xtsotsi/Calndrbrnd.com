@@ -1,15 +1,15 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
 
 import { CallService } from "../CallService";
 import { setupBasicMocks, createMockCall, createMockDatabaseAgent, TestError } from "./test-utils";
 
-vi.mock("@calcom/features/ee/billing/credit-service", () => ({
+vi.mock("@calndrbrnd/features/ee/billing/credit-service", () => ({
   CreditService: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/checkRateLimitAndThrowError", () => ({
+vi.mock("@calndrbrnd/lib/checkRateLimitAndThrowError", () => ({
   checkRateLimitAndThrowError: vi.fn(),
 }));
 
@@ -23,8 +23,8 @@ describe("CallService", () => {
 
     mocks = setupBasicMocks();
 
-    const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
-    const { checkRateLimitAndThrowError } = await import("@calcom/lib/checkRateLimitAndThrowError");
+    const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
+    const { checkRateLimitAndThrowError } = await import("@calndrbrnd/lib/checkRateLimitAndThrowError");
 
     vi.mocked(CreditService).mockImplementation(() => ({
       hasAvailableCredits: vi.fn().mockResolvedValue(true),
@@ -232,7 +232,7 @@ describe("CallService", () => {
       mocks.mockAgentRepository.findByIdWithCallAccess.mockResolvedValue(mockAgentWithPhoneNumber);
       mocks.mockRetellRepository.createPhoneCall.mockResolvedValue(createMockCall());
 
-      const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+      const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
       vi.mocked(CreditService).mockImplementation(() => ({
         getAllCredits: vi.fn().mockRejectedValue(new TestError("Credit service unavailable")),
       }));
@@ -246,7 +246,7 @@ describe("CallService", () => {
       mocks.mockAgentRepository.findByIdWithCallAccess.mockResolvedValue(mockAgentWithPhoneNumber);
       mocks.mockRetellRepository.createPhoneCall.mockResolvedValue(createMockCall());
 
-      const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+      const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
       vi.mocked(CreditService).mockImplementation(() => ({
         hasAvailableCredits: vi.fn().mockResolvedValue(false),
       }));
@@ -260,7 +260,7 @@ describe("CallService", () => {
       mocks.mockAgentRepository.findByIdWithCallAccess.mockResolvedValue(mockAgentWithPhoneNumber);
       mocks.mockRetellRepository.createPhoneCall.mockResolvedValue(createMockCall());
 
-      const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+      const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
       vi.mocked(CreditService).mockImplementation(() => ({
         hasAvailableCredits: vi.fn().mockResolvedValue(false),
       }));

@@ -4,15 +4,15 @@ import { keepPreviousData } from "@tanstack/react-query";
 import { getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
 import { useMemo, useState } from "react";
 
-import { DataTableWrapper, useDataTable } from "@calcom/features/data-table";
-import { IS_CALCOM } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { ConfirmationDialogContent, Dialog, DialogClose } from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { showToast } from "@calcom/ui/components/toast";
+import { DataTableWrapper, useDataTable } from "@calndrbrnd/features/data-table";
+import { IS_CALCOM } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ConfirmationDialogContent, Dialog, DialogClose } from "@calndrbrnd/ui/components/dialog";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useBlockedEntriesColumns } from "./blocked-entries-columns";
 import { BlocklistEntryDetailsSheet } from "./blocklist-entry-details-sheet";

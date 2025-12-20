@@ -1,6 +1,6 @@
-import { moduleLoader as prismaModuleLoader } from "@calcom/features/di/modules/Prisma";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { HostRepository } from "@calcom/features/host/repositories/HostRepository";
+import { moduleLoader as prismaModuleLoader } from "@calndrbrnd/features/di/modules/Prisma";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { HostRepository } from "@calndrbrnd/features/host/repositories/HostRepository";
 
 import { createModule, bindModuleToClassOnToken, type ModuleLoader } from "../di";
 

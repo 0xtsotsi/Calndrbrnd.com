@@ -13,7 +13,7 @@ import { SchedulesRepositoryFixture } from "test/fixtures/repository/schedules.r
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_11 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_11 } from "@calndrbrnd/platform-constants";
 import type {
   CreateScheduleInput_2024_06_11,
   CreateScheduleOutput_2024_06_11,
@@ -22,8 +22,8 @@ import type {
   ScheduleOutput_2024_06_11,
   UpdateScheduleOutput_2024_06_11,
   UpdateScheduleInput_2024_06_11,
-} from "@calcom/platform-types";
-import type { User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { User } from "@calndrbrnd/prisma/client";
 
 describe("Schedules Endpoints", () => {
   describe("User Authentication", () => {

@@ -5,7 +5,7 @@ import { cityTimezonesSchema } from "./cityTimezones.schema";
 // things that unauthenticated users can query about themselves
 export const timezonesRouter = router({
   cityTimezones: publicProcedure.input(cityTimezonesSchema).query(async () => {
-    const { default: handler } = await import("@calcom/features/cityTimezones/cityTimezonesHandler");
+    const { default: handler } = await import("@calndrbrnd/features/cityTimezones/cityTimezonesHandler");
     return handler();
   }),
 });

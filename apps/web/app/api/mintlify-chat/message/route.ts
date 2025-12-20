@@ -5,7 +5,7 @@ import {
   validateChatMessage,
   validateMintlifyConfig,
   sanitizeResponseHeaders,
-} from "@calcom/lib/server/mintlifyChatValidation";
+} from "@calndrbrnd/lib/server/mintlifyChatValidation";
 
 /**
  * POST /api/mintlify-chat/message

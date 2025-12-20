@@ -1,13 +1,13 @@
 import { render } from "@testing-library/react";
 import { describe, it, vi } from "vitest";
 
-import { getOrgFullOrigin } from "@calcom/ee/organizations/lib/orgDomains";
-import { useRouterQuery } from "@calcom/lib/hooks/useRouterQuery";
+import { getOrgFullOrigin } from "@calndrbrnd/ee/organizations/lib/orgDomains";
+import { useRouterQuery } from "@calndrbrnd/lib/hooks/useRouterQuery";
 
 import UserPage from "./users-public-view";
 
-vi.mock("@calcom/lib/constants", async () => {
-  return await vi.importActual("@calcom/lib/constants");
+vi.mock("@calndrbrnd/lib/constants", async () => {
+  return await vi.importActual("@calndrbrnd/lib/constants");
 });
 
 function mockedUserPageComponentProps(props: Partial<React.ComponentProps<typeof UserPage>>) {

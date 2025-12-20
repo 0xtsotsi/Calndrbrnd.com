@@ -2,14 +2,14 @@ import { getCoreRowModel, getSortedRowModel, useReactTable, type ColumnDef } fro
 import { usePathname } from "next/navigation";
 import { useMemo, useState } from "react";
 
-import { DataTableProvider, DataTableWrapper } from "@calcom/features/data-table";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogHeader } from "@calcom/ui/components/dialog";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { DataTableProvider, DataTableWrapper } from "@calndrbrnd/features/data-table";
+import { useSegments } from "@calndrbrnd/features/data-table/hooks/useSegments";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dialog, DialogContent, DialogHeader } from "@calndrbrnd/ui/components/dialog";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useVoicePreview } from "../hooks/useVoicePreview";
 

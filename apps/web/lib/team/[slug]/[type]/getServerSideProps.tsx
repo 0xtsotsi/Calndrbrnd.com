@@ -1,20 +1,20 @@
 import type { GetServerSidePropsContext } from "next";
 import { z } from "zod";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import type { GetBookingType } from "@calcom/features/bookings/lib/get-booking";
-import { getBookingForReschedule } from "@calcom/features/bookings/lib/get-booking";
-import { getSlugOrRequestedSlug, orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { getOrganizationSEOSettings } from "@calcom/features/ee/organizations/lib/orgSettings";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { getBrandingForEventType } from "@calcom/features/profile/lib/getBranding";
-import { shouldHideBrandingForTeamEvent } from "@calcom/features/profile/lib/hideBranding";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import slugify from "@calcom/lib/slugify";
-import { prisma } from "@calcom/prisma";
-import type { User } from "@calcom/prisma/client";
-import { BookingStatus, RedirectType, SchedulingType } from "@calcom/prisma/enums";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import type { GetBookingType } from "@calndrbrnd/features/bookings/lib/get-booking";
+import { getBookingForReschedule } from "@calndrbrnd/features/bookings/lib/get-booking";
+import { getSlugOrRequestedSlug, orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { getOrganizationSEOSettings } from "@calndrbrnd/features/ee/organizations/lib/orgSettings";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { getBrandingForEventType } from "@calndrbrnd/features/profile/lib/getBranding";
+import { shouldHideBrandingForTeamEvent } from "@calndrbrnd/features/profile/lib/hideBranding";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import slugify from "@calndrbrnd/lib/slugify";
+import { prisma } from "@calndrbrnd/prisma";
+import type { User } from "@calndrbrnd/prisma/client";
+import { BookingStatus, RedirectType, SchedulingType } from "@calndrbrnd/prisma/enums";
+import { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { handleOrgRedirect } from "@lib/handleOrgRedirect";
 
@@ -109,7 +109,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
 
   if (!teamMemberEmail || !crmOwnerRecordType || !crmAppSlug) {
     const { getTeamMemberEmailForResponseOrContactUsingUrlQuery } = await import(
-      "@calcom/features/ee/teams/lib/getTeamMemberEmailFromCrm"
+      "@calndrbrnd/features/ee/teams/lib/getTeamMemberEmailFromCrm"
     );
     const {
       email,

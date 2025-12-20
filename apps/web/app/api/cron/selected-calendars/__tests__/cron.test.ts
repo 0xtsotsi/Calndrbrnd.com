@@ -1,15 +1,15 @@
 import prismock from "../../../../../../../tests/libs/__mocks__/prisma";
-import "@calcom/lib/server/__mocks__/serviceAccountKey";
+import "@calndrbrnd/lib/server/__mocks__/serviceAccountKey";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import { CalendarAppDelegationCredentialInvalidGrantError } from "@calcom/lib/CalendarAppError";
+import { CalendarAppDelegationCredentialInvalidGrantError } from "@calndrbrnd/lib/CalendarAppError";
 
 import { handleCreateSelectedCalendars, isSameEmail } from "../route";
 
 // Mock GoogleCalendarService
 const getPrimaryCalendarMock = vi.fn();
-vi.mock("@calcom/app-store/googlecalendar/lib/CalendarService", () => {
+vi.mock("@calndrbrnd/app-store/googlecalendar/lib/CalendarService", () => {
   return {
     default: vi.fn().mockImplementation(() => ({
       getPrimaryCalendar: getPrimaryCalendarMock,

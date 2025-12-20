@@ -4,24 +4,24 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { EventTypeDuplicateInput } from "@calcom/features/eventtypes/lib/types";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useTypedQuery } from "@calcom/lib/hooks/useTypedQuery";
-import { HttpError } from "@calcom/lib/http-error";
-import { md } from "@calcom/lib/markdownIt";
-import slugify from "@calcom/lib/slugify";
-import turndown from "@calcom/lib/turndownService";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { EventTypeDuplicateInput } from "@calndrbrnd/features/eventtypes/lib/types";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useTypedQuery } from "@calndrbrnd/lib/hooks/useTypedQuery";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { md } from "@calndrbrnd/lib/markdownIt";
+import slugify from "@calndrbrnd/lib/slugify";
+import turndown from "@calndrbrnd/lib/turndownService";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@calndrbrnd/ui/components/dialog";
+import { Editor } from "@calndrbrnd/ui/components/editor";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { revalidateEventTypesList } from "@calndrbrnd/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
 
 const querySchema = z.object({
   title: z.string().min(1),

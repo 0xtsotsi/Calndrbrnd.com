@@ -2,8 +2,8 @@ import type { Session } from "next-auth";
 import { redirect } from "next/navigation";
 import { describe, it, vi, expect, beforeEach, type MockedFunction } from "vitest";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { validateUserHasOrg, type ValidatedOrgSession } from "./validateUserHasOrg";
 
@@ -17,7 +17,7 @@ vi.mock("next/headers", () => ({
   headers: vi.fn(() => Promise.resolve({})),
 }));
 
-vi.mock("@calcom/features/auth/lib/getServerSession", () => ({
+vi.mock("@calndrbrnd/features/auth/lib/getServerSession", () => ({
   getServerSession: vi.fn(),
 }));
 

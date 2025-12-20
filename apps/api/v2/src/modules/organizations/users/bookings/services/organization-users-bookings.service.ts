@@ -2,7 +2,7 @@ import { BookingsService_2024_08_13 } from "@/ee/bookings/2024-08-13/services/bo
 import { UsersRepository } from "@/modules/users/users.repository";
 import { Injectable, NotFoundException } from "@nestjs/common";
 
-import { GetBookingsInput_2024_08_13 } from "@calcom/platform-types";
+import { GetBookingsInput_2024_08_13 } from "@calndrbrnd/platform-types";
 
 @Injectable()
 export class OrganizationUsersBookingsService {

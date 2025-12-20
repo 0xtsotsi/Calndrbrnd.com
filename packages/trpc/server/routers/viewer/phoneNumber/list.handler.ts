@@ -1,5 +1,5 @@
-import { PrismaPhoneNumberRepository } from "@calcom/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
-import prisma from "@calcom/prisma";
+import { PrismaPhoneNumberRepository } from "@calndrbrnd/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
+import prisma from "@calndrbrnd/prisma";
 
 import type { TrpcSessionUser } from "../../../types";
 import type { TListInputSchema } from "./list.schema";

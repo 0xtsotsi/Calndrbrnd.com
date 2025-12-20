@@ -1,17 +1,17 @@
 import type { DirectorySyncEvent, Group } from "@boxyhq/saml-jackson";
 
-import { addNewMembersToEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
-import { IdentityProvider, MembershipRole } from "@calcom/prisma/enums";
+import { addNewMembersToEventTypes } from "@calndrbrnd/features/ee/teams/lib/queries";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import prisma from "@calndrbrnd/prisma";
+import { IdentityProvider, MembershipRole } from "@calndrbrnd/prisma/enums";
 import {
   getTeamOrThrow,
   sendSignupToOrganizationEmail,
   sendExistingUserTeamInviteEmails,
-} from "@calcom/trpc/server/routers/viewer/teams/inviteMember/utils";
+} from "@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/utils";
 
 import createUsersAndConnectToOrg from "./users/createUsersAndConnectToOrg";
 

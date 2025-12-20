@@ -1,6 +1,6 @@
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { prisma } from "@calcom/prisma";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { ErrorWithCode } from "@calndrbrnd/lib/errors";
+import { prisma } from "@calndrbrnd/prisma";
 
 export const verifyEmailSender = async (email: string, userId: number, teamId: number | null) => {
   const verifiedEmail = await prisma.verifiedEmail.findFirst({

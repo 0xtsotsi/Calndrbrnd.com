@@ -2,8 +2,8 @@ import { wrapGetServerSidePropsWithSentry } from "@sentry/nextjs";
 import { isbot } from "isbot";
 import type { GetServerSidePropsContext } from "next";
 
-import { getRoutedUrl, hasEmbedPath } from "@calcom/features/routing-forms/lib/getRoutedUrl";
-import logger from "@calcom/lib/logger";
+import { getRoutedUrl, hasEmbedPath } from "@calndrbrnd/features/routing-forms/lib/getRoutedUrl";
+import logger from "@calndrbrnd/lib/logger";
 
 import { TRPCError } from "@trpc/server";
 

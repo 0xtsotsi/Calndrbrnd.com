@@ -2,16 +2,16 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import posthog from "posthog-js";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { HttpError } from "@calcom/lib/http-error";
-import { trpc } from "@calcom/trpc/react";
-import cn from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogFooter } from "@calcom/ui/components/dialog";
-import { Icon } from "@calcom/ui/components/icon";
-import type { IconName } from "@calcom/ui/components/icon";
-import { RadioGroup, Radio, RadioIndicator } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { trpc } from "@calndrbrnd/trpc/react";
+import cn from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dialog, DialogContent, DialogFooter } from "@calndrbrnd/ui/components/dialog";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import type { IconName } from "@calndrbrnd/ui/components/icon";
+import { RadioGroup, Radio, RadioIndicator } from "@calndrbrnd/ui/components/radio";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 type WorkflowOptionCardProps = {
   title: string;

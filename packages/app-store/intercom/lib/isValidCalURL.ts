@@ -1,4 +1,4 @@
-import { CAL_URL } from "@calcom/lib/constants";
+import { CAL_URL } from "@calndrbrnd/lib/constants";
 
 import type { TextComponent } from "../lib";
 

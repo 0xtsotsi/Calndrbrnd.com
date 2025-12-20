@@ -1,9 +1,9 @@
-import { VideoApiAdapterMap } from "@calcom/app-store/video.adapters.generated";
-import logger from "@calcom/lib/logger";
-import { getPiiFreeCredential } from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { CredentialPayload } from "@calcom/types/Credential";
-import type { VideoApiAdapter, VideoApiAdapterFactory } from "@calcom/types/VideoApiAdapter";
+import { VideoApiAdapterMap } from "@calndrbrnd/app-store/video.adapters.generated";
+import logger from "@calndrbrnd/lib/logger";
+import { getPiiFreeCredential } from "@calndrbrnd/lib/piiFreeData";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
+import type { VideoApiAdapter, VideoApiAdapterFactory } from "@calndrbrnd/types/VideoApiAdapter";
 
 const log = logger.getSubLogger({ prefix: ["[app-store] getVideoAdapters"] });
 

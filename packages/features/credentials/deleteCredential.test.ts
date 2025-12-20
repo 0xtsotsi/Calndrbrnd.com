@@ -1,16 +1,16 @@
 import {
   addEventTypesToDb,
   mockNoTranslations,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
 
 import { describe, test, expect, beforeEach } from "vitest";
 
-import { PrismaAppRepository } from "@calcom/features/apps/repository/PrismaAppRepository";
-import { DestinationCalendarRepository } from "@calcom/features/calendars/repositories/DestinationCalendarRepository";
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { prisma } from "@calcom/prisma";
+import { PrismaAppRepository } from "@calndrbrnd/features/apps/repository/PrismaAppRepository";
+import { DestinationCalendarRepository } from "@calndrbrnd/features/calendars/repositories/DestinationCalendarRepository";
+import { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { prisma } from "@calndrbrnd/prisma";
 
 const testUser = {
   email: "test@test.com",

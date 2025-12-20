@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-import { DataTableToolbar } from "@calcom/features/data-table";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { ToggleGroup } from "@calcom/ui/components/form";
+import { DataTableToolbar } from "@calndrbrnd/features/data-table";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ToggleGroup } from "@calndrbrnd/ui/components/form";
 
 import PendingReportsBadge from "./components/PendingReportsBadge";
 import { BlockedEntriesTable } from "./components/blocked-entries-table";

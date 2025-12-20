@@ -1,10 +1,10 @@
 import type { NextApiRequest } from "next";
 
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { prisma } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import { prisma } from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { eventTypeSelect } from "~/lib/selects/event-type";
 import { schemaEventTypeCreateBodyParams } from "~/lib/validations/event-type";

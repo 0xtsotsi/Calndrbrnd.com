@@ -4,18 +4,18 @@ import type { z } from "zod";
 import type {
   SelectLikeComponentProps,
   TextLikeComponentProps,
-} from "@calcom/app-store/routing-forms/components/react-awesome-query-builder/widgets";
-import Widgets from "@calcom/app-store/routing-forms/components/react-awesome-query-builder/widgets";
-import PhoneInput from "@calcom/features/components/phone-input";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { fieldSchema, variantsConfigSchema, FieldType } from "@calcom/prisma/zod-utils";
-import { AddressInput } from "@calcom/ui/components/address";
-import { InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Label, CheckboxField, EmailField, InputField, Checkbox } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { RadioGroup, RadioField } from "@calcom/ui/components/radio";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/app-store/routing-forms/components/react-awesome-query-builder/widgets";
+import Widgets from "@calndrbrnd/app-store/routing-forms/components/react-awesome-query-builder/widgets";
+import PhoneInput from "@calndrbrnd/features/components/phone-input";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { fieldSchema, variantsConfigSchema, FieldType } from "@calndrbrnd/prisma/zod-utils";
+import { AddressInput } from "@calndrbrnd/ui/components/address";
+import { InfoBadge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Label, CheckboxField, EmailField, InputField, Checkbox } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { RadioGroup, RadioField } from "@calndrbrnd/ui/components/radio";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { ComponentForField } from "./FormBuilderField";
 import { propsTypes } from "./propsTypes";

@@ -3,11 +3,11 @@ import type { NextApiRequest } from "next";
 import {
   getTranscriptsAccessLinkFromRecordingId,
   checkIfRoomNameMatchesInRecording,
-} from "@calcom/features/conferencing/lib/videoClient";
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
-import type { PartialReference } from "@calcom/types/EventManager";
+} from "@calndrbrnd/features/conferencing/lib/videoClient";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
+import type { PartialReference } from "@calndrbrnd/types/EventManager";
 
 import { getTranscriptFromRecordingId } from "~/lib/validations/shared/queryIdTransformParseInt";
 
@@ -61,7 +61,7 @@ export async function getHandler(req: NextApiRequest) {
 const checkIfRecordingBelongsToBooking = async (bookingId: number, recordingId: string) => {
   const booking = await prisma.booking.findUnique({
     where: { id: bookingId },
-    // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+    // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
     include: { references: true },
   });
 

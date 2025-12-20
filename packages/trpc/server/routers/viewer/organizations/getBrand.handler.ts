@@ -1,5 +1,5 @@
-import { getBrand } from "@calcom/features/ee/organizations/lib/getBrand";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getBrand } from "@calndrbrnd/features/ee/organizations/lib/getBrand";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 type VerifyCodeOptions = {
   ctx: {

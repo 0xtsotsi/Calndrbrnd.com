@@ -38,7 +38,7 @@ import { plainToClass } from "class-transformer";
 import { Request } from "express";
 import { stringify } from "querystring";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 export type OAuthCallbackState = {
   accessToken: string;

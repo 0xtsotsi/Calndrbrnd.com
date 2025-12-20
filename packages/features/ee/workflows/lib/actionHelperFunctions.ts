@@ -1,7 +1,7 @@
 import type { TFunction } from "i18next";
 
-import type { TimeFormat } from "@calcom/lib/timeFormat";
-import { WorkflowActions, WorkflowTemplates, WorkflowTriggerEvents } from "@calcom/prisma/enums";
+import type { TimeFormat } from "@calndrbrnd/lib/timeFormat";
+import { WorkflowActions, WorkflowTemplates, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import {
   whatsappEventCancelledTemplate,

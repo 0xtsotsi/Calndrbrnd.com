@@ -1,6 +1,6 @@
-import { Resource } from "@calcom/features/pbac/domain/types/permission-registry";
-import { getResourcePermissions } from "@calcom/features/pbac/lib/resource-permissions";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { Resource } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { getResourcePermissions } from "@calndrbrnd/features/pbac/lib/resource-permissions";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 export interface TeamPermissions {
   canCreate: boolean;

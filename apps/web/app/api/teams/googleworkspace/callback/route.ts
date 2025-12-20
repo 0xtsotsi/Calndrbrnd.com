@@ -5,12 +5,12 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import getAppKeysFromSlug from "@calcom/app-store/_utils/getAppKeysFromSlug";
-import { throwIfNotHaveAdminAccessToTeam } from "@calcom/app-store/_utils/throwIfNotHaveAdminAccessToTeam";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
-import prisma from "@calcom/prisma";
+import getAppKeysFromSlug from "@calndrbrnd/app-store/_utils/getAppKeysFromSlug";
+import { throwIfNotHaveAdminAccessToTeam } from "@calndrbrnd/app-store/_utils/throwIfNotHaveAdminAccessToTeam";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getSafeRedirectUrl } from "@calndrbrnd/lib/getSafeRedirectUrl";
+import prisma from "@calndrbrnd/prisma";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

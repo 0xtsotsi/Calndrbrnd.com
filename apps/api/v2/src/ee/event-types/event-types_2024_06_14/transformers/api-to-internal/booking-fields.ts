@@ -12,7 +12,7 @@ import type {
   GuestsDefaultFieldInput_2024_06_14,
   RescheduleReasonDefaultFieldInput_2024_06_14,
   SplitNameDefaultFieldInput_2024_06_14,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 import {
   systemBeforeFieldEmail,

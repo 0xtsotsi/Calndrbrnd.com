@@ -1,6 +1,6 @@
-import { useAppContextWithSchema } from "@calcom/app-store/EventTypeAppContext";
-import AppCard from "@calcom/app-store/_components/AppCard";
-import type { EventTypeAppCardComponent } from "@calcom/app-store/types";
+import { useAppContextWithSchema } from "@calndrbrnd/app-store/EventTypeAppContext";
+import AppCard from "@calndrbrnd/app-store/_components/AppCard";
+import type { EventTypeAppCardComponent } from "@calndrbrnd/app-store/types";
 
 import useIsAppEnabled from "../../_utils/useIsAppEnabled";
 import type { appDataSchema } from "../zod";

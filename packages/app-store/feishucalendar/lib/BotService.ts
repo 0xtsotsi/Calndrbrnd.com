@@ -1,4 +1,4 @@
-import logger from "@calcom/lib/logger";
+import logger from "@calndrbrnd/lib/logger";
 
 import { FEISHU_HOST } from "../common";
 import { getAppAccessToken } from "./AppAccessToken";

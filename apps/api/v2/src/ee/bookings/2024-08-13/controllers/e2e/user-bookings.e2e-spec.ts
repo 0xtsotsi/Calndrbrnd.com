@@ -33,9 +33,9 @@ import {
   VERSION_2024_06_14,
   VERSION_2024_08_13,
   X_CAL_CLIENT_ID,
-} from "@calcom/platform-constants";
-import { EventManager } from "@calcom/platform-libraries/event-types";
-import { FAILED_EVENT_TYPE_IDENTIFICATION_ERROR_MESSAGE } from "@calcom/platform-types";
+} from "@calndrbrnd/platform-constants";
+import { EventManager } from "@calndrbrnd/platform-libraries/event-types";
+import { FAILED_EVENT_TYPE_IDENTIFICATION_ERROR_MESSAGE } from "@calndrbrnd/platform-types";
 import type {
   CreateEventTypeInput_2024_06_14,
   GetBookingOutput_2024_08_13,
@@ -48,8 +48,8 @@ import type {
   RescheduleBookingInput_2024_08_13,
   MarkAbsentBookingInput_2024_08_13,
   CancelBookingInput_2024_08_13,
-} from "@calcom/platform-types";
-import type { EventType, User, Workflow, Booking, PlatformOAuthClient, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { EventType, User, Workflow, Booking, PlatformOAuthClient, Team } from "@calndrbrnd/prisma/client";
 
 describe("Bookings Endpoints 2024-08-13", () => {
   describe("User bookings", () => {

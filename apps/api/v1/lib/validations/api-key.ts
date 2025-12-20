@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { ApiKeySchema as ApiKey } from "@calcom/prisma/zod/modelSchema/ApiKeySchema";
+import { ApiKeySchema as ApiKey } from "@calndrbrnd/prisma/zod/modelSchema/ApiKeySchema";
 
 export const apiKeyCreateBodySchema = ApiKey.pick({
   note: true,

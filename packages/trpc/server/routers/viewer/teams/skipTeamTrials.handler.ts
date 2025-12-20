@@ -1,10 +1,10 @@
-import { getTeamBillingServiceFactory } from "@calcom/ee/billing/di/containers/Billing";
-import { SubscriptionStatus } from "@calcom/ee/billing/repository/billing/IBillingRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getTeamBillingServiceFactory } from "@calndrbrnd/ee/billing/di/containers/Billing";
+import { SubscriptionStatus } from "@calndrbrnd/ee/billing/repository/billing/IBillingRepository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { IS_SELF_HOSTED } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { prisma } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TSkipTeamTrialsInputSchema } from "./skipTeamTrials.schema";
 

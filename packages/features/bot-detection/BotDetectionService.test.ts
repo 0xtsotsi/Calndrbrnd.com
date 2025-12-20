@@ -1,9 +1,9 @@
 import type { IncomingHttpHeaders } from "http";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import type { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import type { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { HttpError } from "@calcom/lib/http-error";
+import type { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import type { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { HttpError } from "@calndrbrnd/lib/http-error";
 
 import { BotDetectionService } from "./BotDetectionService";
 
@@ -13,7 +13,7 @@ vi.mock("botid/server", () => ({
 }));
 
 // Mock the logger
-vi.mock("@calcom/lib/logger", () => ({
+vi.mock("@calndrbrnd/lib/logger", () => ({
   default: {
     getSubLogger: vi.fn(() => ({
       warn: vi.fn(),

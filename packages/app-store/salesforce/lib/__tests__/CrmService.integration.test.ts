@@ -28,7 +28,7 @@ vi.mock("@urql/core", () => ({
   fetchExchange: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/constants", () => {
+vi.mock("@calndrbrnd/lib/constants", () => {
   return {
     WEBAPP_URL: "https://app.cal.com",
     APP_CREDENTIAL_SHARING_ENABLED: false,
@@ -44,7 +44,7 @@ vi.mock("@jsforce/jsforce-node", () => {
   };
 });
 
-vi.mock("@calcom/features/watchlist/lib/freeEmailDomainCheck/checkIfFreeEmailDomain", () => ({
+vi.mock("@calndrbrnd/features/watchlist/lib/freeEmailDomainCheck/checkIfFreeEmailDomain", () => ({
   checkIfFreeEmailDomain: vi.fn().mockResolvedValue(false),
 }));
 

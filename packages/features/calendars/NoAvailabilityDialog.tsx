@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { calculatePeriodLimits, isTimeViolatingFutureLimit } from "@calcom/lib/isOutOfBounds";
-import type { PeriodData } from "@calcom/types/Event";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { calculatePeriodLimits, isTimeViolatingFutureLimit } from "@calndrbrnd/lib/isOutOfBounds";
+import type { PeriodData } from "@calndrbrnd/types/Event";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dialog, DialogContent, DialogFooter, DialogClose } from "@calndrbrnd/ui/components/dialog";
 
 // Determines if the next month will pass the booking limits for 'ROLLING' and 'RANGE' period types
 const useNoFutureAvailability = (browsingDate: Dayjs, periodData: PeriodData) => {

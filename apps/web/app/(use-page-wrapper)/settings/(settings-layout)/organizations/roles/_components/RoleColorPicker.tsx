@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 export interface RoleColorPickerProps {
   value: string;

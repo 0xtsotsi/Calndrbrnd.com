@@ -1,12 +1,12 @@
-import { LookupTarget, ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { eventTypeSelect } from "@calcom/lib/server/eventTypeSelect";
-import { availabilityUserSelect, prisma, type PrismaTransaction } from "@calcom/prisma";
-import type { Prisma, Membership, PrismaClient } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
+import { LookupTarget, ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { withSelectedCalendars } from "@calndrbrnd/features/users/repositories/UserRepository";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { eventTypeSelect } from "@calndrbrnd/lib/server/eventTypeSelect";
+import { availabilityUserSelect, prisma, type PrismaTransaction } from "@calndrbrnd/prisma";
+import type { Prisma, Membership, PrismaClient } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
 
 const log = logger.getSubLogger({ prefix: ["features/membership/repositories/MembershipRepository"] });
 type IMembership = {

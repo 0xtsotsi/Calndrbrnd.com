@@ -9,20 +9,20 @@ import {
   mockSuccessfulVideoMeetingCreation,
   mockCalendarToHaveNoBusySlots,
   mockNoTranslations,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { BookingStatus } from "@calcom/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import { getInstantBookingCreateService } from "../../di/InstantBookingCreateService.container";
 import type { CreateInstantBookingData } from "../dto/types";
 
-vi.mock("@calcom/features/notifications/sendNotification", () => ({
+vi.mock("@calndrbrnd/features/notifications/sendNotification", () => ({
   sendNotification: vi.fn(),
 }));
 
-vi.mock("@calcom/features/conferencing/lib/videoClient", () => ({
+vi.mock("@calndrbrnd/features/conferencing/lib/videoClient", () => ({
   createInstantMeetingWithCalVideo: vi.fn().mockResolvedValue({
     type: "daily_video",
     id: "MOCK_INSTANT_MEETING_ID",

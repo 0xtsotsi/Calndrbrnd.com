@@ -1,4 +1,4 @@
-import classNames from "@calcom/ui/classNames";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { Avatar } from "./Avatar";
 

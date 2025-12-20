@@ -2,20 +2,20 @@ import { render } from "@testing-library/react";
 import React, { type ReactNode } from "react";
 import { vi } from "vitest";
 
-import type { MemberPermissions } from "@calcom/features/users/components/UserTable/types";
-import { MembershipRole } from "@calcom/prisma/enums";
+import type { MemberPermissions } from "@calndrbrnd/features/users/components/UserTable/types";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { EditMemberSheet } from "./EditMemberSheet";
 import type { State, User } from "./MemberList";
 
 // Mock dependencies
-vi.mock("@calcom/lib/hooks/useLocale", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useLocale", () => ({
   useLocale: () => ({
     t: (key: string) => key,
   }),
 }));
 
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calndrbrnd/trpc/react", () => ({
   trpc: {
     viewer: {
       pbac: {
@@ -71,7 +71,7 @@ vi.mock("@calcom/trpc/react", () => ({
 const mockSetEditMode = vi.fn();
 const mockSetMutationLoading = vi.fn();
 
-vi.mock("@calcom/features/users/components/UserTable/EditSheet/store", () => ({
+vi.mock("@calndrbrnd/features/users/components/UserTable/EditSheet/store", () => ({
   useEditMode: vi.fn((selector) => {
     const state = {
       editMode: false,
@@ -88,7 +88,7 @@ vi.mock("@calcom/features/users/components/UserTable/EditSheet/store", () => ({
 
 // Mock SheetFooterControls to verify props
 let capturedProps: { canChangeMemberRole?: boolean; canEditAttributesForUser?: boolean }[] = [];
-vi.mock("@calcom/features/users/components/UserTable/EditSheet/SheetFooterControls", () => ({
+vi.mock("@calndrbrnd/features/users/components/UserTable/EditSheet/SheetFooterControls", () => ({
   SheetFooterControls: (props: { canChangeMemberRole?: boolean; canEditAttributesForUser?: boolean }) => {
     capturedProps.push(props);
     return React.createElement("div", { "data-testid": "sheet-footer-controls" }, "SheetFooterControls");
@@ -96,7 +96,7 @@ vi.mock("@calcom/features/users/components/UserTable/EditSheet/SheetFooterContro
 }));
 
 // Mock other UI components
-vi.mock("@calcom/ui/components/sheet", () => ({
+vi.mock("@calndrbrnd/ui/components/sheet", () => ({
   Sheet: ({ children }: { children: ReactNode }) =>
     React.createElement("div", { "data-testid": "sheet" }, children),
   SheetContent: ({ children }: { children: ReactNode }) =>
@@ -109,22 +109,22 @@ vi.mock("@calcom/ui/components/sheet", () => ({
     React.createElement("div", { "data-testid": "sheet-footer" }, children),
 }));
 
-vi.mock("@calcom/ui/components/form", () => ({
+vi.mock("@calndrbrnd/ui/components/form", () => ({
   Form: ({ children }: { children: ReactNode }) => React.createElement("form", null, children),
   ToggleGroup: () => React.createElement("div", { "data-testid": "toggle-group" }, "ToggleGroup"),
   Select: () => React.createElement("div", { "data-testid": "select" }, "Select"),
 }));
 
-vi.mock("@calcom/ui/components/avatar", () => ({
+vi.mock("@calndrbrnd/ui/components/avatar", () => ({
   Avatar: () => React.createElement("div", { "data-testid": "avatar" }, "Avatar"),
 }));
 
-vi.mock("@calcom/ui/components/skeleton", () => ({
+vi.mock("@calndrbrnd/ui/components/skeleton", () => ({
   Skeleton: ({ children }: { children: ReactNode }) => React.createElement("div", null, children),
   Loader: () => React.createElement("div", { "data-testid": "loader" }, "Loading..."),
 }));
 
-vi.mock("@calcom/features/users/components/UserTable/EditSheet/DisplayInfo", () => ({
+vi.mock("@calndrbrnd/features/users/components/UserTable/EditSheet/DisplayInfo", () => ({
   DisplayInfo: () => <div data-testid="display-info">DisplayInfo</div>,
 }));
 

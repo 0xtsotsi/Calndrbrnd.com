@@ -1,16 +1,16 @@
 import { NextResponse } from "next/server";
 import { describe, expect, test, vi, afterEach } from "vitest";
 
-import { getDownloadLinkOfCalVideoByRecordingId } from "@calcom/features/conferencing/lib/videoClient";
-import { verifyVideoToken } from "@calcom/lib/videoTokens";
+import { getDownloadLinkOfCalVideoByRecordingId } from "@calndrbrnd/features/conferencing/lib/videoClient";
+import { verifyVideoToken } from "@calndrbrnd/lib/videoTokens";
 
 import { GET } from "../route";
 
-vi.mock("@calcom/features/conferencing/lib/videoClient", () => ({
+vi.mock("@calndrbrnd/features/conferencing/lib/videoClient", () => ({
   getDownloadLinkOfCalVideoByRecordingId: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/videoTokens", () => ({
+vi.mock("@calndrbrnd/lib/videoTokens", () => ({
   verifyVideoToken: vi.fn(),
 }));
 

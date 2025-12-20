@@ -1,12 +1,12 @@
-import { PROMPT_TEMPLATES, LegacyRetellAIService } from "@calcom/features/calAIPhone";
-import { templateTypeEnum } from "@calcom/features/calAIPhone";
-import type { TCreatePhoneCallSchema } from "@calcom/features/calAIPhone";
-import { validatePhoneNumber } from "@calcom/features/calAIPhone/retellAIService";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
+import { PROMPT_TEMPLATES, LegacyRetellAIService } from "@calndrbrnd/features/calAIPhone";
+import { templateTypeEnum } from "@calndrbrnd/features/calAIPhone";
+import type { TCreatePhoneCallSchema } from "@calndrbrnd/features/calAIPhone";
+import { validatePhoneNumber } from "@calndrbrnd/features/calAIPhone/retellAIService";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { ErrorWithCode } from "@calndrbrnd/lib/errors";
 
 export const handleCreatePhoneCall = async ({
   user,

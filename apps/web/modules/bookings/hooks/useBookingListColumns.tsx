@@ -1,11 +1,11 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { useMemo } from "react";
 
-import { ColumnFilterType } from "@calcom/features/data-table";
-import { isSeparatorRow } from "@calcom/features/data-table/lib/separator";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import BookingListItem from "@calcom/web/components/booking/BookingListItem";
+import { ColumnFilterType } from "@calndrbrnd/features/data-table";
+import { isSeparatorRow } from "@calndrbrnd/features/data-table/lib/separator";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import BookingListItem from "@calndrbrnd/web/components/booking/BookingListItem";
 
 import type { RowData, BookingListingStatus } from "../types";
 

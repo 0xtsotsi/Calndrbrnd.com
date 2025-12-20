@@ -1,7 +1,7 @@
-import { prisma } from "@calcom/prisma";
-import type { WorkflowStep } from "@calcom/prisma/client";
-import { BookingStatus, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import type { TimeUnit } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import type { WorkflowStep } from "@calndrbrnd/prisma/client";
+import { BookingStatus, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
+import type { TimeUnit } from "@calndrbrnd/prisma/enums";
 
 import { scheduleBookingReminders } from "./scheduleBookingReminders";
 

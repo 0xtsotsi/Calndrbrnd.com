@@ -1,9 +1,9 @@
 import { vi, describe, it, expect, beforeEach } from "vitest";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { isOrganisationAdmin, isOrganisationOwner } from "@calcom/features/pbac/utils/isOrganisationAdmin";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { isOrganisationAdmin, isOrganisationOwner } from "@calndrbrnd/features/pbac/utils/isOrganisationAdmin";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { RoleManagementError, RoleManagementErrorCode } from "../../domain/errors/role-management.error";
 import { DEFAULT_ROLE_IDS } from "../../lib/constants";
@@ -12,10 +12,10 @@ import { RoleManagementFactory } from "../role-management.factory";
 import { RoleService } from "../role.service";
 
 // Mock dependencies
-vi.mock("@calcom/features/flags/features.repository");
+vi.mock("@calndrbrnd/features/flags/features.repository");
 vi.mock("../role.service");
 vi.mock("../permission-check.service");
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {
     membership: {
       update: vi.fn(),
@@ -24,7 +24,7 @@ vi.mock("@calcom/prisma", () => ({
     },
   },
 }));
-vi.mock("@calcom/features/pbac/utils/isOrganisationAdmin", () => ({
+vi.mock("@calndrbrnd/features/pbac/utils/isOrganisationAdmin", () => ({
   isOrganisationAdmin: vi.fn(),
   isOrganisationOwner: vi.fn(),
 }));

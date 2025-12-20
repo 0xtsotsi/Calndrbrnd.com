@@ -27,7 +27,7 @@ vi.mock("next/server", () => ({
   },
 }));
 
-vi.mock("@calcom/lib/crypto", () => ({
+vi.mock("@calndrbrnd/lib/crypto", () => ({
   symmetricDecrypt: vi.fn().mockReturnValue(
     JSON.stringify({
       bookingUid: "test-booking-uid",
@@ -36,7 +36,7 @@ vi.mock("@calcom/lib/crypto", () => ({
   ),
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {
     booking: {
       findUniqueOrThrow: vi.fn().mockResolvedValue({
@@ -54,15 +54,15 @@ vi.mock("@calcom/prisma", () => ({
   },
 }));
 
-vi.mock("@calcom/trpc/server/createContext", () => ({
+vi.mock("@calndrbrnd/trpc/server/createContext", () => ({
   createContext: vi.fn().mockResolvedValue({}),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/bookings/_router", () => ({
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/bookings/_router", () => ({
   bookingsRouter: {},
 }));
 
-vi.mock("@calcom/trpc/server/trpc", () => ({
+vi.mock("@calndrbrnd/trpc/server/trpc", () => ({
   createCallerFactory: vi.fn().mockReturnValue(() => ({
     confirm: vi.fn().mockResolvedValue({}),
   })),
@@ -164,7 +164,7 @@ describe("link route", () => {
       const { TRPCError } = await import("@trpc/server");
 
       // Mock createCallerFactory to throw a TRPCError
-      const { createCallerFactory } = await import("@calcom/trpc/server/trpc");
+      const { createCallerFactory } = await import("@calndrbrnd/trpc/server/trpc");
       vi.mocked(createCallerFactory).mockReturnValue(() => ({
         confirm: vi.fn().mockRejectedValue(new TRPCError({ code: "BAD_REQUEST", message: "Custom error" })),
       }));
@@ -187,7 +187,7 @@ describe("link route", () => {
       const { TRPCError } = await import("@trpc/server");
 
       // Mock createCallerFactory to throw a TRPCError
-      const { createCallerFactory } = await import("@calcom/trpc/server/trpc");
+      const { createCallerFactory } = await import("@calndrbrnd/trpc/server/trpc");
       vi.mocked(createCallerFactory).mockReturnValue(() => ({
         confirm: vi.fn().mockRejectedValue(new TRPCError({ code: "INTERNAL_SERVER_ERROR" })),
       }));

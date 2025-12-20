@@ -30,7 +30,7 @@ import {
 } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 import {
   CreateScheduleInput_2024_06_11,
   CreateScheduleOutput_2024_06_11,
@@ -39,8 +39,8 @@ import {
   GetSchedulesOutput_2024_06_11,
   UpdateScheduleInput_2024_06_11,
   UpdateScheduleOutput_2024_06_11,
-} from "@calcom/platform-types";
-import { SkipTakePagination } from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
+import { SkipTakePagination } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/organizations/:orgId",

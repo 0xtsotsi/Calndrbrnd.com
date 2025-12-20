@@ -4,8 +4,8 @@ import { PlatformBookingsService } from "@/ee/bookings/shared/platform-bookings.
 import { ApiAuthGuardUser } from "@/modules/auth/strategies/api-auth/api-auth.strategy";
 import { Injectable, Logger, HttpException, NotFoundException } from "@nestjs/common";
 
-import { addGuestsHandler } from "@calcom/platform-libraries/bookings";
-import type { AddGuestsInput_2024_08_13 } from "@calcom/platform-types";
+import { addGuestsHandler } from "@calndrbrnd/platform-libraries/bookings";
+import type { AddGuestsInput_2024_08_13 } from "@calndrbrnd/platform-types";
 
 @Injectable()
 export class BookingGuestsService_2024_08_13 {

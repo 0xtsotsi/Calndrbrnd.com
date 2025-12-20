@@ -1,15 +1,15 @@
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
-import { CalendarEventBuilder } from "@calcom/features/CalendarEventBuilder";
-import type { BookingEmailSmsHandler } from "@calcom/features/bookings/lib/BookingEmailSmsHandler";
-import { getOriginalRescheduledBooking } from "@calcom/features/bookings/lib/handleNewBooking/originalRescheduledBookingUtils";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { getAllWorkflowsFromEventType } from "@calcom/features/ee/workflows/lib/getAllWorkflowsFromEventType";
-import type { EventNameObjectType } from "@calcom/features/eventtypes/lib/eventNaming";
-import type { ITaskerDependencies } from "@calcom/lib/tasker/types";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
-import type { JsonObject } from "@calcom/types/Json";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@calndrbrnd/app-store/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import { CalendarEventBuilder } from "@calndrbrnd/features/CalendarEventBuilder";
+import type { BookingEmailSmsHandler } from "@calndrbrnd/features/bookings/lib/BookingEmailSmsHandler";
+import { getOriginalRescheduledBooking } from "@calndrbrnd/features/bookings/lib/handleNewBooking/originalRescheduledBookingUtils";
+import type { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { getAllWorkflowsFromEventType } from "@calndrbrnd/features/ee/workflows/lib/getAllWorkflowsFromEventType";
+import type { EventNameObjectType } from "@calndrbrnd/features/eventtypes/lib/eventNaming";
+import type { ITaskerDependencies } from "@calndrbrnd/lib/tasker/types";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
+import type { JsonObject } from "@calndrbrnd/types/Json";
 
 import { BookingEmailAndSmsAsyncTasksPayload, BookingTasks } from "./types";
 

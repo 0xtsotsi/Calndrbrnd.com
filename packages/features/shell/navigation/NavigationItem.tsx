@@ -3,15 +3,15 @@ import { usePathname } from "next/navigation";
 import posthog from "posthog-js";
 import React, { Fragment, useState, useEffect } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
-import { sessionStorage } from "@calcom/lib/webstorage";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Icon } from "@calcom/ui/components/icon";
-import type { IconName } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import useMediaQuery from "@calndrbrnd/lib/hooks/useMediaQuery";
+import { sessionStorage } from "@calndrbrnd/lib/webstorage";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import type { IconName } from "@calndrbrnd/ui/components/icon";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { useShouldDisplayNavigationItem } from "./useShouldDisplayNavigationItem";
 

@@ -1,4 +1,4 @@
-import authedProcedure from "@calcom/trpc/server/procedures/authedProcedure";
+import authedProcedure from "@calndrbrnd/trpc/server/procedures/authedProcedure";
 
 import { ZFormsInputSchema } from "../forms.schema";
 

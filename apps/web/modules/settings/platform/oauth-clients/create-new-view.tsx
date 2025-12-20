@@ -2,12 +2,12 @@
 
 import { useRouter } from "next/navigation";
 
-import Shell from "@calcom/features/shell/Shell";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { PERMISSION_MAP } from "@calcom/platform-constants";
-import { PERMISSIONS_GROUPED_MAP } from "@calcom/platform-constants/permissions";
-import { showToast } from "@calcom/ui/components/toast";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { PERMISSION_MAP } from "@calndrbrnd/platform-constants";
+import { PERMISSIONS_GROUPED_MAP } from "@calndrbrnd/platform-constants/permissions";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useCreateOAuthClient } from "@lib/hooks/settings/platform/oauth-clients/useCreateOAuthClient";
 

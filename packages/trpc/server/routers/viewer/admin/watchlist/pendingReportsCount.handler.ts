@@ -1,4 +1,4 @@
-import { getAdminWatchlistQueryService } from "@calcom/features/di/watchlist/containers/watchlist";
+import { getAdminWatchlistQueryService } from "@calndrbrnd/features/di/watchlist/containers/watchlist";
 
 export const pendingReportsCountHandler = async () => {
   const service = getAdminWatchlistQueryService();

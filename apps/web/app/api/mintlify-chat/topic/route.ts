@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-import { validateMintlifyConfig } from "@calcom/lib/server/mintlifyChatValidation";
+import { validateMintlifyConfig } from "@calndrbrnd/lib/server/mintlifyChatValidation";
 
 /**
  * POST /api/mintlify-chat/topic

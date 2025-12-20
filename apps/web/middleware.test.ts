@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import type { Mock } from "vitest";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
 
 import { checkPostMethod } from "./middleware";
 // We'll test the wrapped middleware as it would be used in production

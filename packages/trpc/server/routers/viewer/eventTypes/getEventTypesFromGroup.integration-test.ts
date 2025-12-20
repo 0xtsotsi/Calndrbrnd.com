@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 
-import prisma from "@calcom/prisma";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import prisma from "@calndrbrnd/prisma";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { getEventTypesFromGroup } from "./getEventTypesFromGroup.handler";
 

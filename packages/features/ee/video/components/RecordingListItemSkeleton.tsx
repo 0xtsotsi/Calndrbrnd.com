@@ -1,4 +1,4 @@
-import { SkeletonText, SkeletonButton } from "@calcom/ui/components/skeleton";
+import { SkeletonText, SkeletonButton } from "@calndrbrnd/ui/components/skeleton";
 
 export default function RecordingListItemSkeleton() {
   return (

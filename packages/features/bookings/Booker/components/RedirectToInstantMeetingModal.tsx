@@ -1,11 +1,11 @@
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent } from "@calcom/ui/components/dialog";
+import dayjs from "@calndrbrnd/dayjs";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent } from "@calndrbrnd/ui/components/dialog";
 
 const handleBeforeUnload = (event: BeforeUnloadEvent) => {
   const message = "/o";

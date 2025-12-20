@@ -1,8 +1,8 @@
-import { BookingAuditTaskerProducerService } from "@calcom/features/booking-audit/lib/service/BookingAuditTaskerProducerService";
-import { BOOKING_AUDIT_DI_TOKENS } from "@calcom/features/booking-audit/di/tokens";
-import { moduleLoader as taskerModuleLoader } from "@calcom/features/di/shared/services/tasker.service";
-import { moduleLoader as loggerModuleLoader } from "@calcom/features/di/shared/services/logger.service";
-import { moduleLoader as auditActorRepositoryModuleLoader } from "@calcom/features/booking-audit/di/AuditActorRepository.module";
+import { BookingAuditTaskerProducerService } from "@calndrbrnd/features/booking-audit/lib/service/BookingAuditTaskerProducerService";
+import { BOOKING_AUDIT_DI_TOKENS } from "@calndrbrnd/features/booking-audit/di/tokens";
+import { moduleLoader as taskerModuleLoader } from "@calndrbrnd/features/di/shared/services/tasker.service";
+import { moduleLoader as loggerModuleLoader } from "@calndrbrnd/features/di/shared/services/logger.service";
+import { moduleLoader as auditActorRepositoryModuleLoader } from "@calndrbrnd/features/booking-audit/di/AuditActorRepository.module";
 
 import { createModule, bindModuleToClassOnToken } from "../../di/di";
 

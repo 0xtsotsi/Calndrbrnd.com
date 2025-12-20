@@ -1,8 +1,8 @@
 import React from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
+import dayjs from "@calndrbrnd/dayjs";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { useCalendarStore } from "../../state/store";
 import type { BorderColor } from "../../types/common";

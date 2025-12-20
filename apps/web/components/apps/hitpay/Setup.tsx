@@ -7,17 +7,17 @@ import { useForm } from "react-hook-form";
 import { Toaster } from "sonner";
 import { z } from "zod";
 
-import AppNotInstalledMessage from "@calcom/app-store/_components/AppNotInstalledMessage";
-import KeyField from "@calcom/app-store/hitpay/components/KeyInput";
-import { hitpayCredentialKeysSchema } from "@calcom/app-store/hitpay/lib/hitpayCredentialKeysSchema";
-import type { IHitPaySetupProps } from "@calcom/app-store/hitpay/pages/setup/_getServerSideProps";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Button } from "@calcom/ui/components/button";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import AppNotInstalledMessage from "@calndrbrnd/app-store/_components/AppNotInstalledMessage";
+import KeyField from "@calndrbrnd/app-store/hitpay/components/KeyInput";
+import { hitpayCredentialKeysSchema } from "@calndrbrnd/app-store/hitpay/lib/hitpayCredentialKeysSchema";
+import type { IHitPaySetupProps } from "@calndrbrnd/app-store/hitpay/pages/setup/_getServerSideProps";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 export default function HitPaySetup(props: IHitPaySetupProps) {
   const params = useCompatSearchParams();

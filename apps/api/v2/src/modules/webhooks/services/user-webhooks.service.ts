@@ -2,7 +2,7 @@ import { PipedInputWebhookType } from "@/modules/webhooks/pipes/WebhookInputPipe
 import { WebhooksRepository } from "@/modules/webhooks/webhooks.repository";
 import { BadRequestException, ConflictException, Injectable } from "@nestjs/common";
 
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 @Injectable()
 export class UserWebhooksService {

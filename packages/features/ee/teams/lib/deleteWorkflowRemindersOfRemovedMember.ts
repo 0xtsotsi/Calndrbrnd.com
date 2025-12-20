@@ -1,5 +1,5 @@
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import prisma from "@calcom/prisma";
+import { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import prisma from "@calndrbrnd/prisma";
 
 // cancel/delete all workflowReminders of the removed member that come from that team (org teams only)
 export async function deleteWorkfowRemindersOfRemovedMember(

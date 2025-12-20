@@ -1,5 +1,5 @@
-import { PrismaAttributeRepository } from "@calcom/lib/server/repository/PrismaAttributeRepository";
-import prisma from "@calcom/prisma";
+import { PrismaAttributeRepository } from "@calndrbrnd/lib/server/repository/PrismaAttributeRepository";
+import prisma from "@calndrbrnd/prisma";
 
 import { TRPCError } from "@trpc/server";
 

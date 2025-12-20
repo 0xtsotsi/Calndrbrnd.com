@@ -5,8 +5,8 @@ import type {
   GetAvailableSlotsInput_2024_04_15,
   ApiResponse,
   ApiSuccessResponse,
-} from "@calcom/platform-types";
-import type { GetAvailableSlotsResponse } from "@calcom/trpc/server/routers/viewer/slots/util";
+} from "@calndrbrnd/platform-types";
+import type { GetAvailableSlotsResponse } from "@calndrbrnd/trpc/server/routers/viewer/slots/util";
 
 export const QUERY_KEY = "get-available-slots";
 

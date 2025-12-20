@@ -2,7 +2,7 @@ import type { Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 import { uuid } from "short-uuid";
 
-import { IS_TEAM_BILLING_ENABLED } from "@calcom/lib/constants";
+import { IS_TEAM_BILLING_ENABLED } from "@calndrbrnd/lib/constants";
 
 import { test } from "../lib/fixtures";
 

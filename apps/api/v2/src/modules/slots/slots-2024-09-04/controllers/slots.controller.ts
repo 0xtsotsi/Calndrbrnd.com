@@ -31,15 +31,15 @@ import {
 } from "@nestjs/swagger";
 import { plainToClass } from "class-transformer";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 import {
   GetSlotsInput_2024_09_04,
   GetSlotsInputPipe,
   ReserveSlotInput_2024_09_04,
   ReserveSlotOutput_2024_09_04 as ReserveSlotOutputType_2024_09_04,
   GetReservedSlotOutput_2024_09_04 as GetReservedSlotOutputType_2024_09_04,
-} from "@calcom/platform-types";
-import { ApiResponse } from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
+import { ApiResponse } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/slots",

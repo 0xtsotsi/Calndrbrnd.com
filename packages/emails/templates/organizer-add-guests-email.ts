@@ -1,5 +1,5 @@
-import { APP_NAME } from "@calcom/lib/constants";
-import { getReplyToHeader } from "@calcom/lib/getReplyToHeader";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { getReplyToHeader } from "@calndrbrnd/lib/getReplyToHeader";
 
 import generateIcsFile, { GenerateIcsRole } from "../lib/generateIcsFile";
 import renderEmail from "../src/renderEmail";

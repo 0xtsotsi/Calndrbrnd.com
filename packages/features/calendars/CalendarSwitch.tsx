@@ -3,12 +3,12 @@
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 export type ICalendarSwitchProps = {
   title: string;

@@ -10,18 +10,18 @@ import {
   getMockBookingAttendee,
   getDate,
   mockCalendar,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { expectBookingRequestRescheduledEmails } from "@calcom/web/test/utils/bookingScenario/expects";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { expectBookingRequestRescheduledEmails } from "@calndrbrnd/web/test/utils/bookingScenario/expects";
 
 import type { Request, Response } from "express";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { describe, expect } from "vitest";
 
-import { SchedulingType, MembershipRole } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { TRequestRescheduleInputSchema } from "@calcom/trpc/server/routers/viewer/bookings/requestReschedule.schema";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { SchedulingType, MembershipRole } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import type { TRequestRescheduleInputSchema } from "@calndrbrnd/trpc/server/routers/viewer/bookings/requestReschedule.schema";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
+import { test } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 export type CustomNextApiRequest = NextApiRequest & Request;
 
@@ -36,7 +36,7 @@ describe("Handler: requestReschedule", () => {
       emails,
     }) => {
       const { requestRescheduleHandler } = await import(
-        "@calcom/trpc/server/routers/viewer/bookings/requestReschedule.handler"
+        "@calndrbrnd/trpc/server/routers/viewer/bookings/requestReschedule.handler"
       );
       const booker = getBooker({
         email: "booker@example.com",
@@ -142,7 +142,7 @@ describe("Handler: requestReschedule", () => {
       emails,
     }) => {
       const { requestRescheduleHandler } = await import(
-        "@calcom/trpc/server/routers/viewer/bookings/requestReschedule.handler"
+        "@calndrbrnd/trpc/server/routers/viewer/bookings/requestReschedule.handler"
       );
       const booker = getBooker({
         email: "booker@example.com",
@@ -259,7 +259,7 @@ describe("Handler: requestReschedule", () => {
           1. Team admin (non-organizer) can request reschedule with proper permissions
           2. Organizer's credentials are used to delete calendar events`, async ({ emails }) => {
       const { requestRescheduleHandler } = await import(
-        "@calcom/trpc/server/routers/viewer/bookings/requestReschedule.handler"
+        "@calndrbrnd/trpc/server/routers/viewer/bookings/requestReschedule.handler"
       );
 
       const booker = getBooker({
@@ -422,7 +422,7 @@ describe("Handler: requestReschedule", () => {
 
     test(`should reject request-reschedule from team member without proper permissions`, async () => {
       const { requestRescheduleHandler } = await import(
-        "@calcom/trpc/server/routers/viewer/bookings/requestReschedule.handler"
+        "@calndrbrnd/trpc/server/routers/viewer/bookings/requestReschedule.handler"
       );
 
       const booker = getBooker({

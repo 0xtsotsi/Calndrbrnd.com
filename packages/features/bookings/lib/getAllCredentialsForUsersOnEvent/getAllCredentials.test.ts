@@ -3,13 +3,13 @@ import {
   addTeamsToDb,
   addEventTypesToDb,
   addUsersToDb,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
 
 import { describe, test, expect, vi } from "vitest";
 
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
 
-vi.mock("@calcom/features/users/repositories/UserRepository", () => {
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository", () => {
   return {
     UserRepository: vi.fn().mockImplementation(() => ({
       enrichUserWithItsProfile: vi.fn(),

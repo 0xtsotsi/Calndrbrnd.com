@@ -1,5 +1,5 @@
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
+import SectionBottomActions from "@calndrbrnd/features/settings/SectionBottomActions";
+import { SkeletonButton, SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 export const AppearanceSkeletonLoader = () => {
   return (

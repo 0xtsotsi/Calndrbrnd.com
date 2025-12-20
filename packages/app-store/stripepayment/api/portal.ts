@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { Session } from "next-auth";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getSafeRedirectUrl } from "@calndrbrnd/lib/getSafeRedirectUrl";
 
 import { BillingPortalServiceFactory } from "../lib/BillingPortalService";
 

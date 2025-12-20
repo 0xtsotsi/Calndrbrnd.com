@@ -1,7 +1,7 @@
-import { sendEmailVerification } from "@calcom/features/auth/lib/verifyEmail";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
+import { sendEmailVerification } from "@calndrbrnd/features/auth/lib/verifyEmail";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import logger from "@calndrbrnd/lib/logger";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { TRPCError } from "@trpc/server";
 

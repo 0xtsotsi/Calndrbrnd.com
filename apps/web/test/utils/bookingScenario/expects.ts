@@ -8,22 +8,22 @@ import ical from "node-ical";
 import { expect, vi } from "vitest";
 import "vitest-fetch-mock";
 
-import dayjs from "@calcom/dayjs";
-import type { Tracking } from "@calcom/features/bookings/lib/handleNewBooking/types";
-import { WEBSITE_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import dayjs from "@calndrbrnd/dayjs";
+import type { Tracking } from "@calndrbrnd/features/bookings/lib/handleNewBooking/types";
+import { WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
 import type {
   WebhookTriggerEvents,
   Booking,
   BookingReference,
   DestinationCalendar,
-} from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { AppsStatus } from "@calcom/types/Calendar";
-import type { CalendarEvent } from "@calcom/types/Calendar";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
-import type { Fixtures } from "@calcom/web/test/fixtures/fixtures";
+} from "@calndrbrnd/prisma/client";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import type { AppsStatus } from "@calndrbrnd/types/Calendar";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
+import type { CredentialForCalendarService } from "@calndrbrnd/types/Credential";
+import type { Fixtures } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 import { DEFAULT_TIMEZONE_BOOKER } from "./getMockRequestDataForBooking";
 

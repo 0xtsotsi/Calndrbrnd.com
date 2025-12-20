@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { expect, vi, afterEach, test } from "vitest";
 
-import CloseCom from "@calcom/lib/CloseCom";
+import CloseCom from "@calndrbrnd/lib/CloseCom";
 import {
   getCloseComContactIds,
   getCustomActivityTypeInstanceData,
   getCloseComCustomActivityTypeFieldsIds,
   getCloseComLeadId,
-} from "@calcom/lib/CloseComeUtils";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+} from "@calndrbrnd/lib/CloseComeUtils";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
-vi.mock("@calcom/lib/CloseCom", () => ({
+vi.mock("@calndrbrnd/lib/CloseCom", () => ({
   default: class {
     constructor() {
       /* Mock */

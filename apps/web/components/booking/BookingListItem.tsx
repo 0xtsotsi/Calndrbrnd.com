@@ -2,26 +2,26 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { Controller, useFieldArray, useForm } from "react-hook-form";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import type { getEventLocationValue } from "@calcom/app-store/locations";
-import { getSuccessPageLocationMessage, guessEventLocationType } from "@calcom/app-store/locations";
-import dayjs from "@calcom/dayjs";
+import { getPaymentAppData } from "@calndrbrnd/app-store/_utils/payments/getPaymentAppData";
+import type { getEventLocationValue } from "@calndrbrnd/app-store/locations";
+import { getSuccessPageLocationMessage, guessEventLocationType } from "@calndrbrnd/app-store/locations";
+import dayjs from "@calndrbrnd/dayjs";
 // TODO: Use browser locale, implement Intl in Dayjs maybe?
-import "@calcom/dayjs/locales";
-import { formatTime } from "@calcom/lib/dayjs";
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useGetTheme } from "@calcom/lib/hooks/useTheme";
-import isSmsCalEmail from "@calcom/lib/isSmsCalEmail";
-import { getEveryFreqFor } from "@calcom/lib/recurringStrings";
-import type { AssignmentReason } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import type { Ensure } from "@calcom/types/utils";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import "@calndrbrnd/dayjs/locales";
+import { formatTime } from "@calndrbrnd/lib/dayjs";
+import { useCopy } from "@calndrbrnd/lib/hooks/useCopy";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useGetTheme } from "@calndrbrnd/lib/hooks/useTheme";
+import isSmsCalEmail from "@calndrbrnd/lib/isSmsCalEmail";
+import { getEveryFreqFor } from "@calndrbrnd/lib/recurringStrings";
+import type { AssignmentReason } from "@calndrbrnd/prisma/client";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { bookingMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { Ensure } from "@calndrbrnd/types/utils";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
@@ -32,11 +32,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
   DropdownMenuPortal,
-} from "@calcom/ui/components/dropdown";
-import { Icon } from "@calcom/ui/components/icon";
-import { MeetingTimeInTimezones } from "@calcom/ui/components/popover";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/ui/components/dropdown";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { MeetingTimeInTimezones } from "@calndrbrnd/ui/components/popover";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import assignmentReasonBadgeTitleMap from "@lib/booking/assignmentReasonBadgeTitleMap";
 

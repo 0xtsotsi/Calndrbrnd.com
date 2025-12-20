@@ -2,22 +2,22 @@
 
 import { useReducer } from "react";
 
-import getAppCategoryTitle from "@calcom/app-store/_utils/getAppCategoryTitle";
-import { AppList, type HandleDisconnect } from "@calcom/features/apps/components/AppList";
-import type { UpdateUsersDefaultConferencingAppParams } from "@calcom/features/apps/components/AppSetDefaultLinkDialog";
-import DisconnectIntegrationModal from "@calcom/features/apps/components/DisconnectIntegrationModal";
-import type { RemoveAppParams } from "@calcom/features/apps/components/DisconnectIntegrationModal";
-import { SkeletonLoader } from "@calcom/features/apps/components/SkeletonLoader";
-import type { BulkUpdatParams } from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { AppCategories } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import type { Icon } from "@calcom/ui/components/icon";
-import { ShellSubHeading } from "@calcom/ui/components/layout";
-import { showToast } from "@calcom/ui/components/toast";
+import getAppCategoryTitle from "@calndrbrnd/app-store/_utils/getAppCategoryTitle";
+import { AppList, type HandleDisconnect } from "@calndrbrnd/features/apps/components/AppList";
+import type { UpdateUsersDefaultConferencingAppParams } from "@calndrbrnd/features/apps/components/AppSetDefaultLinkDialog";
+import DisconnectIntegrationModal from "@calndrbrnd/features/apps/components/DisconnectIntegrationModal";
+import type { RemoveAppParams } from "@calndrbrnd/features/apps/components/DisconnectIntegrationModal";
+import { SkeletonLoader } from "@calndrbrnd/features/apps/components/SkeletonLoader";
+import type { BulkUpdatParams } from "@calndrbrnd/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { AppCategories } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import type { Icon } from "@calndrbrnd/ui/components/icon";
+import { ShellSubHeading } from "@calndrbrnd/ui/components/layout";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { QueryCell } from "@lib/QueryCell";
 

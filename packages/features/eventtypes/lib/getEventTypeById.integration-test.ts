@@ -1,8 +1,8 @@
-import { prisma } from "@calcom/prisma"
-import type { PrismaClient } from "@calcom/prisma";
+import { prisma } from "@calndrbrnd/prisma"
+import type { PrismaClient } from "@calndrbrnd/prisma";
 import i18nMock from "../../../../tests/libs/__mocks__/libServerI18n";
 
-// import { mockNoTranslations } from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+// import { mockNoTranslations } from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
 
 import { describe, test, expect, beforeEach, afterEach, vi } from "vitest";
 
@@ -18,7 +18,7 @@ export function mockNoTranslations() {
   });
 }
 
-vi.mock("@calcom/lib/server/i18n", () => ({
+vi.mock("@calndrbrnd/lib/server/i18n", () => ({
   getTranslation: (key: string) => () => key,
 }));
 

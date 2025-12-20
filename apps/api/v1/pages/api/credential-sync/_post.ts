@@ -1,14 +1,14 @@
 import type { NextApiRequest } from "next";
 
-import { getCalendar } from "@calcom/app-store/_utils/getCalendar";
-import { OAuth2UniversalSchema } from "@calcom/app-store/_utils/oauth/universalSchema";
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
+import { getCalendar } from "@calndrbrnd/app-store/_utils/getCalendar";
+import { OAuth2UniversalSchema } from "@calndrbrnd/app-store/_utils/oauth/universalSchema";
+import { appStoreMetadata } from "@calndrbrnd/app-store/appStoreMetaData";
+import { symmetricDecrypt } from "@calndrbrnd/lib/crypto";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
 
 import { schemaCredentialPostBody, schemaCredentialPostParams } from "~/lib/validations/credential-sync";
 

@@ -14,7 +14,7 @@ import handler from "../../../pages/api/users/_post";
 type CustomNextApiRequest = NextApiRequest & Request;
 type CustomNextApiResponse = NextApiResponse & Response;
 
-vi.mock("@calcom/lib/server/i18n", () => {
+vi.mock("@calndrbrnd/lib/server/i18n", () => {
   return {
     getTranslation: (key: string) => {
       return () => key;
@@ -22,25 +22,25 @@ vi.mock("@calcom/lib/server/i18n", () => {
   };
 });
 
-vi.mock("@calcom/features/profile/lib/checkUsername", () => ({
+vi.mock("@calndrbrnd/features/profile/lib/checkUsername", () => ({
   checkUsername: vi.fn().mockResolvedValue({
     available: true,
     premium: false,
   }),
 }));
 
-vi.mock("@calcom/features/watchlist/operations/check-if-email-in-watchlist.controller", () => ({
+vi.mock("@calndrbrnd/features/watchlist/operations/check-if-email-in-watchlist.controller", () => ({
   checkIfEmailIsBlockedInWatchlistController: vi.fn().mockResolvedValue(false),
 }));
 
 const mockCreate = vi.fn();
-vi.mock("@calcom/features/users/repositories/UserRepository", () => ({
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository", () => ({
   UserRepository: vi.fn().mockImplementation(() => ({
     create: mockCreate,
   })),
 }));
 
-vi.mock("@calcom/lib/auth/hashPassword", () => ({
+vi.mock("@calndrbrnd/lib/auth/hashPassword", () => ({
   hashPassword: vi.fn().mockResolvedValue("hashed-password"),
 }));
 

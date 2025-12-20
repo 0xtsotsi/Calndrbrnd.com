@@ -4,8 +4,8 @@ import type { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 import { vi } from "vitest";
 
-import { RouteActionType } from "@calcom/app-store/routing-forms/zod";
-import { BookingStatus, SchedulingType } from "@calcom/prisma/enums";
+import { RouteActionType } from "@calndrbrnd/app-store/routing-forms/zod";
+import { BookingStatus, SchedulingType } from "@calndrbrnd/prisma/enums";
 
 import { RerouteDialog } from "../RerouteDialog";
 
@@ -23,7 +23,7 @@ vi.mock("next/navigation", async (importOriginal) => {
   };
 });
 
-vi.mock("@calcom/app-store/routing-forms/lib/processRoute", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/processRoute", () => ({
   findMatchingRoute: vi.fn(({ form, response }) => {
     return form.routes.find((route: any) => route.__testMatching);
   }),
@@ -48,7 +48,7 @@ const mockSession = {
   },
 } as Session;
 
-vi.mock("@calcom/app-store/routing-forms/components/FormInputFields", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/components/FormInputFields", () => ({
   default: vi.fn(({ response, form, setResponse, disabledFields }) => {
     return (
       <div data-testid="mock-form-input-fields">
@@ -81,11 +81,11 @@ vi.mock("@calcom/app-store/routing-forms/components/FormInputFields", () => ({
   FormInputFieldsSkeleton: vi.fn(() => <div data-testid="mock-form-input-fields-skeleton" />),
 }));
 
-vi.mock("@calcom/lib/hooks/useLocale", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useLocale", () => ({
   useLocale: vi.fn(() => ({ t: (key: string) => key })),
 }));
 
-vi.mock("@calcom/web/lib/hooks/useRouterQuery", () => ({
+vi.mock("@calndrbrnd/web/lib/hooks/useRouterQuery", () => ({
   default: vi.fn(() => {
     return {
       setQuery: vi.fn(),
@@ -93,11 +93,11 @@ vi.mock("@calcom/web/lib/hooks/useRouterQuery", () => ({
   }),
 }));
 
-vi.mock("@calcom/ui/components/tooltip", () => ({
+vi.mock("@calndrbrnd/ui/components/tooltip", () => ({
   Tooltip: vi.fn(({ children }) => <div data-testid="mock-tooltip">{children}</div>),
 }));
 
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calndrbrnd/trpc/react", () => ({
   trpc: {
     viewer: {
       appRoutingForms: {

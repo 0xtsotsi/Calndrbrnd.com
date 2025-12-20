@@ -1,7 +1,7 @@
 import { cloneDeep } from "lodash";
 
-import type { ExtendedCalendarEvent } from "@calcom/ee/workflows/lib/reminders/reminderScheduler";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import type { ExtendedCalendarEvent } from "@calndrbrnd/ee/workflows/lib/reminders/reminderScheduler";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 // format CalEvent to remove platformClientId from email addresses
 const formatClientIdFromEmails = (calEvent: CalendarEvent | ExtendedCalendarEvent, clientId: string) => {

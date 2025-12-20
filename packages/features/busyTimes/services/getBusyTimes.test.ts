@@ -1,11 +1,11 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { describe, expect, it, vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { getBusyTimesService } from "@calcom/features/di/containers/BusyTimes";
+import dayjs from "@calndrbrnd/dayjs";
+import { getBusyTimesService } from "@calndrbrnd/features/di/containers/BusyTimes";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 

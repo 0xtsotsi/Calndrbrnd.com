@@ -43,10 +43,10 @@ import {
   SCHEDULE_READ,
   SCHEDULE_WRITE,
   X_CAL_SECRET_KEY,
-} from "@calcom/platform-constants";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiSuccessResponse, CreateOAuthClientInput } from "@calcom/platform-types";
-import type { PlatformBilling, User, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiSuccessResponse, CreateOAuthClientInput } from "@calndrbrnd/platform-types";
+import type { PlatformBilling, User, Team } from "@calndrbrnd/prisma/client";
 
 describe("Organizations Organizations Endpoints", () => {
   let app: INestApplication;

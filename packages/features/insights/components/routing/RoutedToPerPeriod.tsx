@@ -5,17 +5,17 @@ import { useQueryState } from "nuqs";
 import { type ReactNode, useMemo, useRef, useState } from "react";
 import posthog from "posthog-js";
 
-import { downloadAsCsv } from "@calcom/lib/csvUtils";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ToggleGroup, Input } from "@calcom/ui/components/form";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@calcom/ui/components/hover-card";
+import { downloadAsCsv } from "@calndrbrnd/lib/csvUtils";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ToggleGroup, Input } from "@calndrbrnd/ui/components/form";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@calndrbrnd/ui/components/hover-card";
 import {
   TableNew,
   TableBody,
@@ -23,8 +23,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@calcom/ui/components/table";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/ui/components/table";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { useInsightsRoutingParameters } from "../../hooks/useInsightsRoutingParameters";
 import { ChartCard } from "../ChartCard";

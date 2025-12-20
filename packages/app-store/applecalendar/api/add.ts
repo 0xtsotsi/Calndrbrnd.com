@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { symmetricDecrypt, symmetricEncrypt } from "@calcom/lib/crypto";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
+import { symmetricDecrypt, symmetricEncrypt } from "@calndrbrnd/lib/crypto";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
 
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";
 import { CalendarService } from "../lib";

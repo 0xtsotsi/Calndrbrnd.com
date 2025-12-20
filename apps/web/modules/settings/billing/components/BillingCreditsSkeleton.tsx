@@ -1,4 +1,4 @@
-import { SkeletonText, SkeletonContainer, SkeletonButton } from "@calcom/ui/components/skeleton";
+import { SkeletonText, SkeletonContainer, SkeletonButton } from "@calndrbrnd/ui/components/skeleton";
 
 export function BillingCreditsSkeleton() {
   return (

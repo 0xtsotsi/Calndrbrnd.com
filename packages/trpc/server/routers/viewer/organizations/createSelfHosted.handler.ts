@@ -1,6 +1,6 @@
-import { SelfHostedOrganizationOnboardingService } from "@calcom/features/ee/organizations/lib/service/onboarding/SelfHostedOnboardingService";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
+import { SelfHostedOrganizationOnboardingService } from "@calndrbrnd/features/ee/organizations/lib/service/onboarding/SelfHostedOnboardingService";
+import { OrganizationOnboardingRepository } from "@calndrbrnd/features/organizations/repositories/OrganizationOnboardingRepository";
+import { IS_SELF_HOSTED } from "@calndrbrnd/lib/constants";
 
 import { TRPCError } from "@trpc/server";
 

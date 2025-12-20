@@ -1,12 +1,12 @@
 "use client";
 
-import dayjs from "@calcom/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { detectBrowserTimeFormat } from "@calcom/lib/timeFormat";
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
-import { Icon } from "@calcom/ui/components/icon";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import dayjs from "@calndrbrnd/dayjs";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { detectBrowserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
 
 import type { getServerSideProps } from "@lib/video/meeting-not-started/[uid]/getServerSideProps";
 

@@ -1,6 +1,6 @@
-import { type Container, createModule } from "@calcom/features/di/di";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { prisma, readonlyPrisma } from "@calcom/prisma";
+import { type Container, createModule } from "@calndrbrnd/features/di/di";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { prisma, readonlyPrisma } from "@calndrbrnd/prisma";
 
 import { usageTrackingExtention } from "../../prisma-extensions/usage-tracking";
 

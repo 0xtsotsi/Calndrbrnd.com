@@ -1,12 +1,12 @@
 import type { Session } from "next-auth";
 
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import prisma from "@calcom/prisma";
-import { IdentityProvider, MembershipRole } from "@calcom/prisma/enums";
-import { userMetadata } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import prisma from "@calndrbrnd/prisma";
+import { IdentityProvider, MembershipRole } from "@calndrbrnd/prisma/enums";
+import { userMetadata } from "@calndrbrnd/prisma/zod-utils";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TGetInputSchema } from "./get.schema";
 

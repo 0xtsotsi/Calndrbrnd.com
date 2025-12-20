@@ -3,10 +3,10 @@ import * as cache from "memory-cache";
 import {
   getDeploymentKey,
   getDeploymentSignatureToken,
-} from "@calcom/features/ee/deployment/lib/getDeploymentKey";
-import type { IDeploymentRepository } from "@calcom/features/ee/deployment/repositories/IDeploymentRepository";
-import { CALCOM_PRIVATE_API_ROUTE } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
+} from "@calndrbrnd/features/ee/deployment/lib/getDeploymentKey";
+import type { IDeploymentRepository } from "@calndrbrnd/features/ee/deployment/repositories/IDeploymentRepository";
+import { CALCOM_PRIVATE_API_ROUTE } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
 
 import { generateNonce, createSignature } from "./private-api-utils";
 

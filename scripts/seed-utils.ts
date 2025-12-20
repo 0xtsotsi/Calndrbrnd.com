@@ -3,13 +3,13 @@ import { randomUUID } from "crypto";
 import { uuid } from "short-uuid";
 import type z from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { hashPassword } from "@calcom/lib/auth/hashPassword";
-import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calcom/lib/availability";
-import prisma from "@calcom/prisma";
-import type { Prisma, UserPermissionRole } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import { hashPassword } from "@calndrbrnd/lib/auth/hashPassword";
+import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calndrbrnd/lib/availability";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma, UserPermissionRole } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 export async function createUserAndEventType({
   user,

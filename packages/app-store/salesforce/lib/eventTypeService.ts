@@ -1,8 +1,8 @@
-import type { appDataSchemas } from "@calcom/app-store/apps.schemas.generated";
-import { EventTypeAppMetadataSchema } from "@calcom/app-store/zod-utils";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import type { appDataSchemas } from "@calndrbrnd/app-store/apps.schemas.generated";
+import { EventTypeAppMetadataSchema } from "@calndrbrnd/app-store/zod-utils";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 export class EventTypeService {
   static async getEventTypeAppDataFromId(eventTypeId: number, appSlug: keyof typeof appDataSchemas) {

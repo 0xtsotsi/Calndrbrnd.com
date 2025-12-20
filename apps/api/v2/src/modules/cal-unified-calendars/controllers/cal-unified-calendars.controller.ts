@@ -19,7 +19,7 @@ import {
 } from "@nestjs/common";
 import { ApiTags as DocsTags, ApiParam, ApiHeader, ApiOperation } from "@nestjs/swagger";
 
-import { GOOGLE_CALENDAR, SUCCESS_STATUS } from "@calcom/platform-constants";
+import { GOOGLE_CALENDAR, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 @Controller({
   path: "/v2/calendars",

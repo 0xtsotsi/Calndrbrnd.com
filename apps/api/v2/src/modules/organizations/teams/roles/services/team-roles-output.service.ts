@@ -1,7 +1,7 @@
 import { TeamRoleOutput } from "@/modules/organizations/teams/roles/outputs/team-role.output";
 import { Injectable } from "@nestjs/common";
 
-import type { Role } from "@calcom/platform-libraries/pbac";
+import type { Role } from "@calndrbrnd/platform-libraries/pbac";
 
 @Injectable()
 export class TeamRolesOutputService {

@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 
-import type { PermissionString, Role } from "@calcom/platform-libraries/pbac";
+import type { PermissionString, Role } from "@calndrbrnd/platform-libraries/pbac";
 
 @Injectable()
 export class RolesPermissionsOutputService {

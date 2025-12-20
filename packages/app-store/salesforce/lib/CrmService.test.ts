@@ -1,9 +1,9 @@
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, expect, it, beforeEach, vi } from "vitest";
 import type { z } from "zod";
 
-import type { CredentialPayload } from "@calcom/types/Credential";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
 
 import type { appDataSchema } from "../zod";
 import SalesforceCRMService from "./CrmService";

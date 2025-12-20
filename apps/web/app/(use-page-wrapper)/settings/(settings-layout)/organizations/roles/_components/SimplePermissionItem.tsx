@@ -1,13 +1,13 @@
 "use client";
 
-import type { Resource } from "@calcom/features/pbac/domain/types/permission-registry";
+import type { Resource } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
 import {
   Scope,
   PERMISSION_REGISTRY,
   getPermissionsForScope,
-} from "@calcom/features/pbac/domain/types/permission-registry";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { ToggleGroup } from "@calcom/ui/components/form";
+} from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { ToggleGroup } from "@calndrbrnd/ui/components/form";
 
 import type { PermissionLevel } from "./usePermissions";
 import { usePermissions } from "./usePermissions";

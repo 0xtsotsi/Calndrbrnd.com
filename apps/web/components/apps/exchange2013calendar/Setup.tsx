@@ -3,11 +3,11 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Toaster } from "sonner";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
 
 export default function Exchange2013CalendarSetup() {
   const { t } = useLocale();

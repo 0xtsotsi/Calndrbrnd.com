@@ -1,14 +1,14 @@
 import type { GetServerSidePropsContext } from "next";
 import { z } from "zod";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getClientSecretFromPayment } from "@calcom/features/ee/payments/pages/getClientSecretFromPayment";
-import { shouldHideBrandingForEvent } from "@calcom/features/profile/lib/hideBranding";
-import prisma from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { paymentDataSelect } from "@calcom/prisma/selects/payment";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getClientSecretFromPayment } from "@calndrbrnd/features/ee/payments/pages/getClientSecretFromPayment";
+import { shouldHideBrandingForEvent } from "@calndrbrnd/features/profile/lib/hideBranding";
+import prisma from "@calndrbrnd/prisma";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { paymentDataSelect } from "@calndrbrnd/prisma/selects/payment";
+import { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
 
 export type PaymentPageProps = inferSSRProps<typeof getServerSideProps>;
 

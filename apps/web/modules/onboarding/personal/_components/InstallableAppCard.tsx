@@ -1,8 +1,8 @@
-import { InstallAppButtonWithoutPlanCheck } from "@calcom/app-store/InstallAppButtonWithoutPlanCheck";
-import type { UseAddAppMutationOptions } from "@calcom/app-store/_utils/useAddAppMutation";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { App } from "@calcom/types/App";
-import { Button } from "@calcom/ui/components/button";
+import { InstallAppButtonWithoutPlanCheck } from "@calndrbrnd/app-store/InstallAppButtonWithoutPlanCheck";
+import type { UseAddAppMutationOptions } from "@calndrbrnd/app-store/_utils/useAddAppMutation";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { App } from "@calndrbrnd/types/App";
+import { Button } from "@calndrbrnd/ui/components/button";
 
 type AppData = {
   slug: string;

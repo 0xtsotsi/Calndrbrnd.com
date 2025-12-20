@@ -1,5 +1,5 @@
-import dayjs from "@calcom/dayjs";
-import type { TimeRange } from "@calcom/types/schedule";
+import dayjs from "@calndrbrnd/dayjs";
+import type { TimeRange } from "@calndrbrnd/types/schedule";
 
 import type { CalendarEvent } from "./types/events";
 

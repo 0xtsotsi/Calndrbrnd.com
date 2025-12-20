@@ -5,19 +5,19 @@ import { useEffect, useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import type z from "zod";
 
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
-import type { EventTypeSetup, SettingsToggleClassNames } from "@calcom/features/eventtypes/lib/types";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import classNames from "@calcom/ui/classNames";
-import { Select } from "@calcom/ui/components/form";
-import { CheckboxField } from "@calcom/ui/components/form";
-import { Input } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { RadioField } from "@calcom/ui/components/radio";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import { LearnMoreLink } from "@calndrbrnd/features/eventtypes/components/LearnMoreLink";
+import type { EventTypeSetup, SettingsToggleClassNames } from "@calndrbrnd/features/eventtypes/lib/types";
+import type { FormValues } from "@calndrbrnd/features/eventtypes/lib/types";
+import ServerTrans from "@calndrbrnd/lib/components/ServerTrans";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { CheckboxField } from "@calndrbrnd/ui/components/form";
+import { Input } from "@calndrbrnd/ui/components/form";
+import { SettingsToggle } from "@calndrbrnd/ui/components/form";
+import { RadioField } from "@calndrbrnd/ui/components/radio";
 
 export type RequiresConfirmationCustomClassNames = SettingsToggleClassNames & {
   radioGroupContainer?: string;

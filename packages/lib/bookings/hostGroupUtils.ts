@@ -1,4 +1,4 @@
-import { DEFAULT_GROUP_ID } from "@calcom/lib/constants";
+import { DEFAULT_GROUP_ID } from "@calndrbrnd/lib/constants";
 
 export function groupHostsByGroupId<T extends { groupId?: string | null }>({
   hosts,

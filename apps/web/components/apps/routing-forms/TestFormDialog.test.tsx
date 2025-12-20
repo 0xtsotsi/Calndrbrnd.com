@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import type { Mock } from "vitest";
 import { vi } from "vitest";
 
-import { findMatchingRoute } from "@calcom/app-store/routing-forms/lib/processRoute";
+import { findMatchingRoute } from "@calndrbrnd/app-store/routing-forms/lib/processRoute";
 
 import { TestFormRenderer } from "./TestForm";
 
@@ -15,7 +15,7 @@ vi.mock("framer-motion", async () => {
   };
 });
 
-vi.mock("@calcom/app-store/routing-forms/lib/processRoute", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/processRoute", () => ({
   findMatchingRoute: vi.fn(),
 }));
 
@@ -60,11 +60,11 @@ function mockEventTypeRedirectUrlMatchingRoute() {
 /**
  * fixes the error due to Formbricks
  */
-vi.mock("@calcom/features/shell/Shell", () => ({
+vi.mock("@calndrbrnd/features/shell/Shell", () => ({
   ShellMain: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/hooks/useApp", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useApp", () => ({
   default: vi.fn(),
 }));
 /**
@@ -78,14 +78,14 @@ vi.mock("./FormActions", () => ({
 }));
 
 vi.mock(
-  "@calcom/app-store/routing-forms/components/react-awesome-query-builder/widgets",
+  "@calndrbrnd/app-store/routing-forms/components/react-awesome-query-builder/widgets",
   async (importOriginal) => {
     return await importOriginal();
   }
 );
 
 // Mock the necessary dependencies
-vi.mock("@calcom/lib/hooks/useLocale", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useLocale", () => ({
   useLocale: vi.fn(() => ({ t: (key: string) => key })),
 }));
 
@@ -116,7 +116,7 @@ function mockFindTeamMembersMatchingAttributeLogicResponse(
   findTeamMembersMatchingAttributeLogicResponse = response;
 }
 
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calndrbrnd/trpc/react", () => ({
   trpc: {
     viewer: {
       routingForms: {

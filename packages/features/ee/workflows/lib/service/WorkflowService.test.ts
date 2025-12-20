@@ -1,30 +1,30 @@
 import { describe, expect, vi, beforeEach } from "vitest";
 
-import { scheduleWorkflowReminders } from "@calcom/features/ee/workflows/lib/reminders/reminderScheduler";
-import { tasker } from "@calcom/features/tasker";
-import { WorkflowTriggerEvents, WorkflowActions, WorkflowTemplates, TimeUnit } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { scheduleWorkflowReminders } from "@calndrbrnd/features/ee/workflows/lib/reminders/reminderScheduler";
+import { tasker } from "@calndrbrnd/features/tasker";
+import { WorkflowTriggerEvents, WorkflowActions, WorkflowTemplates, TimeUnit } from "@calndrbrnd/prisma/enums";
+import { test } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 import { WorkflowService } from "./WorkflowService";
 
-vi.mock("@calcom/features/ee/workflows/lib/reminders/reminderScheduler");
-vi.mock("@calcom/features/tasker");
+vi.mock("@calndrbrnd/features/ee/workflows/lib/reminders/reminderScheduler");
+vi.mock("@calndrbrnd/features/tasker");
 
 const mockScheduleWorkflowReminders = vi.mocked(scheduleWorkflowReminders);
 const mockTasker = vi.mocked(tasker);
 
-vi.mock("@calcom/features/profile/lib/hideBranding", () => ({
+vi.mock("@calndrbrnd/features/profile/lib/hideBranding", () => ({
   getHideBranding: vi.fn().mockResolvedValue(false),
 }));
 
 const mockWorkflowReminderCreate = vi.fn();
-vi.mock("@calcom/features/ee/workflows/repositories/WorkflowReminderRepository", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/repositories/WorkflowReminderRepository", () => ({
   WorkflowReminderRepository: vi.fn().mockImplementation(() => ({
     create: mockWorkflowReminderCreate,
   })),
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {},
   default: {},
 }));

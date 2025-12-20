@@ -3,8 +3,8 @@ import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { useState } from "react";
 
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { showToast } from "@calcom/ui/components/toast";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useSubscribeTeamToStripe } from "@lib/hooks/settings/platform/billing/useSubscribeTeamToStripe";
 import { useUpgradeTeamSubscriptionInStripe } from "@lib/hooks/settings/platform/billing/useUpgradeTeamSubscriptionInStripe";

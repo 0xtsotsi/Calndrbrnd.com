@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Input } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Input } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Select } from "@calndrbrnd/ui/components/form";
 
 import type { LocalRouteWithRaqbStates, AttributeRoutingConfig } from "../../routing-forms/types/types";
 import { appDataSchema } from "../zod";

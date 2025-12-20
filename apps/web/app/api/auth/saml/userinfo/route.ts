@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 import { uuid } from "short-uuid";
 import { z } from "zod";
 
-import jackson from "@calcom/features/ee/sso/lib/jackson";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
+import jackson from "@calndrbrnd/features/ee/sso/lib/jackson";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
 
 const extractAuthToken = (req: NextRequest) => {
   const log = logger.getSubLogger({ prefix: ["SAML extractAuthToken"] });

@@ -3,12 +3,12 @@ import type { NextApiRequest } from "next";
 import {
   getRecordingsOfCalVideoByRoomName,
   getDownloadLinkOfCalVideoByRecordingId,
-} from "@calcom/features/conferencing/lib/videoClient";
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
-import type { RecordingItemSchema } from "@calcom/prisma/zod-utils";
-import type { PartialReference } from "@calcom/types/EventManager";
+} from "@calndrbrnd/features/conferencing/lib/videoClient";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
+import type { RecordingItemSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { PartialReference } from "@calndrbrnd/types/EventManager";
 
 import { schemaQueryIdParseInt } from "~/lib/validations/shared/queryIdTransformParseInt";
 
@@ -63,7 +63,7 @@ export async function getHandler(req: NextApiRequest) {
 
   const booking = await prisma.booking.findUnique({
     where: { id },
-    // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+    // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
     include: { references: true },
   });
 

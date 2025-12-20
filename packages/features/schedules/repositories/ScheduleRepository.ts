@@ -1,11 +1,11 @@
-import { hasReadPermissionsForUserId } from "@calcom/lib/hasEditPermissionForUser";
+import { hasReadPermissionsForUserId } from "@calndrbrnd/lib/hasEditPermissionForUser";
 import {
   transformAvailabilityForAtom,
   transformDateOverridesForAtom,
   transformWorkingHoursForAtom,
-} from "@calcom/lib/schedules/transformers";
-import type { PrismaClient } from "@calcom/prisma";
-import type { User } from "@calcom/prisma/client";
+} from "@calndrbrnd/lib/schedules/transformers";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { User } from "@calndrbrnd/prisma/client";
 
 export type FindDetailedScheduleByIdReturnType = Awaited<
   ReturnType<ScheduleRepository["findDetailedScheduleById"]>

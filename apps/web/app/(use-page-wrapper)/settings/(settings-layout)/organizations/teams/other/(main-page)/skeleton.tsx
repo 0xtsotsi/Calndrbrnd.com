@@ -1,8 +1,8 @@
 "use client";
 
-import SkeletonLoaderTeamList from "@calcom/features/ee/teams/components/SkeletonloaderTeamList";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import SkeletonLoaderTeamList from "@calndrbrnd/features/ee/teams/components/SkeletonloaderTeamList";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 export function SkeletonLoader() {
   const { t } = useLocale();

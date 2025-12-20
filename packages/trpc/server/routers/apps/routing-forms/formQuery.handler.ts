@@ -1,8 +1,8 @@
-import { getSerializableForm } from "@calcom/app-store/routing-forms/lib/getSerializableForm";
-import { entityPrismaWhereClause } from "@calcom/features/pbac/lib/entityPermissionUtils.server";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getSerializableForm } from "@calndrbrnd/app-store/routing-forms/lib/getSerializableForm";
+import { entityPrismaWhereClause } from "@calndrbrnd/features/pbac/lib/entityPermissionUtils.server";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TFormQueryInputSchema } from "./formQuery.schema";
 import { checkPermissionOnExistingRoutingForm } from "./permissions";

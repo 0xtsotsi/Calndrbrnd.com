@@ -1,6 +1,6 @@
-import { zodRoutes } from "@calcom/app-store/routing-forms/zod";
-import prisma from "@calcom/prisma";
-import { AssignmentReasonEnum } from "@calcom/prisma/enums";
+import { zodRoutes } from "@calndrbrnd/app-store/routing-forms/zod";
+import prisma from "@calndrbrnd/prisma";
+import { AssignmentReasonEnum } from "@calndrbrnd/prisma/enums";
 
 import { RoutingReasons, SalesforceRecordEnum } from "./enums";
 

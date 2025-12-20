@@ -2,18 +2,18 @@ import { type GetServerSidePropsContext } from "next";
 import type { Session } from "next-auth";
 import { z } from "zod";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import type { GetBookingType } from "@calcom/features/bookings/lib/get-booking";
-import { getBookingForReschedule, getBookingForSeatedEvent } from "@calcom/features/bookings/lib/get-booking";
-import { orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
-import type { getPublicEvent } from "@calcom/features/eventtypes/lib/getPublicEvent";
-import { EventRepository } from "@calcom/features/eventtypes/repositories/EventRepository";
-import { shouldHideBrandingForUserEvent } from "@calcom/features/profile/lib/hideBranding";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import slugify from "@calcom/lib/slugify";
-import { prisma } from "@calcom/prisma";
-import { BookingStatus, RedirectType } from "@calcom/prisma/enums";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import type { GetBookingType } from "@calndrbrnd/features/bookings/lib/get-booking";
+import { getBookingForReschedule, getBookingForSeatedEvent } from "@calndrbrnd/features/bookings/lib/get-booking";
+import { orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { getUsernameList } from "@calndrbrnd/features/eventtypes/lib/defaultEvents";
+import type { getPublicEvent } from "@calndrbrnd/features/eventtypes/lib/getPublicEvent";
+import { EventRepository } from "@calndrbrnd/features/eventtypes/repositories/EventRepository";
+import { shouldHideBrandingForUserEvent } from "@calndrbrnd/features/profile/lib/hideBranding";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import slugify from "@calndrbrnd/lib/slugify";
+import { prisma } from "@calndrbrnd/prisma";
+import { BookingStatus, RedirectType } from "@calndrbrnd/prisma/enums";
 
 import { handleOrgRedirect } from "@lib/handleOrgRedirect";
 

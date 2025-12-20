@@ -1,8 +1,8 @@
 import type { DirectoryType } from "@boxyhq/saml-jackson";
 
-import jackson from "@calcom/features/ee/sso/lib/jackson";
-import { canAccessOrganization, samlProductID, samlTenantID } from "@calcom/features/ee/sso/lib/saml";
-import prisma from "@calcom/prisma";
+import jackson from "@calndrbrnd/features/ee/sso/lib/jackson";
+import { canAccessOrganization, samlProductID, samlTenantID } from "@calndrbrnd/features/ee/sso/lib/saml";
+import prisma from "@calndrbrnd/prisma";
 
 import { TRPCError } from "@trpc/server";
 

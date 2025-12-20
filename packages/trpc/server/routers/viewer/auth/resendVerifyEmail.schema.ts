@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { emailSchema } from "@calcom/lib/emailSchema";
+import { emailSchema } from "@calndrbrnd/lib/emailSchema";
 
 export const ZResendVerifyEmailSchema = z
   .object({

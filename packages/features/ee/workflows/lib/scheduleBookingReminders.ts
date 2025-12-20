@@ -1,14 +1,14 @@
-import { scheduleAIPhoneCall } from "@calcom/ee/workflows/lib/reminders/aiPhoneCallManager";
-import { scheduleEmailReminder } from "@calcom/ee/workflows/lib/reminders/emailReminderManager";
-import { scheduleSMSReminder } from "@calcom/ee/workflows/lib/reminders/smsReminderManager";
-import { scheduleWhatsappReminder } from "@calcom/ee/workflows/lib/reminders/whatsappReminderManager";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import type { WorkflowStep } from "@calcom/prisma/client";
-import type { TimeUnit } from "@calcom/prisma/enums";
-import { SchedulingType, WorkflowActions, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import type { CalEventResponses } from "@calcom/types/Calendar";
+import { scheduleAIPhoneCall } from "@calndrbrnd/ee/workflows/lib/reminders/aiPhoneCallManager";
+import { scheduleEmailReminder } from "@calndrbrnd/ee/workflows/lib/reminders/emailReminderManager";
+import { scheduleSMSReminder } from "@calndrbrnd/ee/workflows/lib/reminders/smsReminderManager";
+import { scheduleWhatsappReminder } from "@calndrbrnd/ee/workflows/lib/reminders/whatsappReminderManager";
+import { CreditService } from "@calndrbrnd/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@calndrbrnd/features/ee/organizations/lib/getBookerUrlServer";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { WorkflowStep } from "@calndrbrnd/prisma/client";
+import type { TimeUnit } from "@calndrbrnd/prisma/enums";
+import { SchedulingType, WorkflowActions, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
+import type { CalEventResponses } from "@calndrbrnd/types/Calendar";
 
 import type { getBookings } from "./scheduleWorkflowNotifications";
 import { verifyEmailSender } from "./verifyEmailSender";

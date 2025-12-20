@@ -1,4 +1,4 @@
-import type { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
+import type { PhoneNumberSubscriptionStatus } from "@calndrbrnd/prisma/enums";
 
 /**
  * Abstract interface for Phone Number repository operations
@@ -47,7 +47,7 @@ export interface PhoneNumberRepositoryInterface {
     teamId?: number;
     outboundAgentId?: string | null;
     providerPhoneNumberId?: string;
-    subscriptionStatus?: import("@calcom/prisma/enums").PhoneNumberSubscriptionStatus;
+    subscriptionStatus?: import("@calndrbrnd/prisma/enums").PhoneNumberSubscriptionStatus;
     stripeCustomerId?: string;
     stripeSubscriptionId?: string;
   }): Promise<PhoneNumberData>;

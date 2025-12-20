@@ -1,26 +1,26 @@
 import type { z } from "zod";
 
-import { whereClauseForOrgWithSlugOrRequestedSlug } from "@calcom/ee/organizations/lib/orgDomains";
-import { getParsedTeam } from "@calcom/features/ee/teams/lib/getParsedTeam";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calcom/lib/availability";
-import { buildNonDelegationCredentials } from "@calcom/lib/delegationCredential";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { withSelectedCalendars } from "@calcom/lib/server/withSelectedCalendars";
-import type { PrismaClient } from "@calcom/prisma";
-import { availabilityUserSelect } from "@calcom/prisma";
-import type { User as UserType, DestinationCalendar, SelectedCalendar } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import type { CreationSource } from "@calcom/prisma/enums";
-import { MembershipRole, BookingStatus } from "@calcom/prisma/enums";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import { userSelect as prismaUserSelect } from "@calcom/prisma/selects/user";
-import { userMetadata } from "@calcom/prisma/zod-utils";
-import type { UpId, UserProfile } from "@calcom/types/UserProfile";
+import { whereClauseForOrgWithSlugOrRequestedSlug } from "@calndrbrnd/ee/organizations/lib/orgDomains";
+import { getParsedTeam } from "@calndrbrnd/features/ee/teams/lib/getParsedTeam";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calndrbrnd/lib/availability";
+import { buildNonDelegationCredentials } from "@calndrbrnd/lib/delegationCredential";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { withSelectedCalendars } from "@calndrbrnd/lib/server/withSelectedCalendars";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { availabilityUserSelect } from "@calndrbrnd/prisma";
+import type { User as UserType, DestinationCalendar, SelectedCalendar } from "@calndrbrnd/prisma/client";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import type { CreationSource } from "@calndrbrnd/prisma/enums";
+import { MembershipRole, BookingStatus } from "@calndrbrnd/prisma/enums";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
+import { userSelect as prismaUserSelect } from "@calndrbrnd/prisma/selects/user";
+import { userMetadata } from "@calndrbrnd/prisma/zod-utils";
+import type { UpId, UserProfile } from "@calndrbrnd/types/UserProfile";
 
-export type { UserWithLegacySelectedCalendars } from "@calcom/lib/server/withSelectedCalendars";
+export type { UserWithLegacySelectedCalendars } from "@calndrbrnd/lib/server/withSelectedCalendars";
 export { withSelectedCalendars };
 export type UserAdminTeams = number[];
 
@@ -1296,7 +1296,7 @@ export class UserRepository {
         },
       },
       select: {
-        ...prismaUserSelect, // Use the proper userSelect from @calcom/prisma/selects/user which includes schedules
+        ...prismaUserSelect, // Use the proper userSelect from @calndrbrnd/prisma/selects/user which includes schedules
         credentials: {
           select: credentialForCalendarServiceSelect,
         },

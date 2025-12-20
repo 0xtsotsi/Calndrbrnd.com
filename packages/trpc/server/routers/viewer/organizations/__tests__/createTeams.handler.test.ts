@@ -2,8 +2,8 @@ import prismock from "../../../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, beforeEach, vi } from "vitest";
 
-import slugify from "@calcom/lib/slugify";
-import { MembershipRole, UserPermissionRole, CreationSource, RedirectType } from "@calcom/prisma/enums";
+import slugify from "@calndrbrnd/lib/slugify";
+import { MembershipRole, UserPermissionRole, CreationSource, RedirectType } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
@@ -1151,7 +1151,7 @@ describe("createTeams handler - Comprehensive Tests", () => {
         role: MembershipRole.OWNER,
       });
 
-      const stripeModule = await import("@calcom/features/ee/payments/server/stripe");
+      const stripeModule = await import("@calndrbrnd/features/ee/payments/server/stripe");
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const cancelSpy = vi.spyOn(stripeModule.default.subscriptions, "cancel").mockResolvedValue({} as any);
 

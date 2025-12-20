@@ -2,16 +2,16 @@
 
 import { usePathname } from "next/navigation";
 
-import { DataTableProvider } from "@calcom/features/data-table/DataTableProvider";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
+import { DataTableProvider } from "@calndrbrnd/features/data-table/DataTableProvider";
+import { useSegments } from "@calndrbrnd/features/data-table/hooks/useSegments";
 import {
   RoutingFormResponsesTable,
   FailedBookingsByField,
   RoutedToPerPeriod,
   RoutingFunnel,
-} from "@calcom/features/insights/components/routing";
-import { InsightsOrgTeamsProvider } from "@calcom/features/insights/context/InsightsOrgTeamsProvider";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+} from "@calndrbrnd/features/insights/components/routing";
+import { InsightsOrgTeamsProvider } from "@calndrbrnd/features/insights/context/InsightsOrgTeamsProvider";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 export default function InsightsRoutingFormResponsesPage({ timeZone }: { timeZone: string }) {
   const { t } = useLocale();

@@ -1,5 +1,5 @@
-import { BookingEmailAndSmsTaskService } from "@calcom/features/bookings/lib/tasker/BookingEmailAndSmsTaskService";
-import { createContainer } from "@calcom/features/di/di";
+import { BookingEmailAndSmsTaskService } from "@calndrbrnd/features/bookings/lib/tasker/BookingEmailAndSmsTaskService";
+import { createContainer } from "@calndrbrnd/features/di/di";
 
 import { moduleLoader as BookingEmailAndSmsTaskServiceModule } from "./BookingEmailAndSmsTaskService.module";
 

@@ -2,9 +2,9 @@ import { defaultResponderForAppDir } from "app/api/defaultResponderForAppDir";
 import { headers, cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
-import { dub } from "@calcom/feature-auth/lib/dub";
-import { getServerSession } from "@calcom/feature-auth/lib/getServerSession";
-import { IS_DUB_REFERRALS_ENABLED } from "@calcom/lib/constants";
+import { dub } from "@calndrbrnd/feature-auth/lib/dub";
+import { getServerSession } from "@calndrbrnd/feature-auth/lib/getServerSession";
+import { IS_DUB_REFERRALS_ENABLED } from "@calndrbrnd/lib/constants";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

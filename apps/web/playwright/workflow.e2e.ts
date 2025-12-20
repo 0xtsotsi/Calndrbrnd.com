@@ -1,4 +1,4 @@
-import { MembershipRole, WorkflowTriggerEvents } from "@calcom/prisma/enums";
+import { MembershipRole, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import { loginUser, loginUserWithTeam } from "./fixtures/regularBookings";
 import { test } from "./lib/fixtures";

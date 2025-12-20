@@ -7,40 +7,40 @@ import type { FC } from "react";
 import { memo, useEffect, useState } from "react";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import { CreateButton } from "@calcom/features/ee/teams/components/createButton/CreateButton";
-import { EventTypeEmbedButton, EventTypeEmbedDialog } from "@calcom/features/embed/EventTypeEmbed";
-import { EventTypeDescription } from "@calcom/features/eventtypes/components";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useOrgBranding } from "@calndrbrnd/features/ee/organizations/context/provider";
+import { CreateButton } from "@calndrbrnd/features/ee/teams/components/createButton/CreateButton";
+import { EventTypeEmbedButton, EventTypeEmbedDialog } from "@calndrbrnd/features/embed/EventTypeEmbed";
+import { EventTypeDescription } from "@calndrbrnd/features/eventtypes/components";
 import {
   CreateEventTypeDialog,
   type ProfileOption,
-} from "@calcom/features/eventtypes/components/CreateEventTypeDialog";
-import { DuplicateDialog } from "@calcom/features/eventtypes/components/DuplicateDialog";
-import { InfiniteSkeletonLoader } from "@calcom/features/eventtypes/components/SkeletonLoader";
-import { APP_NAME, WEBSITE_URL } from "@calcom/lib/constants";
-import { extractHostTimezone } from "@calcom/lib/hashedLinksUtils";
-import { filterActiveLinks } from "@calcom/lib/hashedLinksUtils";
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useInViewObserver } from "@calcom/lib/hooks/useInViewObserver";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useGetTheme } from "@calcom/lib/hooks/useTheme";
-import { useTypedQuery } from "@calcom/lib/hooks/useTypedQuery";
-import { HttpError } from "@calcom/lib/http-error";
-import { parseEventTypeColor } from "@calcom/lib/isEventTypeColor";
-import { localStorage } from "@calcom/lib/webstorage";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { ArrowButton } from "@calcom/ui/components/arrow-button";
-import { UserAvatarGroup } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
+} from "@calndrbrnd/features/eventtypes/components/CreateEventTypeDialog";
+import { DuplicateDialog } from "@calndrbrnd/features/eventtypes/components/DuplicateDialog";
+import { InfiniteSkeletonLoader } from "@calndrbrnd/features/eventtypes/components/SkeletonLoader";
+import { APP_NAME, WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import { extractHostTimezone } from "@calndrbrnd/lib/hashedLinksUtils";
+import { filterActiveLinks } from "@calndrbrnd/lib/hashedLinksUtils";
+import { useCopy } from "@calndrbrnd/lib/hooks/useCopy";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useInViewObserver } from "@calndrbrnd/lib/hooks/useInViewObserver";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useGetTheme } from "@calndrbrnd/lib/hooks/useTheme";
+import { useTypedQuery } from "@calndrbrnd/lib/hooks/useTypedQuery";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { parseEventTypeColor } from "@calndrbrnd/lib/isEventTypeColor";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { ArrowButton } from "@calndrbrnd/ui/components/arrow-button";
+import { UserAvatarGroup } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
+import { ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -49,16 +49,16 @@ import {
   DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { HorizontalTabs } from "@calcom/ui/components/navigation";
-import { Skeleton } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/ui/components/dropdown";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { HorizontalTabs } from "@calndrbrnd/ui/components/navigation";
+import { Skeleton } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { TRPCClientError } from "@trpc/client";
 

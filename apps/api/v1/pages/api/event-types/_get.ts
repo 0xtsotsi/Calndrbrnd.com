@@ -1,9 +1,9 @@
 import type { NextApiRequest } from "next";
 
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { prisma } from "@calcom/prisma";
-import type { PrismaClient } from "@calcom/prisma";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import { prisma } from "@calndrbrnd/prisma";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 import { eventTypeSelect } from "~/lib/selects/event-type";
 import { schemaQuerySlug } from "~/lib/validations/shared/querySlug";

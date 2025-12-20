@@ -3,10 +3,10 @@ import prismock from "../../../../tests/libs/__mocks__/prisma";
 
 import { describe, test, vi, expect, beforeEach } from "vitest";
 
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { CreationSource } from "@calcom/prisma/enums";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { CreationSource } from "@calndrbrnd/prisma/enums";
 
-vi.mock("@calcom/lib/server/i18n", () => {
+vi.mock("@calndrbrnd/lib/server/i18n", () => {
   return {
     getTranslation: async (locale: string, namespace: string) => {
       const t = (key: string) => key;

@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useRouterQuery } from "@calcom/lib/hooks/useRouterQuery";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import type { TeamWithMembers } from "@calcom/features/ee/teams/lib/queries";
-import type { UserProfile } from "@calcom/types/UserProfile";
-import { UserAvatar } from "@calcom/ui/components/avatar";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useRouterQuery } from "@calndrbrnd/lib/hooks/useRouterQuery";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import type { TeamWithMembers } from "@calndrbrnd/features/ee/teams/lib/queries";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
+import { UserAvatar } from "@calndrbrnd/ui/components/avatar";
 
 type TeamType = Omit<NonNullable<TeamWithMembers>, "inviteToken">;
 type MembersType = TeamType["members"];

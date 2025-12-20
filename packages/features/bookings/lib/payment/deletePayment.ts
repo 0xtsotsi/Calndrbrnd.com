@@ -1,6 +1,6 @@
-import { PaymentServiceMap } from "@calcom/app-store/payment.services.generated";
-import type { Payment, Prisma, AppCategories } from "@calcom/prisma/client";
-import type { IAbstractPaymentService } from "@calcom/types/PaymentService";
+import { PaymentServiceMap } from "@calndrbrnd/app-store/payment.services.generated";
+import type { Payment, Prisma, AppCategories } from "@calndrbrnd/prisma/client";
+import type { IAbstractPaymentService } from "@calndrbrnd/types/PaymentService";
 
 const deletePayment = async (
   paymentId: Payment["id"],

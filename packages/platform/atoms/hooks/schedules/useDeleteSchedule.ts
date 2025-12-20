@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { V2_ENDPOINTS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiErrorResponse } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { V2_ENDPOINTS } from "@calndrbrnd/platform-constants";
+import type { ApiResponse, ApiErrorResponse } from "@calndrbrnd/platform-types";
 
 import http from "../../lib/http";
 import { QUERY_KEY } from "./useAtomSchedule";

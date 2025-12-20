@@ -1,16 +1,16 @@
 import { z } from "zod";
 
-import { templateTypeEnum } from "@calcom/features/calAIPhone/zod-utils";
-import { MAX_SEATS_PER_TIME_SLOT } from "@calcom/lib/constants";
+import { templateTypeEnum } from "@calndrbrnd/features/calAIPhone/zod-utils";
+import { MAX_SEATS_PER_TIME_SLOT } from "@calndrbrnd/lib/constants";
 import {
   customInputSchema,
   EventTypeMetaDataSchema,
   stringOrNumber,
   rrSegmentQueryValueSchema,
-} from "@calcom/prisma/zod-utils";
-import { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
-import { DestinationCalendarSchema } from "@calcom/prisma/zod/modelSchema/DestinationCalendarSchema";
-import { EventTypeSchema } from "@calcom/prisma/zod/modelSchema/EventTypeSchema";
+} from "@calndrbrnd/prisma/zod-utils";
+import { eventTypeBookingFields } from "@calndrbrnd/prisma/zod-utils";
+import { DestinationCalendarSchema } from "@calndrbrnd/prisma/zod/modelSchema/DestinationCalendarSchema";
+import { EventTypeSchema } from "@calndrbrnd/prisma/zod/modelSchema/EventTypeSchema";
 
 const hashedLinkInputSchema = z
   .object({

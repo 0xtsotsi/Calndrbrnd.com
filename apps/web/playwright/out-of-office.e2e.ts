@@ -2,10 +2,10 @@ import type { Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 import { v4 as uuidv4 } from "uuid";
 
-import dayjs from "@calcom/dayjs";
-import { randomString } from "@calcom/lib/random";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { randomString } from "@calndrbrnd/lib/random";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { addFilter } from "./filter-helpers";
 import { test } from "./lib/fixtures";

@@ -1,5 +1,5 @@
-import { validJson } from "@calcom/lib/jsonUtils";
-import type { AppMeta } from "@calcom/types/App";
+import { validJson } from "@calndrbrnd/lib/jsonUtils";
+import type { AppMeta } from "@calndrbrnd/types/App";
 
 import _package from "./package.json";
 

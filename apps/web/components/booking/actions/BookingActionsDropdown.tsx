@@ -1,14 +1,14 @@
 import { useState } from "react";
 import type { z } from "zod";
 
-import { MeetingSessionDetailsDialog } from "@calcom/features/ee/video/MeetingSessionDetailsDialog";
-import ViewRecordingsDialog from "@calcom/features/ee/video/ViewRecordingsDialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
+import { MeetingSessionDetailsDialog } from "@calndrbrnd/features/ee/video/MeetingSessionDetailsDialog";
+import ViewRecordingsDialog from "@calndrbrnd/features/ee/video/ViewRecordingsDialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { bookingMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dialog, DialogContent, DialogFooter, DialogClose } from "@calndrbrnd/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -18,9 +18,9 @@ import {
   DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import type { ActionType } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/dropdown";
+import type { ActionType } from "@calndrbrnd/ui/components/table";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { AddGuestsDialog } from "@components/dialog/AddGuestsDialog";
 import { CancelBookingDialog } from "@components/dialog/CancelBookingDialog";

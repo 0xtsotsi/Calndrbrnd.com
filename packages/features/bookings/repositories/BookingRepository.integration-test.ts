@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll, beforeEach, afterAll, afterEach, vi } from "vitest";
-import { prisma } from "@calcom/prisma";
+import { prisma } from "@calndrbrnd/prisma";
 
-import { BookingStatus, RRTimestampBasis } from "@calcom/prisma/enums";
+import { BookingStatus, RRTimestampBasis } from "@calndrbrnd/prisma/enums";
 import { BookingRepository } from "./BookingRepository";
 
 // ------------

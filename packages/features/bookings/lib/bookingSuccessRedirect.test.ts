@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach, test } from "vitest";
 
-import { useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { navigateInTopWindow } from "@calcom/lib/navigateInTopWindow";
+import { useIsEmbed } from "@calndrbrnd/embed-core/embed-iframe";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { navigateInTopWindow } from "@calndrbrnd/lib/navigateInTopWindow";
 
 import { useBookingSuccessRedirect, getNewSearchParams } from "./bookingSuccessRedirect";
 
@@ -14,15 +14,15 @@ vi.mock("next/navigation", () => ({
   }),
 }));
 
-vi.mock("@calcom/lib/navigateInTopWindow", () => ({
+vi.mock("@calndrbrnd/lib/navigateInTopWindow", () => ({
   navigateInTopWindow: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/hooks/useCompatSearchParams", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useCompatSearchParams", () => ({
   useCompatSearchParams: vi.fn(),
 }));
 
-vi.mock("@calcom/embed-core/embed-iframe", () => ({
+vi.mock("@calndrbrnd/embed-core/embed-iframe", () => ({
   useIsEmbed: vi.fn(),
 }));
 

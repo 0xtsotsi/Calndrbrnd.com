@@ -29,7 +29,7 @@ import {
   SUCCESS_STATUS,
   VERSION_2024_06_14,
   VERSION_2024_08_13,
-} from "@calcom/platform-constants";
+} from "@calndrbrnd/platform-constants";
 import {
   ApiSuccessResponse,
   BookingOutput_2024_08_13,
@@ -38,8 +38,8 @@ import {
   EventTypeOutput_2024_06_14,
   GetBookingOutput_2024_08_13,
   GetBookingsOutput_2024_08_13,
-} from "@calcom/platform-types";
-import type { PlatformOAuthClient, Team, User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { PlatformOAuthClient, Team, User } from "@calndrbrnd/prisma/client";
 
 const CLIENT_REDIRECT_URI = "http://localhost:4321";
 

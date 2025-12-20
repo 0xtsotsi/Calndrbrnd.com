@@ -1,20 +1,20 @@
 import { lookup } from "dns";
 import { type TFunction } from "i18next";
 
-import { sendAdminOrganizationNotification } from "@calcom/emails/organization-email-service";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
+import { sendAdminOrganizationNotification } from "@calndrbrnd/emails/organization-email-service";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
 import {
   RESERVED_SUBDOMAINS,
   ORG_MINIMUM_PUBLISHED_TEAMS_SELF_SERVE,
   WEBAPP_URL,
   IS_CALCOM,
-} from "@calcom/lib/constants";
-import { createDomain } from "@calcom/lib/domainManager/organization";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import { UserPermissionRole } from "@calcom/prisma/enums";
+} from "@calndrbrnd/lib/constants";
+import { createDomain } from "@calndrbrnd/lib/domainManager/organization";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { prisma } from "@calndrbrnd/prisma";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
 
 const log = logger.getSubLogger({ prefix: ["orgCreationUtils"] });
 

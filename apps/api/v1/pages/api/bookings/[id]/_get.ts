@@ -1,9 +1,9 @@
 import type { NextApiRequest } from "next";
 
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { ErrorWithCode } from "@calndrbrnd/lib/errors";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
 
 import { schemaBookingReadPublic } from "~/lib/validations/booking";
 import { schemaQuerySingleOrMultipleExpand } from "~/lib/validations/shared/queryExpandRelations";
@@ -102,11 +102,11 @@ export async function getHandler(req: NextApiRequest) {
   const booking = await prisma.booking.findUnique({
     where: { id },
     include: {
-      // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+      // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
       attendees: true,
-      // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+      // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
       user: true,
-      // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+      // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
       payment: true,
       eventType: expand.includes("team") ? { include: { team: true } } : false,
     },

@@ -12,7 +12,7 @@ import {
   verifyCodeAuthenticated,
   sendEmailVerificationByCode,
   checkEmailVerificationRequired,
-} from "@calcom/platform-libraries";
+} from "@calndrbrnd/platform-libraries";
 
 @Injectable()
 export class VerificationAtomsService {

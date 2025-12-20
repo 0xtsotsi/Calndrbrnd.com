@@ -1,7 +1,7 @@
 import type { NextApiRequest } from "next";
 
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
 
 import { schemaQueryTeamId } from "~/lib/validations/shared/queryTeamId";
 

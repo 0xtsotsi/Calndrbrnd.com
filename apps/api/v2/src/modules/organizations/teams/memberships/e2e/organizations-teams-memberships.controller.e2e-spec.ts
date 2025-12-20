@@ -19,9 +19,9 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiSuccessResponse } from "@calcom/platform-types";
-import type { EventType, User, Membership, Team } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiSuccessResponse } from "@calndrbrnd/platform-types";
+import type { EventType, User, Membership, Team } from "@calndrbrnd/prisma/client";
 
 describe("Organizations Teams Memberships Endpoints", () => {
   describe("User Authentication - User is Org Admin", () => {

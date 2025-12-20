@@ -1,11 +1,11 @@
 import { useRouter } from "next/navigation";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
-import { TopBanner } from "@calcom/ui/components/top-banner";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { TopBanner } from "@calndrbrnd/ui/components/top-banner";
 
 export type OrgUpgradeBannerProps = {
   data: RouterOutputs["viewer"]["me"]["getUserTopBanners"]["orgUpgradeBanner"];

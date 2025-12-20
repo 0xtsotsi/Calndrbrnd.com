@@ -3,11 +3,11 @@
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
-import Shell from "@calcom/features/shell/Shell";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { PERMISSIONS_GROUPED_MAP } from "@calcom/platform-constants";
-import { showToast } from "@calcom/ui/components/toast";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { PERMISSIONS_GROUPED_MAP } from "@calndrbrnd/platform-constants";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useOAuthClient } from "@lib/hooks/settings/platform/oauth-clients/useOAuthClient";
 import { useUpdateOAuthClient } from "@lib/hooks/settings/platform/oauth-clients/useUpdateOAuthClient";

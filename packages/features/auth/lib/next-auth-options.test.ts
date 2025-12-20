@@ -1,12 +1,12 @@
 import type { User } from "next-auth";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { IdentityProvider, UserPermissionRole } from "@calcom/prisma/enums";
+import { IdentityProvider, UserPermissionRole } from "@calndrbrnd/prisma/enums";
 
 import { ErrorCode } from "./ErrorCode";
 
 // Mock dependencies
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {
     user: {
       update: vi.fn(),
@@ -21,7 +21,7 @@ vi.mock("@calcom/prisma", () => ({
 
 const mockFindByEmailAndIncludeProfilesAndPassword = vi.fn();
 
-vi.mock("@calcom/features/users/repositories/UserRepository", () => {
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository", () => {
   return {
     UserRepository: vi.fn().mockImplementation(() => ({
       findByEmailAndIncludeProfilesAndPassword: mockFindByEmailAndIncludeProfilesAndPassword,
@@ -33,33 +33,33 @@ vi.mock("./verifyPassword", () => ({
   verifyPassword: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/checkRateLimitAndThrowError", () => ({
+vi.mock("@calndrbrnd/lib/checkRateLimitAndThrowError", () => ({
   checkRateLimitAndThrowError: vi.fn().mockResolvedValue(undefined),
 }));
 
-vi.mock("@calcom/lib/server/PiiHasher", () => ({
+vi.mock("@calndrbrnd/lib/server/PiiHasher", () => ({
   hashEmail: vi.fn((email: string) => `hashed_${email}`),
 }));
 
-vi.mock("@calcom/lib/totp", () => ({
+vi.mock("@calndrbrnd/lib/totp", () => ({
   totpAuthenticatorCheck: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/crypto", () => ({
+vi.mock("@calndrbrnd/lib/crypto", () => ({
   symmetricDecrypt: vi.fn(),
   symmetricEncrypt: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/auth/isPasswordValid", () => ({
+vi.mock("@calndrbrnd/lib/auth/isPasswordValid", () => ({
   isPasswordValid: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/env", () => ({
+vi.mock("@calndrbrnd/lib/env", () => ({
   isENVDev: false,
 }));
 
-vi.mock("@calcom/lib/constants", async (importOriginal) => {
-  const actual = await importOriginal<typeof import("@calcom/lib/constants")>();
+vi.mock("@calndrbrnd/lib/constants", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@calndrbrnd/lib/constants")>();
   return {
     ...actual,
     IS_TEAM_BILLING_ENABLED: false,
@@ -68,7 +68,7 @@ vi.mock("@calcom/lib/constants", async (importOriginal) => {
   };
 });
 
-vi.mock("@calcom/lib/logger", () => ({
+vi.mock("@calndrbrnd/lib/logger", () => ({
   default: {
     getSubLogger: vi.fn(() => ({
       debug: vi.fn(),
@@ -78,7 +78,7 @@ vi.mock("@calcom/lib/logger", () => ({
   },
 }));
 
-vi.mock("@calcom/lib/safeStringify", () => ({
+vi.mock("@calndrbrnd/lib/safeStringify", () => ({
   safeStringify: vi.fn((obj) => JSON.stringify(obj)),
 }));
 
@@ -88,7 +88,7 @@ vi.mock("./next-auth-custom-adapter", () => ({
   })),
 }));
 
-vi.mock("@calcom/features/profile/repositories/ProfileRepository", () => ({
+vi.mock("@calndrbrnd/features/profile/repositories/ProfileRepository", () => ({
   ProfileRepository: {
     findAllProfilesForUserIncludingMovedUser: vi.fn(),
     findByUpIdWithAuth: vi.fn(),

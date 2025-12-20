@@ -1,9 +1,9 @@
-import type { PrismaClient } from "@calcom/prisma";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { AssignmentReasonRepository } from "@calcom/features/assignment-reason/repositories/AssignmentReasonRepository";
-import type { LuckyUserService } from "@calcom/features/bookings/lib/getLuckyUser";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { AssignmentReasonRepository } from "@calndrbrnd/features/assignment-reason/repositories/AssignmentReasonRepository";
+import type { LuckyUserService } from "@calndrbrnd/features/bookings/lib/getLuckyUser";
 import { ManagedEventManualReassignmentService } from "./ManagedEventManualReassignmentService";
 import { ManagedEventReassignmentService } from "./ManagedEventReassignmentService";
 import { ManagedEventAssignmentReasonService } from "./ManagedEventAssignmentReasonRecorder";

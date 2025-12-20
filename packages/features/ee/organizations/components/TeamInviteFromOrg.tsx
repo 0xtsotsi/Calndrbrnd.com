@@ -1,10 +1,10 @@
 import type { PropsWithChildren } from "react";
 import { useState } from "react";
 
-import type { RouterOutputs } from "@calcom/trpc";
-import { TextField } from "@calcom/ui/components/form";
-import { Avatar } from "@calcom/ui/components/avatar";
-import classNames from "@calcom/ui/classNames";
+import type { RouterOutputs } from "@calndrbrnd/trpc";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import classNames from "@calndrbrnd/ui/classNames";
 
 type TeamInviteFromOrgProps = PropsWithChildren<{
   selectedEmails?: string | string[];

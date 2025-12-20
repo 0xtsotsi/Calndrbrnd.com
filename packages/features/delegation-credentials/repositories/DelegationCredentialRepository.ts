@@ -1,14 +1,14 @@
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import logger from "@calcom/lib/logger";
+import { getOrganizationRepository } from "@calndrbrnd/features/ee/organizations/di/OrganizationRepository.container";
+import logger from "@calndrbrnd/lib/logger";
 import {
   serviceAccountKeySchema,
   type ServiceAccountKey,
   type EncryptedServiceAccountKey,
   encryptServiceAccountKey,
   decryptServiceAccountKey,
-} from "@calcom/lib/server/serviceAccountKey";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+} from "@calndrbrnd/lib/server/serviceAccountKey";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 export type { ServiceAccountKey };
 const repositoryLogger = logger.getSubLogger({ prefix: ["DelegationCredentialRepository"] });

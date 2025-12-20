@@ -1,7 +1,7 @@
 import { _generateMetadata, getTranslate } from "app/_utils";
 
-import LegacyPage from "@calcom/features/ee/teams/pages/team-appearance-view";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
+import LegacyPage from "@calndrbrnd/features/ee/teams/pages/team-appearance-view";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
 
 import { validateUserHasOrg } from "../../../../actions/validateUserHasOrg";
 

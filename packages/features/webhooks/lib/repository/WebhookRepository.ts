@@ -1,12 +1,12 @@
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { prisma as defaultPrisma } from "@calcom/prisma";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { TimeUnit, WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { UserPermissionRole, MembershipRole } from "@calcom/prisma/enums";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import { prisma as defaultPrisma } from "@calndrbrnd/prisma";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { TimeUnit, WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
+import { UserPermissionRole, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { parseWebhookVersion } from "../interface/IWebhookRepository";
 

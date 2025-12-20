@@ -2,7 +2,7 @@ import { ApiExtraModels, ApiProperty, ApiPropertyOptional, getSchemaPath } from 
 import { Type } from "class-transformer";
 import { IsEnum, IsISO8601, IsOptional, IsString, ValidateNested } from "class-validator";
 
-import { CALENDARS, SUCCESS_STATUS, ERROR_STATUS } from "@calcom/platform-constants";
+import { CALENDARS, SUCCESS_STATUS, ERROR_STATUS } from "@calndrbrnd/platform-constants";
 
 export enum CalendarEventStatus {
   ACCEPTED = "accepted",

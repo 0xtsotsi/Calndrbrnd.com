@@ -1,7 +1,7 @@
 import { useMemo, useEffect, useRef } from "react";
 
-import { ColumnFilterType, useDataTable } from "@calcom/features/data-table";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
+import { ColumnFilterType, useDataTable } from "@calndrbrnd/features/data-table";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
 
 /**
  * Custom hook to manage allowed filters for calendar view

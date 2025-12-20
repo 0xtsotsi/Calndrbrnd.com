@@ -7,13 +7,13 @@ const plugins = [withAxiom];
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   transpilePackages: [
-    "@calcom/app-store",
-    "@calcom/dayjs",
-    "@calcom/emails",
-    "@calcom/features",
-    "@calcom/lib",
-    "@calcom/prisma",
-    "@calcom/trpc",
+    "@calndrbrnd/app-store",
+    "@calndrbrnd/dayjs",
+    "@calndrbrnd/emails",
+    "@calndrbrnd/features",
+    "@calndrbrnd/lib",
+    "@calndrbrnd/prisma",
+    "@calndrbrnd/trpc",
   ],
   webpack: (config, { isServer }) => {
     if (isServer) {

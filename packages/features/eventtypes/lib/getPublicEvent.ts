@@ -1,23 +1,23 @@
-import type { LocationObject } from "@calcom/app-store/locations";
-import { privacyFilteredLocations } from "@calcom/app-store/locations";
-import { getAppFromSlug } from "@calcom/app-store/utils";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
-import { getBookingFieldsWithSystemFields } from "@calcom/features/bookings/lib/getBookingFields";
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { getSlugOrRequestedSlug } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { getDefaultEvent, getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getOrgOrTeamAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { isRecurringEvent, parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import type { PrismaClient } from "@calcom/prisma";
-import type { User as UserType } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import type { Team } from "@calcom/prisma/client";
-import type { BookerLayoutSettings } from "@calcom/prisma/zod-utils";
+import type { LocationObject } from "@calndrbrnd/app-store/locations";
+import { privacyFilteredLocations } from "@calndrbrnd/app-store/locations";
+import { getAppFromSlug } from "@calndrbrnd/app-store/utils";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@calndrbrnd/app-store/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import { getBookingFieldsWithSystemFields } from "@calndrbrnd/features/bookings/lib/getBookingFields";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { getSlugOrRequestedSlug } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { getDefaultEvent, getUsernameList } from "@calndrbrnd/features/eventtypes/lib/defaultEvents";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { getOrgOrTeamAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import { isRecurringEvent, parseRecurringEvent } from "@calndrbrnd/lib/isRecurringEvent";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { User as UserType } from "@calndrbrnd/prisma/client";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { Team } from "@calndrbrnd/prisma/client";
+import type { BookerLayoutSettings } from "@calndrbrnd/prisma/zod-utils";
 import {
   BookerLayouts,
   bookerLayoutOptions,
@@ -25,8 +25,8 @@ import {
   customInputSchema,
   teamMetadataSchema,
   userMetadata as userMetadataSchema,
-} from "@calcom/prisma/zod-utils";
-import type { UserProfile } from "@calcom/types/UserProfile";
+} from "@calndrbrnd/prisma/zod-utils";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
 
 const userSelect = {
   id: true,

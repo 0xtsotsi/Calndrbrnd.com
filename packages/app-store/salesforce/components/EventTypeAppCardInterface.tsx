@@ -1,20 +1,20 @@
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { useAppContextWithSchema } from "@calcom/app-store/EventTypeAppContext";
-import AppCard from "@calcom/app-store/_components/AppCard";
-import useIsAppEnabled from "@calcom/app-store/_utils/useIsAppEnabled";
-import type { EventTypeAppCardComponent } from "@calcom/app-store/types";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { InputField, Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Section } from "@calcom/ui/components/section";
-import { showToast } from "@calcom/ui/components/toast";
+import { useAppContextWithSchema } from "@calndrbrnd/app-store/EventTypeAppContext";
+import AppCard from "@calndrbrnd/app-store/_components/AppCard";
+import useIsAppEnabled from "@calndrbrnd/app-store/_utils/useIsAppEnabled";
+import type { EventTypeAppCardComponent } from "@calndrbrnd/app-store/types";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { InputField, Label } from "@calndrbrnd/ui/components/form";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Section } from "@calndrbrnd/ui/components/section";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { SalesforceRecordEnum } from "../lib/enums";
 import type { appDataSchema } from "../zod";

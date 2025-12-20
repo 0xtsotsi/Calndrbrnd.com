@@ -1,6 +1,6 @@
-import renderEmail from "@calcom/emails/src/renderEmail";
-import BaseEmail from "@calcom/emails/templates/_base-email";
-import type { App_RoutingForms_Form } from "@calcom/prisma/client";
+import renderEmail from "@calndrbrnd/emails/src/renderEmail";
+import BaseEmail from "@calndrbrnd/emails/templates/_base-email";
+import type { App_RoutingForms_Form } from "@calndrbrnd/prisma/client";
 
 import type { OrderedResponses } from "../../types/types";
 

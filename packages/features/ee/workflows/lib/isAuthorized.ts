@@ -1,7 +1,7 @@
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { Workflow } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import type { PermissionString } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import type { Workflow } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 export async function isAuthorized(
   workflow: Pick<Workflow, "id" | "teamId" | "userId"> | null,

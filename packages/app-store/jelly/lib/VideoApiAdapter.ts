@@ -1,7 +1,7 @@
-import type { CalendarEvent, EventBusyDate } from "@calcom/types/Calendar";
-import type { CredentialPayload } from "@calcom/types/Credential";
-import type { PartialReference } from "@calcom/types/EventManager";
-import type { VideoApiAdapter, VideoCallData } from "@calcom/types/VideoApiAdapter";
+import type { CalendarEvent, EventBusyDate } from "@calndrbrnd/types/Calendar";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
+import type { PartialReference } from "@calndrbrnd/types/EventManager";
+import type { VideoApiAdapter, VideoCallData } from "@calndrbrnd/types/VideoApiAdapter";
 
 type JellyToken = {
   access_token: string;

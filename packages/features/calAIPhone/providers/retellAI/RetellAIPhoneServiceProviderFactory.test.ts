@@ -1,13 +1,13 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import logger from "@calcom/lib/logger";
+import logger from "@calndrbrnd/lib/logger";
 
 import type { AIPhoneServiceProviderConfig } from "../../interfaces/AIPhoneService.interface";
 import { RetellAIPhoneServiceProvider } from "./RetellAIPhoneServiceProvider";
 import { RetellAIPhoneServiceProviderFactory } from "./RetellAIPhoneServiceProviderFactory";
 import { RetellSDKClient } from "./RetellSDKClient";
 
-vi.mock("@calcom/lib/logger", () => ({
+vi.mock("@calndrbrnd/lib/logger", () => ({
   default: {
     getSubLogger: vi.fn().mockReturnValue({
       info: vi.fn(),

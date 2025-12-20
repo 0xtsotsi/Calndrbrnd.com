@@ -4,19 +4,19 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { IS_VISUAL_REGRESSION_TESTING, ENABLE_PROFILE_SWITCHER } from "@calcom/lib/constants";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { UserPermissionRole } from "@calcom/prisma/enums";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Credits } from "@calcom/ui/components/credits";
-import { ButtonOrLink } from "@calcom/ui/components/dropdown";
-import { Icon } from "@calcom/ui/components/icon";
-import { Logo } from "@calcom/ui/components/logo";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { IS_VISUAL_REGRESSION_TESTING, ENABLE_PROFILE_SWITCHER } from "@calndrbrnd/lib/constants";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Credits } from "@calndrbrnd/ui/components/credits";
+import { ButtonOrLink } from "@calndrbrnd/ui/components/dropdown";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Logo } from "@calndrbrnd/ui/components/logo";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { KBarTrigger } from "../kbar/Kbar";
 import { Navigation } from "./navigation/Navigation";
@@ -25,7 +25,7 @@ import { ProfileDropdown } from "./user-dropdown/ProfileDropdown";
 import { UserDropdown } from "./user-dropdown/UserDropdown";
 
 // need to import without ssr to prevent hydration errors
-const Tips = dynamic(() => import("@calcom/features/tips").then((mod) => mod.Tips), {
+const Tips = dynamic(() => import("@calndrbrnd/features/tips").then((mod) => mod.Tips), {
   ssr: false,
 });
 

@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import { LearnMoreLink } from "@calndrbrnd/features/eventtypes/components/LearnMoreLink";
 import type {
   EventTypeSetup,
   InputClassNames,
   SelectClassNames,
   SettingsToggleClassNames,
-} from "@calcom/features/eventtypes/lib/types";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Frequency } from "@calcom/prisma/zod-utils";
-import type { RecurringEvent } from "@calcom/types/Calendar";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Select } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
+} from "@calndrbrnd/features/eventtypes/lib/types";
+import type { FormValues } from "@calndrbrnd/features/eventtypes/lib/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Frequency } from "@calndrbrnd/prisma/zod-utils";
+import type { RecurringEvent } from "@calndrbrnd/types/Calendar";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { SettingsToggle } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
 
 export type RecurringEventControllerProps = {
   eventType: EventTypeSetup;

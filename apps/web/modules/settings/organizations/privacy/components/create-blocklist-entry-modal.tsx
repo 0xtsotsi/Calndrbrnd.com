@@ -2,15 +2,15 @@
 
 import { Controller, useForm } from "react-hook-form";
 
-import { domainRegex, emailRegex } from "@calcom/lib/emailSchema";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { WatchlistType } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Input, Label, TextArea, ToggleGroup } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { domainRegex, emailRegex } from "@calndrbrnd/lib/emailSchema";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { WatchlistType } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dialog, DialogContent, DialogFooter, DialogHeader } from "@calndrbrnd/ui/components/dialog";
+import { Input, Label, TextArea, ToggleGroup } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 interface CreateBlocklistEntryModalProps {
   isOpen: boolean;

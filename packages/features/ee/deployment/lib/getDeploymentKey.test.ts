@@ -3,7 +3,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { getDeploymentKey, getDeploymentSignatureToken } from "./getDeploymentKey";
 
 // Mock the crypto module
-vi.mock("@calcom/lib/crypto", () => ({
+vi.mock("@calndrbrnd/lib/crypto", () => ({
   symmetricDecrypt: vi.fn((text: string, key: string) => {
     if (!key) return null;
     return text.replace("encrypted:", "");

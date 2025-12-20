@@ -1,6 +1,6 @@
-import dayjs from "@calcom/dayjs";
-import { TimeFormat } from "@calcom/lib/timeFormat";
-import { WorkflowActions } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { TimeFormat } from "@calndrbrnd/lib/timeFormat";
+import { WorkflowActions } from "@calndrbrnd/prisma/enums";
 
 export const whatsappEventCancelledTemplate = (
   isEditingMode: boolean,

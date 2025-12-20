@@ -1,7 +1,7 @@
 import { describe, expect, it, beforeEach, afterEach } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import { BookingStatus, MembershipRole } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import { BookingStatus, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import type { BookingAuditTaskConsumer } from "./BookingAuditTaskConsumer";
 import type { BookingAuditViewerService } from "./BookingAuditViewerService";

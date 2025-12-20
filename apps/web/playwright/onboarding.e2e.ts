@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-import { IdentityProvider } from "@calcom/prisma/enums";
+import { IdentityProvider } from "@calndrbrnd/prisma/enums";
 
 import { test } from "./lib/fixtures";
 

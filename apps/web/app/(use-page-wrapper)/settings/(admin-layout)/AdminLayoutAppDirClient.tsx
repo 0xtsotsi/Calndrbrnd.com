@@ -4,9 +4,9 @@ import { usePathname } from "next/navigation";
 import type { ComponentProps } from "react";
 import React from "react";
 
-import type Shell from "@calcom/features/shell/Shell";
-import type { UserPermissionRole } from "@calcom/prisma/enums";
-import { ErrorBoundary } from "@calcom/ui/components/errorBoundary";
+import type Shell from "@calndrbrnd/features/shell/Shell";
+import type { UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import { ErrorBoundary } from "@calndrbrnd/ui/components/errorBoundary";
 
 export type AdminLayoutProps = {
   children: React.ReactNode;

@@ -4,21 +4,21 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import {
   findTeamMembersMatchingAttributeLogic,
   TroubleshooterCase,
-} from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-import { RouteActionType } from "@calcom/app-store/routing-forms/zod";
-import { RaqbLogicResult } from "@calcom/lib/raqb/evaluateRaqbLogic";
-import * as getAttributesModule from "@calcom/lib/service/attribute/server/getAttributes";
-import type { AttributeType } from "@calcom/prisma/enums";
-import { RoutingFormFieldType } from "@calcom/routing-forms/lib/FieldTypes";
-import type { AttributesQueryValue, FormFieldsQueryValue } from "@calcom/routing-forms/types/types";
+} from "@calndrbrnd/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+import { RouteActionType } from "@calndrbrnd/app-store/routing-forms/zod";
+import { RaqbLogicResult } from "@calndrbrnd/lib/raqb/evaluateRaqbLogic";
+import * as getAttributesModule from "@calndrbrnd/lib/service/attribute/server/getAttributes";
+import type { AttributeType } from "@calndrbrnd/prisma/enums";
+import { RoutingFormFieldType } from "@calndrbrnd/routing-forms/lib/FieldTypes";
+import type { AttributesQueryValue, FormFieldsQueryValue } from "@calndrbrnd/routing-forms/types/types";
 
-vi.mock("@calcom/lib/service/attribute/server/getAttributes", () => {
+vi.mock("@calndrbrnd/lib/service/attribute/server/getAttributes", () => {
   return {
     getAttributesAssignmentData: vi.fn(),
   };
 });
 
-vi.mock("@calcom/app-store/routing-forms/components/react-awesome-query-builder/widgets", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/components/react-awesome-query-builder/widgets", () => ({
   default: {},
 }));
 

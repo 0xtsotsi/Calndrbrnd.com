@@ -2,14 +2,14 @@
 
 import { Suspense } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import type { PartialReference } from "@calcom/types/EventManager";
-import { DialogContent, DialogFooter, DialogHeader, DialogClose } from "@calcom/ui/components/dialog";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import dayjs from "@calndrbrnd/dayjs";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { PartialReference } from "@calndrbrnd/types/EventManager";
+import { DialogContent, DialogFooter, DialogHeader, DialogClose } from "@calndrbrnd/ui/components/dialog";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 type BookingItem = RouterOutputs["viewer"]["bookings"]["get"]["bookings"][number];
 type Session = RouterOutputs["viewer"]["calVideo"]["getMeetingInformation"]["data"][number];

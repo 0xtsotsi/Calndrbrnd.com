@@ -6,18 +6,18 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createMocks } from "node-mocks-http";
 import { describe, expect, test, vi, beforeEach } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import sendPayload from "@calcom/features/webhooks/lib/sendOrSchedulePayload";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { buildBooking, buildEventType, buildWebhook, buildUser } from "@calcom/lib/test/builder";
-import { prisma } from "@calcom/prisma";
-import type { Booking } from "@calcom/prisma/client";
-import { CreationSource, BookingStatus } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { getEventTypesFromDB } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import sendPayload from "@calndrbrnd/features/webhooks/lib/sendOrSchedulePayload";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { buildBooking, buildEventType, buildWebhook, buildUser } from "@calndrbrnd/lib/test/builder";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Booking } from "@calndrbrnd/prisma/client";
+import { CreationSource, BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import handler from "../../../pages/api/bookings/_post";
 
-vi.mock("@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB", () => ({
+vi.mock("@calndrbrnd/features/bookings/lib/handleNewBooking/getEventTypesFromDB", () => ({
   getEventTypesFromDB: vi.fn(),
 }));
 
@@ -61,22 +61,22 @@ const mockEventTypeData = {
 
 type CustomNextApiRequest = NextApiRequest & Request;
 type CustomNextApiResponse = NextApiResponse & Response;
-vi.mock("@calcom/features/webhooks/lib/sendOrSchedulePayload", () => ({
+vi.mock("@calndrbrnd/features/webhooks/lib/sendOrSchedulePayload", () => ({
   default: vi.fn().mockResolvedValue({}),
 }));
 
 const mockFindOriginalRescheduledBooking = vi.fn();
-vi.mock("@calcom/features/bookings/repositories/BookingRepository", () => ({
+vi.mock("@calndrbrnd/features/bookings/repositories/BookingRepository", () => ({
   BookingRepository: vi.fn().mockImplementation(() => ({
     findOriginalRescheduledBooking: mockFindOriginalRescheduledBooking,
   })),
 }));
 
-vi.mock("@calcom/features/watchlist/operations/check-if-users-are-blocked.controller", () => ({
+vi.mock("@calndrbrnd/features/watchlist/operations/check-if-users-are-blocked.controller", () => ({
   checkIfUsersAreBlocked: vi.fn().mockResolvedValue(false),
 }));
 
-vi.mock("@calcom/features/di/containers/QualifiedHosts", () => ({
+vi.mock("@calndrbrnd/features/di/containers/QualifiedHosts", () => ({
   getQualifiedHostsService: vi.fn().mockReturnValue({
     findQualifiedHostsWithDelegationCredentials: vi.fn().mockResolvedValue({
       qualifiedRRHosts: [],
@@ -86,7 +86,7 @@ vi.mock("@calcom/features/di/containers/QualifiedHosts", () => ({
   }),
 }));
 
-vi.mock("@calcom/features/bookings/lib/EventManager", () => ({
+vi.mock("@calndrbrnd/features/bookings/lib/EventManager", () => ({
   default: vi.fn().mockImplementation(() => ({
     reschedule: vi.fn().mockResolvedValue({
       results: [],
@@ -110,7 +110,7 @@ vi.mock("@calcom/features/bookings/lib/EventManager", () => ({
   },
 }));
 
-vi.mock("@calcom/lib/availability", () => ({
+vi.mock("@calndrbrnd/lib/availability", () => ({
   getUserAvailability: vi.fn().mockResolvedValue([
     {
       start: new Date("1970-01-01T09:00:00.000Z"),
@@ -127,13 +127,13 @@ vi.mock("@calcom/lib/availability", () => ({
   ]),
 }));
 
-vi.mock("@calcom/features/bookings/lib/handleNewBooking/ensureAvailableUsers", () => ({
+vi.mock("@calndrbrnd/features/bookings/lib/handleNewBooking/ensureAvailableUsers", () => ({
   ensureAvailableUsers: vi.fn().mockImplementation(async (eventType) => {
     return eventType.users || [{ id: 2, email: "test@example.com", name: "Test User", isFixed: false }];
   }),
 }));
 
-vi.mock("@calcom/features/profile/repositories/ProfileRepository", () => ({
+vi.mock("@calndrbrnd/features/profile/repositories/ProfileRepository", () => ({
   ProfileRepository: {
     findManyForUser: vi.fn().mockResolvedValue([]),
     buildPersonalProfileFromUser: vi.fn().mockReturnValue({
@@ -145,27 +145,27 @@ vi.mock("@calcom/features/profile/repositories/ProfileRepository", () => ({
     }),
   },
 }));
-vi.mock("@calcom/features/flags/features.repository", () => ({
+vi.mock("@calndrbrnd/features/flags/features.repository", () => ({
   FeaturesRepository: vi.fn().mockImplementation(() => ({
     checkIfFeatureIsEnabledGlobally: vi.fn().mockResolvedValue(false),
     checkIfTeamHasFeature: vi.fn().mockResolvedValue(false),
   })),
 }));
 
-vi.mock("@calcom/features/webhooks/lib/getWebhooks", () => ({
+vi.mock("@calndrbrnd/features/webhooks/lib/getWebhooks", () => ({
   default: vi.fn().mockResolvedValue([]),
 }));
 
-vi.mock("@calcom/features/ee/workflows/lib/getAllWorkflows", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/lib/getAllWorkflows", () => ({
   getAllWorkflows: vi.fn().mockResolvedValue([]),
   workflowSelect: {},
 }));
 
-vi.mock("@calcom/features/ee/workflows/lib/getAllWorkflowsFromEventType", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/lib/getAllWorkflowsFromEventType", () => ({
   getAllWorkflowsFromEventType: vi.fn().mockResolvedValue([]),
 }));
 
-vi.mock("@calcom/lib/server/i18n", () => {
+vi.mock("@calndrbrnd/lib/server/i18n", () => {
   const mockT = (key: string, options?: any) => {
     if (key === "event_between_users") {
       return `${options?.eventName} between ${options?.host} and ${options?.attendeeName}`;

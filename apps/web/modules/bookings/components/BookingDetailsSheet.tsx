@@ -4,27 +4,27 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { useBookingLocation } from "@calcom/features/bookings/hooks";
-import { shouldShowFieldInCustomResponses } from "@calcom/lib/bookings/SystemField";
-import { formatPrice } from "@calcom/lib/currencyConversions";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { getEveryFreqFor } from "@calcom/lib/recurringStrings";
-import { BookingStatus } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { useBookingLocation } from "@calndrbrnd/features/bookings/hooks";
+import { shouldShowFieldInCustomResponses } from "@calndrbrnd/lib/bookings/SystemField";
+import { formatPrice } from "@calndrbrnd/lib/currencyConversions";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { getEveryFreqFor } from "@calndrbrnd/lib/recurringStrings";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 import {
   bookingMetadataSchema,
   eventTypeBookingFields,
   EventTypeMetaDataSchema,
-} from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc/react";
-import type { RecurringEvent } from "@calcom/types/Calendar";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Icon } from "@calcom/ui/components/icon";
+} from "@calndrbrnd/prisma/zod-utils";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { RecurringEvent } from "@calndrbrnd/types/Calendar";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 import {
   Sheet,
   SheetContent,
@@ -32,7 +32,7 @@ import {
   SheetHeader,
   SheetFooter,
   SheetTitle,
-} from "@calcom/ui/components/sheet";
+} from "@calndrbrnd/ui/components/sheet";
 
 import assignmentReasonBadgeTitleMap from "@lib/booking/assignmentReasonBadgeTitleMap";
 

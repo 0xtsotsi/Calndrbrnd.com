@@ -1,6 +1,6 @@
-import { managedEventManualReassignment } from "@calcom/features/ee/managed-event-types/reassignment";
-import { getBookingAccessService } from "@calcom/features/di/containers/BookingAccessService";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { managedEventManualReassignment } from "@calndrbrnd/features/ee/managed-event-types/reassignment";
+import { getBookingAccessService } from "@calndrbrnd/features/di/containers/BookingAccessService";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

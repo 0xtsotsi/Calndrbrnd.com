@@ -1,4 +1,4 @@
-import { EmailsAndSmsSideEffectsPayload } from "@calcom/features/bookings/lib/BookingEmailSmsHandler";
+import { EmailsAndSmsSideEffectsPayload } from "@calndrbrnd/features/bookings/lib/BookingEmailSmsHandler";
 
 export type BookingEmailAndSmsTaskPayload = {
   bookingId: number;

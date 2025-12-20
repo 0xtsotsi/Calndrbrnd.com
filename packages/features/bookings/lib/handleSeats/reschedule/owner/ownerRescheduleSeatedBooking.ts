@@ -1,5 +1,5 @@
  
-import type EventManager from "@calcom/features/bookings/lib/EventManager";
+import type EventManager from "@calndrbrnd/features/bookings/lib/EventManager";
 
 import type { createLoggerWithEventDetails } from "../../../handleNewBooking/logger";
 import type {

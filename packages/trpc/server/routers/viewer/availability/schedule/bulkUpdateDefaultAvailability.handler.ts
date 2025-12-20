@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { TRPCError } from "@trpc/server";
 

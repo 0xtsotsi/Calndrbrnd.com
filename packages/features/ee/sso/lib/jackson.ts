@@ -9,7 +9,7 @@ import type {
   SAMLResponsePayload,
 } from "@boxyhq/saml-jackson";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
 
 import { clientSecretVerifier, oidcPath, samlAudience, samlDatabaseUrl, samlPath } from "./saml";
 

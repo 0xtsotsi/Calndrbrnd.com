@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { shallow } from "zustand/shallow";
 
-import dayjs from "@calcom/dayjs";
-import classNames from "@calcom/ui/classNames";
+import dayjs from "@calndrbrnd/dayjs";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { useCalendarStore } from "../../state/store";
 import { calculateEventLayouts, createLayoutMap } from "../../utils/overlap";

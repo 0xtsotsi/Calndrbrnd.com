@@ -1,4 +1,4 @@
-import { WorkspacePlatformRepository } from "@calcom/lib/server/repository/workspacePlatform";
+import { WorkspacePlatformRepository } from "@calndrbrnd/lib/server/repository/workspacePlatform";
 
 import { TRPCError } from "@trpc/server";
 

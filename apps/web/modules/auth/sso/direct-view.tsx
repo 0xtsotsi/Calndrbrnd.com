@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-import { HOSTED_CAL_FEATURES } from "@calcom/lib/constants";
+import { HOSTED_CAL_FEATURES } from "@calndrbrnd/lib/constants";
 
 import type { inferSSRProps } from "@lib/types/inferSSRProps";
 

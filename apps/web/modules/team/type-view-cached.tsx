@@ -1,7 +1,7 @@
 "use client";
 
-import { BookerWebWrapper, type BookerWebWrapperAtomProps } from "@calcom/atoms/booker";
-import { getBookerWrapperClasses } from "@calcom/features/bookings/Booker/utils/getBookerWrapperClasses";
+import { BookerWebWrapper, type BookerWebWrapperAtomProps } from "@calndrbrnd/atoms/booker";
+import { getBookerWrapperClasses } from "@calndrbrnd/features/bookings/Booker/utils/getBookerWrapperClasses";
 
 import BookingPageErrorBoundary from "@components/error/BookingPageErrorBoundary";
 

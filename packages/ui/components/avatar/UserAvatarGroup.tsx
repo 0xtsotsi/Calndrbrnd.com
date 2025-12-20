@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import type { User } from "@calcom/prisma/client";
-import type { UserProfile } from "@calcom/types/UserProfile";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import type { User } from "@calndrbrnd/prisma/client";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
 
 import { AvatarGroup } from "./AvatarGroup";
 

@@ -5,8 +5,8 @@ import { BadRequestException, ConflictException, Injectable } from "@nestjs/comm
 import {
   verifyPhoneNumber,
   sendVerificationCode as sendPhoneVerificationCode,
-} from "@calcom/platform-libraries";
-import { sendEmailVerificationByCode, verifyEmailCodeHandler } from "@calcom/platform-libraries/emails";
+} from "@calndrbrnd/platform-libraries";
+import { sendEmailVerificationByCode, verifyEmailCodeHandler } from "@calndrbrnd/platform-libraries/emails";
 
 @Injectable()
 export class VerifiedResourcesService {

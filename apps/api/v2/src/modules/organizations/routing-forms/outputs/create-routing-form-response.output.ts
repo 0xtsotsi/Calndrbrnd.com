@@ -6,7 +6,7 @@ import {
   ApiResponseWithoutData,
   SlotsOutput_2024_09_04,
   RangeSlotsOutput_2024_09_04,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 class Routing {
   @ApiProperty({

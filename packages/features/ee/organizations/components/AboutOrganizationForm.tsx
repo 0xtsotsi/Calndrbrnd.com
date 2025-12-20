@@ -3,15 +3,15 @@
 import { useRouter } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
 
-import { useOnboarding } from "@calcom/features/ee/organizations/lib/onboardingStore";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { ImageUploader } from "@calcom/ui/components/image-uploader";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { useOnboarding } from "@calndrbrnd/features/ee/organizations/lib/onboardingStore";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { ImageUploader } from "@calndrbrnd/ui/components/image-uploader";
+import { TextAreaField } from "@calndrbrnd/ui/components/form";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 export const AboutOrganizationForm = () => {
   const { t } = useLocale();

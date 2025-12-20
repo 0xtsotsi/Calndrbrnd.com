@@ -3,37 +3,37 @@ import { cloneDeep } from "lodash";
 import {
   enrichHostsWithDelegationCredentials,
   enrichUserWithDelegationCredentialsIncludeServiceAccountKey,
-} from "@calcom/app-store/delegationCredential";
-import { OrganizerDefaultConferencingAppType, getLocationValueForDB } from "@calcom/app-store/locations";
-import { eventTypeAppMetadataOptionalSchema } from "@calcom/app-store/zod-utils";
-import dayjs from "@calcom/dayjs";
+} from "@calndrbrnd/app-store/delegationCredential";
+import { OrganizerDefaultConferencingAppType, getLocationValueForDB } from "@calndrbrnd/app-store/locations";
+import { eventTypeAppMetadataOptionalSchema } from "@calndrbrnd/app-store/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
 import {
   sendReassignedEmailsAndSMS,
   sendReassignedScheduledEmailsAndSMS,
   sendReassignedUpdatedEmailsAndSMS,
-} from "@calcom/emails/email-manager";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import { getAllCredentialsIncludeServiceAccountKey } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import { getBookingResponsesPartialSchema } from "@calcom/features/bookings/lib/getBookingResponsesSchema";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { ensureAvailableUsers } from "@calcom/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import type { IsFixedAwareUser } from "@calcom/features/bookings/lib/handleNewBooking/types";
-import { getLuckyUserService } from "@calcom/features/di/containers/LuckyUser";
+} from "@calndrbrnd/emails/email-manager";
+import EventManager from "@calndrbrnd/features/bookings/lib/EventManager";
+import { getAllCredentialsIncludeServiceAccountKey } from "@calndrbrnd/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import { getBookingResponsesPartialSchema } from "@calndrbrnd/features/bookings/lib/getBookingResponsesSchema";
+import { getCalEventResponses } from "@calndrbrnd/features/bookings/lib/getCalEventResponses";
+import { ensureAvailableUsers } from "@calndrbrnd/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
+import { getEventTypesFromDB } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import type { IsFixedAwareUser } from "@calndrbrnd/features/bookings/lib/handleNewBooking/types";
+import { getLuckyUserService } from "@calndrbrnd/features/di/containers/LuckyUser";
 import AssignmentReasonRecorder, {
   RRReassignmentType,
-} from "@calcom/features/ee/round-robin/assignmentReason/AssignmentReasonRecorder";
-import { getEventName } from "@calcom/features/eventtypes/lib/eventNaming";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { IdempotencyKeyService } from "@calcom/lib/idempotencyKey/idempotencyKeyService";
-import { isPrismaObjOrUndefined } from "@calcom/lib/isPrismaObj";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import { prisma } from "@calcom/prisma";
-import { userMetadata as userMetadataSchema } from "@calcom/prisma/zod-utils";
-import type { EventTypeMetadata, PlatformClientParams } from "@calcom/prisma/zod-utils";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+} from "@calndrbrnd/features/ee/round-robin/assignmentReason/AssignmentReasonRecorder";
+import { getEventName } from "@calndrbrnd/features/eventtypes/lib/eventNaming";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { IdempotencyKeyService } from "@calndrbrnd/lib/idempotencyKey/idempotencyKeyService";
+import { isPrismaObjOrUndefined } from "@calndrbrnd/lib/isPrismaObj";
+import logger from "@calndrbrnd/lib/logger";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import { prisma } from "@calndrbrnd/prisma";
+import { userMetadata as userMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { EventTypeMetadata, PlatformClientParams } from "@calndrbrnd/prisma/zod-utils";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import { handleRescheduleEventManager } from "./handleRescheduleEventManager";
 import { handleWorkflowsUpdate } from "./roundRobinManualReassignment";

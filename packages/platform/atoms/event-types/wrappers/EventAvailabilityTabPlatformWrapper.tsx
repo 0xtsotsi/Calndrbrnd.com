@@ -1,10 +1,10 @@
 import { useFormContext } from "react-hook-form";
 
-import type { EventAvailabilityTabCustomClassNames } from "@calcom/features/eventtypes/components/tabs/availability/EventAvailabilityTab";
-import { EventAvailabilityTab } from "@calcom/features/eventtypes/components/tabs/availability/EventAvailabilityTab";
-import type { ScheduleQueryData } from "@calcom/features/eventtypes/components/tabs/availability/EventAvailabilityTab";
-import type { EventTypeSetup, FormValues } from "@calcom/features/eventtypes/lib/types";
-import type { User } from "@calcom/prisma/client";
+import type { EventAvailabilityTabCustomClassNames } from "@calndrbrnd/features/eventtypes/components/tabs/availability/EventAvailabilityTab";
+import { EventAvailabilityTab } from "@calndrbrnd/features/eventtypes/components/tabs/availability/EventAvailabilityTab";
+import type { ScheduleQueryData } from "@calndrbrnd/features/eventtypes/components/tabs/availability/EventAvailabilityTab";
+import type { EventTypeSetup, FormValues } from "@calndrbrnd/features/eventtypes/lib/types";
+import type { User } from "@calndrbrnd/prisma/client";
 
 import { useAtomSchedule } from "../../hooks/schedules/useAtomSchedule";
 import { useSchedules } from "../../hooks/schedules/useSchedules";

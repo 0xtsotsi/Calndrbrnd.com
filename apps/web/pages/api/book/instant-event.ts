@@ -1,12 +1,12 @@
 import type { NextApiRequest } from "next";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getInstantBookingCreateService } from "@calcom/features/bookings/di/InstantBookingCreateService.container";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import getIP from "@calcom/lib/getIP";
-import { piiHasher } from "@calcom/lib/server/PiiHasher";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { CreationSource } from "@calcom/prisma/enums";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getInstantBookingCreateService } from "@calndrbrnd/features/bookings/di/InstantBookingCreateService.container";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import getIP from "@calndrbrnd/lib/getIP";
+import { piiHasher } from "@calndrbrnd/lib/server/PiiHasher";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import { CreationSource } from "@calndrbrnd/prisma/enums";
 
 async function handler(req: NextApiRequest & { userId?: number }) {
   const userIp = getIP(req);

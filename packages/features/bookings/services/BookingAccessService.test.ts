@@ -1,14 +1,14 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { BookingRepository } from "../repositories/BookingRepository";
 import { BookingAccessService } from "./BookingAccessService";
 
 vi.mock("../repositories/BookingRepository");
-vi.mock("@calcom/features/users/repositories/UserRepository");
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository");
 
 describe("BookingAccessService", () => {
   let service: BookingAccessService;

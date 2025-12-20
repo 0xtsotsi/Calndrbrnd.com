@@ -1,5 +1,5 @@
-import logger from "@calcom/lib/logger";
-import { MembershipRole } from "@calcom/prisma/enums";
+import logger from "@calndrbrnd/lib/logger";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { getSubscriptionFromId } from "../../subscriptions";
 import { BillingPortalService } from "../base/BillingPortalService";

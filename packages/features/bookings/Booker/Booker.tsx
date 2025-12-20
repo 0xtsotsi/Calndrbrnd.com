@@ -4,24 +4,24 @@ import StickyBox from "react-sticky-box";
 import { Toaster } from "sonner";
 import { shallow } from "zustand/shallow";
 
-import BookingPageTagManager from "@calcom/app-store/BookingPageTagManager";
-import { useIsPlatformBookerEmbed } from "@calcom/atoms/hooks/useIsPlatformBookerEmbed";
-import dayjs from "@calcom/dayjs";
-import PoweredBy from "@calcom/ee/components/PoweredBy";
-import { useEmbedUiConfig } from "@calcom/embed-core/embed-iframe";
-import { updateEmbedBookerState } from "@calcom/embed-core/src/embed-iframe";
-import TurnstileCaptcha from "@calcom/features/auth/Turnstile";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import useSkipConfirmStep from "@calcom/features/bookings/Booker/components/hooks/useSkipConfirmStep";
-import { getQueryParam } from "@calcom/features/bookings/Booker/utils/query-param";
-import { useNonEmptyScheduleDays } from "@calcom/features/schedules/lib/use-schedule/useNonEmptyScheduleDays";
-import { scrollIntoViewSmooth } from "@calcom/lib/browser/browser.utils";
-import { PUBLIC_INVALIDATE_AVAILABLE_SLOTS_ON_BOOKING_FORM } from "@calcom/lib/constants";
-import { CLOUDFLARE_SITE_ID, CLOUDFLARE_USE_TURNSTILE_IN_BOOKER } from "@calcom/lib/constants";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
-import classNames from "@calcom/ui/classNames";
-import { UnpublishedEntity } from "@calcom/ui/components/unpublished-entity";
+import BookingPageTagManager from "@calndrbrnd/app-store/BookingPageTagManager";
+import { useIsPlatformBookerEmbed } from "@calndrbrnd/atoms/hooks/useIsPlatformBookerEmbed";
+import dayjs from "@calndrbrnd/dayjs";
+import PoweredBy from "@calndrbrnd/ee/components/PoweredBy";
+import { useEmbedUiConfig } from "@calndrbrnd/embed-core/embed-iframe";
+import { updateEmbedBookerState } from "@calndrbrnd/embed-core/src/embed-iframe";
+import TurnstileCaptcha from "@calndrbrnd/features/auth/Turnstile";
+import { useBookerStoreContext } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import useSkipConfirmStep from "@calndrbrnd/features/bookings/Booker/components/hooks/useSkipConfirmStep";
+import { getQueryParam } from "@calndrbrnd/features/bookings/Booker/utils/query-param";
+import { useNonEmptyScheduleDays } from "@calndrbrnd/features/schedules/lib/use-schedule/useNonEmptyScheduleDays";
+import { scrollIntoViewSmooth } from "@calndrbrnd/lib/browser/browser.utils";
+import { PUBLIC_INVALIDATE_AVAILABLE_SLOTS_ON_BOOKING_FORM } from "@calndrbrnd/lib/constants";
+import { CLOUDFLARE_SITE_ID, CLOUDFLARE_USE_TURNSTILE_IN_BOOKER } from "@calndrbrnd/lib/constants";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { BookerLayouts } from "@calndrbrnd/prisma/zod-utils";
+import classNames from "@calndrbrnd/ui/classNames";
+import { UnpublishedEntity } from "@calndrbrnd/ui/components/unpublished-entity";
 
 import { VerifyCodeDialog } from "../components/VerifyCodeDialog";
 import { AvailableTimeSlots } from "./components/AvailableTimeSlots";
@@ -181,7 +181,7 @@ const BookerComponent = ({
       timeslotsRef.current &&
       !embedUiConfig.disableAutoScroll
     ) {
-      // eslint-disable-next-line @calcom/eslint/no-scroll-into-view-embed -- We are allowing it here because scrollToTimeSlots is called on explicit user action where it makes sense to scroll, remember that the goal is to not do auto-scroll on embed load because that ends up scrolling the embedding webpage too
+      // eslint-disable-next-line @calndrbrnd/eslint/no-scroll-into-view-embed -- We are allowing it here because scrollToTimeSlots is called on explicit user action where it makes sense to scroll, remember that the goal is to not do auto-scroll on embed load because that ends up scrolling the embedding webpage too
       scrollIntoViewSmooth(timeslotsRef.current, isEmbed);
       scrolledToTimeslotsOnce.current = true;
     }

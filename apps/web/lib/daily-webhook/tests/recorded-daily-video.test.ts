@@ -6,20 +6,20 @@ import {
   getMockBookingAttendee,
   getOrganizer,
   getBooker,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { expectWebhookToHaveBeenCalledWith } from "@calcom/web/test/utils/bookingScenario/expects";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { expectWebhookToHaveBeenCalledWith } from "@calndrbrnd/web/test/utils/bookingScenario/expects";
 
 import { NextRequest } from "next/server";
 import { createMocks } from "node-mocks-http";
 import { describe, afterEach, test, vi, beforeEach, beforeAll, expect } from "vitest";
 
-import { appStoreMetadata } from "@calcom/app-store/apps.metadata.generated";
-import { getRoomNameFromRecordingId, getBatchProcessorJobAccessLink } from "@calcom/app-store/dailyvideo/lib";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import prisma from "@calcom/prisma";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
-import * as recordedDailyVideoRoute from "@calcom/web/app/api/recorded-daily-video/route";
+import { appStoreMetadata } from "@calndrbrnd/app-store/apps.metadata.generated";
+import { getRoomNameFromRecordingId, getBatchProcessorJobAccessLink } from "@calndrbrnd/app-store/dailyvideo/lib";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import prisma from "@calndrbrnd/prisma";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import * as recordedDailyVideoRoute from "@calndrbrnd/web/app/api/recorded-daily-video/route";
 
 // Mock the next/headers module before importing the handler
 vi.mock("next/headers", () => ({
@@ -63,14 +63,14 @@ beforeAll(() => {
   vi.stubEnv("SENDGRID_EMAIL", "FAKE_SENDGRID_EMAIL");
 });
 
-vi.mock("@calcom/app-store/dailyvideo/lib", () => {
+vi.mock("@calndrbrnd/app-store/dailyvideo/lib", () => {
   return {
     getRoomNameFromRecordingId: vi.fn(),
     getBatchProcessorJobAccessLink: vi.fn(),
   };
 });
 
-vi.mock("@calcom/lib/videoTokens", () => {
+vi.mock("@calndrbrnd/lib/videoTokens", () => {
   return {
     generateVideoToken: vi.fn().mockReturnValue("MOCK_TOKEN"),
   };

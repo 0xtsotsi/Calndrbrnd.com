@@ -14,11 +14,11 @@ import { useForm, useFormContext } from "react-hook-form";
 import { Toaster } from "sonner";
 import { z } from "zod";
 
-import getStripe from "@calcom/app-store/stripepayment/lib/client";
-import { getPremiumPlanPriceValue } from "@calcom/app-store/stripepayment/lib/utils";
-import { getOrgUsernameFromEmail } from "@calcom/features/auth/signup/utils/getOrgUsernameFromEmail";
-import { getOrgFullOrigin } from "@calcom/features/ee/organizations/lib/orgDomains";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
+import getStripe from "@calndrbrnd/app-store/stripepayment/lib/client";
+import { getPremiumPlanPriceValue } from "@calndrbrnd/app-store/stripepayment/lib/utils";
+import { getOrgUsernameFromEmail } from "@calndrbrnd/features/auth/signup/utils/getOrgUsernameFromEmail";
+import { getOrgFullOrigin } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import ServerTrans from "@calndrbrnd/lib/components/ServerTrans";
 import {
   APP_NAME,
   URL_PROTOCOL_REGEX,
@@ -28,23 +28,23 @@ import {
   WEBSITE_PRIVACY_POLICY_URL,
   WEBSITE_TERMS_URL,
   WEBSITE_URL,
-} from "@calcom/lib/constants";
-import { isENVDev } from "@calcom/lib/env";
-import { fetchUsername } from "@calcom/lib/fetchUsername";
-import { pushGTMEvent } from "@calcom/lib/gtm";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { INVALID_CLOUDFLARE_TOKEN_ERROR } from "@calcom/lib/server/checkCfTurnstileToken";
-import { IS_EUROPE } from "@calcom/lib/timezoneConstants";
-import { signupSchema as apiSignupSchema } from "@calcom/prisma/zod-utils";
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { PasswordField, CheckboxField, TextField, Form, SelectField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/lib/constants";
+import { isENVDev } from "@calndrbrnd/lib/env";
+import { fetchUsername } from "@calndrbrnd/lib/fetchUsername";
+import { pushGTMEvent } from "@calndrbrnd/lib/gtm";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { INVALID_CLOUDFLARE_TOKEN_ERROR } from "@calndrbrnd/lib/server/checkCfTurnstileToken";
+import { IS_EUROPE } from "@calndrbrnd/lib/timezoneConstants";
+import { signupSchema as apiSignupSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { PasswordField, CheckboxField, TextField, Form, SelectField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import type { getServerSideProps } from "@lib/signup/getServerSideProps";
 
@@ -53,7 +53,7 @@ const signupSchema = apiSignupSchema.extend({
   cfToken: z.string().optional(),
 });
 
-const TurnstileCaptcha = dynamic(() => import("@calcom/features/auth/Turnstile"), { ssr: false });
+const TurnstileCaptcha = dynamic(() => import("@calndrbrnd/features/auth/Turnstile"), { ssr: false });
 
 type FormValues = z.infer<typeof signupSchema>;
 

@@ -1,11 +1,11 @@
 import { expect } from "@playwright/test";
 import { JSDOM } from "jsdom";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { generateHashedLink } from "@calcom/lib/generateHashedLink";
-import { randomString } from "@calcom/lib/random";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { Schedule, TimeRange } from "@calcom/types/schedule";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { generateHashedLink } from "@calndrbrnd/lib/generateHashedLink";
+import { randomString } from "@calndrbrnd/lib/random";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { Schedule, TimeRange } from "@calndrbrnd/types/schedule";
 
 import { test, todo } from "./lib/fixtures";
 import {

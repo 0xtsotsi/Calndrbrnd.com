@@ -2,24 +2,24 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import type { FormValues, PrivateLinkWithOptions } from "@calcom/features/eventtypes/lib/types";
-import { generateHashedLink } from "@calcom/lib/generateHashedLink";
-import { isLinkExpired as utilsIsLinkExpired } from "@calcom/lib/hashedLinksUtils";
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent } from "@calcom/ui/components/dialog";
-import { TextField } from "@calcom/ui/components/form";
-import { DatePicker } from "@calcom/ui/components/form";
-import { NumberInput } from "@calcom/ui/components/form";
-import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import dayjs from "@calndrbrnd/dayjs";
+import type { EventTypeSetupProps } from "@calndrbrnd/features/eventtypes/lib/types";
+import type { FormValues, PrivateLinkWithOptions } from "@calndrbrnd/features/eventtypes/lib/types";
+import { generateHashedLink } from "@calndrbrnd/lib/generateHashedLink";
+import { isLinkExpired as utilsIsLinkExpired } from "@calndrbrnd/lib/hashedLinksUtils";
+import { useCopy } from "@calndrbrnd/lib/hooks/useCopy";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dialog, DialogContent } from "@calndrbrnd/ui/components/dialog";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { DatePicker } from "@calndrbrnd/ui/components/form";
+import { NumberInput } from "@calndrbrnd/ui/components/form";
+import { RadioAreaGroup as RadioArea } from "@calndrbrnd/ui/components/radio";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 export const MultiplePrivateLinksController = ({
   team,

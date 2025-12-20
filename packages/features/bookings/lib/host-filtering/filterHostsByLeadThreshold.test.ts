@@ -1,14 +1,14 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import type { Mock } from "vitest";
 import { describe, expect, it, vi, afterEach, beforeEach } from "vitest";
 
-import { getLuckyUserService } from "@calcom/features/di/containers/LuckyUser";
-import { RRResetInterval, RRTimestampBasis } from "@calcom/prisma/enums";
+import { getLuckyUserService } from "@calndrbrnd/features/di/containers/LuckyUser";
+import { RRResetInterval, RRTimestampBasis } from "@calndrbrnd/prisma/enums";
 
 import { filterHostsByLeadThreshold, errorCodes } from "./filterHostsByLeadThreshold";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 

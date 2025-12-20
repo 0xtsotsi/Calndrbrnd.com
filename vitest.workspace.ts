@@ -79,7 +79,7 @@ const workspaces = packagedEmbedTestsOnly
             "apps/api/v1/**/*",
             "apps/api/v2/**/*",
           ],
-          name: "@calcom/lib",
+          name: "@calndrbrnd/lib",
           setupFiles: ["setupVitest.ts"],
         },
         resolve: {
@@ -103,7 +103,7 @@ const workspaces = packagedEmbedTestsOnly
             "packages/platform/**/*",
             "apps/api/v2/**/*",
           ],
-          name: "@calcom/api",
+          name: "@calndrbrnd/api",
           setupFiles: ["setupVitest.ts"],
         },
         resolve: {
@@ -115,7 +115,7 @@ const workspaces = packagedEmbedTestsOnly
       {
         test: {
           globals: true,
-          name: "@calcom/features",
+          name: "@calndrbrnd/features",
           include: ["packages/features/**/*.{test,spec}.tsx"],
           exclude: ["packages/features/form-builder/**/*", "packages/features/bookings/**/*"],
           environment: "jsdom",
@@ -125,7 +125,7 @@ const workspaces = packagedEmbedTestsOnly
 
       {
         test: {
-          name: "@calcom/closecom",
+          name: "@calndrbrnd/closecom",
           include: ["packages/app-store/closecom/**/*.{test,spec}.{ts,js}"],
           environment: "jsdom",
           setupFiles: ["packages/app-store/closecom/test/globals.ts"],
@@ -134,7 +134,7 @@ const workspaces = packagedEmbedTestsOnly
       {
         test: {
           globals: true,
-          name: "@calcom/app-store-core",
+          name: "@calndrbrnd/app-store-core",
           include: ["packages/app-store/*.{test,spec}.[jt]s?(x)"],
           exclude: ["packages/app-store/delegationCredential.test.ts"],
           environment: "jsdom",
@@ -144,7 +144,7 @@ const workspaces = packagedEmbedTestsOnly
       {
         test: {
           globals: true,
-          name: "@calcom/app-store-delegation-credential",
+          name: "@calndrbrnd/app-store-delegation-credential",
           include: ["packages/app-store/delegationCredential.test.ts"],
           environment: "node",
           setupFiles: ["setupVitest.ts"],
@@ -153,7 +153,7 @@ const workspaces = packagedEmbedTestsOnly
       {
         test: {
           globals: true,
-          name: "@calcom/routing-forms",
+          name: "@calndrbrnd/routing-forms",
           include: ["packages/app-store/routing-forms/**/*.test.tsx"],
           environment: "jsdom",
           setupFiles: ["packages/ui/components/test-setup.tsx"],
@@ -162,7 +162,7 @@ const workspaces = packagedEmbedTestsOnly
       {
         test: {
           globals: true,
-          name: "@calcom/ui",
+          name: "@calndrbrnd/ui",
           include: ["packages/ui/components/**/*.{test,spec}.[jt]s?(x)"],
           environment: "jsdom",
           setupFiles: ["packages/ui/components/test-setup.tsx"],
@@ -171,7 +171,7 @@ const workspaces = packagedEmbedTestsOnly
       {
         test: {
           globals: true,
-          name: "@calcom/features/form-builder",
+          name: "@calndrbrnd/features/form-builder",
           include: ["packages/features/form-builder/**/*.{test,spec}.[jt]sx"],
           environment: "jsdom",
           setupFiles: ["packages/ui/components/test-setup.tsx"],
@@ -180,7 +180,7 @@ const workspaces = packagedEmbedTestsOnly
       {
         test: {
           globals: true,
-          name: "@calcom/features/bookings",
+          name: "@calndrbrnd/features/bookings",
           include: ["packages/features/bookings/**/*.{test,spec}.[jt]sx"],
           environment: "jsdom",
           setupFiles: ["packages/ui/components/test-setup.tsx"],
@@ -189,7 +189,7 @@ const workspaces = packagedEmbedTestsOnly
       {
         test: {
           globals: true,
-          name: "@calcom/web/components",
+          name: "@calndrbrnd/web/components",
           include: ["apps/web/components/**/*.{test,spec}.[jt]sx"],
           environment: "jsdom",
           setupFiles: ["packages/ui/components/test-setup.tsx"],
@@ -206,7 +206,7 @@ const workspaces = packagedEmbedTestsOnly
       },
       {
         test: {
-          name: "@calcom/packages/lib/hooks",
+          name: "@calndrbrnd/packages/lib/hooks",
           include: ["packages/lib/hooks/**/*.{test,spec}.{ts,js}"],
           environment: "jsdom",
           setupFiles: [],
@@ -216,7 +216,7 @@ const workspaces = packagedEmbedTestsOnly
         test: {
           globals: true,
           environment: "jsdom",
-          name: "@calcom/web/modules/views",
+          name: "@calndrbrnd/web/modules/views",
           include: ["apps/web/modules/**/*.{test,spec}.tsx"],
           setupFiles: ["apps/web/modules/test-setup.ts"],
         },
@@ -226,7 +226,7 @@ const workspaces = packagedEmbedTestsOnly
         test: {
           globals: true,
           environment: "jsdom",
-          name: "@calcom/embeds",
+          name: "@calndrbrnd/embeds",
           include: ["packages/embeds/**/*.{test,spec}.{ts,js}"],
           exclude: ["packages/embeds/**/packaged/**/*.{test,spec}.{ts,js}"],
         },

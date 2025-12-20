@@ -1,13 +1,13 @@
 import { useSession } from "next-auth/react";
 import { useForm } from "react-hook-form";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { Form, TextField } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dialog, DialogContent, DialogFooter, DialogHeader } from "@calndrbrnd/ui/components/dialog";
+import { Form, TextField } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useDataTable } from "../../hooks";
 import type { CombinedFilterSegment } from "../../lib/types";

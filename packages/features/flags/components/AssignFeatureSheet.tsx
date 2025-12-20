@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { Checkbox, TextField } from "@calcom/ui/components/form";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Checkbox, TextField } from "@calndrbrnd/ui/components/form";
 import {
   Sheet,
   SheetContent,
@@ -16,9 +16,9 @@ import {
   SheetTitle,
   SheetBody,
   SheetFooter,
-} from "@calcom/ui/components/sheet";
-import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/sheet";
+import { SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 type Flag = RouterOutputs["viewer"]["features"]["list"][number];
 

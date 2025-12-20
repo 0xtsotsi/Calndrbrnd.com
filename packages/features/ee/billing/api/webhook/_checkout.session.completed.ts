@@ -1,11 +1,11 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import { PrismaAgentRepository } from "@calcom/features/calAIPhone/repositories/PrismaAgentRepository";
-import { PrismaPhoneNumberRepository } from "@calcom/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
-import { CreditsRepository } from "@calcom/features/credits/repositories/CreditsRepository";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
-import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
+import { createDefaultAIPhoneServiceProvider } from "@calndrbrnd/features/calAIPhone";
+import { PrismaAgentRepository } from "@calndrbrnd/features/calAIPhone/repositories/PrismaAgentRepository";
+import { PrismaPhoneNumberRepository } from "@calndrbrnd/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
+import { CreditsRepository } from "@calndrbrnd/features/credits/repositories/CreditsRepository";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import logger from "@calndrbrnd/lib/logger";
+import { prisma } from "@calndrbrnd/prisma";
+import { PhoneNumberSubscriptionStatus } from "@calndrbrnd/prisma/enums";
 
 import { CHECKOUT_SESSION_TYPES } from "../../constants";
 import type { SWHMap } from "./__handler";

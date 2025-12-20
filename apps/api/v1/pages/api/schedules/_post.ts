@@ -1,10 +1,10 @@
 import type { NextApiRequest } from "next";
 
-import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calcom/lib/availability";
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calndrbrnd/lib/availability";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import { schemaCreateScheduleBodyParams, schemaSchedulePublic } from "~/lib/validations/schedule";
 

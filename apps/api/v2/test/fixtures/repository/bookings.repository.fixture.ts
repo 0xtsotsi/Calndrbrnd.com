@@ -2,7 +2,7 @@ import { PrismaReadService } from "@/modules/prisma/prisma-read.service";
 import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { TestingModule } from "@nestjs/testing";
 
-import type { Booking, User, Prisma } from "@calcom/prisma/client";
+import type { Booking, User, Prisma } from "@calndrbrnd/prisma/client";
 
 export class BookingsRepositoryFixture {
   private prismaReadClient: PrismaReadService["prisma"];

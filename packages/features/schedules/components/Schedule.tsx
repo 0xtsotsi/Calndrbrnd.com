@@ -12,21 +12,21 @@ import type {
 import { Controller, useFieldArray, useFormContext } from "react-hook-form";
 import { createFilter, type GroupBase, type Props } from "react-select";
 
-import type { scheduleClassNames } from "@calcom/atoms/availability/types";
-import type { ConfigType } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { defaultDayRange as DEFAULT_DAY_RANGE } from "@calcom/lib/availability";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { weekdayNames } from "@calcom/lib/weekday";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import type { TimeRange } from "@calcom/types/schedule";
-import cn from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@calcom/ui/components/dropdown";
-import { Select } from "@calcom/ui/components/form";
-import { CheckboxField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import type { scheduleClassNames } from "@calndrbrnd/atoms/availability/types";
+import type { ConfigType } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import { defaultDayRange as DEFAULT_DAY_RANGE } from "@calndrbrnd/lib/availability";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { weekdayNames } from "@calndrbrnd/lib/weekday";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import type { TimeRange } from "@calndrbrnd/types/schedule";
+import cn from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dropdown, DropdownMenuContent, DropdownMenuTrigger } from "@calndrbrnd/ui/components/dropdown";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { CheckboxField } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 export type { TimeRange };
 

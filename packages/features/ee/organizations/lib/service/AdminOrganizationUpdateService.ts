@@ -1,12 +1,12 @@
-import { getOrgFullOrigin } from "@calcom/ee/organizations/lib/orgDomains";
-import type { OrganizationRepository } from "@calcom/features/ee/organizations/repositories/OrganizationRepository";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { renameDomain } from "@calcom/lib/domainManager/organization";
-import { getMetadataHelpers } from "@calcom/lib/getMetadataHelpers";
-import { HttpError } from "@calcom/lib/http-error";
-import type { Prisma, PrismaClient } from "@calcom/prisma/client";
-import { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
-import type { TAdminUpdate } from "@calcom/trpc/server/routers/viewer/organizations/adminUpdate.schema";
+import { getOrgFullOrigin } from "@calndrbrnd/ee/organizations/lib/orgDomains";
+import type { OrganizationRepository } from "@calndrbrnd/features/ee/organizations/repositories/OrganizationRepository";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { renameDomain } from "@calndrbrnd/lib/domainManager/organization";
+import { getMetadataHelpers } from "@calndrbrnd/lib/getMetadataHelpers";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import type { Prisma, PrismaClient } from "@calndrbrnd/prisma/client";
+import { teamMetadataStrictSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { TAdminUpdate } from "@calndrbrnd/trpc/server/routers/viewer/organizations/adminUpdate.schema";
 
 type AdminOrganizationUpdateServiceDeps = {
   prismaClient: PrismaClient;

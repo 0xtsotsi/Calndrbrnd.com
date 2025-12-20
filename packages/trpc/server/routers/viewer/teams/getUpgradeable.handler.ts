@@ -1,7 +1,7 @@
-import { IS_TEAM_BILLING_ENABLED } from "@calcom/lib/constants";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { IS_TEAM_BILLING_ENABLED } from "@calndrbrnd/lib/constants";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 type GetUpgradeableOptions = {
   userId: number;

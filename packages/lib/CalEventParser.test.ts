@@ -1,7 +1,7 @@
 import type { TFunction } from "i18next";
 import { describe, expect, it } from "vitest";
 
-import type { CalendarEvent } from "@calcom/types/Calendar";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import { getRichDescription } from "./CalEventParser";
 

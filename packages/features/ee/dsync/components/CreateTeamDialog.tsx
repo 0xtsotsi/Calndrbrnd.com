@@ -1,9 +1,9 @@
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { CreateANewTeamForm } from "@calcom/features/ee/teams/components";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { DialogContent } from "@calcom/ui/components/dialog";
-import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { CreateANewTeamForm } from "@calndrbrnd/features/ee/teams/components";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { DialogContent } from "@calndrbrnd/ui/components/dialog";
+import { revalidateTeamsList } from "@calndrbrnd/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 
 interface CreateTeamDialogProps {
   open: boolean;

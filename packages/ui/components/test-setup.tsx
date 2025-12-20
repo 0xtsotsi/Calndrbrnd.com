@@ -23,7 +23,7 @@ vi.mock("next-seo", () => ({
   LogoJsonLd: () => null,
 }));
 
-vi.mock("@calcom/features/ee/organizations/hooks", () => ({
+vi.mock("@calndrbrnd/features/ee/organizations/hooks", () => ({
   useOrgBrandingValues() {
     return {};
   },
@@ -33,7 +33,7 @@ vi.mock("react-sticky-box", () => ({
   default: ({ children }: { children: React.ReactNode }) => <div data-testid="sticky-box">{children}</div>,
 }));
 
-vi.mock("@calcom/features/ee/organizations/context/provider", () => ({
+vi.mock("@calndrbrnd/features/ee/organizations/context/provider", () => ({
   useOrgBranding() {
     return {};
   },
@@ -55,11 +55,11 @@ vi.mock("next/navigation", async () => ({
   },
 }));
 
-vi.mock("@calcom/lib/OgImages", async () => {
+vi.mock("@calndrbrnd/lib/OgImages", async () => {
   return {};
 });
 
-vi.mock("@calcom/lib/hooks/useLocale", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useLocale", () => ({
   useLocale: () => {
     return {
       t: (str: string) => str,
@@ -74,15 +74,15 @@ vi.mock("@calcom/lib/hooks/useLocale", () => ({
   },
 }));
 
-vi.mock("@calcom/atoms/hooks/useIsPlatform", () => ({
+vi.mock("@calndrbrnd/atoms/hooks/useIsPlatform", () => ({
   useIsPlatform: () => {
     return false;
   },
 }));
 
-vi.mock("@calcom/features/eventtypes/lib/getEventTypesByViewer", () => ({}));
-vi.mock("@calcom/features/eventtypes/lib/getEventTypesPublic", () => ({}));
-vi.mock("@calcom/ui/classNames", () => ({
+vi.mock("@calndrbrnd/features/eventtypes/lib/getEventTypesByViewer", () => ({}));
+vi.mock("@calndrbrnd/features/eventtypes/lib/getEventTypesPublic", () => ({}));
+vi.mock("@calndrbrnd/ui/classNames", () => ({
   default: (...args: string[]) => {
     return args.filter(Boolean).join(" ");
   },

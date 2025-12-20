@@ -6,8 +6,8 @@ import { StripeData } from "@/modules/stripe/utils/stripeDataSchemas";
 import { Logger, UnauthorizedException } from "@nestjs/common";
 import { Injectable } from "@nestjs/common";
 
-import { ApiResponseWithoutData } from "@calcom/platform-types";
-import type { Prisma } from "@calcom/prisma/client";
+import { ApiResponseWithoutData } from "@calndrbrnd/platform-types";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class OrganizationsStripeService {

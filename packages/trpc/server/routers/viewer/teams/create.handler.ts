@@ -1,14 +1,14 @@
 import type { NextApiRequest } from "next";
 
-import { generateTeamCheckoutSession } from "@calcom/features/ee/teams/lib/payments";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calcom/lib/constants";
-import { uploadLogo } from "@calcom/lib/server/avatar";
-import { resizeBase64Image } from "@calcom/lib/server/resizeBase64Image";
-import { getTrackingFromCookies } from "@calcom/lib/tracking";
-import type { TrackingData } from "@calcom/lib/tracking";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { generateTeamCheckoutSession } from "@calndrbrnd/features/ee/teams/lib/payments";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { uploadLogo } from "@calndrbrnd/lib/server/avatar";
+import { resizeBase64Image } from "@calndrbrnd/lib/server/resizeBase64Image";
+import { getTrackingFromCookies } from "@calndrbrnd/lib/tracking";
+import type { TrackingData } from "@calndrbrnd/lib/tracking";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

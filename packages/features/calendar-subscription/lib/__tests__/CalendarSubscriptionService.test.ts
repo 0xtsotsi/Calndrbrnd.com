@@ -2,12 +2,12 @@ import "../__mocks__/delegationCredential";
 
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import type { AdapterFactory } from "@calcom/features/calendar-subscription/adapters/AdaptersFactory";
-import type { CalendarCacheEventService } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheEventService";
-import type { CalendarSyncService } from "@calcom/features/calendar-subscription/lib/sync/CalendarSyncService";
-import type { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import type { ISelectedCalendarRepository } from "@calcom/features/selectedCalendar/repositories/SelectedCalendarRepository.interface";
-import type { SelectedCalendar } from "@calcom/prisma/client";
+import type { AdapterFactory } from "@calndrbrnd/features/calendar-subscription/adapters/AdaptersFactory";
+import type { CalendarCacheEventService } from "@calndrbrnd/features/calendar-subscription/lib/cache/CalendarCacheEventService";
+import type { CalendarSyncService } from "@calndrbrnd/features/calendar-subscription/lib/sync/CalendarSyncService";
+import type { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import type { ISelectedCalendarRepository } from "@calndrbrnd/features/selectedCalendar/repositories/SelectedCalendarRepository.interface";
+import type { SelectedCalendar } from "@calndrbrnd/prisma/client";
 
 import { CalendarSubscriptionService } from "../CalendarSubscriptionService";
 

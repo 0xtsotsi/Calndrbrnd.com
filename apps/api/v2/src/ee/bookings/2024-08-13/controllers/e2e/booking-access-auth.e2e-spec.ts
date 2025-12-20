@@ -20,8 +20,8 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calcom/platform-constants";
-import type { Booking, User, PlatformOAuthClient, Team } from "@calcom/prisma/client";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calndrbrnd/platform-constants";
+import type { Booking, User, PlatformOAuthClient, Team } from "@calndrbrnd/prisma/client";
 
 describe("Bookings Endpoints 2024-08-13", () => {
   describe("Booking access authorization", () => {

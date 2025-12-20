@@ -5,11 +5,11 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createMocks } from "node-mocks-http";
 import { describe, expect, test, vi, afterEach, beforeEach } from "vitest";
 
-import { buildBooking, buildEventType } from "@calcom/lib/test/builder";
+import { buildBooking, buildEventType } from "@calndrbrnd/lib/test/builder";
 
 import handler from "../../../../pages/api/bookings/[id]/_delete";
 
-vi.mock("@calcom/features/bookings/lib/handleCancelBooking", () => ({
+vi.mock("@calndrbrnd/features/bookings/lib/handleCancelBooking", () => ({
   default: vi.fn().mockResolvedValue({ success: true }),
   handleCancelBooking: vi.fn().mockResolvedValue({ success: true }),
 }));

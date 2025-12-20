@@ -2,16 +2,16 @@ import { cookies, headers } from "next/headers";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { BillingPlanService } from "@calcom/features/ee/billing/domain/billing-plans";
-import type { Contact } from "@calcom/features/ee/support/lib/intercom/intercom";
-import { intercom } from "@calcom/features/ee/support/lib/intercom/intercom";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { WEBAPP_URL, WEBSITE_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { BillingPlanService } from "@calndrbrnd/features/ee/billing/domain/billing-plans";
+import type { Contact } from "@calndrbrnd/features/ee/support/lib/intercom/intercom";
+import { intercom } from "@calndrbrnd/features/ee/support/lib/intercom/intercom";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { WEBAPP_URL, WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

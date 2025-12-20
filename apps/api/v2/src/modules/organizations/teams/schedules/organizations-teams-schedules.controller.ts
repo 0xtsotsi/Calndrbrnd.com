@@ -18,8 +18,8 @@ import { TeamsSchedulesService } from "@/modules/teams/schedules/services/teams-
 import { Controller, UseGuards, Get, Param, ParseIntPipe, Query } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { GetSchedulesOutput_2024_06_11, SkipTakePagination } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { GetSchedulesOutput_2024_06_11, SkipTakePagination } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/organizations/:orgId/teams/:teamId",

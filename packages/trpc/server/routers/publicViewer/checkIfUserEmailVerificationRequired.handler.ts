@@ -1,7 +1,7 @@
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { extractBaseEmail } from "@calcom/lib/extract-base-email";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { extractBaseEmail } from "@calndrbrnd/lib/extract-base-email";
+import logger from "@calndrbrnd/lib/logger";
+import { prisma } from "@calndrbrnd/prisma";
 
 import type { TUserEmailVerificationRequiredSchema } from "./checkIfUserEmailVerificationRequired.schema";
 

@@ -1,23 +1,23 @@
 import type { EventStatus } from "ics";
 
-import dayjs from "@calcom/dayjs";
-import generateIcsString from "@calcom/emails/lib/generateIcsString";
-import { sendCustomWorkflowEmail } from "@calcom/emails/workflow-email-service";
-import type { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import type { Workflow, WorkflowStep } from "@calcom/features/ee/workflows/lib/types";
-import { preprocessNameFieldDataWithVariant } from "@calcom/features/form-builder/utils";
-import { getHideBranding } from "@calcom/features/profile/lib/hideBranding";
-import { getSubmitterEmail } from "@calcom/features/tasker/tasks/triggerFormSubmittedNoEvent/formSubmissionValidation";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import { SENDER_NAME, WEBSITE_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import { WorkflowActions, WorkflowTemplates } from "@calcom/prisma/enums";
-import { SchedulingType, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
-import { CalendarEvent } from "@calcom/types/Calendar";
+import dayjs from "@calndrbrnd/dayjs";
+import generateIcsString from "@calndrbrnd/emails/lib/generateIcsString";
+import { sendCustomWorkflowEmail } from "@calndrbrnd/emails/workflow-email-service";
+import type { BookingSeatRepository } from "@calndrbrnd/features/bookings/repositories/BookingSeatRepository";
+import type { Workflow, WorkflowStep } from "@calndrbrnd/features/ee/workflows/lib/types";
+import { preprocessNameFieldDataWithVariant } from "@calndrbrnd/features/form-builder/utils";
+import { getHideBranding } from "@calndrbrnd/features/profile/lib/hideBranding";
+import { getSubmitterEmail } from "@calndrbrnd/features/tasker/tasks/triggerFormSubmittedNoEvent/formSubmissionValidation";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { getVideoCallUrlFromCalEvent } from "@calndrbrnd/lib/CalEventParser";
+import { SENDER_NAME, WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { prisma } from "@calndrbrnd/prisma";
+import { WorkflowActions, WorkflowTemplates } from "@calndrbrnd/prisma/enums";
+import { SchedulingType, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
+import { bookingMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import type { WorkflowReminderRepository } from "../../repositories/WorkflowReminderRepository";
 import { isEmailAction } from "../actionHelperFunctions";
@@ -75,7 +75,7 @@ export class EmailWorkflowService {
       );
       emailAttendeeSendToOverride = seatAttendee?.attendee.email || null;
     }
-    const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+    const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
     const creditService = new CreditService();
     const creditCheckFn = creditService.hasAvailableCredits.bind(creditService);
 

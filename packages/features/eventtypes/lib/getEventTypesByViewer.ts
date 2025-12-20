@@ -1,24 +1,24 @@
 import { orderBy } from "lodash";
 
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { hasFilter } from "@calcom/features/filters/lib/hasFilter";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import logger from "@calcom/lib/logger";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import { MembershipRole, SchedulingType } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
-import { eventTypeMetaDataSchemaWithUntypedApps } from "@calcom/prisma/zod-utils";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { getBookerBaseUrl } from "@calndrbrnd/features/ee/organizations/lib/getBookerUrlServer";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { hasFilter } from "@calndrbrnd/features/filters/lib/hasFilter";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { ErrorWithCode } from "@calndrbrnd/lib/errors";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import logger from "@calndrbrnd/lib/logger";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import prisma from "@calndrbrnd/prisma";
+import { MembershipRole, SchedulingType } from "@calndrbrnd/prisma/enums";
+import { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { eventTypeMetaDataSchemaWithUntypedApps } from "@calndrbrnd/prisma/zod-utils";
 
 const log = logger.getSubLogger({ prefix: ["viewer.eventTypes.getByViewer"] });
 

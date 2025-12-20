@@ -6,17 +6,17 @@ import type { UseFormReturn } from "react-hook-form";
 import { Controller, useWatch } from "react-hook-form";
 import "react-phone-number-input/style.css";
 
-import { useHasActiveTeamPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import type { RetellAgentWithDetails } from "@calcom/features/calAIPhone/providers/retellAI";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import PhoneInput from "@calcom/features/components/phone-input";
-import { SENDER_ID, SENDER_NAME } from "@calcom/lib/constants";
-import { formatPhoneNumber } from "@calcom/lib/formatPhoneNumber";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
-import { HttpError } from "@calcom/lib/http-error";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import type { WorkflowStep } from "@calcom/prisma/client";
+import { useHasActiveTeamPlan } from "@calndrbrnd/features/billing/hooks/useHasPaidPlan";
+import type { RetellAgentWithDetails } from "@calndrbrnd/features/calAIPhone/providers/retellAI";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import PhoneInput from "@calndrbrnd/features/components/phone-input";
+import { SENDER_ID, SENDER_NAME } from "@calndrbrnd/lib/constants";
+import { formatPhoneNumber } from "@calndrbrnd/lib/formatPhoneNumber";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import useMediaQuery from "@calndrbrnd/lib/hooks/useMediaQuery";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { WorkflowStep } from "@calndrbrnd/prisma/client";
 import {
   MembershipRole,
   PhoneNumberSubscriptionStatus,
@@ -24,34 +24,34 @@ import {
   WorkflowActions,
   WorkflowTemplates,
   WorkflowTriggerEvents,
-} from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Badge, InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
+} from "@calndrbrnd/prisma/enums";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge, InfoBadge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@calndrbrnd/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { AddVariablesDropdown } from "@calcom/ui/components/editor";
-import { Editor } from "@calcom/ui/components/editor";
-import { CheckboxField } from "@calcom/ui/components/form";
-import { EmailField } from "@calcom/ui/components/form";
-import { TextArea } from "@calcom/ui/components/form";
-import { Input } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { MultiSelectCheckbox } from "@calcom/ui/components/form";
-import type { MultiSelectCheckboxesOptionType as Option } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/dropdown";
+import { AddVariablesDropdown } from "@calndrbrnd/ui/components/editor";
+import { Editor } from "@calndrbrnd/ui/components/editor";
+import { CheckboxField } from "@calndrbrnd/ui/components/form";
+import { EmailField } from "@calndrbrnd/ui/components/form";
+import { TextArea } from "@calndrbrnd/ui/components/form";
+import { Input } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { MultiSelectCheckbox } from "@calndrbrnd/ui/components/form";
+import type { MultiSelectCheckboxesOptionType as Option } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import {
   isSMSAction,

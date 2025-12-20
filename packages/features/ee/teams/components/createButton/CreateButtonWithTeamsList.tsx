@@ -1,8 +1,8 @@
 "use client";
 
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import type { MembershipRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import type { PermissionString } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
 
 import type { CreateBtnProps, Option } from "./CreateButton";
 import { CreateButton } from "./CreateButton";

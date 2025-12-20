@@ -1,31 +1,31 @@
 import type { TFunction } from "i18next";
 
-import { sendOrganizationCreationEmail } from "@calcom/emails/organization-email-service";
-import { sendEmailVerification } from "@calcom/features/auth/lib/verifyEmail";
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { getOrgFullOrigin } from "@calcom/features/ee/organizations/lib/orgDomains";
+import { sendOrganizationCreationEmail } from "@calndrbrnd/emails/organization-email-service";
+import { sendEmailVerification } from "@calndrbrnd/features/auth/lib/verifyEmail";
+import { getOrganizationRepository } from "@calndrbrnd/features/ee/organizations/di/OrganizationRepository.container";
+import { getOrgFullOrigin } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
 import {
   assertCanCreateOrg,
   findUserToBeOrgOwner,
   setupDomain,
-} from "@calcom/features/ee/organizations/lib/server/orgCreationUtils";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calcom/lib/availability";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { uploadLogo } from "@calcom/lib/server/avatar";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { isBase64Image, resizeBase64Image } from "@calcom/lib/server/resizeBase64Image";
-import slugify from "@calcom/lib/slugify";
-import { prisma } from "@calcom/prisma";
-import type { Prisma, Team, User } from "@calcom/prisma/client";
-import { CreationSource, MembershipRole, UserPermissionRole } from "@calcom/prisma/enums";
-import { userMetadata, teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
-import { createTeamsHandler } from "@calcom/trpc/server/routers/viewer/organizations/createTeams.handler";
-import { inviteMembersWithNoInviterPermissionCheck } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
+} from "@calndrbrnd/features/ee/organizations/lib/server/orgCreationUtils";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { OrganizationOnboardingRepository } from "@calndrbrnd/features/organizations/repositories/OrganizationOnboardingRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { DEFAULT_SCHEDULE, getAvailabilityFromSchedule } from "@calndrbrnd/lib/availability";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { uploadLogo } from "@calndrbrnd/lib/server/avatar";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { isBase64Image, resizeBase64Image } from "@calndrbrnd/lib/server/resizeBase64Image";
+import slugify from "@calndrbrnd/lib/slugify";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma, Team, User } from "@calndrbrnd/prisma/client";
+import { CreationSource, MembershipRole, UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import { userMetadata, teamMetadataStrictSchema } from "@calndrbrnd/prisma/zod-utils";
+import { createTeamsHandler } from "@calndrbrnd/trpc/server/routers/viewer/organizations/createTeams.handler";
+import { inviteMembersWithNoInviterPermissionCheck } from "@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
 
 import { OrganizationPaymentService } from "../../OrganizationPaymentService";
 import { OrganizationPermissionService } from "../../OrganizationPermissionService";

@@ -5,14 +5,14 @@ import { useRouter } from "next/navigation";
 import posthog from "posthog-js";
 import { useEffect, useRef, useTransition } from "react";
 
-import { useTeamInvites } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import { isCompanyEmail } from "@calcom/features/ee/organizations/lib/utils";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { type IconName } from "@calcom/ui/components/icon";
-import { RadioAreaGroup } from "@calcom/ui/components/radio";
+import { useTeamInvites } from "@calndrbrnd/features/billing/hooks/useHasPaidPlan";
+import { isCompanyEmail } from "@calndrbrnd/features/ee/organizations/lib/utils";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { type IconName } from "@calndrbrnd/ui/components/icon";
+import { RadioAreaGroup } from "@calndrbrnd/ui/components/radio";
 
 import { OnboardingCard } from "../components/OnboardingCard";
 import { OnboardingLayout } from "../components/OnboardingLayout";

@@ -1,11 +1,11 @@
 import type { Dispatch, SetStateAction } from "react";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RecurringEvent } from "@calcom/types/Calendar";
-import { DialogContent, DialogHeader } from "@calcom/ui/components/dialog";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { RecurringEvent } from "@calndrbrnd/types/Calendar";
+import { DialogContent, DialogHeader } from "@calndrbrnd/ui/components/dialog";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import CancelBooking from "@components/booking/CancelBooking";
 

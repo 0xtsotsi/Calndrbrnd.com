@@ -3,27 +3,27 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import SkeletonLoader from "@calcom/features/ee/workflows/components/SkeletonLoaderEventWorkflowsTab";
-import type { WorkflowType } from "@calcom/features/ee/workflows/components/WorkflowListPage";
-import { getActionIcon } from "@calcom/features/ee/workflows/lib/getActionIcon";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { HttpError } from "@calcom/lib/http-error";
-import { WorkflowActions } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { revalidateEventTypeEditPage } from "@calcom/web/app/(use-page-wrapper)/event-types/[type]/actions";
+import LicenseRequired from "@calndrbrnd/features/ee/common/components/LicenseRequired";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import SkeletonLoader from "@calndrbrnd/features/ee/workflows/components/SkeletonLoaderEventWorkflowsTab";
+import type { WorkflowType } from "@calndrbrnd/features/ee/workflows/components/WorkflowListPage";
+import { getActionIcon } from "@calndrbrnd/features/ee/workflows/lib/getActionIcon";
+import type { FormValues } from "@calndrbrnd/features/eventtypes/lib/types";
+import ServerTrans from "@calndrbrnd/lib/components/ServerTrans";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { WorkflowActions } from "@calndrbrnd/prisma/enums";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
+import { revalidateEventTypeEditPage } from "@calndrbrnd/web/app/(use-page-wrapper)/event-types/[type]/actions";
 
 type PartialWorkflowType = Pick<
   WorkflowType,

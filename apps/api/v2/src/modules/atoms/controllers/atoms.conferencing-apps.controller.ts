@@ -13,9 +13,9 @@ import { UserWithProfile } from "@/modules/users/users.repository";
 import { Controller, Get, Param, ParseIntPipe, UseGuards, Version, VERSION_NEUTRAL } from "@nestjs/common";
 import { ApiTags as DocsTags, ApiExcludeController as DocsExcludeController } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { ConnectedApps } from "@calcom/platform-libraries/app-store";
-import { ApiResponse } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { ConnectedApps } from "@calndrbrnd/platform-libraries/app-store";
+import { ApiResponse } from "@calndrbrnd/platform-types";
 
 /*
 Conferencing endpoints for atoms, split from AtomsController for clarity and maintainability.

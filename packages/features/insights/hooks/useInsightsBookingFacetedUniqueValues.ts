@@ -1,10 +1,10 @@
 import type { Table } from "@tanstack/react-table";
 import { useCallback } from "react";
 
-import { convertFacetedValuesToMap, type FacetedValue } from "@calcom/features/data-table";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc";
+import { convertFacetedValuesToMap, type FacetedValue } from "@calndrbrnd/features/data-table";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc";
 
 import { bookingStatusToText } from "../lib/bookingStatusToText";
 

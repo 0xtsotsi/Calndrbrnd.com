@@ -1,11 +1,11 @@
 import type { Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/playwright/lib/fixtures";
-import type { Fixtures } from "@calcom/web/playwright/lib/fixtures";
-import { doOnOrgDomain } from "@calcom/web/playwright/lib/testUtils";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { test } from "@calndrbrnd/web/playwright/lib/fixtures";
+import type { Fixtures } from "@calndrbrnd/web/playwright/lib/fixtures";
+import { doOnOrgDomain } from "@calndrbrnd/web/playwright/lib/testUtils";
 
 import { expectHostsToBe } from "../lib/pages/bookingSuccessPage";
 import {

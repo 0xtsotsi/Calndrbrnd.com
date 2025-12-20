@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 import { PbacOptInModal } from "./PbacOptInModal";
 import { RolesList } from "./RolesList";

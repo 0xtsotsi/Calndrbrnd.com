@@ -1,11 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { MembershipRole } from "@calcom/prisma/enums";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TeamAccessUseCase } from "./teamAccessUseCase";
 
 // Mock the PermissionCheckService
-vi.mock("@calcom/features/pbac/services/permission-check.service", () => ({
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service", () => ({
   PermissionCheckService: vi.fn().mockImplementation(() => ({
     checkPermission: vi.fn(),
   })),

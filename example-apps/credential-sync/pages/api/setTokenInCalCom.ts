@@ -1,6 +1,6 @@
 import type { NextApiRequest } from "next";
 
-import { symmetricEncrypt } from "@calcom/lib/crypto";
+import { symmetricEncrypt } from "@calndrbrnd/lib/crypto";
 
 import {
   CALCOM_APP_CREDENTIAL_ENCRYPTION_KEY,

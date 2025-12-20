@@ -1,18 +1,18 @@
 import type { RatelimitResponse } from "@unkey/ratelimit";
 import { vi, describe, it, expect, beforeEach, afterEach } from "vitest";
 
-import { hashAPIKey } from "@calcom/features/ee/api-keys/lib/apiKeys";
-import { RedisService } from "@calcom/features/redis/RedisService";
-import prisma from "@calcom/prisma";
+import { hashAPIKey } from "@calndrbrnd/features/ee/api-keys/lib/apiKeys";
+import { RedisService } from "@calndrbrnd/features/redis/RedisService";
+import prisma from "@calndrbrnd/prisma";
 
 import { handleAutoLock } from "./autoLock";
 
 // Mock the dependencies
-vi.mock("@calcom/features/redis/RedisService");
-vi.mock("@calcom/features/ee/api-keys/lib/apiKeys", () => ({
+vi.mock("@calndrbrnd/features/redis/RedisService");
+vi.mock("@calndrbrnd/features/ee/api-keys/lib/apiKeys", () => ({
   hashAPIKey: vi.fn((key) => `hashed_${key}`),
 }));
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {
     user: {
       update: vi.fn(),

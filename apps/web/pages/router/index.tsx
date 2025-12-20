@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
 
 import PageWrapper from "@components/PageWrapper";
 

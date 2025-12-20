@@ -1,8 +1,8 @@
 import { getTranslate } from "app/_utils";
 import type { Metadata } from "next";
 
-import Shell from "@calcom/features/shell/Shell";
-import { IS_DUB_REFERRALS_ENABLED } from "@calcom/lib/constants";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { IS_DUB_REFERRALS_ENABLED } from "@calndrbrnd/lib/constants";
 
 import { DubReferralsPage } from "./DubReferralsPage";
 

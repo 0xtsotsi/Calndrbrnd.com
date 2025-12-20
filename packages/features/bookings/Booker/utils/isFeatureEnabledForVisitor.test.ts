@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { getCookie } from "@calcom/lib/cookie";
+import { getCookie } from "@calndrbrnd/lib/cookie";
 
 import { isVisitorWithinPercentage } from "./isFeatureEnabledForVisitor";
 
@@ -21,7 +21,7 @@ const mockGetCookie = ({ expectedUid }: { expectedUid: string }) =>
     return null;
   });
 
-vi.mock("@calcom/lib/cookie", () => ({
+vi.mock("@calndrbrnd/lib/cookie", () => ({
   getCookie: vi.fn(),
 }));
 

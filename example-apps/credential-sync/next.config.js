@@ -3,7 +3,7 @@ require("dotenv").config({ path: "../../.env" });
 
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["@calcom/lib"],
+  transpilePackages: ["@calndrbrnd/lib"],
 };
 
 module.exports = nextConfig;

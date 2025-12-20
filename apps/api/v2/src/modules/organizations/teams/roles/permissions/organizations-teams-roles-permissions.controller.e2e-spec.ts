@@ -17,10 +17,10 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { RoleService } from "@calcom/platform-libraries/pbac";
-import type { PermissionString } from "@calcom/platform-libraries/pbac";
-import type { Team, User } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { RoleService } from "@calndrbrnd/platform-libraries/pbac";
+import type { PermissionString } from "@calndrbrnd/platform-libraries/pbac";
+import type { Team, User } from "@calndrbrnd/prisma/client";
 
 describe("Organizations Teams Roles Permissions Endpoints", () => {
   let app: INestApplication;

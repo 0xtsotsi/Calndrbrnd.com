@@ -21,8 +21,8 @@ import {
   parseBookingLimit,
   parseRecurringEvent,
   getBookingFieldsWithSystemFields,
-} from "@calcom/platform-libraries";
-import { EventTypeMetaDataSchema, parseEventTypeColor } from "@calcom/platform-libraries/event-types";
+} from "@calndrbrnd/platform-libraries";
+import { EventTypeMetaDataSchema, parseEventTypeColor } from "@calndrbrnd/platform-libraries/event-types";
 import type {
   TransformFutureBookingsLimitSchema_2024_06_14,
   BookerLayoutsTransformedSchema,
@@ -31,8 +31,8 @@ import type {
   OutputUnknownLocation_2024_06_14,
   OutputUnknownBookingField_2024_06_14,
   OutputBookingField_2024_06_14,
-} from "@calcom/platform-types";
-import type { EventType, User, Schedule, DestinationCalendar, CalVideoSettings } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { EventType, User, Schedule, DestinationCalendar, CalVideoSettings } from "@calndrbrnd/prisma/client";
 
 type EventTypeRelations = {
   users: User[];

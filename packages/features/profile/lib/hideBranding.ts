@@ -1,8 +1,8 @@
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { prisma } from "@calcom/prisma";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import logger from "@calndrbrnd/lib/logger";
+import { prisma } from "@calndrbrnd/prisma";
 
 const log = logger.getSubLogger({ name: "hideBranding" });
 const teamRepository = new TeamRepository(prisma);

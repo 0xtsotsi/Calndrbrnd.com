@@ -3,11 +3,11 @@
 import { format } from "date-fns";
 import Link from "next/link";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 import {
   Sheet,
   SheetContent,
@@ -15,8 +15,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetFooter,
-} from "@calcom/ui/components/sheet";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+} from "@calndrbrnd/ui/components/sheet";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 type BlocklistEntry = RouterOutputs["viewer"]["organizations"]["listWatchlistEntries"]["rows"][number];
 

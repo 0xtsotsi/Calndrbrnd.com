@@ -19,7 +19,7 @@ import {
   X_CAL_CLIENT_ID,
   X_CAL_SECRET_KEY,
   X_CAL_PLATFORM_EMBED,
-} from "@calcom/platform-constants";
+} from "@calndrbrnd/platform-constants";
 
 import { CalendarServiceExceptionFilter } from "./filters/calendar-service-exception.filter";
 import { TRPCExceptionFilter } from "./filters/trpc-exception.filter";

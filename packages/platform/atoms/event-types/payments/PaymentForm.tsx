@@ -1,16 +1,16 @@
 import React, { Suspense } from "react";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import { getSuccessPageLocationMessage } from "@calcom/app-store/locations";
-import dayjs from "@calcom/dayjs";
-import { PayIcon } from "@calcom/features/bookings/components/event-meta/PayIcon";
-import { Price } from "@calcom/features/bookings/components/event-meta/Price";
-import type { PaymentPageProps } from "@calcom/features/ee/payments/pages/payment";
-import { APP_NAME, WEBSITE_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { isBrowserLocale24h } from "@calcom/lib/timeFormat";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
-import { localStorage } from "@calcom/lib/webstorage";
+import { getPaymentAppData } from "@calndrbrnd/app-store/_utils/payments/getPaymentAppData";
+import { getSuccessPageLocationMessage } from "@calndrbrnd/app-store/locations";
+import dayjs from "@calndrbrnd/dayjs";
+import { PayIcon } from "@calndrbrnd/features/bookings/components/event-meta/PayIcon";
+import { Price } from "@calndrbrnd/features/bookings/components/event-meta/Price";
+import type { PaymentPageProps } from "@calndrbrnd/features/ee/payments/pages/payment";
+import { APP_NAME, WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { isBrowserLocale24h } from "@calndrbrnd/lib/timeFormat";
+import { CURRENT_TIMEZONE } from "@calndrbrnd/lib/timezoneConstants";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
 
 import { AtomsWrapper } from "../../src/components/atoms-wrapper";
 import { cn } from "../../src/lib/utils";

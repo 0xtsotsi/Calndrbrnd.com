@@ -7,10 +7,10 @@ import { TRPCError } from "@trpc/server";
 
 import { duplicateHandler } from "./duplicate.handler";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: prismaMock,
 }));
-vi.mock("@calcom/features/eventtypes/repositories/eventTypeRepository");
+vi.mock("@calndrbrnd/features/eventtypes/repositories/eventTypeRepository");
 
 describe("duplicateHandler", () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -25,7 +25,7 @@ describe("duplicateHandler", () => {
 
   it("should throw BAD_REQUEST in case of unique constraint violation", async () => {
     const { EventTypeRepository } = await import(
-      "@calcom/features/eventtypes/repositories/eventTypeRepository"
+      "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository"
     );
     vi.mocked(EventTypeRepository).mockImplementation(
       () =>

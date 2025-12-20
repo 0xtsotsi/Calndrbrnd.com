@@ -2,11 +2,11 @@ import prismaMock from "../../../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import { MembershipRole } from "@calcom/prisma/enums";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import getUpgradeableHandler from "./getUpgradeable.handler";
 
-vi.mock("@calcom/lib/constants", () => ({
+vi.mock("@calndrbrnd/lib/constants", () => ({
   IS_TEAM_BILLING_ENABLED: true,
 }));
 

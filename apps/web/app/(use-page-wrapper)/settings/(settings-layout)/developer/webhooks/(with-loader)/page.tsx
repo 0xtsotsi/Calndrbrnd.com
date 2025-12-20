@@ -3,10 +3,10 @@ import { _generateMetadata } from "app/_utils";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import WebhooksView from "@calcom/features/webhooks/pages/webhooks-view";
-import { APP_NAME } from "@calcom/lib/constants";
-import { webhookRouter } from "@calcom/trpc/server/routers/viewer/webhook/_router";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import WebhooksView from "@calndrbrnd/features/webhooks/pages/webhooks-view";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { webhookRouter } from "@calndrbrnd/trpc/server/routers/viewer/webhook/_router";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

@@ -1,21 +1,21 @@
 import { describe, it, expect, beforeEach, vi, type Mock } from "vitest";
 
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import type { IAttendeeRepository } from "@calcom/features/bookings/repositories/IAttendeeRepository";
-import type { ISimpleLogger } from "@calcom/features/di/shared/services/logger.service";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import type { IAttendeeRepository } from "@calndrbrnd/features/bookings/repositories/IAttendeeRepository";
+import type { ISimpleLogger } from "@calndrbrnd/features/di/shared/services/logger.service";
 
 import { BookingAuditViewerService } from "../BookingAuditViewerService";
 import { BookingAuditPermissionError, BookingAuditErrorCode } from "../BookingAuditAccessService";
 import type { IBookingAuditRepository, BookingAuditWithActor, BookingAuditAction, BookingAuditType } from "../../repository/IBookingAuditRepository";
 import type { AuditActorType } from "../../repository/IAuditActorRepository";
 
-vi.mock("@calcom/features/pbac/services/permission-check.service");
-vi.mock("@calcom/features/users/repositories/UserRepository");
-vi.mock("@calcom/features/bookings/repositories/BookingRepository");
-vi.mock("@calcom/features/membership/repositories/MembershipRepository");
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service");
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository");
+vi.mock("@calndrbrnd/features/bookings/repositories/BookingRepository");
+vi.mock("@calndrbrnd/features/membership/repositories/MembershipRepository");
 
 const createMockTeamBooking = (overrides?: {
   userId?: number;

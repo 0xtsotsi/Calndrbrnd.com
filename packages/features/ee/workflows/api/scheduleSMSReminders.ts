@@ -2,19 +2,19 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import dayjs from "@calcom/dayjs";
-import { bulkShortenLinks } from "@calcom/ee/workflows/lib/reminders/utils";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { isAttendeeAction } from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
-import { scheduleSmsOrFallbackEmail } from "@calcom/features/ee/workflows/lib/reminders/messageDispatcher";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import prisma from "@calcom/prisma";
-import { WorkflowActions, WorkflowMethods, WorkflowTemplates } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import { bulkShortenLinks } from "@calndrbrnd/ee/workflows/lib/reminders/utils";
+import { getCalEventResponses } from "@calndrbrnd/features/bookings/lib/getCalEventResponses";
+import { BookingSeatRepository } from "@calndrbrnd/features/bookings/repositories/BookingSeatRepository";
+import { CreditService } from "@calndrbrnd/features/ee/billing/credit-service";
+import { getBookerBaseUrl } from "@calndrbrnd/features/ee/organizations/lib/getBookerUrlServer";
+import { isAttendeeAction } from "@calndrbrnd/features/ee/workflows/lib/actionHelperFunctions";
+import { scheduleSmsOrFallbackEmail } from "@calndrbrnd/features/ee/workflows/lib/reminders/messageDispatcher";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import prisma from "@calndrbrnd/prisma";
+import { WorkflowActions, WorkflowMethods, WorkflowTemplates } from "@calndrbrnd/prisma/enums";
+import { bookingMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { getSenderId } from "../lib/alphanumericSenderIdSupport";
 import type { PartialWorkflowReminder } from "../lib/getWorkflowReminders";

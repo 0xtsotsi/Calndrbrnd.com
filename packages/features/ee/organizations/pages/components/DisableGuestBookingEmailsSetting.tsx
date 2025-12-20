@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-import { EmailType } from "@calcom/emails/email-types";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Alert } from "@calcom/ui/components/alert";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { Checkbox, SettingsToggle } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { EmailType } from "@calndrbrnd/emails/email-types";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
+import { Checkbox, SettingsToggle } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 const EMAIL_TYPE_TO_SETTING_KEY = {
   [EmailType.CONFIRMATION]: "disableAttendeeConfirmationEmail",

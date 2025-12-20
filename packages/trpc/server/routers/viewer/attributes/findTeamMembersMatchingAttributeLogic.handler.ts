@@ -1,10 +1,10 @@
 import type { ServerResponse } from "http";
 import type { NextApiResponse } from "next";
 
-import { findTeamMembersMatchingAttributeLogic } from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import type { PrismaClient } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { findTeamMembersMatchingAttributeLogic } from "@calndrbrnd/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TFindTeamMembersMatchingAttributeLogicInputSchema } from "./findTeamMembersMatchingAttributeLogic.schema";
 

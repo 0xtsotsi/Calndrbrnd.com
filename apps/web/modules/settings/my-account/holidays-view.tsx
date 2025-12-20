@@ -2,20 +2,20 @@
 
 import { memo, useMemo, useCallback } from "react";
 
-import dayjs from "@calcom/dayjs";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { OutOfOfficeToggleGroup } from "@calcom/features/settings/outOfOffice/OutOfOfficeToggleGroup";
-import { getHolidayEmoji } from "@calcom/lib/holidays/getHolidayEmoji";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Select } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
+import dayjs from "@calndrbrnd/dayjs";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { OutOfOfficeToggleGroup } from "@calndrbrnd/features/settings/outOfOffice/OutOfOfficeToggleGroup";
+import { getHolidayEmoji } from "@calndrbrnd/lib/holidays/getHolidayEmoji";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 function HolidaysCTA() {
   const { t } = useLocale();

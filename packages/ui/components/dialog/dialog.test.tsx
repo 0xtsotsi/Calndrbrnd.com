@@ -3,7 +3,7 @@ import { vi } from "vitest";
 
 import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTrigger } from "./Dialog";
 
-vi.mock("@calcom/lib/hooks/useCompatSearchParams", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useCompatSearchParams", () => ({
   useCompatSearchParams() {
     return new URLSearchParams();
   },

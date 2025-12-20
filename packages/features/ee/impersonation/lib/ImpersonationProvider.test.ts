@@ -1,8 +1,8 @@
 import type { Session } from "next-auth";
 import { describe, expect, it, vi } from "vitest";
 
-import { UserPermissionRole } from "@calcom/prisma/enums";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import {
   parseTeamId,
@@ -23,7 +23,7 @@ const session: Session = {
   },
 };
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     prisma: vi.fn(),
   };

@@ -19,11 +19,11 @@ import type { ParsedUrlQuery } from "querystring";
 import type { PropsWithChildren, ReactNode } from "react";
 import { useEffect } from "react";
 
-import { OrgBrandingProvider } from "@calcom/features/ee/organizations/context/provider";
-import DynamicHelpscoutProvider from "@calcom/features/ee/support/lib/helpscout/providerDynamic";
-import DynamicIntercomProvider from "@calcom/features/ee/support/lib/intercom/providerDynamic";
-import { FeatureProvider } from "@calcom/features/flags/context/provider";
-import { useFlags } from "@calcom/features/flags/hooks";
+import { OrgBrandingProvider } from "@calndrbrnd/features/ee/organizations/context/provider";
+import DynamicHelpscoutProvider from "@calndrbrnd/features/ee/support/lib/helpscout/providerDynamic";
+import DynamicIntercomProvider from "@calndrbrnd/features/ee/support/lib/intercom/providerDynamic";
+import { FeatureProvider } from "@calndrbrnd/features/flags/context/provider";
+import { useFlags } from "@calndrbrnd/features/flags/hooks";
 
 import useIsBookingPage from "@lib/hooks/useIsBookingPage";
 import { useNuqsParams } from "@lib/hooks/useNuqsParams";

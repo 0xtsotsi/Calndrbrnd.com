@@ -1,4 +1,4 @@
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { THasAvailableCreditsSchema } from "./hasAvailableCredits.schema";
 
@@ -14,7 +14,7 @@ export const hasAvailableCreditsHandler = async ({ ctx, input }: HasAvailableCre
 
   const orgId = ctx.user.organization?.id;
 
-  const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+  const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
   const creditService = new CreditService();
 
   const hasCredits = await creditService.hasAvailableCredits({

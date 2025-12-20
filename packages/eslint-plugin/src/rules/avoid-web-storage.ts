@@ -3,13 +3,13 @@ import { ESLintUtils } from "@typescript-eslint/utils";
 const createRule = ESLintUtils.RuleCreator((name) => `https://developer.cal.com/eslint/rule/${name}`);
 const rule = createRule({
   create(context) {
-    // Track imported names from @calcom/lib/webstorage
+    // Track imported names from @calndrbrnd/lib/webstorage
     const safeImportedNames = new Set<string>();
 
     return {
       ImportDeclaration(node) {
         // Check if this is an import from the safe webstorage module
-        if (node.source.value === "@calcom/lib/webstorage") {
+        if (node.source.value === "@calndrbrnd/lib/webstorage") {
           node.specifiers.forEach((specifier) => {
             if (specifier.type === "ImportSpecifier") {
               // Track the local name used for the import
@@ -116,7 +116,7 @@ const rule = createRule({
       recommended: "warn",
     },
     messages: {
-      "possible-issue-with-embed": `Be aware that accessing localStorage/sessionStorage throws error in Chrome Incognito mode when embed is in cross domain context. If you know what you are doing, \`import {localStorage, sessionStorage} from "@calcom/lib/webstorage"\` for safe usage. See https://github.com/calcom/cal.com/issues/2618`,
+      "possible-issue-with-embed": `Be aware that accessing localStorage/sessionStorage throws error in Chrome Incognito mode when embed is in cross domain context. If you know what you are doing, \`import {localStorage, sessionStorage} from "@calndrbrnd/lib/webstorage"\` for safe usage. See https://github.com/calcom/cal.com/issues/2618`,
     },
     type: "suggestion",
     schema: [],

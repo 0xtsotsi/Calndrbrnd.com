@@ -5,7 +5,7 @@ import { PrismaOOORepository } from "@/lib/repositories/prisma-ooo.repository";
 import { PrismaUserRepository } from "@/lib/repositories/prisma-user.repository";
 import { Injectable } from "@nestjs/common";
 
-import { LuckyUserService as BaseLuckyUserService } from "@calcom/platform-libraries/bookings";
+import { LuckyUserService as BaseLuckyUserService } from "@calndrbrnd/platform-libraries/bookings";
 
 @Injectable()
 export class LuckyUserService extends BaseLuckyUserService {

@@ -17,7 +17,7 @@ import { Controller, Get, Param, Query, UseGuards, ParseIntPipe } from "@nestjs/
 import { ApiHeader, ApiOperation, ApiTags } from "@nestjs/swagger";
 import { plainToClass } from "class-transformer";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 @Controller({
   path: "/v2/organizations/:orgId/routing-forms",

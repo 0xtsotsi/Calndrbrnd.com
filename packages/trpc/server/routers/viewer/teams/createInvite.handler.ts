@@ -1,8 +1,8 @@
-import { TeamService } from "@calcom/features/ee/teams/services/teamService";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { TeamService } from "@calndrbrnd/features/ee/teams/services/teamService";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

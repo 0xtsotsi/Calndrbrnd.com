@@ -1,5 +1,5 @@
-import type dayjs from "@calcom/dayjs";
-import classNames from "@calcom/ui/classNames";
+import type dayjs from "@calndrbrnd/dayjs";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import type { BorderColor } from "../../types/common";
 

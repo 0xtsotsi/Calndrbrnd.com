@@ -1,32 +1,32 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import { isAuthorized } from "@calcom/features/ee/workflows/lib/isAuthorized";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { WorkflowActions } from "@calcom/prisma/enums";
+import { createDefaultAIPhoneServiceProvider } from "@calndrbrnd/features/calAIPhone";
+import { isAuthorized } from "@calndrbrnd/features/ee/workflows/lib/isAuthorized";
+import { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import { WorkflowActions } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
 import { deleteHandler } from "./delete.handler";
 import { removeSmsReminderFieldForEventTypes, removeAIAgentCallPhoneNumberFieldForEventTypes } from "./util";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 
-vi.mock("@calcom/features/calAIPhone", () => ({
+vi.mock("@calndrbrnd/features/calAIPhone", () => ({
   createDefaultAIPhoneServiceProvider: vi.fn(),
 }));
 
-vi.mock("@calcom/features/ee/workflows/repositories/WorkflowRepository", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository", () => ({
   WorkflowRepository: {
     deleteAllWorkflowReminders: vi.fn(),
   },
 }));
 
-vi.mock("@calcom/features/ee/workflows/lib/isAuthorized", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/lib/isAuthorized", () => ({
   isAuthorized: vi.fn(),
 }));
 

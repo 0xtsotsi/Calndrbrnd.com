@@ -3,10 +3,10 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
-import { useOnboarding } from "@calcom/features/ee/organizations/lib/onboardingStore";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Alert } from "@calcom/ui/components/alert";
-import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
+import { useOnboarding } from "@calndrbrnd/features/ee/organizations/lib/onboardingStore";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 import { OrganizationWizardLayout } from "./_components/OrganizationWizardLayout";
 

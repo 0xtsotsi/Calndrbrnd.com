@@ -1,12 +1,12 @@
 import type { z } from "zod";
 
-import { enrichFormWithMigrationData } from "@calcom/app-store/routing-forms/enrichFormWithMigrationData";
-import { getSerializableForm } from "@calcom/app-store/routing-forms/lib/getSerializableForm";
-import type { FormResponse } from "@calcom/app-store/routing-forms/types/types";
-import { canAccessEntity } from "@calcom/features/pbac/lib/entityPermissionUtils.server";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { enrichFormWithMigrationData } from "@calndrbrnd/app-store/routing-forms/enrichFormWithMigrationData";
+import { getSerializableForm } from "@calndrbrnd/app-store/routing-forms/lib/getSerializableForm";
+import type { FormResponse } from "@calndrbrnd/app-store/routing-forms/types/types";
+import { canAccessEntity } from "@calndrbrnd/features/pbac/lib/entityPermissionUtils.server";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { prisma } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 
@@ -82,7 +82,7 @@ async function getResponseWithFormFieldsHandler({ ctx, input }: GetResponseWithF
     });
   }
 
-  const { UserRepository } = await import("@calcom/features/users/repositories/UserRepository");
+  const { UserRepository } = await import("@calndrbrnd/features/users/repositories/UserRepository");
   const userRepo = new UserRepository(prisma);
   const formWithUserProfile = {
     ...form,

@@ -1,8 +1,8 @@
 import type { NextMiddleware } from "next-api-middleware";
 
-import { handleAutoLock } from "@calcom/features/ee/api-keys/lib/autoLock";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { HttpError } from "@calcom/lib/http-error";
+import { handleAutoLock } from "@calndrbrnd/features/ee/api-keys/lib/autoLock";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import { HttpError } from "@calndrbrnd/lib/http-error";
 
 export const rateLimitApiKey: NextMiddleware = async (req, res, next) => {
   if (!req.userId) return res.status(401).json({ message: "No userId provided" });

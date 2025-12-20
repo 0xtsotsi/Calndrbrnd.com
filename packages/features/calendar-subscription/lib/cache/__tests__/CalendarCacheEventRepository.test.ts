@@ -1,7 +1,7 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import type { PrismaClient } from "@calcom/prisma";
-import type { CalendarCacheEvent } from "@calcom/prisma/client";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { CalendarCacheEvent } from "@calndrbrnd/prisma/client";
 
 import { CalendarCacheEventRepository } from "../CalendarCacheEventRepository";
 

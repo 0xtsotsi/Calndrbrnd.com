@@ -1,8 +1,8 @@
-import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import { getUserAvailabilityService } from "@calcom/features/di/containers/GetUserAvailability";
-import { isTeamMember } from "@calcom/features/ee/teams/lib/queries";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@calndrbrnd/app-store/delegationCredential";
+import { getUserAvailabilityService } from "@calndrbrnd/features/di/containers/GetUserAvailability";
+import { isTeamMember } from "@calndrbrnd/features/ee/teams/lib/queries";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

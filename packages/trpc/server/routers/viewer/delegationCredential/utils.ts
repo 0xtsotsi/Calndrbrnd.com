@@ -1,9 +1,9 @@
 import { z } from "zod";
 
-import { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { Prisma } from "@calcom/prisma/client";
+import { DelegationCredentialRepository } from "@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import { TRPCError } from "@trpc/server";
 

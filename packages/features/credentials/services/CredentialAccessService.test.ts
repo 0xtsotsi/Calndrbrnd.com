@@ -1,13 +1,13 @@
 import { describe, expect, test, vi, beforeEach } from "vitest";
 
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { HttpError } from "@calcom/lib/http-error";
-import { prisma } from "@calcom/prisma";
+import { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { CredentialAccessService } from "./CredentialAccessService";
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     prisma: {
       user: {
@@ -17,7 +17,7 @@ vi.mock("@calcom/prisma", () => {
   };
 });
 
-vi.mock("@calcom/features/credentials/repositories/CredentialRepository", () => {
+vi.mock("@calndrbrnd/features/credentials/repositories/CredentialRepository", () => {
   return {
     CredentialRepository: {
       findFirstByIdWithKeyAndUser: vi.fn(),
@@ -25,7 +25,7 @@ vi.mock("@calcom/features/credentials/repositories/CredentialRepository", () => 
   };
 });
 
-vi.mock("@calcom/features/users/repositories/UserRepository", () => {
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository", () => {
   return {
     UserRepository: vi.fn().mockImplementation(() => ({
       getUserOrganizationAndTeams: vi.fn(),

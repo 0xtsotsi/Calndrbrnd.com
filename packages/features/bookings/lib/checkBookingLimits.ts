@@ -1,11 +1,11 @@
-import dayjs from "@calcom/dayjs";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { getErrorFromUnknown } from "@calcom/lib/errors";
-import { HttpError } from "@calcom/lib/http-error";
-import { ascendingLimitKeys, intervalLimitKeyToUnit } from "@calcom/lib/intervalLimits/intervalLimit";
-import type { IntervalLimit, IntervalLimitKey } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import { parseBookingLimit } from "@calcom/lib/intervalLimits/isBookingLimits";
-import { withReporting } from "@calcom/lib/sentryWrapper";
+import dayjs from "@calndrbrnd/dayjs";
+import type { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { getErrorFromUnknown } from "@calndrbrnd/lib/errors";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { ascendingLimitKeys, intervalLimitKeyToUnit } from "@calndrbrnd/lib/intervalLimits/intervalLimit";
+import type { IntervalLimit, IntervalLimitKey } from "@calndrbrnd/lib/intervalLimits/intervalLimitSchema";
+import { parseBookingLimit } from "@calndrbrnd/lib/intervalLimits/isBookingLimits";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
 
 export interface ICheckBookingLimitsService {
   bookingRepo: BookingRepository;

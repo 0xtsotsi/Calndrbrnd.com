@@ -1,11 +1,11 @@
 import { describe, it, beforeEach, vi, expect } from "vitest";
 
-import { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { DelegationCredentialRepository } from "@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository";
 
 import { toggleDelegationCredentialEnabled } from "./toggleEnabled.handler";
 
 // Mock the repository
-vi.mock("@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository", () => ({
+vi.mock("@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository", () => ({
   DelegationCredentialRepository: {
     findById: vi.fn(),
     updateById: vi.fn(),
@@ -14,11 +14,11 @@ vi.mock("@calcom/features/delegation-credentials/repositories/DelegationCredenti
 }));
 
 // Mock other dependencies
-vi.mock("@calcom/app-store/delegationCredential", () => ({
+vi.mock("@calndrbrnd/app-store/delegationCredential", () => ({
   checkIfSuccessfullyConfiguredInWorkspace: vi.fn().mockResolvedValue(true),
 }));
 
-vi.mock("@calcom/emails/integration-email-service", () => ({
+vi.mock("@calndrbrnd/emails/integration-email-service", () => ({
   sendDelegationCredentialDisabledEmail: vi.fn(),
 }));
 

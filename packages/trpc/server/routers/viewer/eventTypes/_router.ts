@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-import { logP } from "@calcom/lib/perf";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { logP } from "@calndrbrnd/lib/perf";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import authedProcedure from "../../../procedures/authedProcedure";
 import { router } from "../../../trpc";

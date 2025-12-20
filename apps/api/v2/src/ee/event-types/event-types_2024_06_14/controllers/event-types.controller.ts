@@ -50,12 +50,12 @@ import {
   EVENT_TYPE_WRITE,
   SUCCESS_STATUS,
   VERSION_2024_06_14,
-} from "@calcom/platform-constants";
+} from "@calndrbrnd/platform-constants";
 import {
   UpdateEventTypeInput_2024_06_14,
   GetEventTypesQuery_2024_06_14,
   CreateEventTypeInput_2024_06_14,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/event-types",

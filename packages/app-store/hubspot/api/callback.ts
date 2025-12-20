@@ -2,8 +2,8 @@ import * as hubspot from "@hubspot/api-client";
 import type { TokenResponseIF } from "@hubspot/api-client/lib/codegen/oauth/models/TokenResponseIF";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { WEBAPP_URL_FOR_OAUTH } from "@calcom/lib/constants";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
+import { WEBAPP_URL_FOR_OAUTH } from "@calndrbrnd/lib/constants";
+import { getSafeRedirectUrl } from "@calndrbrnd/lib/getSafeRedirectUrl";
 
 import getAppKeysFromSlug from "../../_utils/getAppKeysFromSlug";
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";

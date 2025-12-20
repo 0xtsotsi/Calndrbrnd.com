@@ -12,37 +12,37 @@ import React, {
 } from "react";
 import { Controller, useFieldArray, useForm, useFormContext, useWatch } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import { BookerStoreProvider } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { TimezoneSelect as WebTimezoneSelect } from "@calcom/features/components/timezone-select";
+import dayjs from "@calndrbrnd/dayjs";
+import { BookerStoreProvider } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { TimezoneSelect as WebTimezoneSelect } from "@calndrbrnd/features/components/timezone-select";
 import type {
   BulkUpdatParams,
   EventTypes,
-} from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import { BulkEditDefaultForEventsModal } from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import DateOverrideInputDialog from "@calcom/features/schedules/components/DateOverrideInputDialog";
-import DateOverrideList from "@calcom/features/schedules/components/DateOverrideList";
+} from "@calndrbrnd/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import { BulkEditDefaultForEventsModal } from "@calndrbrnd/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import DateOverrideInputDialog from "@calndrbrnd/features/schedules/components/DateOverrideInputDialog";
+import DateOverrideList from "@calndrbrnd/features/schedules/components/DateOverrideList";
 import WebSchedule, {
   ScheduleComponent as PlatformSchedule,
-} from "@calcom/features/schedules/components/Schedule";
-import WebShell from "@calcom/features/shell/Shell";
-import { availabilityAsString } from "@calcom/lib/availability";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { sortAvailabilityStrings } from "@calcom/lib/weekstart";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import type { TimeRange, WorkingHours } from "@calcom/types/schedule";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { VerticalDivider } from "@calcom/ui/components/divider";
-import { EditableHeading } from "@calcom/ui/components/editable-heading";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { SkeletonText, SelectSkeletonLoader, Skeleton } from "@calcom/ui/components/skeleton";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/features/schedules/components/Schedule";
+import WebShell from "@calndrbrnd/features/shell/Shell";
+import { availabilityAsString } from "@calndrbrnd/lib/availability";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { sortAvailabilityStrings } from "@calndrbrnd/lib/weekstart";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import type { TimeRange, WorkingHours } from "@calndrbrnd/types/schedule";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogTrigger, ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
+import { VerticalDivider } from "@calndrbrnd/ui/components/divider";
+import { EditableHeading } from "@calndrbrnd/ui/components/editable-heading";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { SkeletonText, SelectSkeletonLoader, Skeleton } from "@calndrbrnd/ui/components/skeleton";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { Shell as PlatformShell } from "../src/components/ui/shell";
 import { cn } from "../src/lib/utils";

@@ -1,4 +1,4 @@
-import handleMarkNoShow from "@calcom/features/handleMarkNoShow";
+import handleMarkNoShow from "@calndrbrnd/features/handleMarkNoShow";
 
 import type { TNoShowInputSchema } from "./markHostAsNoShow.schema";
 

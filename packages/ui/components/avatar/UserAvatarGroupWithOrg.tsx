@@ -1,8 +1,8 @@
-import { useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import type { Team, User } from "@calcom/prisma/client";
+import { useIsEmbed } from "@calndrbrnd/embed-core/embed-iframe";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import type { Team, User } from "@calndrbrnd/prisma/client";
 
 import { AvatarGroup } from "./AvatarGroup";
 

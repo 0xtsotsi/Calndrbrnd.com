@@ -1,9 +1,9 @@
 "use client";
 
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SkeletonText, SkeletonContainer } from "@calcom/ui/components/skeleton";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { SkeletonText, SkeletonContainer } from "@calndrbrnd/ui/components/skeleton";
 
 export const SkeletonLoader = () => {
   const { t } = useLocale();

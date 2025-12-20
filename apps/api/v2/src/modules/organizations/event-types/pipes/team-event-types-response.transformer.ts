@@ -3,7 +3,7 @@ import { DatabaseTeamEventType } from "@/modules/organizations/event-types/servi
 import { Injectable, PipeTransform } from "@nestjs/common";
 import { plainToClass } from "class-transformer";
 
-import { TeamEventTypeOutput_2024_06_14 } from "@calcom/platform-types";
+import { TeamEventTypeOutput_2024_06_14 } from "@calndrbrnd/platform-types";
 
 @Injectable()
 export class OutputTeamEventTypesResponsePipe implements PipeTransform {

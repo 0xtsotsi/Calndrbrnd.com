@@ -13,7 +13,7 @@ vi.mock("@formkit/auto-animate/react", () => ({
 }));
 
 // Mock Segment component
-vi.mock("@calcom/features/Segment", () => ({
+vi.mock("@calndrbrnd/features/Segment", () => ({
   Segment: vi.fn().mockImplementation(({ onQueryValueChange }) => (
     <div data-testid="mock-segment">
       <button onClick={() => onQueryValueChange({ queryValue: { id: "test" } })}>Update Query</button>
@@ -39,7 +39,7 @@ const mockTeamMembers: TeamMember[] = [
 ];
 
 // Mock trpc
-vi.mock("@calcom/trpc", () => ({
+vi.mock("@calndrbrnd/trpc", () => ({
   trpc: {
     useUtils: () => ({
       viewer: {

@@ -1,9 +1,9 @@
 import type z from "zod";
 
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
-import type { TraceContext } from "@calcom/lib/tracing";
-import type { Prisma } from "@calcom/prisma/client";
-import type { AppsStatus, CalendarEvent } from "@calcom/types/Calendar";
+import type { Workflow } from "@calndrbrnd/features/ee/workflows/lib/types";
+import type { TraceContext } from "@calndrbrnd/lib/tracing";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { AppsStatus, CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import type { Booking } from "../handleNewBooking/createBooking";
 import type { NewBookingEventType } from "../handleNewBooking/getEventTypesFromDB";

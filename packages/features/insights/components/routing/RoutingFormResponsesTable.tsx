@@ -1,7 +1,7 @@
 "use client";
 
 import { useReactTable, getCoreRowModel, getSortedRowModel } from "@tanstack/react-table";
-import { TimezoneBadge } from "@calcom/features/insights/components/booking";
+import { TimezoneBadge } from "@calndrbrnd/features/insights/components/booking";
 
 import { useMemo, useEffect } from "react";
 import { createPortal } from "react-dom";
@@ -18,10 +18,10 @@ import {
   useFilterValue,
   ZSingleSelectFilterValue,
   type FilterableColumn,
-} from "@calcom/features/data-table";
-import type { FilterType } from "@calcom/types/data-table";
-import { useInsightsRoutingParameters } from "@calcom/features/insights/hooks/useInsightsRoutingParameters";
-import { trpc } from "@calcom/trpc";
+} from "@calndrbrnd/features/data-table";
+import type { FilterType } from "@calndrbrnd/types/data-table";
+import { useInsightsRoutingParameters } from "@calndrbrnd/features/insights/hooks/useInsightsRoutingParameters";
+import { trpc } from "@calndrbrnd/trpc";
 
 import { RoutingFormResponsesDownload } from "../../filters/Download";
 import { OrgTeamsFilter } from "../../filters/OrgTeamsFilter";
@@ -30,8 +30,8 @@ import { useInsightsOrgTeams } from "../../hooks/useInsightsOrgTeams";
 import { useInsightsRoutingFacetedUniqueValues } from "../../hooks/useInsightsRoutingFacetedUniqueValues";
 import type { RoutingFormTableRow } from "../../lib/types";
 import { RoutingKPICards } from "./RoutingKPICards";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 export type RoutingFormTableType = ReturnType<typeof useReactTable<RoutingFormTableRow>>;
 

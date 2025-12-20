@@ -3,9 +3,9 @@ import { TeamsEventTypesRepository } from "@/modules/teams/event-types/teams-eve
 import { UsersRepository } from "@/modules/users/users.repository";
 import { Injectable } from "@nestjs/common";
 
-import { SchedulingType } from "@calcom/platform-libraries";
-import { EventTypeMetadata } from "@calcom/platform-libraries/event-types";
-import type { HostPriority, TeamEventTypeResponseHost } from "@calcom/platform-types";
+import { SchedulingType } from "@calndrbrnd/platform-libraries";
+import { EventTypeMetadata } from "@calndrbrnd/platform-libraries/event-types";
+import type { HostPriority, TeamEventTypeResponseHost } from "@calndrbrnd/platform-types";
 import type {
   Team,
   EventType,
@@ -14,7 +14,7 @@ import type {
   Host,
   DestinationCalendar,
   CalVideoSettings,
-} from "@calcom/prisma/client";
+} from "@calndrbrnd/prisma/client";
 
 type EventTypeRelations = {
   users: User[];

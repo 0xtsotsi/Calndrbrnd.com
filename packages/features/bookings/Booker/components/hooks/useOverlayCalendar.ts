@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { shallow } from "zustand/shallow";
 
-import dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
+import dayjs from "@calndrbrnd/dayjs";
+import { useTimePreferences } from "@calndrbrnd/features/bookings/lib";
 
 import { useOverlayCalendarStore } from "../OverlayCalendar/store";
 import type { UseCalendarsReturnType } from "./useCalendars";

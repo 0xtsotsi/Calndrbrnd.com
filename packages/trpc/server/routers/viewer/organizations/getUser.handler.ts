@@ -1,7 +1,7 @@
-import { Resource, CustomAction } from "@calcom/features/pbac/domain/types/permission-registry";
-import { getSpecificPermissions } from "@calcom/features/pbac/lib/resource-permissions";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { Resource, CustomAction } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { getSpecificPermissions } from "@calndrbrnd/features/pbac/lib/resource-permissions";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

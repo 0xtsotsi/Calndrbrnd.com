@@ -2,10 +2,10 @@ import { get } from "@vercel/edge-config";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import getIP from "@calcom/lib/getIP";
-import { HttpError } from "@calcom/lib/http-error";
-import { piiHasher } from "@calcom/lib/server/PiiHasher";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import getIP from "@calndrbrnd/lib/getIP";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { piiHasher } from "@calndrbrnd/lib/server/PiiHasher";
 
 import { getCspHeader, getCspNonce } from "@lib/csp";
 

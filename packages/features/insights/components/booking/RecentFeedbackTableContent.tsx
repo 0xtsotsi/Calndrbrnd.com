@@ -1,12 +1,12 @@
 "use client";
 
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 type FeedbackData = RouterOutputs["viewer"]["insights"]["recentRatings"];
 

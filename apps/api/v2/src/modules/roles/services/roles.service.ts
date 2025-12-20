@@ -3,8 +3,8 @@ import { UpdateTeamRoleInput } from "@/modules/organizations/teams/roles/inputs/
 import { RolesPermissionsCacheService } from "@/modules/roles/permissions/services/roles-permissions-cache.service";
 import { BadRequestException, Injectable, NotFoundException, Logger } from "@nestjs/common";
 
-import { RoleService } from "@calcom/platform-libraries/pbac";
-import type { CreateRoleData, UpdateRolePermissionsData } from "@calcom/platform-libraries/pbac";
+import { RoleService } from "@calndrbrnd/platform-libraries/pbac";
+import type { CreateRoleData, UpdateRolePermissionsData } from "@calndrbrnd/platform-libraries/pbac";
 
 @Injectable()
 export class RolesService {

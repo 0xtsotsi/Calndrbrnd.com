@@ -4,12 +4,12 @@ import type { UseFormReturn, FieldArrayWithId } from "react-hook-form";
 import { Controller, useForm, useFieldArray } from "react-hook-form";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { InfoBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { SettingsToggle, SelectField, Input, InputField, Form, Label } from "@calcom/ui/components/form";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { InfoBadge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
+import { SettingsToggle, SelectField, Input, InputField, Form, Label } from "@calndrbrnd/ui/components/form";
 
 const attributeFormSchema = z.object({
   attrName: z.string().min(1),

@@ -1,4 +1,4 @@
-import type { Schedule as ScheduleType, TimeRange } from "@calcom/types/schedule";
+import type { Schedule as ScheduleType, TimeRange } from "@calndrbrnd/types/schedule";
 
 export type Availability = {
   id: number;

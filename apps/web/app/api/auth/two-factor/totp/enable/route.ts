@@ -4,12 +4,12 @@ import { cookies, headers } from "next/headers";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-import { ErrorCode } from "@calcom/features/auth/lib/ErrorCode";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import { totpAuthenticatorCheck } from "@calcom/lib/totp";
-import prisma from "@calcom/prisma";
+import { ErrorCode } from "@calndrbrnd/features/auth/lib/ErrorCode";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import { symmetricDecrypt } from "@calndrbrnd/lib/crypto";
+import { totpAuthenticatorCheck } from "@calndrbrnd/lib/totp";
+import prisma from "@calndrbrnd/prisma";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

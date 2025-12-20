@@ -1,4 +1,4 @@
-import type { IconName } from "@calcom/ui/components/icon/icon-names";
+import type { IconName } from "@calndrbrnd/ui/components/icon/icon-names";
 
 export type FilterType = "ss" | "ms" | "t" | "n" | "dr";
 

@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@calcom/lib/constants";
-import { checkWCAGContrastColor } from "@calcom/lib/getBrandColours";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { ColorPicker } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
+import SectionBottomActions from "@calndrbrnd/features/settings/SectionBottomActions";
+import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR } from "@calndrbrnd/lib/constants";
+import { checkWCAGContrastColor } from "@calndrbrnd/lib/getBrandColours";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ColorPicker } from "@calndrbrnd/ui/components/form";
+import { SettingsToggle } from "@calndrbrnd/ui/components/form";
 
 type BrandColorsFormValues = {
   brandColor: string;

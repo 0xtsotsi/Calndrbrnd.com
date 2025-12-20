@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import { prisma } from "@calcom/prisma";
-import type { MembershipRole } from "@calcom/prisma/enums";
+import type { PermissionString } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { prisma } from "@calndrbrnd/prisma";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
@@ -11,7 +11,7 @@ import authedProcedure from "../../../procedures/authedProcedure";
 import { createWebhookPbacProcedure, webhookProcedure } from "./util";
 
 // Mock dependencies - use factory functions to avoid hoisting issues
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {
     webhook: {
       findUnique: vi.fn(),
@@ -27,7 +27,7 @@ vi.mock("@calcom/prisma", () => ({
 
 const mockCheckPermission = vi.fn();
 
-vi.mock("@calcom/features/pbac/services/permission-check.service", () => ({
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service", () => ({
   PermissionCheckService: vi.fn().mockImplementation(() => ({
     checkPermission: mockCheckPermission,
   })),

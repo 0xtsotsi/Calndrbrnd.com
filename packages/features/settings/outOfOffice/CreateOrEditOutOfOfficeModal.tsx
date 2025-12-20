@@ -1,25 +1,25 @@
 import { useMemo, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import { useHasTeamPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useInViewObserver } from "@calcom/lib/hooks/useInViewObserver";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { UpgradeTeamsBadge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogHeader } from "@calcom/ui/components/dialog";
-import { DateRangePicker, TextArea, Input, Checkbox } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import dayjs from "@calndrbrnd/dayjs";
+import { useHasTeamPlan } from "@calndrbrnd/features/billing/hooks/useHasPaidPlan";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useInViewObserver } from "@calndrbrnd/lib/hooks/useInViewObserver";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { UpgradeTeamsBadge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogHeader } from "@calndrbrnd/ui/components/dialog";
+import { DateRangePicker, TextArea, Input, Checkbox } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { OutOfOfficeTab } from "./OutOfOfficeToggleGroup";
 

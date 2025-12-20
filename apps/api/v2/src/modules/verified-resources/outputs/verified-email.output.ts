@@ -11,7 +11,7 @@ import {
   ValidateNested,
 } from "class-validator";
 
-import { ERROR_STATUS, SUCCESS_STATUS } from "@calcom/platform-constants";
+import { ERROR_STATUS, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 export class UserVerifiedEmailOutputData {
   @Expose()

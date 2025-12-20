@@ -2,16 +2,16 @@
 
 import { useCallback, useState } from "react";
 
-import { sdkActionManager } from "@calcom/embed-core/embed-iframe";
-import { shouldChargeNoShowCancellationFee } from "@calcom/features/bookings/lib/payment/shouldChargeNoShowCancellationFee";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useRefreshData } from "@calcom/lib/hooks/useRefreshData";
-import type { RecurringEvent } from "@calcom/types/Calendar";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Label, Select, TextArea, CheckboxField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { sdkActionManager } from "@calndrbrnd/embed-core/embed-iframe";
+import { shouldChargeNoShowCancellationFee } from "@calndrbrnd/features/bookings/lib/payment/shouldChargeNoShowCancellationFee";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useRefreshData } from "@calndrbrnd/lib/hooks/useRefreshData";
+import type { RecurringEvent } from "@calndrbrnd/types/Calendar";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Label, Select, TextArea, CheckboxField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 interface InternalNotePresetsSelectProps {
   internalNotePresets: { id: number; name: string }[];
@@ -169,7 +169,7 @@ export default function CancelBooking(props: Props) {
     !props.isHost && cancellationNoShowFeeWarning && !acknowledgeCancellationNoShowFee;
   const cancelBookingRef = useCallback((node: HTMLTextAreaElement) => {
     if (node !== null) {
-      // eslint-disable-next-line @calcom/eslint/no-scroll-into-view-embed -- CancelBooking is not usually used in embed mode
+      // eslint-disable-next-line @calndrbrnd/eslint/no-scroll-into-view-embed -- CancelBooking is not usually used in embed mode
       node.scrollIntoView({ behavior: "smooth" });
       node.focus();
     }

@@ -1,12 +1,12 @@
-import dayjs from "@calcom/dayjs";
-import { handleWebhookTrigger } from "@calcom/features/bookings/lib/handleWebhookTrigger";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import type { EventPayloadType } from "@calcom/features/webhooks/lib/sendPayload";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { HttpError } from "@calcom/lib/http-error";
-import prisma from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { handleWebhookTrigger } from "@calndrbrnd/features/bookings/lib/handleWebhookTrigger";
+import { CreditService } from "@calndrbrnd/features/ee/billing/credit-service";
+import { WorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/WorkflowService";
+import type { EventPayloadType } from "@calndrbrnd/features/webhooks/lib/sendPayload";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import prisma from "@calndrbrnd/prisma";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import { createLoggerWithEventDetails } from "../handleNewBooking/logger";
 import createNewSeat from "./create/createNewSeat";

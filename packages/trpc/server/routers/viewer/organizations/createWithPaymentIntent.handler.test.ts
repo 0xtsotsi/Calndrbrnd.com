@@ -3,9 +3,9 @@ import prismock from "../../../../../../tests/libs/__mocks__/prisma";
 import { v4 as uuidv4 } from "uuid";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { ORGANIZATION_SELF_SERVE_PRICE } from "@calcom/lib/constants";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { UserPermissionRole } from "@calcom/prisma/enums";
+import { ORGANIZATION_SELF_SERVE_PRICE } from "@calndrbrnd/lib/constants";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
@@ -44,7 +44,7 @@ const mockSharedStripe = vi.hoisted(() => ({
   },
 }));
 
-vi.mock("@calcom/features/ee/billing/di/containers/Billing", () => {
+vi.mock("@calndrbrnd/features/ee/billing/di/containers/Billing", () => {
   type FakeBillingProvider = {
     createCustomer(args: {
       email: string;
@@ -99,7 +99,7 @@ vi.mock("@calcom/features/ee/billing/di/containers/Billing", () => {
 
   return {
     getBillingProviderService: () =>
-      fake as unknown as import("@calcom/features/ee/billing/service/billingProvider/StripeBillingService").StripeBillingService,
+      fake as unknown as import("@calndrbrnd/features/ee/billing/service/billingProvider/StripeBillingService").StripeBillingService,
   };
 });
 

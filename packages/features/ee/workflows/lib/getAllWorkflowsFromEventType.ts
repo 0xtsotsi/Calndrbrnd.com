@@ -1,10 +1,10 @@
-import { getAllWorkflows } from "@calcom/ee/workflows/lib/getAllWorkflows";
-import type { Workflow as WorkflowType } from "@calcom/ee/workflows/lib/types";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { getTeamIdFromEventType } from "@calcom/lib/getTeamIdFromEventType";
-import type { Prisma } from "@calcom/prisma/client";
-import { WorkflowType as PrismaWorkflowType } from "@calcom/prisma/enums";
-import { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
+import { getAllWorkflows } from "@calndrbrnd/ee/workflows/lib/getAllWorkflows";
+import type { Workflow as WorkflowType } from "@calndrbrnd/ee/workflows/lib/types";
+import getOrgIdFromMemberOrTeamId from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import { getTeamIdFromEventType } from "@calndrbrnd/lib/getTeamIdFromEventType";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { WorkflowType as PrismaWorkflowType } from "@calndrbrnd/prisma/enums";
+import { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 export async function getAllWorkflowsFromEventType(
   eventType: {

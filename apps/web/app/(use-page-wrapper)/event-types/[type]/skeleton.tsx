@@ -1,12 +1,12 @@
 "use client";
 
-import Shell from "@calcom/features/shell/Shell";
+import Shell from "@calndrbrnd/features/shell/Shell";
 import {
   SkeletonButton,
   SkeletonContainer,
   SkeletonText,
   SkeletonAvatar,
-} from "@calcom/ui/components/skeleton";
+} from "@calndrbrnd/ui/components/skeleton";
 
 export const EventTypeEditPageSkeleton = () => {
   const backButtonSkeleton = (

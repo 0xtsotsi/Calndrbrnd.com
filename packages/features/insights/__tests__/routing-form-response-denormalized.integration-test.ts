@@ -1,9 +1,9 @@
 import { describe, expect, beforeEach, afterEach, it } from "vitest";
 
-import type { Field as FormField } from "@calcom/app-store/routing-forms/types/types";
-import prisma from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { BookingStatus, SchedulingType } from "@calcom/prisma/enums";
+import type { Field as FormField } from "@calndrbrnd/app-store/routing-forms/types/types";
+import prisma from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import { BookingStatus, SchedulingType } from "@calndrbrnd/prisma/enums";
 
 describe("RoutingFormResponseDenormalized", () => {
   let userId: number;

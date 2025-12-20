@@ -1,8 +1,8 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { SubscriptionStatus } from "@calcom/ee/billing/repository/billing/IBillingRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { prisma } from "@calcom/prisma";
+import { SubscriptionStatus } from "@calndrbrnd/ee/billing/repository/billing/IBillingRepository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { skipTeamTrialsHandler } from "./skipTeamTrials.handler";
 
@@ -18,7 +18,7 @@ vi.mock("./skipTeamTrials.handler", async () => {
 });
 
 // Mock dependencies
-vi.mock("@calcom/lib/constants", () => ({
+vi.mock("@calndrbrnd/lib/constants", () => ({
   IS_SELF_HOSTED: false,
   IS_PRODUCTION: false,
   CALCOM_ENV: "test",
@@ -27,7 +27,7 @@ vi.mock("@calcom/lib/constants", () => ({
   HOSTED_CAL_FEATURES: true,
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {
     user: {
       update: vi.fn().mockResolvedValue({}),
@@ -35,7 +35,7 @@ vi.mock("@calcom/prisma", () => ({
   },
 }));
 
-vi.mock("@calcom/lib/logger", () => ({
+vi.mock("@calndrbrnd/lib/logger", () => ({
   default: {
     getSubLogger: () => ({
       info: vi.fn(),
@@ -44,7 +44,7 @@ vi.mock("@calcom/lib/logger", () => ({
   },
 }));
 
-vi.mock("@calcom/features/membership/repositories/MembershipRepository", () => ({
+vi.mock("@calndrbrnd/features/membership/repositories/MembershipRepository", () => ({
   MembershipRepository: {
     findAllAcceptedTeamMemberships: vi.fn(),
   },
@@ -54,7 +54,7 @@ const mockGetSubscriptionStatus = vi.fn();
 const mockEndTrial = vi.fn().mockResolvedValue(true);
 const mockInit = vi.fn();
 
-vi.mock("@calcom/ee/billing/di/containers/Billing", () => ({
+vi.mock("@calndrbrnd/ee/billing/di/containers/Billing", () => ({
   getTeamBillingServiceFactory: vi.fn(() => ({
     init: mockInit,
   })),

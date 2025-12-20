@@ -3,28 +3,28 @@ import { Controller, useFormContext } from "react-hook-form";
 import type { UseFormGetValues, UseFormSetValue, Control, FormState } from "react-hook-form";
 import type { MultiValue } from "react-select";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
 import type {
   EventTypeSetupProps,
   InputClassNames,
   SelectClassNames,
   SettingsToggleClassNames,
-} from "@calcom/features/eventtypes/lib/types";
-import type { FormValues, LocationFormValues } from "@calcom/features/eventtypes/lib/types";
-import { MAX_EVENT_DURATION_MINUTES, MIN_EVENT_DURATION_MINUTES } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { md } from "@calcom/lib/markdownIt";
-import { slugify } from "@calcom/lib/slugify";
-import turndown from "@calcom/lib/turndownService";
-import classNames from "@calcom/ui/classNames";
-import { Editor } from "@calcom/ui/components/editor";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
-import { SettingsToggle } from "@calcom/ui/components/form";
-import { Skeleton } from "@calcom/ui/components/skeleton";
+} from "@calndrbrnd/features/eventtypes/lib/types";
+import type { FormValues, LocationFormValues } from "@calndrbrnd/features/eventtypes/lib/types";
+import { MAX_EVENT_DURATION_MINUTES, MIN_EVENT_DURATION_MINUTES } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { md } from "@calndrbrnd/lib/markdownIt";
+import { slugify } from "@calndrbrnd/lib/slugify";
+import turndown from "@calndrbrnd/lib/turndownService";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Editor } from "@calndrbrnd/ui/components/editor";
+import { TextAreaField } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { SettingsToggle } from "@calndrbrnd/ui/components/form";
+import { Skeleton } from "@calndrbrnd/ui/components/skeleton";
 
 import Locations from "../../locations/Locations";
 import type { LocationCustomClassNames } from "../../locations/types";

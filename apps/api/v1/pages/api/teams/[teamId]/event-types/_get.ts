@@ -1,9 +1,9 @@
 import type { NextApiRequest } from "next";
 import { z } from "zod";
 
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import { eventTypeSelect } from "~/lib/selects/event-type";
 

@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { Calendar } from "@calcom/features/calendars/weeklyview";
-import type { CalendarEvent } from "@calcom/features/calendars/weeklyview/types/events";
-import type { CalendarComponentProps, Hours } from "@calcom/features/calendars/weeklyview/types/state";
+import dayjs from "@calndrbrnd/dayjs";
+import { Calendar } from "@calndrbrnd/features/calendars/weeklyview";
+import type { CalendarEvent } from "@calndrbrnd/features/calendars/weeklyview/types/events";
+import type { CalendarComponentProps, Hours } from "@calndrbrnd/features/calendars/weeklyview/types/state";
 
 const makeDate = (dayOffset: number, hour: number, minute: number = 0) => {
   return dayjs("2025-01-06").add(dayOffset, "day").hour(hour).minute(minute).second(0).toDate();

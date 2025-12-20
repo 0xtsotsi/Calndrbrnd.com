@@ -1,4 +1,4 @@
-import { featureFlagRouter } from "@calcom/features/flags/server/router";
+import { featureFlagRouter } from "@calndrbrnd/features/flags/server/router";
 
 import { router } from "../../trpc";
 import app_RoutingForms from "../apps/routing-forms/_router";
@@ -72,7 +72,7 @@ export const viewerRouter = router({
   payments: paymentsRouter,
   filterSegments: filterSegmentsRouter,
   pbac: permissionsRouter,
-  // NOTE: Add all app related routes in the bottom till the problem described in @calcom/app-store/trpc-routers.ts is solved.
+  // NOTE: Add all app related routes in the bottom till the problem described in @calndrbrnd/app-store/trpc-routers.ts is solved.
   // After that there would just one merge call here for all the apps.
   appRoutingForms: app_RoutingForms,
   features: featureFlagRouter,

@@ -1,11 +1,11 @@
 import type { NextApiRequest } from "next";
 import { v4 } from "uuid";
 
-import { generateUniqueAPIKey } from "@calcom/features/ee/api-keys/lib/apiKeys";
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { generateUniqueAPIKey } from "@calndrbrnd/features/ee/api-keys/lib/apiKeys";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import { apiKeyCreateBodySchema, apiKeyPublicSchema } from "~/lib/validations/api-key";
 

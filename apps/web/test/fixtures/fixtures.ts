@@ -1,8 +1,8 @@
 // my-test.ts
 import { test as base } from "vitest";
 
-import { getTestEmails } from "@calcom/lib/testEmails";
-import { getTestSMS } from "@calcom/lib/testSMS";
+import { getTestEmails } from "@calndrbrnd/lib/testEmails";
+import { getTestSMS } from "@calndrbrnd/lib/testSMS";
 
 export interface Fixtures {
   emails: ReturnType<typeof getEmailsFixture>;

@@ -1,7 +1,7 @@
 "use client";
 
-import Shell from "@calcom/features/shell/Shell";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 import NoPlatformPlan from "@components/settings/platform/dashboard/NoPlatformPlan";
 import { useGetUserAttributes } from "@components/settings/platform/hooks/useGetUserAttributes";

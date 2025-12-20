@@ -1,8 +1,8 @@
 import { useMutation } from "@tanstack/react-query";
 
-import type { BookingResponse, RecurringBookingCreateBody } from "@calcom/features/bookings/types";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiErrorResponse, ApiSuccessResponse } from "@calcom/platform-types";
+import type { BookingResponse, RecurringBookingCreateBody } from "@calndrbrnd/features/bookings/types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiResponse, ApiErrorResponse, ApiSuccessResponse } from "@calndrbrnd/platform-types";
 
 import http from "../../lib/http";
 

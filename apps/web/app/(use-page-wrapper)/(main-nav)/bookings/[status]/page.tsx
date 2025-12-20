@@ -5,11 +5,11 @@ import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

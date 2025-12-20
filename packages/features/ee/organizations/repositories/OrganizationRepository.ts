@@ -1,16 +1,16 @@
 import type { z } from "zod";
 
-import { getOrgUsernameFromEmail } from "@calcom/features/auth/signup/utils/getOrgUsernameFromEmail";
-import { getParsedTeam } from "@calcom/features/ee/teams/lib/getParsedTeam";
-import { createAProfileForAnExistingUser } from "@calcom/features/profile/lib/createAProfileForAnExistingUser";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { PrismaClient } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import type { CreationSource } from "@calcom/prisma/enums";
-import type { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { getOrgUsernameFromEmail } from "@calndrbrnd/features/auth/signup/utils/getOrgUsernameFromEmail";
+import { getParsedTeam } from "@calndrbrnd/features/ee/teams/lib/getParsedTeam";
+import { createAProfileForAnExistingUser } from "@calndrbrnd/features/profile/lib/createAProfileForAnExistingUser";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import type { PrismaClient } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { CreationSource } from "@calndrbrnd/prisma/enums";
+import type { teamMetadataStrictSchema } from "@calndrbrnd/prisma/zod-utils";
+import { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 const orgSelect = {
   id: true,

@@ -1,8 +1,8 @@
-import { getAllDelegationCredentialsForUserByAppType } from "@calcom/app-store/delegationCredential";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { prisma } from "@calcom/prisma";
-import { safeCredentialSelect } from "@calcom/prisma/selects/credential";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getAllDelegationCredentialsForUserByAppType } from "@calndrbrnd/app-store/delegationCredential";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import { safeCredentialSelect } from "@calndrbrnd/prisma/selects/credential";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TAppCredentialsByTypeInputSchema } from "./appCredentialsByType.schema";
 

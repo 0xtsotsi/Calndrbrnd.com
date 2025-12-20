@@ -25,7 +25,7 @@ import tailwindCss from "./tailwindCss";
 import type { UiConfig, EmbedPageType, PrefillAndIframeAttrsConfig, ModalPrerenderOptions } from "./types";
 import { getMaxHeightForModal } from "./ui-utils";
 
-// Exporting for consumption by @calcom/embed-core user
+// Exporting for consumption by @calndrbrnd/embed-core user
 export type { EmbedEvent } from "./sdk-action-manager";
 export type { PrefillAndIframeAttrsConfig } from "./types";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

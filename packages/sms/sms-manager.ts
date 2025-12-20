@@ -1,14 +1,14 @@
-import dayjs from "@calcom/dayjs";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import { getSenderId } from "@calcom/features/ee/workflows/lib/alphanumericSenderIdSupport";
-import { sendSmsOrFallbackEmail } from "@calcom/features/ee/workflows/lib/reminders/messageDispatcher";
-import { SENDER_ID } from "@calcom/lib/constants";
-import isSmsCalEmail from "@calcom/lib/isSmsCalEmail";
-import { piiHasher } from "@calcom/lib/server/PiiHasher";
-import { checkSMSRateLimit } from "@calcom/lib/smsLockState";
-import { TimeFormat } from "@calcom/lib/timeFormat";
-import prisma from "@calcom/prisma";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import dayjs from "@calndrbrnd/dayjs";
+import { CreditService } from "@calndrbrnd/features/ee/billing/credit-service";
+import { getSenderId } from "@calndrbrnd/features/ee/workflows/lib/alphanumericSenderIdSupport";
+import { sendSmsOrFallbackEmail } from "@calndrbrnd/features/ee/workflows/lib/reminders/messageDispatcher";
+import { SENDER_ID } from "@calndrbrnd/lib/constants";
+import isSmsCalEmail from "@calndrbrnd/lib/isSmsCalEmail";
+import { piiHasher } from "@calndrbrnd/lib/server/PiiHasher";
+import { checkSMSRateLimit } from "@calndrbrnd/lib/smsLockState";
+import { TimeFormat } from "@calndrbrnd/lib/timeFormat";
+import prisma from "@calndrbrnd/prisma";
+import type { CalendarEvent, Person } from "@calndrbrnd/types/Calendar";
 
 const handleSendingSMS = async ({
   reminderPhone,

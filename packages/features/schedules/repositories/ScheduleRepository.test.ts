@@ -1,10 +1,10 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { PrismaClient } from "@calcom/prisma";
+import { PrismaClient } from "@calndrbrnd/prisma";
 
 import { ScheduleRepository } from "./ScheduleRepository";
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   const mockPrisma = {
     user: {
       findUnique: vi.fn(),
@@ -21,7 +21,7 @@ vi.mock("@calcom/prisma", () => {
   };
 });
 
-vi.mock("@calcom/lib/hasEditPermissionForUser", () => ({
+vi.mock("@calndrbrnd/lib/hasEditPermissionForUser", () => ({
   hasReadPermissionsForUserId: vi.fn().mockResolvedValue(true),
 }));
 

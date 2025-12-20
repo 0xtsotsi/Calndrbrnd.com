@@ -3,7 +3,7 @@ import type {
   SeatOptionsDisabledSchema,
   Seats_2024_06_14,
   Disabled_2024_06_14,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 export function transformSeatsInternalToApi(
   transformedSeats: SeatOptionsTransformedSchema | SeatOptionsDisabledSchema

@@ -1,6 +1,6 @@
 import z from "zod";
 
-import { SelectedCalendarSchema } from "@calcom/prisma/zod/modelSchema/SelectedCalendarSchema";
+import { SelectedCalendarSchema } from "@calndrbrnd/prisma/zod/modelSchema/SelectedCalendarSchema";
 
 import { schemaQueryIdAsString } from "./shared/queryIdString";
 import { schemaQueryIdParseInt } from "./shared/queryIdTransformParseInt";

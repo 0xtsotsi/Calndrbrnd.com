@@ -1,6 +1,6 @@
-import type { FilterHostsService } from "@calcom/features/bookings/lib/host-filtering/filterHostsBySameRoundRobinHost";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { prismaModule } from "@calcom/features/di/modules/Prisma";
+import type { FilterHostsService } from "@calndrbrnd/features/bookings/lib/host-filtering/filterHostsBySameRoundRobinHost";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { prismaModule } from "@calndrbrnd/features/di/modules/Prisma";
 
 import { createContainer } from "../di";
 import { bookingRepositoryModule } from "../modules/Booking";

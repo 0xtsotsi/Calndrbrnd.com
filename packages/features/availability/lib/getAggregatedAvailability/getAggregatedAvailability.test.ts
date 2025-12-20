@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 
 import { getAggregatedAvailability } from "./getAggregatedAvailability";
 

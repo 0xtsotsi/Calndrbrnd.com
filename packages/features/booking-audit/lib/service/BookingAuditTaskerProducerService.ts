@@ -1,9 +1,9 @@
 import { z } from "zod";
 import { v4 as uuidv4 } from "uuid";
-import type { Tasker } from "@calcom/features/tasker/tasker";
-import { IS_PRODUCTION } from "@calcom/lib/constants";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { ISimpleLogger } from "@calcom/features/di/shared/services/logger.service";
+import type { Tasker } from "@calndrbrnd/features/tasker/tasker";
+import { IS_PRODUCTION } from "@calndrbrnd/lib/constants";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import type { ISimpleLogger } from "@calndrbrnd/features/di/shared/services/logger.service";
 
 import type { BookingAuditAction } from "../types/bookingAuditTask";
 import type { ActionSource } from "../types/actionSource";

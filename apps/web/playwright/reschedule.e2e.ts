@@ -1,11 +1,11 @@
 import type { Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 
-import dayjs from "@calcom/dayjs";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { bookingMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { test } from "./lib/fixtures";
 import {

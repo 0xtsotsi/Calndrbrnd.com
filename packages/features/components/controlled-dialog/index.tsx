@@ -2,9 +2,9 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { Dialog as BaseDialog } from "@calcom/ui/components/dialog";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { Dialog as BaseDialog } from "@calndrbrnd/ui/components/dialog";
 
 export type DialogProps = React.ComponentProps<(typeof DialogPrimitive)["Root"]> & {
   name?: string;

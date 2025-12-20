@@ -4,7 +4,7 @@ import { CreateTeamMembershipInput } from "@/modules/teams/memberships/inputs/cr
 import { UpdateTeamMembershipInput } from "@/modules/teams/memberships/inputs/update-team-membership.input";
 import { Injectable } from "@nestjs/common";
 
-import type { Prisma } from "@calcom/prisma/client";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 export interface TeamMembershipFilters {
   emails?: string[];

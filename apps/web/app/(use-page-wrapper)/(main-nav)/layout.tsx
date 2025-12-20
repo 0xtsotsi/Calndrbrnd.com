@@ -2,8 +2,8 @@ import { setUser as SentrySetUser } from "@sentry/nextjs";
 import { cookies, headers } from "next/headers";
 import React from "react";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import Shell from "@calcom/features/shell/Shell";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import Shell from "@calndrbrnd/features/shell/Shell";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

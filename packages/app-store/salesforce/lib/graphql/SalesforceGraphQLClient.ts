@@ -1,9 +1,9 @@
 import { Client, cacheExchange, fetchExchange } from "@urql/core";
 import { retryExchange } from "@urql/exchange-retry";
 
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { Contact } from "@calcom/types/CrmService";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import type { Contact } from "@calndrbrnd/types/CrmService";
 
 import { SalesforceRecordEnum } from "../enums";
 import getAllPossibleWebsiteValuesFromEmailDomain from "../utils/getAllPossibleWebsiteValuesFromEmailDomain";

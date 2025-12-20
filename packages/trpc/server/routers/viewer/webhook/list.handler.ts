@@ -1,6 +1,6 @@
-import type { Webhook } from "@calcom/features/webhooks/lib/dto/types";
-import { WebhookRepository } from "@calcom/features/webhooks/lib/repository/WebhookRepository";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import type { Webhook } from "@calndrbrnd/features/webhooks/lib/dto/types";
+import { WebhookRepository } from "@calndrbrnd/features/webhooks/lib/repository/WebhookRepository";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TListInputSchema } from "./list.schema";
 

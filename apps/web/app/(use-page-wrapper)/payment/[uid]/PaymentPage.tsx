@@ -5,34 +5,34 @@ import dynamic from "next/dynamic";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import { getSuccessPageLocationMessage } from "@calcom/app-store/locations";
-import dayjs from "@calcom/dayjs";
-import { sdkActionManager, useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { PayIcon } from "@calcom/features/bookings/components/event-meta/PayIcon";
-import { Price } from "@calcom/features/bookings/components/event-meta/Price";
-import type { PaymentPageProps } from "@calcom/features/ee/payments/pages/payment";
-import { APP_NAME, WEBSITE_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useTheme from "@calcom/lib/hooks/useTheme";
-import { getIs24hClockFromLocalStorage, isBrowserLocale24h } from "@calcom/lib/timeFormat";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
-import { localStorage } from "@calcom/lib/webstorage";
+import { getPaymentAppData } from "@calndrbrnd/app-store/_utils/payments/getPaymentAppData";
+import { getSuccessPageLocationMessage } from "@calndrbrnd/app-store/locations";
+import dayjs from "@calndrbrnd/dayjs";
+import { sdkActionManager, useIsEmbed } from "@calndrbrnd/embed-core/embed-iframe";
+import { PayIcon } from "@calndrbrnd/features/bookings/components/event-meta/PayIcon";
+import { Price } from "@calndrbrnd/features/bookings/components/event-meta/Price";
+import type { PaymentPageProps } from "@calndrbrnd/features/ee/payments/pages/payment";
+import { APP_NAME, WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import useTheme from "@calndrbrnd/lib/hooks/useTheme";
+import { getIs24hClockFromLocalStorage, isBrowserLocale24h } from "@calndrbrnd/lib/timeFormat";
+import { CURRENT_TIMEZONE } from "@calndrbrnd/lib/timezoneConstants";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
 
-const StripePaymentComponent = dynamic(() => import("@calcom/features/ee/payments/components/Payment"), {
+const StripePaymentComponent = dynamic(() => import("@calndrbrnd/features/ee/payments/components/Payment"), {
   ssr: false,
 });
 
 const PaypalPaymentComponent = dynamic(
   () =>
-    import("@calcom/web/components/apps/paypal/PaypalPaymentComponent").then((m) => m.PaypalPaymentComponent),
+    import("@calndrbrnd/web/components/apps/paypal/PaypalPaymentComponent").then((m) => m.PaypalPaymentComponent),
   {
     ssr: false,
   }
 );
 
 const AlbyPaymentComponent = dynamic(
-  () => import("@calcom/web/components/apps/alby/AlbyPaymentComponent").then((m) => m.AlbyPaymentComponent),
+  () => import("@calndrbrnd/web/components/apps/alby/AlbyPaymentComponent").then((m) => m.AlbyPaymentComponent),
   {
     ssr: false,
   }
@@ -40,7 +40,7 @@ const AlbyPaymentComponent = dynamic(
 
 const HitpayPaymentComponent = dynamic(
   () =>
-    import("@calcom/web/components/apps/hitpay/HitpayPaymentComponent").then((m) => m.HitpayPaymentComponent),
+    import("@calndrbrnd/web/components/apps/hitpay/HitpayPaymentComponent").then((m) => m.HitpayPaymentComponent),
   {
     ssr: false,
   }
@@ -48,7 +48,7 @@ const HitpayPaymentComponent = dynamic(
 
 const BtcpayPaymentComponent = dynamic(
   () =>
-    import("@calcom/web/components/apps/btcpayserver/BtcpayPaymentComponent").then(
+    import("@calndrbrnd/web/components/apps/btcpayserver/BtcpayPaymentComponent").then(
       (m) => m.BtcpayPaymentComponent
     ),
   {

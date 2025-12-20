@@ -1,16 +1,16 @@
 import type { GetServerSidePropsContext } from "next";
 
-import { getPremiumMonthlyPlanPriceId } from "@calcom/app-store/stripepayment/lib/utils";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { hostedCal, isSAMLLoginEnabled, samlProductID, samlTenantID } from "@calcom/features/ee/sso/lib/saml";
-import { ssoTenantProduct } from "@calcom/features/ee/sso/lib/sso";
-import { checkUsername } from "@calcom/features/profile/lib/checkUsername";
-import { OnboardingPathService } from "@calcom/features/onboarding/lib/onboarding-path.service";
-import { IS_PREMIUM_USERNAME_ENABLED } from "@calcom/lib/constants";
-import { getTrackingFromCookies, type TrackingData } from "@calcom/lib/tracking";
-import { prisma } from "@calcom/prisma";
+import { getPremiumMonthlyPlanPriceId } from "@calndrbrnd/app-store/stripepayment/lib/utils";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { hostedCal, isSAMLLoginEnabled, samlProductID, samlTenantID } from "@calndrbrnd/features/ee/sso/lib/saml";
+import { ssoTenantProduct } from "@calndrbrnd/features/ee/sso/lib/sso";
+import { checkUsername } from "@calndrbrnd/features/profile/lib/checkUsername";
+import { OnboardingPathService } from "@calndrbrnd/features/onboarding/lib/onboarding-path.service";
+import { IS_PREMIUM_USERNAME_ENABLED } from "@calndrbrnd/lib/constants";
+import { getTrackingFromCookies, type TrackingData } from "@calndrbrnd/lib/tracking";
+import { prisma } from "@calndrbrnd/prisma";
 import { z } from "zod";
 
 const Params = z.object({

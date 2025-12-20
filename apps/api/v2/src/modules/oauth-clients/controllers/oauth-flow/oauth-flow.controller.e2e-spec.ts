@@ -22,8 +22,8 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withNextAuth } from "test/utils/withNextAuth";
 
-import { X_CAL_SECRET_KEY } from "@calcom/platform-constants";
-import type { PlatformOAuthClient, Team, User } from "@calcom/prisma/client";
+import { X_CAL_SECRET_KEY } from "@calndrbrnd/platform-constants";
+import type { PlatformOAuthClient, Team, User } from "@calndrbrnd/prisma/client";
 
 describe("OAuthFlow Endpoints", () => {
   describe("User Not Authenticated", () => {

@@ -1,18 +1,18 @@
-import { getCredentialForSelectedCalendar } from "@calcom/app-store/delegationCredential";
+import { getCredentialForSelectedCalendar } from "@calndrbrnd/app-store/delegationCredential";
 import type {
   AdapterFactory,
   CalendarSubscriptionProvider,
-} from "@calcom/features/calendar-subscription/adapters/AdaptersFactory";
+} from "@calndrbrnd/features/calendar-subscription/adapters/AdaptersFactory";
 import type {
   CalendarCredential,
   CalendarSubscriptionEvent,
-} from "@calcom/features/calendar-subscription/lib/CalendarSubscriptionPort.interface";
-import type { CalendarCacheEventService } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheEventService";
-import type { CalendarSyncService } from "@calcom/features/calendar-subscription/lib/sync/CalendarSyncService";
-import type { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import type { ISelectedCalendarRepository } from "@calcom/features/selectedCalendar/repositories/SelectedCalendarRepository.interface";
-import logger from "@calcom/lib/logger";
-import type { SelectedCalendar } from "@calcom/prisma/client";
+} from "@calndrbrnd/features/calendar-subscription/lib/CalendarSubscriptionPort.interface";
+import type { CalendarCacheEventService } from "@calndrbrnd/features/calendar-subscription/lib/cache/CalendarCacheEventService";
+import type { CalendarSyncService } from "@calndrbrnd/features/calendar-subscription/lib/sync/CalendarSyncService";
+import type { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import type { ISelectedCalendarRepository } from "@calndrbrnd/features/selectedCalendar/repositories/SelectedCalendarRepository.interface";
+import logger from "@calndrbrnd/lib/logger";
+import type { SelectedCalendar } from "@calndrbrnd/prisma/client";
 
 const log = logger.getSubLogger({ prefix: ["CalendarSubscriptionService"] });
 

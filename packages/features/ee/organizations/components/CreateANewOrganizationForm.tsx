@@ -6,21 +6,21 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 
-import { subdomainSuffix } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import { BillingPeriod, CreationSource, UserPermissionRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import type { Ensure } from "@calcom/types/utils";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
+import { subdomainSuffix } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { IS_SELF_HOSTED } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import slugify from "@calndrbrnd/lib/slugify";
+import { BillingPeriod, CreationSource, UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { Ensure } from "@calndrbrnd/types/utils";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ToggleGroup } from "@calndrbrnd/ui/components/form";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { RadioAreaGroup as RadioArea } from "@calndrbrnd/ui/components/radio";
 
 import { useOnboarding } from "../lib/onboardingStore";
 

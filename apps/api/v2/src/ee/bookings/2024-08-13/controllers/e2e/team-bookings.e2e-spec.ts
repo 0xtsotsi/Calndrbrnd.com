@@ -24,7 +24,7 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calndrbrnd/platform-constants";
 import type {
   CreateBookingInput_2024_08_13,
   BookingOutput_2024_08_13,
@@ -32,8 +32,8 @@ import type {
   GetBookingsOutput_2024_08_13,
   GetSeatedBookingOutput_2024_08_13,
   RescheduleBookingInput_2024_08_13,
-} from "@calcom/platform-types";
-import type { User, PlatformOAuthClient, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { User, PlatformOAuthClient, Team } from "@calndrbrnd/prisma/client";
 
 describe("Bookings Endpoints 2024-08-13", () => {
   describe("Team bookings", () => {

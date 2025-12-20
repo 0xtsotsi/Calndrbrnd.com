@@ -4,9 +4,9 @@ import type { NextApiResponse, NextApiRequest } from "next";
 import { createMocks } from "node-mocks-http";
 import { describe, it, expect, vi } from "vitest";
 
-import { handleAutoLock } from "@calcom/features/ee/api-keys/lib/autoLock";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { HttpError } from "@calcom/lib/http-error";
+import { handleAutoLock } from "@calndrbrnd/features/ee/api-keys/lib/autoLock";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import { HttpError } from "@calndrbrnd/lib/http-error";
 
 import { rateLimitApiKey } from "~/lib/helpers/rateLimitApiKey";
 
@@ -15,11 +15,11 @@ type CustomNextApiResponse = NextApiResponse & Response;
 
 const testUserId = 123;
 
-vi.mock("@calcom/lib/checkRateLimitAndThrowError", () => ({
+vi.mock("@calndrbrnd/lib/checkRateLimitAndThrowError", () => ({
   checkRateLimitAndThrowError: vi.fn(),
 }));
 
-vi.mock("@calcom/features/ee/api-keys/lib/autoLock", () => ({
+vi.mock("@calndrbrnd/features/ee/api-keys/lib/autoLock", () => ({
   handleAutoLock: vi.fn(),
 }));
 

@@ -3,11 +3,11 @@
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { getRecentImpersonations, type RecentImpersonation } from "@calcom/lib/recentImpersonations";
-import { Button } from "@calcom/ui/components/button";
-import { PanelCard } from "@calcom/ui/components/card";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { getRecentImpersonations, type RecentImpersonation } from "@calndrbrnd/lib/recentImpersonations";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { PanelCard } from "@calndrbrnd/ui/components/card";
 import {
   TableNew,
   TableBody,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@calcom/ui/components/table";
+} from "@calndrbrnd/ui/components/table";
 
 interface RecentImpersonationsListProps {
   onImpersonate?: (username: string) => void;

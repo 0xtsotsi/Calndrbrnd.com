@@ -2,27 +2,27 @@ import { buffer } from "micro";
 import type { NextApiRequest, NextApiResponse } from "next";
 import type Stripe from "stripe";
 
-import { handlePaymentSuccess } from "@calcom/app-store/_utils/payments/handlePaymentSuccess";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import { sendAttendeeRequestEmailAndSMS, sendOrganizerRequestEmail } from "@calcom/emails/email-manager";
-import EventManager, { placeholderCreatedEvent } from "@calcom/features/bookings/lib/EventManager";
-import { doesBookingRequireConfirmation } from "@calcom/features/bookings/lib/doesBookingRequireConfirmation";
-import { getAllCredentialsIncludeServiceAccountKey } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import { handleConfirmation } from "@calcom/features/bookings/lib/handleConfirmation";
-import { getBooking } from "@calcom/features/bookings/lib/payment/getBooking";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { getPlatformParams } from "@calcom/features/platform-oauth-client/get-platform-params";
-import { PlatformOAuthClientRepository } from "@calcom/features/platform-oauth-client/platform-oauth-client.repository";
-import { IS_PRODUCTION } from "@calcom/lib/constants";
-import { HttpError as HttpCode } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getServerErrorFromUnknown } from "@calcom/lib/server/getServerErrorFromUnknown";
-import type { TraceContext } from "@calcom/lib/tracing";
-import { distributedTracing } from "@calcom/lib/tracing/factory";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { handlePaymentSuccess } from "@calndrbrnd/app-store/_utils/payments/handlePaymentSuccess";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@calndrbrnd/app-store/zod-utils";
+import { sendAttendeeRequestEmailAndSMS, sendOrganizerRequestEmail } from "@calndrbrnd/emails/email-manager";
+import EventManager, { placeholderCreatedEvent } from "@calndrbrnd/features/bookings/lib/EventManager";
+import { doesBookingRequireConfirmation } from "@calndrbrnd/features/bookings/lib/doesBookingRequireConfirmation";
+import { getAllCredentialsIncludeServiceAccountKey } from "@calndrbrnd/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import { handleConfirmation } from "@calndrbrnd/features/bookings/lib/handleConfirmation";
+import { getBooking } from "@calndrbrnd/features/bookings/lib/payment/getBooking";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { getPlatformParams } from "@calndrbrnd/features/platform-oauth-client/get-platform-params";
+import { PlatformOAuthClientRepository } from "@calndrbrnd/features/platform-oauth-client/platform-oauth-client.repository";
+import { IS_PRODUCTION } from "@calndrbrnd/lib/constants";
+import { HttpError as HttpCode } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getServerErrorFromUnknown } from "@calndrbrnd/lib/server/getServerErrorFromUnknown";
+import type { TraceContext } from "@calndrbrnd/lib/tracing";
+import { distributedTracing } from "@calndrbrnd/lib/tracing/factory";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 const log = logger.getSubLogger({ prefix: ["[paymentWebhook]"] });
 
@@ -149,7 +149,7 @@ const webhookHandlers: Record<string, WebhookHandler | undefined> = {
 
 /**
  * @deprecated
- * We need to create a PaymentManager in `@calcom/lib`
+ * We need to create a PaymentManager in `@calndrbrnd/lib`
  * to prevent circular dependencies on App Store migration
  */
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

@@ -12,18 +12,18 @@ import {
   BookingLocations,
   getDate,
   getMockBookingAttendee,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { createMockNextJsRequest } from "@calcom/web/test/utils/bookingScenario/createMockNextJsRequest";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { getMockRequestDataForCancelBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForCancelBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { createMockNextJsRequest } from "@calndrbrnd/web/test/utils/bookingScenario/createMockNextJsRequest";
+import { getMockRequestDataForBooking } from "@calndrbrnd/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { getMockRequestDataForCancelBooking } from "@calndrbrnd/web/test/utils/bookingScenario/getMockRequestDataForCancelBooking";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, test, vi, expect } from "vitest";
 
-import { appStoreMetadata } from "@calcom/app-store/apps.metadata.generated";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { appStoreMetadata } from "@calndrbrnd/app-store/apps.metadata.generated";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import { getNewBookingHandler } from "../../handleNewBooking/test/getNewBookingHandler";
 import * as handleSeatsModule from "../handleSeats";
@@ -1549,7 +1549,7 @@ describe("handleSeats", () => {
 
     describe("Canceling a booking", async () => {
       test("When canceling a booking, only remove that single attendee", async () => {
-        const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking"))
+        const handleCancelBooking = (await import("@calndrbrnd/features/bookings/lib/handleCancelBooking"))
           .default;
 
         const organizer = getOrganizer({
@@ -1699,7 +1699,7 @@ describe("handleSeats", () => {
       });
 
       test("When last attendee cancels a booking, delete event", async () => {
-        const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking"))
+        const handleCancelBooking = (await import("@calndrbrnd/features/bookings/lib/handleCancelBooking"))
           .default;
 
         const organizer = getOrganizer({
@@ -2530,7 +2530,7 @@ describe("handleSeats", () => {
 
     describe("Cancelling a booking", () => {
       test("When owner cancels booking, cancel booking for all attendees", async () => {
-        const handleCancelBooking = (await import("@calcom/features/bookings/lib/handleCancelBooking"))
+        const handleCancelBooking = (await import("@calndrbrnd/features/bookings/lib/handleCancelBooking"))
           .default;
 
         const booker = getBooker({

@@ -1,12 +1,12 @@
 import { z } from "zod";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { isValidPermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import type { PermissionString } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { RoleService } from "@calcom/features/pbac/services/role.service";
-import { prisma } from "@calcom/prisma";
-import { RoleType, MembershipRole } from "@calcom/prisma/enums";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { isValidPermissionString } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import type { PermissionString } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { RoleService } from "@calndrbrnd/features/pbac/services/role.service";
+import { prisma } from "@calndrbrnd/prisma";
+import { RoleType, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import authedProcedure from "../../../procedures/authedProcedure";
 import { router } from "../../../trpc";

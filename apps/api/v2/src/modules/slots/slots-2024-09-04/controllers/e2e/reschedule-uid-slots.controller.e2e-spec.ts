@@ -21,9 +21,9 @@ import { EventTypesRepositoryFixture } from "test/fixtures/repository/event-type
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_09_04 } from "@calcom/platform-constants";
-import type { CreateScheduleInput_2024_06_11 } from "@calcom/platform-types";
-import type { User, Booking } from "@calcom/prisma/client";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_09_04 } from "@calndrbrnd/platform-constants";
+import type { CreateScheduleInput_2024_06_11 } from "@calndrbrnd/platform-types";
+import type { User, Booking } from "@calndrbrnd/prisma/client";
 
 describe("Slots 2024-09-04 Endpoints", () => {
   describe("rescheduleUid functionality", () => {

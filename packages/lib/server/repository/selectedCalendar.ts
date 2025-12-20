@@ -1,7 +1,7 @@
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import type { SelectedCalendarEventTypeIds } from "@calcom/types/Calendar";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
+import type { SelectedCalendarEventTypeIds } from "@calndrbrnd/types/Calendar";
 
 import { buildCredentialPayloadForPrisma } from "../buildCredentialPayloadForCalendar";
 

@@ -22,17 +22,17 @@ import { CalendarsServiceMock } from "test/mocks/calendars-service-mock";
 import { IcsCalendarServiceMock } from "test/mocks/ics-calendar-service-mock";
 import { randomString } from "test/utils/randomString";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 import {
   GOOGLE_CALENDAR,
   OFFICE_365_CALENDAR,
   GOOGLE_CALENDAR_TYPE,
   GOOGLE_CALENDAR_ID,
-} from "@calcom/platform-constants";
-import { OFFICE_365_CALENDAR_ID, OFFICE_365_CALENDAR_TYPE } from "@calcom/platform-constants";
-import { ICS_CALENDAR, ICS_CALENDAR_TYPE } from "@calcom/platform-constants/apps";
-import { IcsFeedCalendarService } from "@calcom/platform-libraries/app-store";
-import type { PlatformOAuthClient, Team, User, Credential } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-constants";
+import { OFFICE_365_CALENDAR_ID, OFFICE_365_CALENDAR_TYPE } from "@calndrbrnd/platform-constants";
+import { ICS_CALENDAR, ICS_CALENDAR_TYPE } from "@calndrbrnd/platform-constants/apps";
+import { IcsFeedCalendarService } from "@calndrbrnd/platform-libraries/app-store";
+import type { PlatformOAuthClient, Team, User, Credential } from "@calndrbrnd/prisma/client";
 
 const CLIENT_REDIRECT_URI = "http://localhost:5555";
 

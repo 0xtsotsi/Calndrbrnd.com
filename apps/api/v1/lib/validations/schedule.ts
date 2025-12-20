@@ -1,8 +1,8 @@
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { AvailabilitySchema } from "@calcom/prisma/zod/modelSchema/AvailabilitySchema";
-import { ScheduleSchema } from "@calcom/prisma/zod/modelSchema/ScheduleSchema";
+import dayjs from "@calndrbrnd/dayjs";
+import { AvailabilitySchema } from "@calndrbrnd/prisma/zod/modelSchema/AvailabilitySchema";
+import { ScheduleSchema } from "@calndrbrnd/prisma/zod/modelSchema/ScheduleSchema";
 
 import { timeZone } from "./shared/timeZone";
 

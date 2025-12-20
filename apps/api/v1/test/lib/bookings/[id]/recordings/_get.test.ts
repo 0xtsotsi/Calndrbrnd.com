@@ -8,8 +8,8 @@ import { describe, expect, test, vi, afterEach } from "vitest";
 import {
   getRecordingsOfCalVideoByRoomName,
   getDownloadLinkOfCalVideoByRecordingId,
-} from "@calcom/features/conferencing/lib/videoClient";
-import { buildBooking } from "@calcom/lib/test/builder";
+} from "@calndrbrnd/features/conferencing/lib/videoClient";
+import { buildBooking } from "@calndrbrnd/lib/test/builder";
 
 import { getAccessibleUsers } from "~/lib/utils/retrieveScopedAccessibleUsers";
 
@@ -22,7 +22,7 @@ type CustomNextApiResponse = NextApiResponse & Response;
 const adminUserId = 1;
 const memberUserId = 10;
 
-vi.mock("@calcom/features/conferencing/lib/videoClient", () => {
+vi.mock("@calndrbrnd/features/conferencing/lib/videoClient", () => {
   return {
     getRecordingsOfCalVideoByRoomName: vi.fn(),
     getDownloadLinkOfCalVideoByRecordingId: vi.fn(),

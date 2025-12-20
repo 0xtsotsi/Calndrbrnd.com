@@ -32,13 +32,13 @@ import {
   SCHEDULE_READ,
   SCHEDULE_WRITE,
   SUCCESS_STATUS,
-} from "@calcom/platform-constants";
+} from "@calndrbrnd/platform-constants";
 import type {
   CreateOAuthClientInput,
   UpdateOAuthClientInput,
   ApiSuccessResponse,
-} from "@calcom/platform-types";
-import type { Membership, PlatformOAuthClient, Team, User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { Membership, PlatformOAuthClient, Team, User } from "@calndrbrnd/prisma/client";
 
 describe("OAuth Clients Endpoints", () => {
   describe("User Not Authenticated", () => {

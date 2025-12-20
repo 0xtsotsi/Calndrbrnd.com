@@ -1,6 +1,6 @@
-import { getAppRegistry } from "@calcom/app-store/_appRegistry";
-import prisma from "@calcom/prisma";
-import type { AppCategories } from "@calcom/prisma/enums";
+import { getAppRegistry } from "@calndrbrnd/app-store/_appRegistry";
+import prisma from "@calndrbrnd/prisma";
+import type { AppCategories } from "@calndrbrnd/prisma/enums";
 
 export type CategoryDataProps = NonNullable<Awaited<ReturnType<typeof getStaticProps>>>;
 

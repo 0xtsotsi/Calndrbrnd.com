@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import { shallow } from "zustand/shallow";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { useEmbedStyles } from "@calcom/embed-core/embed-iframe";
-import type { IFromUser, IToUser } from "@calcom/features/availability/lib/getUserAvailability";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { getAvailableDatesInMonth } from "@calcom/features/calendars/lib/getAvailableDatesInMonth";
-import { daysInMonth, yyyymmdd } from "@calcom/lib/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { weekdayNames } from "@calcom/lib/weekday";
-import type { PeriodData } from "@calcom/types/Event";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import { useEmbedStyles } from "@calndrbrnd/embed-core/embed-iframe";
+import type { IFromUser, IToUser } from "@calndrbrnd/features/availability/lib/getUserAvailability";
+import { useBookerStoreContext } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import { getAvailableDatesInMonth } from "@calndrbrnd/features/calendars/lib/getAvailableDatesInMonth";
+import { daysInMonth, yyyymmdd } from "@calndrbrnd/lib/dayjs";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { weekdayNames } from "@calndrbrnd/lib/weekday";
+import type { PeriodData } from "@calndrbrnd/types/Event";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import NoAvailabilityDialog from "./NoAvailabilityDialog";
 

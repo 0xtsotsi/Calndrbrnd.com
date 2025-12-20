@@ -29,8 +29,8 @@ import { NextApiRequest } from "next/types";
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
 
-import { CreationSource } from "@calcom/platform-libraries";
-import { EventTypeMetaDataSchema } from "@calcom/platform-libraries/event-types";
+import { CreationSource } from "@calndrbrnd/platform-libraries";
+import { EventTypeMetaDataSchema } from "@calndrbrnd/platform-libraries/event-types";
 import type {
   CancelBookingInput,
   CancelBookingInput_2024_08_13,
@@ -43,9 +43,9 @@ import type {
   RescheduleBookingInput,
   RescheduleBookingInput_2024_08_13,
   RescheduleSeatedBookingInput_2024_08_13,
-} from "@calcom/platform-types";
-import type { BookingInputLocation_2024_08_13 } from "@calcom/platform-types/bookings/2024-08-13/inputs/location.input";
-import type { EventType } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { BookingInputLocation_2024_08_13 } from "@calndrbrnd/platform-types/bookings/2024-08-13/inputs/location.input";
+import type { EventType } from "@calndrbrnd/prisma/client";
 
 type BookingRequest = NextApiRequest & {
   userId: number | undefined;

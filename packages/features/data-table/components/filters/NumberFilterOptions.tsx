@@ -2,14 +2,14 @@
 
 import { useForm, Controller } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { Form, Select, NumberInput } from "@calcom/ui/components/form";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Form, Select, NumberInput } from "@calndrbrnd/ui/components/form";
 
 import { useFilterValue, useDataTable } from "../../hooks";
 import type { FilterableColumn } from "../../lib/types";
 import { ZNumberFilterValue, ColumnFilterType } from "../../lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import type { FilterType } from "@calndrbrnd/types/data-table";
 import { numberFilterOperatorOptions } from "./utils";
 
 export type NumberFilterOptionsProps = {

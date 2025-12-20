@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { parseRecurringDates } from "@calcom/lib/parse-dates";
-import { getRecurringFreq } from "@calcom/lib/recurringStrings";
-import { getTimeShiftFlags, getFirstShiftFlags } from "@calcom/lib/timeShift";
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Input } from "@calcom/ui/components/form";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useBookerStoreContext } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import type { BookerEvent } from "@calndrbrnd/features/bookings/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { parseRecurringDates } from "@calndrbrnd/lib/parse-dates";
+import { getRecurringFreq } from "@calndrbrnd/lib/recurringStrings";
+import { getTimeShiftFlags, getFirstShiftFlags } from "@calndrbrnd/lib/timeShift";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Input } from "@calndrbrnd/ui/components/form";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { useBookerTime } from "../../Booker/components/hooks/useBookerTime";
 

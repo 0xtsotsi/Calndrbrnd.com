@@ -1,8 +1,8 @@
-import { hasFilter } from "@calcom/features/filters/lib/hasFilter";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { entries } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { hasFilter } from "@calndrbrnd/features/filters/lib/hasFilter";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { entries } from "@calndrbrnd/prisma/zod-utils";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

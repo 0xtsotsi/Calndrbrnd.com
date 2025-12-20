@@ -1,9 +1,9 @@
 import type { Table } from "@tanstack/react-table";
 import { useQueryState, parseAsBoolean } from "nuqs";
 
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
+import { useCopy } from "@calndrbrnd/lib/hooks/useCopy";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
 
 export function DynamicLink<T extends { username: string | null }>({
   table,

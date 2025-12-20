@@ -16,8 +16,8 @@ import { OrganizationUsersBookingsService } from "@/modules/organizations/users/
 import { Controller, UseGuards, Get, Query, ParseIntPipe, Param } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { GetBookingsInput_2024_08_13, GetBookingsOutput_2024_08_13 } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { GetBookingsInput_2024_08_13, GetBookingsOutput_2024_08_13 } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/organizations/:orgId/users/:userId/bookings",

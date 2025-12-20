@@ -1,11 +1,11 @@
 import { _generateMetadata, getTranslate } from "app/_utils";
 import { redirect } from "next/navigation";
 
-import PrivacyView from "@calcom/features/ee/organizations/pages/settings/privacy";
-import { Resource } from "@calcom/features/pbac/domain/types/permission-registry";
-import { getResourcePermissions } from "@calcom/features/pbac/lib/resource-permissions";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { MembershipRole } from "@calcom/prisma/enums";
+import PrivacyView from "@calndrbrnd/features/ee/organizations/pages/settings/privacy";
+import { Resource } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { getResourcePermissions } from "@calndrbrnd/features/pbac/lib/resource-permissions";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { validateUserHasOrg } from "../../actions/validateUserHasOrg";
 

@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiErrorResponse, ApiResponse } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiErrorResponse, ApiResponse } from "@calndrbrnd/platform-types";
 
 import { useAtomsContext } from "../../hooks/useAtomsContext";
 import { appendClientIdToEmail } from "../../lib/appendClientIdToEmail";

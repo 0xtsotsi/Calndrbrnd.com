@@ -7,13 +7,13 @@ import { z } from "zod";
 import {
   getBillingProviderService,
   getTeamBillingServiceFactory,
-} from "@calcom/features/ee/billing/di/containers/Billing";
-import { Plan, SubscriptionStatus } from "@calcom/features/ee/billing/repository/billing/IBillingRepository";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { HttpError } from "@calcom/lib/http-error";
-import prisma from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+} from "@calndrbrnd/features/ee/billing/di/containers/Billing";
+import { Plan, SubscriptionStatus } from "@calndrbrnd/features/ee/billing/repository/billing/IBillingRepository";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import prisma from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 const querySchema = z.object({
   session_id: z.string().min(1),

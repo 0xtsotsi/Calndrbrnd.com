@@ -8,10 +8,10 @@ import classNames from "classnames";
 import React from "react";
 import type { ITimezone } from "react-timezone-select";
 
-import type { Dayjs } from "@calcom/dayjs";
-import getSlots from "@calcom/features/schedules/lib/slots";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import getSlots from "@calndrbrnd/features/schedules/lib/slots";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
 
 import SkeletonLoader from "./SkeletonLoaderAvailabilityTimes";
 

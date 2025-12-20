@@ -1,8 +1,8 @@
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import type { MembershipRole } from "@calcom/prisma/enums";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { PermissionMapper } from "../domain/mappers/PermissionMapper";
 import type { PermissionCheck, TeamPermissions } from "../domain/models/Permission";

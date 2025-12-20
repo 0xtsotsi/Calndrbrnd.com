@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { APP_CREDENTIAL_SHARING_ENABLED } from "@calcom/lib/constants";
+import { APP_CREDENTIAL_SHARING_ENABLED } from "@calndrbrnd/lib/constants";
 
 export const minimumTokenResponseSchema = z
   .object({

@@ -1,6 +1,6 @@
 import React from "react";
 
-import classNames from "@calcom/ui/classNames";
+import classNames from "@calndrbrnd/ui/classNames";
 
 type Props = {
   steps: number;

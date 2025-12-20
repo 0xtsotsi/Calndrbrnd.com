@@ -1,9 +1,9 @@
-import { CreateButtonWithTeamsList } from "@calcom/features/ee/teams/components/createButton/CreateButtonWithTeamsList";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import cn from "@calcom/ui/classNames";
-import { EmptyScreen as ClassicEmptyScreen } from "@calcom/ui/components/empty-screen";
-import { Icon } from "@calcom/ui/components/icon";
-import type { IconName } from "@calcom/ui/components/icon";
+import { CreateButtonWithTeamsList } from "@calndrbrnd/features/ee/teams/components/createButton/CreateButtonWithTeamsList";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import cn from "@calndrbrnd/ui/classNames";
+import { EmptyScreen as ClassicEmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import type { IconName } from "@calndrbrnd/ui/components/icon";
 
 import { WorkflowCreationDialog, useWorkflowCreation } from "./WorkflowCreationDialog";
 

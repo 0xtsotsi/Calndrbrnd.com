@@ -33,8 +33,8 @@ import {
 } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { PermissionString } from "@calcom/platform-libraries/pbac";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { PermissionString } from "@calndrbrnd/platform-libraries/pbac";
 
 @Controller({
   path: "/v2/organizations/:orgId/roles/:roleId/permissions",

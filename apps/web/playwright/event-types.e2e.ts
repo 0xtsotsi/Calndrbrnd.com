@@ -1,8 +1,8 @@
 import type { Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { randomString } from "@calcom/lib/random";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { randomString } from "@calndrbrnd/lib/random";
 
 import { test } from "./lib/fixtures";
 import {

@@ -1,13 +1,13 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import * as teamQueries from "@calcom/features/ee/teams/lib/queries";
-import { TeamService } from "@calcom/features/ee/teams/services/teamService";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import * as teamQueries from "@calndrbrnd/features/ee/teams/lib/queries";
+import { TeamService } from "@calndrbrnd/features/ee/teams/services/teamService";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { LegacyRemoveMemberService } from "../LegacyRemoveMemberService";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {
     membership: {
       findMany: vi.fn(),
@@ -15,8 +15,8 @@ vi.mock("@calcom/prisma", () => ({
   },
 }));
 
-vi.mock("@calcom/features/ee/teams/services/teamService");
-vi.mock("@calcom/features/ee/teams/lib/queries");
+vi.mock("@calndrbrnd/features/ee/teams/services/teamService");
+vi.mock("@calndrbrnd/features/ee/teams/lib/queries");
 
 describe("LegacyRemoveMemberService", () => {
   let service: LegacyRemoveMemberService;

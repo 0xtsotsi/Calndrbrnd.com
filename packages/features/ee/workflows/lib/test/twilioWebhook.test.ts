@@ -1,9 +1,9 @@
 import { describe, beforeEach, vi, test, expect } from "vitest";
 
-import { CreditUsageType } from "@calcom/prisma/enums";
+import { CreditUsageType } from "@calndrbrnd/prisma/enums";
 
-vi.mock("@calcom/lib/constants", async () => {
-  const actual = await vi.importActual<typeof import("@calcom/lib/constants")>("@calcom/lib/constants");
+vi.mock("@calndrbrnd/lib/constants", async () => {
+  const actual = await vi.importActual<typeof import("@calndrbrnd/lib/constants")>("@calndrbrnd/lib/constants");
   return {
     ...actual,
     IS_SMS_CREDITS_ENABLED: true,
@@ -17,7 +17,7 @@ vi.mock("../reminders/providers/twilioProvider", () => ({
 }));
 
 const mockChargeCredits = vi.fn().mockResolvedValue({ teamId: 1 });
-vi.mock("@calcom/features/ee/billing/credit-service", () => ({
+vi.mock("@calndrbrnd/features/ee/billing/credit-service", () => ({
   CreditService: vi.fn().mockImplementation(() => ({
     chargeCredits: mockChargeCredits,
     calculateCreditsFromPrice: vi.fn().mockReturnValue(1),
@@ -25,7 +25,7 @@ vi.mock("@calcom/features/ee/billing/credit-service", () => ({
 }));
 
 const mockFindFirst = vi.fn();
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {
     membership: {
       findFirst: mockFindFirst,
@@ -36,7 +36,7 @@ vi.mock("@calcom/prisma", () => ({
   },
 }));
 
-vi.mock("@calcom/lib/getOrgIdFromMemberOrTeamId", () => ({
+vi.mock("@calndrbrnd/lib/getOrgIdFromMemberOrTeamId", () => ({
   default: vi.fn().mockResolvedValue(null),
   getPublishedOrgIdFromMemberOrTeamId: vi.fn().mockResolvedValue(null),
 }));

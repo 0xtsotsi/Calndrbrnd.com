@@ -1,5 +1,5 @@
-import type { AppFlags } from "@calcom/features/flags/config";
-import { trpc } from "@calcom/trpc/react";
+import type { AppFlags } from "@calndrbrnd/features/flags/config";
+import { trpc } from "@calndrbrnd/trpc/react";
 
 const initialData: AppFlags = {
   organizations: false,

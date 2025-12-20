@@ -1,5 +1,5 @@
-import type { PrismaClient } from "@calcom/prisma";
-import prisma from "@calcom/prisma";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import prisma from "@calndrbrnd/prisma";
 
 import type { RoutingFormResponseRepositoryInterface } from "./RoutingFormResponseRepository.interface";
 

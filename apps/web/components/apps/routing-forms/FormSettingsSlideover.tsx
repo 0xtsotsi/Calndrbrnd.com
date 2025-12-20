@@ -5,15 +5,15 @@ import { useRef } from "react";
 import { Controller } from "react-hook-form";
 import type { UseFormReturn } from "react-hook-form";
 
-import { TeamMemberSelect } from "@calcom/app-store/routing-forms/components/_components/TeamMemberSelect";
-import type { RoutingFormWithResponseCount } from "@calcom/app-store/routing-forms/types/types";
-import { IS_CALCOM } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Switch, TextAreaField, TextField } from "@calcom/ui/components/form";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter } from "@calcom/ui/components/sheet";
+import { TeamMemberSelect } from "@calndrbrnd/app-store/routing-forms/components/_components/TeamMemberSelect";
+import type { RoutingFormWithResponseCount } from "@calndrbrnd/app-store/routing-forms/types/types";
+import { IS_CALCOM } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Switch, TextAreaField, TextField } from "@calndrbrnd/ui/components/form";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter } from "@calndrbrnd/ui/components/sheet";
 
 type FormSettingsSlideoverProps = {
   form: RoutingFormWithResponseCount;

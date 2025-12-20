@@ -1,6 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
 
 import { TRPCError } from "@trpc/server";
 
@@ -8,7 +8,7 @@ import { removeMemberHandler } from "../../removeMember.handler";
 import type { IRemoveMemberService } from "../IRemoveMemberService";
 import { RemoveMemberServiceFactory } from "../RemoveMemberServiceFactory";
 
-vi.mock("@calcom/lib/checkRateLimitAndThrowError");
+vi.mock("@calndrbrnd/lib/checkRateLimitAndThrowError");
 vi.mock("../RemoveMemberServiceFactory");
 
 describe("removeMemberHandler", () => {

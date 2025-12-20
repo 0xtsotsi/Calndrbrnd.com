@@ -7,9 +7,9 @@ import prettier from "prettier";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 //@ts-ignore
-import prettierConfig from "@calcom/config/prettier-preset";
-import type { AppMeta } from "@calcom/types/App";
-import { AppMetaSchema } from "@calcom/types/AppMetaSchema";
+import prettierConfig from "@calndrbrnd/config/prettier-preset";
+import type { AppMeta } from "@calndrbrnd/types/App";
+import { AppMetaSchema } from "@calndrbrnd/types/AppMetaSchema";
 
 import { APP_STORE_PATH } from "./constants";
 import { getAppName } from "./utils/getAppName";

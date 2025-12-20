@@ -3,27 +3,27 @@ import type { Dispatch, SetStateAction } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import type { z } from "zod";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import { useAtomsContext } from "@calcom/atoms/hooks/useAtomsContext";
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
+import { getPaymentAppData } from "@calndrbrnd/app-store/_utils/payments/getPaymentAppData";
+import { useAtomsContext } from "@calndrbrnd/atoms/hooks/useAtomsContext";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
 import {
   SelectedCalendarsSettingsWebWrapper,
   SelectedCalendarSettingsScope,
   SelectedCalendarsSettingsWebWrapperSkeleton,
-} from "@calcom/atoms/selected-calendars/wrappers/SelectedCalendarsSettingsWebWrapper";
-import { Timezone as PlatformTimzoneSelect } from "@calcom/atoms/timezone";
-import getLocationsOptionsForSelect from "@calcom/features/bookings/lib/getLocationOptionsForSelect";
-import DestinationCalendarSelector from "@calcom/features/calendars/DestinationCalendarSelector";
-import { TimezoneSelect as WebTimezoneSelect } from "@calcom/features/components/timezone-select";
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+} from "@calndrbrnd/atoms/selected-calendars/wrappers/SelectedCalendarsSettingsWebWrapper";
+import { Timezone as PlatformTimzoneSelect } from "@calndrbrnd/atoms/timezone";
+import getLocationsOptionsForSelect from "@calndrbrnd/features/bookings/lib/getLocationOptionsForSelect";
+import DestinationCalendarSelector from "@calndrbrnd/features/calendars/DestinationCalendarSelector";
+import { TimezoneSelect as WebTimezoneSelect } from "@calndrbrnd/features/components/timezone-select";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
 import {
   allowDisablingAttendeeConfirmationEmails,
   allowDisablingHostConfirmationEmails,
-} from "@calcom/features/ee/workflows/lib/allowDisablingStandardEmails";
-import { MultiplePrivateLinksController } from "@calcom/features/eventtypes/components";
-import { LearnMoreLink } from "@calcom/features/eventtypes/components/LearnMoreLink";
-import type { EventNameObjectType } from "@calcom/features/eventtypes/lib/eventNaming";
-import { getEventName } from "@calcom/features/eventtypes/lib/eventNaming";
+} from "@calndrbrnd/features/ee/workflows/lib/allowDisablingStandardEmails";
+import { MultiplePrivateLinksController } from "@calndrbrnd/features/eventtypes/components";
+import { LearnMoreLink } from "@calndrbrnd/features/eventtypes/components/LearnMoreLink";
+import type { EventNameObjectType } from "@calndrbrnd/features/eventtypes/lib/eventNaming";
+import { getEventName } from "@calndrbrnd/features/eventtypes/lib/eventNaming";
 import type {
   FormValues,
   EventTypeSetupProps,
@@ -31,27 +31,27 @@ import type {
   CheckboxClassNames,
   InputClassNames,
   SettingsToggleClassNames,
-} from "@calcom/features/eventtypes/lib/types";
-import { FormBuilder } from "@calcom/features/form-builder/FormBuilder";
-import { BookerLayoutSelector } from "@calcom/features/settings/BookerLayoutSelector";
+} from "@calndrbrnd/features/eventtypes/lib/types";
+import { FormBuilder } from "@calndrbrnd/features/form-builder/FormBuilder";
+import { BookerLayoutSelector } from "@calndrbrnd/features/settings/BookerLayoutSelector";
 import {
   DEFAULT_LIGHT_BRAND_COLOR,
   DEFAULT_DARK_BRAND_COLOR,
   MAX_SEATS_PER_TIME_SLOT,
-} from "@calcom/lib/constants";
-import { generateHashedLink } from "@calcom/lib/generateHashedLink";
-import { checkWCAGContrastColor } from "@calcom/lib/getBrandColours";
-import { extractHostTimezone } from "@calcom/lib/hashedLinksUtils";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { Prisma } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { EditableSchema } from "@calcom/prisma/zod-utils";
-import type { fieldSchema } from "@calcom/prisma/zod-utils";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+} from "@calndrbrnd/lib/constants";
+import { generateHashedLink } from "@calndrbrnd/lib/generateHashedLink";
+import { checkWCAGContrastColor } from "@calndrbrnd/lib/getBrandColours";
+import { extractHostTimezone } from "@calndrbrnd/lib/hashedLinksUtils";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { EditableSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { fieldSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   SelectField,
   ColorPicker,
@@ -61,8 +61,8 @@ import {
   Switch,
   SettingsToggle,
   Select,
-} from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+} from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import AddVerifiedEmail from "../../AddVerifiedEmail";
 import type { CustomEventTypeModalClassNames } from "./CustomEventTypeModal";

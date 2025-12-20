@@ -2,10 +2,10 @@ import { expect } from "@playwright/test";
 import type { Page, Browser, Route, Response } from "@playwright/test";
 import type { z } from "zod";
 
-import { prisma } from "@calcom/prisma";
-import type { Team, EventType, User } from "@calcom/prisma/client";
-import { MembershipRole, SchedulingType } from "@calcom/prisma/enums";
-import type { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Team, EventType, User } from "@calndrbrnd/prisma/client";
+import { MembershipRole, SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { test } from "./lib/fixtures";
 import type { Fixtures } from "./lib/fixtures";

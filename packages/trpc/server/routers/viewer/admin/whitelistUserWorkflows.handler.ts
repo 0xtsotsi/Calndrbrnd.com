@@ -1,5 +1,5 @@
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import prisma from "@calcom/prisma";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import prisma from "@calndrbrnd/prisma";
 
 import type { TrpcSessionUser } from "../../../types";
 import type { TWhitelistUserWorkflows } from "./whitelistUserWorkflows.schema";

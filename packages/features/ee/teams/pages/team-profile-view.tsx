@@ -8,43 +8,43 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { getTeamUrlSync } from "@calcom/features/ee/organizations/lib/getTeamUrlSync";
-import { trackFormbricksAction } from "@calcom/features/formbricks/formbricks-client";
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calcom/lib/constants";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useParamsWithFallback } from "@calcom/lib/hooks/useParamsWithFallback";
-import { md } from "@calcom/lib/markdownIt";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import objectKeys from "@calcom/lib/objectKeys";
-import slugify from "@calcom/lib/slugify";
-import turndown from "@calcom/lib/turndownService";
-import type { Prisma } from "@calcom/prisma/client";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button, LinkIconButton } from "@calcom/ui/components/button";
-import { DialogTrigger, ConfirmationDialogContent } from "@calcom/ui/components/dialog";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { ImageUploader } from "@calcom/ui/components/image-uploader";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { getTeamUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getTeamUrlSync";
+import { trackFormbricksAction } from "@calndrbrnd/features/formbricks/formbricks-client";
+import SectionBottomActions from "@calndrbrnd/features/settings/SectionBottomActions";
+import { IS_TEAM_BILLING_ENABLED, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useParamsWithFallback } from "@calndrbrnd/lib/hooks/useParamsWithFallback";
+import { md } from "@calndrbrnd/lib/markdownIt";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import objectKeys from "@calndrbrnd/lib/objectKeys";
+import slugify from "@calndrbrnd/lib/slugify";
+import turndown from "@calndrbrnd/lib/turndownService";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button, LinkIconButton } from "@calndrbrnd/ui/components/button";
+import { DialogTrigger, ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
+import { Editor } from "@calndrbrnd/ui/components/editor";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { ImageUploader } from "@calndrbrnd/ui/components/image-uploader";
 import {
   SkeletonButton,
   SkeletonContainer,
   SkeletonText,
   SkeletonAvatar,
-} from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { revalidateTeamDataCache } from "@calcom/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
-import { revalidateEventTypesList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
-import { revalidateTeamsList } from "@calcom/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
+} from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
+import { revalidateTeamDataCache } from "@calndrbrnd/web/app/(booking-page-wrapper)/team/[slug]/[type]/actions";
+import { revalidateEventTypesList } from "@calndrbrnd/web/app/(use-page-wrapper)/(main-nav)/event-types/actions";
+import { revalidateTeamsList } from "@calndrbrnd/web/app/(use-page-wrapper)/(main-nav)/teams/actions";
 
 const regex = new RegExp("^[a-zA-Z0-9-]*$");
 

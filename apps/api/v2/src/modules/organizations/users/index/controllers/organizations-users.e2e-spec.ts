@@ -21,8 +21,8 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { User, Team, AttributeOption } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { User, Team, AttributeOption } from "@calndrbrnd/prisma/client";
 
 describe("Organizations Users Endpoints", () => {
   const bio = "I am a bio";

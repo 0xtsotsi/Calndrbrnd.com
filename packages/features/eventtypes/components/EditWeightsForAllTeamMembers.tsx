@@ -3,17 +3,17 @@
 import Link from "next/link";
 import { useState, useEffect, useRef, useMemo } from "react";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import type { Host, TeamMember } from "@calcom/features/eventtypes/lib/types";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { downloadAsCsv } from "@calcom/lib/csvUtils";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { buttonClasses } from "@calcom/ui/components/button";
-import { Button } from "@calcom/ui/components/button";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import type { Host, TeamMember } from "@calndrbrnd/features/eventtypes/lib/types";
+import ServerTrans from "@calndrbrnd/lib/components/ServerTrans";
+import { downloadAsCsv } from "@calndrbrnd/lib/csvUtils";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { AttributesQueryValue } from "@calndrbrnd/lib/raqb/types";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { buttonClasses } from "@calndrbrnd/ui/components/button";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 import {
   Sheet,
   SheetBody,
@@ -22,8 +22,8 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-} from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/sheet";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import {
   useTeamMembersWithSegment,

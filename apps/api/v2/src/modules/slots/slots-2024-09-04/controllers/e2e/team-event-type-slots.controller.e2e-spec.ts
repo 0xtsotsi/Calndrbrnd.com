@@ -30,12 +30,12 @@ import {
   SUCCESS_STATUS,
   VERSION_2024_09_04,
   ERROR_STATUS,
-} from "@calcom/platform-constants";
+} from "@calndrbrnd/platform-constants";
 import type {
   CreateScheduleInput_2024_06_11,
   ReserveSlotOutput_2024_09_04 as ReserveSlotOutputData_2024_09_04,
-} from "@calcom/platform-types";
-import type { User, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { User, Team } from "@calndrbrnd/prisma/client";
 
 describe("Slots 2024-09-04 Endpoints", () => {
   describe("Team event type slots", () => {

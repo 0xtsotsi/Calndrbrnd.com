@@ -19,7 +19,7 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import type { Team, PlatformBilling } from "@calcom/prisma/client";
+import type { Team, PlatformBilling } from "@calndrbrnd/prisma/client";
 
 describe("Platform Billing Controller (e2e)", () => {
   let app: INestApplication;

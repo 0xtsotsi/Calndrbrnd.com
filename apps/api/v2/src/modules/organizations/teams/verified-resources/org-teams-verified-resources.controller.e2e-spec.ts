@@ -28,8 +28,8 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { VerifiedResourcesRepositoryFixtures } from "test/fixtures/repository/verified-resources.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { AttendeeVerifyEmail } from "@calcom/platform-libraries/emails";
-import type { User, Team } from "@calcom/prisma/client";
+import { AttendeeVerifyEmail } from "@calndrbrnd/platform-libraries/emails";
+import type { User, Team } from "@calndrbrnd/prisma/client";
 
 jest.spyOn(totp, "generate").mockImplementation(function () {
   return "1234";

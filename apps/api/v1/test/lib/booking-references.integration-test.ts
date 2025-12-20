@@ -3,9 +3,9 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createMocks } from "node-mocks-http";
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
 
-import prisma from "@calcom/prisma";
-import type { Booking, Credential, EventType, User } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import type { Booking, Credential, EventType, User } from "@calndrbrnd/prisma/client";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import { patchHandler } from "../../pages/api/booking-references/[id]/_patch";
 import { handler } from "../../pages/api/booking-references/_get";

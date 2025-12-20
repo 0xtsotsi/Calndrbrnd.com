@@ -1,4 +1,4 @@
-import { IS_PRODUCTION } from "@calcom/lib/constants";
+import { IS_PRODUCTION } from "@calndrbrnd/lib/constants";
 
 import type { TaskHandler, TaskTypes } from "../tasker";
 

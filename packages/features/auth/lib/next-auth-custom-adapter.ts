@@ -1,8 +1,8 @@
 import type { Adapter, AdapterUser, AdapterAccount } from "next-auth/adapters";
 
-import type { PrismaClient } from "@calcom/prisma";
-import type { Account, IdentityProvider, User } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { Account, IdentityProvider, User } from "@calndrbrnd/prisma/client";
+import { Prisma } from "@calndrbrnd/prisma/client";
 
 const parseIntSafe = (id: string | number): number => {
   if (typeof id === "number") return id;

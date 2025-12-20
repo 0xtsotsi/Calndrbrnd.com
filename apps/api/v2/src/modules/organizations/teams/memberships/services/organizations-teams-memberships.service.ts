@@ -4,7 +4,7 @@ import { OrganizationsTeamsMembershipsRepository } from "@/modules/organizations
 import { TeamsMembershipsService } from "@/modules/teams/memberships/services/teams-memberships.service";
 import { Injectable, NotFoundException } from "@nestjs/common";
 
-import { TeamService } from "@calcom/platform-libraries";
+import { TeamService } from "@calndrbrnd/platform-libraries";
 
 @Injectable()
 export class OrganizationsTeamsMembershipsService {

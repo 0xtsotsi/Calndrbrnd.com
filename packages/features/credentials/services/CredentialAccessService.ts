@@ -1,8 +1,8 @@
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { HttpError } from "@calcom/lib/http-error";
-import type { PrismaClient } from "@calcom/prisma";
-import { prisma } from "@calcom/prisma";
+import { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { prisma } from "@calndrbrnd/prisma";
 
 type CredentialAccessInput = {
   credentialId: number;

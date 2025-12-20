@@ -4,15 +4,15 @@ import {
   getScenarioData,
   TestData,
   mockSuccessfulVideoMeetingCreation,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
 
 import { describe, it, beforeEach, vi, expect } from "vitest";
 
-import * as handleConfirmationModule from "@calcom/features/bookings/lib/handleConfirmation";
-import { distributedTracing } from "@calcom/lib/tracing/factory";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { confirmHandler } from "@calcom/trpc/server/routers/viewer/bookings/confirm.handler";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import * as handleConfirmationModule from "@calndrbrnd/features/bookings/lib/handleConfirmation";
+import { distributedTracing } from "@calndrbrnd/lib/tracing/factory";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { confirmHandler } from "@calndrbrnd/trpc/server/routers/viewer/bookings/confirm.handler";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 describe("confirmHandler", () => {
   beforeEach(() => {

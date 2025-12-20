@@ -7,19 +7,19 @@ import { useRouter, usePathname } from "next/navigation";
 import { useCallback, useState } from "react";
 import posthog from "posthog-js";
 
-import { BulkEditDefaultForEventsModal } from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import type { BulkUpdatParams } from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import { NewScheduleButton } from "@calcom/features/schedules/components/NewScheduleButton";
-import { ScheduleListItem } from "@calcom/features/schedules/components/ScheduleListItem";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { HttpError } from "@calcom/lib/http-error";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
+import { BulkEditDefaultForEventsModal } from "@calndrbrnd/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import type { BulkUpdatParams } from "@calndrbrnd/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import { NewScheduleButton } from "@calndrbrnd/features/schedules/components/NewScheduleButton";
+import { ScheduleListItem } from "@calndrbrnd/features/schedules/components/ScheduleListItem";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { ToggleGroup } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 type AvailabilityListProps = {
   availabilities: RouterOutputs["viewer"]["availability"]["list"];

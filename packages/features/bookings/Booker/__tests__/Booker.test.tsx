@@ -1,20 +1,20 @@
-import "@calcom/features/bookings/Booker/__mocks__/config";
-import "@calcom/features/bookings/Booker/components/OverlayCalendar/__mocks__/OverlayCalendar";
-import "@calcom/features/bookings/Booker/components/__mocks__/AvailableTimeSlots";
-import "@calcom/features/bookings/Booker/components/__mocks__/DatePicker";
-import "@calcom/features/bookings/Booker/components/__mocks__/DryRunMessage";
-import "@calcom/features/bookings/Booker/components/__mocks__/EventMeta";
-import "@calcom/features/bookings/Booker/components/__mocks__/Header";
-import "@calcom/features/bookings/Booker/components/__mocks__/LargeCalendar";
-import "@calcom/features/bookings/Booker/components/__mocks__/Section";
-import { constantsScenarios } from "@calcom/lib/__mocks__/constants";
-import "@calcom/lib/__mocks__/logger";
+import "@calndrbrnd/features/bookings/Booker/__mocks__/config";
+import "@calndrbrnd/features/bookings/Booker/components/OverlayCalendar/__mocks__/OverlayCalendar";
+import "@calndrbrnd/features/bookings/Booker/components/__mocks__/AvailableTimeSlots";
+import "@calndrbrnd/features/bookings/Booker/components/__mocks__/DatePicker";
+import "@calndrbrnd/features/bookings/Booker/components/__mocks__/DryRunMessage";
+import "@calndrbrnd/features/bookings/Booker/components/__mocks__/EventMeta";
+import "@calndrbrnd/features/bookings/Booker/components/__mocks__/Header";
+import "@calndrbrnd/features/bookings/Booker/components/__mocks__/LargeCalendar";
+import "@calndrbrnd/features/bookings/Booker/components/__mocks__/Section";
+import { constantsScenarios } from "@calndrbrnd/lib/__mocks__/constants";
+import "@calndrbrnd/lib/__mocks__/logger";
 
 import React from "react";
 import { vi } from "vitest";
 
-import "@calcom/dayjs/__mocks__";
-import "@calcom/features/auth/Turnstile";
+import "@calndrbrnd/dayjs/__mocks__";
+import "@calndrbrnd/features/auth/Turnstile";
 
 import { Booker } from "../Booker";
 import { render, screen } from "./test-utils";
@@ -78,11 +78,11 @@ const mockSchedule = {
   invalidate: vi.fn(),
 };
 
-vi.mock("@calcom/atoms/hooks/useIsPlatformBookerEmbed", () => ({
+vi.mock("@calndrbrnd/atoms/hooks/useIsPlatformBookerEmbed", () => ({
   useIsPlatformBookerEmbed: () => false,
 }));
 
-vi.mock("@calcom/atoms/hooks/useIsPlatform", () => ({
+vi.mock("@calndrbrnd/atoms/hooks/useIsPlatform", () => ({
   useIsPlatform: () => false,
 }));
 

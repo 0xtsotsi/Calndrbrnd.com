@@ -3,11 +3,11 @@ import { useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import type { EventLocationType } from "@calcom/app-store/locations";
-import { useBookerStore } from "@calcom/features/bookings/Booker/store";
-import getBookingResponsesSchema from "@calcom/features/bookings/lib/getBookingResponsesSchema";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import type { EventLocationType } from "@calndrbrnd/app-store/locations";
+import { useBookerStore } from "@calndrbrnd/features/bookings/Booker/store";
+import getBookingResponsesSchema from "@calndrbrnd/features/bookings/lib/getBookingResponsesSchema";
+import type { BookerEvent } from "@calndrbrnd/features/bookings/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 import { useInitialFormValues } from "./useInitialFormValues";
 

@@ -1,6 +1,6 @@
-import dayjs from "@calcom/dayjs";
-import { SYSTEM_PHONE_FIELDS, SystemField } from "@calcom/lib/bookings/SystemField";
-import { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
+import dayjs from "@calndrbrnd/dayjs";
+import { SYSTEM_PHONE_FIELDS, SystemField } from "@calndrbrnd/lib/bookings/SystemField";
+import { eventTypeBookingFields } from "@calndrbrnd/prisma/zod-utils";
 
 const DATE_FORMAT = "YYYY-MM-DD";
 const TIME_FORMAT = "HH:mm:ss";

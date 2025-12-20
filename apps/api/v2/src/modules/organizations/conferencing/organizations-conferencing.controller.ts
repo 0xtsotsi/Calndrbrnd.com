@@ -45,7 +45,7 @@ import { plainToInstance } from "class-transformer";
 import { Request } from "express";
 import { stringify } from "querystring";
 
-import { GOOGLE_MEET, ZOOM, SUCCESS_STATUS, OFFICE_365_VIDEO, CAL_VIDEO } from "@calcom/platform-constants";
+import { GOOGLE_MEET, ZOOM, SUCCESS_STATUS, OFFICE_365_VIDEO, CAL_VIDEO } from "@calndrbrnd/platform-constants";
 
 export type OAuthCallbackState = {
   accessToken: string;

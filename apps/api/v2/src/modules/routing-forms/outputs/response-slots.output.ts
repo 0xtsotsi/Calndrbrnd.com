@@ -2,8 +2,8 @@ import { ApiExtraModels, ApiProperty, getSchemaPath } from "@nestjs/swagger";
 import { Type } from "class-transformer";
 import { IsNumber, ValidateNested } from "class-validator";
 
-import { ApiResponseWithoutData, SlotsOutput_2024_09_04 } from "@calcom/platform-types";
-import { RangeSlotsOutput_2024_09_04 } from "@calcom/platform-types";
+import { ApiResponseWithoutData, SlotsOutput_2024_09_04 } from "@calndrbrnd/platform-types";
+import { RangeSlotsOutput_2024_09_04 } from "@calndrbrnd/platform-types";
 
 @ApiExtraModels(SlotsOutput_2024_09_04, RangeSlotsOutput_2024_09_04)
 export class ResponseSlotsOutputData {

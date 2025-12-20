@@ -3,11 +3,11 @@ import { _generateMetadata } from "app/_utils";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { IS_SELF_HOSTED } from "@calcom/lib/constants";
-import hasKeyInMetadata from "@calcom/lib/hasKeyInMetadata";
-import { meRouter } from "@calcom/trpc/server/routers/viewer/me/_router";
-import { getCachedHasTeamPlan } from "@calcom/web/app/cache/membership";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { IS_SELF_HOSTED } from "@calndrbrnd/lib/constants";
+import hasKeyInMetadata from "@calndrbrnd/lib/hasKeyInMetadata";
+import { meRouter } from "@calndrbrnd/trpc/server/routers/viewer/me/_router";
+import { getCachedHasTeamPlan } from "@calndrbrnd/web/app/cache/membership";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

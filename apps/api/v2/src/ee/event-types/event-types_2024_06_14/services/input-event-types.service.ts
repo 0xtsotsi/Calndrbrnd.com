@@ -27,13 +27,13 @@ import {
 import { UserWithProfile } from "@/modules/users/users.repository";
 import { Injectable, BadRequestException } from "@nestjs/common";
 
-import { slugifyLenient } from "@calcom/platform-libraries";
-import { getApps, getUsersCredentialsIncludeServiceAccountKey } from "@calcom/platform-libraries/app-store";
+import { slugifyLenient } from "@calndrbrnd/platform-libraries";
+import { getApps, getUsersCredentialsIncludeServiceAccountKey } from "@calndrbrnd/platform-libraries/app-store";
 import {
   validateCustomEventName,
   EventTypeMetaDataSchema,
   EventTypeMetadata,
-} from "@calcom/platform-libraries/event-types";
+} from "@calndrbrnd/platform-libraries/event-types";
 import {
   CreateEventTypeInput_2024_06_14,
   DestinationCalendar_2024_06_14,
@@ -41,8 +41,8 @@ import {
   OutputUnknownLocation_2024_06_14,
   UpdateEventTypeInput_2024_06_14,
   supportedIntegrations,
-} from "@calcom/platform-types";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
+} from "@calndrbrnd/platform-types";
+import { BookerLayouts } from "@calndrbrnd/prisma/zod-utils";
 
 interface ValidationContext {
   eventTypeId?: number;

@@ -3,15 +3,15 @@
 import { useReactTable, getCoreRowModel, getSortedRowModel } from "@tanstack/react-table";
 import React, { useMemo, useEffect } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { DataTableFilters } from "@calcom/features/data-table";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { Icon } from "@calcom/ui/components/icon";
+import dayjs from "@calndrbrnd/dayjs";
+import { DataTableFilters } from "@calndrbrnd/features/data-table";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import { useBookingCalendarData } from "~/bookings/hooks/useBookingCalendarData";
 import { useBookingFilters } from "~/bookings/hooks/useBookingFilters";

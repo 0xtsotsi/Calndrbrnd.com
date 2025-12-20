@@ -1,23 +1,23 @@
 import type { z } from "zod";
 
-import { isSMSOrWhatsappAction } from "@calcom/ee/workflows/lib/actionHelperFunctions";
-import emailRatingTemplate from "@calcom/ee/workflows/lib/reminders/templates/emailRatingTemplate";
-import emailReminderTemplate from "@calcom/ee/workflows/lib/reminders/templates/emailReminderTemplate";
+import { isSMSOrWhatsappAction } from "@calndrbrnd/ee/workflows/lib/actionHelperFunctions";
+import emailRatingTemplate from "@calndrbrnd/ee/workflows/lib/reminders/templates/emailRatingTemplate";
+import emailReminderTemplate from "@calndrbrnd/ee/workflows/lib/reminders/templates/emailReminderTemplate";
 import {
   getSmsReminderNumberField,
   getSmsReminderNumberSource,
   getAIAgentCallPhoneNumberField,
   getAIAgentCallPhoneNumberSource,
-} from "@calcom/features/bookings/lib/getBookingFields";
-import { removeBookingField, upsertBookingField } from "@calcom/features/eventtypes/lib/bookingFieldsManager";
-import { SMS_REMINDER_NUMBER_FIELD, CAL_AI_AGENT_PHONE_NUMBER_FIELD } from "@calcom/lib/bookings/SystemField";
-import { SENDER_ID, SENDER_NAME } from "@calcom/lib/constants";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import prisma from "@calcom/prisma";
-import type { WorkflowStep } from "@calcom/prisma/client";
-import { WorkflowTemplates } from "@calcom/prisma/enums";
-import { WorkflowActions } from "@calcom/prisma/enums";
+} from "@calndrbrnd/features/bookings/lib/getBookingFields";
+import { removeBookingField, upsertBookingField } from "@calndrbrnd/features/eventtypes/lib/bookingFieldsManager";
+import { SMS_REMINDER_NUMBER_FIELD, CAL_AI_AGENT_PHONE_NUMBER_FIELD } from "@calndrbrnd/lib/bookings/SystemField";
+import { SENDER_ID, SENDER_NAME } from "@calndrbrnd/lib/constants";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import prisma from "@calndrbrnd/prisma";
+import type { WorkflowStep } from "@calndrbrnd/prisma/client";
+import { WorkflowTemplates } from "@calndrbrnd/prisma/enums";
+import { WorkflowActions } from "@calndrbrnd/prisma/enums";
 
 import type { ZWorkflows } from "./getAllActiveWorkflows.schema";
 

@@ -1,6 +1,6 @@
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Badge } from "@calcom/ui/components/badge";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 export interface DecoyBookingSuccessCardProps {
   title: string;

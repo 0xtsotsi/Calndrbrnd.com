@@ -2,9 +2,9 @@
 
 import { cookies, headers } from "next/headers";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { RESERVED_SUBDOMAINS } from "@calcom/lib/constants";
-import { prisma } from "@calcom/prisma";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { RESERVED_SUBDOMAINS } from "@calndrbrnd/lib/constants";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

@@ -15,12 +15,12 @@ import localFont from "next/font/local";
 import Head from "next/head";
 import Script from "next/script";
 
-import "@calcom/embed-core/src/embed-iframe";
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { IS_CALCOM, WEBAPP_URL } from "@calcom/lib/constants";
-import { getCalcomUrl } from "@calcom/lib/getCalcomUrl";
-import { buildCanonical } from "@calcom/lib/next-seo.config";
-import { IconSprites } from "@calcom/ui/components/icon";
+import "@calndrbrnd/embed-core/src/embed-iframe";
+import LicenseRequired from "@calndrbrnd/features/ee/common/components/LicenseRequired";
+import { IS_CALCOM, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getCalcomUrl } from "@calndrbrnd/lib/getCalcomUrl";
+import { buildCanonical } from "@calndrbrnd/lib/next-seo.config";
+import { IconSprites } from "@calndrbrnd/ui/components/icon";
 
 import type { AppProps } from "@lib/app-providers";
 import AppProviders from "@lib/app-providers";

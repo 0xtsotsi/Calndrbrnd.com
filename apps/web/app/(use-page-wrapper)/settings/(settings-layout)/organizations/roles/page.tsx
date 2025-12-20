@@ -3,14 +3,14 @@ import { unstable_cache } from "next/cache";
 import { revalidatePath } from "next/cache";
 import { notFound } from "next/navigation";
 
-import type { AppFlags } from "@calcom/features/flags/config";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { PermissionMapper } from "@calcom/features/pbac/domain/mappers/PermissionMapper";
-import { Resource, CrudAction } from "@calcom/features/pbac/domain/types/permission-registry";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { RoleService } from "@calcom/features/pbac/services/role.service";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { prisma } from "@calcom/prisma";
+import type { AppFlags } from "@calndrbrnd/features/flags/config";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { PermissionMapper } from "@calndrbrnd/features/pbac/domain/mappers/PermissionMapper";
+import { Resource, CrudAction } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { RoleService } from "@calndrbrnd/features/pbac/services/role.service";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { validateUserHasOrg } from "../actions/validateUserHasOrg";
 import { CreateRoleCTA } from "./_components/CreateRoleCta";

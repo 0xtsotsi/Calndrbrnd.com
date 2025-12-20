@@ -1,12 +1,12 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
 
 import { LegacyRemoveMemberService } from "../LegacyRemoveMemberService";
 import { PBACRemoveMemberService } from "../PBACRemoveMemberService";
 import { RemoveMemberServiceFactory } from "../RemoveMemberServiceFactory";
 
-vi.mock("@calcom/features/flags/features.repository");
+vi.mock("@calndrbrnd/features/flags/features.repository");
 vi.mock("../LegacyRemoveMemberService");
 vi.mock("../PBACRemoveMemberService");
 

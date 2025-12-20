@@ -1,8 +1,8 @@
-import { useHasPaidPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import { JOIN_COMMUNITY } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { UpgradeTeamsBadge } from "@calcom/ui/components/badge";
-import { Icon } from "@calcom/ui/components/icon";
+import { useHasPaidPlan } from "@calndrbrnd/features/billing/hooks/useHasPaidPlan";
+import { JOIN_COMMUNITY } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { UpgradeTeamsBadge } from "@calndrbrnd/ui/components/badge";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import FreshChatMenuItem from "../lib/freshchat/FreshChatMenuItem";
 import HelpscoutMenuItem from "../lib/helpscout/HelpscoutMenuItem";

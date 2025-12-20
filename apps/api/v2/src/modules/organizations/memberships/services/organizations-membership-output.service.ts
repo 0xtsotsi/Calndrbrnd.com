@@ -10,8 +10,8 @@ import {
 import { Injectable } from "@nestjs/common";
 import { plainToClass } from "class-transformer";
 
-import { groupMembershipAttributes } from "@calcom/platform-libraries";
-import type { GroupedAttribute } from "@calcom/platform-libraries";
+import { groupMembershipAttributes } from "@calndrbrnd/platform-libraries";
+import type { GroupedAttribute } from "@calndrbrnd/platform-libraries";
 
 @Injectable()
 export class OrganizationsMembershipOutputService {

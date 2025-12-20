@@ -5,10 +5,10 @@ import type { TFunction } from "i18next";
 import { isValidPhoneNumber } from "libphonenumber-js/max";
 import { z } from "zod";
 
-import { appStoreMetadata } from "@calcom/app-store/bookerAppsMetaData";
-import logger from "@calcom/lib/logger";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { Ensure, Optional } from "@calcom/types/utils";
+import { appStoreMetadata } from "@calndrbrnd/app-store/bookerAppsMetaData";
+import logger from "@calndrbrnd/lib/logger";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import type { Ensure, Optional } from "@calndrbrnd/types/utils";
 
 import type { EventLocationTypeFromAppMeta } from "../types/App";
 import {

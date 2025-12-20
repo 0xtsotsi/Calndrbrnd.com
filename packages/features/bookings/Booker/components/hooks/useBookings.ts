@@ -5,26 +5,26 @@ import { useRouter } from "next/navigation";
 import { useRef, useState, useEffect } from "react";
 import { shallow } from "zustand/shallow";
 
-import { createPaymentLink } from "@calcom/app-store/stripepayment/lib/client";
-import { useHandleBookEvent } from "@calcom/atoms/hooks/bookings/useHandleBookEvent";
-import dayjs from "@calcom/dayjs";
-import { sdkActionManager } from "@calcom/embed-core/embed-iframe";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { updateQueryParam, getQueryParam } from "@calcom/features/bookings/Booker/utils/query-param";
-import { storeDecoyBooking } from "@calcom/features/bookings/lib/client/decoyBookingStore";
-import { createBooking } from "@calcom/features/bookings/lib/create-booking";
-import { createInstantBooking } from "@calcom/features/bookings/lib/create-instant-booking";
-import { createRecurringBooking } from "@calcom/features/bookings/lib/create-recurring-booking";
-import type { GetBookingType } from "@calcom/features/bookings/lib/get-booking";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { getFullName } from "@calcom/features/form-builder/utils";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { localStorage } from "@calcom/lib/webstorage";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { bookingMetadataSchema } from "@calcom/prisma/zod-utils";
-import { trpc } from "@calcom/trpc";
-import { showToast } from "@calcom/ui/components/toast";
+import { createPaymentLink } from "@calndrbrnd/app-store/stripepayment/lib/client";
+import { useHandleBookEvent } from "@calndrbrnd/atoms/hooks/bookings/useHandleBookEvent";
+import dayjs from "@calndrbrnd/dayjs";
+import { sdkActionManager } from "@calndrbrnd/embed-core/embed-iframe";
+import { useBookerStoreContext } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import { updateQueryParam, getQueryParam } from "@calndrbrnd/features/bookings/Booker/utils/query-param";
+import { storeDecoyBooking } from "@calndrbrnd/features/bookings/lib/client/decoyBookingStore";
+import { createBooking } from "@calndrbrnd/features/bookings/lib/create-booking";
+import { createInstantBooking } from "@calndrbrnd/features/bookings/lib/create-instant-booking";
+import { createRecurringBooking } from "@calndrbrnd/features/bookings/lib/create-recurring-booking";
+import type { GetBookingType } from "@calndrbrnd/features/bookings/lib/get-booking";
+import type { BookerEvent } from "@calndrbrnd/features/bookings/types";
+import { getFullName } from "@calndrbrnd/features/form-builder/utils";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { bookingMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { trpc } from "@calndrbrnd/trpc";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useBookingSuccessRedirect } from "../../../lib/bookingSuccessRedirect";
 import type { UseBookingFormReturnType } from "./useBookingForm";
@@ -524,7 +524,7 @@ export const useBookings = ({ event, hashedLink, bookingForm, metadata, isBookin
     },
     onError: (err, _, ctx) => {
       console.error("Error creating recurring booking", err);
-      // eslint-disable-next-line @calcom/eslint/no-scroll-into-view-embed -- It is only called when user takes an action in embed
+      // eslint-disable-next-line @calndrbrnd/eslint/no-scroll-into-view-embed -- It is only called when user takes an action in embed
       bookerFormErrorRef && bookerFormErrorRef.current?.scrollIntoView({ behavior: "smooth" });
     },
   });

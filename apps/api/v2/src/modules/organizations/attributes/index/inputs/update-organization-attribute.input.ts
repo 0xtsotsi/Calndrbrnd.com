@@ -1,7 +1,7 @@
 import { ApiPropertyOptional } from "@nestjs/swagger";
 import { IsBoolean, IsEnum, IsOptional, IsString } from "class-validator";
 
-import { AttributeType } from "@calcom/platform-libraries";
+import { AttributeType } from "@calndrbrnd/platform-libraries";
 
 export class UpdateOrganizationAttributeInput {
   @IsString()

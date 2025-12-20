@@ -1,10 +1,10 @@
-import { guessEventLocationType } from "@calcom/app-store/locations";
-import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/app-store/routing-forms/lib/formSubmissionUtils";
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { APP_NAME } from "@calcom/lib/constants";
-import { TimeFormat } from "@calcom/lib/timeFormat";
-import type { CalEventResponses } from "@calcom/types/Calendar";
+import { guessEventLocationType } from "@calndrbrnd/app-store/locations";
+import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calndrbrnd/app-store/routing-forms/lib/formSubmissionUtils";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { TimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { CalEventResponses } from "@calndrbrnd/types/Calendar";
 
 export type WorkflowVariableResponses = Record<
   string,

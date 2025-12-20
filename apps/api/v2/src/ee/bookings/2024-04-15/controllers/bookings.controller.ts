@@ -54,8 +54,8 @@ import { Request } from "express";
 import { NextApiRequest } from "next/types";
 import { v4 as uuidv4 } from "uuid";
 
-import { X_CAL_CLIENT_ID, X_CAL_PLATFORM_EMBED } from "@calcom/platform-constants";
-import { BOOKING_READ, SUCCESS_STATUS, BOOKING_WRITE } from "@calcom/platform-constants";
+import { X_CAL_CLIENT_ID, X_CAL_PLATFORM_EMBED } from "@calndrbrnd/platform-constants";
+import { BOOKING_READ, SUCCESS_STATUS, BOOKING_WRITE } from "@calndrbrnd/platform-constants";
 import {
   BookingResponse,
   HttpError,
@@ -65,16 +65,16 @@ import {
   handleCancelBooking,
   getBookingForReschedule,
   ErrorCode,
-} from "@calcom/platform-libraries";
-import { CreationSource } from "@calcom/platform-libraries";
-import { type InstantBookingCreateResult } from "@calcom/platform-libraries/bookings";
+} from "@calndrbrnd/platform-libraries";
+import { CreationSource } from "@calndrbrnd/platform-libraries";
+import { type InstantBookingCreateResult } from "@calndrbrnd/platform-libraries/bookings";
 import {
   GetBookingsInput_2024_04_15,
   CancelBookingInput_2024_04_15,
   Status_2024_04_15,
-} from "@calcom/platform-types";
-import type { ApiResponse } from "@calcom/platform-types";
-import type { PrismaClient } from "@calcom/prisma";
+} from "@calndrbrnd/platform-types";
+import type { ApiResponse } from "@calndrbrnd/platform-types";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 type BookingRequest = Request & {
   userId?: number;

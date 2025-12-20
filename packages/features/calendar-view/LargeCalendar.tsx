@@ -1,13 +1,13 @@
 import { useEffect, useMemo } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useBookerTime } from "@calcom/features/bookings/Booker/components/hooks/useBookerTime";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { Calendar } from "@calcom/features/calendars/weeklyview";
-import type { CalendarAvailableTimeslots } from "@calcom/features/calendars/weeklyview/types/state";
-import { localStorage } from "@calcom/lib/webstorage";
-import type { BookingStatus } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { useBookerStoreContext } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import { useBookerTime } from "@calndrbrnd/features/bookings/Booker/components/hooks/useBookerTime";
+import type { BookerEvent } from "@calndrbrnd/features/bookings/types";
+import { Calendar } from "@calndrbrnd/features/calendars/weeklyview";
+import type { CalendarAvailableTimeslots } from "@calndrbrnd/features/calendars/weeklyview/types/state";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
+import type { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import { useBookings } from "../../platform/atoms/hooks/bookings/useBookings";
 import { useCalendarsBusyTimes } from "../../platform/atoms/hooks/useCalendarsBusyTimes";

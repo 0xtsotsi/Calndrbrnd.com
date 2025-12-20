@@ -1,14 +1,14 @@
 import type { TFunction } from "i18next";
 import { useEffect, useRef } from "react";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import { useShouldShowArrows } from "@calcom/features/apps/components/AllApps";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Icon } from "@calcom/ui/components/icon";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import { useIsEmbed } from "@calndrbrnd/embed-core/embed-iframe";
+import { useShouldShowArrows } from "@calndrbrnd/features/apps/components/AllApps";
+import { useBookerStoreContext } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import type { BookerEvent } from "@calndrbrnd/features/bookings/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 /** Render X mins as X hours or X hours Y mins instead of in minutes once >= 60 minutes */
 export const getDurationFormatted = (mins: number | undefined, t: TFunction) => {
@@ -78,7 +78,7 @@ export const EventDuration = ({
     const timeout = setTimeout(() => {
       if (isEmbed) return;
       if (selectedDuration && itemRefs.current[selectedDuration]) {
-        // eslint-disable-next-line @calcom/eslint/no-scroll-into-view-embed -- Called on !isEmbed case
+        // eslint-disable-next-line @calndrbrnd/eslint/no-scroll-into-view-embed -- Called on !isEmbed case
         itemRefs.current[selectedDuration]?.scrollIntoView({
           behavior: "smooth",
           block: "center",

@@ -11,7 +11,7 @@ import {
   IsEnum,
 } from "class-validator";
 
-import { SlotFormat } from "@calcom/platform-enums";
+import { SlotFormat } from "@calndrbrnd/platform-enums";
 
 export class GetAvailableSlotsInput_2024_09_04 {
   @IsDateString({ strict: true })

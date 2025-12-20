@@ -1,5 +1,5 @@
-import prisma from "@calcom/prisma";
-import type { AttributeType } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import type { AttributeType } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

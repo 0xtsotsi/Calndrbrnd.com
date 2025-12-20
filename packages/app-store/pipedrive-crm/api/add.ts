@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { createDefaultInstallation } from "@calcom/app-store/_utils/installation";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { HttpError } from "@calcom/lib/http-error";
+import { createDefaultInstallation } from "@calndrbrnd/app-store/_utils/installation";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { HttpError } from "@calndrbrnd/lib/http-error";
 
 import getAppKeysFromSlug from "../../_utils/getAppKeysFromSlug";
 import appConfig from "../config.json";

@@ -1,13 +1,13 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 import type {
   ApiResponse,
   CreateOAuthClientInput,
   DeleteOAuthClientInput,
   PlatformOAuthClientDto,
   SubscribeTeamInput,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 interface IPersistOAuthClient {
   onSuccess?: () => void;

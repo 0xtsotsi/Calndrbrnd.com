@@ -1,7 +1,7 @@
 import type { NextApiRequest } from "next";
 
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
 
 import { schemaSchedulePublic } from "~/lib/validations/schedule";
 import { schemaQueryIdParseInt } from "~/lib/validations/shared/queryIdTransformParseInt";
@@ -77,7 +77,7 @@ export async function getHandler(req: NextApiRequest) {
   const { id } = schemaQueryIdParseInt.parse(query);
   const data = await prisma.schedule.findUniqueOrThrow({
     where: { id },
-    // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+    // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
     include: { availability: true },
   });
   return { schedule: schemaSchedulePublic.parse(data) };

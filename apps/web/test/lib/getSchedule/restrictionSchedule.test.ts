@@ -10,14 +10,14 @@ import {
 import { describe, test, vi } from "vitest";
 import type { z } from "zod";
 
-import { getAvailableSlotsService } from "@calcom/features/di/containers/AvailableSlots";
-import type { getScheduleSchema } from "@calcom/trpc/server/routers/viewer/slots/types";
+import { getAvailableSlotsService } from "@calndrbrnd/features/di/containers/AvailableSlots";
+import type { getScheduleSchema } from "@calndrbrnd/trpc/server/routers/viewer/slots/types";
 
 import { expect } from "./expects";
 import { setupAndTeardown } from "./setupAndTeardown";
 
 // Mock the FeaturesRepository to enable restriction-schedule feature
-vi.mock("@calcom/features/flags/features.repository", () => ({
+vi.mock("@calndrbrnd/features/flags/features.repository", () => ({
   FeaturesRepository: vi.fn().mockImplementation(() => ({
     checkIfTeamHasFeature: vi.fn().mockResolvedValue(true),
     checkIfFeatureIsEnabledGlobally: vi.fn().mockResolvedValue(true),

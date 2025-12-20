@@ -1,14 +1,14 @@
 import { isValidPhoneNumber } from "libphonenumber-js/max";
 import { v4 as uuidv4 } from "uuid";
 
-import { PrismaApiKeyRepository } from "@calcom/features/ee/api-keys/repositories/PrismaApiKeyRepository";
-import { replaceEventTypePlaceholders } from "@calcom/features/ee/workflows/components/agent-configuration/utils/promptUtils";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { RETELL_AI_TEST_MODE, RETELL_AI_TEST_EVENT_TYPE_MAP } from "@calcom/lib/constants";
-import { timeZoneSchema } from "@calcom/lib/dayjs/timeZone.schema";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
+import { PrismaApiKeyRepository } from "@calndrbrnd/features/ee/api-keys/repositories/PrismaApiKeyRepository";
+import { replaceEventTypePlaceholders } from "@calndrbrnd/features/ee/workflows/components/agent-configuration/utils/promptUtils";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { RETELL_AI_TEST_MODE, RETELL_AI_TEST_EVENT_TYPE_MAP } from "@calndrbrnd/lib/constants";
+import { timeZoneSchema } from "@calndrbrnd/lib/dayjs/timeZone.schema";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
 
 import type {
   AIPhoneServiceUpdateModelParams,

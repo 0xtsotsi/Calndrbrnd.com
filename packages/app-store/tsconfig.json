@@ -1,5 +1,5 @@
 {
-  "extends": "@calcom/tsconfig/react-library.json",
+  "extends": "@calndrbrnd/tsconfig/react-library.json",
   "exclude": ["dist", "build", "**/node_modules/**"],
   "compilerOptions": {
     "baseUrl": ".",
@@ -8,14 +8,14 @@
       "@components/*": ["../../apps/web/components/*"],
       /* A `package` should never import from `apps` ↓ */
       "@lib/*": ["../../apps/web/lib/*"],
-      "@prisma/client/*": ["@calcom/prisma/client/*"]
+      "@prisma/client/*": ["@calndrbrnd/prisma/client/*"]
     },
     "resolveJsonModule": true,
     "experimentalDecorators": true
   },
   "include": [
     "next-env.d.ts",
-    "@calcom/types",
+    "@calndrbrnd/types",
     "../types/*.d.ts",
     "../types/next-auth.d.ts",
     "**/*.ts",

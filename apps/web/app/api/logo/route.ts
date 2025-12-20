@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import { orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
+import { orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
 import {
   ANDROID_CHROME_ICON_192,
   ANDROID_CHROME_ICON_256,
@@ -16,8 +16,8 @@ import {
   LOGO_ICON,
   MSTILE_ICON,
   WEBAPP_URL,
-} from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
+} from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 
@@ -123,7 +123,7 @@ async function getTeamLogos(subdomain: string, isValidOrgDomain: boolean) {
       throw new Error("No custom logo needed");
     }
     // load from DB
-    const { default: prisma } = await import("@calcom/prisma");
+    const { default: prisma } = await import("@calndrbrnd/prisma");
     const team = await prisma.team.findFirst({
       where: {
         slug: subdomain,
@@ -197,7 +197,7 @@ async function getHandler(request: NextRequest) {
 
     // Resize the team logos if needed
     if (teamLogos[logoDefinition.source] && logoDefinition.w) {
-      const { resizeImage } = await import("@calcom/lib/server/imageUtils");
+      const { resizeImage } = await import("@calndrbrnd/lib/server/imageUtils");
       const { buffer: outBuffer, contentType: outContentType } = await resizeImage({
         buffer,
         width: logoDefinition.w,

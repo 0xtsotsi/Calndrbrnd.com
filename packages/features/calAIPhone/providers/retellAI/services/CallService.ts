@@ -1,6 +1,6 @@
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
 
 import type {
   AIPhoneServiceProviderType,
@@ -258,7 +258,7 @@ export class CallService {
 
   private async validateCreditsForTestCall({ userId, teamId }: { userId: number; teamId?: number }) {
     try {
-      const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+      const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
       const creditService = new CreditService();
       const hasCredits = await creditService.hasAvailableCredits({
         userId: userId || undefined,

@@ -1,23 +1,23 @@
 import type { GetServerSidePropsContext } from "next";
 
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
 import {
   getOrganizationSettings,
   getVerifiedDomain,
-} from "@calcom/features/ee/organizations/lib/orgSettings";
-import { getTeamWithMembers } from "@calcom/features/ee/teams/lib/queries";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { IS_CALCOM } from "@calcom/lib/constants";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import logger from "@calcom/lib/logger";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import slugify from "@calcom/lib/slugify";
-import { stripMarkdown } from "@calcom/lib/stripMarkdown";
-import prisma from "@calcom/prisma";
-import type { Team, OrganizationSettings } from "@calcom/prisma/client";
-import { RedirectType } from "@calcom/prisma/enums";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+} from "@calndrbrnd/features/ee/organizations/lib/orgSettings";
+import { getTeamWithMembers } from "@calndrbrnd/features/ee/teams/lib/queries";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { IS_CALCOM } from "@calndrbrnd/lib/constants";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import logger from "@calndrbrnd/lib/logger";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import slugify from "@calndrbrnd/lib/slugify";
+import { stripMarkdown } from "@calndrbrnd/lib/stripMarkdown";
+import prisma from "@calndrbrnd/prisma";
+import type { Team, OrganizationSettings } from "@calndrbrnd/prisma/client";
+import { RedirectType } from "@calndrbrnd/prisma/enums";
+import { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { handleOrgRedirect } from "@lib/handleOrgRedirect";
 

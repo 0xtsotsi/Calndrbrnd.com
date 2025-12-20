@@ -2,18 +2,18 @@ import { useSession } from "next-auth/react";
 import type { InputHTMLAttributes, ReactNode } from "react";
 import { forwardRef, useState } from "react";
 
-import { getOrgOrTeamAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useTypedQuery } from "@calcom/lib/hooks/useTypedQuery";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { VerticalDivider } from "@calcom/ui/components/divider";
-import { Divider } from "@calcom/ui/components/divider";
-import { FilterSearchField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { AnimatedPopover } from "@calcom/ui/components/popover";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { getOrgOrTeamAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useTypedQuery } from "@calndrbrnd/lib/hooks/useTypedQuery";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { VerticalDivider } from "@calndrbrnd/ui/components/divider";
+import { Divider } from "@calndrbrnd/ui/components/divider";
+import { FilterSearchField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { AnimatedPopover } from "@calndrbrnd/ui/components/popover";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { filterQuerySchema } from "../lib/getTeamsFiltersFromQuery";
 

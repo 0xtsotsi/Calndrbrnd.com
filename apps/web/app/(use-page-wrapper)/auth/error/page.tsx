@@ -3,9 +3,9 @@ import { _generateMetadata, getTranslate } from "app/_utils";
 import Link from "next/link";
 import { z } from "zod";
 
-import { IdentityProvider } from "@calcom/prisma/enums";
-import { Button } from "@calcom/ui/components/button";
-import { Icon } from "@calcom/ui/components/icon";
+import { IdentityProvider } from "@calndrbrnd/prisma/enums";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import AuthContainer from "@components/ui/AuthContainer";
 

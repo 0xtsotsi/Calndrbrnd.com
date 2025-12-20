@@ -16,10 +16,10 @@ import {
   VERSION_2024_04_15,
   VERSION_2024_06_11,
   VERSION_2024_08_13,
-} from "@calcom/platform-constants";
-import { TRPCError } from "@calcom/platform-libraries";
-import { RemoveSelectedSlotInput_2024_04_15, ReserveSlotInput_2024_04_15 } from "@calcom/platform-types";
-import { ApiResponse, GetAvailableSlotsInput_2024_04_15 } from "@calcom/platform-types";
+} from "@calndrbrnd/platform-constants";
+import { TRPCError } from "@calndrbrnd/platform-libraries";
+import { RemoveSelectedSlotInput_2024_04_15, ReserveSlotInput_2024_04_15 } from "@calndrbrnd/platform-types";
+import { ApiResponse, GetAvailableSlotsInput_2024_04_15 } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/slots",

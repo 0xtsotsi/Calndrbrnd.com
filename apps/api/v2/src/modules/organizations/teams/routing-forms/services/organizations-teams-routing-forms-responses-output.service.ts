@@ -1,8 +1,8 @@
 import { Injectable } from "@nestjs/common";
 import { plainToClass } from "class-transformer";
 
-import { RoutingFormResponseOutput, RoutingFormResponseResponseOutput } from "@calcom/platform-types";
-import type { App_RoutingForms_FormResponse } from "@calcom/prisma/client";
+import { RoutingFormResponseOutput, RoutingFormResponseResponseOutput } from "@calndrbrnd/platform-types";
+import type { App_RoutingForms_FormResponse } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class OrganizationsTeamsRoutingFormsResponsesOutputService {

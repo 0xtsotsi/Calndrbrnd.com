@@ -1,20 +1,20 @@
 import type { TFunction } from "i18next";
 import { describe, expect, it, vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { BookingForCalEventBuilder, CalendarEventBuilder } from "@calcom/features/CalendarEventBuilder";
-import { TimeFormat } from "@calcom/lib/timeFormat";
-import type { Person } from "@calcom/types/Calendar";
+import dayjs from "@calndrbrnd/dayjs";
+import { BookingForCalEventBuilder, CalendarEventBuilder } from "@calndrbrnd/features/CalendarEventBuilder";
+import { TimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { Person } from "@calndrbrnd/types/Calendar";
 
-vi.mock("@calcom/features/ee/organizations/lib/getBookerUrlServer", () => ({
+vi.mock("@calndrbrnd/features/ee/organizations/lib/getBookerUrlServer", () => ({
   getBookerBaseUrl: vi.fn(async () => "https://cal.com"),
 }));
 
-vi.mock("@calcom/lib/server/i18n", () => ({
+vi.mock("@calndrbrnd/lib/server/i18n", () => ({
   getTranslation: vi.fn(async () => vi.fn(() => "translated")),
 }));
 
-vi.mock("@calcom/features/bookings/lib/getCalEventResponses", () => ({
+vi.mock("@calndrbrnd/features/bookings/lib/getCalEventResponses", () => ({
   getCalEventResponses: vi.fn(() => ({
     responses: {
       name: { label: "your_name", value: "Test User", isHidden: false },

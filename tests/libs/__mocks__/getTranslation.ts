@@ -1,9 +1,9 @@
 import { beforeEach, vi } from "vitest";
 import { mockReset, mockDeep } from "vitest-mock-extended";
 
-import type * as getTranslation from "@calcom/lib/server/i18n";
+import type * as getTranslation from "@calndrbrnd/lib/server/i18n";
 
-vi.mock("@calcom/lib/server/i18n", () => getTranslationMock);
+vi.mock("@calndrbrnd/lib/server/i18n", () => getTranslationMock);
 
 beforeEach(() => {
   mockReset(getTranslationMock);

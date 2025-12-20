@@ -1,7 +1,7 @@
-import { CreditsRepository } from "@calcom/features/credits/repositories/CreditsRepository";
-import { TeamService } from "@calcom/features/ee/teams/services/teamService";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { CreditsRepository } from "@calndrbrnd/features/credits/repositories/CreditsRepository";
+import { TeamService } from "@calndrbrnd/features/ee/teams/services/teamService";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

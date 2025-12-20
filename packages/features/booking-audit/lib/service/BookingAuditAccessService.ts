@@ -1,7 +1,7 @@
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import type { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { MembershipRole } from "@calcom/prisma/enums";
+import type { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import type { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 export enum BookingAuditErrorCode {
     ORGANIZATION_ID_REQUIRED = "ORGANIZATION_ID_REQUIRED",

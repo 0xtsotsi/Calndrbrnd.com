@@ -2,7 +2,7 @@ import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
 import { Expose, Transform, Type } from "class-transformer";
 import { IsBoolean, IsInt, IsObject, IsOptional, IsString, Length, ValidateNested } from "class-validator";
 
-import { Metadata } from "@calcom/platform-types";
+import { Metadata } from "@calndrbrnd/platform-types";
 
 export class ManagedOrganizationOutput {
   @IsInt()

@@ -1,7 +1,7 @@
 import { Retell } from "retell-sdk";
 
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
 
 import type {
   RetellAIRepository,

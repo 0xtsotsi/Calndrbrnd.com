@@ -1,6 +1,6 @@
-import type { Host } from "@calcom/features/bookings/lib/getHostsAndGuests";
-import { prisma } from "@calcom/prisma";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import type { Host } from "@calndrbrnd/features/bookings/lib/getHostsAndGuests";
+import { prisma } from "@calndrbrnd/prisma";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import type { Booking } from "./common";
 import { calculateMaxStartTime, sendWebhookPayload, prepareNoShowTrigger, log } from "./common";

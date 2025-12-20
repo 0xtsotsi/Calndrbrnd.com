@@ -2,8 +2,8 @@ import type { NextRequest } from "next/server";
 import { Retell } from "retell-sdk";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import type { CalAiPhoneNumber, User, Team, Agent } from "@calcom/prisma/client";
-import { CreditUsageType } from "@calcom/prisma/enums";
+import type { CalAiPhoneNumber, User, Team, Agent } from "@calndrbrnd/prisma/client";
+import { CreditUsageType } from "@calndrbrnd/prisma/enums";
 
 import { POST } from "../route";
 
@@ -75,14 +75,14 @@ const mockChargeCredits = vi.fn();
 const mockSendCreditBalanceLimitReachedEmails = vi.fn();
 const mockSendCreditBalanceLowWarningEmails = vi.fn();
 
-vi.mock("@calcom/features/ee/billing/credit-service", () => ({
+vi.mock("@calndrbrnd/features/ee/billing/credit-service", () => ({
   CreditService: vi.fn().mockImplementation(() => ({
     hasAvailableCredits: mockHasAvailableCredits,
     chargeCredits: mockChargeCredits,
   })),
 }));
 
-vi.mock("@calcom/emails/email-manager", () => ({
+vi.mock("@calndrbrnd/emails/email-manager", () => ({
   sendCreditBalanceLimitReachedEmails: (...args: unknown[]) =>
     mockSendCreditBalanceLimitReachedEmails(...args),
   sendCreditBalanceLowWarningEmails: (...args: unknown[]) => mockSendCreditBalanceLowWarningEmails(...args),
@@ -91,13 +91,13 @@ vi.mock("@calcom/emails/email-manager", () => ({
 const mockFindByPhoneNumber = vi.fn();
 const mockFindByProviderAgentId = vi.fn();
 
-vi.mock("@calcom/features/calAIPhone/repositories/PrismaPhoneNumberRepository", () => ({
+vi.mock("@calndrbrnd/features/calAIPhone/repositories/PrismaPhoneNumberRepository", () => ({
   PrismaPhoneNumberRepository: vi.fn().mockImplementation(() => ({
     findByPhoneNumber: mockFindByPhoneNumber,
   })),
 }));
 
-vi.mock("@calcom/features/calAIPhone/repositories/PrismaAgentRepository", () => ({
+vi.mock("@calndrbrnd/features/calAIPhone/repositories/PrismaAgentRepository", () => ({
   PrismaAgentRepository: vi.fn().mockImplementation(() => ({
     findByProviderAgentId: mockFindByProviderAgentId,
   })),

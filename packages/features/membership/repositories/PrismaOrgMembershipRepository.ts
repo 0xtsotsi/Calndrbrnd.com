@@ -1,5 +1,5 @@
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 export class PrismaOrgMembershipRepository {
   static async getOrgIdsWhereAdmin(loggedInUserId: number) {

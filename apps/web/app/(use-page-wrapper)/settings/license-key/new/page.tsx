@@ -3,7 +3,7 @@ import type { PageProps } from "app/_types";
 import { _generateMetadata } from "app/_utils";
 import { cookies, headers } from "next/headers";
 
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
 
 import { buildLegacyCtx } from "@lib/buildLegacyCtx";
 import { getServerSideProps } from "@lib/settings/license-key/new/getServerSideProps";

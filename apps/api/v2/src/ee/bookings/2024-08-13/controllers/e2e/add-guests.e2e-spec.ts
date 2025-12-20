@@ -25,14 +25,14 @@ import {
   ERROR_STATUS,
   SUCCESS_STATUS,
   VERSION_2024_08_13,
-} from "@calcom/platform-constants";
+} from "@calndrbrnd/platform-constants";
 import {
   AttendeeAddGuestsEmail,
   AttendeeScheduledEmail,
   OrganizerAddGuestsEmail,
-} from "@calcom/platform-libraries/emails";
-import type { BookingOutput_2024_08_13, CreateBookingInput_2024_08_13 } from "@calcom/platform-types";
-import type { User, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-libraries/emails";
+import type { BookingOutput_2024_08_13, CreateBookingInput_2024_08_13 } from "@calndrbrnd/platform-types";
+import type { User, Team } from "@calndrbrnd/prisma/client";
 
 const attendeeAddGuestsEmailSpy = jest
   .spyOn(AttendeeAddGuestsEmail.prototype, "getHtml")

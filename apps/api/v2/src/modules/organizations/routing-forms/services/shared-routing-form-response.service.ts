@@ -12,8 +12,8 @@ import {
 } from "@nestjs/common";
 import { Request } from "express";
 
-import { getRoutedUrl } from "@calcom/platform-libraries";
-import { ById_2024_09_04_type } from "@calcom/platform-types";
+import { getRoutedUrl } from "@calndrbrnd/platform-libraries";
+import { ById_2024_09_04_type } from "@calndrbrnd/platform-types";
 
 @Injectable()
 export class SharedRoutingFormResponseService {

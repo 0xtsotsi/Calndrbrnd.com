@@ -1,9 +1,9 @@
 import type { NextApiRequest } from "next";
 
-import { deleteUser } from "@calcom/features/users/lib/deleteUser";
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
+import { deleteUser } from "@calndrbrnd/features/users/lib/deleteUser";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
 
 import { schemaQueryUserId } from "~/lib/validations/shared/queryUserId";
 

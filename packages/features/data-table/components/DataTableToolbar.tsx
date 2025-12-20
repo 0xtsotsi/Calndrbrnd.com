@@ -5,10 +5,10 @@ import { forwardRef, useEffect } from "react";
 import type { ComponentPropsWithoutRef } from "react";
 import { useState, type Ref, type ChangeEvent } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Button, type ButtonProps } from "@calcom/ui/components/button";
-import { FilterSearchField } from "@calcom/ui/components/form";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button, type ButtonProps } from "@calndrbrnd/ui/components/button";
+import { FilterSearchField } from "@calndrbrnd/ui/components/form";
 
 import { useColumnFilters, useDataTable } from "../hooks";
 

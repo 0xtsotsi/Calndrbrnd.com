@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { i18n } = require("@calcom/config/next-i18next.config");
+const { i18n } = require("@calndrbrnd/config/next-i18next.config");
 
 // Workaround for using router.locales from old router
 export const locales = i18n.locales as string[];

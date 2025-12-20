@@ -1,5 +1,5 @@
-import { Button } from "@calcom/ui/components/button";
-import { Icon, type IconName } from "@calcom/ui/components/icon";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Icon, type IconName } from "@calndrbrnd/ui/components/icon";
 
 type EmptyStateProps = {
   icon: IconName;

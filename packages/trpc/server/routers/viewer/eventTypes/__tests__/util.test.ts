@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach, type Mock } from "vitest";
 
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
@@ -10,7 +10,7 @@ import type { authedProcedure } from "../../../procedures/authedProcedure";
 import { createEventPbacProcedure, ensureEmailOrPhoneNumberIsPresent } from "../util";
 
 // Mock dependencies
-vi.mock("@calcom/features/pbac/services/permission-check.service");
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service");
 
 describe("createEventPbacProcedure", () => {
   let mockPermissionCheckService: {

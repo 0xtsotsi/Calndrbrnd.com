@@ -4,7 +4,7 @@ import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { MembershipUserSelect } from "@/modules/teams/memberships/teams-memberships.repository";
 import { Injectable } from "@nestjs/common";
 
-import type { Prisma } from "@calcom/prisma/client";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import type { UpdateOrgMembershipDto } from "./inputs/update-organization-membership.input";
 

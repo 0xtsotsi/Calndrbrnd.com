@@ -9,15 +9,15 @@ import {
   mockCalendarToCrashOnGetAvailability,
   BookingLocations,
   createOrganization,
-} from "@calcom/web/test/utils/bookingScenario/bookingScenario";
-import { getMockRequestDataForBooking } from "@calcom/web/test/utils/bookingScenario/getMockRequestDataForBooking";
-import { setupAndTeardown } from "@calcom/web/test/utils/bookingScenario/setupAndTeardown";
+} from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
+import { getMockRequestDataForBooking } from "@calndrbrnd/web/test/utils/bookingScenario/getMockRequestDataForBooking";
+import { setupAndTeardown } from "@calndrbrnd/web/test/utils/bookingScenario/setupAndTeardown";
 
 import { describe, expect, vi } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import { WatchlistType, BookingStatus } from "@calcom/prisma/enums";
-import { test } from "@calcom/web/test/fixtures/fixtures";
+import { prisma } from "@calndrbrnd/prisma";
+import { WatchlistType, BookingStatus } from "@calndrbrnd/prisma/enums";
+import { test } from "@calndrbrnd/web/test/fixtures/fixtures";
 
 import { getNewBookingHandler } from "./getNewBookingHandler";
 
@@ -373,7 +373,7 @@ describe("handleNewBooking - Spam Detection", () => {
 
         // Mock the SpamCheckService to throw an error during isBlocked check
         const { getSpamCheckService } = await import(
-          "@calcom/features/di/watchlist/containers/SpamCheckService.container"
+          "@calndrbrnd/features/di/watchlist/containers/SpamCheckService.container"
         );
         const spamCheckService = getSpamCheckService();
         const originalIsBlocked = spamCheckService["isBlocked"].bind(spamCheckService);

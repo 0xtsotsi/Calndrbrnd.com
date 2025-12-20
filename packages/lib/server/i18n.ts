@@ -1,12 +1,12 @@
 import { createInstance } from "i18next";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
 
 import { fetchWithTimeout } from "../fetchWithTimeout";
 import logger from "../logger";
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { i18n } = require("@calcom/config/next-i18next.config");
+const { i18n } = require("@calndrbrnd/config/next-i18next.config");
 const log = logger.getSubLogger({ prefix: ["[i18n]"] });
 
 // Import only English translations directly to avoid HTTP requests

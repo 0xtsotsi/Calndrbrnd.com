@@ -1,9 +1,9 @@
-import { TeamRepository } from "@calcom/ee/teams/repositories/TeamRepository";
-import { updateNewTeamMemberEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { TeamRepository } from "@calndrbrnd/ee/teams/repositories/TeamRepository";
+import { updateNewTeamMemberEventTypes } from "@calndrbrnd/features/ee/teams/lib/queries";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,4 +1,4 @@
-import { createNextApiHandler } from "@calcom/trpc/server/createNextApiHandler";
-import { eventTypesRouter } from "@calcom/trpc/server/routers/viewer/eventTypes/heavy/_router";
+import { createNextApiHandler } from "@calndrbrnd/trpc/server/createNextApiHandler";
+import { eventTypesRouter } from "@calndrbrnd/trpc/server/routers/viewer/eventTypes/heavy/_router";
 
 export default createNextApiHandler(eventTypesRouter);

@@ -4,9 +4,9 @@ import { useRouter, useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
 import React, { useEffect } from "react";
 
-import { useFlags } from "@calcom/features/flags/hooks";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
+import { useFlags } from "@calndrbrnd/features/flags/hooks";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
 
 import { InviteOptions } from "../../components/InviteOptions";
 import { OnboardingCard } from "../../components/OnboardingCard";

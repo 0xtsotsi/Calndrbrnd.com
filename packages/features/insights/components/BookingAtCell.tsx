@@ -3,17 +3,17 @@
 import Link from "next/link";
 import { useId } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
+import dayjs from "@calndrbrnd/dayjs";
+import { useCopy } from "@calndrbrnd/lib/hooks/useCopy";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
   HoverCardPortal,
-} from "@calcom/ui/components/hover-card";
-import { Icon } from "@calcom/ui/components/icon";
+} from "@calndrbrnd/ui/components/hover-card";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import type { RoutingFormTableRow } from "../lib/types";
 import { BookingStatusBadge } from "./BookingStatusBadge";

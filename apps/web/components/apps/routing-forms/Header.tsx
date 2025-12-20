@@ -4,13 +4,13 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RoutingFormWithResponseCount } from "@calcom/routing-forms/types/types";
-import { Button } from "@calcom/ui/components/button";
-import { DropdownMenuSeparator } from "@calcom/ui/components/dropdown";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RoutingFormWithResponseCount } from "@calndrbrnd/routing-forms/types/types";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DropdownMenuSeparator } from "@calndrbrnd/ui/components/dropdown";
+import { ToggleGroup } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { FormAction, FormActionsDropdown } from "./FormActions";
 import { FormSettingsSlideover } from "./FormSettingsSlideover";

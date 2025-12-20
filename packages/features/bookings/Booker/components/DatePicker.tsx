@@ -1,15 +1,15 @@
 import { shallow } from "zustand/shallow";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import type { DatePickerClassNames } from "@calcom/features/bookings/Booker/types";
-import { DatePicker as DatePickerComponent } from "@calcom/features/calendars/DatePicker";
-import { useNonEmptyScheduleDays } from "@calcom/features/schedules/lib/use-schedule/useNonEmptyScheduleDays";
-import { weekdayToWeekIndex } from "@calcom/lib/dayjs";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { User } from "@calcom/prisma/client";
-import type { PeriodData } from "@calcom/types/Event";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import { useBookerStoreContext } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import type { DatePickerClassNames } from "@calndrbrnd/features/bookings/Booker/types";
+import { DatePicker as DatePickerComponent } from "@calndrbrnd/features/calendars/DatePicker";
+import { useNonEmptyScheduleDays } from "@calndrbrnd/features/schedules/lib/use-schedule/useNonEmptyScheduleDays";
+import { weekdayToWeekIndex } from "@calndrbrnd/lib/dayjs";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { User } from "@calndrbrnd/prisma/client";
+import type { PeriodData } from "@calndrbrnd/types/Event";
 
 import type { Slots } from "../../types";
 

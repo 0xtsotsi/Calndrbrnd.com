@@ -5,14 +5,14 @@ import { useRouter } from "next/navigation";
 import posthog from "posthog-js";
 import { useEffect } from "react";
 
-import { useFlagMap } from "@calcom/features/flags/context/provider";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import useEmailVerifyCheck from "@calcom/trpc/react/hooks/useEmailVerifyCheck";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { showToast } from "@calcom/ui/components/toast";
+import { useFlagMap } from "@calndrbrnd/features/flags/context/provider";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import useEmailVerifyCheck from "@calndrbrnd/trpc/react/hooks/useEmailVerifyCheck";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 const EMAIL_CLIENTS = [
   {

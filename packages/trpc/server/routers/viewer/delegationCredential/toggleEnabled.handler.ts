@@ -1,11 +1,11 @@
 import type { z } from "zod";
 
-import { checkIfSuccessfullyConfiguredInWorkspace } from "@calcom/app-store/delegationCredential";
-import { sendDelegationCredentialDisabledEmail } from "@calcom/emails/integration-email-service";
-import { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import type { ServiceAccountKey } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
+import { checkIfSuccessfullyConfiguredInWorkspace } from "@calndrbrnd/app-store/delegationCredential";
+import { sendDelegationCredentialDisabledEmail } from "@calndrbrnd/emails/integration-email-service";
+import { DelegationCredentialRepository } from "@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import type { ServiceAccountKey } from "@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import logger from "@calndrbrnd/lib/logger";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
 
 import { getAffectedMembersForDisable } from "./getAffectedMembersForDisable.handler";
 import type { DelegationCredentialToggleEnabledSchema } from "./schema";

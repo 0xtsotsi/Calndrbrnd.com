@@ -1,6 +1,6 @@
-import type { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import { prisma } from "@calcom/prisma";
-import type { DestinationCalendar } from "@calcom/prisma/client";
+import type { getEventTypesFromDB } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import { prisma } from "@calndrbrnd/prisma";
+import type { DestinationCalendar } from "@calndrbrnd/prisma/client";
 
 import type { BookingSelectResult } from "./bookingSelect";
 

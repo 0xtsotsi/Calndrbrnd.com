@@ -54,7 +54,7 @@ import {
 } from "@nestjs/swagger";
 import { Request } from "express";
 
-import { BOOKING_READ, BOOKING_WRITE, SUCCESS_STATUS } from "@calcom/platform-constants";
+import { BOOKING_READ, BOOKING_WRITE, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 import {
   CancelBookingInput,
   CancelBookingInput_2024_08_13,
@@ -69,7 +69,7 @@ import {
   GetBookingRecordingsOutput,
   GetBookingTranscriptsOutput,
   GetBookingVideoSessionsOutput,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 import {
   CreateBookingInputPipe,
   CreateBookingInput,
@@ -80,7 +80,7 @@ import {
   CreateInstantBookingInput_2024_08_13,
   CreateRecurringBookingInput_2024_08_13,
   DeclineBookingInput_2024_08_13,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/bookings",

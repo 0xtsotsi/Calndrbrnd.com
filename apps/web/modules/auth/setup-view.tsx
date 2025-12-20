@@ -3,12 +3,12 @@
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 
-import AdminAppsList from "@calcom/features/apps/AdminAppsList";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
-import { WizardForm } from "@calcom/ui/components/form";
-import type { WizardStep } from "@calcom/ui/components/form/wizard/WizardForm";
+import AdminAppsList from "@calndrbrnd/features/apps/AdminAppsList";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
+import { WizardForm } from "@calndrbrnd/ui/components/form";
+import type { WizardStep } from "@calndrbrnd/ui/components/form/wizard/WizardForm";
 
 import { AdminUserContainer as AdminUser } from "@components/setup/AdminUser";
 import LicenseSelection from "@components/setup/LicenseSelection";

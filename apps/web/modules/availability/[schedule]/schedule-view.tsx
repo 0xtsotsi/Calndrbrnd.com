@@ -5,15 +5,15 @@ import { revalidateSchedulePage } from "app/(use-page-wrapper)/availability/[sch
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
-import { AvailabilitySettings } from "@calcom/atoms/availability/AvailabilitySettings";
-import type { BulkUpdatParams } from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import { withErrorFromUnknown } from "@calcom/lib/getClientErrorFromUnknown";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { HttpError } from "@calcom/lib/http-error";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { showToast } from "@calcom/ui/components/toast";
+import { AvailabilitySettings } from "@calndrbrnd/atoms/availability/AvailabilitySettings";
+import type { BulkUpdatParams } from "@calndrbrnd/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import { withErrorFromUnknown } from "@calndrbrnd/lib/getClientErrorFromUnknown";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 type PageProps = {
   scheduleData: RouterOutputs["viewer"]["availability"]["schedule"]["get"];

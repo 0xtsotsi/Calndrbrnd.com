@@ -1,10 +1,10 @@
-import "@calcom/lib/__mocks__/logger";
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import "@calndrbrnd/lib/__mocks__/logger";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { findTeamMembersMatchingAttributeLogic } from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-import { RoutingFormResponseRepository } from "@calcom/lib/server/repository/formResponse";
+import { findTeamMembersMatchingAttributeLogic } from "@calndrbrnd/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+import { RoutingFormResponseRepository } from "@calndrbrnd/lib/server/repository/formResponse";
 
 import isRouter from "../lib/isRouter";
 import routerGetCrmContactOwnerEmail from "./crmRouting/routerGetCrmContactOwnerEmail";
@@ -12,11 +12,11 @@ import type { TargetRoutingFormForResponse } from "./formSubmissionUtils";
 import { onSubmissionOfFormResponse } from "./formSubmissionUtils";
 import { handleResponse } from "./handleResponse";
 
-vi.mock("@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic", () => ({
+vi.mock("@calndrbrnd/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic", () => ({
   findTeamMembersMatchingAttributeLogic: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/server/repository/formResponse");
+vi.mock("@calndrbrnd/lib/server/repository/formResponse");
 
 const mockRoutingFormResponseRepository = {
   recordQueuedFormResponse: vi.fn(),
@@ -35,11 +35,11 @@ vi.mock("../lib/isRouter", () => ({
   default: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/sentryWrapper", () => ({
+vi.mock("@calndrbrnd/lib/sentryWrapper", () => ({
   withReporting: (fn: unknown) => fn,
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 

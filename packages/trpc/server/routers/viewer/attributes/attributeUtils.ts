@@ -1,7 +1,7 @@
-import { safeStringify } from "@calcom/lib/safeStringify";
-import slugify from "@calcom/lib/slugify";
-import type { PrismaTransaction } from "@calcom/prisma";
-import type { AttributeType } from "@calcom/prisma/enums";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import slugify from "@calndrbrnd/lib/slugify";
+import type { PrismaTransaction } from "@calndrbrnd/prisma";
+import type { AttributeType } from "@calndrbrnd/prisma/enums";
 
 type SimpleAttributeInput = {
   id: string;

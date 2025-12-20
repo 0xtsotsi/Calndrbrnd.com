@@ -4,11 +4,11 @@ import jwt from "jsonwebtoken";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-import { AccessCodeRepository } from "@calcom/features/oauth/repositories/AccessCodeRepository";
-import { OAuthClientRepository } from "@calcom/features/oauth/repositories/OAuthClientRepository";
-import { OAuthService } from "@calcom/features/oauth/services/OAuthService";
-import prisma from "@calcom/prisma";
-import type { OAuthTokenPayload } from "@calcom/types/oauth";
+import { AccessCodeRepository } from "@calndrbrnd/features/oauth/repositories/AccessCodeRepository";
+import { OAuthClientRepository } from "@calndrbrnd/features/oauth/repositories/OAuthClientRepository";
+import { OAuthService } from "@calndrbrnd/features/oauth/services/OAuthService";
+import prisma from "@calndrbrnd/prisma";
+import type { OAuthTokenPayload } from "@calndrbrnd/types/oauth";
 
 async function handler(req: NextRequest) {
   const { code, client_id, client_secret, grant_type, redirect_uri, code_verifier } = await parseUrlFormData(

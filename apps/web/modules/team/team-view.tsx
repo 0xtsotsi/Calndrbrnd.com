@@ -9,17 +9,17 @@
 import classNames from "classnames";
 import Link from "next/link";
 
-import { sdkActionManager, useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import EventTypeDescription from "@calcom/features/eventtypes/components/EventTypeDescription";
-import { getOrgOrTeamAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useRouterQuery } from "@calcom/lib/hooks/useRouterQuery";
-import useTheme from "@calcom/lib/hooks/useTheme";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
-import { UserAvatarGroup } from "@calcom/ui/components/avatar";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { UnpublishedEntity } from "@calcom/ui/components/unpublished-entity";
+import { sdkActionManager, useIsEmbed } from "@calndrbrnd/embed-core/embed-iframe";
+import EventTypeDescription from "@calndrbrnd/features/eventtypes/components/EventTypeDescription";
+import { getOrgOrTeamAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useRouterQuery } from "@calndrbrnd/lib/hooks/useRouterQuery";
+import useTheme from "@calndrbrnd/lib/hooks/useTheme";
+import { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { UserAvatarGroup } from "@calndrbrnd/ui/components/avatar";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { UnpublishedEntity } from "@calndrbrnd/ui/components/unpublished-entity";
 
 import { useToggleQuery } from "@lib/hooks/useToggleQuery";
 import type { getServerSideProps } from "@lib/team/[slug]/getServerSideProps";

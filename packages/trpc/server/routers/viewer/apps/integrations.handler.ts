@@ -1,6 +1,6 @@
-import { getConnectedApps } from "@calcom/app-store/_utils/getConnectedApps";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getConnectedApps } from "@calndrbrnd/app-store/_utils/getConnectedApps";
+import { prisma } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TIntegrationsInputSchema } from "./integrations.schema";
 

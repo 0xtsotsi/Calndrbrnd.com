@@ -1,7 +1,7 @@
 import type { TFunction } from "i18next";
 
-import { EMAIL_FROM_NAME } from "@calcom/lib/constants";
-import type { CreditUsageType } from "@calcom/prisma/enums";
+import { EMAIL_FROM_NAME } from "@calndrbrnd/lib/constants";
+import type { CreditUsageType } from "@calndrbrnd/prisma/enums";
 
 import renderEmail from "../src/renderEmail";
 import BaseEmail from "./_base-email";

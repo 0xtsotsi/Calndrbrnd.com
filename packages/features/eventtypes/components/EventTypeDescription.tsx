@@ -1,17 +1,17 @@
 import { useMemo } from "react";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import { Price } from "@calcom/features/bookings/components/event-meta/Price";
-import { PriceIcon } from "@calcom/features/bookings/components/event-meta/PriceIcon";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { parseRecurringEvent } from "@calcom/lib/isRecurringEvent";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import type { baseEventTypeSelect } from "@calcom/prisma";
-import type { Prisma, EventType } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
+import { getPaymentAppData } from "@calndrbrnd/app-store/_utils/payments/getPaymentAppData";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@calndrbrnd/app-store/zod-utils";
+import { Price } from "@calndrbrnd/features/bookings/components/event-meta/Price";
+import { PriceIcon } from "@calndrbrnd/features/bookings/components/event-meta/PriceIcon";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { parseRecurringEvent } from "@calndrbrnd/lib/isRecurringEvent";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import type { baseEventTypeSelect } from "@calndrbrnd/prisma";
+import type { Prisma, EventType } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
 
 export type EventTypeDescriptionProps = {
   eventType: Pick<

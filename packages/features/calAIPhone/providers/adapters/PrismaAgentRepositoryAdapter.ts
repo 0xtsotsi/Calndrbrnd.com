@@ -1,5 +1,5 @@
-import { PrismaAgentRepository } from "@calcom/features/calAIPhone/repositories/PrismaAgentRepository";
-import prisma from "@calcom/prisma";
+import { PrismaAgentRepository } from "@calndrbrnd/features/calAIPhone/repositories/PrismaAgentRepository";
+import prisma from "@calndrbrnd/prisma";
 
 import type {
   AgentRepositoryInterface,

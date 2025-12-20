@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { useHasPaidPlan, useHasActiveTeamPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { useHasPaidPlan, useHasActiveTeamPlan } from "@calndrbrnd/features/billing/hooks/useHasPaidPlan";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 import { Tooltip } from "../tooltip";
 import { Badge } from "./Badge";

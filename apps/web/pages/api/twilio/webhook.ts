@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { z } from "zod";
 
-import * as twilio from "@calcom/features/ee/workflows/lib/reminders/providers/twilioProvider";
-import { IS_SMS_CREDITS_ENABLED, WEBAPP_URL } from "@calcom/lib/constants";
-import { getPublishedOrgIdFromMemberOrTeamId } from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import prisma from "@calcom/prisma";
-import { CreditUsageType } from "@calcom/prisma/enums";
+import * as twilio from "@calndrbrnd/features/ee/workflows/lib/reminders/providers/twilioProvider";
+import { IS_SMS_CREDITS_ENABLED, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getPublishedOrgIdFromMemberOrTeamId } from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import { defaultHandler } from "@calndrbrnd/lib/server/defaultHandler";
+import prisma from "@calndrbrnd/prisma";
+import { CreditUsageType } from "@calndrbrnd/prisma/enums";
 
 const InputSchema = z.object({
   userId: z
@@ -73,7 +73,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!parsedUserId && !parsedTeamId) {
     return res.status(401).send("Team or user id is required");
   }
-  const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+  const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
   const creditService = new CreditService();
 
   if (countryCode === "US" || countryCode === "CA") {

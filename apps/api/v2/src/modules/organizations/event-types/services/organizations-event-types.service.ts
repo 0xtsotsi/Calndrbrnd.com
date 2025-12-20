@@ -1,6 +1,6 @@
 import { MembershipsRepository } from "@/modules/memberships/memberships.repository";
 
-import type { SortOrderType } from "@calcom/platform-types";
+import type { SortOrderType } from "@calndrbrnd/platform-types";
 import { OrganizationsEventTypesRepository } from "@/modules/organizations/event-types/organizations-event-types.repository";
 import {
   TransformedCreateTeamEventTypeInput,
@@ -14,7 +14,7 @@ import { UserWithProfile } from "@/modules/users/users.repository";
 import { Injectable, Logger } from "@nestjs/common";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-import { createEventType } from "@calcom/platform-libraries/event-types";
+import { createEventType } from "@calndrbrnd/platform-libraries/event-types";
 
 @Injectable()
 export class OrganizationsEventTypesService {

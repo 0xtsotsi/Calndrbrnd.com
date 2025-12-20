@@ -4,13 +4,13 @@
  */
 import { expect } from "@playwright/test";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { intervalLimitKeyToUnit } from "@calcom/lib/intervalLimits/intervalLimit";
-import type { IntervalLimit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import prisma from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
-import { entries } from "@calcom/prisma/zod-utils";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import { intervalLimitKeyToUnit } from "@calndrbrnd/lib/intervalLimits/intervalLimit";
+import type { IntervalLimit } from "@calndrbrnd/lib/intervalLimits/intervalLimitSchema";
+import prisma from "@calndrbrnd/prisma";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import { entries } from "@calndrbrnd/prisma/zod-utils";
 
 import { test } from "./lib/fixtures";
 import {

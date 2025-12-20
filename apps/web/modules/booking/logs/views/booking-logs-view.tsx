@@ -6,16 +6,16 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import dayjs from "@calcom/dayjs";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { Icon, type IconName } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { FilterSearchField, Select } from "@calcom/ui/components/form";
-import { Avatar } from "@calcom/ui/components/avatar";
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import type { AuditActorType } from "@calcom/features/booking-audit/lib/repository/IAuditActorRepository";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import dayjs from "@calndrbrnd/dayjs";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Icon, type IconName } from "@calndrbrnd/ui/components/icon";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { FilterSearchField, Select } from "@calndrbrnd/ui/components/form";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import ServerTrans from "@calndrbrnd/lib/components/ServerTrans";
+import type { AuditActorType } from "@calndrbrnd/features/booking-audit/lib/repository/IAuditActorRepository";
 
 interface BookingLogsViewProps {
     bookingUid: string;

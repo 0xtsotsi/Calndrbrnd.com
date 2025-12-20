@@ -6,7 +6,7 @@ import { TeamsRepository } from "@/modules/teams/teams/teams.repository";
 import { BadRequestException, Injectable, InternalServerErrorException } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 
-import { slugify } from "@calcom/platform-libraries";
+import { slugify } from "@calndrbrnd/platform-libraries";
 
 @Injectable()
 export class TeamsService {

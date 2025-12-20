@@ -3,22 +3,22 @@ import type { GetServerSideProps } from "next";
 import { encode } from "querystring";
 import type { z } from "zod";
 
-import { orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { getEventTypesPublic } from "@calcom/features/eventtypes/lib/getEventTypesPublic";
-import { getBrandingForUser } from "@calcom/features/profile/lib/getBranding";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { DEFAULT_DARK_BRAND_COLOR, DEFAULT_LIGHT_BRAND_COLOR } from "@calcom/lib/constants";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import logger from "@calcom/lib/logger";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { stripMarkdown } from "@calcom/lib/stripMarkdown";
-import { prisma } from "@calcom/prisma";
-import type { EventType, User } from "@calcom/prisma/client";
-import { RedirectType } from "@calcom/prisma/enums";
-import type { EventTypeMetaDataSchema } from "@calcom/prisma/zod-utils";
-import type { UserProfile } from "@calcom/types/UserProfile";
+import { orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { getUsernameList } from "@calndrbrnd/features/eventtypes/lib/defaultEvents";
+import { getEventTypesPublic } from "@calndrbrnd/features/eventtypes/lib/getEventTypesPublic";
+import { getBrandingForUser } from "@calndrbrnd/features/profile/lib/getBranding";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { DEFAULT_DARK_BRAND_COLOR, DEFAULT_LIGHT_BRAND_COLOR } from "@calndrbrnd/lib/constants";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import logger from "@calndrbrnd/lib/logger";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { stripMarkdown } from "@calndrbrnd/lib/stripMarkdown";
+import { prisma } from "@calndrbrnd/prisma";
+import type { EventType, User } from "@calndrbrnd/prisma/client";
+import { RedirectType } from "@calndrbrnd/prisma/enums";
+import type { EventTypeMetaDataSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
 
 import { handleOrgRedirect } from "@lib/handleOrgRedirect";
 

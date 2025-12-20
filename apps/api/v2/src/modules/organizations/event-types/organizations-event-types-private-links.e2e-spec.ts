@@ -19,8 +19,8 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { CreatePrivateLinkInput } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { CreatePrivateLinkInput } from "@calndrbrnd/platform-types";
 
 describe("Organizations / Teams / Event Types / Private Links Endpoints", () => {
   let app: INestApplication;

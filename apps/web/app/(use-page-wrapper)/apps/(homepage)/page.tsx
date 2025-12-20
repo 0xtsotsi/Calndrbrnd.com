@@ -1,11 +1,11 @@
 import { _generateMetadata } from "app/_utils";
 import { cookies, headers } from "next/headers";
 
-import { getAppRegistry, getAppRegistryWithCredentials } from "@calcom/app-store/_appRegistry";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import prisma from "@calcom/prisma";
-import type { AppCategories } from "@calcom/prisma/enums";
+import { getAppRegistry, getAppRegistryWithCredentials } from "@calndrbrnd/app-store/_appRegistry";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import prisma from "@calndrbrnd/prisma";
+import type { AppCategories } from "@calndrbrnd/prisma/enums";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

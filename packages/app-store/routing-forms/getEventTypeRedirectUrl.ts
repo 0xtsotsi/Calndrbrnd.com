@@ -1,5 +1,5 @@
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import type { Ensure } from "@calcom/types/utils";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import type { Ensure } from "@calndrbrnd/types/utils";
 
 function getUserAndEventTypeSlug(eventTypeRedirectUrl: string) {
   if (eventTypeRedirectUrl.startsWith("/")) {

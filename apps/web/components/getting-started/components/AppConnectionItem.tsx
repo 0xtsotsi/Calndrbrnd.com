@@ -2,16 +2,16 @@ import Link from "next/link";
 import { useState } from "react";
 import posthog from "posthog-js";
 
-import { InstallAppButtonWithoutPlanCheck } from "@calcom/app-store/InstallAppButtonWithoutPlanCheck";
-import type { TDependencyData } from "@calcom/app-store/_appRegistry";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { App } from "@calcom/types/App";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { InstallAppButtonWithoutPlanCheck } from "@calndrbrnd/app-store/InstallAppButtonWithoutPlanCheck";
+import type { TDependencyData } from "@calndrbrnd/app-store/_appRegistry";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { App } from "@calndrbrnd/types/App";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 interface IAppConnectionItem {
   title: string;

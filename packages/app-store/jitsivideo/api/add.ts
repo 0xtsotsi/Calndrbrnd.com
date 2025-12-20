@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { throwIfNotHaveAdminAccessToTeam } from "@calcom/app-store/_utils/throwIfNotHaveAdminAccessToTeam";
-import prisma from "@calcom/prisma";
+import { throwIfNotHaveAdminAccessToTeam } from "@calndrbrnd/app-store/_utils/throwIfNotHaveAdminAccessToTeam";
+import prisma from "@calndrbrnd/prisma";
 
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";
 

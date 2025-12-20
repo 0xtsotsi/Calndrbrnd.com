@@ -26,10 +26,10 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { slugify } from "@calcom/platform-libraries";
-import type { ApiSuccessResponse } from "@calcom/platform-types";
-import type { PlatformOAuthClient, Team, User } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { slugify } from "@calndrbrnd/platform-libraries";
+import type { ApiSuccessResponse } from "@calndrbrnd/platform-types";
+import type { PlatformOAuthClient, Team, User } from "@calndrbrnd/prisma/client";
 
 const CLIENT_REDIRECT_URI = "http://localhost:4321";
 

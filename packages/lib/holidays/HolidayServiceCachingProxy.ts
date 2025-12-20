@@ -1,5 +1,5 @@
-import dayjs from "@calcom/dayjs";
-import { HolidayRepository } from "@calcom/lib/server/repository/HolidayRepository";
+import dayjs from "@calndrbrnd/dayjs";
+import { HolidayRepository } from "@calndrbrnd/lib/server/repository/HolidayRepository";
 
 import { GOOGLE_HOLIDAY_CALENDARS, HOLIDAY_CACHE_DAYS } from "./constants";
 import { getGoogleCalendarClient, type GoogleCalendarClient, type GoogleCalendarHoliday } from "./GoogleCalendarClient";

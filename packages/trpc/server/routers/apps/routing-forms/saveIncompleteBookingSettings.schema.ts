@@ -1,6 +1,6 @@
 import z from "zod";
 
-import { IncompleteBookingActionType } from "@calcom/prisma/enums";
+import { IncompleteBookingActionType } from "@calndrbrnd/prisma/enums";
 
 export const ZSaveIncompleteBookingSettingsInputSchema = z.object({
   formId: z.string(),

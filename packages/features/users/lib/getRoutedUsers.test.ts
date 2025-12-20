@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from "vitest";
 
 import { getRoutedUsersWithContactOwnerAndFixedUsers } from "./getRoutedUsers";
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     default: vi.fn(),
   };

@@ -4,14 +4,14 @@ import { unstable_cache } from "next/cache";
 import { headers, cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { Resource, CustomAction, CrudAction } from "@calcom/features/pbac/domain/types/permission-registry";
-import { getSpecificPermissions } from "@calcom/features/pbac/lib/resource-permissions";
-import { RoleManagementFactory } from "@calcom/features/pbac/services/role-management.factory";
-import { PrismaAttributeRepository } from "@calcom/lib/server/repository/PrismaAttributeRepository";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { viewerOrganizationsRouter } from "@calcom/trpc/server/routers/viewer/organizations/_router";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { Resource, CustomAction, CrudAction } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { getSpecificPermissions } from "@calndrbrnd/features/pbac/lib/resource-permissions";
+import { RoleManagementFactory } from "@calndrbrnd/features/pbac/services/role-management.factory";
+import { PrismaAttributeRepository } from "@calndrbrnd/lib/server/repository/PrismaAttributeRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { viewerOrganizationsRouter } from "@calndrbrnd/trpc/server/routers/viewer/organizations/_router";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

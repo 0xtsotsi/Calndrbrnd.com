@@ -1,9 +1,9 @@
-import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/app-store/routing-forms/lib/formSubmissionUtils";
-import type { TimeFormat } from "@calcom/lib/timeFormat";
-import type { Prisma } from "@calcom/prisma/client";
-import type { TimeUnit, WorkflowTemplates, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import { WorkflowActions } from "@calcom/prisma/enums";
-import type { CalEventResponses, RecurringEvent } from "@calcom/types/Calendar";
+import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calndrbrnd/app-store/routing-forms/lib/formSubmissionUtils";
+import type { TimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { TimeUnit, WorkflowTemplates, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
+import { WorkflowActions } from "@calndrbrnd/prisma/enums";
+import type { CalEventResponses, RecurringEvent } from "@calndrbrnd/types/Calendar";
 
 export type Workflow = {
   id: number;

@@ -1,5 +1,5 @@
-import { symmetricEncrypt } from "@calcom/lib/crypto";
-import { prisma } from "@calcom/prisma";
+import { symmetricEncrypt } from "@calndrbrnd/lib/crypto";
+import { prisma } from "@calndrbrnd/prisma";
 
 import type { TUpdateInputSchema } from "./update.schema";
 

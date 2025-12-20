@@ -1,9 +1,9 @@
 import type { Browser, Page } from "@playwright/test";
 import { expect } from "@playwright/test";
 
-import prisma from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { SchedulingType } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
 
 import { test } from "../lib/fixtures";
 import { moveUserToOrg } from "../lib/orgMigration";

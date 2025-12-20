@@ -1,22 +1,22 @@
 import { default as cloneDeep } from "lodash/cloneDeep";
 import type { Logger } from "tslog";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 import {
   allowDisablingHostConfirmationEmails,
   allowDisablingAttendeeConfirmationEmails,
-} from "@calcom/ee/workflows/lib/allowDisablingStandardEmails";
-import type { Workflow as WorkflowType } from "@calcom/ee/workflows/lib/types";
-import type { BookingType } from "@calcom/features/bookings/lib/handleNewBooking/originalRescheduledBookingUtils";
-import type { EventNameObjectType } from "@calcom/features/eventtypes/lib/eventNaming";
-import { getPiiFreeCalendarEvent } from "@calcom/lib/piiFreeData";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import type { Prisma, User } from "@calcom/prisma/client";
-import type { SchedulingType } from "@calcom/prisma/enums";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
-import type { AdditionalInformation, CalendarEvent, Person } from "@calcom/types/Calendar";
+} from "@calndrbrnd/ee/workflows/lib/allowDisablingStandardEmails";
+import type { Workflow as WorkflowType } from "@calndrbrnd/ee/workflows/lib/types";
+import type { BookingType } from "@calndrbrnd/features/bookings/lib/handleNewBooking/originalRescheduledBookingUtils";
+import type { EventNameObjectType } from "@calndrbrnd/features/eventtypes/lib/eventNaming";
+import { getPiiFreeCalendarEvent } from "@calndrbrnd/lib/piiFreeData";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { Prisma, User } from "@calndrbrnd/prisma/client";
+import type { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { EventTypeMetadata } from "@calndrbrnd/prisma/zod-utils";
+import type { AdditionalInformation, CalendarEvent, Person } from "@calndrbrnd/types/Calendar";
 
 export const BookingActionMap = {
   confirmed: "BOOKING_CONFIRMED",
@@ -124,7 +124,7 @@ export class BookingEmailSmsHandler {
       additionalInformation,
     } = data;
 
-    const { sendRescheduledEmailsAndSMS } = await import("@calcom/emails/email-manager");
+    const { sendRescheduledEmailsAndSMS } = await import("@calndrbrnd/emails/email-manager");
     await sendRescheduledEmailsAndSMS(
       {
         ...evt,
@@ -228,7 +228,7 @@ export class BookingEmailSmsHandler {
       sendRoundRobinRescheduledEmailsAndSMS,
       sendReassignedScheduledEmailsAndSMS,
       sendRoundRobinCancelledEmailsAndSMS,
-    } = await import("@calcom/emails/email-manager");
+    } = await import("@calndrbrnd/emails/email-manager");
 
     try {
       await Promise.all([
@@ -285,7 +285,7 @@ export class BookingEmailSmsHandler {
       isAttendeeConfirmationEmailDisabled = allowDisablingAttendeeConfirmationEmails(workflows);
     }
 
-    const { sendScheduledEmailsAndSMS } = await import("@calcom/emails/email-manager");
+    const { sendScheduledEmailsAndSMS } = await import("@calndrbrnd/emails/email-manager");
 
     try {
       await sendScheduledEmailsAndSMS(
@@ -322,7 +322,7 @@ export class BookingEmailSmsHandler {
     const eventWithNotes = { ...evt, additionalNotes };
 
     const { sendOrganizerRequestEmail, sendAttendeeRequestEmailAndSMS } = await import(
-      "@calcom/emails/email-manager"
+      "@calndrbrnd/emails/email-manager"
     );
 
     try {
@@ -350,7 +350,7 @@ export class BookingEmailSmsHandler {
       safeStringify({ calEvent: getPiiFreeCalendarEvent(evt) })
     );
 
-    const { sendAddGuestsEmailsAndSMS } = await import("@calcom/emails/email-manager");
+    const { sendAddGuestsEmailsAndSMS } = await import("@calndrbrnd/emails/email-manager");
 
     try {
       await sendAddGuestsEmailsAndSMS({

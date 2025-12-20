@@ -1,7 +1,7 @@
 import { Retell } from "retell-sdk";
 import { describe, it, expect, beforeEach, vi, beforeAll } from "vitest";
 
-import logger from "@calcom/lib/logger";
+import logger from "@calndrbrnd/lib/logger";
 
 import type {
   CreateLLMRequest,
@@ -42,7 +42,7 @@ vi.mock("retell-sdk", () => ({
   })),
 }));
 
-vi.mock("@calcom/lib/logger", () => ({
+vi.mock("@calndrbrnd/lib/logger", () => ({
   default: {
     getSubLogger: vi.fn().mockReturnValue({
       info: vi.fn(),

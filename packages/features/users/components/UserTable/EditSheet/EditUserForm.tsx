@@ -5,15 +5,15 @@ import { useMemo, useState } from "react";
 import { Controller, useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
 
-import { TimezoneSelect } from "@calcom/features/components/timezone-select";
-import { timeZoneSchema } from "@calcom/lib/dayjs/timeZone.schema";
-import { emailSchema } from "@calcom/lib/emailSchema";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { trpc, type RouterOutputs } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { Divider } from "@calcom/ui/components/divider";
+import { TimezoneSelect } from "@calndrbrnd/features/components/timezone-select";
+import { timeZoneSchema } from "@calndrbrnd/lib/dayjs/timeZone.schema";
+import { emailSchema } from "@calndrbrnd/lib/emailSchema";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { trpc, type RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Divider } from "@calndrbrnd/ui/components/divider";
 import {
   InputField,
   TextAreaField,
@@ -22,10 +22,10 @@ import {
   Label,
   TextField,
   ToggleGroup,
-} from "@calcom/ui/components/form";
-import { ImageUploader } from "@calcom/ui/components/image-uploader";
-import { SheetHeader, SheetBody, SheetFooter, SheetTitle } from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/form";
+import { ImageUploader } from "@calndrbrnd/ui/components/image-uploader";
+import { SheetHeader, SheetBody, SheetFooter, SheetTitle } from "@calndrbrnd/ui/components/sheet";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import type { UserTableAction } from "../types";
 import { useEditMode } from "./store";

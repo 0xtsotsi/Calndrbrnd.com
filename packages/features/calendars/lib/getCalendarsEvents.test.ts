@@ -2,26 +2,26 @@ import "../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 
-import GoogleCalendarService from "@calcom/app-store/googlecalendar/lib/CalendarService";
-import OfficeCalendarService from "@calcom/app-store/office365calendar/lib/CalendarService";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import logger from "@calcom/lib/logger";
-import type { SelectedCalendar } from "@calcom/prisma/client";
-import type { EventBusyDate } from "@calcom/types/Calendar";
-import type { CredentialForCalendarService, CredentialPayload } from "@calcom/types/Credential";
+import GoogleCalendarService from "@calndrbrnd/app-store/googlecalendar/lib/CalendarService";
+import OfficeCalendarService from "@calndrbrnd/app-store/office365calendar/lib/CalendarService";
+import { symmetricDecrypt } from "@calndrbrnd/lib/crypto";
+import logger from "@calndrbrnd/lib/logger";
+import type { SelectedCalendar } from "@calndrbrnd/prisma/client";
+import type { EventBusyDate } from "@calndrbrnd/types/Calendar";
+import type { CredentialForCalendarService, CredentialPayload } from "@calndrbrnd/types/Credential";
 
 import getCalendarsEvents, {
   getCalendarsEventsWithTimezones,
   filterSelectedCalendarsForCredential,
 } from "./getCalendarsEvents";
 
-vi.mock("@calcom/lib/crypto", () => ({
+vi.mock("@calndrbrnd/lib/crypto", () => ({
   symmetricDecrypt: vi.fn(),
 }));
 
 const mockedSymmetricDecrypt = vi.mocked(symmetricDecrypt);
 
-vi.mock("@calcom/app-store/calendar.services.generated", () => {
+vi.mock("@calndrbrnd/app-store/calendar.services.generated", () => {
   class MockGoogleCalendarService {
     constructor(credential: any) {
       this.credential = credential;
@@ -92,8 +92,8 @@ vi.mock("@calcom/app-store/calendar.services.generated", () => {
 
   return {
     CalendarServiceMap: {
-      googlecalendar: vi.importActual("@calcom/app-store/googlecalendar/lib/CalendarService"),
-      office365calendar: vi.importActual("@calcom/app-store/office365calendar/lib/CalendarService"),
+      googlecalendar: vi.importActual("@calndrbrnd/app-store/googlecalendar/lib/CalendarService"),
+      office365calendar: vi.importActual("@calndrbrnd/app-store/office365calendar/lib/CalendarService"),
     },
   };
 });

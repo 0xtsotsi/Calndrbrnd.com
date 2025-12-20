@@ -1,7 +1,7 @@
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { AssignmentReasonEnum } from "@calcom/prisma/enums";
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import type { AssignmentReasonRepository } from "@calcom/features/assignment-reason/repositories/AssignmentReasonRepository";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import { AssignmentReasonEnum } from "@calndrbrnd/prisma/enums";
+import type { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import type { AssignmentReasonRepository } from "@calndrbrnd/features/assignment-reason/repositories/AssignmentReasonRepository";
 
 export enum ManagedEventReassignmentType {
   MANUAL = "manual",

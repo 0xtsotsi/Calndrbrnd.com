@@ -4,11 +4,11 @@ import {
   MAX_SEATS_PER_TIME_SLOT,
   MAX_EVENT_DURATION_MINUTES,
   MIN_EVENT_DURATION_MINUTES,
-} from "@calcom/lib/constants";
-import slugify from "@calcom/lib/slugify";
-import { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
-import { EventTypeSchema } from "@calcom/prisma/zod/modelSchema/EventTypeSchema";
-import { HostSchema } from "@calcom/prisma/zod/modelSchema/HostSchema";
+} from "@calndrbrnd/lib/constants";
+import slugify from "@calndrbrnd/lib/slugify";
+import { eventTypeBookingFields } from "@calndrbrnd/prisma/zod-utils";
+import { EventTypeSchema } from "@calndrbrnd/prisma/zod/modelSchema/EventTypeSchema";
+import { HostSchema } from "@calndrbrnd/prisma/zod/modelSchema/HostSchema";
 
 import { Frequency } from "~/lib/types";
 

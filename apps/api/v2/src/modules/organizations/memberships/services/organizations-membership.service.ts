@@ -3,7 +3,7 @@ import { CreateOrgMembershipDto } from "@/modules/organizations/memberships/inpu
 import { OrganizationsMembershipRepository } from "@/modules/organizations/memberships/organizations-membership.repository";
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 
-import { TeamService } from "@calcom/platform-libraries";
+import { TeamService } from "@calndrbrnd/platform-libraries";
 
 import { UpdateOrgMembershipDto } from "../inputs/update-organization-membership.input";
 import { OrganizationsMembershipOutputService } from "./organizations-membership-output.service";

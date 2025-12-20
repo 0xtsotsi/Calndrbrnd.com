@@ -1,32 +1,32 @@
 import type { NextApiResponse, GetServerSidePropsContext } from "next";
 
-import type { appDataSchemas } from "@calcom/app-store/apps.schemas.generated";
-import { DailyLocationType } from "@calcom/app-store/constants";
-import { eventTypeAppMetadataOptionalSchema } from "@calcom/app-store/zod-utils";
-import { CalVideoSettingsRepository } from "@calcom/features/calVideoSettings/repositories/CalVideoSettingsRepository";
-import updateChildrenEventTypes from "@calcom/features/ee/managed-event-types/lib/handleChildrenEventTypes";
+import type { appDataSchemas } from "@calndrbrnd/app-store/apps.schemas.generated";
+import { DailyLocationType } from "@calndrbrnd/app-store/constants";
+import { eventTypeAppMetadataOptionalSchema } from "@calndrbrnd/app-store/zod-utils";
+import { CalVideoSettingsRepository } from "@calndrbrnd/features/calVideoSettings/repositories/CalVideoSettingsRepository";
+import updateChildrenEventTypes from "@calndrbrnd/features/ee/managed-event-types/lib/handleChildrenEventTypes";
 import {
   allowDisablingAttendeeConfirmationEmails,
   allowDisablingHostConfirmationEmails,
-} from "@calcom/features/ee/workflows/lib/allowDisablingStandardEmails";
-import { HashedLinkRepository } from "@calcom/features/hashedLink/lib/repository/HashedLinkRepository";
-import { HashedLinkService } from "@calcom/features/hashedLink/lib/service/HashedLinkService";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { ScheduleRepository } from "@calcom/features/schedules/repositories/ScheduleRepository";
-import tasker from "@calcom/features/tasker";
-import { validateIntervalLimitOrder } from "@calcom/lib/intervalLimits/validateIntervalLimitOrder";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { validateBookerLayouts } from "@calcom/lib/validateBookerLayouts";
-import type { PrismaClient } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+} from "@calndrbrnd/features/ee/workflows/lib/allowDisablingStandardEmails";
+import { HashedLinkRepository } from "@calndrbrnd/features/hashedLink/lib/repository/HashedLinkRepository";
+import { HashedLinkService } from "@calndrbrnd/features/hashedLink/lib/service/HashedLinkService";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { ScheduleRepository } from "@calndrbrnd/features/schedules/repositories/ScheduleRepository";
+import tasker from "@calndrbrnd/features/tasker";
+import { validateIntervalLimitOrder } from "@calndrbrnd/lib/intervalLimits/validateIntervalLimitOrder";
+import logger from "@calndrbrnd/lib/logger";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { validateBookerLayouts } from "@calndrbrnd/lib/validateBookerLayouts";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
 import {
   WorkflowTriggerEvents,
   SchedulingType,
   EventTypeAutoTranslatedField,
   RRTimestampBasis,
-} from "@calcom/prisma/enums";
-import { eventTypeLocations } from "@calcom/prisma/zod-utils";
+} from "@calndrbrnd/prisma/enums";
+import { eventTypeLocations } from "@calndrbrnd/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 
@@ -688,7 +688,7 @@ export const updateHandler = async ({ ctx, input }: UpdateOptions) => {
   // Explicit type to avoid Prisma.EventTypeGetPayload conditional types leaking into .d.ts files
   type UpdatedEventTypeResult = {
     slug: string;
-    schedulingType: import("@calcom/prisma/enums").SchedulingType | null;
+    schedulingType: import("@calndrbrnd/prisma/enums").SchedulingType | null;
   };
 
   let updatedEventType: UpdatedEventTypeResult;

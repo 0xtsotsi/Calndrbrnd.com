@@ -3,15 +3,15 @@
 import { useEffect, useState } from "react";
 import z from "zod";
 
-import { useBookingSuccessRedirect } from "@calcom/features/bookings/lib/bookingSuccessRedirect";
-import type { PaymentPageProps } from "@calcom/features/ee/payments/pages/payment";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useCopy } from "@calcom/lib/hooks/useCopy";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Button } from "@calcom/ui/components/button";
-import { Spinner } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+import { useBookingSuccessRedirect } from "@calndrbrnd/features/bookings/lib/bookingSuccessRedirect";
+import type { PaymentPageProps } from "@calndrbrnd/features/ee/payments/pages/payment";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useCopy } from "@calndrbrnd/lib/hooks/useCopy";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Spinner } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 interface IPaymentComponentProps {
   payment: {

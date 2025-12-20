@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { describe, expect, it, vi } from "vitest";
 
-import { ErrorCode } from "@calcom/lib/errorCodes";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
 
 import { TRPCError } from "@trpc/server";
 

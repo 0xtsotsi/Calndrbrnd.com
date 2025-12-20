@@ -2,25 +2,25 @@ import prismaMock from "../../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { updateNewTeamMemberEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { createAProfileForAnExistingUser } from "@calcom/features/profile/lib/createAProfileForAnExistingUser";
-import { deleteDomain } from "@calcom/lib/domainManager/organization";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import type { Membership, Team, User, VerificationToken, Profile } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { updateNewTeamMemberEventTypes } from "@calndrbrnd/features/ee/teams/lib/queries";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { WorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/WorkflowService";
+import { createAProfileForAnExistingUser } from "@calndrbrnd/features/profile/lib/createAProfileForAnExistingUser";
+import { deleteDomain } from "@calndrbrnd/lib/domainManager/organization";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { ErrorWithCode } from "@calndrbrnd/lib/errors";
+import type { Membership, Team, User, VerificationToken, Profile } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TeamService } from "./teamService";
 
-vi.mock("@calcom/ee/billing/di/containers/Billing");
-vi.mock("@calcom/features/ee/teams/repositories/TeamRepository");
-vi.mock("@calcom/features/ee/workflows/lib/service/WorkflowService");
-vi.mock("@calcom/lib/domainManager/organization");
-vi.mock("@calcom/features/ee/teams/lib/removeMember");
-vi.mock("@calcom/features/profile/lib/createAProfileForAnExistingUser");
-vi.mock("@calcom/features/ee/teams/lib/queries");
+vi.mock("@calndrbrnd/ee/billing/di/containers/Billing");
+vi.mock("@calndrbrnd/features/ee/teams/repositories/TeamRepository");
+vi.mock("@calndrbrnd/features/ee/workflows/lib/service/WorkflowService");
+vi.mock("@calndrbrnd/lib/domainManager/organization");
+vi.mock("@calndrbrnd/features/ee/teams/lib/removeMember");
+vi.mock("@calndrbrnd/features/profile/lib/createAProfileForAnExistingUser");
+vi.mock("@calndrbrnd/features/ee/teams/lib/queries");
 
 const mockTeamBilling = {
   cancel: vi.fn(),
@@ -40,7 +40,7 @@ describe("TeamService", () => {
     mockTeamBillingFactory.findAndInit.mockResolvedValue(mockTeamBilling);
     mockTeamBillingFactory.findAndInitMany.mockResolvedValue([mockTeamBilling]);
     
-    const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+    const { getTeamBillingServiceFactory } = await import("@calndrbrnd/ee/billing/di/containers/Billing");
     vi.mocked(getTeamBillingServiceFactory).mockReturnValue(mockTeamBillingFactory);
   });
 

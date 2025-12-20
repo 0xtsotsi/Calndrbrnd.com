@@ -4,13 +4,13 @@ import { NextResponse } from "next/server";
 import { Retell } from "retell-sdk";
 import { z } from "zod";
 
-import { PrismaAgentRepository } from "@calcom/features/calAIPhone/repositories/PrismaAgentRepository";
-import { PrismaPhoneNumberRepository } from "@calcom/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
-import { CreditService } from "@calcom/features/ee/billing/credit-service";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import { CreditUsageType } from "@calcom/prisma/enums";
+import { PrismaAgentRepository } from "@calndrbrnd/features/calAIPhone/repositories/PrismaAgentRepository";
+import { PrismaPhoneNumberRepository } from "@calndrbrnd/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
+import { CreditService } from "@calndrbrnd/features/ee/billing/credit-service";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { prisma } from "@calndrbrnd/prisma";
+import { CreditUsageType } from "@calndrbrnd/prisma/enums";
 
 const log = logger.getSubLogger({ prefix: ["retell-ai-webhook"] });
 

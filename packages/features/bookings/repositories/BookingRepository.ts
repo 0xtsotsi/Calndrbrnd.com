@@ -1,14 +1,14 @@
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { Booking } from "@calcom/prisma/client";
-import { RRTimestampBasis, BookingStatus } from "@calcom/prisma/enums";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { Booking } from "@calndrbrnd/prisma/client";
+import { RRTimestampBasis, BookingStatus } from "@calndrbrnd/prisma/enums";
 import {
   bookingMinimalSelect,
   bookingAuthorizationCheckSelect,
   bookingDetailsSelect,
-} from "@calcom/prisma/selects/booking";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
+} from "@calndrbrnd/prisma/selects/booking";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
 
 type ManagedEventReassignmentCreateParams = {
   uid: string;

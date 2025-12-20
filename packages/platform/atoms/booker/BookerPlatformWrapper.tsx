@@ -4,25 +4,25 @@ import debounce from "lodash/debounce";
 import { useMemo, useEffect, useCallback, useState, useRef, useContext } from "react";
 import { shallow } from "zustand/shallow";
 
-import dayjs from "@calcom/dayjs";
-import { Booker as BookerComponent } from "@calcom/features/bookings/Booker";
+import dayjs from "@calndrbrnd/dayjs";
+import { Booker as BookerComponent } from "@calndrbrnd/features/bookings/Booker";
 import {
   BookerStoreProvider,
   useInitializeBookerStoreContext,
   useBookerStoreContext,
   BookerStoreContext,
-} from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useBookerLayout } from "@calcom/features/bookings/Booker/components/hooks/useBookerLayout";
-import { useBookingForm } from "@calcom/features/bookings/Booker/components/hooks/useBookingForm";
-import { useLocalSet } from "@calcom/features/bookings/Booker/components/hooks/useLocalSet";
-import { useInitializeBookerStore } from "@calcom/features/bookings/Booker/store";
-import { useTimePreferences } from "@calcom/features/bookings/lib";
-import type { ConnectedDestinationCalendars } from "@calcom/features/calendars/lib/getConnectedDestinationCalendars";
-import { getUsernameList } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { useTimesForSchedule } from "@calcom/features/schedules/lib/use-schedule/useTimesForSchedule";
-import { getRoutedTeamMemberIdsFromSearchParams } from "@calcom/lib/bookings/getRoutedTeamMemberIdsFromSearchParams";
-import { localStorage } from "@calcom/lib/webstorage";
-import { BookerLayouts } from "@calcom/prisma/zod-utils";
+} from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import { useBookerLayout } from "@calndrbrnd/features/bookings/Booker/components/hooks/useBookerLayout";
+import { useBookingForm } from "@calndrbrnd/features/bookings/Booker/components/hooks/useBookingForm";
+import { useLocalSet } from "@calndrbrnd/features/bookings/Booker/components/hooks/useLocalSet";
+import { useInitializeBookerStore } from "@calndrbrnd/features/bookings/Booker/store";
+import { useTimePreferences } from "@calndrbrnd/features/bookings/lib";
+import type { ConnectedDestinationCalendars } from "@calndrbrnd/features/calendars/lib/getConnectedDestinationCalendars";
+import { getUsernameList } from "@calndrbrnd/features/eventtypes/lib/defaultEvents";
+import { useTimesForSchedule } from "@calndrbrnd/features/schedules/lib/use-schedule/useTimesForSchedule";
+import { getRoutedTeamMemberIdsFromSearchParams } from "@calndrbrnd/lib/bookings/getRoutedTeamMemberIdsFromSearchParams";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
+import { BookerLayouts } from "@calndrbrnd/prisma/zod-utils";
 
 import { useCreateBooking } from "../hooks/bookings/useCreateBooking";
 import { useCreateInstantBooking } from "../hooks/bookings/useCreateInstantBooking";

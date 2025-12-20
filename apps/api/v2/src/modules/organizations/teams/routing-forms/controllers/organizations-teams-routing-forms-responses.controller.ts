@@ -31,7 +31,7 @@ import {
 import { ApiHeader, ApiOperation, ApiTags } from "@nestjs/swagger";
 import { Request } from "express";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 @Controller({
   path: "/v2/organizations/:orgId/teams/:teamId/routing-forms/:routingFormId/responses",

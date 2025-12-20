@@ -1,15 +1,15 @@
 import { useMemo } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { useColumnFilters } from "@calcom/features/data-table/hooks/useColumnFilters";
-import { useDataTable } from "@calcom/features/data-table/hooks/useDataTable";
+import dayjs from "@calndrbrnd/dayjs";
+import { useColumnFilters } from "@calndrbrnd/features/data-table/hooks/useColumnFilters";
+import { useDataTable } from "@calndrbrnd/features/data-table/hooks/useDataTable";
 import {
   getDefaultStartDate,
   getDefaultEndDate,
   DEFAULT_PRESET,
-} from "@calcom/features/data-table/lib/dateRange";
-import { ColumnFilterType, type ColumnFilter } from "@calcom/features/data-table/lib/types";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
+} from "@calndrbrnd/features/data-table/lib/dateRange";
+import { ColumnFilterType, type ColumnFilter } from "@calndrbrnd/features/data-table/lib/types";
+import { CURRENT_TIMEZONE } from "@calndrbrnd/lib/timezoneConstants";
 
 import { useInsightsOrgTeams } from "./useInsightsOrgTeams";
 

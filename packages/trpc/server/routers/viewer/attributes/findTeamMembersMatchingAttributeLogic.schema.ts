@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { zodAttributesQueryValue } from "@calcom/lib/raqb/zod";
+import { zodAttributesQueryValue } from "@calndrbrnd/lib/raqb/zod";
 
 export type TFindTeamMembersMatchingAttributeLogicInputSchema = {
   teamId: number;

@@ -1,5 +1,5 @@
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { Membership, Team } from "@calcom/prisma/client";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import type { Membership, Team } from "@calndrbrnd/prisma/client";
 
 type TeamMembershipWithTeam = Membership & {
   team: Team & {

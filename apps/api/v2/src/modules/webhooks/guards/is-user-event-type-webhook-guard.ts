@@ -11,7 +11,7 @@ import {
 } from "@nestjs/common";
 import { Request } from "express";
 
-import type { EventType, Webhook } from "@calcom/prisma/client";
+import type { EventType, Webhook } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class IsUserEventTypeWebhookGuard implements CanActivate {

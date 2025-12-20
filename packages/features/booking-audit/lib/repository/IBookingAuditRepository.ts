@@ -1,4 +1,4 @@
-import type { JsonValue } from "@calcom/types/Json";
+import type { JsonValue } from "@calndrbrnd/types/Json";
 import type { AuditActorType } from "./IAuditActorRepository";
 import type { ActionSource } from "../types/actionSource";
 

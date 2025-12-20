@@ -1,8 +1,8 @@
-import logger from "@calcom/lib/logger";
-import type { CalendarEvent } from "@calcom/types/Calendar";
-import type { CredentialPayload } from "@calcom/types/Credential";
-import type { PartialReference } from "@calcom/types/EventManager";
-import type { VideoApiAdapter } from "@calcom/types/VideoApiAdapter";
+import logger from "@calndrbrnd/lib/logger";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
+import type { PartialReference } from "@calndrbrnd/types/EventManager";
+import type { VideoApiAdapter } from "@calndrbrnd/types/VideoApiAdapter";
 
 import { getHuddle01Credential } from "../utils/storage";
 

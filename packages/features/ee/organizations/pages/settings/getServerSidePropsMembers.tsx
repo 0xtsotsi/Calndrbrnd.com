@@ -1,7 +1,7 @@
 import type { GetServerSidePropsContext } from "next";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
 
 export type PageProps = inferSSRProps<typeof getServerSidePropsForMembers>;
 

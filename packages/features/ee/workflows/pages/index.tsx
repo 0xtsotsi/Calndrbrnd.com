@@ -5,16 +5,16 @@ import { useRouter } from "next/navigation";
 import type { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 
-import { CreateButtonWithTeamsList } from "@calcom/features/ee/teams/components/createButton/CreateButtonWithTeamsList";
-import type { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import Shell, { ShellMain } from "@calcom/features/shell/Shell";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { useRouterQuery } from "@calcom/lib/hooks/useRouterQuery";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { AnimatedPopover } from "@calcom/ui/components/popover";
+import { CreateButtonWithTeamsList } from "@calndrbrnd/features/ee/teams/components/createButton/CreateButtonWithTeamsList";
+import type { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import Shell, { ShellMain } from "@calndrbrnd/features/shell/Shell";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { useRouterQuery } from "@calndrbrnd/lib/hooks/useRouterQuery";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { AnimatedPopover } from "@calndrbrnd/ui/components/popover";
 
 import { FilterResults } from "../../../filters/components/FilterResults";
 import { TeamsFilter } from "../../../filters/components/TeamsFilter";

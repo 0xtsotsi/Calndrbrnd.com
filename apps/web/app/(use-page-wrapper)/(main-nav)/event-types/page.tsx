@@ -6,10 +6,10 @@ import { unstable_cache } from "next/cache";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { checkOnboardingRedirect } from "@calcom/features/auth/lib/onboardingUtils";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getTeamsFiltersFromQuery } from "@calcom/features/filters/lib/getTeamsFiltersFromQuery";
-import { eventTypesRouter } from "@calcom/trpc/server/routers/viewer/eventTypes/_router";
+import { checkOnboardingRedirect } from "@calndrbrnd/features/auth/lib/onboardingUtils";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getTeamsFiltersFromQuery } from "@calndrbrnd/features/filters/lib/getTeamsFiltersFromQuery";
+import { eventTypesRouter } from "@calndrbrnd/trpc/server/routers/viewer/eventTypes/_router";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

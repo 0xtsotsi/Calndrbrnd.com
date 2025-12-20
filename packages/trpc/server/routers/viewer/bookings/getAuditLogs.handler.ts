@@ -1,11 +1,11 @@
 import type { TFunction } from "i18next";
 
-import type { PrismaClient } from "@calcom/prisma/client";
+import type { PrismaClient } from "@calndrbrnd/prisma/client";
 import { TRPCError } from "@trpc/server";
 
-import { getBookingAuditViewerService } from "@calcom/features/booking-audit/di/BookingAuditViewerService.container";
-import { BookingAuditErrorCode, BookingAuditPermissionError } from "@calcom/features/booking-audit/lib/service/BookingAuditAccessService";
-import { getTranslation } from "@calcom/lib/server/i18n";
+import { getBookingAuditViewerService } from "@calndrbrnd/features/booking-audit/di/BookingAuditViewerService.container";
+import { BookingAuditErrorCode, BookingAuditPermissionError } from "@calndrbrnd/features/booking-audit/lib/service/BookingAuditAccessService";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
 
 import type { TrpcSessionUser } from "../../../types";
 import type { TGetAuditLogsInputSchema } from "./getAuditLogs.schema";

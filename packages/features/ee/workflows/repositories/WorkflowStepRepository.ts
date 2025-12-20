@@ -1,4 +1,4 @@
-import type { Prisma, PrismaClient } from "@calcom/prisma/client";
+import type { Prisma, PrismaClient } from "@calndrbrnd/prisma/client";
 
 export class WorkflowStepRepository {
   constructor(private prismaClient: PrismaClient) {}

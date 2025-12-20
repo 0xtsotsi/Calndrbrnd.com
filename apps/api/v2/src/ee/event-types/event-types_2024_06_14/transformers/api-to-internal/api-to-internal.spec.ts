@@ -4,7 +4,7 @@ import {
   ConfirmationPolicyEnum,
   NoticeThresholdUnitEnum,
   FrequencyInput,
-} from "@calcom/platform-enums";
+} from "@calndrbrnd/platform-enums";
 import type {
   InputBookingField_2024_06_14,
   InputLocation_2024_06_14,
@@ -21,7 +21,7 @@ import type {
   InputAttendeePhoneLocation_2024_06_14,
   InputAttendeeDefinedLocation_2024_06_14,
   InputTeamLocation_2024_06_14,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 import {
   systemBeforeFieldEmail,

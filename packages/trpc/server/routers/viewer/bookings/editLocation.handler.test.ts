@@ -3,8 +3,8 @@
 // TODO: Bring this test back with the correct setup (no illegal imports)
 import { describe, expect, test, vi, beforeEach } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import {
   editLocationHandler,
@@ -13,7 +13,7 @@ import {
   UserError,
 } from "./editLocation.handler";
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     prisma: vi.fn(),
   };

@@ -1,6 +1,6 @@
-import { PrismaPhoneNumberRepository } from "@calcom/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
-import prisma from "@calcom/prisma";
-import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
+import { PrismaPhoneNumberRepository } from "@calndrbrnd/features/calAIPhone/repositories/PrismaPhoneNumberRepository";
+import prisma from "@calndrbrnd/prisma";
+import { PhoneNumberSubscriptionStatus } from "@calndrbrnd/prisma/enums";
 
 import type { SWHMap } from "./__handler";
 import { HttpCode } from "./__handler";

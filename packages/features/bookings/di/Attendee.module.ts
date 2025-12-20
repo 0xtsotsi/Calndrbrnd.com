@@ -1,6 +1,6 @@
-import { AttendeeRepository } from "@calcom/features/bookings/repositories/AttendeeRepository";
-import { type Container, createModule } from "@calcom/features/di/di";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
+import { AttendeeRepository } from "@calndrbrnd/features/bookings/repositories/AttendeeRepository";
+import { type Container, createModule } from "@calndrbrnd/features/di/di";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
 
 export const attendeeRepositoryModule = createModule();
 const token = DI_TOKENS.ATTENDEE_REPOSITORY;

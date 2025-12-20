@@ -1,14 +1,14 @@
-import type { RoutingFormResponse } from "@calcom/features/bookings/lib/getLuckyUser";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
+import type { RoutingFormResponse } from "@calndrbrnd/features/bookings/lib/getLuckyUser";
+import type { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
 import {
   findMatchingHostsWithEventSegment,
   getNormalizedHostsWithDelegationCredentials,
-} from "@calcom/features/users/lib/getRoutedUsers";
-import type { EventType } from "@calcom/features/users/lib/getRoutedUsers";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import type { SelectedCalendar } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { CredentialForCalendarService, CredentialPayload } from "@calcom/types/Credential";
+} from "@calndrbrnd/features/users/lib/getRoutedUsers";
+import type { EventType } from "@calndrbrnd/features/users/lib/getRoutedUsers";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import type { SelectedCalendar } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { CredentialForCalendarService, CredentialPayload } from "@calndrbrnd/types/Credential";
 
 import { filterHostsByLeadThreshold } from "./filterHostsByLeadThreshold";
 import type { FilterHostsService } from "./filterHostsBySameRoundRobinHost";

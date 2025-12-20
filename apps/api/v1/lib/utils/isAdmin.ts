@@ -1,7 +1,7 @@
 import type { NextApiRequest } from "next";
 
-import prisma from "@calcom/prisma";
-import { UserPermissionRole, MembershipRole } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import { UserPermissionRole, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { ScopeOfAdmin } from "./scopeOfAdmin";
 

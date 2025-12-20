@@ -1,6 +1,6 @@
-import { BookerStoreProvider } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
-import classNames from "@calcom/ui/classNames";
+import { BookerStoreProvider } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import useMediaQuery from "@calndrbrnd/lib/hooks/useMediaQuery";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { LargeCalendar } from "./components/LargeCalendar";
 import { TroubleshooterHeader } from "./components/TroubleshooterHeader";

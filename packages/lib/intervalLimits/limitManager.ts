@@ -1,5 +1,5 @@
-import type { Dayjs } from "@calcom/dayjs";
-import type { EventBusyDate } from "@calcom/types/Calendar";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import type { EventBusyDate } from "@calndrbrnd/types/Calendar";
 
 import type { IntervalLimitUnit } from "./intervalLimitSchema";
 

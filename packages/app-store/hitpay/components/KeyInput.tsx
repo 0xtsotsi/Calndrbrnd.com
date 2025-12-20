@@ -4,12 +4,12 @@ import classNames from "classnames";
 import type { FormEvent } from "react";
 import React, { forwardRef, useState, useEffect, useId, useCallback } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Label } from "@calcom/ui/components/form";
-import { Input } from "@calcom/ui/components/form";
-import type { InputFieldProps } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { Skeleton } from "@calcom/ui/components/skeleton";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Input } from "@calndrbrnd/ui/components/form";
+import type { InputFieldProps } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Skeleton } from "@calndrbrnd/ui/components/skeleton";
 
 type AddonProps = {
   children: React.ReactNode;

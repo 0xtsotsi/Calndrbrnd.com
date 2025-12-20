@@ -1,4 +1,4 @@
-import { IS_PRODUCTION } from "@calcom/lib/constants";
+import { IS_PRODUCTION } from "@calndrbrnd/lib/constants";
 
 import { InternalOrganizationBilling } from "./internal-organization-billing";
 import { OrganizationBillingRepository } from "./organization-billing.repository";

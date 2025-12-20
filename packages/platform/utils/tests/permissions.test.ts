@@ -5,7 +5,7 @@ import {
   EVENT_TYPE_WRITE,
   SCHEDULE_READ,
   SCHEDULE_WRITE,
-} from "@calcom/platform-constants";
+} from "@calndrbrnd/platform-constants";
 
 import { hasPermission, hasPermissions, listPermissions } from "../permissions";
 

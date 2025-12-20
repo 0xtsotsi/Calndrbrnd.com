@@ -1,4 +1,4 @@
-import { Prisma } from "@calcom/prisma/client";
+import { Prisma } from "@calndrbrnd/prisma/client";
 
 export function excludeLockedUsersExtension() {
   return Prisma.defineExtension({

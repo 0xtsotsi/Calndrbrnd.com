@@ -34,15 +34,15 @@ import {
 } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { ERROR_STATUS, SUCCESS_STATUS } from "@calcom/platform-constants";
-import { handleCreatePhoneCall } from "@calcom/platform-libraries";
+import { ERROR_STATUS, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { handleCreatePhoneCall } from "@calndrbrnd/platform-libraries";
 import {
   CreateTeamEventTypeInput_2024_06_14,
   GetTeamEventTypesQuery_2024_06_14,
   SkipTakePagination,
   TeamEventTypeOutput_2024_06_14,
   UpdateTeamEventTypeInput_2024_06_14,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 export type EventTypeHandlerResponse = {
   data: DatabaseTeamEventType[] | DatabaseTeamEventType;

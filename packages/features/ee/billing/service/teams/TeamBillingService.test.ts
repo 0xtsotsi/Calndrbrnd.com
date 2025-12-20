@@ -2,8 +2,8 @@ import prismaMock from "../../../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { purchaseTeamOrOrgSubscription } from "@calcom/features/ee/teams/lib/payments";
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { purchaseTeamOrOrgSubscription } from "@calndrbrnd/features/ee/teams/lib/payments";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
 
 import type { IBillingRepository } from "../../repository/billing/IBillingRepository";
 import type { ITeamBillingDataRepository } from "../../repository/teamBillingData/ITeamBillingDataRepository";
@@ -11,15 +11,15 @@ import type { IBillingProviderService } from "../billingProvider/IBillingProvide
 import { TeamBillingPublishResponseStatus } from "./ITeamBillingService";
 import { TeamBillingService } from "./TeamBillingService";
 
-vi.mock("@calcom/lib/constants", async () => {
-  const actual = await vi.importActual("@calcom/lib/constants");
+vi.mock("@calndrbrnd/lib/constants", async () => {
+  const actual = await vi.importActual("@calndrbrnd/lib/constants");
   return {
     ...actual,
     WEBAPP_URL: "http://localhost:3000",
   };
 });
 
-vi.mock("@calcom/features/ee/teams/lib/payments", () => ({
+vi.mock("@calndrbrnd/features/ee/teams/lib/payments", () => ({
   purchaseTeamOrOrgSubscription: vi.fn(),
 }));
 

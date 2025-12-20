@@ -8,7 +8,7 @@ import { BadRequestException, Injectable, UnauthorizedException } from "@nestjs/
 import { ConfigService } from "@nestjs/config";
 import { DateTime } from "luxon";
 
-import { createApiKeyHandler } from "@calcom/platform-libraries";
+import { createApiKeyHandler } from "@calndrbrnd/platform-libraries";
 
 @Injectable()
 export class ApiKeysService {

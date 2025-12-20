@@ -1,4 +1,4 @@
-import type logger from "@calcom/lib/logger";
+import type logger from "@calndrbrnd/lib/logger";
 
 import getAppKeysFromSlug from "../_utils/getAppKeysFromSlug";
 import type { FeishuAppKeys } from "./types/FeishuCalendar";

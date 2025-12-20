@@ -1,9 +1,9 @@
 import type { TFunction } from "i18next";
 
-import dayjs from "@calcom/dayjs";
-import { formatPrice } from "@calcom/lib/currencyConversions";
-import { TimeFormat } from "@calcom/lib/timeFormat";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import dayjs from "@calndrbrnd/dayjs";
+import { formatPrice } from "@calndrbrnd/lib/currencyConversions";
+import { TimeFormat } from "@calndrbrnd/lib/timeFormat";
+import type { CalendarEvent, Person } from "@calndrbrnd/types/Calendar";
 
 import {
   BaseEmailHtml,

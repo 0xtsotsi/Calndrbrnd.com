@@ -1,25 +1,25 @@
 import { z } from "zod";
 
-import { getAppFromSlug } from "@calcom/app-store/utils";
-import { getBookerBaseUrlSync } from "@calcom/features/ee/organizations/lib/getBookerBaseUrlSync";
-import { getTeam, getOrg } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { DATABASE_CHUNK_SIZE } from "@calcom/lib/constants";
-import { parseBookingLimit } from "@calcom/lib/intervalLimits/isBookingLimits";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { Team } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { baseEventTypeSelect } from "@calcom/prisma/selects";
+import { getAppFromSlug } from "@calndrbrnd/app-store/utils";
+import { getBookerBaseUrlSync } from "@calndrbrnd/features/ee/organizations/lib/getBookerBaseUrlSync";
+import { getTeam, getOrg } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { DATABASE_CHUNK_SIZE } from "@calndrbrnd/lib/constants";
+import { parseBookingLimit } from "@calndrbrnd/lib/intervalLimits/isBookingLimits";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { Team } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { baseEventTypeSelect } from "@calndrbrnd/prisma/selects";
 import {
   EventTypeMetaDataSchema,
   allManagedEventTypeProps,
   unlockedManagedEventTypeProps,
   eventTypeLocations,
-} from "@calcom/prisma/zod-utils";
-import { EventTypeSchema } from "@calcom/prisma/zod/modelSchema/EventTypeSchema";
+} from "@calndrbrnd/prisma/zod-utils";
+import { EventTypeSchema } from "@calndrbrnd/prisma/zod/modelSchema/EventTypeSchema";
 
 export type TeamWithMembers = Awaited<ReturnType<typeof getTeamWithMembers>>;
 

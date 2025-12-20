@@ -1,7 +1,7 @@
 import { PrismaReadService } from "@/modules/prisma/prisma-read.service";
 import { Injectable } from "@nestjs/common";
 
-import type { SortOrderType } from "@calcom/platform-types";
+import type { SortOrderType } from "@calndrbrnd/platform-types";
 
 @Injectable()
 export class OrganizationsEventTypesRepository {

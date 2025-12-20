@@ -2,12 +2,12 @@ import { Elements, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import type { SyntheticEvent } from "react";
 
-import getStripe from "@calcom/app-store/stripepayment/lib/client";
-import type { Props, States } from "@calcom/features/ee/payments/components/Payment";
-import { PaymentFormComponent } from "@calcom/features/ee/payments/components/Payment";
-import type { PaymentPageProps } from "@calcom/features/ee/payments/pages/payment";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import getStripe from "@calndrbrnd/app-store/stripepayment/lib/client";
+import type { Props, States } from "@calndrbrnd/features/ee/payments/components/Payment";
+import { PaymentFormComponent } from "@calndrbrnd/features/ee/payments/components/Payment";
+import type { PaymentPageProps } from "@calndrbrnd/features/ee/payments/pages/payment";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 const StripePaymentComponent = (
   props: Props & {

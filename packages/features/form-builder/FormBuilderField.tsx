@@ -3,12 +3,12 @@ import type { TFunction } from "i18next";
 import { Controller, useFormContext } from "react-hook-form";
 import type { z } from "zod";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import classNames from "@calcom/ui/classNames";
-import { InfoBadge } from "@calcom/ui/components/badge";
-import { Label } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import classNames from "@calndrbrnd/ui/classNames";
+import { InfoBadge } from "@calndrbrnd/ui/components/badge";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import { Components, isValidValueProp } from "./Components";
 import { fieldTypesConfigMap } from "./fieldTypes";

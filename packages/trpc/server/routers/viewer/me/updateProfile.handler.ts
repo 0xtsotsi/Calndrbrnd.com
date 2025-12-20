@@ -1,26 +1,26 @@
 import { keyBy } from "lodash";
 import type { GetServerSidePropsContext, NextApiResponse } from "next";
 
-import { getPremiumMonthlyPlanPriceId } from "@calcom/app-store/stripepayment/lib/utils";
-import { getBillingProviderService } from "@calcom/ee/billing/di/containers/Billing";
-import { sendChangeOfEmailVerification } from "@calcom/features/auth/lib/verifyEmail";
-import { updateNewTeamMemberEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { checkUsername } from "@calcom/features/profile/lib/checkUsername";
-import { ScheduleRepository } from "@calcom/features/schedules/repositories/ScheduleRepository";
-import hasKeyInMetadata from "@calcom/lib/hasKeyInMetadata";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { uploadAvatar } from "@calcom/lib/server/avatar";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { resizeBase64Image } from "@calcom/lib/server/resizeBase64Image";
-import slugify from "@calcom/lib/slugify";
-import { validateBookerLayouts } from "@calcom/lib/validateBookerLayouts";
-import { prisma } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import type { JsonValue } from "@calcom/types/Json";
-import { userMetadata as userMetadataSchema } from "@calcom/prisma/zod-utils";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { getPremiumMonthlyPlanPriceId } from "@calndrbrnd/app-store/stripepayment/lib/utils";
+import { getBillingProviderService } from "@calndrbrnd/ee/billing/di/containers/Billing";
+import { sendChangeOfEmailVerification } from "@calndrbrnd/features/auth/lib/verifyEmail";
+import { updateNewTeamMemberEventTypes } from "@calndrbrnd/features/ee/teams/lib/queries";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { checkUsername } from "@calndrbrnd/features/profile/lib/checkUsername";
+import { ScheduleRepository } from "@calndrbrnd/features/schedules/repositories/ScheduleRepository";
+import hasKeyInMetadata from "@calndrbrnd/lib/hasKeyInMetadata";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
+import { uploadAvatar } from "@calndrbrnd/lib/server/avatar";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { resizeBase64Image } from "@calndrbrnd/lib/server/resizeBase64Image";
+import slugify from "@calndrbrnd/lib/slugify";
+import { validateBookerLayouts } from "@calndrbrnd/lib/validateBookerLayouts";
+import { prisma } from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import type { JsonValue } from "@calndrbrnd/types/Json";
+import { userMetadata as userMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

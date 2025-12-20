@@ -1,5 +1,5 @@
-import type { DataTableRow } from "@calcom/features/data-table/lib/separator";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { DataTableRow } from "@calndrbrnd/features/data-table/lib/separator";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
 
 import type { validStatuses } from "./lib/validStatuses";
 

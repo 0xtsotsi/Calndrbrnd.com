@@ -2,45 +2,45 @@ import prismock from "../../../../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { OrganizationOnboardingRepository } from "@calcom/features/organizations/repositories/OrganizationOnboardingRepository";
-import * as constants from "@calcom/lib/constants";
-import { UserPermissionRole, CreationSource, MembershipRole, BillingPeriod } from "@calcom/prisma/enums";
-import { createTeamsHandler } from "@calcom/trpc/server/routers/viewer/organizations/createTeams.handler";
-import { inviteMembersWithNoInviterPermissionCheck } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
+import { LicenseKeySingleton } from "@calndrbrnd/ee/common/server/LicenseKeyService";
+import { OrganizationOnboardingRepository } from "@calndrbrnd/features/organizations/repositories/OrganizationOnboardingRepository";
+import * as constants from "@calndrbrnd/lib/constants";
+import { UserPermissionRole, CreationSource, MembershipRole, BillingPeriod } from "@calndrbrnd/prisma/enums";
+import { createTeamsHandler } from "@calndrbrnd/trpc/server/routers/viewer/organizations/createTeams.handler";
+import { inviteMembersWithNoInviterPermissionCheck } from "@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
 
 import { SelfHostedOrganizationOnboardingService } from "../SelfHostedOnboardingService";
 import type { CreateOnboardingIntentInput, OrganizationOnboardingData } from "../types";
 
 vi.mock("../../OrganizationPaymentService");
-vi.mock("@calcom/features/organizations/repositories/OrganizationOnboardingRepository");
-vi.mock("@calcom/ee/common/server/LicenseKeyService", () => ({
+vi.mock("@calndrbrnd/features/organizations/repositories/OrganizationOnboardingRepository");
+vi.mock("@calndrbrnd/ee/common/server/LicenseKeyService", () => ({
   LicenseKeySingleton: {
     getInstance: vi.fn(),
   },
 }));
 
-vi.mock("@calcom/features/auth/lib/verifyEmail", () => ({
+vi.mock("@calndrbrnd/features/auth/lib/verifyEmail", () => ({
   sendEmailVerification: vi.fn(),
 }));
 
-vi.mock("@calcom/emails/email-manager", () => ({
+vi.mock("@calndrbrnd/emails/email-manager", () => ({
   sendOrganizationCreationEmail: vi.fn(),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler", () => ({
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler", () => ({
   inviteMembersWithNoInviterPermissionCheck: vi.fn(),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/organizations/createTeams.handler", () => ({
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/organizations/createTeams.handler", () => ({
   createTeamsHandler: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/domainManager/organization", () => ({
+vi.mock("@calndrbrnd/lib/domainManager/organization", () => ({
   createDomain: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/server/i18n", () => {
+vi.mock("@calndrbrnd/lib/server/i18n", () => {
   return {
     getTranslation: async (locale: string, namespace: string) => {
       const t = (key: string) => key;

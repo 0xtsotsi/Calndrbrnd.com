@@ -5,15 +5,15 @@ import { headers, cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { z } from "zod";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getBookingForReschedule, type GetBookingType } from "@calcom/features/bookings/lib/get-booking";
-import { getOrgFullOrigin, orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { getOrganizationSEOSettings } from "@calcom/features/ee/organizations/lib/orgSettings";
-import type { TeamData } from "@calcom/features/ee/teams/lib/getTeamData";
-import { shouldHideBrandingForTeamEvent } from "@calcom/features/profile/lib/hideBranding";
-import { loadTranslations } from "@calcom/lib/server/i18n";
-import slugify from "@calcom/lib/slugify";
-import { BookingStatus, RedirectType } from "@calcom/prisma/enums";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getBookingForReschedule, type GetBookingType } from "@calndrbrnd/features/bookings/lib/get-booking";
+import { getOrgFullOrigin, orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { getOrganizationSEOSettings } from "@calndrbrnd/features/ee/organizations/lib/orgSettings";
+import type { TeamData } from "@calndrbrnd/features/ee/teams/lib/getTeamData";
+import { shouldHideBrandingForTeamEvent } from "@calndrbrnd/features/profile/lib/hideBranding";
+import { loadTranslations } from "@calndrbrnd/lib/server/i18n";
+import slugify from "@calndrbrnd/lib/slugify";
+import { BookingStatus, RedirectType } from "@calndrbrnd/prisma/enums";
 
 import { buildLegacyCtx, buildLegacyRequest } from "@lib/buildLegacyCtx";
 import { handleOrgRedirect } from "@lib/handleOrgRedirect";

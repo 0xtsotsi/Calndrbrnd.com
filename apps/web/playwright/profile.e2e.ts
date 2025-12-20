@@ -2,8 +2,8 @@ import { expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 import type { createUsersFixture } from "playwright/fixtures/users";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import type { PrismaClient } from "@calcom/prisma";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 import type { createEmailsFixture } from "./fixtures/emails";
 import { test } from "./lib/fixtures";

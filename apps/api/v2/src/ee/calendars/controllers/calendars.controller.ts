@@ -43,7 +43,7 @@ import { plainToClass } from "class-transformer";
 import { Request } from "express";
 import { z } from "zod";
 
-import { APPS_READ } from "@calcom/platform-constants";
+import { APPS_READ } from "@calndrbrnd/platform-constants";
 import {
   SUCCESS_STATUS,
   CALENDARS,
@@ -51,9 +51,9 @@ import {
   OFFICE_365_CALENDAR,
   APPLE_CALENDAR,
   CREDENTIAL_CALENDARS,
-} from "@calcom/platform-constants";
-import { ApiResponse, CalendarBusyTimesInput, CreateCalendarCredentialsInput } from "@calcom/platform-types";
-import type { User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-constants";
+import { ApiResponse, CalendarBusyTimesInput, CreateCalendarCredentialsInput } from "@calndrbrnd/platform-types";
+import type { User } from "@calndrbrnd/prisma/client";
 
 export interface CalendarState {
   accessToken: string;

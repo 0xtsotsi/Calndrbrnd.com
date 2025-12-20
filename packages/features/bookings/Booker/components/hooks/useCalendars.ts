@@ -2,9 +2,9 @@ import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { shallow } from "zustand/shallow";
 
-import { useTimePreferences } from "@calcom/features/bookings/lib";
-import { localStorage } from "@calcom/lib/webstorage";
-import { trpc } from "@calcom/trpc/react";
+import { useTimePreferences } from "@calndrbrnd/features/bookings/lib";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
+import { trpc } from "@calndrbrnd/trpc/react";
 
 import { useBookerStore } from "../../store";
 import { useOverlayCalendarStore } from "../OverlayCalendar/store";

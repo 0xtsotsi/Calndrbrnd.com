@@ -1,16 +1,16 @@
 import Link from "next/link";
 import React from "react";
 
-import AppListCard from "@calcom/features/apps/components/AppListCard";
-import CredentialActionsDropdown from "@calcom/features/apps/components/CredentialActionsDropdown";
-import AdditionalCalendarSelector from "@calcom/features/calendars/AdditionalCalendarSelector";
-import { CalendarSwitch } from "@calcom/features/calendars/CalendarSwitch";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Select } from "@calcom/ui/components/form";
-import { List } from "@calcom/ui/components/list";
+import AppListCard from "@calndrbrnd/features/apps/components/AppListCard";
+import CredentialActionsDropdown from "@calndrbrnd/features/apps/components/CredentialActionsDropdown";
+import AdditionalCalendarSelector from "@calndrbrnd/features/calendars/AdditionalCalendarSelector";
+import { CalendarSwitch } from "@calndrbrnd/features/calendars/CalendarSwitch";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { List } from "@calndrbrnd/ui/components/list";
 
 import { SelectedCalendarsSettings } from "../SelectedCalendarsSettings";
 

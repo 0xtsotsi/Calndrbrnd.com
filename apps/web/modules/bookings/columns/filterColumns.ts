@@ -1,7 +1,7 @@
 import type { VisibilityState } from "@tanstack/react-table";
 import { createColumnHelper } from "@tanstack/react-table";
 
-import { ColumnFilterType } from "@calcom/features/data-table";
+import { ColumnFilterType } from "@calndrbrnd/features/data-table";
 
 import type { RowData } from "../types";
 

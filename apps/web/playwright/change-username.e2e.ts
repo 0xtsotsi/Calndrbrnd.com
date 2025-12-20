@@ -1,8 +1,8 @@
 import { expect } from "@playwright/test";
 
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { MembershipRole } from "@calcom/prisma/enums";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { test } from "./lib/fixtures";
 import { moveUserToOrg } from "./lib/orgMigration";

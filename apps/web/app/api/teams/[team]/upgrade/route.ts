@@ -6,13 +6,13 @@ import { NextResponse } from "next/server";
 import type Stripe from "stripe";
 import { z } from "zod";
 
-import { getRequestedSlugError } from "@calcom/app-store/stripepayment/lib/team-billing";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { HttpError } from "@calcom/lib/http-error";
-import prisma from "@calcom/prisma";
-import { teamMetadataStrictSchema } from "@calcom/prisma/zod-utils";
+import { getRequestedSlugError } from "@calndrbrnd/app-store/stripepayment/lib/team-billing";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import prisma from "@calndrbrnd/prisma";
+import { teamMetadataStrictSchema } from "@calndrbrnd/prisma/zod-utils";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

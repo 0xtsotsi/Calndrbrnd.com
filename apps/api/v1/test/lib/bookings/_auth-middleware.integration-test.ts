@@ -3,9 +3,9 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createMocks } from "node-mocks-http";
 import { describe, it, expect, test, beforeAll, afterAll } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import type { User, Team, Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import type { User, Team, Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import authMiddleware from "../../../pages/api/bookings/[id]/_auth-middleware";
 

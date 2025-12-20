@@ -5,11 +5,11 @@ import React from "react";
 import type { Mock } from "vitest";
 import { vi } from "vitest";
 
-import { Button } from "@calcom/ui/components/button";
+import { Button } from "@calndrbrnd/ui/components/button";
 
 import { AttributeForm } from "../AttributesForm";
 
-vi.mock("@calcom/lib/hooks/useLocale", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useLocale", () => ({
   useLocale: vi.fn(() => ({
     t: (key: string) => key,
   })),

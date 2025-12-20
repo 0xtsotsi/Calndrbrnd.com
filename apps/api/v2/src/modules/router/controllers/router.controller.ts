@@ -7,8 +7,8 @@ import { Request } from "express";
 import {
   getRoutedUrl,
   getTeamMemberEmailForResponseOrContactUsingUrlQuery,
-} from "@calcom/platform-libraries";
-import { ApiResponse } from "@calcom/platform-types";
+} from "@calndrbrnd/platform-libraries";
+import { ApiResponse } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/router",

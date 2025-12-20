@@ -9,7 +9,7 @@ import { useMemo, useReducer, useState } from "react";
 import { createPortal } from "react-dom";
 import posthog from "posthog-js";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
 import {
   DataTableProvider,
   DataTableWrapper,
@@ -21,25 +21,25 @@ import {
   ColumnFilterType,
   convertFacetedValuesToMap,
   useDataTable,
-} from "@calcom/features/data-table";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
+} from "@calndrbrnd/features/data-table";
+import { useSegments } from "@calndrbrnd/features/data-table/hooks/useSegments";
+import { useOrgBranding } from "@calndrbrnd/features/ee/organizations/context/provider";
 import {
   generateCsvRawForMembersTable,
   generateHeaderFromReactTable,
-} from "@calcom/features/users/lib/UserListTableUtils";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { downloadAsCsv } from "@calcom/lib/csvUtils";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Badge } from "@calcom/ui/components/badge";
-import { Checkbox } from "@calcom/ui/components/form";
-import { showToast } from "@calcom/ui/components/toast";
-import { useGetUserAttributes } from "@calcom/web/components/settings/platform/hooks/useGetUserAttributes";
+} from "@calndrbrnd/features/users/lib/UserListTableUtils";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { downloadAsCsv } from "@calndrbrnd/lib/csvUtils";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Checkbox } from "@calndrbrnd/ui/components/form";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { useGetUserAttributes } from "@calndrbrnd/web/components/settings/platform/hooks/useGetUserAttributes";
 
 import { DeleteBulkUsers } from "./BulkActions/DeleteBulkUsers";
 import { DynamicLink } from "./BulkActions/DynamicLink";

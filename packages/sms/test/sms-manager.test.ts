@@ -1,16 +1,16 @@
 import type { TFunction } from "i18next";
 import { describe, expect, test, vi, beforeEach } from "vitest";
 
-import { sendSmsOrFallbackEmail } from "@calcom/features/ee/workflows/lib/reminders/messageDispatcher";
-import { checkSMSRateLimit } from "@calcom/lib/smsLockState";
-import prisma from "@calcom/prisma";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import { sendSmsOrFallbackEmail } from "@calndrbrnd/features/ee/workflows/lib/reminders/messageDispatcher";
+import { checkSMSRateLimit } from "@calndrbrnd/lib/smsLockState";
+import prisma from "@calndrbrnd/prisma";
+import type { CalendarEvent, Person } from "@calndrbrnd/types/Calendar";
 
 import SMSManager from "../sms-manager";
 
-vi.mock("@calcom/lib/smsLockState");
-vi.mock("@calcom/features/ee/workflows/lib/reminders/messageDispatcher");
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/lib/smsLockState");
+vi.mock("@calndrbrnd/features/ee/workflows/lib/reminders/messageDispatcher");
+vi.mock("@calndrbrnd/prisma", () => {
   const mockObj = {
     team: {
       findUnique: vi.fn(),

@@ -1,13 +1,13 @@
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import type { Payment } from "@calcom/prisma/client";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import type { Payment } from "@calndrbrnd/prisma/client";
 
 import { handleNoShowFee } from "./handleNoShowFee";
 import { processNoShowFeeOnCancellation } from "./processNoShowFeeOnCancellation";
 import { shouldChargeNoShowCancellationFee } from "./shouldChargeNoShowCancellationFee";
 
-vi.mock("@calcom/features/membership/repositories/MembershipRepository", () => ({
+vi.mock("@calndrbrnd/features/membership/repositories/MembershipRepository", () => ({
   MembershipRepository: {
     findUniqueByUserIdAndTeamId: vi.fn(),
   },

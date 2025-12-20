@@ -3,13 +3,13 @@ import { describe, it, beforeEach, vi, expect } from "vitest";
 import type { TrpcSessionUser } from "../../../types";
 import listMembers from "./listMembers.handler";
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     prisma: vi.fn(),
   };
 });
 
-// TODO: Bring this back but without test dependencies in @calcom/web
+// TODO: Bring this back but without test dependencies in @calndrbrnd/web
 const createTeamWithMembers = async ({ isPrivate = false }: { isPrivate?: boolean }) => {
   const team = {
     id: 1,

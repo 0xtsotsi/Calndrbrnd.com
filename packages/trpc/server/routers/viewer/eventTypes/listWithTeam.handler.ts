@@ -1,5 +1,5 @@
-import db from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
+import db from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
 
 import type { TrpcSessionUser } from "../../../types";
 

@@ -2,11 +2,11 @@
 
 import { Fragment, useMemo, type ReactNode } from "react";
 
-import classNames from "@calcom/ui/classNames";
-import { PanelCard } from "@calcom/ui/components/card";
-import { Spinner } from "@calcom/ui/components/icon";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import classNames from "@calndrbrnd/ui/classNames";
+import { PanelCard } from "@calndrbrnd/ui/components/card";
+import { Spinner } from "@calndrbrnd/ui/components/icon";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 type PanelCardProps = React.ComponentProps<typeof PanelCard>;
 

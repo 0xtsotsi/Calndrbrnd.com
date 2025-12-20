@@ -1,8 +1,8 @@
 import { useRouter } from "next/navigation";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { type RouterOutputs } from "@calcom/trpc";
-import { TopBanner } from "@calcom/ui/components/top-banner";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { type RouterOutputs } from "@calndrbrnd/trpc";
+import { TopBanner } from "@calndrbrnd/ui/components/top-banner";
 
 export type InvalidAppCredentialBannersProps = {
   data: RouterOutputs["viewer"]["me"]["getUserTopBanners"]["invalidAppCredentialBanners"];

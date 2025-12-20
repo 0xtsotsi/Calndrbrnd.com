@@ -1,8 +1,8 @@
 import { createContext, useContext, createElement } from "react";
 import type z from "zod";
 
-import type { MembershipRole } from "@calcom/prisma/enums";
-import type { teamMetadataSchema } from "@calcom/prisma/zod-utils";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
+import type { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
 
 /**
  * Organization branding
@@ -51,8 +51,8 @@ export function useOrgBranding() {
  * you can render the OrgBrandingProvider at the top of your Next.js pages, like so:
  *
  * ```ts
- * import { useOrgBrandingValues } from "@calcom/features/flags/hooks/useFlag"
- * import { OrgBrandingProvider, useOrgBranding } from @calcom/features/flags/context/provider"
+ * import { useOrgBrandingValues } from "@calndrbrnd/features/flags/hooks/useFlag"
+ * import { OrgBrandingProvider, useOrgBranding } from @calndrbrnd/features/flags/context/provider"
  *
  * export default function YourPage () {
  *   const orgBrand = useOrgBrandingValues()

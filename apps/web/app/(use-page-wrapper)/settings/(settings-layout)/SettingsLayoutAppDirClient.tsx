@@ -8,27 +8,27 @@ import { usePathname, useRouter } from "next/navigation";
 import type { ComponentProps } from "react";
 import React, { useEffect, useState, useMemo } from "react";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import type { OrganizationBranding } from "@calcom/features/ee/organizations/context/provider";
-import type { TeamFeatures } from "@calcom/features/flags/config";
-import { useIsFeatureEnabledForTeam } from "@calcom/features/flags/hooks/useIsFeatureEnabledForTeam";
-import Shell from "@calcom/features/shell/Shell";
-import { HOSTED_CAL_FEATURES, IS_CALCOM, WEBAPP_URL } from "@calcom/lib/constants";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { IdentityProvider, UserPermissionRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ErrorBoundary } from "@calcom/ui/components/errorBoundary";
-import { Icon } from "@calcom/ui/components/icon";
-import type { VerticalTabItemProps } from "@calcom/ui/components/navigation";
-import { VerticalTabItem } from "@calcom/ui/components/navigation";
-import { Skeleton } from "@calcom/ui/components/skeleton";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
+import { useOrgBranding } from "@calndrbrnd/features/ee/organizations/context/provider";
+import type { OrganizationBranding } from "@calndrbrnd/features/ee/organizations/context/provider";
+import type { TeamFeatures } from "@calndrbrnd/features/flags/config";
+import { useIsFeatureEnabledForTeam } from "@calndrbrnd/features/flags/hooks/useIsFeatureEnabledForTeam";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { HOSTED_CAL_FEATURES, IS_CALCOM, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { IdentityProvider, UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ErrorBoundary } from "@calndrbrnd/ui/components/errorBoundary";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import type { VerticalTabItemProps } from "@calndrbrnd/ui/components/navigation";
+import { VerticalTabItem } from "@calndrbrnd/ui/components/navigation";
+import { Skeleton } from "@calndrbrnd/ui/components/skeleton";
 
 const getTabs = (orgBranding: OrganizationBranding | null) => {
   const tabs: VerticalTabItemProps[] = [

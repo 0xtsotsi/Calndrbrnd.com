@@ -1,36 +1,36 @@
 import type { TFunction } from "i18next";
 
-import { getCalendar } from "@calcom/app-store/_utils/getCalendar";
-import { getDelegationCredentialOrRegularCredential } from "@calcom/app-store/delegationCredential";
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import dayjs from "@calcom/dayjs";
-import { sendRequestRescheduleEmailAndSMS } from "@calcom/emails/email-manager";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { deleteMeeting } from "@calcom/features/conferencing/lib/videoClient";
-import { getBookerBaseUrl } from "@calcom/features/ee/organizations/lib/getBookerUrlServer";
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
+import { getCalendar } from "@calndrbrnd/app-store/_utils/getCalendar";
+import { getDelegationCredentialOrRegularCredential } from "@calndrbrnd/app-store/delegationCredential";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@calndrbrnd/app-store/delegationCredential";
+import dayjs from "@calndrbrnd/dayjs";
+import { sendRequestRescheduleEmailAndSMS } from "@calndrbrnd/emails/email-manager";
+import { getCalEventResponses } from "@calndrbrnd/features/bookings/lib/getCalEventResponses";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { deleteMeeting } from "@calndrbrnd/features/conferencing/lib/videoClient";
+import { getBookerBaseUrl } from "@calndrbrnd/features/ee/organizations/lib/getBookerUrlServer";
+import { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import getWebhooks from "@calndrbrnd/features/webhooks/lib/getWebhooks";
 import {
   deleteWebhookScheduledTriggers,
   cancelNoShowTasksForBooking,
-} from "@calcom/features/webhooks/lib/scheduleTrigger";
-import sendPayload from "@calcom/features/webhooks/lib/sendOrSchedulePayload";
-import { CalendarEventBuilder } from "@calcom/lib/builders/CalendarEvent/builder";
-import { CalendarEventDirector } from "@calcom/lib/builders/CalendarEvent/director";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { getTeamIdFromEventType } from "@calcom/lib/getTeamIdFromEventType";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { BookingWebhookFactory } from "@calcom/lib/server/service/BookingWebhookFactory";
-import { prisma } from "@calcom/prisma";
-import type { BookingReference, EventType } from "@calcom/prisma/client";
-import { BookingStatus } from "@calcom/prisma/enums";
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
-import type { Person } from "@calcom/types/Calendar";
+} from "@calndrbrnd/features/webhooks/lib/scheduleTrigger";
+import sendPayload from "@calndrbrnd/features/webhooks/lib/sendOrSchedulePayload";
+import { CalendarEventBuilder } from "@calndrbrnd/lib/builders/CalendarEvent/builder";
+import { CalendarEventDirector } from "@calndrbrnd/lib/builders/CalendarEvent/director";
+import getOrgIdFromMemberOrTeamId from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import { getTeamIdFromEventType } from "@calndrbrnd/lib/getTeamIdFromEventType";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { BookingWebhookFactory } from "@calndrbrnd/lib/server/service/BookingWebhookFactory";
+import { prisma } from "@calndrbrnd/prisma";
+import type { BookingReference, EventType } from "@calndrbrnd/prisma/client";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
+import type { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
+import type { EventTypeMetadata } from "@calndrbrnd/prisma/zod-utils";
+import type { Person } from "@calndrbrnd/types/Calendar";
 
 import { TRPCError } from "@trpc/server";
 

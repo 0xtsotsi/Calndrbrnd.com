@@ -1,4 +1,4 @@
-import { createContainer } from "@calcom/features/di/di";
+import { createContainer } from "@calndrbrnd/features/di/di";
 
 import {
   type BookingEventHandlerService,

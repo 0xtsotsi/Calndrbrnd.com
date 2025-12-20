@@ -1,4 +1,4 @@
-import { post } from "@calcom/lib/fetch-wrapper";
+import { post } from "@calndrbrnd/lib/fetch-wrapper";
 
 import type { BookingCreateBody, BookingResponse } from "../types";
 

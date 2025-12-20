@@ -19,9 +19,9 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { slugify } from "@calcom/platform-libraries";
-import { TeamOutputDto } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { slugify } from "@calndrbrnd/platform-libraries";
+import { TeamOutputDto } from "@calndrbrnd/platform-types";
 
 describe("Teams endpoint", () => {
   let app: INestApplication;

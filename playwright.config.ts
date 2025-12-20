@@ -4,7 +4,7 @@ import dotEnv from "dotenv";
 import * as os from "os";
 import * as path from "path";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
 
 dotEnv.config({ path: ".env" });
 
@@ -22,13 +22,13 @@ const DEFAULT_TEST_TIMEOUT = process.env.CI ? 60000 : 240000;
 
 const headless = !!process.env.CI || !!process.env.PLAYWRIGHT_HEADLESS;
 
-const IS_EMBED_TEST = process.argv.some((a) => a.startsWith("--project=@calcom/embed-core"));
-const IS_EMBED_REACT_TEST = process.argv.some((a) => a.startsWith("--project=@calcom/embed-react"));
+const IS_EMBED_TEST = process.argv.some((a) => a.startsWith("--project=@calndrbrnd/embed-core"));
+const IS_EMBED_REACT_TEST = process.argv.some((a) => a.startsWith("--project=@calndrbrnd/embed-react"));
 
 const webServer: PlaywrightTestConfig["webServer"] = [
   {
     command:
-      "NEXT_PUBLIC_IS_E2E=1 NODE_OPTIONS='--dns-result-order=ipv4first' yarn workspace @calcom/web start -p 3000",
+      "NEXT_PUBLIC_IS_E2E=1 NODE_OPTIONS='--dns-result-order=ipv4first' yarn workspace @calndrbrnd/web start -p 3000",
     port: 3000,
     timeout: 60_000,
     reuseExistingServer: !process.env.CI,
@@ -39,7 +39,7 @@ if (IS_EMBED_TEST) {
   ensureAppServerIsReadyToServeEmbed(webServer[0]);
 
   webServer.push({
-    command: "yarn workspace @calcom/embed-core dev",
+    command: "yarn workspace @calndrbrnd/embed-core dev",
     port: 3100,
     timeout: 60_000,
     reuseExistingServer: !process.env.CI,
@@ -50,7 +50,7 @@ if (IS_EMBED_REACT_TEST) {
   ensureAppServerIsReadyToServeEmbed(webServer[0]);
 
   webServer.push({
-    command: "yarn workspace @calcom/embed-react dev",
+    command: "yarn workspace @calndrbrnd/embed-react dev",
     port: 3101,
     timeout: 60_000,
     reuseExistingServer: !process.env.CI,
@@ -105,7 +105,7 @@ const config: PlaywrightTestConfig = {
   },
   projects: [
     {
-      name: "@calcom/web",
+      name: "@calndrbrnd/web",
       testDir: "./apps/web/playwright",
       testMatch: /.*\.e2e\.tsx?/,
       expect: {
@@ -116,7 +116,7 @@ const config: PlaywrightTestConfig = {
       use: DEFAULT_CHROMIUM,
     },
     {
-      name: "@calcom/app-store",
+      name: "@calndrbrnd/app-store",
       testDir: "./packages/app-store/",
       testMatch: /.*\.e2e\.tsx?/,
       expect: {
@@ -127,7 +127,7 @@ const config: PlaywrightTestConfig = {
       use: DEFAULT_CHROMIUM,
     },
     {
-      name: "@calcom/embed-core",
+      name: "@calndrbrnd/embed-core",
       testDir: "./packages/embeds/embed-core/",
       testMatch: /.*\.e2e\.tsx?/,
       expect: {
@@ -140,7 +140,7 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
-      name: "@calcom/embed-react",
+      name: "@calndrbrnd/embed-react",
       testDir: "./packages/embeds/embed-react/",
       expect: {
         timeout: DEFAULT_EXPECT_TIMEOUT,
@@ -154,7 +154,7 @@ const config: PlaywrightTestConfig = {
       },
     },
     {
-      name: "@calcom/embed-core--firefox",
+      name: "@calndrbrnd/embed-core--firefox",
       testDir: "./packages/embeds/",
       testMatch: /.*\.e2e\.tsx?/,
       expect: {
@@ -163,7 +163,7 @@ const config: PlaywrightTestConfig = {
       use: { ...devices["Desktop Firefox"] },
     },
     {
-      name: "@calcom/embed-core--webkit",
+      name: "@calndrbrnd/embed-core--webkit",
       testDir: "./packages/embeds/",
       testMatch: /.*\.e2e\.tsx?/,
       expect: {
@@ -172,7 +172,7 @@ const config: PlaywrightTestConfig = {
       use: { ...devices["Desktop Safari"] },
     },
     {
-      name: "@calcom/embed-core--isMobile",
+      name: "@calndrbrnd/embed-core--isMobile",
       testDir: "./packages/embeds/embed-core/",
       testMatch: /.*\.e2e\.tsx?/,
       expect: {

@@ -1,7 +1,7 @@
 import { Type } from "class-transformer";
 import { ValidateNested } from "class-validator";
 
-import { ApiResponseWithoutData, TeamEventTypeOutput_2024_06_14 } from "@calcom/platform-types";
+import { ApiResponseWithoutData, TeamEventTypeOutput_2024_06_14 } from "@calndrbrnd/platform-types";
 
 export class GetTeamEventTypeOutput extends ApiResponseWithoutData {
   @ValidateNested()

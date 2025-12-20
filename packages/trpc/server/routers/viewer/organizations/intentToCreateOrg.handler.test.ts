@@ -2,21 +2,21 @@ import prismock from "../../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
-import { OrganizationPaymentService } from "@calcom/features/ee/organizations/lib/OrganizationPaymentService";
-import { BillingPeriod, UserPermissionRole } from "@calcom/prisma/enums";
+import { LicenseKeySingleton } from "@calndrbrnd/ee/common/server/LicenseKeyService";
+import { OrganizationPaymentService } from "@calndrbrnd/features/ee/organizations/lib/OrganizationPaymentService";
+import { BillingPeriod, UserPermissionRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
 import { intentToCreateOrgHandler } from "./intentToCreateOrg.handler";
 
-vi.mock("@calcom/ee/common/server/LicenseKeyService", () => ({
+vi.mock("@calndrbrnd/ee/common/server/LicenseKeyService", () => ({
   LicenseKeySingleton: {
     getInstance: vi.fn(),
   },
 }));
 
-vi.mock("@calcom/features/ee/organizations/lib/OrganizationPaymentService");
+vi.mock("@calndrbrnd/features/ee/organizations/lib/OrganizationPaymentService");
 
 const mockInput = {
   name: "Test Org",
@@ -89,8 +89,8 @@ describe("intentToCreateOrgHandler", () => {
 
   describe("hosted", () => {
     beforeEach(() => {
-      vi.mock("@calcom/lib/constants", async () => {
-        const actualImport = await vi.importActual("@calcom/lib/constants");
+      vi.mock("@calndrbrnd/lib/constants", async () => {
+        const actualImport = await vi.importActual("@calndrbrnd/lib/constants");
         return {
           ...actualImport,
           IS_SELF_HOSTED: false,
@@ -279,8 +279,8 @@ describe("intentToCreateOrgHandler", () => {
 
   describe("self hosted", () => {
     beforeEach(() => {
-      vi.mock("@calcom/lib/constants", async () => {
-        const actualImport = await vi.importActual("@calcom/lib/constants");
+      vi.mock("@calndrbrnd/lib/constants", async () => {
+        const actualImport = await vi.importActual("@calndrbrnd/lib/constants");
         return {
           ...actualImport,
           IS_SELF_HOSTED: true,

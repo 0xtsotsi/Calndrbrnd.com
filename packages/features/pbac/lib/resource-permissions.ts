@@ -1,7 +1,7 @@
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { PermissionMapper } from "../domain/mappers/PermissionMapper";
 import type { CustomAction } from "../domain/types/permission-registry";

@@ -1,9 +1,9 @@
 import { expect } from "@playwright/test";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { randomString } from "@calcom/lib/random";
-import { prisma } from "@calcom/prisma";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { randomString } from "@calndrbrnd/lib/random";
+import { prisma } from "@calndrbrnd/prisma";
 
 import { clearFilters, applySelectFilter } from "./filter-helpers";
 import { test } from "./lib/fixtures";

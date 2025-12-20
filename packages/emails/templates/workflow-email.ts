@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
 
-import { SENDER_NAME } from "@calcom/lib/constants";
+import { SENDER_NAME } from "@calndrbrnd/lib/constants";
 
 import BaseEmail from "./_base-email";
 

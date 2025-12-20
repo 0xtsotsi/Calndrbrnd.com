@@ -1,8 +1,8 @@
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import { addPermissionsToWorkflows } from "@calcom/features/workflows/repositories/WorkflowPermissionsRepository";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import { addPermissionsToWorkflows } from "@calndrbrnd/features/workflows/repositories/WorkflowPermissionsRepository";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TFilteredListInputSchema } from "./filteredList.schema";
 

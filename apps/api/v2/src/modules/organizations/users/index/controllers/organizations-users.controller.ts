@@ -41,8 +41,8 @@ import { ClassSerializerInterceptor } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 import { plainToInstance } from "class-transformer";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { Team } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { Team } from "@calndrbrnd/prisma/client";
 
 @Controller({
   path: "/v2/organizations/:orgId/users",

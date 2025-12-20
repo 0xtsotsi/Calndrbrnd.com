@@ -1,5 +1,5 @@
-import type { readonlyPrisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import type { readonlyPrisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 type BuildBaseWhereConditionCtxType = {
   userIsOwnerAdminOfParentTeam: boolean;

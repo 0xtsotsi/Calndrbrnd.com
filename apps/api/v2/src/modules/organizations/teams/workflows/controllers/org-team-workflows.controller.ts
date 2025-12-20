@@ -44,8 +44,8 @@ import {
 } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { SkipTakePagination } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { SkipTakePagination } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/organizations/:orgId/teams/:teamId/workflows",

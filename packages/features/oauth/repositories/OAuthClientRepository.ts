@@ -1,4 +1,4 @@
-import type { PrismaClient } from "@calcom/prisma";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 export class OAuthClientRepository {
   constructor(private readonly prisma: PrismaClient) {}

@@ -1,33 +1,33 @@
 import { useCallback, useState } from "react";
 
-import { InstallAppButton } from "@calcom/app-store/InstallAppButton";
-import { AppSettings } from "@calcom/app-store/_components/AppSettings";
-import { getLocationFromApp, type EventLocationType } from "@calcom/app-store/locations";
-import type { AppCardApp } from "@calcom/app-store/types";
-import AppListCard from "@calcom/features/apps/components/AppListCard";
-import type { UpdateUsersDefaultConferencingAppParams } from "@calcom/features/apps/components/AppSetDefaultLinkDialog";
-import { AppSetDefaultLinkDialog } from "@calcom/features/apps/components/AppSetDefaultLinkDialog";
+import { InstallAppButton } from "@calndrbrnd/app-store/InstallAppButton";
+import { AppSettings } from "@calndrbrnd/app-store/_components/AppSettings";
+import { getLocationFromApp, type EventLocationType } from "@calndrbrnd/app-store/locations";
+import type { AppCardApp } from "@calndrbrnd/app-store/types";
+import AppListCard from "@calndrbrnd/features/apps/components/AppListCard";
+import type { UpdateUsersDefaultConferencingAppParams } from "@calndrbrnd/features/apps/components/AppSetDefaultLinkDialog";
+import { AppSetDefaultLinkDialog } from "@calndrbrnd/features/apps/components/AppSetDefaultLinkDialog";
 import type {
   BulkUpdatParams,
   EventTypes,
-} from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import { BulkEditDefaultForEventsModal } from "@calcom/features/eventtypes/components/BulkEditDefaultForEventsModal";
-import { isDelegationCredential } from "@calcom/lib/delegationCredential";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { AppCategories } from "@calcom/prisma/enums";
-import { type RouterOutputs } from "@calcom/trpc";
-import type { App } from "@calcom/types/App";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
+} from "@calndrbrnd/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import { BulkEditDefaultForEventsModal } from "@calndrbrnd/features/eventtypes/components/BulkEditDefaultForEventsModal";
+import { isDelegationCredential } from "@calndrbrnd/lib/delegationCredential";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { AppCategories } from "@calndrbrnd/prisma/enums";
+import { type RouterOutputs } from "@calndrbrnd/trpc";
+import type { App } from "@calndrbrnd/types/App";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { List } from "@calcom/ui/components/list";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/dropdown";
+import { List } from "@calndrbrnd/ui/components/list";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 export type HandleDisconnect = (credentialId: number, app: App["slug"], teamId?: number) => void;
 

@@ -1,7 +1,7 @@
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);

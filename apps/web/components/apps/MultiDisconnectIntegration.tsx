@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { AppRouter } from "@calcom/trpc/types/server/routers/_app";
-import { Button } from "@calcom/ui/components/button";
-import { ConfirmationDialogContent } from "@calcom/ui/components/dialog";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { AppRouter } from "@calndrbrnd/trpc/types/server/routers/_app";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ConfirmationDialogContent } from "@calndrbrnd/ui/components/dialog";
 import {
   Dropdown,
   DropdownItem,
@@ -13,8 +13,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/dropdown";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import type { inferRouterOutputs } from "@trpc/server";
 

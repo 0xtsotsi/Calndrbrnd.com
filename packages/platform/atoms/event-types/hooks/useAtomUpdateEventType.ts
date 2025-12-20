@@ -1,9 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
 
-import type { EventTypeUpdateInput } from "@calcom/features/eventtypes/lib/types";
-import { V2_ENDPOINTS, SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiSuccessResponse } from "@calcom/platform-types";
-import type { EventType } from "@calcom/prisma/client";
+import type { EventTypeUpdateInput } from "@calndrbrnd/features/eventtypes/lib/types";
+import { V2_ENDPOINTS, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiResponse, ApiSuccessResponse } from "@calndrbrnd/platform-types";
+import type { EventType } from "@calndrbrnd/prisma/client";
 
 import { useAtomsContext } from "../../hooks/useAtomsContext";
 import http from "../../lib/http";

@@ -2,7 +2,7 @@
 
 import superjson from "superjson";
 
-import { ENDPOINTS } from "@calcom/trpc/react/shared";
+import { ENDPOINTS } from "@calndrbrnd/trpc/react/shared";
 
 import { httpBatchLink, httpLink, loggerLink, splitLink } from "@trpc/client";
 

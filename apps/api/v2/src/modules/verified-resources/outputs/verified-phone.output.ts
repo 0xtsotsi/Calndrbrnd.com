@@ -11,7 +11,7 @@ import {
   IsOptional,
 } from "class-validator";
 
-import { ERROR_STATUS, SUCCESS_STATUS } from "@calcom/platform-constants";
+import { ERROR_STATUS, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 export class UserVerifiedPhoneOutputData {
   @Expose()

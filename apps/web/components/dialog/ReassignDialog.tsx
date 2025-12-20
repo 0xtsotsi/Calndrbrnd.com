@@ -5,24 +5,24 @@ import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useInViewObserver } from "@calcom/lib/hooks/useInViewObserver";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useInViewObserver } from "@calndrbrnd/lib/hooks/useInViewObserver";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   DialogContent,
   DialogFooter,
   DialogClose,
   ConfirmationDialogContent,
-} from "@calcom/ui/components/dialog";
-import { TextAreaField, Form, Label, Input } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { RadioAreaGroup as RadioArea } from "@calcom/ui/components/radio";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/dialog";
+import { TextAreaField, Form, Label, Input } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { RadioAreaGroup as RadioArea } from "@calndrbrnd/ui/components/radio";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 enum ReassignType {
   AUTO = "auto",

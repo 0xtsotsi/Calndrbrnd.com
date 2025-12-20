@@ -1,8 +1,8 @@
-import type { JsonValue } from "@calcom/types/Json";
+import type { JsonValue } from "@calndrbrnd/types/Json";
 
-import logger from "@calcom/lib/logger";
-import type { IFeaturesRepository } from "@calcom/features/flags/features.repository.interface";
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
+import logger from "@calndrbrnd/lib/logger";
+import type { IFeaturesRepository } from "@calndrbrnd/features/flags/features.repository.interface";
+import type { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
 
 import type { PiiFreeActor } from "../../../bookings/lib/types/actor";
 import type {
@@ -14,8 +14,8 @@ import { BookingAuditActionServiceRegistry } from "./BookingAuditActionServiceRe
 import type { IBookingAuditRepository, BookingAuditType, BookingAuditAction, BookingAuditCreateInput } from "../repository/IBookingAuditRepository";
 import type { IAuditActorRepository } from "../repository/IAuditActorRepository";
 import type { ActionSource } from "../types/actionSource";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { Task } from "@calcom/features/tasker/repository";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { Task } from "@calndrbrnd/features/tasker/repository";
 
 interface BookingAuditTaskConsumerDeps {
     bookingAuditRepository: IBookingAuditRepository;

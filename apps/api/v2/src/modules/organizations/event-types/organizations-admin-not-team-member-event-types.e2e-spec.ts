@@ -16,14 +16,14 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_14 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_14 } from "@calndrbrnd/platform-constants";
 import {
   BookingWindowPeriodInputTypeEnum_2024_06_14,
   BookerLayoutsInputEnum_2024_06_14,
   ConfirmationPolicyEnum,
   NoticeThresholdUnitEnum,
-} from "@calcom/platform-enums";
-import { SchedulingType } from "@calcom/platform-libraries";
+} from "@calndrbrnd/platform-enums";
+import { SchedulingType } from "@calndrbrnd/platform-libraries";
 import type {
   ApiSuccessResponse,
   CreateTeamEventTypeInput_2024_06_14,
@@ -31,8 +31,8 @@ import type {
   Host,
   TeamEventTypeOutput_2024_06_14,
   UpdateTeamEventTypeInput_2024_06_14,
-} from "@calcom/platform-types";
-import type { User, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { User, Team } from "@calndrbrnd/prisma/client";
 
 describe("Organizations Event Types Endpoints", () => {
   describe("User Authentication - User is Org Admin but not team admin", () => {

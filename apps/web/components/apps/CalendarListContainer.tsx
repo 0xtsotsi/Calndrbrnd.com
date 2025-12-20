@@ -2,21 +2,21 @@
 
 import { useEffect, Suspense } from "react";
 
-import { InstallAppButton } from "@calcom/app-store/InstallAppButton";
-import { DestinationCalendarSettingsWebWrapper } from "@calcom/atoms/destination-calendar/wrappers/DestinationCalendarSettingsWebWrapper";
-import { SelectedCalendarsSettingsWebWrapper } from "@calcom/atoms/selected-calendars/wrappers/SelectedCalendarsSettingsWebWrapper";
-import AppListCard from "@calcom/features/apps/components/AppListCard";
-import { SkeletonLoader } from "@calcom/features/apps/components/SkeletonLoader";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { ShellSubHeading } from "@calcom/ui/components/layout";
-import { List } from "@calcom/ui/components/list";
-import { showToast } from "@calcom/ui/components/toast";
-import { revalidateSettingsCalendars } from "@calcom/web/app/cache/path/settings/my-account";
+import { InstallAppButton } from "@calndrbrnd/app-store/InstallAppButton";
+import { DestinationCalendarSettingsWebWrapper } from "@calndrbrnd/atoms/destination-calendar/wrappers/DestinationCalendarSettingsWebWrapper";
+import { SelectedCalendarsSettingsWebWrapper } from "@calndrbrnd/atoms/selected-calendars/wrappers/SelectedCalendarsSettingsWebWrapper";
+import AppListCard from "@calndrbrnd/features/apps/components/AppListCard";
+import { SkeletonLoader } from "@calndrbrnd/features/apps/components/SkeletonLoader";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { ShellSubHeading } from "@calndrbrnd/ui/components/layout";
+import { List } from "@calndrbrnd/ui/components/list";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { revalidateSettingsCalendars } from "@calndrbrnd/web/app/cache/path/settings/my-account";
 
 import { QueryCell } from "@lib/QueryCell";
 import useRouterQuery from "@lib/hooks/useRouterQuery";

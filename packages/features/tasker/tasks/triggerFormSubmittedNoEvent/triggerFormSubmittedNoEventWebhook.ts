@@ -1,9 +1,9 @@
 import { z } from "zod";
 
-import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/app-store/routing-forms/lib/formSubmissionUtils";
-import incompleteBookingActionFunctions from "@calcom/app-store/routing-forms/lib/incompleteBooking/actionFunctions";
-import { sendGenericWebhookPayload } from "@calcom/features/webhooks/lib/sendPayload";
-import prisma from "@calcom/prisma";
+import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calndrbrnd/app-store/routing-forms/lib/formSubmissionUtils";
+import incompleteBookingActionFunctions from "@calndrbrnd/app-store/routing-forms/lib/incompleteBooking/actionFunctions";
+import { sendGenericWebhookPayload } from "@calndrbrnd/features/webhooks/lib/sendPayload";
+import prisma from "@calndrbrnd/prisma";
 
 import { getSubmitterEmail, shouldTriggerFormSubmittedNoEvent } from "./formSubmissionValidation";
 

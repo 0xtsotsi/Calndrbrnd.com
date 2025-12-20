@@ -9,12 +9,12 @@ import {
   inviteMemberutilsScenarios as inviteMemberUtilsScenarios,
   default as inviteMemberUtilsMock,
 } from "./__mocks__/inviteMemberUtils";
-import { constantsScenarios } from "@calcom/lib/__mocks__/constants";
+import { constantsScenarios } from "@calndrbrnd/lib/__mocks__/constants";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import type { Profile } from "@calcom/prisma/client";
-import { IdentityProvider, MembershipRole } from "@calcom/prisma/enums";
+import type { Profile } from "@calndrbrnd/prisma/client";
+import { IdentityProvider, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
@@ -35,17 +35,17 @@ vi.mock("@trpc/server", () => {
   };
 });
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     prisma: vi.fn(),
   };
 });
 
 // Mock PBAC dependencies - these need to be mocked before PermissionCheckService
-vi.mock("@calcom/features/pbac/infrastructure/repositories/PermissionRepository");
-vi.mock("@calcom/features/flags/features.repository");
-vi.mock("@calcom/features/membership/repositories/MembershipRepository");
-vi.mock("@calcom/features/pbac/services/permission.service", () => {
+vi.mock("@calndrbrnd/features/pbac/infrastructure/repositories/PermissionRepository");
+vi.mock("@calndrbrnd/features/flags/features.repository");
+vi.mock("@calndrbrnd/features/membership/repositories/MembershipRepository");
+vi.mock("@calndrbrnd/features/pbac/services/permission.service", () => {
   return {
     PermissionService: vi.fn().mockImplementation(() => ({
       validatePermission: vi.fn().mockReturnValue({ isValid: true }),
@@ -54,7 +54,7 @@ vi.mock("@calcom/features/pbac/services/permission.service", () => {
   };
 });
 
-vi.mock("@calcom/features/pbac/services/permission-check.service", () => {
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service", () => {
   return {
     PermissionCheckService: vi.fn().mockImplementation(() => ({
       checkPermission: vi.fn().mockResolvedValue(true),

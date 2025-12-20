@@ -56,8 +56,8 @@ import { VerifiedResourcesRepositoryFixtures } from "test/fixtures/repository/ve
 import { WorkflowRepositoryFixture } from "test/fixtures/repository/workflow.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { User, Team } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { User, Team } from "@calndrbrnd/prisma/client";
 
 describe("OrganizationsTeamsWorkflowsController (E2E)", () => {
   let app: INestApplication;

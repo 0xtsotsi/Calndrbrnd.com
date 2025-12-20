@@ -1,7 +1,7 @@
 import type { NextApiRequest } from "next";
 
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import { getTrackingFromCookies } from "@calcom/lib/tracking";
+import { createDefaultAIPhoneServiceProvider } from "@calndrbrnd/features/calAIPhone";
+import { getTrackingFromCookies } from "@calndrbrnd/lib/tracking";
 
 import { TRPCError } from "@trpc/server";
 

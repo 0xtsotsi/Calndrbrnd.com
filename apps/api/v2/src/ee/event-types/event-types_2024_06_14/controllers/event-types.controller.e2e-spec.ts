@@ -22,15 +22,15 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_14 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_06_14 } from "@calndrbrnd/platform-constants";
 import {
   BookingWindowPeriodInputTypeEnum_2024_06_14,
   BookerLayoutsInputEnum_2024_06_14,
   ConfirmationPolicyEnum,
   NoticeThresholdUnitEnum,
   FrequencyInput,
-} from "@calcom/platform-enums";
-import { SchedulingType } from "@calcom/platform-libraries";
+} from "@calndrbrnd/platform-enums";
+import { SchedulingType } from "@calndrbrnd/platform-libraries";
 import {
   BaseConfirmationPolicy_2024_06_14,
   TeamEventTypeOutput_2024_06_14,
@@ -43,10 +43,10 @@ import {
   type NotesDefaultFieldInput_2024_06_14,
   type SplitNameDefaultFieldOutput_2024_06_14,
   type UpdateEventTypeInput_2024_06_14,
-} from "@calcom/platform-types";
-import { FAILED_RECURRING_EVENT_TYPE_WITH_BOOKER_LIMITS_ERROR_MESSAGE } from "@calcom/platform-types/event-types/event-types_2024_06_14/inputs/validators/CantHaveRecurrenceAndBookerActiveBookingsLimit";
-import { REQUIRES_AT_LEAST_ONE_PROPERTY_ERROR } from "@calcom/platform-types/utils/RequiresOneOfPropertiesWhenNotDisabled";
-import type { PlatformOAuthClient, Team, User, Schedule, EventType } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import { FAILED_RECURRING_EVENT_TYPE_WITH_BOOKER_LIMITS_ERROR_MESSAGE } from "@calndrbrnd/platform-types/event-types/event-types_2024_06_14/inputs/validators/CantHaveRecurrenceAndBookerActiveBookingsLimit";
+import { REQUIRES_AT_LEAST_ONE_PROPERTY_ERROR } from "@calndrbrnd/platform-types/utils/RequiresOneOfPropertiesWhenNotDisabled";
+import type { PlatformOAuthClient, Team, User, Schedule, EventType } from "@calndrbrnd/prisma/client";
 
 const orderBySlug = (a: { slug: string }, b: { slug: string }) => {
   if (a.slug < b.slug) return -1;

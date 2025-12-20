@@ -1,19 +1,19 @@
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { SENDER_NAME } from "@calcom/lib/constants";
-import prisma from "@calcom/prisma";
-import type { Workflow } from "@calcom/prisma/client";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import { SENDER_NAME } from "@calndrbrnd/lib/constants";
+import prisma from "@calndrbrnd/prisma";
+import type { Workflow } from "@calndrbrnd/prisma/client";
 import {
   MembershipRole,
   TimeUnit,
   WorkflowActions,
   WorkflowTemplates,
   WorkflowTriggerEvents,
-} from "@calcom/prisma/enums";
+} from "@calndrbrnd/prisma/enums";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

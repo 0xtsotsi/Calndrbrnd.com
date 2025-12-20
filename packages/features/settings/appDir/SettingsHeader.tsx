@@ -2,10 +2,10 @@
 
 import React, { Suspense } from "react";
 
-import classNames from "@calcom/ui/classNames";
-import { Icon } from "@calcom/ui/components/icon";
-import { Button } from "@calcom/ui/components/button";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 type HeaderPropsBase = {
   children: React.ReactNode;

@@ -1,15 +1,15 @@
 import { useSearchParams } from "next/navigation";
 
-import { useIsPlatform } from "@calcom/atoms/hooks/useIsPlatform";
-import { useBookerStoreContext } from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useBookerTime } from "@calcom/features/bookings/Booker/components/hooks/useBookerTime";
-import type { UseBookingFormReturnType } from "@calcom/features/bookings/Booker/components/hooks/useBookingForm";
-import { mapBookingToMutationInput, mapRecurringBookingToMutationInput } from "@calcom/features/bookings/lib";
-import type { BookingCreateBody } from "@calcom/features/bookings/lib/bookingCreateBodySchema";
-import type { BookerEvent } from "@calcom/features/bookings/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RoutingFormSearchParams } from "@calcom/platform-types";
-import { showToast } from "@calcom/ui/components/toast";
+import { useIsPlatform } from "@calndrbrnd/atoms/hooks/useIsPlatform";
+import { useBookerStoreContext } from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import { useBookerTime } from "@calndrbrnd/features/bookings/Booker/components/hooks/useBookerTime";
+import type { UseBookingFormReturnType } from "@calndrbrnd/features/bookings/Booker/components/hooks/useBookingForm";
+import { mapBookingToMutationInput, mapRecurringBookingToMutationInput } from "@calndrbrnd/features/bookings/lib";
+import type { BookingCreateBody } from "@calndrbrnd/features/bookings/lib/bookingCreateBodySchema";
+import type { BookerEvent } from "@calndrbrnd/features/bookings/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RoutingFormSearchParams } from "@calndrbrnd/platform-types";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { getUtmTrackingParameters } from "../../lib/getUtmTrackingParameters";
 import type { UseCreateBookingInput } from "./useCreateBooking";

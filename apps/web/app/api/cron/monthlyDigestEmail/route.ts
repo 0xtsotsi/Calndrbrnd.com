@@ -3,12 +3,12 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import dayjs from "@calcom/dayjs";
-import { sendMonthlyDigestEmail } from "@calcom/emails/workflow-email-service";
-import { EventsInsights } from "@calcom/features/insights/server/events";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import dayjs from "@calndrbrnd/dayjs";
+import { sendMonthlyDigestEmail } from "@calndrbrnd/emails/workflow-email-service";
+import { EventsInsights } from "@calndrbrnd/features/insights/server/events";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 const querySchema = z.object({
   page: z.coerce.number().min(0).optional().default(0),

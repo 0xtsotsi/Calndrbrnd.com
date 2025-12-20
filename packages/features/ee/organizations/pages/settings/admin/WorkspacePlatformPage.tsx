@@ -6,18 +6,18 @@ import type { SubmitHandler } from "react-hook-form";
 import { useForm, useFormContext } from "react-hook-form";
 import { z } from "zod";
 
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { serviceAccountKeySchema } from "@calcom/prisma/zod-utils";
-import { trpc, type RouterOutputs } from "@calcom/trpc";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
-import { TextAreaField } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { DropdownActions, Table } from "@calcom/ui/components/table";
-import { showToast } from "@calcom/ui/components/toast";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { serviceAccountKeySchema } from "@calndrbrnd/prisma/zod-utils";
+import { trpc, type RouterOutputs } from "@calndrbrnd/trpc";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@calndrbrnd/ui/components/dialog";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { TextAreaField } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { DropdownActions, Table } from "@calndrbrnd/ui/components/table";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 const { Body, Cell, ColumnTitle, Header, Row } = Table;
 

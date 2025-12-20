@@ -13,13 +13,13 @@ export default defineConfig(({ mode }) => {
   return {
     optimizeDeps: {
       include: [
-        "@calcom/lib",
-        "@calcom/features",
-        "@calcom/prisma",
-        "@calcom/dayjs",
-        "@calcom/platform-constants",
-        "@calcom/platform-types",
-        "@calcom/platform-utils",
+        "@calndrbrnd/lib",
+        "@calndrbrnd/features",
+        "@calndrbrnd/prisma",
+        "@calndrbrnd/dayjs",
+        "@calndrbrnd/platform-constants",
+        "@calndrbrnd/platform-types",
+        "@calndrbrnd/platform-utils",
       ],
     },
     plugins: [
@@ -89,18 +89,18 @@ export default defineConfig(({ mode }) => {
         path: resolve("../../../node_modules/rollup-plugin-node-builtins"),
         os: resolve("../../../node_modules/rollup-plugin-node-builtins"),
         "@": path.resolve(__dirname, "./src"),
-        "@calcom/lib/markdownToSafeHTML": path.resolve(__dirname, "./lib/markdownToSafeHTML"),
-        "@calcom/lib/hooks/useLocale": path.resolve(__dirname, "./lib/useLocale"),
+        "@calndrbrnd/lib/markdownToSafeHTML": path.resolve(__dirname, "./lib/markdownToSafeHTML"),
+        "@calndrbrnd/lib/hooks/useLocale": path.resolve(__dirname, "./lib/useLocale"),
         "@radix-ui/react-tooltip": path.resolve(__dirname, "./src/components/ui/tooltip.tsx"),
         "@radix-ui/react-dialog": path.resolve(__dirname, "./src/components/ui/dialog.tsx"),
-        "@calcom/prisma/client/runtime/library": resolve("./prisma-types/index.ts"),
-        "@calcom/prisma/client": path.resolve(__dirname, "../../kysely/types.ts"),
+        "@calndrbrnd/prisma/client/runtime/library": resolve("./prisma-types/index.ts"),
+        "@calndrbrnd/prisma/client": path.resolve(__dirname, "../../kysely/types.ts"),
         kysely: path.resolve(__dirname, "./kysely-types/index.ts"),
-        "@calcom/dayjs": path.resolve(__dirname, "../../dayjs"),
-        "@calcom/platform-constants": path.resolve(__dirname, "../constants/index.ts"),
-        "@calcom/platform-types": path.resolve(__dirname, "../types/index.ts"),
-        "@calcom/platform-utils": path.resolve(__dirname, "../constants/index.ts"),
-        "@calcom/web/public/static/locales/en/common.json": path.resolve(
+        "@calndrbrnd/dayjs": path.resolve(__dirname, "../../dayjs"),
+        "@calndrbrnd/platform-constants": path.resolve(__dirname, "../constants/index.ts"),
+        "@calndrbrnd/platform-types": path.resolve(__dirname, "../types/index.ts"),
+        "@calndrbrnd/platform-utils": path.resolve(__dirname, "../constants/index.ts"),
+        "@calndrbrnd/web/public/static/locales/en/common.json": path.resolve(
           __dirname,
           "../../../apps/web/public/static/locales/en/common.json"
         ),

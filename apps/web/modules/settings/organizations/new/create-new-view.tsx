@@ -1,9 +1,9 @@
 "use client";
 
-import { CreateANewOrganizationForm } from "@calcom/features/ee/organizations/components";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Alert } from "@calcom/ui/components/alert";
-import { useGetUserAttributes } from "@calcom/web/components/settings/platform/hooks/useGetUserAttributes";
+import { CreateANewOrganizationForm } from "@calndrbrnd/features/ee/organizations/components";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { useGetUserAttributes } from "@calndrbrnd/web/components/settings/platform/hooks/useGetUserAttributes";
 
 import { OrganizationWizardLayout } from "./_components/OrganizationWizardLayout";
 

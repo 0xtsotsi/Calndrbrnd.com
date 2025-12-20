@@ -1,6 +1,6 @@
 import { vi, beforeEach } from "vitest";
 
-import type * as constants from "@calcom/lib/constants";
+import type * as constants from "@calndrbrnd/lib/constants";
 
 const initialConstants = {
   IS_PRODUCTION: false,
@@ -25,7 +25,7 @@ const initialConstants = {
 
 export const mockedConstants = { ...initialConstants };
 
-vi.mock("@calcom/lib/constants", () => mockedConstants);
+vi.mock("@calndrbrnd/lib/constants", () => mockedConstants);
 
 beforeEach(() => {
   Object.assign(mockedConstants, initialConstants);

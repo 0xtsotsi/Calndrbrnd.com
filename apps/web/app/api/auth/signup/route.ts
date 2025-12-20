@@ -2,18 +2,18 @@ import { defaultResponderForAppDir } from "app/api/defaultResponderForAppDir";
 import { parseRequestData } from "app/api/parseRequestData";
 import { NextResponse, type NextRequest } from "next/server";
 
-import calcomSignupHandler from "@calcom/feature-auth/signup/handlers/calcomHandler";
-import selfHostedSignupHandler from "@calcom/feature-auth/signup/handlers/selfHostedHandler";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import { IS_PREMIUM_USERNAME_ENABLED } from "@calcom/lib/constants";
-import getIP from "@calcom/lib/getIP";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import { piiHasher } from "@calcom/lib/server/PiiHasher";
-import { checkCfTurnstileToken } from "@calcom/lib/server/checkCfTurnstileToken";
-import { prisma } from "@calcom/prisma";
-import { signupSchema } from "@calcom/prisma/zod-utils";
+import calcomSignupHandler from "@calndrbrnd/feature-auth/signup/handlers/calcomHandler";
+import selfHostedSignupHandler from "@calndrbrnd/feature-auth/signup/handlers/selfHostedHandler";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import { IS_PREMIUM_USERNAME_ENABLED } from "@calndrbrnd/lib/constants";
+import getIP from "@calndrbrnd/lib/getIP";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
+import { piiHasher } from "@calndrbrnd/lib/server/PiiHasher";
+import { checkCfTurnstileToken } from "@calndrbrnd/lib/server/checkCfTurnstileToken";
+import { prisma } from "@calndrbrnd/prisma";
+import { signupSchema } from "@calndrbrnd/prisma/zod-utils";
 
 async function ensureSignupIsEnabled(body: Record<string, string>) {
   const { token } = signupSchema

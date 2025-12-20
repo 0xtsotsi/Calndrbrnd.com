@@ -4,13 +4,13 @@ import { unstable_cache } from "next/cache";
 import { headers, cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getTeamMemberPermissions } from "@calcom/features/pbac/lib/team-member-permissions";
-import { RoleManagementFactory } from "@calcom/features/pbac/services/role-management.factory";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { PrismaAttributeRepository } from "@calcom/lib/server/repository/PrismaAttributeRepository";
-import { prisma } from "@calcom/prisma";
-import { viewerTeamsRouter } from "@calcom/trpc/server/routers/viewer/teams/_router";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getTeamMemberPermissions } from "@calndrbrnd/features/pbac/lib/team-member-permissions";
+import { RoleManagementFactory } from "@calndrbrnd/features/pbac/services/role-management.factory";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { PrismaAttributeRepository } from "@calndrbrnd/lib/server/repository/PrismaAttributeRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import { viewerTeamsRouter } from "@calndrbrnd/trpc/server/routers/viewer/teams/_router";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

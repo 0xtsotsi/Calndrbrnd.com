@@ -15,8 +15,8 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { User, Team, Membership } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { User, Team, Membership } from "@calndrbrnd/prisma/client";
 
 describe("Organizations Attributes Endpoints", () => {
   describe("User lacks required role", () => {

@@ -1,19 +1,19 @@
 import type { GetServerSidePropsContext } from "next";
 import { z } from "zod";
 
-import { filterEventTypesWhereLocationUpdateIsAllowed } from "@calcom/app-store/_utils/getBulkEventTypes";
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
-import type { LocationObject } from "@calcom/app-store/locations";
-import { isConferencing as isConferencingApp } from "@calcom/app-store/utils";
-import { getLocale } from "@calcom/features/auth/lib/getLocale";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { AppOnboardingSteps } from "@calcom/lib/apps/appOnboardingSteps";
-import { CAL_URL } from "@calcom/lib/constants";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { eventTypeBookingFields } from "@calcom/prisma/zod-utils";
+import { filterEventTypesWhereLocationUpdateIsAllowed } from "@calndrbrnd/app-store/_utils/getBulkEventTypes";
+import { appStoreMetadata } from "@calndrbrnd/app-store/appStoreMetaData";
+import type { LocationObject } from "@calndrbrnd/app-store/locations";
+import { isConferencing as isConferencingApp } from "@calndrbrnd/app-store/utils";
+import { getLocale } from "@calndrbrnd/features/auth/lib/getLocale";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { AppOnboardingSteps } from "@calndrbrnd/lib/apps/appOnboardingSteps";
+import { CAL_URL } from "@calndrbrnd/lib/constants";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { eventTypeBookingFields } from "@calndrbrnd/prisma/zod-utils";
 
 import { STEPS } from "~/apps/installation/[[...step]]/constants";
 import type { OnboardingPageProps, TEventTypeGroup } from "~/apps/installation/[[...step]]/step-view";

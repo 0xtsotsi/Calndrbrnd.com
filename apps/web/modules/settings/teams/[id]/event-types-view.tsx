@@ -2,15 +2,15 @@
 
 import { useRouter } from "next/navigation";
 
-import { useOrgBranding } from "@calcom/features/ee/organizations/context/provider";
-import { TeamEventTypeForm } from "@calcom/features/ee/teams/components/TeamEventTypeForm";
-import { useCreateEventType } from "@calcom/features/eventtypes/hooks/useCreateEventType";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { WizardLayout } from "@calcom/ui/components/layout";
-import { showToast } from "@calcom/ui/components/toast";
+import { useOrgBranding } from "@calndrbrnd/features/ee/organizations/context/provider";
+import { TeamEventTypeForm } from "@calndrbrnd/features/ee/teams/components/TeamEventTypeForm";
+import { useCreateEventType } from "@calndrbrnd/features/eventtypes/hooks/useCreateEventType";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { WizardLayout } from "@calndrbrnd/ui/components/layout";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 type CreateTeamEventTypeProps = {
   permissions: { canCreateEventType: boolean };

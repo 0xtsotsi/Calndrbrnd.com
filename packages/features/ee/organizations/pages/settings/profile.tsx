@@ -6,36 +6,36 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { subdomainSuffix } from "@calcom/features/ee/organizations/lib/orgDomains";
-import OrgAppearanceViewWrapper from "@calcom/features/ee/organizations/pages/settings/appearance";
-import SectionBottomActions from "@calcom/features/settings/SectionBottomActions";
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { md } from "@calcom/lib/markdownIt";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import turndown from "@calcom/lib/turndownService";
-import type { Prisma } from "@calcom/prisma/client";
-import { trpc } from "@calcom/trpc/react";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { LinkIconButton } from "@calcom/ui/components/button";
-import { Editor } from "@calcom/ui/components/editor";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { BannerUploader, ImageUploader } from "@calcom/ui/components/image-uploader";
+import LicenseRequired from "@calndrbrnd/features/ee/common/components/LicenseRequired";
+import { subdomainSuffix } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import OrgAppearanceViewWrapper from "@calndrbrnd/features/ee/organizations/pages/settings/appearance";
+import SectionBottomActions from "@calndrbrnd/features/settings/SectionBottomActions";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { md } from "@calndrbrnd/lib/markdownIt";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import turndown from "@calndrbrnd/lib/turndownService";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { LinkIconButton } from "@calndrbrnd/ui/components/button";
+import { Editor } from "@calndrbrnd/ui/components/editor";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { BannerUploader, ImageUploader } from "@calndrbrnd/ui/components/image-uploader";
 // if I include this in the above barrel import, I get a runtime error that the component is not exported.
-import { OrgBanner } from "@calcom/ui/components/organization-banner";
+import { OrgBanner } from "@calndrbrnd/ui/components/organization-banner";
 import {
   SkeletonButton,
   SkeletonContainer,
   SkeletonText,
   SkeletonAvatar,
-} from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { useOrgBranding } from "../../../organizations/context/provider";
 

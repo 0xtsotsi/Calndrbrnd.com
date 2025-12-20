@@ -1,20 +1,20 @@
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { LookupTarget, ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import type { UserWithLegacySelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { eventTypeSelect } from "@calcom/lib/server/eventTypeSelect";
-import type { PrismaClient } from "@calcom/prisma";
-import { availabilityUserSelect, userSelect as userSelectWithSelectedCalendars } from "@calcom/prisma";
-import type { EventType as PrismaEventType } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import { EventTypeMetaDataSchema, rrSegmentQueryValueSchema } from "@calcom/prisma/zod-utils";
-import type { Ensure } from "@calcom/types/utils";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { LookupTarget, ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import type { UserWithLegacySelectedCalendars } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { withSelectedCalendars } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { ErrorWithCode } from "@calndrbrnd/lib/errors";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { eventTypeSelect } from "@calndrbrnd/lib/server/eventTypeSelect";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { availabilityUserSelect, userSelect as userSelectWithSelectedCalendars } from "@calndrbrnd/prisma";
+import type { EventType as PrismaEventType } from "@calndrbrnd/prisma/client";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
+import { EventTypeMetaDataSchema, rrSegmentQueryValueSchema } from "@calndrbrnd/prisma/zod-utils";
+import type { Ensure } from "@calndrbrnd/types/utils";
 
 const log = logger.getSubLogger({ prefix: ["repository/eventType"] });
 

@@ -1,9 +1,9 @@
 import { defaultResponderForAppDir } from "app/api/defaultResponderForAppDir";
 import { NextResponse } from "next/server";
 
-import renderEmail from "@calcom/emails/src/renderEmail";
-import { IS_PRODUCTION } from "@calcom/lib/constants";
-import { getTranslation } from "@calcom/lib/server/i18n";
+import renderEmail from "@calndrbrnd/emails/src/renderEmail";
+import { IS_PRODUCTION } from "@calndrbrnd/lib/constants";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
 
 /**
  * This API endpoint is used for development purposes to preview email templates

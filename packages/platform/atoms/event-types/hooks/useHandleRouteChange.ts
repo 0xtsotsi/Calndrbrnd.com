@@ -1,11 +1,11 @@
-// eslint-disable-next-line @calcom/eslint/deprecated-imports-next-router
+// eslint-disable-next-line @calndrbrnd/eslint/deprecated-imports-next-router
 import { useEffect } from "react";
 
 import type {
   EventTypeAssignedUsers,
   EventTypeHosts,
-} from "@calcom/features/eventtypes/components/EventType";
-import { checkForEmptyAssignment } from "@calcom/features/eventtypes/lib/checkForEmptyAssignment";
+} from "@calndrbrnd/features/eventtypes/components/EventType";
+import { checkForEmptyAssignment } from "@calndrbrnd/features/eventtypes/lib/checkForEmptyAssignment";
 
 export const useHandleRouteChange = ({
   isTeamEventTypeDeleted,

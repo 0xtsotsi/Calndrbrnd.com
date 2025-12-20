@@ -2,9 +2,9 @@ import type { UseMutationOptions } from "@tanstack/react-query";
 import { useMutation } from "@tanstack/react-query";
 import { usePathname } from "next/navigation";
 
-import type { IntegrationOAuthCallbackState } from "@calcom/app-store/types";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import type { App } from "@calcom/types/App";
+import type { IntegrationOAuthCallbackState } from "@calndrbrnd/app-store/types";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import type { App } from "@calndrbrnd/types/App";
 
 function gotoUrl(url: string, newTab?: boolean) {
   if (newTab) {

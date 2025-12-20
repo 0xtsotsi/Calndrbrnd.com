@@ -1,10 +1,10 @@
-import { appKeysSchemas } from "@calcom/app-store/apps.keys-schemas.generated";
-import { getLocalAppMetadata } from "@calcom/app-store/utils";
-import type { PrismaClient } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import type { AppCategories } from "@calcom/prisma/enums";
+import { appKeysSchemas } from "@calndrbrnd/app-store/apps.keys-schemas.generated";
+import { getLocalAppMetadata } from "@calndrbrnd/app-store/utils";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { AppCategories } from "@calndrbrnd/prisma/enums";
 
-// import prisma from "@calcom/prisma";
+// import prisma from "@calndrbrnd/prisma";
 import { TRPCError } from "@trpc/server";
 
 import type { TrpcSessionUser } from "../../../types";

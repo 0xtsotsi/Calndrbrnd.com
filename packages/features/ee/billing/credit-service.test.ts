@@ -1,12 +1,12 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import * as EmailManager from "@calcom/emails/billing-email-service";
-import { CreditsRepository } from "@calcom/features/credits/repositories/CreditsRepository";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import { CreditType } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import * as EmailManager from "@calndrbrnd/emails/billing-email-service";
+import { CreditsRepository } from "@calndrbrnd/features/credits/repositories/CreditsRepository";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import getOrgIdFromMemberOrTeamId from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import { CreditType } from "@calndrbrnd/prisma/enums";
 
 import { CreditService } from "./credit-service";
 import { SubscriptionStatus } from "./repository/billing/IBillingRepository";
@@ -18,7 +18,7 @@ const MOCK_TX = {
   },
 };
 
-vi.mock("@calcom/prisma", async (importOriginal) => {
+vi.mock("@calndrbrnd/prisma", async (importOriginal) => {
   const actual = await importOriginal();
   return {
     ...actual,
@@ -54,11 +54,11 @@ const mockStripe = vi.hoisted(() => ({
   },
 }));
 
-vi.mock("@calcom/features/ee/payments/server/stripe", () => ({
+vi.mock("@calndrbrnd/features/ee/payments/server/stripe", () => ({
   default: mockStripe,
 }));
 
-vi.mock("@calcom/lib/server/i18n", () => {
+vi.mock("@calndrbrnd/lib/server/i18n", () => {
   return {
     getTranslation: async (locale: string, namespace: string) => {
       const t = (key: string) => key;
@@ -69,15 +69,15 @@ vi.mock("@calcom/lib/server/i18n", () => {
   };
 });
 
-vi.mock("@calcom/lib/constants", async () => {
-  const actual = (await vi.importActual("@calcom/lib/constants")) as typeof import("@calcom/lib/constants");
+vi.mock("@calndrbrnd/lib/constants", async () => {
+  const actual = (await vi.importActual("@calndrbrnd/lib/constants")) as typeof import("@calndrbrnd/lib/constants");
   return {
     ...actual,
     IS_SMS_CREDITS_ENABLED: true,
   };
 });
 
-vi.mock("@calcom/prisma/enums", async (importOriginal) => {
+vi.mock("@calndrbrnd/prisma/enums", async (importOriginal) => {
   const actual = await importOriginal();
   return {
     ...actual,
@@ -88,22 +88,22 @@ vi.mock("@calcom/prisma/enums", async (importOriginal) => {
   };
 });
 
-vi.mock("@calcom/lib/server/repository/credits");
-vi.mock("@calcom/features/membership/repositories/MembershipRepository");
-vi.mock("@calcom/features/ee/teams/repositories/TeamRepository");
-vi.mock("@calcom/features/credits/repositories/CreditsRepository");
-vi.mock("@calcom/emails/billing-email-service", () => ({
+vi.mock("@calndrbrnd/lib/server/repository/credits");
+vi.mock("@calndrbrnd/features/membership/repositories/MembershipRepository");
+vi.mock("@calndrbrnd/features/ee/teams/repositories/TeamRepository");
+vi.mock("@calndrbrnd/features/credits/repositories/CreditsRepository");
+vi.mock("@calndrbrnd/emails/billing-email-service", () => ({
   sendCreditBalanceLimitReachedEmails: vi.fn().mockResolvedValue(undefined),
   sendCreditBalanceLowWarningEmails: vi.fn().mockResolvedValue(undefined),
 }));
 vi.mock("../workflows/lib/reminders/reminderScheduler", () => ({
   cancelScheduledMessagesAndScheduleEmails: vi.fn().mockResolvedValue(undefined),
 }));
-vi.mock("@calcom/lib/getOrgIdFromMemberOrTeamId", () => ({
+vi.mock("@calndrbrnd/lib/getOrgIdFromMemberOrTeamId", () => ({
   default: vi.fn().mockResolvedValue(null),
 }));
 
-vi.mock("@calcom/ee/billing/di/containers/Billing", () => ({
+vi.mock("@calndrbrnd/ee/billing/di/containers/Billing", () => ({
   getBillingProviderService: vi.fn(),
   getTeamBillingServiceFactory: vi.fn(),
   getTeamBillingDataRepository: vi.fn(),
@@ -140,7 +140,7 @@ describe("CreditService", () => {
     vi.mocked(CreditsRepository.findCreditExpenseLogByExternalRef).mockResolvedValue(null);
 
     const { getBillingProviderService, getTeamBillingServiceFactory } = await import(
-      "@calcom/ee/billing/di/containers/Billing"
+      "@calndrbrnd/ee/billing/di/containers/Billing"
     );
 
     const mockBillingProviderService = {
@@ -474,7 +474,7 @@ describe("CreditService", () => {
         const mockTeamBillingService = {
           getSubscriptionStatus: vi.fn().mockResolvedValue(SubscriptionStatus.TRIALING),
         };
-        const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+        const { getTeamBillingServiceFactory } = await import("@calndrbrnd/ee/billing/di/containers/Billing");
         vi.mocked(getTeamBillingServiceFactory).mockReturnValue({
           init: vi.fn().mockReturnValue(mockTeamBillingService),
           findAndInit: vi.fn().mockResolvedValue(mockTeamBillingService),
@@ -502,7 +502,7 @@ describe("CreditService", () => {
           getPrice: vi.fn().mockResolvedValue({ unit_amount: 1000 }),
         };
         const { getBillingProviderService, getTeamBillingServiceFactory } = await import(
-          "@calcom/ee/billing/di/containers/Billing"
+          "@calndrbrnd/ee/billing/di/containers/Billing"
         );
         vi.mocked(getBillingProviderService).mockReturnValue(mockBillingProviderService);
         vi.mocked(getTeamBillingServiceFactory).mockReturnValue({
@@ -529,7 +529,7 @@ describe("CreditService", () => {
         const mockTeamBillingService = {
           getSubscriptionStatus: vi.fn().mockResolvedValue(SubscriptionStatus.ACTIVE),
         };
-        const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+        const { getTeamBillingServiceFactory } = await import("@calndrbrnd/ee/billing/di/containers/Billing");
         vi.mocked(getTeamBillingServiceFactory).mockReturnValue({
           init: vi.fn().mockReturnValue(mockTeamBillingService),
           findAndInit: vi.fn().mockResolvedValue(mockTeamBillingService),
@@ -554,7 +554,7 @@ describe("CreditService", () => {
         const mockTeamBillingService = {
           getSubscriptionStatus: vi.fn().mockResolvedValue(SubscriptionStatus.ACTIVE),
         };
-        const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+        const { getTeamBillingServiceFactory } = await import("@calndrbrnd/ee/billing/di/containers/Billing");
         vi.mocked(getTeamBillingServiceFactory).mockReturnValue({
           init: vi.fn().mockReturnValue(mockTeamBillingService),
           findAndInit: vi.fn().mockResolvedValue(mockTeamBillingService),

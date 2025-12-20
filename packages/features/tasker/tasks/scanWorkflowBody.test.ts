@@ -2,20 +2,20 @@ import prismaMock from "../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { lockUser, LockReason } from "@calcom/features/ee/api-keys/lib/autoLock";
-import { scheduleWorkflowNotifications } from "@calcom/features/ee/workflows/lib/scheduleWorkflowNotifications";
+import { lockUser, LockReason } from "@calndrbrnd/features/ee/api-keys/lib/autoLock";
+import { scheduleWorkflowNotifications } from "@calndrbrnd/features/ee/workflows/lib/scheduleWorkflowNotifications";
 
 import { scanWorkflowBody, iffyScanBody } from "./scanWorkflowBody";
 
-vi.mock("@calcom/features/ee/api-keys/lib/autoLock", async (importActual) => {
-  const actual = await importActual<typeof import("@calcom/features/ee/api-keys/lib/autoLock")>();
+vi.mock("@calndrbrnd/features/ee/api-keys/lib/autoLock", async (importActual) => {
+  const actual = await importActual<typeof import("@calndrbrnd/features/ee/api-keys/lib/autoLock")>();
   return {
     ...actual, // Keep all original exports
     lockUser: vi.fn(), // Override just the lockUser function
   };
 });
 
-vi.mock("@calcom/features/ee/workflows/lib/scheduleWorkflowNotifications", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/lib/scheduleWorkflowNotifications", () => ({
   scheduleWorkflowNotifications: vi.fn(),
 }));
 

@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse, ApiErrorResponse } from "@calcom/platform-types";
-import type { DuplicateScheduleHandlerReturn } from "@calcom/trpc/server/routers/viewer/availability/schedule/duplicate.handler";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiResponse, ApiErrorResponse } from "@calndrbrnd/platform-types";
+import type { DuplicateScheduleHandlerReturn } from "@calndrbrnd/trpc/server/routers/viewer/availability/schedule/duplicate.handler";
 
 import http from "../../lib/http";
 import { QUERY_KEY as ScheduleQueryKey } from "./useAtomSchedule";

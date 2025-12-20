@@ -3,24 +3,24 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useReducer, useState } from "react";
 
-import AccountDialog from "@calcom/app-store/office365video/components/AccountDialog";
-import { AppList } from "@calcom/features/apps/components/AppList";
-import DisconnectIntegrationModal from "@calcom/features/apps/components/DisconnectIntegrationModal";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { GOOGLE_MEET, OFFICE_365_VIDEO, ZOOM } from "@calcom/platform-constants";
-import { QueryCell } from "@calcom/trpc/components/QueryCell";
-import type { App } from "@calcom/types/App";
-import { Button } from "@calcom/ui/components/button";
+import AccountDialog from "@calndrbrnd/app-store/office365video/components/AccountDialog";
+import { AppList } from "@calndrbrnd/features/apps/components/AppList";
+import DisconnectIntegrationModal from "@calndrbrnd/features/apps/components/DisconnectIntegrationModal";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { GOOGLE_MEET, OFFICE_365_VIDEO, ZOOM } from "@calndrbrnd/platform-constants";
+import { QueryCell } from "@calndrbrnd/trpc/components/QueryCell";
+import type { App } from "@calndrbrnd/types/App";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   Dropdown,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownItem,
-} from "@calcom/ui/components/dropdown";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
-import { SkeletonContainer, SkeletonText } from "@calcom/ui/components/skeleton";
+} from "@calndrbrnd/ui/components/dropdown";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
+import { SkeletonContainer, SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 import { AtomsWrapper } from "../../src/components/atoms-wrapper";
 import { useToast } from "../../src/components/ui/use-toast";

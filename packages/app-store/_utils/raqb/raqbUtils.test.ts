@@ -1,16 +1,16 @@
 import { expect, describe, it, vi } from "vitest";
 
-import type { AttributesQueryValue, RaqbChild } from "@calcom/lib/raqb/types";
-import type { Attribute } from "@calcom/lib/service/attribute/server/getAttributes";
-import { AttributeType } from "@calcom/prisma/enums";
-import { RoutingFormFieldType } from "@calcom/routing-forms/lib/FieldTypes";
+import type { AttributesQueryValue, RaqbChild } from "@calndrbrnd/lib/raqb/types";
+import type { Attribute } from "@calndrbrnd/lib/service/attribute/server/getAttributes";
+import { AttributeType } from "@calndrbrnd/prisma/enums";
+import { RoutingFormFieldType } from "@calndrbrnd/routing-forms/lib/FieldTypes";
 
 import { getValueOfAttributeOption, acrossQueryValueCompatiblity } from "./raqbUtils";
 
 const { resolveQueryValue } = acrossQueryValueCompatiblity;
 
 // Mock the getFieldResponseValueAsLabel
-vi.mock("@calcom/app-store/routing-forms/lib/getFieldResponseValueAsLabel", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/getFieldResponseValueAsLabel", () => ({
   getFieldResponseValueAsLabel: ({ fieldResponseValue }: { field: any; fieldResponseValue: any }) => {
     // For testing, just return the value as-is
     return fieldResponseValue;

@@ -2,10 +2,10 @@
  * Domain types for Booking Services
  * These types are framework-agnostic and contain only the data required for booking operations
  */
-import type getBookingDataSchema from "@calcom/features/bookings/lib/getBookingDataSchema";
-import type getBookingDataSchemaForApi from "@calcom/features/bookings/lib/getBookingDataSchemaForApi";
-import type { TraceContext } from "@calcom/lib/tracing";
-import type { SchedulingType } from "@calcom/prisma/enums";
+import type getBookingDataSchema from "@calndrbrnd/features/bookings/lib/getBookingDataSchema";
+import type getBookingDataSchemaForApi from "@calndrbrnd/features/bookings/lib/getBookingDataSchemaForApi";
+import type { TraceContext } from "@calndrbrnd/lib/tracing";
+import type { SchedulingType } from "@calndrbrnd/prisma/enums";
 
 import type { ExtendedBookingCreateBody } from "../bookingCreateBodySchema";
 import type { RegularBookingService } from "../service/RegularBookingService";

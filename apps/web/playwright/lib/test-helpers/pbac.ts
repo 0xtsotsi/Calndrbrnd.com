@@ -1,5 +1,5 @@
-import { PERMISSION_REGISTRY } from "@calcom/features/pbac/domain/types/permission-registry";
-import { prisma } from "@calcom/prisma";
+import { PERMISSION_REGISTRY } from "@calndrbrnd/features/pbac/domain/types/permission-registry";
+import { prisma } from "@calndrbrnd/prisma";
 
 // Create array of all permissions from PERMISSION_REGISTRY
 export const createAllPermissionsArray = () => {

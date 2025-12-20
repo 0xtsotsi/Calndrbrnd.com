@@ -5,10 +5,10 @@
 import dotEnv from "dotenv";
 import path from "path";
 
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { AppCategories } from "@calcom/prisma/enums";
+import { appStoreMetadata } from "@calndrbrnd/app-store/appStoreMetaData";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { AppCategories } from "@calndrbrnd/prisma/enums";
 
 dotEnv.config({ path: path.resolve(__dirname, "../.env.appStore") });
 

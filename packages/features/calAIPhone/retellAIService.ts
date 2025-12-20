@@ -1,6 +1,6 @@
-import logger from "@calcom/lib/logger";
-import { fetcher } from "@calcom/lib/retellAIFetcher";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import logger from "@calndrbrnd/lib/logger";
+import { fetcher } from "@calndrbrnd/lib/retellAIFetcher";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
 
 import type {
   TCreateRetellLLMSchema,

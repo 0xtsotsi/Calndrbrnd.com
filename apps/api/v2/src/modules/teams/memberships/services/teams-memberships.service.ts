@@ -4,7 +4,7 @@ import { UpdateTeamMembershipInput } from "@/modules/teams/memberships/inputs/up
 import { TeamsMembershipsRepository } from "@/modules/teams/memberships/teams-memberships.repository";
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 
-import { TeamService } from "@calcom/platform-libraries";
+import { TeamService } from "@calndrbrnd/platform-libraries";
 
 export const PLATFORM_USER_BEING_ADDED_TO_REGULAR_TEAM_ERROR = `Can't add user to team - the user is platform managed user but team is not because team probably was not created using OAuth credentials.`;
 export const REGULAR_USER_BEING_ADDED_TO_PLATFORM_TEAM_ERROR = `Can't add user to team - the user is not platform managed user but team is platform managed. Both have to be created using OAuth credentials.`;

@@ -1,4 +1,4 @@
-import { IdentityProvider, UserPermissionRole } from "@calcom/prisma/enums";
+import { IdentityProvider, UserPermissionRole } from "@calndrbrnd/prisma/enums";
 
 export const getSampleUserInSession = function () {
   return {

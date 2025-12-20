@@ -16,7 +16,7 @@ import { TeamsEventTypesService } from "@/modules/teams/event-types/services/tea
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post, UseGuards } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 import {
   CreatePrivateLinkInput,
   CreatePrivateLinkOutput,
@@ -24,7 +24,7 @@ import {
   GetPrivateLinksOutput,
   UpdatePrivateLinkInput,
   UpdatePrivateLinkOutput,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 import { PrivateLinksService } from "../services/private-links.service";
 

@@ -1,4 +1,4 @@
-import type { LuckyUserService } from "@calcom/features/bookings/lib/getLuckyUser";
+import type { LuckyUserService } from "@calndrbrnd/features/bookings/lib/getLuckyUser";
 
 import { createContainer } from "../di";
 import { moduleLoader as luckyUserServiceModuleLoader } from "../modules/LuckyUser";

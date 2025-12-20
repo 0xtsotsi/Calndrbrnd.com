@@ -1,10 +1,10 @@
 import type { TFunction } from "i18next";
 
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import type { PrismaClient } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 interface UserWithBillingAccess {
   id: number;

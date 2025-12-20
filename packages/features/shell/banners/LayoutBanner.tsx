@@ -1,24 +1,24 @@
 import ImpersonatingBanner, {
   type ImpersonatingBannerProps,
-} from "@calcom/features/ee/impersonation/components/ImpersonatingBanner";
+} from "@calndrbrnd/features/ee/impersonation/components/ImpersonatingBanner";
 import {
   OrgUpgradeBanner,
   type OrgUpgradeBannerProps,
-} from "@calcom/features/ee/organizations/components/OrgUpgradeBanner";
-import { TeamsUpgradeBanner, type TeamsUpgradeBannerProps } from "@calcom/features/ee/teams/components";
+} from "@calndrbrnd/features/ee/organizations/components/OrgUpgradeBanner";
+import { TeamsUpgradeBanner, type TeamsUpgradeBannerProps } from "@calndrbrnd/features/ee/teams/components";
 import AdminPasswordBanner, {
   type AdminPasswordBannerProps,
-} from "@calcom/features/users/components/AdminPasswordBanner";
+} from "@calndrbrnd/features/users/components/AdminPasswordBanner";
 import CalendarCredentialBanner, {
   type CalendarCredentialBannerProps,
-} from "@calcom/features/users/components/CalendarCredentialBanner";
+} from "@calndrbrnd/features/users/components/CalendarCredentialBanner";
 import {
   InvalidAppCredentialBanners,
   type InvalidAppCredentialBannersProps,
-} from "@calcom/features/users/components/InvalidAppCredentialsBanner";
+} from "@calndrbrnd/features/users/components/InvalidAppCredentialsBanner";
 import VerifyEmailBanner, {
   type VerifyEmailBannerProps,
-} from "@calcom/features/users/components/VerifyEmailBanner";
+} from "@calndrbrnd/features/users/components/VerifyEmailBanner";
 
 type BannerTypeProps = {
   teamUpgradeBanner: TeamsUpgradeBannerProps;

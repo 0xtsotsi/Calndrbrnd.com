@@ -1,7 +1,7 @@
-import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "@calcom/features/di/di";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import { moduleLoader as prismaModuleLoader } from "@calcom/features/di/modules/Prisma";
+import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "@calndrbrnd/features/di/di";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import { moduleLoader as prismaModuleLoader } from "@calndrbrnd/features/di/modules/Prisma";
 
 export const membershipRepositoryModule = createModule();
 const token = DI_TOKENS.MEMBERSHIP_REPOSITORY;

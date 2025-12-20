@@ -2,8 +2,8 @@ import { _generateMetadata, getTranslate } from "app/_utils";
 
 import LegacyPage, {
   TeamMembersCTA,
-} from "@calcom/features/ee/organizations/pages/settings/other-team-members-view";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
+} from "@calndrbrnd/features/ee/organizations/pages/settings/other-team-members-view";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
 
 import { validateUserHasOrg } from "../../../../actions/validateUserHasOrg";
 

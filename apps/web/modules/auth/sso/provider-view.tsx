@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
 
 import type { inferSSRProps } from "@lib/types/inferSSRProps";
 

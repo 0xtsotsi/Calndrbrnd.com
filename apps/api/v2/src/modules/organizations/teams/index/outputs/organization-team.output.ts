@@ -2,9 +2,9 @@ import { ApiProperty } from "@nestjs/swagger";
 import { Expose, Type } from "class-transformer";
 import { IsEnum, IsString, ValidateNested } from "class-validator";
 
-import { ERROR_STATUS, SUCCESS_STATUS } from "@calcom/platform-constants";
-import { MembershipRole } from "@calcom/platform-libraries";
-import { OrgTeamOutputDto } from "@calcom/platform-types";
+import { ERROR_STATUS, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { MembershipRole } from "@calndrbrnd/platform-libraries";
+import { OrgTeamOutputDto } from "@calndrbrnd/platform-types";
 
 export class OrgMeTeamOutputDto extends OrgTeamOutputDto {
   @IsString()

@@ -1,4 +1,4 @@
-import type { TrackingData } from "@calcom/lib/tracking";
+import type { TrackingData } from "@calndrbrnd/lib/tracking";
 
 import type {
   AIPhoneServiceUpdateModelParams,

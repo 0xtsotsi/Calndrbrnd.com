@@ -2,7 +2,7 @@ import { PrismaReadService } from "@/modules/prisma/prisma-read.service";
 import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { TestingModule } from "@nestjs/testing";
 
-import type { SelectedSlots } from "@calcom/prisma/client";
+import type { SelectedSlots } from "@calndrbrnd/prisma/client";
 
 export class SelectedSlotRepositoryFixture {
   private prismaReadClient: PrismaReadService["prisma"];

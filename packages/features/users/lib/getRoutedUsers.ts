@@ -1,13 +1,13 @@
-import { findTeamMembersMatchingAttributeLogic } from "@calcom/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
-import { enrichHostsWithDelegationCredentials } from "@calcom/app-store/delegationCredential";
-import getOrgIdFromMemberOrTeamId from "@calcom/lib/getOrgIdFromMemberOrTeamId";
-import logger from "@calcom/lib/logger";
-import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import type { RRResetInterval } from "@calcom/prisma/client";
-import type { RRTimestampBasis } from "@calcom/prisma/enums";
-import { SchedulingType } from "@calcom/prisma/enums";
-import type { CredentialPayload } from "@calcom/types/Credential";
+import { findTeamMembersMatchingAttributeLogic } from "@calndrbrnd/app-store/_utils/raqb/findTeamMembersMatchingAttributeLogic";
+import { enrichHostsWithDelegationCredentials } from "@calndrbrnd/app-store/delegationCredential";
+import getOrgIdFromMemberOrTeamId from "@calndrbrnd/lib/getOrgIdFromMemberOrTeamId";
+import logger from "@calndrbrnd/lib/logger";
+import type { AttributesQueryValue } from "@calndrbrnd/lib/raqb/types";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import type { RRResetInterval } from "@calndrbrnd/prisma/client";
+import type { RRTimestampBasis } from "@calndrbrnd/prisma/enums";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
 
 const log = logger.getSubLogger({ prefix: ["[getRoutedUsers]"] });
 

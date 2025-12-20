@@ -1,23 +1,23 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import type { DestinationCalendar } from "@calcom/prisma/client";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+import { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
+import { symmetricDecrypt } from "@calndrbrnd/lib/crypto";
+import type { DestinationCalendar } from "@calndrbrnd/prisma/client";
+import type { CredentialForCalendarService } from "@calndrbrnd/types/Credential";
 
 import EventManager from "./EventManager";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 
-vi.mock("@calcom/lib/crypto", () => ({
+vi.mock("@calndrbrnd/lib/crypto", () => ({
   symmetricDecrypt: vi.fn(),
 }));
 
-vi.mock("@calcom/features/credentials/repositories/CredentialRepository", () => ({
+vi.mock("@calndrbrnd/features/credentials/repositories/CredentialRepository", () => ({
   CredentialRepository: {
     findCredentialForCalendarServiceById: vi.fn(),
   },

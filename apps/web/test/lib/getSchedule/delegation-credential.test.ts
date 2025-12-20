@@ -12,8 +12,8 @@ import { expectNoAttemptToGetAvailability } from "../../utils/bookingScenario/ex
 
 import { describe, test } from "vitest";
 
-import { getAvailableSlotsService } from "@calcom/features/di/containers/AvailableSlots";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { getAvailableSlotsService } from "@calndrbrnd/features/di/containers/AvailableSlots";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { expect, expectedSlotsForSchedule } from "./expects";
 import { setupAndTeardown } from "./setupAndTeardown";

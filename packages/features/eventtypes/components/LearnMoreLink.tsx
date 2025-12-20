@@ -1,8 +1,8 @@
 import type { TFunction } from "i18next";
 import Link from "next/link";
 
-import ServerTrans from "@calcom/lib/components/ServerTrans";
-import { IS_CALCOM } from "@calcom/lib/constants";
+import ServerTrans from "@calndrbrnd/lib/components/ServerTrans";
+import { IS_CALCOM } from "@calndrbrnd/lib/constants";
 
 type LearnMoreLinkProps = {
   t: TFunction;

@@ -1,22 +1,22 @@
 import type Stripe from "stripe";
 import { z } from "zod";
 
-import { getStripeCustomerIdFromUserId } from "@calcom/app-store/stripepayment/lib/customer";
-import { getDubCustomer } from "@calcom/features/auth/lib/dub";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { CHECKOUT_SESSION_TYPES } from "@calcom/features/ee/billing/constants";
+import { getStripeCustomerIdFromUserId } from "@calndrbrnd/app-store/stripepayment/lib/customer";
+import { getDubCustomer } from "@calndrbrnd/features/auth/lib/dub";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { CHECKOUT_SESSION_TYPES } from "@calndrbrnd/features/ee/billing/constants";
 import {
   IS_PRODUCTION,
   ORGANIZATION_SELF_SERVE_PRICE,
   WEBAPP_URL,
   ORG_TRIAL_DAYS,
-} from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import { BillingPeriod } from "@calcom/prisma/zod-utils";
-import { teamMetadataSchema } from "@calcom/prisma/zod-utils";
-import { TrackingData } from "@calcom/lib/tracking";
+} from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import prisma from "@calndrbrnd/prisma";
+import { BillingPeriod } from "@calndrbrnd/prisma/zod-utils";
+import { teamMetadataSchema } from "@calndrbrnd/prisma/zod-utils";
+import { TrackingData } from "@calndrbrnd/lib/tracking";
 
 const log = logger.getSubLogger({ prefix: ["teams/lib/payments"] });
 const teamPaymentMetadataSchema = z.object({

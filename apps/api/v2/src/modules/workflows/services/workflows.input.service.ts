@@ -4,7 +4,7 @@ import { UpdateFormWorkflowDto } from "@/modules/workflows/inputs/update-form-wo
 import { WorkflowType } from "@/modules/workflows/workflows.repository";
 import { BadRequestException, Injectable } from "@nestjs/common";
 
-import { TUpdateInputSchema } from "@calcom/platform-libraries/workflows";
+import { TUpdateInputSchema } from "@calndrbrnd/platform-libraries/workflows";
 
 import {
   EMAIL_ADDRESS,

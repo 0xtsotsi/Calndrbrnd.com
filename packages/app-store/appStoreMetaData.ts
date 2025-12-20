@@ -1,4 +1,4 @@
-import type { AppMeta } from "@calcom/types/App";
+import type { AppMeta } from "@calndrbrnd/types/App";
 
 import { appStoreMetadata as rawAppStoreMetadata } from "./apps.metadata.generated";
 import { getNormalizedAppMetadata } from "./getNormalizedAppMetadata";

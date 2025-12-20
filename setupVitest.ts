@@ -3,7 +3,7 @@ import ResizeObserver from "resize-observer-polyfill";
 import { vi, expect } from "vitest";
 import createFetchMock from "vitest-fetch-mock";
 
-import type { CalendarService } from "@calcom/types/Calendar";
+import type { CalendarService } from "@calndrbrnd/types/Calendar";
 
 global.ResizeObserver = ResizeObserver;
 const fetchMocker = createFetchMock(vi);
@@ -44,15 +44,15 @@ class MockExchangeCalendarService implements CalendarService {
   }
 }
 
-vi.mock("@calcom/exchangecalendar/lib/CalendarService", () => ({
+vi.mock("@calndrbrnd/exchangecalendar/lib/CalendarService", () => ({
   default: MockExchangeCalendarService,
 }));
 
-vi.mock("@calcom/exchange2013calendar/lib/CalendarService", () => ({
+vi.mock("@calndrbrnd/exchange2013calendar/lib/CalendarService", () => ({
   default: MockExchangeCalendarService,
 }));
 
-vi.mock("@calcom/exchange2016calendar/lib/CalendarService", () => ({
+vi.mock("@calndrbrnd/exchange2016calendar/lib/CalendarService", () => ({
   default: MockExchangeCalendarService,
 }));
 
@@ -113,7 +113,7 @@ class MockPaymentService {
     return { success: true };
   }
   async afterPayment(event: any, booking: any, paymentData: any) {
-    const { sendAwaitingPaymentEmailAndSMS } = await import("@calcom/emails/email-manager");
+    const { sendAwaitingPaymentEmailAndSMS } = await import("@calndrbrnd/emails/email-manager");
     await sendAwaitingPaymentEmailAndSMS({
       ...event,
       paymentInfo: {
@@ -127,31 +127,31 @@ class MockPaymentService {
   }
 }
 
-vi.mock("@calcom/app-store/stripepayment/index", () => ({
+vi.mock("@calndrbrnd/app-store/stripepayment/index", () => ({
   PaymentService: MockPaymentService,
 }));
 
-vi.mock("@calcom/app-store/paypal/index", () => ({
+vi.mock("@calndrbrnd/app-store/paypal/index", () => ({
   PaymentService: MockPaymentService,
 }));
 
-vi.mock("@calcom/app-store/alby/index", () => ({
+vi.mock("@calndrbrnd/app-store/alby/index", () => ({
   PaymentService: MockPaymentService,
 }));
 
-vi.mock("@calcom/app-store/hitpay/index", () => ({
+vi.mock("@calndrbrnd/app-store/hitpay/index", () => ({
   PaymentService: MockPaymentService,
 }));
 
-vi.mock("@calcom/app-store/btcpayserver/index", () => ({
+vi.mock("@calndrbrnd/app-store/btcpayserver/index", () => ({
   PaymentService: MockPaymentService,
 }));
 
-vi.mock("@calcom/app-store/mock-payment-app/index", () => ({
+vi.mock("@calndrbrnd/app-store/mock-payment-app/index", () => ({
   PaymentService: MockPaymentService,
 }));
 
-vi.mock("@calcom/app-store/payment.services.generated", () => ({
+vi.mock("@calndrbrnd/app-store/payment.services.generated", () => ({
   PaymentServiceMap: {
     stripepayment: Promise.resolve({ PaymentService: MockPaymentService }),
     paypal: Promise.resolve({ PaymentService: MockPaymentService }),

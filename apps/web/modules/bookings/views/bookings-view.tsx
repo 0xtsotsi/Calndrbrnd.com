@@ -4,10 +4,10 @@ import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 
-import { DataTableProvider, type SystemFilterSegment, ColumnFilterType } from "@calcom/features/data-table";
-import { useSegments } from "@calcom/features/data-table/hooks/useSegments";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
+import { DataTableProvider, type SystemFilterSegment, ColumnFilterType } from "@calndrbrnd/features/data-table";
+import { useSegments } from "@calndrbrnd/features/data-table/hooks/useSegments";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { BookingListContainer } from "../components/BookingListContainer";
 import { useBookingsShellHeadingVisibility } from "../hooks/useBookingsShellHeadingVisibility";

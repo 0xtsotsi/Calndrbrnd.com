@@ -24,16 +24,16 @@ import {
 } from "@nestjs/swagger";
 import { z } from "zod";
 
-import { SCHEDULE_READ, SCHEDULE_WRITE, SUCCESS_STATUS } from "@calcom/platform-constants";
+import { SCHEDULE_READ, SCHEDULE_WRITE, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 import type {
   GetAvailabilityListHandlerReturn,
   DuplicateScheduleHandlerReturn,
-} from "@calcom/platform-libraries/schedules";
-import { getAvailabilityListHandler, duplicateScheduleHandler } from "@calcom/platform-libraries/schedules";
-import type { CreateScheduleHandlerReturn, CreateScheduleSchema } from "@calcom/platform-libraries/schedules";
-import { createScheduleHandler } from "@calcom/platform-libraries/schedules";
-import { FindDetailedScheduleByIdReturnType } from "@calcom/platform-libraries/schedules";
-import { ApiResponse, UpdateAtomScheduleDto } from "@calcom/platform-types";
+} from "@calndrbrnd/platform-libraries/schedules";
+import { getAvailabilityListHandler, duplicateScheduleHandler } from "@calndrbrnd/platform-libraries/schedules";
+import type { CreateScheduleHandlerReturn, CreateScheduleSchema } from "@calndrbrnd/platform-libraries/schedules";
+import { createScheduleHandler } from "@calndrbrnd/platform-libraries/schedules";
+import { FindDetailedScheduleByIdReturnType } from "@calndrbrnd/platform-libraries/schedules";
+import { ApiResponse, UpdateAtomScheduleDto } from "@calndrbrnd/platform-types";
 
 import { SchedulesAtomsService } from "../services/schedules-atom.service";
 

@@ -1,12 +1,12 @@
 import { useSession } from "next-auth/react";
 import type { Dispatch } from "react";
 
-import MemberInvitationModal from "@calcom/features/ee/teams/components/MemberInvitationModal";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { CreationSource } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc";
-import { showToast } from "@calcom/ui/components/toast";
-import usePlatformMe from "@calcom/web/components/settings/platform/hooks/usePlatformMe";
+import MemberInvitationModal from "@calndrbrnd/features/ee/teams/components/MemberInvitationModal";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { CreationSource } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import usePlatformMe from "@calndrbrnd/web/components/settings/platform/hooks/usePlatformMe";
 
 import type { UserTableAction } from "./types";
 

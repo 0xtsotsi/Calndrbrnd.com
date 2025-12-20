@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createMocks } from "node-mocks-http";
 import { describe, it, expect, beforeAll } from "vitest";
 
-import prisma from "@calcom/prisma";
+import prisma from "@calndrbrnd/prisma";
 
 import { isAdminGuard } from "../../../lib/utils/isAdmin";
 import { ScopeOfAdmin } from "../../../lib/utils/scopeOfAdmin";

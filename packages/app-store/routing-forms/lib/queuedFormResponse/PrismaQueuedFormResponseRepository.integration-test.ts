@@ -1,7 +1,7 @@
 import { describe, expect, beforeAll, afterAll, beforeEach, it } from "vitest";
 
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import { PrismaQueuedFormResponseRepository } from "./PrismaQueuedFormResponseRepository";
 

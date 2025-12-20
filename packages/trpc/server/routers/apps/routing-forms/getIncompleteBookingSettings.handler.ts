@@ -1,9 +1,9 @@
-import { enabledIncompleteBookingApps } from "@calcom/app-store/routing-forms/lib/enabledIncompleteBookingApps";
-import { entityPrismaWhereClause } from "@calcom/features/pbac/lib/entityPermissionUtils.server";
-import type { Credential } from "@calcom/kysely/types";
-import type { PrismaClient } from "@calcom/prisma";
-import { safeCredentialSelect } from "@calcom/prisma/selects/credential";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { enabledIncompleteBookingApps } from "@calndrbrnd/app-store/routing-forms/lib/enabledIncompleteBookingApps";
+import { entityPrismaWhereClause } from "@calndrbrnd/features/pbac/lib/entityPermissionUtils.server";
+import type { Credential } from "@calndrbrnd/kysely/types";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { safeCredentialSelect } from "@calndrbrnd/prisma/selects/credential";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

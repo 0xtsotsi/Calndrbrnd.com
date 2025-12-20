@@ -1,10 +1,10 @@
 import { v4 as uuidv4 } from "uuid";
 import z from "zod";
 
-import { IS_PRODUCTION, WEBAPP_URL } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+import { IS_PRODUCTION, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 class Paypal {
   url: string;

@@ -1,19 +1,19 @@
-import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calcom/app-store/routing-forms/lib/formSubmissionUtils";
-import dayjs from "@calcom/dayjs";
-import { getCalEventResponses } from "@calcom/features/bookings/lib/getCalEventResponses";
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import { handleInsufficientCredits } from "@calcom/features/ee/billing/helpers/handleInsufficientCredits";
-import { formatIdentifierToVariable } from "@calcom/features/ee/workflows/lib/reminders/templates/customTemplate";
-import { WorkflowReminderRepository } from "@calcom/features/ee/workflows/lib/repository/workflowReminder";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
+import type { FORM_SUBMITTED_WEBHOOK_RESPONSES } from "@calndrbrnd/app-store/routing-forms/lib/formSubmissionUtils";
+import dayjs from "@calndrbrnd/dayjs";
+import { getCalEventResponses } from "@calndrbrnd/features/bookings/lib/getCalEventResponses";
+import { createDefaultAIPhoneServiceProvider } from "@calndrbrnd/features/calAIPhone";
+import { handleInsufficientCredits } from "@calndrbrnd/features/ee/billing/helpers/handleInsufficientCredits";
+import { formatIdentifierToVariable } from "@calndrbrnd/features/ee/workflows/lib/reminders/templates/customTemplate";
+import { WorkflowReminderRepository } from "@calndrbrnd/features/ee/workflows/lib/repository/workflowReminder";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
 import {
   getSubmitterEmail,
   getSubmitterName,
-} from "@calcom/features/tasker/tasks/triggerFormSubmittedNoEvent/formSubmissionValidation";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import logger from "@calcom/lib/logger";
-import prisma from "@calcom/prisma";
-import { CreditUsageType } from "@calcom/prisma/enums";
+} from "@calndrbrnd/features/tasker/tasks/triggerFormSubmittedNoEvent/formSubmissionValidation";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import logger from "@calndrbrnd/lib/logger";
+import prisma from "@calndrbrnd/prisma";
+import { CreditUsageType } from "@calndrbrnd/prisma/enums";
 
 interface ExecuteAIPhoneCallPayload {
   workflowReminderId: number;
@@ -142,7 +142,7 @@ export async function executeAIPhoneCall(payload: string) {
     }
 
     if (data.userId || data.teamId) {
-      const { CreditService } = await import("@calcom/features/ee/billing/credit-service");
+      const { CreditService } = await import("@calndrbrnd/features/ee/billing/credit-service");
       const creditService = new CreditService();
 
       const hasCredits = await creditService.hasAvailableCredits({

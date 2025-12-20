@@ -2,13 +2,13 @@
 
 import { useState, useEffect, useMemo } from "react";
 
-import { SingleValueComponent } from "@calcom/features/calendars/DestinationCalendarSelector";
-import { OptionComponent } from "@calcom/features/calendars/DestinationCalendarSelector";
-import type { ConnectedDestinationCalendars } from "@calcom/features/calendars/lib/getConnectedDestinationCalendars";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import classNames from "@calcom/ui/classNames";
-import { Badge } from "@calcom/ui/components/badge";
-import { Select } from "@calcom/ui/components/form";
+import { SingleValueComponent } from "@calndrbrnd/features/calendars/DestinationCalendarSelector";
+import { OptionComponent } from "@calndrbrnd/features/calendars/DestinationCalendarSelector";
+import type { ConnectedDestinationCalendars } from "@calndrbrnd/features/calendars/lib/getConnectedDestinationCalendars";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Select } from "@calndrbrnd/ui/components/form";
 
 import { getPlaceholderContent } from "../lib/getPlaceholderContent";
 

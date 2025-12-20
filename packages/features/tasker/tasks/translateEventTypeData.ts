@@ -1,9 +1,9 @@
 import { z } from "zod";
 
-import { EventTypeTranslationRepository } from "@calcom/features/eventTypeTranslation/repositories/EventTypeTranslationRepository";
-import { locales as i18nLocales } from "@calcom/lib/i18n";
-import logger from "@calcom/lib/logger";
-import { EventTypeAutoTranslatedField } from "@calcom/prisma/enums";
+import { EventTypeTranslationRepository } from "@calndrbrnd/features/eventTypeTranslation/repositories/EventTypeTranslationRepository";
+import { locales as i18nLocales } from "@calndrbrnd/lib/i18n";
+import logger from "@calndrbrnd/lib/logger";
+import { EventTypeAutoTranslatedField } from "@calndrbrnd/prisma/enums";
 
 export const ZTranslateEventDataPayloadSchema = z.object({
   eventTypeId: z.number(),
@@ -42,7 +42,7 @@ async function processTranslations({
   text: string;
   field: EventTypeAutoTranslatedField;
 } & z.infer<typeof ZTranslateEventDataPayloadSchema>) {
-  const { LingoDotDevService } = await import("@calcom/lib/server/service/lingoDotDev");
+  const { LingoDotDevService } = await import("@calndrbrnd/lib/server/service/lingoDotDev");
 
   try {
     const targetLocales = SUPPORTED_LOCALES.filter(

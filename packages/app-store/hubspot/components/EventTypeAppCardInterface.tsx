@@ -1,13 +1,13 @@
 import { usePathname } from "next/navigation";
 
-import { useAppContextWithSchema } from "@calcom/app-store/EventTypeAppContext";
-import AppCard from "@calcom/app-store/_components/AppCard";
-import useIsAppEnabled from "@calcom/app-store/_utils/useIsAppEnabled";
-import type { EventTypeAppCardComponent } from "@calcom/app-store/types";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Switch } from "@calcom/ui/components/form";
-import { Section } from "@calcom/ui/components/section";
+import { useAppContextWithSchema } from "@calndrbrnd/app-store/EventTypeAppContext";
+import AppCard from "@calndrbrnd/app-store/_components/AppCard";
+import useIsAppEnabled from "@calndrbrnd/app-store/_utils/useIsAppEnabled";
+import type { EventTypeAppCardComponent } from "@calndrbrnd/app-store/types";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Section } from "@calndrbrnd/ui/components/section";
 
 import type { appDataSchema } from "../zod";
 

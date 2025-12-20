@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["@calcom/platform-constants"],
+  transpilePackages: ["@calndrbrnd/platform-constants"],
   webpack: (config, { webpack, buildId }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback, // if you miss it, all the other options in fallback, specified

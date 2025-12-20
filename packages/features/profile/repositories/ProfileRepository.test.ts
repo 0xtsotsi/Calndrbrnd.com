@@ -2,16 +2,16 @@ import prismock from "../../../../tests/libs/__mocks__/prisma";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import type { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { ProfileRepository, LookupTarget } from "./ProfileRepository";
 
-vi.mock("@calcom/features/ee/teams/lib/getParsedTeam", () => ({
+vi.mock("@calndrbrnd/features/ee/teams/lib/getParsedTeam", () => ({
   getParsedTeam: <T>(org: T) => org,
 }));
 
-vi.mock("@calcom/lib/logger", () => ({
+vi.mock("@calndrbrnd/lib/logger", () => ({
   default: {
     getSubLogger: () => ({
       debug: vi.fn(),

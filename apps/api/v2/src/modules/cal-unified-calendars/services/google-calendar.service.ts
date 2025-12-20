@@ -7,8 +7,8 @@ import { NotFoundException } from "@nestjs/common";
 import { Logger } from "@nestjs/common";
 import { JWT } from "googleapis-common";
 
-import { DelegationCredentialRepository, OAuth2UniversalSchema } from "@calcom/platform-libraries/app-store";
-import type { Prisma } from "@calcom/prisma/client";
+import { DelegationCredentialRepository, OAuth2UniversalSchema } from "@calndrbrnd/platform-libraries/app-store";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import { UpdateUnifiedCalendarEventInput } from "../inputs/update-unified-calendar-event.input";
 import { GoogleCalendarEventInputPipe } from "../pipes/google-calendar-event-input-pipe";

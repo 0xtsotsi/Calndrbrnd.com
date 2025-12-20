@@ -5,19 +5,19 @@ import type { UseFormReturn } from "react-hook-form";
 import { FormProvider, useForm } from "react-hook-form";
 import { expect, vi } from "vitest";
 
-import PhoneInput from "@calcom/features/components/phone-input/PhoneInput";
+import PhoneInput from "@calndrbrnd/features/components/phone-input/PhoneInput";
 
 import { getBookingFieldsWithSystemFields } from "../../../lib/getBookingFields";
 import { BookingFields } from "./BookingFields";
 
 // Mock PhoneInput to avoid calling the lazy import
-vi.mock("@calcom/features/components/phone-input", () => {
+vi.mock("@calndrbrnd/features/components/phone-input", () => {
   return {
     default: PhoneInput,
   };
 });
 
-vi.mock("@calcom/ui/components/address", async (originalImport) => {
+vi.mock("@calndrbrnd/ui/components/address", async (originalImport) => {
   const { AddressInputNonLazy } = (await originalImport()) as Record<string, unknown>;
   // Dynamic imports of Components are not supported in Vitest. So, we use the non-lazy version of the components
   return {
@@ -29,7 +29,7 @@ vi.mock("@calcom/ui/components/address", async (originalImport) => {
 type FormMethods = UseFormReturn<any>;
 
 // Add tRPC mock before tests
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calndrbrnd/trpc/react", () => ({
   trpc: {
     viewer: {
       public: {

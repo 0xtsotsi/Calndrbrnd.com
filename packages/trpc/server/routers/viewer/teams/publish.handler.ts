@@ -1,8 +1,8 @@
-import { TeamService } from "@calcom/features/ee/teams/services/teamService";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { Redirect } from "@calcom/lib/redirect";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { TeamService } from "@calndrbrnd/features/ee/teams/services/teamService";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { Redirect } from "@calndrbrnd/lib/redirect";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 

@@ -2,16 +2,16 @@
 /// <reference path="../../../types/ical.d.ts"/>
 import ICAL from "ical.js";
 
-import dayjs from "@calcom/dayjs";
-import { symmetricDecrypt } from "@calcom/lib/crypto";
+import dayjs from "@calndrbrnd/dayjs";
+import { symmetricDecrypt } from "@calndrbrnd/lib/crypto";
 import type {
   Calendar,
   IntegrationCalendar,
   EventBusyDate,
   CalendarEvent,
   NewCalendarEventType,
-} from "@calcom/types/Calendar";
-import type { CredentialPayload } from "@calcom/types/Credential";
+} from "@calndrbrnd/types/Calendar";
+import type { CredentialPayload } from "@calndrbrnd/types/Credential";
 
 // for Apple's Travel Time feature only (for now)
 const getTravelDurationInSeconds = (vevent: ICAL.Component) => {
@@ -109,7 +109,7 @@ export default class ICSFeedCalendarService implements Calendar {
    * @returns {Promise<string | undefined>} - A Promise that resolves to the user's timezone or "Europe/London" as a default value if the timezone is not found.
    */
   getUserTimezoneFromDB = async (id: number): Promise<string | undefined> => {
-    const prisma = await import("@calcom/prisma").then((mod) => mod.default);
+    const prisma = await import("@calndrbrnd/prisma").then((mod) => mod.default);
     const user = await prisma.user.findUnique({
       where: {
         id,

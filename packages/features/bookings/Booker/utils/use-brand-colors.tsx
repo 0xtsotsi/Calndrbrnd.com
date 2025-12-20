@@ -1,6 +1,6 @@
-import useGetBrandingColours from "@calcom/lib/getBrandColours";
-import useTheme from "@calcom/lib/hooks/useTheme";
-import { useCalcomTheme } from "@calcom/ui/styles";
+import useGetBrandingColours from "@calndrbrnd/lib/getBrandColours";
+import useTheme from "@calndrbrnd/lib/hooks/useTheme";
+import { useCalcomTheme } from "@calndrbrnd/ui/styles";
 
 export const useBrandColors = ({
   brandColor,

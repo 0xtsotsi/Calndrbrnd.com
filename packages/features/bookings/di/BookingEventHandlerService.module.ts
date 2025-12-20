@@ -1,9 +1,9 @@
-import { BookingEventHandlerService } from "@calcom/features/bookings/lib/onBookingEvents/BookingEventHandlerService";
-import { bindModuleToClassOnToken, createModule } from "@calcom/features/di/di";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { moduleLoader as hashedLinkServiceModuleLoader } from "@calcom/features/hashedLink/di/HashedLinkService.module";
-import { moduleLoader as bookingAuditProducerServiceModuleLoader } from "@calcom/features/booking-audit/di/BookingAuditTaskerProducerService.module";
-import { moduleLoader as loggerModuleLoader } from "@calcom/features/di/shared/services/logger.service";
+import { BookingEventHandlerService } from "@calndrbrnd/features/bookings/lib/onBookingEvents/BookingEventHandlerService";
+import { bindModuleToClassOnToken, createModule } from "@calndrbrnd/features/di/di";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { moduleLoader as hashedLinkServiceModuleLoader } from "@calndrbrnd/features/hashedLink/di/HashedLinkService.module";
+import { moduleLoader as bookingAuditProducerServiceModuleLoader } from "@calndrbrnd/features/booking-audit/di/BookingAuditTaskerProducerService.module";
+import { moduleLoader as loggerModuleLoader } from "@calndrbrnd/features/di/shared/services/logger.service";
 
 const thisModule = createModule();
 const token = DI_TOKENS.BOOKING_EVENT_HANDLER_SERVICE;

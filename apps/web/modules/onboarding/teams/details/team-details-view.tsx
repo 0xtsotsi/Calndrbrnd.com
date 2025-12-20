@@ -4,12 +4,12 @@ import { useRouter } from "next/navigation";
 import posthog from "posthog-js";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import slugify from "@calcom/lib/slugify";
-import { Avatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { Label, TextField, TextArea } from "@calcom/ui/components/form";
-import { ImageUploader } from "@calcom/ui/components/image-uploader";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import slugify from "@calndrbrnd/lib/slugify";
+import { Avatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Label, TextField, TextArea } from "@calndrbrnd/ui/components/form";
+import { ImageUploader } from "@calndrbrnd/ui/components/image-uploader";
 
 import { OnboardingCard } from "../../components/OnboardingCard";
 import { OnboardingLayout } from "../../components/OnboardingLayout";

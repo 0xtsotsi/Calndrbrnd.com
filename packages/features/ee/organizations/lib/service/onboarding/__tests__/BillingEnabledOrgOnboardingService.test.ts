@@ -2,38 +2,38 @@ import prismock from "../../../../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import * as constants from "@calcom/lib/constants";
-import { createDomain } from "@calcom/lib/domainManager/organization";
-import { UserPermissionRole, CreationSource, MembershipRole, BillingPeriod } from "@calcom/prisma/enums";
-import { createTeamsHandler } from "@calcom/trpc/server/routers/viewer/organizations/createTeams.handler";
-import { inviteMembersWithNoInviterPermissionCheck } from "@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
+import * as constants from "@calndrbrnd/lib/constants";
+import { createDomain } from "@calndrbrnd/lib/domainManager/organization";
+import { UserPermissionRole, CreationSource, MembershipRole, BillingPeriod } from "@calndrbrnd/prisma/enums";
+import { createTeamsHandler } from "@calndrbrnd/trpc/server/routers/viewer/organizations/createTeams.handler";
+import { inviteMembersWithNoInviterPermissionCheck } from "@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler";
 
 import type { CreateOnboardingIntentInput } from "../../onboarding/types";
 import { BillingEnabledOrgOnboardingService } from "../BillingEnabledOrgOnboardingService";
 
 vi.mock("../../OrganizationPaymentService");
 
-vi.mock("@calcom/features/auth/lib/verifyEmail", () => ({
+vi.mock("@calndrbrnd/features/auth/lib/verifyEmail", () => ({
   sendEmailVerification: vi.fn(),
 }));
 
-vi.mock("@calcom/emails/email-manager", () => ({
+vi.mock("@calndrbrnd/emails/email-manager", () => ({
   sendOrganizationCreationEmail: vi.fn(),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler", () => ({
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/inviteMember.handler", () => ({
   inviteMembersWithNoInviterPermissionCheck: vi.fn(),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/organizations/createTeams.handler", () => ({
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/organizations/createTeams.handler", () => ({
   createTeamsHandler: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/domainManager/organization", () => ({
+vi.mock("@calndrbrnd/lib/domainManager/organization", () => ({
   createDomain: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/server/i18n", () => {
+vi.mock("@calndrbrnd/lib/server/i18n", () => {
   return {
     getTranslation: async (locale: string, namespace: string) => {
       const t = (key: string) => key;

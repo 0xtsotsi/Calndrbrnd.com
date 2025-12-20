@@ -13,12 +13,12 @@ import {
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 
-import { appStoreMetadata } from "@calcom/app-store/appStoreMetaData";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { isMac } from "@calcom/lib/isMac";
-import { trpc } from "@calcom/trpc/react";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { appStoreMetadata } from "@calndrbrnd/app-store/appStoreMetaData";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { isMac } from "@calndrbrnd/lib/isMac";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { MintlifyChat } from "../mintlify-chat/MintlifyChat";
 

@@ -1,9 +1,9 @@
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import type { MembershipRepository } from "@calcom/features/membership/repositories/MembershipRepository";
-import type { IAttendeeRepository } from "@calcom/features/bookings/repositories/IAttendeeRepository";
-import type { ISimpleLogger } from "@calcom/features/di/shared/services/logger.service";
-import type { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
+import type { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import type { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import type { MembershipRepository } from "@calndrbrnd/features/membership/repositories/MembershipRepository";
+import type { IAttendeeRepository } from "@calndrbrnd/features/bookings/repositories/IAttendeeRepository";
+import type { ISimpleLogger } from "@calndrbrnd/features/di/shared/services/logger.service";
+import type { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
 import { BookingAuditActionServiceRegistry } from "./BookingAuditActionServiceRegistry";
 import { BookingAuditAccessService } from "./BookingAuditAccessService";
 import type { IBookingAuditRepository, BookingAuditWithActor, BookingAuditAction, BookingAuditType } from "../repository/IBookingAuditRepository";

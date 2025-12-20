@@ -1,6 +1,6 @@
-import type BaseEmail from "@calcom/emails/templates/_base-email";
-import type { CalendarEvent } from "@calcom/types/Calendar";
-import { formatCalEvent } from "@calcom/lib/formatCalendarEvent";
+import type BaseEmail from "@calndrbrnd/emails/templates/_base-email";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
+import { formatCalEvent } from "@calndrbrnd/lib/formatCalendarEvent";
 
 import OrganizerDailyVideoDownloadRecordingEmail from "./templates/organizer-daily-video-download-recording-email";
 import AttendeeDailyVideoDownloadRecordingEmail from "./templates/attendee-daily-video-download-recording-email";

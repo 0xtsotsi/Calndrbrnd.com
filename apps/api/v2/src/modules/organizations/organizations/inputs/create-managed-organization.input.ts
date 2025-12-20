@@ -2,7 +2,7 @@ import { RefreshApiKeyInput } from "@/modules/api-keys/inputs/refresh-api-key.in
 import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
 import { IsObject, IsOptional, IsString, Length } from "class-validator";
 
-import { Metadata, METADATA_DOCS, ValidateMetadata } from "@calcom/platform-types";
+import { Metadata, METADATA_DOCS, ValidateMetadata } from "@calndrbrnd/platform-types";
 
 export class CreateOrganizationInput extends RefreshApiKeyInput {
   @IsString()

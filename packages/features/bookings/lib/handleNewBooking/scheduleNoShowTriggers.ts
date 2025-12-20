@@ -1,9 +1,9 @@
-import { DailyLocationType } from "@calcom/app-store/constants";
-import dayjs from "@calcom/dayjs";
-import tasker from "@calcom/features/tasker";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { DailyLocationType } from "@calndrbrnd/app-store/constants";
+import dayjs from "@calndrbrnd/dayjs";
+import tasker from "@calndrbrnd/features/tasker";
+import getWebhooks from "@calndrbrnd/features/webhooks/lib/getWebhooks";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 type ScheduleNoShowTriggersArgs = {
   booking: {

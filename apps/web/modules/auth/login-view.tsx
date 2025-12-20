@@ -9,18 +9,18 @@ import { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { SAMLLogin } from "@calcom/features/auth/SAMLLogin";
-import { ErrorCode } from "@calcom/features/auth/lib/ErrorCode";
-import { LastUsed, useLastUsed } from "@calcom/features/auth/lib/hooks/useLastUsed";
-import { HOSTED_CAL_FEATURES, WEBAPP_URL, WEBSITE_URL } from "@calcom/lib/constants";
-import { emailRegex } from "@calcom/lib/emailSchema";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
-import { useCompatSearchParams } from "@calcom/lib/hooks/useCompatSearchParams";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { EmailField, PasswordField } from "@calcom/ui/components/form";
+import { SAMLLogin } from "@calndrbrnd/features/auth/SAMLLogin";
+import { ErrorCode } from "@calndrbrnd/features/auth/lib/ErrorCode";
+import { LastUsed, useLastUsed } from "@calndrbrnd/features/auth/lib/hooks/useLastUsed";
+import { HOSTED_CAL_FEATURES, WEBAPP_URL, WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import { emailRegex } from "@calndrbrnd/lib/emailSchema";
+import { getSafeRedirectUrl } from "@calndrbrnd/lib/getSafeRedirectUrl";
+import { useCompatSearchParams } from "@calndrbrnd/lib/hooks/useCompatSearchParams";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { EmailField, PasswordField } from "@calndrbrnd/ui/components/form";
 
 import type { inferSSRProps } from "@lib/types/inferSSRProps";
 

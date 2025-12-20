@@ -3,10 +3,10 @@ import React from "react";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 import type { Mock } from "vitest";
 
-import { Segment } from "@calcom/features/Segment";
-import type { AttributesQueryValue } from "@calcom/lib/raqb/types";
-import { AttributeType } from "@calcom/prisma/enums";
-import { trpc, type RouterOutputs } from "@calcom/trpc";
+import { Segment } from "@calndrbrnd/features/Segment";
+import type { AttributesQueryValue } from "@calndrbrnd/lib/raqb/types";
+import { AttributeType } from "@calndrbrnd/prisma/enums";
+import { trpc, type RouterOutputs } from "@calndrbrnd/trpc";
 
 type Attributes = RouterOutputs["viewer"]["appRoutingForms"]["getAttributesForTeam"];
 type MatchingTeamMembersData = RouterOutputs["viewer"]["attributes"]["findTeamMembersMatchingAttributeLogic"];
@@ -62,7 +62,7 @@ const mockAttributesWithSingleSelect = () => {
 };
 
 // Mock the TRPC hooks
-vi.mock("@calcom/trpc", () => ({
+vi.mock("@calndrbrnd/trpc", () => ({
   trpc: {
     viewer: {
       appRoutingForms: {
@@ -80,7 +80,7 @@ vi.mock("@calcom/trpc", () => ({
 }));
 
 // Mock useLocale hook
-vi.mock("@calcom/lib/hooks/useLocale", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useLocale", () => ({
   useLocale: () => ({
     t: (key: string) => key,
   }),

@@ -3,7 +3,7 @@ import { PrismaReadService } from "@/modules/prisma/prisma-read.service";
 import { Injectable, CanActivate, ExecutionContext, ForbiddenException } from "@nestjs/common";
 import { Request } from "express";
 
-import type { Team } from "@calcom/prisma/client";
+import type { Team } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class IsUserRoutingForm implements CanActivate {

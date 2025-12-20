@@ -1,8 +1,8 @@
 "use client";
 
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { trpc } from "@calcom/trpc/react";
-import { SkeletonContainer, SkeletonText, SkeletonButton } from "@calcom/ui/components/skeleton";
+import LicenseRequired from "@calndrbrnd/features/ee/common/components/LicenseRequired";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { SkeletonContainer, SkeletonText, SkeletonButton } from "@calndrbrnd/ui/components/skeleton";
 
 import DisableGuestBookingEmailsSetting from "../components/DisableGuestBookingEmailsSetting";
 

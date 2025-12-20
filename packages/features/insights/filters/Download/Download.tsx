@@ -1,19 +1,19 @@
 import { useState } from "react";
 import posthog from "posthog-js";
 
-import dayjs from "@calcom/dayjs";
-import { downloadAsCsv } from "@calcom/lib/csvUtils";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
+import dayjs from "@calndrbrnd/dayjs";
+import { downloadAsCsv } from "@calndrbrnd/lib/csvUtils";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { showToast, showProgressToast, hideProgressToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/dropdown";
+import { showToast, showProgressToast, hideProgressToast } from "@calndrbrnd/ui/components/toast";
 
 import { useInsightsBookingParameters } from "../../hooks/useInsightsBookingParameters";
 import { extractDateRangeFromColumnFilters } from "../../lib/bookingUtils";

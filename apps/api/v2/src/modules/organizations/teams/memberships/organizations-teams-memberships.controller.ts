@@ -41,9 +41,9 @@ import {
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 import { plainToClass } from "class-transformer";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { updateNewTeamMemberEventTypes } from "@calcom/platform-libraries/event-types";
-import { SkipTakePagination } from "@calcom/platform-types";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { updateNewTeamMemberEventTypes } from "@calndrbrnd/platform-libraries/event-types";
+import { SkipTakePagination } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/organizations/:orgId/teams/:teamId/memberships",

@@ -1,13 +1,13 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 import { TRPCError } from "@trpc/server";
 import getIncompleteBookingSettingsHandler from "./getIncompleteBookingSettings.handler";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 
-vi.mock("@calcom/app-store/routing-forms/lib/enabledIncompleteBookingApps", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/enabledIncompleteBookingApps", () => ({
   enabledIncompleteBookingApps: ["salesforce"],
 }));
 

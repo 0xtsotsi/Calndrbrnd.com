@@ -5,7 +5,7 @@ import { RedisModule } from "@/modules/redis/redis.module";
 import { StripeModule } from "@/modules/stripe/stripe.module";
 import { Module } from "@nestjs/common";
 
-import { RoleService } from "@calcom/platform-libraries/pbac";
+import { RoleService } from "@calndrbrnd/platform-libraries/pbac";
 
 import { TeamRolesOutputService } from "../organizations/teams/roles/services/team-roles-output.service";
 import { RolesPermissionsCacheService } from "./permissions/services/roles-permissions-cache.service";

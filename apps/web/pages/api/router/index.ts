@@ -1,6 +1,6 @@
-import { getRoutedUrl } from "@calcom/features/routing-forms/lib/getRoutedUrl";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
+import { getRoutedUrl } from "@calndrbrnd/features/routing-forms/lib/getRoutedUrl";
+import { defaultHandler } from "@calndrbrnd/lib/server/defaultHandler";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
 
 export default defaultHandler({
   OPTIONS: Promise.resolve({

@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 import { loginUser } from "playwright/fixtures/regularBookings";
 
-import { MembershipRole } from "@calcom/prisma/enums";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { test } from "../lib/fixtures";
 

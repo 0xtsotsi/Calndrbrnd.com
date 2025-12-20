@@ -3,10 +3,10 @@
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
-import { Loader } from "@calcom/ui/components/skeleton";
+import { Loader } from "@calndrbrnd/ui/components/skeleton";
 
 const TroubleshooterClientOnly = dynamic(
-  () => import("@calcom/features/troubleshooter/Troubleshooter").then((mod) => mod.Troubleshooter),
+  () => import("@calndrbrnd/features/troubleshooter/Troubleshooter").then((mod) => mod.Troubleshooter),
   {
     ssr: false,
   }

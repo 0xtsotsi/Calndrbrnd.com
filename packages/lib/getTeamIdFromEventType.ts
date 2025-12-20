@@ -1,4 +1,4 @@
-import prisma from "@calcom/prisma";
+import prisma from "@calndrbrnd/prisma";
 
 export async function getTeamIdFromEventType({
   eventType,

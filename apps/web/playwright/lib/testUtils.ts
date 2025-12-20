@@ -8,9 +8,9 @@ import type { Messages } from "mailhog";
 import { totp } from "otplib";
 import { v4 as uuid } from "uuid";
 
-import type { IntervalLimit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import type { Prisma } from "@calcom/prisma/client";
-import { BookingStatus, SchedulingType } from "@calcom/prisma/enums";
+import type { IntervalLimit } from "@calndrbrnd/lib/intervalLimits/intervalLimitSchema";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { BookingStatus, SchedulingType } from "@calndrbrnd/prisma/enums";
 
 import type { createEmailsFixture } from "../fixtures/emails";
 import type { CreateUsersFixture } from "../fixtures/users";

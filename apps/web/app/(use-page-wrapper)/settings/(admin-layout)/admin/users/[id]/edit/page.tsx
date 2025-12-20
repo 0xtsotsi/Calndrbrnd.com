@@ -2,11 +2,11 @@ import { type Params } from "app/_types";
 import { _generateMetadata, getTranslate } from "app/_utils";
 import { z } from "zod";
 
-import LicenseRequired from "@calcom/features/ee/common/components/LicenseRequired";
-import { UsersEditView } from "@calcom/features/ee/users/pages/users-edit-view";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { prisma } from "@calcom/prisma";
+import LicenseRequired from "@calndrbrnd/features/ee/common/components/LicenseRequired";
+import { UsersEditView } from "@calndrbrnd/features/ee/users/pages/users-edit-view";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { prisma } from "@calndrbrnd/prisma";
 
 const userIdSchema = z.object({ id: z.coerce.number() });
 

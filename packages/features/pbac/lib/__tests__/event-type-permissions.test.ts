@@ -1,18 +1,18 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { vi, type Mock, describe, it, expect, beforeEach } from "vitest";
 
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { Resource } from "../../domain/types/permission-registry";
 import { PermissionCheckService } from "../../services/permission-check.service";
 import { getEventTypePermissions } from "../event-type-permissions";
 
-vi.mock("@calcom/features/flags/features.repository");
+vi.mock("@calndrbrnd/features/flags/features.repository");
 vi.mock("../../services/permission-check.service");
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 

@@ -1,26 +1,26 @@
 import { cookies, headers } from "next/headers";
 import { NextResponse } from "next/server";
 
-import { getPremiumMonthlyPlanPriceId } from "@calcom/app-store/stripepayment/lib/utils";
-import { getLocaleFromRequest } from "@calcom/features/auth/lib/getLocaleFromRequest";
-import { sendEmailVerification } from "@calcom/features/auth/lib/verifyEmail";
-import { createOrUpdateMemberships } from "@calcom/features/auth/signup/utils/createOrUpdateMemberships";
-import { prefillAvatar } from "@calcom/features/auth/signup/utils/prefillAvatar";
-import { validateAndGetCorrectedUsernameAndEmail } from "@calcom/features/auth/signup/utils/validateUsername";
-import { getBillingProviderService } from "@calcom/features/ee/billing/di/containers/Billing";
-import { sentrySpan } from "@calcom/features/watchlist/lib/telemetry";
-import { checkIfEmailIsBlockedInWatchlistController } from "@calcom/features/watchlist/operations/check-if-email-in-watchlist.controller";
-import { hashPassword } from "@calcom/lib/auth/hashPassword";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import type { CustomNextApiHandler } from "@calcom/lib/server/username";
-import { usernameHandler } from "@calcom/lib/server/username";
-import { prisma } from "@calcom/prisma";
-import { CreationSource } from "@calcom/prisma/enums";
-import { IdentityProvider } from "@calcom/prisma/enums";
-import { signupSchema } from "@calcom/prisma/zod-utils";
-import { buildLegacyRequest } from "@calcom/web/lib/buildLegacyCtx";
+import { getPremiumMonthlyPlanPriceId } from "@calndrbrnd/app-store/stripepayment/lib/utils";
+import { getLocaleFromRequest } from "@calndrbrnd/features/auth/lib/getLocaleFromRequest";
+import { sendEmailVerification } from "@calndrbrnd/features/auth/lib/verifyEmail";
+import { createOrUpdateMemberships } from "@calndrbrnd/features/auth/signup/utils/createOrUpdateMemberships";
+import { prefillAvatar } from "@calndrbrnd/features/auth/signup/utils/prefillAvatar";
+import { validateAndGetCorrectedUsernameAndEmail } from "@calndrbrnd/features/auth/signup/utils/validateUsername";
+import { getBillingProviderService } from "@calndrbrnd/features/ee/billing/di/containers/Billing";
+import { sentrySpan } from "@calndrbrnd/features/watchlist/lib/telemetry";
+import { checkIfEmailIsBlockedInWatchlistController } from "@calndrbrnd/features/watchlist/operations/check-if-email-in-watchlist.controller";
+import { hashPassword } from "@calndrbrnd/lib/auth/hashPassword";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
+import type { CustomNextApiHandler } from "@calndrbrnd/lib/server/username";
+import { usernameHandler } from "@calndrbrnd/lib/server/username";
+import { prisma } from "@calndrbrnd/prisma";
+import { CreationSource } from "@calndrbrnd/prisma/enums";
+import { IdentityProvider } from "@calndrbrnd/prisma/enums";
+import { signupSchema } from "@calndrbrnd/prisma/zod-utils";
+import { buildLegacyRequest } from "@calndrbrnd/web/lib/buildLegacyCtx";
 
 import { joinAnyChildTeamOnOrgInvite } from "../utils/organization";
 import {

@@ -1,10 +1,10 @@
 import type { Logger } from "tslog";
 import { v4 as uuid } from "uuid";
 
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import { orgDomainConfig } from "@calcom/ee/organizations/lib/orgDomains";
-import { getAggregatedAvailability } from "@calcom/features/availability/lib/getAggregatedAvailability/getAggregatedAvailability";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import { orgDomainConfig } from "@calndrbrnd/ee/organizations/lib/orgDomains";
+import { getAggregatedAvailability } from "@calndrbrnd/features/availability/lib/getAggregatedAvailability/getAggregatedAvailability";
 import type {
   CurrentSeats,
   EventType,
@@ -12,49 +12,49 @@ import type {
   UserAvailabilityService,
   IFromUser,
   IToUser,
-} from "@calcom/features/availability/lib/getUserAvailability";
-import type { CheckBookingLimitsService } from "@calcom/features/bookings/lib/checkBookingLimits";
-import { checkForConflicts } from "@calcom/features/bookings/lib/conflictChecker/checkForConflicts";
-import type { QualifiedHostsService } from "@calcom/features/bookings/lib/host-filtering/findQualifiedHostsWithDelegationCredentials";
-import { isEventTypeLoggingEnabled } from "@calcom/features/bookings/lib/isEventTypeLoggingEnabled";
-import type { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import type { BusyTimesService } from "@calcom/features/busyTimes/services/getBusyTimes";
-import type { getBusyTimesService } from "@calcom/features/di/containers/BusyTimes";
-import type { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { getDefaultEvent } from "@calcom/features/eventtypes/lib/defaultEvents";
-import type { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import type { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import type { PrismaOOORepository } from "@calcom/features/ooo/repositories/PrismaOOORepository";
-import type { IRedisService } from "@calcom/features/redis/IRedisService";
-import { buildDateRanges } from "@calcom/features/schedules/lib/date-ranges";
-import getSlots from "@calcom/features/schedules/lib/slots";
-import type { ScheduleRepository } from "@calcom/features/schedules/repositories/ScheduleRepository";
-import type { ISelectedSlotRepository } from "@calcom/features/selectedSlots/repositories/ISelectedSlotRepository";
-import type { NoSlotsNotificationService } from "@calcom/features/slots/handleNotificationWhenNoSlots";
-import type { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { shouldIgnoreContactOwner } from "@calcom/lib/bookings/routing/utils";
-import { RESERVED_SUBDOMAINS } from "@calcom/lib/constants";
-import { getUTCOffsetByTimezone } from "@calcom/lib/dayjs";
-import { descendingLimitKeys, intervalLimitKeyToUnit } from "@calcom/lib/intervalLimits/intervalLimit";
-import type { IntervalLimit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import { parseBookingLimit } from "@calcom/lib/intervalLimits/isBookingLimits";
-import { parseDurationLimit } from "@calcom/lib/intervalLimits/isDurationLimits";
-import LimitManager from "@calcom/lib/intervalLimits/limitManager";
-import { isBookingWithinPeriod } from "@calcom/lib/intervalLimits/utils";
+} from "@calndrbrnd/features/availability/lib/getUserAvailability";
+import type { CheckBookingLimitsService } from "@calndrbrnd/features/bookings/lib/checkBookingLimits";
+import { checkForConflicts } from "@calndrbrnd/features/bookings/lib/conflictChecker/checkForConflicts";
+import type { QualifiedHostsService } from "@calndrbrnd/features/bookings/lib/host-filtering/findQualifiedHostsWithDelegationCredentials";
+import { isEventTypeLoggingEnabled } from "@calndrbrnd/features/bookings/lib/isEventTypeLoggingEnabled";
+import type { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import type { BusyTimesService } from "@calndrbrnd/features/busyTimes/services/getBusyTimes";
+import type { getBusyTimesService } from "@calndrbrnd/features/di/containers/BusyTimes";
+import type { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { getDefaultEvent } from "@calndrbrnd/features/eventtypes/lib/defaultEvents";
+import type { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import type { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import type { PrismaOOORepository } from "@calndrbrnd/features/ooo/repositories/PrismaOOORepository";
+import type { IRedisService } from "@calndrbrnd/features/redis/IRedisService";
+import { buildDateRanges } from "@calndrbrnd/features/schedules/lib/date-ranges";
+import getSlots from "@calndrbrnd/features/schedules/lib/slots";
+import type { ScheduleRepository } from "@calndrbrnd/features/schedules/repositories/ScheduleRepository";
+import type { ISelectedSlotRepository } from "@calndrbrnd/features/selectedSlots/repositories/ISelectedSlotRepository";
+import type { NoSlotsNotificationService } from "@calndrbrnd/features/slots/handleNotificationWhenNoSlots";
+import type { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { withSelectedCalendars } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { shouldIgnoreContactOwner } from "@calndrbrnd/lib/bookings/routing/utils";
+import { RESERVED_SUBDOMAINS } from "@calndrbrnd/lib/constants";
+import { getUTCOffsetByTimezone } from "@calndrbrnd/lib/dayjs";
+import { descendingLimitKeys, intervalLimitKeyToUnit } from "@calndrbrnd/lib/intervalLimits/intervalLimit";
+import type { IntervalLimit } from "@calndrbrnd/lib/intervalLimits/intervalLimitSchema";
+import { parseBookingLimit } from "@calndrbrnd/lib/intervalLimits/isBookingLimits";
+import { parseDurationLimit } from "@calndrbrnd/lib/intervalLimits/isDurationLimits";
+import LimitManager from "@calndrbrnd/lib/intervalLimits/limitManager";
+import { isBookingWithinPeriod } from "@calndrbrnd/lib/intervalLimits/utils";
 import {
   calculatePeriodLimits,
   isTimeOutOfBounds,
   isTimeViolatingFutureLimit,
   BookingDateInPastError,
-} from "@calcom/lib/isOutOfBounds";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import type { RoutingFormResponseRepository } from "@calcom/lib/server/repository/formResponse";
-import { SchedulingType, PeriodType } from "@calcom/prisma/enums";
-import type { EventBusyDate, EventBusyDetails } from "@calcom/types/Calendar";
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
+} from "@calndrbrnd/lib/isOutOfBounds";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import type { RoutingFormResponseRepository } from "@calndrbrnd/lib/server/repository/formResponse";
+import { SchedulingType, PeriodType } from "@calndrbrnd/prisma/enums";
+import type { EventBusyDate, EventBusyDetails } from "@calndrbrnd/types/Calendar";
+import type { CredentialForCalendarService } from "@calndrbrnd/types/Credential";
 
 import { TRPCError } from "@trpc/server";
 

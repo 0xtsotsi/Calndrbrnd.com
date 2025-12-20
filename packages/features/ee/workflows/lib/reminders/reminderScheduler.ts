@@ -1,25 +1,25 @@
-import { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import type { CreditCheckFn } from "@calcom/features/ee/billing/credit-service";
+import { BookingSeatRepository } from "@calndrbrnd/features/bookings/repositories/BookingSeatRepository";
+import type { CreditCheckFn } from "@calndrbrnd/features/ee/billing/credit-service";
 import {
   isAttendeeAction,
   isSMSAction,
   isSMSOrWhatsappAction,
   isWhatsappAction,
   isCalAIAction,
-} from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
-import { isEmailAction } from "@calcom/features/ee/workflows/lib/actionHelperFunctions";
-import { EmailWorkflowService } from "@calcom/features/ee/workflows/lib/service/EmailWorkflowService";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import type { Workflow, WorkflowStep } from "@calcom/features/ee/workflows/lib/types";
-import { WorkflowReminderRepository } from "@calcom/features/ee/workflows/repositories/WorkflowReminderRepository";
-import { formatCalEventExtended } from "@calcom/lib/formatCalendarEvent";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { checkSMSRateLimit } from "@calcom/lib/smsLockState";
-import { prisma } from "@calcom/prisma";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { WorkflowActions, WorkflowTriggerEvents } from "@calcom/prisma/enums";
-import type { CalendarEvent } from "@calcom/types/Calendar";
+} from "@calndrbrnd/features/ee/workflows/lib/actionHelperFunctions";
+import { isEmailAction } from "@calndrbrnd/features/ee/workflows/lib/actionHelperFunctions";
+import { EmailWorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/EmailWorkflowService";
+import { WorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/WorkflowService";
+import type { Workflow, WorkflowStep } from "@calndrbrnd/features/ee/workflows/lib/types";
+import { WorkflowReminderRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowReminderRepository";
+import { formatCalEventExtended } from "@calndrbrnd/lib/formatCalendarEvent";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { checkSMSRateLimit } from "@calndrbrnd/lib/smsLockState";
+import { prisma } from "@calndrbrnd/prisma";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { WorkflowActions, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
+import type { CalendarEvent } from "@calndrbrnd/types/Calendar";
 
 import type { FormSubmissionData } from "../types";
 import type { BookingInfo } from "../types";
@@ -294,7 +294,7 @@ const _cancelScheduledMessagesAndScheduleEmails = async ({
   userIdsWithNoCredits: number[];
 }) => {
   const { WorkflowReminderRepository } = await import(
-    "@calcom/features/ee/workflows/repositories/WorkflowReminderRepository"
+    "@calndrbrnd/features/ee/workflows/repositories/WorkflowReminderRepository"
   );
 
   const workflowReminderRepository = new WorkflowReminderRepository(prisma);

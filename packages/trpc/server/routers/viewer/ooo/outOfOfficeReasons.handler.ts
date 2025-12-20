@@ -1,4 +1,4 @@
-import prisma from "@calcom/prisma";
+import prisma from "@calndrbrnd/prisma";
 
 export const outOfOfficeReasonList = async () => {
   const outOfOfficeReasons = await prisma.outOfOfficeReason.findMany({

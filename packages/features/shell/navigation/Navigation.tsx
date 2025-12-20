@@ -1,15 +1,15 @@
 import { useSession } from "next-auth/react";
 import { useMemo } from "react";
 
-import { useIsEmbed } from "@calcom/embed-core/embed-iframe";
-import UnconfirmedBookingBadge from "@calcom/features/bookings/UnconfirmedBookingBadge";
-import { useHasPaidPlan } from "@calcom/features/billing/hooks/useHasPaidPlan";
+import { useIsEmbed } from "@calndrbrnd/embed-core/embed-iframe";
+import UnconfirmedBookingBadge from "@calndrbrnd/features/bookings/UnconfirmedBookingBadge";
+import { useHasPaidPlan } from "@calndrbrnd/features/billing/hooks/useHasPaidPlan";
 import {
   useOrgBranding,
   type OrganizationBranding,
-} from "@calcom/features/ee/organizations/context/provider";
-import { KBarTrigger } from "@calcom/features/kbar/Kbar";
-import classNames from "@calcom/ui/classNames";
+} from "@calndrbrnd/features/ee/organizations/context/provider";
+import { KBarTrigger } from "@calndrbrnd/features/kbar/Kbar";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { TeamInviteBadge } from "../TeamInviteBadge";
 import type { NavigationItemType } from "./NavigationItem";

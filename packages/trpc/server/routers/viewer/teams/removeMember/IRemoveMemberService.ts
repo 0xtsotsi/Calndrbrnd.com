@@ -1,4 +1,4 @@
-import type { MembershipRole } from "@calcom/prisma/enums";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 export interface RemoveMemberContext {
   userId: number;

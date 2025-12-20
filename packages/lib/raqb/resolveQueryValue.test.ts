@@ -1,9 +1,9 @@
 import { expect, describe, it } from "vitest";
 
-import type { AttributesQueryValue, RaqbChild } from "@calcom/lib/raqb/types";
-import type { Attribute } from "@calcom/lib/service/attribute/server/getAttributes";
-import { AttributeType } from "@calcom/prisma/enums";
-import { RoutingFormFieldType } from "@calcom/routing-forms/lib/FieldTypes";
+import type { AttributesQueryValue, RaqbChild } from "@calndrbrnd/lib/raqb/types";
+import type { Attribute } from "@calndrbrnd/lib/service/attribute/server/getAttributes";
+import { AttributeType } from "@calndrbrnd/prisma/enums";
+import { RoutingFormFieldType } from "@calndrbrnd/routing-forms/lib/FieldTypes";
 
 import { resolveQueryValue } from "./resolveQueryValue";
 

@@ -1,5 +1,5 @@
 import CalendarManagerMock from "../../../../tests/libs/__mocks__/CalendarManager";
-import { constantsScenarios } from "@calcom/lib/__mocks__/constants";
+import { constantsScenarios } from "@calndrbrnd/lib/__mocks__/constants";
 
 import {
   getDate,
@@ -16,9 +16,9 @@ import {
 
 import { describe, vi, test } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { getAvailableSlotsService } from "@calcom/features/di/containers/AvailableSlots";
-import { SchedulingType, type BookingStatus } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { getAvailableSlotsService } from "@calndrbrnd/features/di/containers/AvailableSlots";
+import { SchedulingType, type BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import { expect, expectedSlotsForSchedule } from "./getSchedule/expects";
 import { setupAndTeardown } from "./getSchedule/setupAndTeardown";

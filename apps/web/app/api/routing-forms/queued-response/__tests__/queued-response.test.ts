@@ -1,22 +1,22 @@
 import "../../../../../../../tests/libs/__mocks__/prisma";
 import { beforeEach, describe, it, expect, vi } from "vitest";
 
-import { onSubmissionOfFormResponse } from "@calcom/app-store/routing-forms/lib/formSubmissionUtils";
-import { getResponseToStore } from "@calcom/app-store/routing-forms/lib/getResponseToStore";
-import { getSerializableForm } from "@calcom/app-store/routing-forms/lib/getSerializableForm";
-import { RoutingFormResponseRepository } from "@calcom/lib/server/repository/formResponse";
+import { onSubmissionOfFormResponse } from "@calndrbrnd/app-store/routing-forms/lib/formSubmissionUtils";
+import { getResponseToStore } from "@calndrbrnd/app-store/routing-forms/lib/getResponseToStore";
+import { getSerializableForm } from "@calndrbrnd/app-store/routing-forms/lib/getSerializableForm";
+import { RoutingFormResponseRepository } from "@calndrbrnd/lib/server/repository/formResponse";
 
 import { queuedResponseHandler } from "../route";
 
-vi.mock("@calcom/lib/server/repository/formResponse");
+vi.mock("@calndrbrnd/lib/server/repository/formResponse");
 
 const mockRoutingFormResponseRepository = {
   getQueuedFormResponseFromId: vi.fn(),
   recordFormResponse: vi.fn(),
 };
-vi.mock("@calcom/app-store/routing-forms/lib/getSerializableForm");
-vi.mock("@calcom/app-store/routing-forms/lib/getResponseToStore");
-vi.mock("@calcom/app-store/routing-forms/lib/formSubmissionUtils");
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/getSerializableForm");
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/getResponseToStore");
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/formSubmissionUtils");
 
 const mockQueuedFormResponse = {
   id: "1",

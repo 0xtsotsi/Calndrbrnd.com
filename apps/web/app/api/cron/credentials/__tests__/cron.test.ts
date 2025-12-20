@@ -2,7 +2,7 @@ import prismock from "../../../../../../../tests/libs/__mocks__/prisma";
 
 import { describe, it, expect, beforeEach } from "vitest";
 
-import type { MembershipRole } from "@calcom/prisma/enums";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { handleCreateCredentials } from "../route";
 

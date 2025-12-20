@@ -8,8 +8,8 @@ import type { ScenarioData } from "../../utils/bookingScenario/bookingScenario";
 
 import { describe, expect, vi, test } from "vitest";
 
-import { getAvailableSlotsService } from "@calcom/features/di/containers/AvailableSlots";
-import { PeriodType } from "@calcom/prisma/enums";
+import { getAvailableSlotsService } from "@calndrbrnd/features/di/containers/AvailableSlots";
+import { PeriodType } from "@calndrbrnd/prisma/enums";
 
 import { expectedSlotsForSchedule } from "./expects";
 import { setupAndTeardown } from "./setupAndTeardown";
@@ -61,7 +61,7 @@ function getPeriodTypeData({
   }
 }
 
-vi.mock("@calcom/lib/constants", () => ({
+vi.mock("@calndrbrnd/lib/constants", () => ({
   IS_PRODUCTION: true,
   WEBAPP_URL: "http://localhost:3000",
   RESERVED_SUBDOMAINS: ["auth", "docs"],

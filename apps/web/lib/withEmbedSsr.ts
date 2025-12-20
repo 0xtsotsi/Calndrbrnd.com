@@ -1,6 +1,6 @@
 import type { GetServerSideProps, GetServerSidePropsContext, GetServerSidePropsResult } from "next";
 
-import { WebAppURL } from "@calcom/lib/WebAppURL";
+import { WebAppURL } from "@calndrbrnd/lib/WebAppURL";
 
 export type EmbedProps = {
   isEmbed?: boolean;

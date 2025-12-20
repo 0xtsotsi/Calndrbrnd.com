@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { listOOOEntries } from "@calcom/features/webhooks/lib/scheduleTrigger";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import { listOOOEntries } from "@calndrbrnd/features/webhooks/lib/scheduleTrigger";
+import { defaultHandler } from "@calndrbrnd/lib/server/defaultHandler";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import { validateAccountOrApiKey } from "../../lib/validateAccountOrApiKey";
 

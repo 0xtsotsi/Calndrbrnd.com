@@ -1,9 +1,9 @@
 import { describe, expect, it, vi } from "vitest";
 
-import type { User } from "@calcom/prisma/client";
-import { UserPermissionRole } from "@calcom/prisma/enums";
+import type { User } from "@calndrbrnd/prisma/client";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
 
-vi.mock("@calcom/features/ee/teams/repositories/TeamRepository", () => ({
+vi.mock("@calndrbrnd/features/ee/teams/repositories/TeamRepository", () => ({
   TeamRepository: class {
     constructor() {}
     findOwnedTeamsByUserId(_: { userId: number }) {

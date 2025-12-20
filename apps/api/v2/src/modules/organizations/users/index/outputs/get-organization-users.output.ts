@@ -3,8 +3,8 @@ import { ApiProperty } from "@nestjs/swagger";
 import { Expose, Type } from "class-transformer";
 import { IsEnum, IsInt, IsString, ValidateNested, IsArray } from "class-validator";
 
-import { ERROR_STATUS } from "@calcom/platform-constants";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
+import { ERROR_STATUS } from "@calndrbrnd/platform-constants";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
 
 export class ProfileOutput {
   @IsInt()

@@ -1,4 +1,4 @@
-import { insightsRouter } from "@calcom/trpc/server/routers/viewer/insights/_router";
-import { createNextApiHandler } from "@calcom/trpc/server/createNextApiHandler";
+import { insightsRouter } from "@calndrbrnd/trpc/server/routers/viewer/insights/_router";
+import { createNextApiHandler } from "@calndrbrnd/trpc/server/createNextApiHandler";
 
 export default createNextApiHandler(insightsRouter);

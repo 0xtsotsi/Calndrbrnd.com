@@ -1,5 +1,5 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { RoutingFormResponseRepository } from "@calcom/lib/server/repository/formResponse";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { RoutingFormResponseRepository } from "@calndrbrnd/lib/server/repository/formResponse";
 
 import { createModule } from "../di";
 

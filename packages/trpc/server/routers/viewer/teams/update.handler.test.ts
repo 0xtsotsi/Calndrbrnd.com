@@ -1,15 +1,15 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { prisma } from "@calcom/prisma";
-import { RRTimestampBasis } from "@calcom/prisma/enums";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { prisma } from "@calndrbrnd/prisma";
+import { RRTimestampBasis } from "@calndrbrnd/prisma/enums";
 
 import type { TrpcSessionUser } from "../../../types";
 import { updateHandler } from "./update.handler";
 import type { TUpdateInputSchema } from "./update.schema";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma: {
     team: {
       findUnique: vi.fn(),
@@ -25,31 +25,31 @@ vi.mock("@calcom/prisma", () => ({
   },
 }));
 
-vi.mock("@calcom/features/pbac/services/permission-check.service", () => ({
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service", () => ({
   PermissionCheckService: vi.fn().mockImplementation(() => ({
     checkPermission: vi.fn(),
   })),
 }));
 
-vi.mock("@calcom/features/ee/teams/repositories/TeamRepository", () => ({
+vi.mock("@calndrbrnd/features/ee/teams/repositories/TeamRepository", () => ({
   TeamRepository: vi.fn().mockImplementation(() => ({
     isSlugAvailableForUpdate: vi.fn().mockResolvedValue(true),
   })),
 }));
 
-vi.mock("@calcom/lib/server/avatar", () => ({
+vi.mock("@calndrbrnd/lib/server/avatar", () => ({
   uploadLogo: vi.fn().mockResolvedValue("https://example.com/logo.png"),
 }));
 
-vi.mock("@calcom/lib/intervalLimits/validateIntervalLimitOrder", () => ({
+vi.mock("@calndrbrnd/lib/intervalLimits/validateIntervalLimitOrder", () => ({
   validateIntervalLimitOrder: vi.fn().mockReturnValue(true),
 }));
 
-vi.mock("@calcom/lib/constants", () => ({
+vi.mock("@calndrbrnd/lib/constants", () => ({
   IS_TEAM_BILLING_ENABLED: false,
 }));
 
-vi.mock("@calcom/ee/organizations/lib/orgDomains", () => ({
+vi.mock("@calndrbrnd/ee/organizations/lib/orgDomains", () => ({
   getOrgFullOrigin: vi.fn((slug: string) => `https://${slug}.cal.com`),
 }));
 

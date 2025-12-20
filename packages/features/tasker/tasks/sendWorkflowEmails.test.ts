@@ -1,44 +1,44 @@
 import { describe, expect, vi, beforeEach, test } from "vitest";
 
-vi.mock("@calcom/emails/workflow-email-service", () => ({
+vi.mock("@calndrbrnd/emails/workflow-email-service", () => ({
   sendCustomWorkflowEmail: vi.fn(),
 }));
 
 const mockGetBookingForCalEventBuilderFromUid = vi.fn();
-vi.mock("@calcom/features/bookings/repositories/BookingRepository", () => ({
+vi.mock("@calndrbrnd/features/bookings/repositories/BookingRepository", () => ({
   BookingRepository: vi.fn().mockImplementation(() => ({
     getBookingForCalEventBuilderFromUid: mockGetBookingForCalEventBuilderFromUid,
   })),
 }));
 
-vi.mock("@calcom/features/bookings/repositories/BookingSeatRepository", () => ({
+vi.mock("@calndrbrnd/features/bookings/repositories/BookingSeatRepository", () => ({
   BookingSeatRepository: vi.fn(),
 }));
 
 const mockHandleSendEmailWorkflowTask = vi.fn();
-vi.mock("@calcom/features/ee/workflows/lib/service/EmailWorkflowService", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/lib/service/EmailWorkflowService", () => ({
   EmailWorkflowService: vi.fn().mockImplementation(() => ({
     handleSendEmailWorkflowTask: mockHandleSendEmailWorkflowTask,
   })),
 }));
 
-vi.mock("@calcom/features/ee/workflows/repositories/WorkflowReminderRepository", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/repositories/WorkflowReminderRepository", () => ({
   WorkflowReminderRepository: vi.fn(),
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {},
   prisma: {},
 }));
 
-vi.mock("@calcom/features/CalendarEventBuilder", () => ({
+vi.mock("@calndrbrnd/features/CalendarEventBuilder", () => ({
   CalendarEventBuilder: {
     fromBooking: vi.fn(),
   },
 }));
 
-import { sendCustomWorkflowEmail } from "@calcom/emails/workflow-email-service";
-import { CalendarEventBuilder } from "@calcom/features/CalendarEventBuilder";
+import { sendCustomWorkflowEmail } from "@calndrbrnd/emails/workflow-email-service";
+import { CalendarEventBuilder } from "@calndrbrnd/features/CalendarEventBuilder";
 
 import { sendWorkflowEmails, ZSendWorkflowEmailsSchema } from "./sendWorkflowEmails";
 

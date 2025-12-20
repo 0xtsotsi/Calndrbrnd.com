@@ -4,9 +4,9 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import { AVATAR_FALLBACK, WEBAPP_URL } from "@calcom/lib/constants";
-import { convertSvgToPng } from "@calcom/lib/server/imageUtils";
-import prisma from "@calcom/prisma";
+import { AVATAR_FALLBACK, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { convertSvgToPng } from "@calndrbrnd/lib/server/imageUtils";
+import prisma from "@calndrbrnd/prisma";
 
 const querySchema = z.object({
   uuid: z.string().transform((objectKey) => objectKey.split(".")[0]),

@@ -6,20 +6,20 @@ import { getCoreRowModel, getFilteredRowModel, useReactTable } from "@tanstack/r
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { DataTableProvider } from "@calcom/features/data-table/DataTableProvider";
-import { DataTable, DataTableToolbar } from "@calcom/features/data-table/components";
-import { useDataTable } from "@calcom/features/data-table/hooks";
-import type { DateRange } from "@calcom/features/schedules/lib/date-ranges";
-import { APP_NAME, WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
-import type { MembershipRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc";
-import type { UserProfile } from "@calcom/types/UserProfile";
-import { UserAvatar } from "@calcom/ui/components/avatar";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
+import dayjs from "@calndrbrnd/dayjs";
+import { DataTableProvider } from "@calndrbrnd/features/data-table/DataTableProvider";
+import { DataTable, DataTableToolbar } from "@calndrbrnd/features/data-table/components";
+import { useDataTable } from "@calndrbrnd/features/data-table/hooks";
+import type { DateRange } from "@calndrbrnd/features/schedules/lib/date-ranges";
+import { APP_NAME, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { CURRENT_TIMEZONE } from "@calndrbrnd/lib/timezoneConstants";
+import type { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
+import { UserAvatar } from "@calndrbrnd/ui/components/avatar";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
 
 import { UpgradeTip } from "../../tips/UpgradeTip";
 import { createTimezoneBuddyStore, TBContext } from "../store";

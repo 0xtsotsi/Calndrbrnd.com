@@ -5,15 +5,15 @@ import type { UseFormGetValues, UseFormSetValue, Control, FormState } from "reac
 import type {
   TLocationOptions,
   TEventTypeLocation,
-} from "@calcom/features/eventtypes/components/locations/Locations";
-import Locations from "@calcom/features/eventtypes/components/locations/Locations";
-import type { LocationFormValues } from "@calcom/features/eventtypes/lib/types";
-import type { SingleValueLocationOption } from "@calcom/features/form/components/LocationSelect";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SchedulingType } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { Label } from "@calcom/ui/components/form";
-import { Skeleton, SkeletonText, SkeletonContainer } from "@calcom/ui/components/skeleton";
+} from "@calndrbrnd/features/eventtypes/components/locations/Locations";
+import Locations from "@calndrbrnd/features/eventtypes/components/locations/Locations";
+import type { LocationFormValues } from "@calndrbrnd/features/eventtypes/lib/types";
+import type { SingleValueLocationOption } from "@calndrbrnd/features/form/components/LocationSelect";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Skeleton, SkeletonText, SkeletonContainer } from "@calndrbrnd/ui/components/skeleton";
 
 import { QueryCell } from "@lib/QueryCell";
 

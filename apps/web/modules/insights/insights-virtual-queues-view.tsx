@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-import type { RoutingForm } from "@calcom/app-store/routing-forms/types/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import { Label } from "@calcom/ui/components/form";
-import { Select } from "@calcom/ui/components/form";
+import type { RoutingForm } from "@calndrbrnd/app-store/routing-forms/types/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Select } from "@calndrbrnd/ui/components/form";
 
 import { TestForm } from "../../components/apps/routing-forms/TestForm";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
 
 export default function InsightsVirtualQueuesPage() {
   const { t } = useLocale();

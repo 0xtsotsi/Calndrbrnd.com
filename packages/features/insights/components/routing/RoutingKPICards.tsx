@@ -1,10 +1,10 @@
 "use client";
 
-import { useInsightsRoutingParameters } from "@calcom/features/insights/hooks/useInsightsRoutingParameters";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import classNames from "@calcom/ui/classNames";
-import { SkeletonText } from "@calcom/ui/components/skeleton";
+import { useInsightsRoutingParameters } from "@calndrbrnd/features/insights/hooks/useInsightsRoutingParameters";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import classNames from "@calndrbrnd/ui/classNames";
+import { SkeletonText } from "@calndrbrnd/ui/components/skeleton";
 
 import { valueFormatter } from "../../lib";
 import { ChartCard } from "../ChartCard";

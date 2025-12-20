@@ -18,7 +18,7 @@ import {
   IsNumber,
 } from "class-validator";
 
-import { MAX_SEATS_PER_TIME_SLOT } from "@calcom/platform-constants";
+import { MAX_SEATS_PER_TIME_SLOT } from "@calndrbrnd/platform-constants";
 
 // note(Lauris): We will gradually expose more properties if any customer needs them.
 // Just uncomment any below when requested. Go to bottom of file to see UpdateEventTypeInput.

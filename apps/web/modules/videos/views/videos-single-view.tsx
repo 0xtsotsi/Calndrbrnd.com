@@ -6,20 +6,20 @@ import { DailyProvider } from "@daily-co/daily-react";
 import { useDailyEvent } from "@daily-co/daily-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 
-import dayjs from "@calcom/dayjs";
-import { WEBSITE_URL } from "@calcom/lib/constants";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { TRANSCRIPTION_STOPPED_ICON, RECORDING_DEFAULT_ICON } from "@calcom/lib/constants";
-import { formatToLocalizedDate, formatToLocalizedTime } from "@calcom/lib/dayjs";
-import { emailRegex } from "@calcom/lib/emailSchema";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import type { inferSSRProps } from "@calcom/types/inferSSRProps";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { Dialog, DialogContent } from "@calcom/ui/components/dialog";
-import { Input } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import dayjs from "@calndrbrnd/dayjs";
+import { WEBSITE_URL } from "@calndrbrnd/lib/constants";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { TRANSCRIPTION_STOPPED_ICON, RECORDING_DEFAULT_ICON } from "@calndrbrnd/lib/constants";
+import { formatToLocalizedDate, formatToLocalizedTime } from "@calndrbrnd/lib/dayjs";
+import { emailRegex } from "@calndrbrnd/lib/emailSchema";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import type { inferSSRProps } from "@calndrbrnd/types/inferSSRProps";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Dialog, DialogContent } from "@calndrbrnd/ui/components/dialog";
+import { Input } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import type { getServerSideProps } from "@lib/video/[uid]/getServerSideProps";
 

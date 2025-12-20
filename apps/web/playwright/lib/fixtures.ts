@@ -3,7 +3,7 @@ import { test as base } from "@playwright/test";
  
 import { noop } from "lodash";
 
-import prisma from "@calcom/prisma";
+import prisma from "@calndrbrnd/prisma";
 
 import type { ExpectedUrlDetails } from "../../../../playwright.config";
 import { createAppsFixture } from "../fixtures/apps";

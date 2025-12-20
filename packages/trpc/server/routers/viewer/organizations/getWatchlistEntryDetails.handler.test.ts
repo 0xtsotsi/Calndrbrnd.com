@@ -1,11 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { WatchlistErrors } from "@calcom/features/watchlist/lib/errors/WatchlistErrors";
-import { WatchlistType, WatchlistAction } from "@calcom/prisma/enums";
+import { WatchlistErrors } from "@calndrbrnd/features/watchlist/lib/errors/WatchlistErrors";
+import { WatchlistType, WatchlistAction } from "@calndrbrnd/prisma/enums";
 
 import { getWatchlistEntryDetailsHandler } from "./getWatchlistEntryDetails.handler";
 
-vi.mock("@calcom/features/di/watchlist/containers/watchlist");
+vi.mock("@calndrbrnd/features/di/watchlist/containers/watchlist");
 
 describe("getWatchlistEntryDetailsHandler", () => {
   const mockUser = {
@@ -46,7 +46,7 @@ describe("getWatchlistEntryDetailsHandler", () => {
   beforeEach(async () => {
     vi.clearAllMocks();
     const { getOrganizationWatchlistQueryService } = await import(
-      "@calcom/features/di/watchlist/containers/watchlist"
+      "@calndrbrnd/features/di/watchlist/containers/watchlist"
     );
     vi.mocked(getOrganizationWatchlistQueryService).mockReturnValue(mockService as never);
   });

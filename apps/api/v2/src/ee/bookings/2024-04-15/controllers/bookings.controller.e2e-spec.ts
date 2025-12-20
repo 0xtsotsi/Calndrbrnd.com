@@ -21,11 +21,11 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { BookingResponse } from "@calcom/platform-libraries";
-import { type RegularBookingCreateResult } from "@calcom/platform-libraries/bookings";
-import type { ApiSuccessResponse, ApiErrorResponse } from "@calcom/platform-types";
-import type { User } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { BookingResponse } from "@calndrbrnd/platform-libraries";
+import { type RegularBookingCreateResult } from "@calndrbrnd/platform-libraries/bookings";
+import type { ApiSuccessResponse, ApiErrorResponse } from "@calndrbrnd/platform-types";
+import type { User } from "@calndrbrnd/prisma/client";
 
 describe("Bookings Endpoints 2024-04-15", () => {
   describe("User Authenticated", () => {

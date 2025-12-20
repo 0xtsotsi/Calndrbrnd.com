@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 
 import {
   getDateRangeFromPreset,
@@ -14,7 +14,7 @@ import {
 import { ColumnFilterType, type DateRangeFilterValue } from "./types";
 
 // Mock dayjs to have consistent timestamps in tests
-vi.mock("@calcom/dayjs", () => {
+vi.mock("@calndrbrnd/dayjs", () => {
   const mockDayjs = vi.fn(() => ({
     startOf: vi.fn().mockReturnThis(),
     endOf: vi.fn().mockReturnThis(),

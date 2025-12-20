@@ -1,12 +1,12 @@
 import { faker } from "@faker-js/faker";
 import { v4 as uuidv4 } from "uuid";
 
-import dayjs from "@calcom/dayjs";
-import { hashPassword } from "@calcom/lib/auth/hashPassword";
-import { RefundPolicy } from "@calcom/lib/payment/types";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { BookingStatus, AssignmentReasonEnum, PaymentOption } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { hashPassword } from "@calndrbrnd/lib/auth/hashPassword";
+import { RefundPolicy } from "@calndrbrnd/lib/payment/types";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { BookingStatus, AssignmentReasonEnum, PaymentOption } from "@calndrbrnd/prisma/enums";
 
 import { seedAttributes, seedRoutingFormResponses, seedRoutingForms } from "./seed-utils";
 
@@ -724,7 +724,7 @@ async function main() {
     include: {
       members: {
         include: {
-          // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
+          // eslint-disable-next-line @calndrbrnd/eslint/no-prisma-include-true
           user: true,
         },
       },

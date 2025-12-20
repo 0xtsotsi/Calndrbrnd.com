@@ -1,5 +1,5 @@
-import { createModule } from "@calcom/features/di/di";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
+import { createModule } from "@calndrbrnd/features/di/di";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
 
 import { NoopRedisService } from "../NoopRedisService";
 import { RedisService } from "../RedisService";

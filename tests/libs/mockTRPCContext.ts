@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { UserPermissionRole } from "@calcom/prisma/enums";
-import type { GetSessionFn } from "@calcom/trpc/server/createContext";
-import { createContext } from "@calcom/trpc/server/createContext";
-import type { UserProfile } from "@calcom/types/UserProfile";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import type { GetSessionFn } from "@calndrbrnd/trpc/server/createContext";
+import { createContext } from "@calndrbrnd/trpc/server/createContext";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
 
 const sessionGetter: GetSessionFn = () =>
   Promise.resolve({

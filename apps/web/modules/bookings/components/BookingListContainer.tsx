@@ -4,21 +4,21 @@ import { useReactTable, getCoreRowModel, getSortedRowModel } from "@tanstack/rea
 import { useRouter } from "next/navigation";
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 
-import dayjs from "@calcom/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
 import {
   useDataTable,
   DataTableFilters,
   DataTableSegment,
   useDisplayedFilterCount,
-} from "@calcom/features/data-table";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import { Alert } from "@calcom/ui/components/alert";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { WipeMyCalActionButton } from "@calcom/web/components/apps/wipemycalother/wipeMyCalActionButton";
+} from "@calndrbrnd/features/data-table";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc/react";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ToggleGroup } from "@calndrbrnd/ui/components/form";
+import { WipeMyCalActionButton } from "@calndrbrnd/web/components/apps/wipemycalother/wipeMyCalActionButton";
 
 import { useBookingFilters } from "~/bookings/hooks/useBookingFilters";
 import { useBookingListColumns } from "~/bookings/hooks/useBookingListColumns";

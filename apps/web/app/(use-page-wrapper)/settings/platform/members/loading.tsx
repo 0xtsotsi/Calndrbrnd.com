@@ -1,4 +1,4 @@
-import { UserListTableSkeleton } from "@calcom/features/users/components/UserTable/UserListTableSkeleton";
+import { UserListTableSkeleton } from "@calndrbrnd/features/users/components/UserTable/UserListTableSkeleton";
 
 export default function Loading() {
   return <UserListTableSkeleton />;

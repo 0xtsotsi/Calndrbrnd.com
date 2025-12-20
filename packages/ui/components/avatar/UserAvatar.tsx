@@ -1,8 +1,8 @@
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { getUserAvatarUrl } from "@calcom/lib/getAvatarUrl";
-import type { User } from "@calcom/prisma/client";
-import type { UserProfile } from "@calcom/types/UserProfile";
-import classNames from "@calcom/ui/classNames";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { getUserAvatarUrl } from "@calndrbrnd/lib/getAvatarUrl";
+import type { User } from "@calndrbrnd/prisma/client";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { Avatar } from "./Avatar";
 

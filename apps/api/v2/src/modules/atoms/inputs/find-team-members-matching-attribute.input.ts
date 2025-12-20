@@ -1,6 +1,6 @@
 import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
 
-import type { TFindTeamMembersMatchingAttributeLogicInputSchema } from "@calcom/platform-libraries";
+import type { TFindTeamMembersMatchingAttributeLogicInputSchema } from "@calndrbrnd/platform-libraries";
 
 export class FindTeamMembersMatchingAttributeQueryDto {
   @ApiProperty({

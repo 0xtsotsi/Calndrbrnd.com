@@ -1,12 +1,12 @@
 import { useId } from "react";
 
-import { Badge } from "@calcom/ui/components/badge";
+import { Badge } from "@calndrbrnd/ui/components/badge";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
   HoverCardPortal,
-} from "@calcom/ui/components/hover-card";
+} from "@calndrbrnd/ui/components/hover-card";
 
 import { CellWithOverflowX } from "./CellWithOverflowX";
 

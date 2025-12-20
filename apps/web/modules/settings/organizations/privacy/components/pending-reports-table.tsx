@@ -4,11 +4,11 @@ import { keepPreviousData } from "@tanstack/react-query";
 import { getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
 import { useMemo, useState } from "react";
 
-import { DataTableWrapper, useDataTable } from "@calcom/features/data-table";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { trpc } from "@calcom/trpc";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { DataTableWrapper, useDataTable } from "@calndrbrnd/features/data-table";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { trpc } from "@calndrbrnd/trpc";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
 
 import { BookingReportEntryDetailsModal } from "./booking-report-entry-details-modal";
 import { usePendingReportsColumns } from "./pending-reports-columns";

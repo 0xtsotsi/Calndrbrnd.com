@@ -2,22 +2,22 @@ import prismaMock from "../../../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
-import { WorkflowMethods } from "@calcom/prisma/enums";
+import { WorkflowMethods } from "@calndrbrnd/prisma/enums";
 
 import { sendOrScheduleWorkflowEmails } from "./providers/emailProvider";
 import * as twilioProvider from "./providers/twilioProvider";
 import { cancelScheduledMessagesAndScheduleEmails } from "./reminderScheduler";
 
-vi.mock("@calcom/features/ee/workflows/lib/reminders/providers/twilioProvider", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/lib/reminders/providers/twilioProvider", () => ({
   cancelSMS: vi.fn(),
   getMessageBody: vi.fn().mockResolvedValue("Test message body"),
 }));
 
-vi.mock("@calcom/features/ee/workflows/lib/reminders/providers/emailProvider", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/lib/reminders/providers/emailProvider", () => ({
   sendOrScheduleWorkflowEmails: vi.fn(),
 }));
 
-vi.mock("@calcom/lib/server/i18n", () => {
+vi.mock("@calndrbrnd/lib/server/i18n", () => {
   return {
     getTranslation: async (locale: string, namespace: string) => {
       const t = (key: string) => key;

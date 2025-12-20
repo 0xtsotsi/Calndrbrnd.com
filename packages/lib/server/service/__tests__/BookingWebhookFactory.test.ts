@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 
-import type { Person } from "@calcom/types/Calendar";
+import type { Person } from "@calndrbrnd/types/Calendar";
 
 import { BookingWebhookFactory } from "../BookingWebhookFactory";
 

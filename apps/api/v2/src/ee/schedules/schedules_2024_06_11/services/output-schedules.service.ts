@@ -1,8 +1,8 @@
 import { UsersRepository } from "@/modules/users/users.repository";
 import { Injectable } from "@nestjs/common";
 
-import type { WeekDay } from "@calcom/platform-types";
-import type { Availability, Schedule } from "@calcom/prisma/client";
+import type { WeekDay } from "@calndrbrnd/platform-types";
+import type { Availability, Schedule } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class OutputSchedulesService_2024_06_11 {

@@ -6,20 +6,20 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { RefCallback } from "react";
 import { useEffect, useState } from "react";
 
-import { getPremiumPlanPriceValue } from "@calcom/app-store/stripepayment/lib/utils";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { fetchUsername } from "@calcom/lib/fetchUsername";
-import hasKeyInMetadata from "@calcom/lib/hasKeyInMetadata";
-import { useDebounce } from "@calcom/lib/hooks/useDebounce";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import type { AppRouter } from "@calcom/trpc/types/server/routers/_app";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Label, Input } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { getPremiumPlanPriceValue } from "@calndrbrnd/app-store/stripepayment/lib/utils";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { fetchUsername } from "@calndrbrnd/lib/fetchUsername";
+import hasKeyInMetadata from "@calndrbrnd/lib/hasKeyInMetadata";
+import { useDebounce } from "@calndrbrnd/lib/hooks/useDebounce";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import type { AppRouter } from "@calndrbrnd/trpc/types/server/routers/_app";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@calndrbrnd/ui/components/dialog";
+import { Label, Input } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import type { TRPCClientErrorLike } from "@trpc/client";
 

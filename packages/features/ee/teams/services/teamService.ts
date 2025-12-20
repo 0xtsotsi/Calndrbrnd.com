@@ -1,22 +1,22 @@
 import { randomBytes } from "crypto";
 
-import { getTeamBillingServiceFactory } from "@calcom/ee/billing/di/containers/Billing";
-import { deleteWorkfowRemindersOfRemovedMember } from "@calcom/features/ee/teams/lib/deleteWorkflowRemindersOfRemovedMember";
-import { updateNewTeamMemberEventTypes } from "@calcom/features/ee/teams/lib/queries";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { OnboardingPathService } from "@calcom/features/onboarding/lib/onboarding-path.service";
-import { createAProfileForAnExistingUser } from "@calcom/features/profile/lib/createAProfileForAnExistingUser";
-import { ProfileRepository } from "@calcom/features/profile/repositories/ProfileRepository";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { deleteDomain } from "@calcom/lib/domainManager/organization";
-import logger from "@calcom/lib/logger";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import { ErrorWithCode } from "@calcom/lib/errors";
-import { prisma } from "@calcom/prisma";
-import type { Membership } from "@calcom/prisma/client";
-import { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { getTeamBillingServiceFactory } from "@calndrbrnd/ee/billing/di/containers/Billing";
+import { deleteWorkfowRemindersOfRemovedMember } from "@calndrbrnd/features/ee/teams/lib/deleteWorkflowRemindersOfRemovedMember";
+import { updateNewTeamMemberEventTypes } from "@calndrbrnd/features/ee/teams/lib/queries";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { WorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/WorkflowService";
+import { OnboardingPathService } from "@calndrbrnd/features/onboarding/lib/onboarding-path.service";
+import { createAProfileForAnExistingUser } from "@calndrbrnd/features/profile/lib/createAProfileForAnExistingUser";
+import { ProfileRepository } from "@calndrbrnd/features/profile/repositories/ProfileRepository";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { deleteDomain } from "@calndrbrnd/lib/domainManager/organization";
+import logger from "@calndrbrnd/lib/logger";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import { ErrorWithCode } from "@calndrbrnd/lib/errors";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Membership } from "@calndrbrnd/prisma/client";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 const log = logger.getSubLogger({ prefix: ["TeamService"] });
 

@@ -1,5 +1,5 @@
-import prisma from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 export const isAdminForUser = async (adminUserId: number, memberUserId: number) => {
   const adminTeams = await prisma.membership.findMany({

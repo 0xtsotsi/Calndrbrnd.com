@@ -1,10 +1,10 @@
 import type { NextApiRequest } from "next";
 import { stringify } from "querystring";
 
-import { WEBAPP_URL_FOR_OAUTH } from "@calcom/lib/constants";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import prisma from "@calcom/prisma";
+import { WEBAPP_URL_FOR_OAUTH } from "@calndrbrnd/lib/constants";
+import { defaultHandler } from "@calndrbrnd/lib/server/defaultHandler";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import prisma from "@calndrbrnd/prisma";
 
 import config from "../config.json";
 import { getWebexAppKeys } from "../lib/getWebexAppKeys";

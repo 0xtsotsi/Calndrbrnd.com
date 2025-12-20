@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { TextField } from "@calcom/ui/components/form";
-import { Button } from "@calcom/ui/components/button";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Button } from "@calndrbrnd/ui/components/button";
 
 export default function AppSettings() {
   const { t } = useLocale();

@@ -2,18 +2,18 @@
 
 import { useEffect, useState } from "react";
 
-import type { TApiKeys } from "@calcom/ee/api-keys/components/ApiKeyListItem";
-import LicenseRequired from "@calcom/ee/common/components/LicenseRequired";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import ApiKeyDialogForm from "@calcom/features/ee/api-keys/components/ApiKeyDialogForm";
-import ApiKeyListItem from "@calcom/features/ee/api-keys/components/ApiKeyListItem";
-import SettingsHeader from "@calcom/features/settings/appDir/SettingsHeader";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent } from "@calcom/ui/components/dialog";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import type { TApiKeys } from "@calndrbrnd/ee/api-keys/components/ApiKeyListItem";
+import LicenseRequired from "@calndrbrnd/ee/common/components/LicenseRequired";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import ApiKeyDialogForm from "@calndrbrnd/features/ee/api-keys/components/ApiKeyDialogForm";
+import ApiKeyListItem from "@calndrbrnd/features/ee/api-keys/components/ApiKeyListItem";
+import SettingsHeader from "@calndrbrnd/features/settings/appDir/SettingsHeader";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent } from "@calndrbrnd/ui/components/dialog";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
 
 export const apiKeyModalRef = {
   current: null as null | ((show: boolean) => void),

@@ -1,5 +1,5 @@
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
 
 import { createModule } from "../di";
 

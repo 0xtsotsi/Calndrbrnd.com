@@ -2,19 +2,19 @@ import { useMemo, useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import { z } from "zod";
 
-import type { LocationObject } from "@calcom/app-store/locations";
-import { getOrganizerInputLocationTypes } from "@calcom/app-store/locations";
-import { DefaultEventLocationTypeEnum } from "@calcom/app-store/locations";
-import { useBookerStore } from "@calcom/features/bookings/Booker/store";
-import type { GetBookingType } from "@calcom/features/bookings/lib/get-booking";
-import getLocationOptionsForSelect from "@calcom/features/bookings/lib/getLocationOptionsForSelect";
-import { FormBuilderField } from "@calcom/features/form-builder/FormBuilderField";
-import { fieldTypesConfigMap } from "@calcom/features/form-builder/fieldTypes";
-import { fieldsThatSupportLabelAsSafeHtml } from "@calcom/features/form-builder/fieldsThatSupportLabelAsSafeHtml";
-import { SystemField } from "@calcom/lib/bookings/SystemField";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { markdownToSafeHTML } from "@calcom/lib/markdownToSafeHTML";
-import type { RouterOutputs } from "@calcom/trpc/react";
+import type { LocationObject } from "@calndrbrnd/app-store/locations";
+import { getOrganizerInputLocationTypes } from "@calndrbrnd/app-store/locations";
+import { DefaultEventLocationTypeEnum } from "@calndrbrnd/app-store/locations";
+import { useBookerStore } from "@calndrbrnd/features/bookings/Booker/store";
+import type { GetBookingType } from "@calndrbrnd/features/bookings/lib/get-booking";
+import getLocationOptionsForSelect from "@calndrbrnd/features/bookings/lib/getLocationOptionsForSelect";
+import { FormBuilderField } from "@calndrbrnd/features/form-builder/FormBuilderField";
+import { fieldTypesConfigMap } from "@calndrbrnd/features/form-builder/fieldTypes";
+import { fieldsThatSupportLabelAsSafeHtml } from "@calndrbrnd/features/form-builder/fieldsThatSupportLabelAsSafeHtml";
+import { SystemField } from "@calndrbrnd/lib/bookings/SystemField";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { markdownToSafeHTML } from "@calndrbrnd/lib/markdownToSafeHTML";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
 
 type TouchedFields = {
   responses?: Record<string, boolean>;

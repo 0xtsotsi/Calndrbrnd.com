@@ -1,6 +1,6 @@
-import type { WebhookGroup } from "@calcom/features/webhooks/lib/dto/types";
-import { WebhookRepository } from "@calcom/features/webhooks/lib/repository/WebhookRepository";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import type { WebhookGroup } from "@calndrbrnd/features/webhooks/lib/dto/types";
+import { WebhookRepository } from "@calndrbrnd/features/webhooks/lib/repository/WebhookRepository";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 type GetByViewerOptions = {
   ctx: {

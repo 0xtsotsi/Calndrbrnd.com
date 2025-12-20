@@ -1,26 +1,26 @@
 import type { z } from "zod";
 
-import { getUsersCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
-import { getEventLocationType, OrganizerDefaultConferencingAppType } from "@calcom/app-store/locations";
-import { getAppFromSlug } from "@calcom/app-store/utils";
-import { sendLocationChangeEmailsAndSMS } from "@calcom/emails/email-manager";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { CredentialAccessService } from "@calcom/features/credentials/services/CredentialAccessService";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import { buildCalEventFromBooking } from "@calcom/lib/buildCalEventFromBooking";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import type { Booking, BookingReference } from "@calcom/prisma/client";
-import type { userMetadata } from "@calcom/prisma/zod-utils";
-import type { EventTypeMetadata } from "@calcom/prisma/zod-utils";
-import type { AdditionalInformation, CalendarEvent } from "@calcom/types/Calendar";
-import type { PartialReference } from "@calcom/types/EventManager";
-import type { Ensure } from "@calcom/types/utils";
+import { getUsersCredentialsIncludeServiceAccountKey } from "@calndrbrnd/app-store/delegationCredential";
+import { getEventLocationType, OrganizerDefaultConferencingAppType } from "@calndrbrnd/app-store/locations";
+import { getAppFromSlug } from "@calndrbrnd/app-store/utils";
+import { sendLocationChangeEmailsAndSMS } from "@calndrbrnd/emails/email-manager";
+import EventManager from "@calndrbrnd/features/bookings/lib/EventManager";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
+import { CredentialAccessService } from "@calndrbrnd/features/credentials/services/CredentialAccessService";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { getVideoCallUrlFromCalEvent } from "@calndrbrnd/lib/CalEventParser";
+import { buildCalEventFromBooking } from "@calndrbrnd/lib/buildCalEventFromBooking";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Booking, BookingReference } from "@calndrbrnd/prisma/client";
+import type { userMetadata } from "@calndrbrnd/prisma/zod-utils";
+import type { EventTypeMetadata } from "@calndrbrnd/prisma/zod-utils";
+import type { AdditionalInformation, CalendarEvent } from "@calndrbrnd/types/Calendar";
+import type { PartialReference } from "@calndrbrnd/types/EventManager";
+import type { Ensure } from "@calndrbrnd/types/utils";
 
 import { TRPCError } from "@trpc/server";
 

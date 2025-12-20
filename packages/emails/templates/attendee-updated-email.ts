@@ -1,5 +1,5 @@
-import { getReplyToHeader } from "@calcom/lib/getReplyToHeader";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import { getReplyToHeader } from "@calndrbrnd/lib/getReplyToHeader";
+import type { CalendarEvent, Person } from "@calndrbrnd/types/Calendar";
 
 import generateIcsFile, { GenerateIcsRole } from "../lib/generateIcsFile";
 import renderEmail from "../src/renderEmail";

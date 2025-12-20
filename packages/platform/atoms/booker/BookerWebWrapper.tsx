@@ -9,29 +9,29 @@ import { shallow } from "zustand/shallow";
 import {
   sdkActionManager,
   useIsEmbed,
-} from "@calcom/embed-core/embed-iframe";
-import { useBookerEmbedEvents } from "@calcom/embed-core/src/embed-iframe/react-hooks";
-import type { BookerProps } from "@calcom/features/bookings/Booker";
-import { Booker as BookerComponent } from "@calcom/features/bookings/Booker";
+} from "@calndrbrnd/embed-core/embed-iframe";
+import { useBookerEmbedEvents } from "@calndrbrnd/embed-core/src/embed-iframe/react-hooks";
+import type { BookerProps } from "@calndrbrnd/features/bookings/Booker";
+import { Booker as BookerComponent } from "@calndrbrnd/features/bookings/Booker";
 import {
   BookerStoreProvider,
   useInitializeBookerStoreContext,
   useBookerStoreContext,
-} from "@calcom/features/bookings/Booker/BookerStoreProvider";
-import { useBookerLayout } from "@calcom/features/bookings/Booker/components/hooks/useBookerLayout";
-import { useBookingForm } from "@calcom/features/bookings/Booker/components/hooks/useBookingForm";
-import { useBookings } from "@calcom/features/bookings/Booker/components/hooks/useBookings";
-import { useCalendars } from "@calcom/features/bookings/Booker/components/hooks/useCalendars";
-import { useSlots } from "@calcom/features/bookings/Booker/components/hooks/useSlots";
-import { useVerifyCode } from "@calcom/features/bookings/Booker/components/hooks/useVerifyCode";
-import { useVerifyEmail } from "@calcom/features/bookings/Booker/components/hooks/useVerifyEmail";
-import { useInitializeBookerStore } from "@calcom/features/bookings/Booker/store";
-import { useEvent, useScheduleForEvent } from "@calcom/features/bookings/Booker/utils/event";
-import { useBrandColors } from "@calcom/features/bookings/Booker/utils/use-brand-colors";
-import type { getPublicEvent } from "@calcom/features/eventtypes/lib/getPublicEvent";
-import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR, WEBAPP_URL } from "@calcom/lib/constants";
-import { useRouterQuery } from "@calcom/lib/hooks/useRouterQuery";
-import { localStorage } from "@calcom/lib/webstorage";
+} from "@calndrbrnd/features/bookings/Booker/BookerStoreProvider";
+import { useBookerLayout } from "@calndrbrnd/features/bookings/Booker/components/hooks/useBookerLayout";
+import { useBookingForm } from "@calndrbrnd/features/bookings/Booker/components/hooks/useBookingForm";
+import { useBookings } from "@calndrbrnd/features/bookings/Booker/components/hooks/useBookings";
+import { useCalendars } from "@calndrbrnd/features/bookings/Booker/components/hooks/useCalendars";
+import { useSlots } from "@calndrbrnd/features/bookings/Booker/components/hooks/useSlots";
+import { useVerifyCode } from "@calndrbrnd/features/bookings/Booker/components/hooks/useVerifyCode";
+import { useVerifyEmail } from "@calndrbrnd/features/bookings/Booker/components/hooks/useVerifyEmail";
+import { useInitializeBookerStore } from "@calndrbrnd/features/bookings/Booker/store";
+import { useEvent, useScheduleForEvent } from "@calndrbrnd/features/bookings/Booker/utils/event";
+import { useBrandColors } from "@calndrbrnd/features/bookings/Booker/utils/use-brand-colors";
+import type { getPublicEvent } from "@calndrbrnd/features/eventtypes/lib/getPublicEvent";
+import { DEFAULT_LIGHT_BRAND_COLOR, DEFAULT_DARK_BRAND_COLOR, WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useRouterQuery } from "@calndrbrnd/lib/hooks/useRouterQuery";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
 
 export type BookerWebWrapperAtomProps = BookerProps & {
   eventData?: NonNullable<Awaited<ReturnType<typeof getPublicEvent>>>;

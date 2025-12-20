@@ -23,10 +23,10 @@ import { OrganizationRepositoryFixture } from "test/fixtures/repository/organiza
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { RoleService } from "@calcom/platform-libraries/pbac";
-import type { User, Team } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { RoleService } from "@calndrbrnd/platform-libraries/pbac";
+import type { User, Team } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 describe("Organizations Roles Endpoints", () => {
   let app: INestApplication;

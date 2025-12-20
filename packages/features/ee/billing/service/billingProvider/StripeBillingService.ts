@@ -1,6 +1,6 @@
 import type Stripe from "stripe";
 
-import logger from "@calcom/lib/logger";
+import logger from "@calndrbrnd/lib/logger";
 
 import { SubscriptionStatus } from "../../repository/billing/IBillingRepository";
 import type { IBillingProviderService } from "./IBillingProviderService";

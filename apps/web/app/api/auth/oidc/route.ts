@@ -2,9 +2,9 @@ import { defaultResponderForAppDir } from "app/api/defaultResponderForAppDir";
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-import jackson from "@calcom/features/ee/sso/lib/jackson";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
+import jackson from "@calndrbrnd/features/ee/sso/lib/jackson";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
 
 // This is the callback endpoint for the OIDC provider
 // A team must set this endpoint in the OIDC provider's configuration

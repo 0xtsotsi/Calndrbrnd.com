@@ -1,9 +1,9 @@
-import type { BookingAuditViewerService } from "@calcom/features/booking-audit/lib/service/BookingAuditViewerService";
-import { BOOKING_AUDIT_DI_TOKENS } from "@calcom/features/booking-audit/di/tokens";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
-import { prismaModule } from "@calcom/features/di/modules/Prisma";
-import { moduleLoader as bookingAuditRepositoryModuleLoader } from "@calcom/features/booking-audit/di/BookingAuditRepository.module";
-import { moduleLoader as bookingAuditViewerServiceModuleLoader } from "@calcom/features/booking-audit/di/BookingAuditViewerService.module";
+import type { BookingAuditViewerService } from "@calndrbrnd/features/booking-audit/lib/service/BookingAuditViewerService";
+import { BOOKING_AUDIT_DI_TOKENS } from "@calndrbrnd/features/booking-audit/di/tokens";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
+import { prismaModule } from "@calndrbrnd/features/di/modules/Prisma";
+import { moduleLoader as bookingAuditRepositoryModuleLoader } from "@calndrbrnd/features/booking-audit/di/BookingAuditRepository.module";
+import { moduleLoader as bookingAuditViewerServiceModuleLoader } from "@calndrbrnd/features/booking-audit/di/BookingAuditViewerService.module";
 
 import { createContainer } from "../di";
 

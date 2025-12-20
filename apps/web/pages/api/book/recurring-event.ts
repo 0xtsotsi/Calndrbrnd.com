@@ -1,13 +1,13 @@
 import type { NextApiRequest } from "next";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { getRecurringBookingService } from "@calcom/features/bookings/di/RecurringBookingService.container";
-import type { BookingResponse } from "@calcom/features/bookings/types";
-import { checkRateLimitAndThrowError } from "@calcom/lib/checkRateLimitAndThrowError";
-import getIP from "@calcom/lib/getIP";
-import { piiHasher } from "@calcom/lib/server/PiiHasher";
-import { checkCfTurnstileToken } from "@calcom/lib/server/checkCfTurnstileToken";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { getRecurringBookingService } from "@calndrbrnd/features/bookings/di/RecurringBookingService.container";
+import type { BookingResponse } from "@calndrbrnd/features/bookings/types";
+import { checkRateLimitAndThrowError } from "@calndrbrnd/lib/checkRateLimitAndThrowError";
+import getIP from "@calndrbrnd/lib/getIP";
+import { piiHasher } from "@calndrbrnd/lib/server/PiiHasher";
+import { checkCfTurnstileToken } from "@calndrbrnd/lib/server/checkCfTurnstileToken";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
 
 // @TODO: Didn't look at the contents of this function in order to not break old booking page.
 

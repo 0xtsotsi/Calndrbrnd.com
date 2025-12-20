@@ -1,9 +1,9 @@
 import { z } from "zod";
 
-import { checkUsername } from "@calcom/features/profile/lib/checkUsername";
-import { emailSchema } from "@calcom/lib/emailSchema";
-import { iso8601 } from "@calcom/prisma/zod-utils";
-import { UserSchema } from "@calcom/prisma/zod/modelSchema/UserSchema";
+import { checkUsername } from "@calndrbrnd/features/profile/lib/checkUsername";
+import { emailSchema } from "@calndrbrnd/lib/emailSchema";
+import { iso8601 } from "@calndrbrnd/prisma/zod-utils";
+import { UserSchema } from "@calndrbrnd/prisma/zod/modelSchema/UserSchema";
 
 import { isValidBase64Image } from "~/lib/utils/isValidBase64Image";
 import { timeZone } from "~/lib/validations/shared/timeZone";

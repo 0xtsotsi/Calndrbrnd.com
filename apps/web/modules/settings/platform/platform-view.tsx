@@ -4,9 +4,9 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 
-import Shell from "@calcom/features/shell/Shell";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { showToast } from "@calcom/ui/components/toast";
+import Shell from "@calndrbrnd/features/shell/Shell";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import { useExternalRedirectHandler } from "@lib/hooks/settings/platform/billing/useExternalRedirectHandler";
 import { useDeleteOAuthClient } from "@lib/hooks/settings/platform/oauth-clients/useDeleteOAuthClient";

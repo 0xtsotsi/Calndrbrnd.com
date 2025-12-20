@@ -31,8 +31,8 @@ import {
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 import { plainToClass } from "class-transformer";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { User } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { User } from "@calndrbrnd/prisma/client";
 
 import { CreateDelegationCredentialInput } from "./inputs/create-delegation-credential.input";
 

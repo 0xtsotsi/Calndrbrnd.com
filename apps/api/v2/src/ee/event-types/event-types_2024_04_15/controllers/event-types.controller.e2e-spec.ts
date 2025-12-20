@@ -29,15 +29,15 @@ import {
   VERSION_2024_06_11,
   VERSION_2024_04_15,
   CAL_API_VERSION_HEADER,
-} from "@calcom/platform-constants";
+} from "@calndrbrnd/platform-constants";
 import {
   EventTypesByViewer,
   eventTypeBookingFields,
   eventTypeLocations,
   EventTypesPublic,
-} from "@calcom/platform-libraries/event-types";
-import type { ApiSuccessResponse } from "@calcom/platform-types";
-import type { EventType, PlatformOAuthClient, Team, User } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-libraries/event-types";
+import type { ApiSuccessResponse } from "@calndrbrnd/platform-types";
+import type { EventType, PlatformOAuthClient, Team, User } from "@calndrbrnd/prisma/client";
 
 describe("Event types Endpoints", () => {
   describe("Not authenticated", () => {

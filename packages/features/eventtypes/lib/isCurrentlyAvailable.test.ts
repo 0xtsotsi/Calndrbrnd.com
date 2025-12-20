@@ -8,7 +8,7 @@ const prismaMock = {
   },
 };
 
-vi.mock("@calcom/prisma", () => {
+vi.mock("@calndrbrnd/prisma", () => {
   return {
     PrismaClient: vi.fn(() => prismaMock),
   };

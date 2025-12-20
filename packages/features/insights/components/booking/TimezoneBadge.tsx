@@ -2,12 +2,12 @@
 
 import { useMemo } from "react";
 
-import { useDataTable } from "@calcom/features/data-table";
-import NoSSR from "@calcom/lib/components/NoSSR";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { CURRENT_TIMEZONE } from "@calcom/lib/timezoneConstants";
-import { Icon } from "@calcom/ui/components/icon";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+import { useDataTable } from "@calndrbrnd/features/data-table";
+import NoSSR from "@calndrbrnd/lib/components/NoSSR";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { CURRENT_TIMEZONE } from "@calndrbrnd/lib/timezoneConstants";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 const TimezoneBadgeContent = () => {
   const { t } = useLocale();

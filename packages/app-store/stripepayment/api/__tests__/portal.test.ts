@@ -2,10 +2,10 @@ import type { NextApiRequest } from "next";
 import type { Session } from "next-auth";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import {
   BillingPortalServiceFactory,
@@ -17,12 +17,12 @@ import * as customerModule from "../../lib/customer";
 import { validateAuthentication, buildReturnUrl } from "../portal";
 
 // Mock dependencies
-vi.mock("@calcom/features/pbac/services/permission-check.service");
-vi.mock("@calcom/features/ee/teams/repositories/TeamRepository");
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service");
+vi.mock("@calndrbrnd/features/ee/teams/repositories/TeamRepository");
 vi.mock("../../lib/customer");
 vi.mock("../../lib/server");
 vi.mock("../../lib/subscriptions");
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {},
 }));
 

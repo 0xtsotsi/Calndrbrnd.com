@@ -2,7 +2,7 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { useId } from "@radix-ui/react-id";
 import type { InputHTMLAttributes } from "react";
 import React, { forwardRef } from "react";
-import classNames from "@calcom/ui/classNames";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { Icon } from "../../icon";
 

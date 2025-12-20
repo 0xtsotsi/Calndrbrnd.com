@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 import { v4 as uuidv4 } from "uuid";
 
-import { BookingStatus, MembershipRole } from "@calcom/prisma/enums";
+import { BookingStatus, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import {
   addFilter,

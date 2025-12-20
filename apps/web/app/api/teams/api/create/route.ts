@@ -4,15 +4,15 @@ import { NextResponse } from "next/server";
 import type Stripe from "stripe";
 import { z } from "zod";
 
-import { getBillingProviderService } from "@calcom/ee/billing/di/containers/Billing";
-import { getTeamBillingServiceFactory } from "@calcom/ee/billing/di/containers/Billing";
-import { Plan, SubscriptionStatus } from "@calcom/features/ee/billing/repository/billing/IBillingRepository";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { HttpError } from "@calcom/lib/http-error";
-import { prisma } from "@calcom/prisma";
-import { MembershipRole } from "@calcom/prisma/enums";
-import { MembershipSchema } from "@calcom/prisma/zod/modelSchema/MembershipSchema";
-import { TeamSchema } from "@calcom/prisma/zod/modelSchema/TeamSchema";
+import { getBillingProviderService } from "@calndrbrnd/ee/billing/di/containers/Billing";
+import { getTeamBillingServiceFactory } from "@calndrbrnd/ee/billing/di/containers/Billing";
+import { Plan, SubscriptionStatus } from "@calndrbrnd/features/ee/billing/repository/billing/IBillingRepository";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { prisma } from "@calndrbrnd/prisma";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
+import { MembershipSchema } from "@calndrbrnd/prisma/zod/modelSchema/MembershipSchema";
+import { TeamSchema } from "@calndrbrnd/prisma/zod/modelSchema/TeamSchema";
 
 const querySchema = z.object({
   session_id: z.string().min(1),

@@ -2,20 +2,20 @@ import { calendar_v3 } from "@googleapis/calendar";
 import { OAuth2Client } from "googleapis-common";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import GoogleCalendarService from "@calcom/app-store/googlecalendar/lib/CalendarService";
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import { renewSelectedCalendarCredentialId } from "@calcom/lib/connectedCalendar";
+import GoogleCalendarService from "@calndrbrnd/app-store/googlecalendar/lib/CalendarService";
+import { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
+import { renewSelectedCalendarCredentialId } from "@calndrbrnd/lib/connectedCalendar";
 import {
   GOOGLE_CALENDAR_SCOPES,
   SCOPE_USERINFO_PROFILE,
   WEBAPP_URL,
   WEBAPP_URL_FOR_OAUTH,
-} from "@calcom/lib/constants";
-import { getSafeRedirectUrl } from "@calcom/lib/getSafeRedirectUrl";
-import { HttpError } from "@calcom/lib/http-error";
-import { defaultHandler } from "@calcom/lib/server/defaultHandler";
-import { defaultResponder } from "@calcom/lib/server/defaultResponder";
-import { Prisma } from "@calcom/prisma/client";
+} from "@calndrbrnd/lib/constants";
+import { getSafeRedirectUrl } from "@calndrbrnd/lib/getSafeRedirectUrl";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import { defaultHandler } from "@calndrbrnd/lib/server/defaultHandler";
+import { defaultResponder } from "@calndrbrnd/lib/server/defaultResponder";
+import { Prisma } from "@calndrbrnd/prisma/client";
 
 import getInstalledAppPath from "../../_utils/getInstalledAppPath";
 import { decodeOAuthState } from "../../_utils/oauth/decodeOAuthState";

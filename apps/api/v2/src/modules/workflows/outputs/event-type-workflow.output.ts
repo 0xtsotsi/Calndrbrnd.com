@@ -7,7 +7,7 @@ import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
 import { Expose, Type } from "class-transformer";
 import { IsArray, IsEnum, IsIn, IsString, ValidateNested } from "class-validator";
 
-import { SUCCESS_STATUS, ERROR_STATUS } from "@calcom/platform-constants";
+import { SUCCESS_STATUS, ERROR_STATUS } from "@calndrbrnd/platform-constants";
 
 import { EMAIL_HOST, STEP_ACTIONS, StepAction } from "../inputs/workflow-step.input";
 import {

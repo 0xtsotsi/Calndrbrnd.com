@@ -1,4 +1,4 @@
-import logger from "@calcom/lib/logger";
+import logger from "@calndrbrnd/lib/logger";
 
 import type { SendgridFieldOptions, SendgridNewContact } from "../../Sendgrid";
 import Sendgrid from "../../Sendgrid";

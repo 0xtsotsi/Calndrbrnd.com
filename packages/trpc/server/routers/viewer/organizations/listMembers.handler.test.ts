@@ -1,27 +1,27 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { type TypedColumnFilter, ColumnFilterType } from "@calcom/features/data-table/lib/types";
-import type { FilterType } from "@calcom/types/data-table";
+import { type TypedColumnFilter, ColumnFilterType } from "@calndrbrnd/features/data-table/lib/types";
+import type { FilterType } from "@calndrbrnd/types/data-table";
 
 import { listMembersHandler } from "./listMembers.handler";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
   default: prisma, // Add default export for db
 }));
 
 // Mock FeaturesRepository
 const mockCheckIfTeamHasFeature = vi.fn();
-vi.mock("@calcom/features/flags/features.repository", () => ({
+vi.mock("@calndrbrnd/features/flags/features.repository", () => ({
   FeaturesRepository: vi.fn().mockImplementation(() => ({
     checkIfTeamHasFeature: mockCheckIfTeamHasFeature,
   })),
 }));
 
 // Mock PBAC permissions
-vi.mock("@calcom/features/pbac/lib/resource-permissions", () => ({
+vi.mock("@calndrbrnd/features/pbac/lib/resource-permissions", () => ({
   getSpecificPermissions: vi.fn().mockResolvedValue({
     listMembers: true,
     listMembersPrivate: true,
@@ -30,14 +30,14 @@ vi.mock("@calcom/features/pbac/lib/resource-permissions", () => ({
 
 // Mock PermissionCheckService
 const mockCheckPermission = vi.fn().mockResolvedValue(true);
-vi.mock("@calcom/features/pbac/services/permission-check.service", () => ({
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service", () => ({
   PermissionCheckService: vi.fn().mockImplementation(() => ({
     checkPermission: mockCheckPermission,
   })),
 }));
 
 // Mock UserRepository
-vi.mock("@calcom/features/users/repositories/UserRepository", () => ({
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository", () => ({
   UserRepository: vi.fn().mockImplementation(() => ({
     enrichUserWithItsProfile: vi.fn().mockImplementation(({ user }) => user),
   })),

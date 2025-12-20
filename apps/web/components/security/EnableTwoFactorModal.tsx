@@ -2,13 +2,13 @@ import type { BaseSyntheticEvent } from "react";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
-import { ErrorCode } from "@calcom/features/auth/lib/ErrorCode";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { useCallbackRef } from "@calcom/lib/hooks/useCallbackRef";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent } from "@calcom/ui/components/dialog";
-import { Form } from "@calcom/ui/components/form";
+import { ErrorCode } from "@calndrbrnd/features/auth/lib/ErrorCode";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { useCallbackRef } from "@calndrbrnd/lib/hooks/useCallbackRef";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent } from "@calndrbrnd/ui/components/dialog";
+import { Form } from "@calndrbrnd/ui/components/form";
 
 import TwoFactor from "@components/auth/TwoFactor";
 

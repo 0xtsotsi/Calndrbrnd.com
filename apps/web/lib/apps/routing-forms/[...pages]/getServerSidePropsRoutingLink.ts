@@ -1,8 +1,8 @@
-import { enrichFormWithMigrationData } from "@calcom/app-store/routing-forms/enrichFormWithMigrationData";
-import { getSerializableForm } from "@calcom/app-store/routing-forms/lib/getSerializableForm";
-import { orgDomainConfig } from "@calcom/features/ee/organizations/lib/orgDomains";
-import { isAuthorizedToViewFormOnOrgDomain } from "@calcom/features/routing-forms/lib/isAuthorizedToViewForm";
-import type { AppGetServerSidePropsContext, AppPrisma } from "@calcom/types/AppGetServerSideProps";
+import { enrichFormWithMigrationData } from "@calndrbrnd/app-store/routing-forms/enrichFormWithMigrationData";
+import { getSerializableForm } from "@calndrbrnd/app-store/routing-forms/lib/getSerializableForm";
+import { orgDomainConfig } from "@calndrbrnd/features/ee/organizations/lib/orgDomains";
+import { isAuthorizedToViewFormOnOrgDomain } from "@calndrbrnd/features/routing-forms/lib/isAuthorizedToViewForm";
+import type { AppGetServerSidePropsContext, AppPrisma } from "@calndrbrnd/types/AppGetServerSideProps";
 
 export const getServerSideProps = async function getServerSideProps(
   context: AppGetServerSidePropsContext,
@@ -65,7 +65,7 @@ export const getServerSideProps = async function getServerSideProps(
     };
   }
 
-  const { UserRepository } = await import("@calcom/features/users/repositories/UserRepository");
+  const { UserRepository } = await import("@calndrbrnd/features/users/repositories/UserRepository");
   const userRepo = new UserRepository(prisma);
   const formWithUserProfile = {
     ...form,

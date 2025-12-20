@@ -1,5 +1,5 @@
-import { ManagedEventReassignmentService } from "@calcom/features/ee/managed-event-types/reassignment/services/ManagedEventReassignmentService";
-import { DI_TOKENS } from "@calcom/features/di/tokens";
+import { ManagedEventReassignmentService } from "@calndrbrnd/features/ee/managed-event-types/reassignment/services/ManagedEventReassignmentService";
+import { DI_TOKENS } from "@calndrbrnd/features/di/tokens";
 
 import { bindModuleToClassOnToken, createModule, type ModuleLoader } from "../di";
 import { moduleLoader as bookingRepositoryModuleLoader } from "./Booking";

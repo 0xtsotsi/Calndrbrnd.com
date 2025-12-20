@@ -2,8 +2,8 @@ import type { TFunction } from "i18next";
 import short from "short-uuid";
 import { v5 as uuidv5 } from "uuid";
 
-import getLabelValueMapFromResponses from "@calcom/lib/bookings/getLabelValueMapFromResponses";
-import type { CalendarEvent, Person } from "@calcom/types/Calendar";
+import getLabelValueMapFromResponses from "@calndrbrnd/lib/bookings/getLabelValueMapFromResponses";
+import type { CalendarEvent, Person } from "@calndrbrnd/types/Calendar";
 
 import { WEBAPP_URL } from "./constants";
 import isSmsCalEmail from "./isSmsCalEmail";
@@ -161,7 +161,7 @@ export const getLocation = (
 };
 
 export const getProviderName = (calEvent: Pick<CalendarEvent, "location">): string => {
-  // TODO: use getAppName from @calcom/app-store
+  // TODO: use getAppName from @calndrbrnd/app-store
   if (calEvent.location && calEvent.location.includes("integrations:")) {
     let location = calEvent.location.split(":")[1];
     if (location === "daily") {

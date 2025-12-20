@@ -2,19 +2,19 @@
 
 import { useRouter } from "next/navigation";
 
-import SettingsHeaderWithBackButton from "@calcom/features/settings/appDir/SettingsHeaderWithBackButton";
-import { APP_NAME } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import SettingsHeaderWithBackButton from "@calndrbrnd/features/settings/appDir/SettingsHeaderWithBackButton";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import type { WebhookVersion } from "../lib/interface/IWebhookRepository";
 import { WEBHOOK_VERSION_OPTIONS, getWebhookVersionLabel } from "../lib/constants";
-import { trpc } from "@calcom/trpc/react";
-import { Select } from "@calcom/ui/components/form";
-import { SkeletonContainer } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
-import { revalidateWebhooksList } from "@calcom/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/(with-loader)/actions";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Select } from "@calndrbrnd/ui/components/form";
+import { SkeletonContainer } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
+import { revalidateWebhooksList } from "@calndrbrnd/web/app/(use-page-wrapper)/settings/(settings-layout)/developer/webhooks/(with-loader)/actions";
 
 import type { WebhookFormSubmitData } from "../components/WebhookForm";
 import WebhookForm from "../components/WebhookForm";

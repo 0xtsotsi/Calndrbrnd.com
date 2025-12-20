@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { Toaster } from "sonner";
 
-import { APP_NAME } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { APP_NAME } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 import { Button } from "../../components/button/Button";
 import { StepCard } from "../../components/card/StepCard";

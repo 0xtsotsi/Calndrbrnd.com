@@ -7,16 +7,16 @@ import { useSession } from "next-auth/react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { UserPermissionRole } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
 
 import { useOnboardingStore, useOnboarding } from "./onboardingStore";
 
 // Mock all dependencies
 vi.mock("next-auth/react");
 vi.mock("next/navigation");
-vi.mock("@calcom/trpc/react", () => ({
+vi.mock("@calndrbrnd/trpc/react", () => ({
   trpc: {
     viewer: {
       organizations: {
@@ -29,8 +29,8 @@ vi.mock("@calcom/trpc/react", () => ({
 }));
 
 // Mock constants
-vi.mock("@calcom/lib/constants", async () => {
-  const actual = await vi.importActual("@calcom/lib/constants");
+vi.mock("@calndrbrnd/lib/constants", async () => {
+  const actual = await vi.importActual("@calndrbrnd/lib/constants");
   return {
     ...actual,
     IS_SELF_HOSTED: false, // Default to false, will be overridden in specific tests

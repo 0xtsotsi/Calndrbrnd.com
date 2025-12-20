@@ -1,20 +1,20 @@
 import { useFieldArray, useForm, useFormContext } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import { TimezoneSelect } from "@calcom/features/components/timezone-select";
-import DateOverrideInputDialog from "@calcom/features/schedules/components/DateOverrideInputDialog";
-import DateOverrideList from "@calcom/features/schedules/components/DateOverrideList";
-import Schedule from "@calcom/features/schedules/components/Schedule";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { HttpError } from "@calcom/lib/http-error";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import useMeQuery from "@calcom/trpc/react/hooks/useMeQuery";
-import type { Schedule as ScheduleType, TimeRange, WorkingHours } from "@calcom/types/schedule";
-import { Alert } from "@calcom/ui/components/alert";
-import { Button } from "@calcom/ui/components/button";
-import { Form } from "@calcom/ui/components/form";
-import { Label } from "@calcom/ui/components/form";
+import dayjs from "@calndrbrnd/dayjs";
+import { TimezoneSelect } from "@calndrbrnd/features/components/timezone-select";
+import DateOverrideInputDialog from "@calndrbrnd/features/schedules/components/DateOverrideInputDialog";
+import DateOverrideList from "@calndrbrnd/features/schedules/components/DateOverrideList";
+import Schedule from "@calndrbrnd/features/schedules/components/Schedule";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import useMeQuery from "@calndrbrnd/trpc/react/hooks/useMeQuery";
+import type { Schedule as ScheduleType, TimeRange, WorkingHours } from "@calndrbrnd/types/schedule";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { Form } from "@calndrbrnd/ui/components/form";
+import { Label } from "@calndrbrnd/ui/components/form";
 import {
   Sheet,
   SheetBody,
@@ -23,8 +23,8 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTitle,
-} from "@calcom/ui/components/sheet";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/sheet";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import type { SliderUser } from "./AvailabilitySliderTable";
 

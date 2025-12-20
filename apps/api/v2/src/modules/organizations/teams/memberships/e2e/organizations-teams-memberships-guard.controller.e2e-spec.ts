@@ -35,10 +35,10 @@ import { TeamRepositoryFixture } from "test/fixtures/repository/team.repository.
 import { UserRepositoryFixture } from "test/fixtures/repository/users.repository.fixture";
 import { randomString } from "test/utils/randomString";
 
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import { ApiSuccessResponse } from "@calcom/platform-types";
-import { PlatformOAuthClient, User } from "@calcom/prisma/client";
-import { Team } from "@calcom/prisma/client";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { ApiSuccessResponse } from "@calndrbrnd/platform-types";
+import { PlatformOAuthClient, User } from "@calndrbrnd/prisma/client";
+import { Team } from "@calndrbrnd/prisma/client";
 
 describe("Organizations Teams Memberships Endpoints", () => {
   let app: INestApplication;

@@ -1,5 +1,5 @@
-import { getPlaceholderAvatar } from "@calcom/lib/defaultAvatarImage";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+import { getPlaceholderAvatar } from "@calndrbrnd/lib/defaultAvatarImage";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 import { Avatar } from "../avatar/Avatar";
 import { EmptyScreen } from "../empty-screen/EmptyScreen";

@@ -3,7 +3,7 @@ import {
   ZMultiSelectFilterValue,
   ZDateRangeFilterValue,
   ZTextFilterValue,
-} from "@calcom/features/data-table";
+} from "@calndrbrnd/features/data-table";
 
 export function useBookingFilters() {
   const eventTypeIds = useFilterValue("eventTypeId", ZMultiSelectFilterValue)?.data as number[] | undefined;

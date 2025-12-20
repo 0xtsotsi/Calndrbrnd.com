@@ -2,9 +2,9 @@ import type { Session } from "next-auth";
 import { redirect } from "next/navigation";
 import { describe, it, vi, expect, beforeEach, type MockedFunction } from "vitest";
 
-import { checkAdminOrOwner } from "@calcom/features/auth/lib/checkAdminOrOwner";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { checkAdminOrOwner } from "@calndrbrnd/features/auth/lib/checkAdminOrOwner";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { validateUserHasOrgAdmin, type ValidatedOrgAdminSession } from "./validateUserHasOrgAdmin";
 
@@ -18,11 +18,11 @@ vi.mock("next/headers", () => ({
   headers: vi.fn(() => Promise.resolve({})),
 }));
 
-vi.mock("@calcom/features/auth/lib/getServerSession", () => ({
+vi.mock("@calndrbrnd/features/auth/lib/getServerSession", () => ({
   getServerSession: vi.fn(),
 }));
 
-vi.mock("@calcom/features/auth/lib/checkAdminOrOwner", () => ({
+vi.mock("@calndrbrnd/features/auth/lib/checkAdminOrOwner", () => ({
   checkAdminOrOwner: vi.fn(),
 }));
 

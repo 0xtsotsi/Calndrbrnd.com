@@ -4,7 +4,7 @@ import { vi } from "vitest";
 
 import { WizardForm } from "./WizardForm";
 
-vi.mock("@calcom/lib/hooks/useCompatSearchParams", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useCompatSearchParams", () => ({
   useCompatSearchParams() {
     return { get: vi.fn().mockReturnValue(currentStepNavigation) };
   },

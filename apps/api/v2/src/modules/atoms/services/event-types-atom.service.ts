@@ -11,10 +11,10 @@ import { UsersService } from "@/modules/users/services/users.service";
 import { UserWithProfile } from "@/modules/users/users.repository";
 import { Injectable, NotFoundException, ForbiddenException, BadRequestException } from "@nestjs/common";
 
-import { checkAdminOrOwner, getClientSecretFromPayment } from "@calcom/platform-libraries";
-import type { TeamQuery } from "@calcom/platform-libraries";
-import { enrichUserWithDelegationConferencingCredentialsWithoutOrgId } from "@calcom/platform-libraries/app-store";
-import { getEnabledAppsFromCredentials, getAppFromSlug } from "@calcom/platform-libraries/app-store";
+import { checkAdminOrOwner, getClientSecretFromPayment } from "@calndrbrnd/platform-libraries";
+import type { TeamQuery } from "@calndrbrnd/platform-libraries";
+import { enrichUserWithDelegationConferencingCredentialsWithoutOrgId } from "@calndrbrnd/platform-libraries/app-store";
+import { getEnabledAppsFromCredentials, getAppFromSlug } from "@calndrbrnd/platform-libraries/app-store";
 import type {
   App,
   TDependencyData,
@@ -22,21 +22,21 @@ import type {
   CredentialPayload,
   CredentialDataWithTeamName,
   LocationOption,
-} from "@calcom/platform-libraries/app-store";
-import { type PublicEventType, getPublicEvent } from "@calcom/platform-libraries/event-types";
+} from "@calndrbrnd/platform-libraries/app-store";
+import { type PublicEventType, getPublicEvent } from "@calndrbrnd/platform-libraries/event-types";
 import {
   getEventTypeById,
   bulkUpdateEventsToDefaultLocation,
   bulkUpdateTeamEventsToDefaultLocation,
   getBulkUserEventTypes,
   getBulkTeamEventTypes,
-} from "@calcom/platform-libraries/event-types";
+} from "@calndrbrnd/platform-libraries/event-types";
 import {
   updateEventType,
   TUpdateEventTypeInputSchema,
   EventTypeMetaDataSchema,
-} from "@calcom/platform-libraries/event-types";
-import type { PrismaClient } from "@calcom/prisma";
+} from "@calndrbrnd/platform-libraries/event-types";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 type EnabledAppType = App & {
   credential: CredentialDataWithTeamName;

@@ -23,7 +23,7 @@ export const getErrorString = ({
 /**
  * An alternative to Object.fromEntries that allows duplicate keys and converts the values corresponding to them in an array
  *
- * NOTE: This is a duplicate of the function in @calcom/lib/hooks/useRouterQuery.ts. It has to be here because embed is published to npm and shouldn't refer to any private package
+ * NOTE: This is a duplicate of the function in @calndrbrnd/lib/hooks/useRouterQuery.ts. It has to be here because embed is published to npm and shouldn't refer to any private package
  */
 export function fromEntriesWithDuplicateKeys(entries: IterableIterator<[string, string]> | null) {
   const result: Record<string, string | string[]> = {};

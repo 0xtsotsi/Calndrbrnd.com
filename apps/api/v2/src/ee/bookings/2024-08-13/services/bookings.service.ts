@@ -49,8 +49,8 @@ import {
   handleMarkNoShow,
   confirmBookingHandler,
   getCalendarLinks,
-} from "@calcom/platform-libraries";
-import { PrismaOrgMembershipRepository } from "@calcom/platform-libraries/bookings";
+} from "@calndrbrnd/platform-libraries";
+import { PrismaOrgMembershipRepository } from "@calndrbrnd/platform-libraries/bookings";
 import {
   CreateBookingInput_2024_08_13,
   CreateBookingInput,
@@ -65,10 +65,10 @@ import {
   GetRecurringSeatedBookingOutput_2024_08_13,
   RescheduleBookingInput,
   CancelBookingInput,
-} from "@calcom/platform-types";
-import type { RescheduleSeatedBookingInput_2024_08_13 } from "@calcom/platform-types";
-import type { PrismaClient } from "@calcom/prisma";
-import type { EventType, User, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { RescheduleSeatedBookingInput_2024_08_13 } from "@calndrbrnd/platform-types";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import type { EventType, User, Team } from "@calndrbrnd/prisma/client";
 
 type CreatedBooking = {
   hosts: { id: number }[];

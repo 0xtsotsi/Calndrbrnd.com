@@ -1,18 +1,18 @@
-import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@calcom/app-store/delegationCredential";
+import { enrichUserWithDelegationCredentialsIncludeServiceAccountKey } from "@calndrbrnd/app-store/delegationCredential";
 import {
   getCalendarCredentials,
   getConnectedCalendars,
-} from "@calcom/features/calendars/lib/CalendarManager";
-import { DestinationCalendarRepository } from "@calcom/features/calendars/repositories/DestinationCalendarRepository";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { isDelegationCredential } from "@calcom/lib/delegationCredential";
-import logger from "@calcom/lib/logger";
-import { SelectedCalendarRepository } from "@calcom/lib/server/repository/selectedCalendar";
-import type { PrismaClient } from "@calcom/prisma";
-import prisma from "@calcom/prisma";
-import type { DestinationCalendar, SelectedCalendar, User } from "@calcom/prisma/client";
-import { AppCategories } from "@calcom/prisma/enums";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
+} from "@calndrbrnd/features/calendars/lib/CalendarManager";
+import { DestinationCalendarRepository } from "@calndrbrnd/features/calendars/repositories/DestinationCalendarRepository";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { isDelegationCredential } from "@calndrbrnd/lib/delegationCredential";
+import logger from "@calndrbrnd/lib/logger";
+import { SelectedCalendarRepository } from "@calndrbrnd/lib/server/repository/selectedCalendar";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import prisma from "@calndrbrnd/prisma";
+import type { DestinationCalendar, SelectedCalendar, User } from "@calndrbrnd/prisma/client";
+import { AppCategories } from "@calndrbrnd/prisma/enums";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
 
 const log = logger.getSubLogger({ prefix: ["getConnectedDestinationCalendarsAndEnsureDefaultsInDb"] });
 
@@ -383,5 +383,5 @@ export async function getConnectedDestinationCalendarsAndEnsureDefaultsInDb({
   };
 }
 
-// Legacy export for @calcom/platform-libraries
+// Legacy export for @calndrbrnd/platform-libraries
 export const getConnectedDestinationCalendars = getConnectedDestinationCalendarsAndEnsureDefaultsInDb;

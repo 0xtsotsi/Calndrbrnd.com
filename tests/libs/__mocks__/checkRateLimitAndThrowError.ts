@@ -1,9 +1,9 @@
 import { beforeEach, vi } from "vitest";
 import { mockReset, mockDeep } from "vitest-mock-extended";
 
-import type * as checkRateLimitAndThrowError from "@calcom/lib/checkRateLimitAndThrowError";
+import type * as checkRateLimitAndThrowError from "@calndrbrnd/lib/checkRateLimitAndThrowError";
 
-vi.mock("@calcom/lib/checkRateLimitAndThrowError", () => checkRateLimitAndThrowErrorMock);
+vi.mock("@calndrbrnd/lib/checkRateLimitAndThrowError", () => checkRateLimitAndThrowErrorMock);
 
 beforeEach(() => {
   mockReset(checkRateLimitAndThrowErrorMock);

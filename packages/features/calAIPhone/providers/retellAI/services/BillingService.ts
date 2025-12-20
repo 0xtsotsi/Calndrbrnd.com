@@ -1,14 +1,14 @@
 import { z } from "zod";
 
-import { getStripeCustomerIdFromUserId } from "@calcom/app-store/stripepayment/lib/customer";
-import { getPhoneNumberMonthlyPriceId } from "@calcom/app-store/stripepayment/lib/utils";
-import { CHECKOUT_SESSION_TYPES } from "@calcom/features/ee/billing/constants";
-import stripe from "@calcom/features/ee/payments/server/stripe";
-import { WEBAPP_URL, IS_PRODUCTION } from "@calcom/lib/constants";
-import { HttpError } from "@calcom/lib/http-error";
-import logger from "@calcom/lib/logger";
-import type { TrackingData } from "@calcom/lib/tracking";
-import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
+import { getStripeCustomerIdFromUserId } from "@calndrbrnd/app-store/stripepayment/lib/customer";
+import { getPhoneNumberMonthlyPriceId } from "@calndrbrnd/app-store/stripepayment/lib/utils";
+import { CHECKOUT_SESSION_TYPES } from "@calndrbrnd/features/ee/billing/constants";
+import stripe from "@calndrbrnd/features/ee/payments/server/stripe";
+import { WEBAPP_URL, IS_PRODUCTION } from "@calndrbrnd/lib/constants";
+import { HttpError } from "@calndrbrnd/lib/http-error";
+import logger from "@calndrbrnd/lib/logger";
+import type { TrackingData } from "@calndrbrnd/lib/tracking";
+import { PhoneNumberSubscriptionStatus } from "@calndrbrnd/prisma/enums";
 
 import type { PhoneNumberRepositoryInterface } from "../../interfaces/PhoneNumberRepositoryInterface";
 import type { RetellAIRepository } from "../types";

@@ -1,8 +1,8 @@
 import { expect } from "@playwright/test";
 import { v4 as uuidv4 } from "uuid";
 
-import { prisma } from "@calcom/prisma";
-import { BookingStatus } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import { BookingStatus } from "@calndrbrnd/prisma/enums";
 
 import { test } from "./lib/fixtures";
 

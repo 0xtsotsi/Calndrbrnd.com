@@ -3,11 +3,11 @@ import prismock from "../../../../../tests/libs/__mocks__/prisma";
 import type { DirectorySyncEvent } from "@boxyhq/saml-jackson";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { IdentityProvider, MembershipRole } from "@calcom/prisma/enums";
+import { IdentityProvider, MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import handleUserEvents from "./handleUserEvents";
 
-vi.mock("@calcom/lib/logger", () => ({
+vi.mock("@calndrbrnd/lib/logger", () => ({
   default: {
     getSubLogger: () => ({
       debug: vi.fn(),
@@ -17,11 +17,11 @@ vi.mock("@calcom/lib/logger", () => ({
   },
 }));
 
-vi.mock("@calcom/lib/server/i18n", () => ({
+vi.mock("@calndrbrnd/lib/server/i18n", () => ({
   getTranslation: vi.fn().mockResolvedValue((key: string) => key),
 }));
 
-vi.mock("@calcom/trpc/server/routers/viewer/teams/inviteMember/utils", () => ({
+vi.mock("@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/utils", () => ({
   getTeamOrThrow: vi.fn(),
   sendExistingUserTeamInviteEmails: vi.fn(),
   sendSignupToOrganizationEmail: vi.fn(),
@@ -47,7 +47,7 @@ vi.mock("./removeUserFromOrg", () => ({
   default: vi.fn(),
 }));
 
-vi.mock("@calcom/features/users/repositories/UserRepository", () => ({
+vi.mock("@calndrbrnd/features/users/repositories/UserRepository", () => ({
   UserRepository: vi.fn().mockImplementation(() => ({
     isAMemberOfOrganization: vi.fn().mockResolvedValue(false),
   })),
@@ -112,7 +112,7 @@ describe("handleUserEvents", () => {
       slug: organizationSlug,
     });
 
-    const { getTeamOrThrow } = await import("@calcom/trpc/server/routers/viewer/teams/inviteMember/utils");
+    const { getTeamOrThrow } = await import("@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/utils");
     vi.mocked(getTeamOrThrow).mockResolvedValue({
       id: organizationId,
       name: organizationName,
@@ -190,7 +190,7 @@ describe("handleUserEvents", () => {
         },
       };
 
-      const { UserRepository } = await import("@calcom/features/users/repositories/UserRepository");
+      const { UserRepository } = await import("@calndrbrnd/features/users/repositories/UserRepository");
       vi.mocked(UserRepository).mockImplementation(
         () =>
           ({
@@ -291,7 +291,7 @@ describe("handleUserEvents", () => {
         },
       };
 
-      const { UserRepository } = await import("@calcom/features/users/repositories/UserRepository");
+      const { UserRepository } = await import("@calndrbrnd/features/users/repositories/UserRepository");
       vi.mocked(UserRepository).mockImplementation(
         () =>
           ({
@@ -301,7 +301,7 @@ describe("handleUserEvents", () => {
 
       const inviteExistingUserToOrg = (await import("./users/inviteExistingUserToOrg")).default;
       const sendExistingUserTeamInviteEmails = (
-        await import("@calcom/trpc/server/routers/viewer/teams/inviteMember/utils")
+        await import("@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/utils")
       ).sendExistingUserTeamInviteEmails;
 
       await handleUserEvents(event, organizationId);
@@ -376,7 +376,7 @@ describe("handleUserEvents", () => {
         },
       };
 
-      const { UserRepository } = await import("@calcom/features/users/repositories/UserRepository");
+      const { UserRepository } = await import("@calndrbrnd/features/users/repositories/UserRepository");
       vi.mocked(UserRepository).mockImplementation(
         () =>
           ({
@@ -422,7 +422,7 @@ describe("handleUserEvents", () => {
         },
       };
 
-      const { getTeamOrThrow } = await import("@calcom/trpc/server/routers/viewer/teams/inviteMember/utils");
+      const { getTeamOrThrow } = await import("@calndrbrnd/trpc/server/routers/viewer/teams/inviteMember/utils");
       vi.mocked(getTeamOrThrow).mockResolvedValue(
         null as unknown as Awaited<ReturnType<typeof getTeamOrThrow>>
       );

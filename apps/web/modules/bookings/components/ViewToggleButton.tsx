@@ -2,10 +2,10 @@
 
 import { useEffect } from "react";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import useMediaQuery from "@calcom/lib/hooks/useMediaQuery";
-import { ToggleGroup } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import useMediaQuery from "@calndrbrnd/lib/hooks/useMediaQuery";
+import { ToggleGroup } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 import { useBookingsView } from "../hooks/useBookingsView";
 

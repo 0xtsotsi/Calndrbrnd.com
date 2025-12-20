@@ -2,23 +2,23 @@ import posthog from "posthog-js";
 import { useState } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import { CAL_AI_PHONE_NUMBER_MONTHLY_PRICE } from "@calcom/lib/constants";
-import { formatPhoneNumber } from "@calcom/lib/formatPhoneNumber";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { PhoneNumberSubscriptionStatus } from "@calcom/prisma/enums";
-import type { RouterOutputs } from "@calcom/trpc/react";
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
-import { Button } from "@calcom/ui/components/button";
+import { CAL_AI_PHONE_NUMBER_MONTHLY_PRICE } from "@calndrbrnd/lib/constants";
+import { formatPhoneNumber } from "@calndrbrnd/lib/formatPhoneNumber";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { PhoneNumberSubscriptionStatus } from "@calndrbrnd/prisma/enums";
+import type { RouterOutputs } from "@calndrbrnd/trpc/react";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Badge } from "@calndrbrnd/ui/components/badge";
+import { Button } from "@calndrbrnd/ui/components/button";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Icon } from "@calcom/ui/components/icon";
-import { showToast } from "@calcom/ui/components/toast";
+} from "@calndrbrnd/ui/components/dropdown";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import type { FormValues } from "../../../../pages/workflow";
 import { TestPhoneCallDialog } from "../../../TestPhoneCallDialog";

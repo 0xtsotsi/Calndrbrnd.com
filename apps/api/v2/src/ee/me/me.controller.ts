@@ -13,8 +13,8 @@ import { UserWithProfile, UsersRepository } from "@/modules/users/users.reposito
 import { Controller, UseGuards, Get, Patch, Body } from "@nestjs/common";
 import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 
-import { PROFILE_READ, PROFILE_WRITE, SUCCESS_STATUS } from "@calcom/platform-constants";
-import { userSchemaResponse } from "@calcom/platform-types";
+import { PROFILE_READ, PROFILE_WRITE, SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import { userSchemaResponse } from "@calndrbrnd/platform-types";
 
 @Controller({
   path: "/v2/me",

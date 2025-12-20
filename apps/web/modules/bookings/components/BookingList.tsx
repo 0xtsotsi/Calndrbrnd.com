@@ -2,9 +2,9 @@
 
 import type { Table as ReactTable } from "@tanstack/react-table";
 
-import { DataTableWrapper } from "@calcom/features/data-table";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { EmptyScreen } from "@calcom/ui/components/empty-screen";
+import { DataTableWrapper } from "@calndrbrnd/features/data-table";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { EmptyScreen } from "@calndrbrnd/ui/components/empty-screen";
 
 import SkeletonLoader from "@components/booking/SkeletonLoader";
 

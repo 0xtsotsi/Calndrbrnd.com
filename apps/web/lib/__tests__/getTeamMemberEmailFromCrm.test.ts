@@ -3,23 +3,23 @@ import prismock from "../../../../tests/libs/__mocks__/prisma";
 import { v4 } from "uuid";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 
-import { getCRMContactOwnerForRRLeadSkip } from "@calcom/app-store/_utils/CRMRoundRobinSkip";
-import bookingFormHandlers from "@calcom/app-store/routing-forms/appBookingFormHandler";
+import { getCRMContactOwnerForRRLeadSkip } from "@calndrbrnd/app-store/_utils/CRMRoundRobinSkip";
+import bookingFormHandlers from "@calndrbrnd/app-store/routing-forms/appBookingFormHandler";
 import {
   ROUTING_FORM_RESPONSE_ID_QUERY_STRING,
   ROUTING_FORM_QUEUED_RESPONSE_ID_QUERY_STRING,
-} from "@calcom/app-store/routing-forms/lib/constants";
-import { RouteActionType } from "@calcom/app-store/routing-forms/zod";
-import { getTeamMemberEmailForResponseOrContactUsingUrlQuery } from "@calcom/features/ee/teams/lib/getTeamMemberEmailFromCrm";
-import { SchedulingType } from "@calcom/prisma/enums";
+} from "@calndrbrnd/app-store/routing-forms/lib/constants";
+import { RouteActionType } from "@calndrbrnd/app-store/routing-forms/zod";
+import { getTeamMemberEmailForResponseOrContactUsingUrlQuery } from "@calndrbrnd/features/ee/teams/lib/getTeamMemberEmailFromCrm";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
 
-vi.mock("@calcom/app-store/routing-forms/appBookingFormHandler", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/appBookingFormHandler", () => ({
   default: {
     salesforce: vi.fn(),
   },
 }));
 
-vi.mock("@calcom/app-store/_utils/CRMRoundRobinSkip", () => ({
+vi.mock("@calndrbrnd/app-store/_utils/CRMRoundRobinSkip", () => ({
   getCRMContactOwnerForRRLeadSkip: vi.fn(),
 }));
 

@@ -2,7 +2,7 @@ import { PrismaBookingRepository } from "@/lib/repositories/prisma-booking.repos
 import { FilterHostsService } from "@/lib/services/filter-hosts.service";
 import { Injectable } from "@nestjs/common";
 
-import { QualifiedHostsService as BaseQualifiedHostsService } from "@calcom/platform-libraries/slots";
+import { QualifiedHostsService as BaseQualifiedHostsService } from "@calndrbrnd/platform-libraries/slots";
 
 @Injectable()
 export class QualifiedHostsService extends BaseQualifiedHostsService {

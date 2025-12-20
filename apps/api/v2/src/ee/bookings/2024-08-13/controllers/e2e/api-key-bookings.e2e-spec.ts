@@ -21,7 +21,7 @@ import { UserRepositoryFixture } from "test/fixtures/repository/users.repository
 import { randomString } from "test/utils/randomString";
 import { withApiAuth } from "test/utils/withApiAuth";
 
-import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calcom/platform-constants";
+import { CAL_API_VERSION_HEADER, SUCCESS_STATUS, VERSION_2024_08_13 } from "@calndrbrnd/platform-constants";
 import {
   AttendeeScheduledEmail,
   OrganizerScheduledEmail,
@@ -29,14 +29,14 @@ import {
   OrganizerRescheduledEmail,
   AttendeeCancelledEmail,
   OrganizerCancelledEmail,
-} from "@calcom/platform-libraries/emails";
+} from "@calndrbrnd/platform-libraries/emails";
 import {
   CreateBookingInput_2024_08_13,
   BookingOutput_2024_08_13,
   RescheduleBookingInput_2024_08_13,
   CancelBookingInput_2024_08_13,
-} from "@calcom/platform-types";
-import type { User, Team } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { User, Team } from "@calndrbrnd/prisma/client";
 
 jest.spyOn(AttendeeScheduledEmail.prototype as any, "getHtml").mockImplementation(async function () {
   return "<html><body>Mocked Email Content</body></html>";

@@ -1,14 +1,14 @@
 import { useState } from "react";
 import type { UseFormSetValue } from "react-hook-form";
 
-import dayjs from "@calcom/dayjs";
-import { useTimePreferences } from "@calcom/features/bookings/lib/timePreferences";
-import { Dialog } from "@calcom/features/components/controlled-dialog";
-import { TimezoneSelect } from "@calcom/features/components/timezone-select";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { DialogContent, DialogFooter, DialogClose } from "@calcom/ui/components/dialog";
-import { Label, SettingsToggle, DateRangePicker, DatePicker } from "@calcom/ui/components/form";
+import dayjs from "@calndrbrnd/dayjs";
+import { useTimePreferences } from "@calndrbrnd/features/bookings/lib/timePreferences";
+import { Dialog } from "@calndrbrnd/features/components/controlled-dialog";
+import { TimezoneSelect } from "@calndrbrnd/features/components/timezone-select";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { DialogContent, DialogFooter, DialogClose } from "@calndrbrnd/ui/components/dialog";
+import { Label, SettingsToggle, DateRangePicker, DatePicker } from "@calndrbrnd/ui/components/form";
 
 import type { FormValues } from "~/settings/my-account/general-view";
 

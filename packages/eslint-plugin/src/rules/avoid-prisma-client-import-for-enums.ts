@@ -34,7 +34,7 @@ const rule = createRule({
       recommended: "error",
     },
     messages: {
-      "avoid-prisma-client-import": `Import { {{enumType}} } from '@calcom/prisma/enums' to avoid including @prisma/client.`,
+      "avoid-prisma-client-import": `Import { {{enumType}} } from '@calndrbrnd/prisma/enums' to avoid including @prisma/client.`,
     },
     type: "suggestion",
     schema: [],

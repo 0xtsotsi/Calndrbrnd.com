@@ -1,23 +1,23 @@
-import { getCalendar } from "@calcom/app-store/_utils/getCalendar";
-import { metadata as googleCalendarMetadata } from "@calcom/app-store/googlecalendar/_metadata";
-import { metadata as googleMeetMetadata } from "@calcom/app-store/googlevideo/_metadata";
-import { metadata as office365CalendarMetaData } from "@calcom/app-store/office365calendar/_metadata";
-import { metadata as office365VideoMetaData } from "@calcom/app-store/office365video/_metadata";
-import { CredentialRepository } from "@calcom/features/credentials/repositories/CredentialRepository";
-import type { ServiceAccountKey } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import { DelegationCredentialRepository } from "@calcom/features/delegation-credentials/repositories/DelegationCredentialRepository";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
+import { getCalendar } from "@calndrbrnd/app-store/_utils/getCalendar";
+import { metadata as googleCalendarMetadata } from "@calndrbrnd/app-store/googlecalendar/_metadata";
+import { metadata as googleMeetMetadata } from "@calndrbrnd/app-store/googlevideo/_metadata";
+import { metadata as office365CalendarMetaData } from "@calndrbrnd/app-store/office365calendar/_metadata";
+import { metadata as office365VideoMetaData } from "@calndrbrnd/app-store/office365video/_metadata";
+import { CredentialRepository } from "@calndrbrnd/features/credentials/repositories/CredentialRepository";
+import type { ServiceAccountKey } from "@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { DelegationCredentialRepository } from "@calndrbrnd/features/delegation-credentials/repositories/DelegationCredentialRepository";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
 import {
   buildNonDelegationCredential,
   buildNonDelegationCredentials,
   isDelegationCredential,
-} from "@calcom/lib/delegationCredential";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { prisma } from "@calcom/prisma";
-import type { SelectedCalendar } from "@calcom/prisma/client";
-import { credentialForCalendarServiceSelect } from "@calcom/prisma/selects/credential";
-import type { CredentialForCalendarService, CredentialPayload } from "@calcom/types/Credential";
+} from "@calndrbrnd/lib/delegationCredential";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { prisma } from "@calndrbrnd/prisma";
+import type { SelectedCalendar } from "@calndrbrnd/prisma/client";
+import { credentialForCalendarServiceSelect } from "@calndrbrnd/prisma/selects/credential";
+import type { CredentialForCalendarService, CredentialPayload } from "@calndrbrnd/types/Credential";
 
 const GOOGLE_WORKSPACE_SLUG = "google";
 const OFFICE365_WORKSPACE_SLUG = "office365";

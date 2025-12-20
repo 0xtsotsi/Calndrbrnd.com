@@ -1,13 +1,13 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { isAuthorized } from "@calcom/features/ee/workflows/lib/isAuthorized";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
+import { isAuthorized } from "@calndrbrnd/features/ee/workflows/lib/isAuthorized";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
 
-vi.mock("@calcom/features/pbac/services/permission-check.service");
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service");
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 

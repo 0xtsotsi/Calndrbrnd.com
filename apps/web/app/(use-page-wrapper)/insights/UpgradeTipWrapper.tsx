@@ -2,12 +2,12 @@
 
 import { useSession } from "next-auth/react";
 
-import { UpgradeTip } from "@calcom/features/tips";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { Icon } from "@calcom/ui/components/icon";
+import { UpgradeTip } from "@calndrbrnd/features/tips";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
+import { Icon } from "@calndrbrnd/ui/components/icon";
 
 export default function UpgradeTipWrapper({ children }: { children: React.ReactNode }) {
   const { t } = useLocale();

@@ -4,10 +4,10 @@ import prismaMock from "../../../../tests/libs/__mocks__/prismaMock";
 import { v4 as uuid } from "uuid";
 import { expect, it, describe, vi, beforeAll } from "vitest";
 
-import dayjs from "@calcom/dayjs";
-import { getLuckyUserService } from "@calcom/features/di/containers/LuckyUser";
-import { buildUser, buildBooking } from "@calcom/lib/test/builder";
-import { AttributeType, RRResetInterval, RRTimestampBasis } from "@calcom/prisma/enums";
+import dayjs from "@calndrbrnd/dayjs";
+import { getLuckyUserService } from "@calndrbrnd/features/di/containers/LuckyUser";
+import { buildUser, buildBooking } from "@calndrbrnd/lib/test/builder";
+import { AttributeType, RRResetInterval, RRTimestampBasis } from "@calndrbrnd/prisma/enums";
 
 import { getIntervalStartDate, getIntervalEndDate } from "./getLuckyUser";
 
@@ -16,7 +16,7 @@ const luckyUserService = getLuckyUserService();
 type NonEmptyArray<T> = [T, ...T[]];
 type GetLuckyUserAvailableUsersType = NonEmptyArray<ReturnType<typeof buildUser>>;
 
-vi.mock("@calcom/app-store/routing-forms/components/react-awesome-query-builder/widgets", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/components/react-awesome-query-builder/widgets", () => ({
   default: {},
 }));
 

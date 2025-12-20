@@ -1,13 +1,13 @@
 import type { z } from "zod";
 
-import { getDefaultLocations } from "@calcom/app-store/_utils/getDefaultLocations";
-import { DailyLocationType } from "@calcom/app-store/constants";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import type { PrismaClient } from "@calcom/prisma";
-import { Prisma } from "@calcom/prisma/client";
-import { MembershipRole, SchedulingType } from "@calcom/prisma/enums";
-import type { eventTypeLocations } from "@calcom/prisma/zod-utils";
+import { getDefaultLocations } from "@calndrbrnd/app-store/_utils/getDefaultLocations";
+import { DailyLocationType } from "@calndrbrnd/app-store/constants";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import type { PrismaClient } from "@calndrbrnd/prisma";
+import { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole, SchedulingType } from "@calndrbrnd/prisma/enums";
+import type { eventTypeLocations } from "@calndrbrnd/prisma/zod-utils";
 
 import { TRPCError } from "@trpc/server";
 

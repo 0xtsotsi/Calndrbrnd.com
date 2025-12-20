@@ -3,8 +3,8 @@
 import * as React from "react";
 import { DayPicker } from "react-day-picker";
 
-import dayjs from "@calcom/dayjs";
-import cn from "@calcom/ui/classNames";
+import dayjs from "@calndrbrnd/dayjs";
+import cn from "@calndrbrnd/ui/classNames";
 
 import { buttonClasses } from "../../button/Button";
 import { Icon } from "../../icon";

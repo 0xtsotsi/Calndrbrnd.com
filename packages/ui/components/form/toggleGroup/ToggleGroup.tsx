@@ -1,7 +1,7 @@
 import * as RadixToggleGroup from "@radix-ui/react-toggle-group";
 import type { ReactNode } from "react";
 
-import classNames from "@calcom/ui/classNames";
+import classNames from "@calndrbrnd/ui/classNames";
 
 import { Tooltip } from "../../tooltip/Tooltip";
 

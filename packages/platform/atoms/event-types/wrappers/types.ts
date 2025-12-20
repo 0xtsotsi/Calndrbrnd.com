@@ -1,5 +1,5 @@
-import type { TabMap } from "@calcom/features/eventtypes/lib/types";
-import type { EventTypePlatformWrapperRef as EventSettingsFromRef } from "@calcom/features/eventtypes/lib/types";
+import type { TabMap } from "@calndrbrnd/features/eventtypes/lib/types";
+import type { EventTypePlatformWrapperRef as EventSettingsFromRef } from "@calndrbrnd/features/eventtypes/lib/types";
 
 export type { EventSettingsFromRef };
 

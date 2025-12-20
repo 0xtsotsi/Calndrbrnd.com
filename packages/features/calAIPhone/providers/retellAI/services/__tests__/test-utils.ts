@@ -176,7 +176,7 @@ export const setupCreditMocks = () => {
     }),
   };
 
-  vi.mock("@calcom/features/ee/billing/credit-service", () => ({
+  vi.mock("@calndrbrnd/features/ee/billing/credit-service", () => ({
     CreditService: vi.fn().mockImplementation(() => mockCreditService),
   }));
 
@@ -185,7 +185,7 @@ export const setupCreditMocks = () => {
 
 // Rate Limiting Mocks
 export const setupRateLimitMocks = () => {
-  vi.mock("@calcom/lib/checkRateLimitAndThrowError", () => ({
+  vi.mock("@calndrbrnd/lib/checkRateLimitAndThrowError", () => ({
     checkRateLimitAndThrowError: vi.fn().mockResolvedValue(undefined),
   }));
 };

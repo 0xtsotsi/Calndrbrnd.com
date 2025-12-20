@@ -1,22 +1,22 @@
 "use client";
 
-// eslint-disable-next-line @calcom/eslint/deprecated-imports-next-router
+// eslint-disable-next-line @calndrbrnd/eslint/deprecated-imports-next-router
 import type { TFunction } from "i18next";
 import { useMemo } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import { getPaymentAppData } from "@calcom/app-store/_utils/payments/getPaymentAppData";
-import { eventTypeMetaDataSchemaWithTypedApps } from "@calcom/app-store/zod-utils";
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
+import { getPaymentAppData } from "@calndrbrnd/app-store/_utils/payments/getPaymentAppData";
+import { eventTypeMetaDataSchemaWithTypedApps } from "@calndrbrnd/app-store/zod-utils";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import type { Workflow } from "@calndrbrnd/features/ee/workflows/lib/types";
 import type {
   EventTypeSetupProps,
   AvailabilityOption,
   FormValues,
   EventTypeApps,
-} from "@calcom/features/eventtypes/lib/types";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { VerticalTabItemProps } from "@calcom/ui/components/navigation";
+} from "@calndrbrnd/features/eventtypes/lib/types";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { VerticalTabItemProps } from "@calndrbrnd/ui/components/navigation";
 
 type Props = {
   formMethods: UseFormReturn<FormValues>;

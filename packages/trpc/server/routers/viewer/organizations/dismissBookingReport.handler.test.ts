@@ -1,13 +1,13 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-import { PrismaBookingReportRepository } from "@calcom/features/bookingReport/repositories/PrismaBookingReportRepository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { MembershipRole, BookingReportReason } from "@calcom/prisma/enums";
+import { PrismaBookingReportRepository } from "@calndrbrnd/features/bookingReport/repositories/PrismaBookingReportRepository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { MembershipRole, BookingReportReason } from "@calndrbrnd/prisma/enums";
 
 import { dismissBookingReportHandler } from "./dismissBookingReport.handler";
 
-vi.mock("@calcom/features/pbac/services/permission-check.service");
-vi.mock("@calcom/features/bookingReport/repositories/PrismaBookingReportRepository");
+vi.mock("@calndrbrnd/features/pbac/services/permission-check.service");
+vi.mock("@calndrbrnd/features/bookingReport/repositories/PrismaBookingReportRepository");
 
 describe("dismissBookingReportHandler", () => {
   const mockUser = {

@@ -1,6 +1,6 @@
 import { vi, type Mock, describe, it, expect, beforeEach } from "vitest";
 
-import { RoleType } from "@calcom/prisma/enums";
+import { RoleType } from "@calndrbrnd/prisma/enums";
 
 import type { Role } from "../../domain/models/Role";
 import type { IRoleRepository } from "../../domain/repositories/IRoleRepository";
@@ -12,7 +12,7 @@ vi.mock("../../infrastructure/repositories/RoleRepository");
 vi.mock("../permission-diff.service");
 
 // Mock db.$transaction
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {
     $transaction: vi.fn((cb) => cb({ membership: { update: vi.fn() } })),
     membership: { update: vi.fn() },

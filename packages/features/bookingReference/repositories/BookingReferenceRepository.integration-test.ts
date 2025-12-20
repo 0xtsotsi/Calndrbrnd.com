@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll, afterEach } from "vitest";
 
-import prisma from "@calcom/prisma";
-import type { Booking, Credential, User } from "@calcom/prisma/client";
+import prisma from "@calndrbrnd/prisma";
+import type { Booking, Credential, User } from "@calndrbrnd/prisma/client";
 
 import { BookingReferenceRepository } from "./BookingReferenceRepository";
 

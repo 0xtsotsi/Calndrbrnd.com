@@ -1,40 +1,40 @@
-import "@calcom/lib/__mocks__/logger";
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import "@calndrbrnd/lib/__mocks__/logger";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { describe, it, vi, expect, beforeEach, afterEach } from "vitest";
 
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import type { Workflow } from "@calcom/features/ee/workflows/lib/types";
-import type { WebhookSubscriber } from "@calcom/features/webhooks/lib/dto/types";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
-import { sendGenericWebhookPayload } from "@calcom/features/webhooks/lib/sendPayload";
+import { WorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/WorkflowService";
+import type { Workflow } from "@calndrbrnd/features/ee/workflows/lib/types";
+import type { WebhookSubscriber } from "@calndrbrnd/features/webhooks/lib/dto/types";
+import getWebhooks from "@calndrbrnd/features/webhooks/lib/getWebhooks";
+import { sendGenericWebhookPayload } from "@calndrbrnd/features/webhooks/lib/sendPayload";
 import {
   WebhookTriggerEvents,
   WorkflowTriggerEvents,
   WorkflowActions,
   WorkflowTemplates,
   TimeUnit,
-} from "@calcom/prisma/enums";
-import { WebhookVersion as WebhookVersionEnum } from "@calcom/features/webhooks/lib/interface/IWebhookRepository";
+} from "@calndrbrnd/prisma/enums";
+import { WebhookVersion as WebhookVersionEnum } from "@calndrbrnd/features/webhooks/lib/interface/IWebhookRepository";
 
 import type { FormResponse, Field } from "../types/types";
 import { _onFormSubmission } from "./formSubmissionUtils";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 
 // Mock dependencies
-vi.mock("@calcom/lib/getOrgIdFromMemberOrTeamId", () => ({
+vi.mock("@calndrbrnd/lib/getOrgIdFromMemberOrTeamId", () => ({
   default: vi.fn(() => Promise.resolve(1)),
 }));
-vi.mock("@calcom/features/webhooks/lib/getWebhooks", () => ({
+vi.mock("@calndrbrnd/features/webhooks/lib/getWebhooks", () => ({
   default: vi.fn(() => Promise.resolve([])),
 }));
-vi.mock("@calcom/features/webhooks/lib/sendPayload", () => ({
+vi.mock("@calndrbrnd/features/webhooks/lib/sendPayload", () => ({
   sendGenericWebhookPayload: vi.fn(() => Promise.resolve()),
 }));
-vi.mock("@calcom/features/tasker", () => {
+vi.mock("@calndrbrnd/features/tasker", () => {
   const tasker = {
     create: vi.fn(() => Promise.resolve()),
   };
@@ -42,7 +42,7 @@ vi.mock("@calcom/features/tasker", () => {
 });
 
 // Mock workflow dependencies
-vi.mock("@calcom/features/ee/workflows/lib/service/WorkflowService", () => ({
+vi.mock("@calndrbrnd/features/ee/workflows/lib/service/WorkflowService", () => ({
   WorkflowService: {
     getAllWorkflowsFromRoutingForm: vi.fn(() => Promise.resolve([])),
     scheduleFormWorkflows: vi.fn(() => Promise.resolve()),

@@ -1,5 +1,5 @@
-import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TGetVerifiedNumbersInputSchema } from "./getVerifiedNumbers.schema";
 

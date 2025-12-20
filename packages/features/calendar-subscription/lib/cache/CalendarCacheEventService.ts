@@ -1,7 +1,7 @@
-import type { CalendarSubscriptionEventItem } from "@calcom/features/calendar-subscription/lib/CalendarSubscriptionPort.interface";
-import type { ICalendarCacheEventRepository } from "@calcom/features/calendar-subscription/lib/cache/CalendarCacheEventRepository.interface";
-import logger from "@calcom/lib/logger";
-import type { CalendarCacheEvent, SelectedCalendar } from "@calcom/prisma/client";
+import type { CalendarSubscriptionEventItem } from "@calndrbrnd/features/calendar-subscription/lib/CalendarSubscriptionPort.interface";
+import type { ICalendarCacheEventRepository } from "@calndrbrnd/features/calendar-subscription/lib/cache/CalendarCacheEventRepository.interface";
+import logger from "@calndrbrnd/lib/logger";
+import type { CalendarCacheEvent, SelectedCalendar } from "@calndrbrnd/prisma/client";
 
 const log = logger.getSubLogger({ prefix: ["CalendarCacheEventService"] });
 

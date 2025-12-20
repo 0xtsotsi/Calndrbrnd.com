@@ -1,14 +1,14 @@
 import { v4 as uuidv4 } from "uuid";
 import z from "zod";
 
-import Paypal from "@calcom/app-store/paypal/lib/Paypal";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import prisma from "@calcom/prisma";
-import type { Booking, Payment, PaymentOption, Prisma } from "@calcom/prisma/client";
-import type { IAbstractPaymentService } from "@calcom/types/PaymentService";
+import Paypal from "@calndrbrnd/app-store/paypal/lib/Paypal";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import prisma from "@calndrbrnd/prisma";
+import type { Booking, Payment, PaymentOption, Prisma } from "@calndrbrnd/prisma/client";
+import type { IAbstractPaymentService } from "@calndrbrnd/types/PaymentService";
 
 import { paymentOptionEnum } from "../zod";
 

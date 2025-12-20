@@ -1,5 +1,5 @@
-import { assignmentReasonHandler as salesforceAssignmentReasonHandler } from "@calcom/app-store/salesforce/lib/assignmentReasonHandler";
-import type { AssignmentReasonEnum } from "@calcom/prisma/enums";
+import { assignmentReasonHandler as salesforceAssignmentReasonHandler } from "@calndrbrnd/app-store/salesforce/lib/assignmentReasonHandler";
+import type { AssignmentReasonEnum } from "@calndrbrnd/prisma/enums";
 
 type AppAssignmentReasonHandler = ({
   recordType,

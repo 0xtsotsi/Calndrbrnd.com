@@ -1,8 +1,8 @@
 import { expect } from "@playwright/test";
 
-import { IS_TEAM_BILLING_ENABLED } from "@calcom/lib/constants";
-import { prisma } from "@calcom/prisma";
-import { SchedulingType } from "@calcom/prisma/enums";
+import { IS_TEAM_BILLING_ENABLED } from "@calndrbrnd/lib/constants";
+import { prisma } from "@calndrbrnd/prisma";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
 
 import { test, todo } from "./lib/fixtures";
 import {

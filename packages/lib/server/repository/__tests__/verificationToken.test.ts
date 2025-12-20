@@ -1,10 +1,10 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
 
-import type { VerificationToken } from "@calcom/prisma/client";
+import type { VerificationToken } from "@calndrbrnd/prisma/client";
 
 import { VerificationTokenRepository } from "../verificationToken";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: {
     verificationToken: {
       create: vi.fn(),
@@ -22,7 +22,7 @@ const prismaMock = vi.hoisted(() => ({
   },
 }));
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   default: prismaMock,
 }));
 

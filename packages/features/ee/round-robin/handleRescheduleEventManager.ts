@@ -1,19 +1,19 @@
-import { metadata as GoogleMeetMetadata } from "@calcom/app-store/googlevideo/_metadata";
-import { MeetLocationType } from "@calcom/app-store/locations";
-import getICalUID from "@calcom/emails/lib/getICalUID";
-import { BookingReferenceRepository } from "@calcom/features/bookingReference/repositories/BookingReferenceRepository";
-import EventManager from "@calcom/features/bookings/lib/EventManager";
-import type { EventManagerInitParams } from "@calcom/features/bookings/lib/EventManager";
-import { getAllCredentialsIncludeServiceAccountKey } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import type { EventType } from "@calcom/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
-import { getVideoCallDetails } from "@calcom/features/bookings/lib/handleNewBooking/getVideoCallDetails";
-import { getVideoCallUrlFromCalEvent } from "@calcom/lib/CalEventParser";
-import logger from "@calcom/lib/logger";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import { prisma } from "@calcom/prisma";
-import type { DestinationCalendar } from "@calcom/prisma/client";
-import type { Prisma } from "@calcom/prisma/client";
-import type { CalendarEvent, AdditionalInformation } from "@calcom/types/Calendar";
+import { metadata as GoogleMeetMetadata } from "@calndrbrnd/app-store/googlevideo/_metadata";
+import { MeetLocationType } from "@calndrbrnd/app-store/locations";
+import getICalUID from "@calndrbrnd/emails/lib/getICalUID";
+import { BookingReferenceRepository } from "@calndrbrnd/features/bookingReference/repositories/BookingReferenceRepository";
+import EventManager from "@calndrbrnd/features/bookings/lib/EventManager";
+import type { EventManagerInitParams } from "@calndrbrnd/features/bookings/lib/EventManager";
+import { getAllCredentialsIncludeServiceAccountKey } from "@calndrbrnd/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import type { EventType } from "@calndrbrnd/features/bookings/lib/getAllCredentialsForUsersOnEvent/getAllCredentials";
+import { getVideoCallDetails } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getVideoCallDetails";
+import { getVideoCallUrlFromCalEvent } from "@calndrbrnd/lib/CalEventParser";
+import logger from "@calndrbrnd/lib/logger";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import { prisma } from "@calndrbrnd/prisma";
+import type { DestinationCalendar } from "@calndrbrnd/prisma/client";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import type { CalendarEvent, AdditionalInformation } from "@calndrbrnd/types/Calendar";
 
 type InitParams = {
   user: {

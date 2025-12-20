@@ -2,10 +2,10 @@ import prismaMock from "../../../../../tests/libs/__mocks__/prismaMock";
 
 import { describe, expect, it, beforeEach, vi } from "vitest";
 
-import type { ResponseData } from "@calcom/features/tasker/tasks/triggerFormSubmittedNoEvent/triggerFormSubmittedNoEventWebhook";
-import { triggerFormSubmittedNoEventWebhook } from "@calcom/features/tasker/tasks/triggerFormSubmittedNoEvent/triggerFormSubmittedNoEventWebhook";
-import type { Webhook } from "@calcom/prisma/client";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
+import type { ResponseData } from "@calndrbrnd/features/tasker/tasks/triggerFormSubmittedNoEvent/triggerFormSubmittedNoEventWebhook";
+import { triggerFormSubmittedNoEventWebhook } from "@calndrbrnd/features/tasker/tasks/triggerFormSubmittedNoEvent/triggerFormSubmittedNoEventWebhook";
+import type { Webhook } from "@calndrbrnd/prisma/client";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 function expectFormSubmittedNoEventWebhookToBeCalled(
   payload: ResponseData & {

@@ -6,8 +6,8 @@ import { Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { z } from "zod";
 
-import { ZOOM, ZOOM_TYPE } from "@calcom/platform-constants";
-import type { Prisma } from "@calcom/prisma/client";
+import { ZOOM, ZOOM_TYPE } from "@calndrbrnd/platform-constants";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 import stringify = require("qs-stringify");
 

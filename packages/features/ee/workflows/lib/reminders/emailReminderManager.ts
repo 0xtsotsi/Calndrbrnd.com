@@ -1,13 +1,13 @@
-import { BookingSeatRepository } from "@calcom/features/bookings/repositories/BookingSeatRepository";
-import { EmailWorkflowService } from "@calcom/features/ee/workflows/lib/service/EmailWorkflowService";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { WorkflowReminderRepository } from "@calcom/features/ee/workflows/repositories/WorkflowReminderRepository";
-import tasker from "@calcom/features/tasker";
-import logger from "@calcom/lib/logger";
-import { getTimeFormatStringFromUserTimeFormat } from "@calcom/lib/timeFormat";
-import prisma from "@calcom/prisma";
-import type { TimeUnit } from "@calcom/prisma/enums";
-import { WorkflowMethods, WorkflowTemplates, WorkflowTriggerEvents } from "@calcom/prisma/enums";
+import { BookingSeatRepository } from "@calndrbrnd/features/bookings/repositories/BookingSeatRepository";
+import { EmailWorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/EmailWorkflowService";
+import { WorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/WorkflowService";
+import { WorkflowReminderRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowReminderRepository";
+import tasker from "@calndrbrnd/features/tasker";
+import logger from "@calndrbrnd/lib/logger";
+import { getTimeFormatStringFromUserTimeFormat } from "@calndrbrnd/lib/timeFormat";
+import prisma from "@calndrbrnd/prisma";
+import type { TimeUnit } from "@calndrbrnd/prisma/enums";
+import { WorkflowMethods, WorkflowTemplates, WorkflowTriggerEvents } from "@calndrbrnd/prisma/enums";
 
 import type { BookingInfo, ScheduleEmailReminderAction, FormSubmissionData } from "../types";
 import { sendOrScheduleWorkflowEmails } from "./providers/emailProvider";

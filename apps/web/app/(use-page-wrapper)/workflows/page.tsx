@@ -1,9 +1,9 @@
 // import { cookies, headers } from "next/headers";
-// import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
+// import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
 // import { buildLegacyRequest } from "@lib/buildLegacyCtx";
-// import { getTeamsFiltersFromQuery } from "@calcom/features/filters/lib/getTeamsFiltersFromQuery";
-// import { WorkflowRepository } from "@calcom/features/ee/workflows/repositories/WorkflowRepository";
-import LegacyPage from "@calcom/features/ee/workflows/pages/index";
+// import { getTeamsFiltersFromQuery } from "@calndrbrnd/features/filters/lib/getTeamsFiltersFromQuery";
+// import { WorkflowRepository } from "@calndrbrnd/features/ee/workflows/repositories/WorkflowRepository";
+import LegacyPage from "@calndrbrnd/features/ee/workflows/pages/index";
 
 const Page = async () => {
   // const session = await getServerSession({ req: buildLegacyRequest(await headers(), await cookies()) });

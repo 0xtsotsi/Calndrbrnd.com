@@ -1,6 +1,6 @@
-import { getPublicEvent } from "@calcom/features/eventtypes/lib/getPublicEvent";
-import prisma from "@calcom/prisma";
-import type { TEventInputSchema } from "@calcom/trpc/server/routers/publicViewer/event.schema";
+import { getPublicEvent } from "@calndrbrnd/features/eventtypes/lib/getPublicEvent";
+import prisma from "@calndrbrnd/prisma";
+import type { TEventInputSchema } from "@calndrbrnd/trpc/server/routers/publicViewer/event.schema";
 
 export class EventRepository {
   static async getPublicEvent(input: TEventInputSchema, userId?: number) {

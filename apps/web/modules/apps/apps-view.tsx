@@ -3,18 +3,18 @@
 import type { ChangeEventHandler } from "react";
 import { useState } from "react";
 
-import { AllApps } from "@calcom/features/apps/components/AllApps";
-import { AppStoreCategories } from "@calcom/features/apps/components/Categories";
-import { PopularAppsSlider } from "@calcom/features/apps/components/PopularAppsSlider";
-import { RecentAppsSlider } from "@calcom/features/apps/components/RecentAppsSlider";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import type { AppCategories } from "@calcom/prisma/enums";
-import type { AppFrontendPayload } from "@calcom/types/App";
-import classNames from "@calcom/ui/classNames";
-import { TextField } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import type { HorizontalTabItemProps } from "@calcom/ui/components/navigation";
-import { HorizontalTabs } from "@calcom/ui/components/navigation";
+import { AllApps } from "@calndrbrnd/features/apps/components/AllApps";
+import { AppStoreCategories } from "@calndrbrnd/features/apps/components/Categories";
+import { PopularAppsSlider } from "@calndrbrnd/features/apps/components/PopularAppsSlider";
+import { RecentAppsSlider } from "@calndrbrnd/features/apps/components/RecentAppsSlider";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import type { AppCategories } from "@calndrbrnd/prisma/enums";
+import type { AppFrontendPayload } from "@calndrbrnd/types/App";
+import classNames from "@calndrbrnd/ui/classNames";
+import { TextField } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import type { HorizontalTabItemProps } from "@calndrbrnd/ui/components/navigation";
+import { HorizontalTabs } from "@calndrbrnd/ui/components/navigation";
 
 import AppsLayout from "@components/apps/layouts/AppsLayout";
 

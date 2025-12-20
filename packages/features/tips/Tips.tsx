@@ -3,11 +3,11 @@ import shuffle from "lodash/shuffle";
 import { useState, memo } from "react";
 import posthog from "posthog-js";
 
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { localStorage } from "@calcom/lib/webstorage";
-import { Card } from "@calcom/ui/components/card";
-import { GatedFeatures } from "@calcom/features/shell/stores/gatedFeaturesStore";
-import { useGatedFeaturesStore } from "@calcom/features/shell/stores/gatedFeaturesStore";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { localStorage } from "@calndrbrnd/lib/webstorage";
+import { Card } from "@calndrbrnd/ui/components/card";
+import { GatedFeatures } from "@calndrbrnd/features/shell/stores/gatedFeaturesStore";
+import { useGatedFeaturesStore } from "@calndrbrnd/features/shell/stores/gatedFeaturesStore";
 
 type Tip = {
   id: number;

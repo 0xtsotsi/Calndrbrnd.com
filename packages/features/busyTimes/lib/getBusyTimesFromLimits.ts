@@ -1,18 +1,18 @@
-import type { Dayjs } from "@calcom/dayjs";
-import dayjs from "@calcom/dayjs";
-import type { EventType } from "@calcom/features/availability/lib/getUserAvailability";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { getCheckBookingLimitsService } from "@calcom/features/di/containers/BookingLimits";
-import { getBusyTimesService } from "@calcom/features/di/containers/BusyTimes";
-import { descendingLimitKeys, intervalLimitKeyToUnit } from "@calcom/lib/intervalLimits/intervalLimit";
-import type { IntervalLimit } from "@calcom/lib/intervalLimits/intervalLimitSchema";
-import LimitManager from "@calcom/lib/intervalLimits/limitManager";
-import { isBookingWithinPeriod } from "@calcom/lib/intervalLimits/utils";
-import { getPeriodStartDatesBetween } from "@calcom/lib/intervalLimits/utils/getPeriodStartDatesBetween";
-import { withReporting } from "@calcom/lib/sentryWrapper";
-import { performance } from "@calcom/lib/server/perfObserver";
-import prisma from "@calcom/prisma";
-import type { EventBusyDetails } from "@calcom/types/Calendar";
+import type { Dayjs } from "@calndrbrnd/dayjs";
+import dayjs from "@calndrbrnd/dayjs";
+import type { EventType } from "@calndrbrnd/features/availability/lib/getUserAvailability";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { getCheckBookingLimitsService } from "@calndrbrnd/features/di/containers/BookingLimits";
+import { getBusyTimesService } from "@calndrbrnd/features/di/containers/BusyTimes";
+import { descendingLimitKeys, intervalLimitKeyToUnit } from "@calndrbrnd/lib/intervalLimits/intervalLimit";
+import type { IntervalLimit } from "@calndrbrnd/lib/intervalLimits/intervalLimitSchema";
+import LimitManager from "@calndrbrnd/lib/intervalLimits/limitManager";
+import { isBookingWithinPeriod } from "@calndrbrnd/lib/intervalLimits/utils";
+import { getPeriodStartDatesBetween } from "@calndrbrnd/lib/intervalLimits/utils/getPeriodStartDatesBetween";
+import { withReporting } from "@calndrbrnd/lib/sentryWrapper";
+import { performance } from "@calndrbrnd/lib/server/perfObserver";
+import prisma from "@calndrbrnd/prisma";
+import type { EventBusyDetails } from "@calndrbrnd/types/Calendar";
 
 const _getBusyTimesFromLimits = async (
   bookingLimits: IntervalLimit | null,

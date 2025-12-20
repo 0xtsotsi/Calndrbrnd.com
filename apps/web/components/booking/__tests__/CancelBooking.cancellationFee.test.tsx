@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import * as React from "react";
 import { describe, expect, it, vi, beforeAll } from "vitest";
 
-import * as shouldChargeModule from "@calcom/features/bookings/lib/payment/shouldChargeNoShowCancellationFee";
+import * as shouldChargeModule from "@calndrbrnd/features/bookings/lib/payment/shouldChargeNoShowCancellationFee";
 
 import CancelBooking from "../CancelBooking";
 
@@ -10,7 +10,7 @@ beforeAll(() => {
   Element.prototype.scrollIntoView = vi.fn();
 });
 
-vi.mock("@calcom/trpc", () => ({
+vi.mock("@calndrbrnd/trpc", () => ({
   trpc: {
     viewer: {
       bookings: {
@@ -42,7 +42,7 @@ vi.mock("next-i18next", () => ({
   }),
 }));
 
-vi.mock("@calcom/lib/hooks/useLocale", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useLocale", () => ({
   useLocale: () => ({
     t: (key: string, options?: Record<string, unknown>) => {
       if (key === "cancel_booking_acknowledge_no_show_fee") {
@@ -59,7 +59,7 @@ vi.mock("@calcom/lib/hooks/useLocale", () => ({
   }),
 }));
 
-vi.mock("@calcom/lib/hooks/useRefreshData", () => ({
+vi.mock("@calndrbrnd/lib/hooks/useRefreshData", () => ({
   useRefreshData: () => vi.fn(),
 }));
 
@@ -70,7 +70,7 @@ vi.mock("next/router", () => ({
   }),
 }));
 
-vi.mock("@calcom/features/bookings/lib/payment/shouldChargeNoShowCancellationFee", () => ({
+vi.mock("@calndrbrnd/features/bookings/lib/payment/shouldChargeNoShowCancellationFee", () => ({
   shouldChargeNoShowCancellationFee: vi.fn(),
 }));
 

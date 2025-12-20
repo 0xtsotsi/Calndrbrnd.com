@@ -9,8 +9,8 @@ import { BookingEmailAndSmsTasker } from "@/lib/services/tasker/booking-emails-s
 import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { Injectable } from "@nestjs/common";
 
-import { RegularBookingService as BaseRegularBookingService } from "@calcom/platform-libraries/bookings";
-import type { PrismaClient } from "@calcom/prisma";
+import { RegularBookingService as BaseRegularBookingService } from "@calndrbrnd/platform-libraries/bookings";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 @Injectable()
 export class RegularBookingService extends BaseRegularBookingService {

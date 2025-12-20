@@ -1,5 +1,5 @@
-import { trpc } from "@calcom/trpc/react";
-import { Badge } from "@calcom/ui/components/badge";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { Badge } from "@calndrbrnd/ui/components/badge";
 
 export default function PendingReportsBadge() {
   const { data: pendingReportsCount } = trpc.viewer.organizations.pendingReportsCount.useQuery();

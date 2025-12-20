@@ -5,16 +5,16 @@ import {
   generateGuestMeetingTokenFromOwnerMeetingToken,
   setEnableRecordingUIAndUserIdForOrganizer,
   updateMeetingTokenIfExpired,
-} from "@calcom/app-store/dailyvideo/lib/VideoApiAdapter";
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { getOrganizationRepository } from "@calcom/features/ee/organizations/di/OrganizationRepository.container";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { getCalVideoReference } from "@calcom/features/get-cal-video-reference";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { CAL_VIDEO_MEETING_LINK_FOR_TESTING } from "@calcom/lib/constants";
-import { isENVDev } from "@calcom/lib/env";
-import prisma from "@calcom/prisma";
+} from "@calndrbrnd/app-store/dailyvideo/lib/VideoApiAdapter";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { getOrganizationRepository } from "@calndrbrnd/features/ee/organizations/di/OrganizationRepository.container";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { getCalVideoReference } from "@calndrbrnd/features/get-cal-video-reference";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { CAL_VIDEO_MEETING_LINK_FOR_TESTING } from "@calndrbrnd/lib/constants";
+import { isENVDev } from "@calndrbrnd/lib/env";
+import prisma from "@calndrbrnd/prisma";
 
 const md = new MarkdownIt("default", { html: true, breaks: true, linkify: true });
 

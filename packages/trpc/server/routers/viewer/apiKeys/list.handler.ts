@@ -1,5 +1,5 @@
-import { PrismaApiKeyRepository } from "@calcom/features/ee/api-keys/repositories/PrismaApiKeyRepository";
-import type { PrismaClient } from "@calcom/prisma";
+import { PrismaApiKeyRepository } from "@calndrbrnd/features/ee/api-keys/repositories/PrismaApiKeyRepository";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 import type { TrpcSessionUser } from "../../../types";
 

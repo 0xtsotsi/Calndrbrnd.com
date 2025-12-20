@@ -1,8 +1,8 @@
 import { createRouterCaller } from "app/_trpc/context";
 import { _generateMetadata } from "app/_utils";
 
-import PlatformMembersView from "@calcom/features/ee/platform/pages/settings/members";
-import { viewerOrganizationsRouter } from "@calcom/trpc/server/routers/viewer/organizations/_router";
+import PlatformMembersView from "@calndrbrnd/features/ee/platform/pages/settings/members";
+import { viewerOrganizationsRouter } from "@calndrbrnd/trpc/server/routers/viewer/organizations/_router";
 
 export const generateMetadata = async () =>
   await _generateMetadata(

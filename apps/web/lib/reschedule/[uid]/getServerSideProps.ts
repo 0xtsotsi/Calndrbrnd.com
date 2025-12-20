@@ -3,13 +3,13 @@ import type { GetServerSidePropsContext } from "next";
 import { URLSearchParams } from "url";
 import { z } from "zod";
 
-import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
-import { buildEventUrlFromBooking } from "@calcom/features/bookings/lib/buildEventUrlFromBooking";
-import { determineReschedulePreventionRedirect } from "@calcom/features/bookings/lib/reschedule/determineReschedulePreventionRedirect";
-import { getDefaultEvent } from "@calcom/features/eventtypes/lib/defaultEvents";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { maybeGetBookingUidFromSeat } from "@calcom/lib/server/maybeGetBookingUidFromSeat";
-import prisma, { bookingMinimalSelect } from "@calcom/prisma";
+import { getServerSession } from "@calndrbrnd/features/auth/lib/getServerSession";
+import { buildEventUrlFromBooking } from "@calndrbrnd/features/bookings/lib/buildEventUrlFromBooking";
+import { determineReschedulePreventionRedirect } from "@calndrbrnd/features/bookings/lib/reschedule/determineReschedulePreventionRedirect";
+import { getDefaultEvent } from "@calndrbrnd/features/eventtypes/lib/defaultEvents";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { maybeGetBookingUidFromSeat } from "@calndrbrnd/lib/server/maybeGetBookingUidFromSeat";
+import prisma, { bookingMinimalSelect } from "@calndrbrnd/prisma";
 
 const querySchema = z.object({
   uid: z.string(),

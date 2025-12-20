@@ -8,7 +8,7 @@ import { UsersRepository } from "@/modules/users/users.repository";
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 import { DateTime } from "luxon";
 
-import { dynamicEvent } from "@calcom/platform-libraries";
+import { dynamicEvent } from "@calndrbrnd/platform-libraries";
 import {
   ByUsernameAndEventTypeSlug_2024_09_04,
   ByTeamSlugAndEventTypeSlug_2024_09_04,
@@ -17,7 +17,7 @@ import {
   ById_2024_09_04_type,
   ByUsernameAndEventTypeSlug_2024_09_04_type,
   ByTeamSlugAndEventTypeSlug_2024_09_04_type,
-} from "@calcom/platform-types";
+} from "@calndrbrnd/platform-types";
 
 export type InternalGetSlotsQuery = {
   isTeamEvent: boolean;

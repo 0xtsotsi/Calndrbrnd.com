@@ -1,11 +1,11 @@
 "use client";
 
-import { ChartCard } from "@calcom/features/insights/components/ChartCard";
+import { ChartCard } from "@calndrbrnd/features/insights/components/ChartCard";
 import {
   RoutingFunnelContent,
   legend,
-} from "@calcom/features/insights/components/routing/RoutingFunnelContent";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
+} from "@calndrbrnd/features/insights/components/routing/RoutingFunnelContent";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
 
 // Random sample data for playground testing
 const sampleRoutingFunnelData = [

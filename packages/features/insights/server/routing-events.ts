@@ -4,13 +4,13 @@ import startCase from "lodash/startCase";
 import {
   RoutingFormFieldType,
   isValidRoutingFormFieldType,
-} from "@calcom/app-store/routing-forms/lib/FieldTypes";
-import { zodFields as routingFormFieldsSchema } from "@calcom/app-store/routing-forms/zod";
-import dayjs from "@calcom/dayjs";
-import type { InsightsRoutingBaseService } from "@calcom/features/insights/services/InsightsRoutingBaseService";
-import { WEBAPP_URL } from "@calcom/lib/constants";
-import { readonlyPrisma as prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
+} from "@calndrbrnd/app-store/routing-forms/lib/FieldTypes";
+import { zodFields as routingFormFieldsSchema } from "@calndrbrnd/app-store/routing-forms/zod";
+import dayjs from "@calndrbrnd/dayjs";
+import type { InsightsRoutingBaseService } from "@calndrbrnd/features/insights/services/InsightsRoutingBaseService";
+import { WEBAPP_URL } from "@calndrbrnd/lib/constants";
+import { readonlyPrisma as prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
 
 type RoutingFormInsightsTeamFilter = {
   userId?: number | null;

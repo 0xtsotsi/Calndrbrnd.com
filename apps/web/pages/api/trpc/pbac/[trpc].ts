@@ -1,4 +1,4 @@
-import { createNextApiHandler } from "@calcom/trpc/server/createNextApiHandler";
-import { permissionsRouter } from "@calcom/trpc/server/routers/viewer/pbac/_router";
+import { createNextApiHandler } from "@calndrbrnd/trpc/server/createNextApiHandler";
+import { permissionsRouter } from "@calndrbrnd/trpc/server/routers/viewer/pbac/_router";
 
 export default createNextApiHandler(permissionsRouter);

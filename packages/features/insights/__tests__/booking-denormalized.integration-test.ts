@@ -1,7 +1,7 @@
 import { describe, expect, beforeEach, afterEach, it } from "vitest";
 
-import prisma from "@calcom/prisma";
-import { BookingStatus, SchedulingType } from "@calcom/prisma/enums";
+import prisma from "@calndrbrnd/prisma";
+import { BookingStatus, SchedulingType } from "@calndrbrnd/prisma/enums";
 
 describe("BookingDenormalized", () => {
   let userId: number;

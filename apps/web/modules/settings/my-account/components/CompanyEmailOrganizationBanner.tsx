@@ -2,9 +2,9 @@
 
 import { useRouter } from "next/navigation";
 
-import { useFlagMap } from "@calcom/features/flags/context/provider";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Button } from "@calcom/ui/components/button";
+import { useFlagMap } from "@calndrbrnd/features/flags/context/provider";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Button } from "@calndrbrnd/ui/components/button";
 
 import { MailIcon } from "./MailIcon";
 

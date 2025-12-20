@@ -1,4 +1,4 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { describe, it, expect, beforeEach, vi } from "vitest";
 
@@ -19,7 +19,7 @@ import { RetellAIPhoneServiceProvider } from "./RetellAIPhoneServiceProvider";
 import type { RetellAIService } from "./RetellAIService";
 import type { RetellAIRepository } from "./types";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 

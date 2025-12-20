@@ -4,13 +4,13 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
-import { symmetricDecrypt } from "@calcom/lib/crypto";
-import prisma from "@calcom/prisma";
-import { UserPermissionRole } from "@calcom/prisma/enums";
-import { createContext } from "@calcom/trpc/server/createContext";
-import { bookingsRouter } from "@calcom/trpc/server/routers/viewer/bookings/_router";
-import { createCallerFactory } from "@calcom/trpc/server/trpc";
-import type { UserProfile } from "@calcom/types/UserProfile";
+import { symmetricDecrypt } from "@calndrbrnd/lib/crypto";
+import prisma from "@calndrbrnd/prisma";
+import { UserPermissionRole } from "@calndrbrnd/prisma/enums";
+import { createContext } from "@calndrbrnd/trpc/server/createContext";
+import { bookingsRouter } from "@calndrbrnd/trpc/server/routers/viewer/bookings/_router";
+import { createCallerFactory } from "@calndrbrnd/trpc/server/trpc";
+import type { UserProfile } from "@calndrbrnd/types/UserProfile";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

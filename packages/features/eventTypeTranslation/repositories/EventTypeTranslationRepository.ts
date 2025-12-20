@@ -1,6 +1,6 @@
-import { prisma } from "@calcom/prisma";
-import type { EventTypeTranslation } from "@calcom/prisma/client";
-import { EventTypeAutoTranslatedField } from "@calcom/prisma/enums";
+import { prisma } from "@calndrbrnd/prisma";
+import type { EventTypeTranslation } from "@calndrbrnd/prisma/client";
+import { EventTypeAutoTranslatedField } from "@calndrbrnd/prisma/enums";
 
 export type CreateEventTypeTranslation = Omit<
   EventTypeTranslation,

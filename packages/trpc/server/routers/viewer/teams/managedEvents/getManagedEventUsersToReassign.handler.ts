@@ -1,16 +1,16 @@
-import { enrichUsersWithDelegationCredentials } from "@calcom/app-store/delegationCredential";
-import dayjs from "@calcom/dayjs";
-import { ensureAvailableUsers } from "@calcom/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
-import { getEventTypesFromDB } from "@calcom/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
-import type { IsFixedAwareUser } from "@calcom/features/bookings/lib/handleNewBooking/types";
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { EventTypeRepository } from "@calcom/features/eventtypes/repositories/eventTypeRepository";
-import { withSelectedCalendars } from "@calcom/features/users/repositories/UserRepository";
-import { ErrorCode } from "@calcom/lib/errorCodes";
-import logger from "@calcom/lib/logger";
-import type { PrismaClient } from "@calcom/prisma";
+import { enrichUsersWithDelegationCredentials } from "@calndrbrnd/app-store/delegationCredential";
+import dayjs from "@calndrbrnd/dayjs";
+import { ensureAvailableUsers } from "@calndrbrnd/features/bookings/lib/handleNewBooking/ensureAvailableUsers";
+import { getEventTypesFromDB } from "@calndrbrnd/features/bookings/lib/handleNewBooking/getEventTypesFromDB";
+import type { IsFixedAwareUser } from "@calndrbrnd/features/bookings/lib/handleNewBooking/types";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { EventTypeRepository } from "@calndrbrnd/features/eventtypes/repositories/eventTypeRepository";
+import { withSelectedCalendars } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { ErrorCode } from "@calndrbrnd/lib/errorCodes";
+import logger from "@calndrbrnd/lib/logger";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import type { TGetManagedEventUsersToReassignInputSchema } from "./getManagedEventUsersToReassign.schema";
 

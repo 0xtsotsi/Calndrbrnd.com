@@ -1,17 +1,17 @@
 import { useMemo, useState, Suspense } from "react";
 import type { UseFormReturn } from "react-hook-form";
 
-import useLockedFieldsManager from "@calcom/features/ee/managed-event-types/hooks/useLockedFieldsManager";
-import { EventTypeEmbedButton, EventTypeEmbedDialog } from "@calcom/features/embed/EventTypeEmbed";
-import type { FormValues } from "@calcom/features/eventtypes/lib/types";
-import type { EventTypeSetupProps } from "@calcom/features/eventtypes/lib/types";
-import WebShell from "@calcom/features/shell/Shell";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { SchedulingType } from "@calcom/prisma/enums";
-import classNames from "@calcom/ui/classNames";
-import { Button } from "@calcom/ui/components/button";
-import { ButtonGroup } from "@calcom/ui/components/buttonGroup";
-import { VerticalDivider } from "@calcom/ui/components/divider";
+import useLockedFieldsManager from "@calndrbrnd/features/ee/managed-event-types/hooks/useLockedFieldsManager";
+import { EventTypeEmbedButton, EventTypeEmbedDialog } from "@calndrbrnd/features/embed/EventTypeEmbed";
+import type { FormValues } from "@calndrbrnd/features/eventtypes/lib/types";
+import type { EventTypeSetupProps } from "@calndrbrnd/features/eventtypes/lib/types";
+import WebShell from "@calndrbrnd/features/shell/Shell";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
+import classNames from "@calndrbrnd/ui/classNames";
+import { Button } from "@calndrbrnd/ui/components/button";
+import { ButtonGroup } from "@calndrbrnd/ui/components/buttonGroup";
+import { VerticalDivider } from "@calndrbrnd/ui/components/divider";
 import {
   DropdownMenuSeparator,
   Dropdown,
@@ -19,15 +19,15 @@ import {
   DropdownMenuItem,
   DropdownItem,
   DropdownMenuTrigger,
-} from "@calcom/ui/components/dropdown";
-import { Label } from "@calcom/ui/components/form";
-import { Switch } from "@calcom/ui/components/form";
-import { Icon } from "@calcom/ui/components/icon";
-import { HorizontalTabs, VerticalTabs } from "@calcom/ui/components/navigation";
-import type { VerticalTabItemProps } from "@calcom/ui/components/navigation";
-import { Skeleton } from "@calcom/ui/components/skeleton";
-import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
+} from "@calndrbrnd/ui/components/dropdown";
+import { Label } from "@calndrbrnd/ui/components/form";
+import { Switch } from "@calndrbrnd/ui/components/form";
+import { Icon } from "@calndrbrnd/ui/components/icon";
+import { HorizontalTabs, VerticalTabs } from "@calndrbrnd/ui/components/navigation";
+import type { VerticalTabItemProps } from "@calndrbrnd/ui/components/navigation";
+import { Skeleton } from "@calndrbrnd/ui/components/skeleton";
+import { showToast } from "@calndrbrnd/ui/components/toast";
+import { Tooltip } from "@calndrbrnd/ui/components/tooltip";
 
 import { Shell as PlatformShell } from "../../../platform/atoms/src/components/ui/shell";
 import { DeleteDialog } from "./dialogs/DeleteDialog";

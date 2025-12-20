@@ -1,7 +1,7 @@
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { getBookingAuditTaskConsumer } from "@calcom/features/booking-audit/di/BookingAuditTaskConsumer.container";
-import { BookingAuditTaskConsumerSchema } from "@calcom/features/booking-audit/lib/types/bookingAuditTask";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { getBookingAuditTaskConsumer } from "@calndrbrnd/features/booking-audit/di/BookingAuditTaskConsumer.container";
+import { BookingAuditTaskConsumerSchema } from "@calndrbrnd/features/booking-audit/lib/types/bookingAuditTask";
 
 const log = logger.getSubLogger({ prefix: ["[tasker] bookingAudit"] });
 

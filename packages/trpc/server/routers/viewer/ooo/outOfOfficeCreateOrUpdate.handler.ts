@@ -1,16 +1,16 @@
 import { v4 as uuidv4 } from "uuid";
 
-import { selectOOOEntries } from "@calcom/app-store/zapier/api/subscriptions/listOOOEntries";
-import dayjs from "@calcom/dayjs";
-import { sendBookingRedirectNotification } from "@calcom/emails/workflow-email-service";
-import type { GetSubscriberOptions } from "@calcom/features/webhooks/lib/getWebhooks";
-import getWebhooks from "@calcom/features/webhooks/lib/getWebhooks";
-import type { OOOEntryPayloadType } from "@calcom/features/webhooks/lib/sendPayload";
-import sendPayload from "@calcom/features/webhooks/lib/sendPayload";
-import { getTranslation } from "@calcom/lib/server/i18n";
-import prisma from "@calcom/prisma";
-import { WebhookTriggerEvents } from "@calcom/prisma/enums";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { selectOOOEntries } from "@calndrbrnd/app-store/zapier/api/subscriptions/listOOOEntries";
+import dayjs from "@calndrbrnd/dayjs";
+import { sendBookingRedirectNotification } from "@calndrbrnd/emails/workflow-email-service";
+import type { GetSubscriberOptions } from "@calndrbrnd/features/webhooks/lib/getWebhooks";
+import getWebhooks from "@calndrbrnd/features/webhooks/lib/getWebhooks";
+import type { OOOEntryPayloadType } from "@calndrbrnd/features/webhooks/lib/sendPayload";
+import sendPayload from "@calndrbrnd/features/webhooks/lib/sendPayload";
+import { getTranslation } from "@calndrbrnd/lib/server/i18n";
+import prisma from "@calndrbrnd/prisma";
+import { WebhookTriggerEvents } from "@calndrbrnd/prisma/enums";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 

@@ -1,10 +1,10 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 import { describe, expect, it, vi, beforeEach } from "vitest";
 import { formQueryHandler } from "./formQuery.handler";
 import { deleteFormHandler } from "./deleteForm.handler";
 import { formsHandler } from "./forms.handler";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
   default: prisma,
 }));
@@ -13,16 +13,16 @@ vi.mock("./permissions", () => ({
   checkPermissionOnExistingRoutingForm: vi.fn().mockResolvedValue(true),
 }));
 
-vi.mock("@calcom/app-store/routing-forms/lib/getSerializableForm", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/getSerializableForm", () => ({
   getSerializableForm: vi.fn().mockImplementation(({ form }) => Promise.resolve(form)),
 }));
 
-vi.mock("@calcom/app-store/routing-forms/lib/getConnectedForms", () => ({
+vi.mock("@calndrbrnd/app-store/routing-forms/lib/getConnectedForms", () => ({
   default: vi.fn().mockResolvedValue([]),
 }));
 
-vi.mock("@calcom/features/pbac/lib/entityPermissionUtils.server", async () => {
-  const actual = await vi.importActual("@calcom/features/pbac/lib/entityPermissionUtils.server");
+vi.mock("@calndrbrnd/features/pbac/lib/entityPermissionUtils.server", async () => {
+  const actual = await vi.importActual("@calndrbrnd/features/pbac/lib/entityPermissionUtils.server");
   return {
     ...actual,
     canEditEntity: vi.fn().mockResolvedValue(true),

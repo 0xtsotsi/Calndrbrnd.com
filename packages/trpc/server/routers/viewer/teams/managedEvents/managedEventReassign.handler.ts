@@ -1,8 +1,8 @@
-import { BookingRepository } from "@calcom/features/bookings/repositories/BookingRepository";
-import { BookingAccessService } from "@calcom/features/bookings/services/BookingAccessService";
-import { managedEventReassignment } from "@calcom/features/ee/managed-event-types/reassignment";
-import { prisma } from "@calcom/prisma";
-import type { TrpcSessionUser } from "@calcom/trpc/server/types";
+import { BookingRepository } from "@calndrbrnd/features/bookings/repositories/BookingRepository";
+import { BookingAccessService } from "@calndrbrnd/features/bookings/services/BookingAccessService";
+import { managedEventReassignment } from "@calndrbrnd/features/ee/managed-event-types/reassignment";
+import { prisma } from "@calndrbrnd/prisma";
+import type { TrpcSessionUser } from "@calndrbrnd/trpc/server/types";
 
 import { TRPCError } from "@trpc/server";
 import type { TManagedEventReassignInputSchema } from "./managedEventReassign.schema";

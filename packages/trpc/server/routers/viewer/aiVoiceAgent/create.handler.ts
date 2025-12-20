@@ -1,6 +1,6 @@
-import { createDefaultAIPhoneServiceProvider } from "@calcom/features/calAIPhone";
-import type { RetellLLMGeneralTools } from "@calcom/features/calAIPhone/providers/retellAI/types";
-import { calAIPhoneWorkflowTemplates } from "@calcom/features/calAIPhone/workflowTemplates";
+import { createDefaultAIPhoneServiceProvider } from "@calndrbrnd/features/calAIPhone";
+import type { RetellLLMGeneralTools } from "@calndrbrnd/features/calAIPhone/providers/retellAI/types";
+import { calAIPhoneWorkflowTemplates } from "@calndrbrnd/features/calAIPhone/workflowTemplates";
 
 import type { TrpcSessionUser } from "../../../types";
 import type { TCreateInputSchema } from "./create.schema";

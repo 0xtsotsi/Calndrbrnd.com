@@ -8,8 +8,8 @@ import type {
   CreateScheduleInput_2024_06_11,
   ScheduleOutput_2024_06_11,
   UpdateScheduleInput_2024_06_11,
-} from "@calcom/platform-types";
-import type { Schedule } from "@calcom/prisma/client";
+} from "@calndrbrnd/platform-types";
+import type { Schedule } from "@calndrbrnd/prisma/client";
 
 @Injectable()
 export class SchedulesService_2024_06_11 {

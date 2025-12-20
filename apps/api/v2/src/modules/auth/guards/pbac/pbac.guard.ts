@@ -13,8 +13,8 @@ import {
 import { Reflector } from "@nestjs/core";
 import { Request } from "express";
 
-import type { PermissionString } from "@calcom/platform-libraries/pbac";
-import { PermissionCheckService, FeaturesRepository } from "@calcom/platform-libraries/pbac";
+import type { PermissionString } from "@calndrbrnd/platform-libraries/pbac";
+import { PermissionCheckService, FeaturesRepository } from "@calndrbrnd/platform-libraries/pbac";
 
 export const REDIS_PBAC_CACHE_KEY = (teamId: number) => `apiv2:team:${teamId}:has:pbac:guard:pbac`;
 export const REDIS_REQUIRED_PERMISSIONS_CACHE_KEY = (

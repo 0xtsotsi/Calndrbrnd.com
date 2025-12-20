@@ -1,10 +1,10 @@
 "use client";
 
-import { CreateANewPlatformForm } from "@calcom/features/ee/platform/components/index";
-import { useLocale } from "@calcom/lib/hooks/useLocale";
-import { Alert } from "@calcom/ui/components/alert";
-import { WizardLayout } from "@calcom/ui/components/layout";
-import { useGetUserAttributes } from "@calcom/web/components/settings/platform/hooks/useGetUserAttributes";
+import { CreateANewPlatformForm } from "@calndrbrnd/features/ee/platform/components/index";
+import { useLocale } from "@calndrbrnd/lib/hooks/useLocale";
+import { Alert } from "@calndrbrnd/ui/components/alert";
+import { WizardLayout } from "@calndrbrnd/ui/components/layout";
+import { useGetUserAttributes } from "@calndrbrnd/web/components/settings/platform/hooks/useGetUserAttributes";
 
 export const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   const { t } = useLocale();

@@ -1,22 +1,22 @@
 import type { ParsedUrlQuery } from "querystring";
 
  
-import { getCRMContactOwnerForRRLeadSkip } from "@calcom/app-store/_utils/CRMRoundRobinSkip";
+import { getCRMContactOwnerForRRLeadSkip } from "@calndrbrnd/app-store/_utils/CRMRoundRobinSkip";
 import {
   ROUTING_FORM_RESPONSE_ID_QUERY_STRING,
   ROUTING_FORM_QUEUED_RESPONSE_ID_QUERY_STRING,
-} from "@calcom/app-store/routing-forms/lib/constants";
-import { enabledAppSlugs } from "@calcom/app-store/routing-forms/lib/enabledApps";
-import type { AttributeRoutingConfig, LocalRoute } from "@calcom/app-store/routing-forms/types/types";
-import { zodRoutes as routesSchema } from "@calcom/app-store/routing-forms/zod";
+} from "@calndrbrnd/app-store/routing-forms/lib/constants";
+import { enabledAppSlugs } from "@calndrbrnd/app-store/routing-forms/lib/enabledApps";
+import type { AttributeRoutingConfig, LocalRoute } from "@calndrbrnd/app-store/routing-forms/types/types";
+import { zodRoutes as routesSchema } from "@calndrbrnd/app-store/routing-forms/zod";
 
  
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
-import { RoutingFormResponseRepository } from "@calcom/lib/server/repository/formResponse";
-import prisma from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { SchedulingType } from "@calcom/prisma/enums";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
+import { RoutingFormResponseRepository } from "@calndrbrnd/lib/server/repository/formResponse";
+import prisma from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { SchedulingType } from "@calndrbrnd/prisma/enums";
 
 const log = logger.getSubLogger({ prefix: ["getTeamMemberEmailFromCrm"] });
 
@@ -181,7 +181,7 @@ async function getTeamMemberEmailUsingRoutingFormHandler({
   // If the skipContactOwner is enabled then don't return an team member email
   if (attributeRoutingConfig.skipContactOwner) return { ...nullReturnValue, skipContactOwner: true };
 
-  const appBookingFormHandler = (await import("@calcom/app-store/routing-forms/appBookingFormHandler"))
+  const appBookingFormHandler = (await import("@calndrbrnd/app-store/routing-forms/appBookingFormHandler"))
     .default;
   const appHandler = appBookingFormHandler[crmAppSlug];
   if (!appHandler) return nullReturnValue;

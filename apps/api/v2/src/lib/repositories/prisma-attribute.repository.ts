@@ -1,8 +1,8 @@
 import { PrismaWriteService } from "@/modules/prisma/prisma-write.service";
 import { Injectable } from "@nestjs/common";
 
-import { PrismaAttributeRepository as PrismaAttributeRepositoryLib } from "@calcom/platform-libraries/repositories";
-import type { PrismaClient } from "@calcom/prisma";
+import { PrismaAttributeRepository as PrismaAttributeRepositoryLib } from "@calndrbrnd/platform-libraries/repositories";
+import type { PrismaClient } from "@calndrbrnd/prisma";
 
 @Injectable()
 export class PrismaAttributeRepository extends PrismaAttributeRepositoryLib {

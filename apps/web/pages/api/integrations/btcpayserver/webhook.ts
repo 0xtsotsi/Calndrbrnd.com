@@ -1,1 +1,1 @@
-export { default, config } from "@calcom/app-store/btcpayserver/api/webhook";
+export { default, config } from "@calndrbrnd/app-store/btcpayserver/api/webhook";

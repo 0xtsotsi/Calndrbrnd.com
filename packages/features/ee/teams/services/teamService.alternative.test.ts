@@ -1,22 +1,22 @@
-import { prisma } from "@calcom/prisma/__mocks__/prisma";
+import { prisma } from "@calndrbrnd/prisma/__mocks__/prisma";
 
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
-import { TeamRepository } from "@calcom/features/ee/teams/repositories/TeamRepository";
-import { WorkflowService } from "@calcom/features/ee/workflows/lib/service/WorkflowService";
-import { deleteDomain } from "@calcom/lib/domainManager/organization";
+import { TeamRepository } from "@calndrbrnd/features/ee/teams/repositories/TeamRepository";
+import { WorkflowService } from "@calndrbrnd/features/ee/workflows/lib/service/WorkflowService";
+import { deleteDomain } from "@calndrbrnd/lib/domainManager/organization";
 
 import { TeamService } from "./teamService";
 
-vi.mock("@calcom/prisma", () => ({
+vi.mock("@calndrbrnd/prisma", () => ({
   prisma,
 }));
 
-vi.mock("@calcom/ee/billing/di/containers/Billing");
-vi.mock("@calcom/features/ee/teams/repositories/TeamRepository");
-vi.mock("@calcom/features/ee/workflows/lib/service/WorkflowService");
-vi.mock("@calcom/lib/domainManager/organization");
-vi.mock("@calcom/features/ee/teams/lib/removeMember");
+vi.mock("@calndrbrnd/ee/billing/di/containers/Billing");
+vi.mock("@calndrbrnd/features/ee/teams/repositories/TeamRepository");
+vi.mock("@calndrbrnd/features/ee/workflows/lib/service/WorkflowService");
+vi.mock("@calndrbrnd/lib/domainManager/organization");
+vi.mock("@calndrbrnd/features/ee/teams/lib/removeMember");
 class Database {
   teams = new Map();
   domains = new Set();
@@ -64,7 +64,7 @@ describe("TeamService", () => {
   beforeEach(async () => {
     database.clear();
     
-    const { getTeamBillingServiceFactory } = await import("@calcom/ee/billing/di/containers/Billing");
+    const { getTeamBillingServiceFactory } = await import("@calndrbrnd/ee/billing/di/containers/Billing");
     vi.mocked(getTeamBillingServiceFactory).mockReturnValue({
       findAndInit: vi.fn().mockImplementation(async (teamId) => {
         const teamSpecificBilling = {

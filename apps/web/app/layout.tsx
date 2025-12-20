@@ -4,9 +4,9 @@ import localFont from "next/font/local";
 import { headers, cookies } from "next/headers";
 import React from "react";
 
-import { getLocale } from "@calcom/features/auth/lib/getLocale";
-import { loadTranslations } from "@calcom/lib/server/i18n";
-import { IconSprites } from "@calcom/ui/components/icon";
+import { getLocale } from "@calndrbrnd/features/auth/lib/getLocale";
+import { loadTranslations } from "@calndrbrnd/lib/server/i18n";
+import { IconSprites } from "@calndrbrnd/ui/components/icon";
 
 import { buildLegacyRequest } from "@lib/buildLegacyCtx";
 

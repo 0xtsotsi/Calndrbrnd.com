@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import { setShowNewOrgModalFlag } from "@calcom/features/ee/organizations/hooks/useWelcomeModal";
-import { useFlagMap } from "@calcom/features/flags/context/provider";
-import { CreationSource } from "@calcom/prisma/enums";
-import { trpc } from "@calcom/trpc/react";
-import { showToast } from "@calcom/ui/components/toast";
+import { setShowNewOrgModalFlag } from "@calndrbrnd/features/ee/organizations/hooks/useWelcomeModal";
+import { useFlagMap } from "@calndrbrnd/features/flags/context/provider";
+import { CreationSource } from "@calndrbrnd/prisma/enums";
+import { trpc } from "@calndrbrnd/trpc/react";
+import { showToast } from "@calndrbrnd/ui/components/toast";
 
 import type { OnboardingState } from "../store/onboarding-store";
 

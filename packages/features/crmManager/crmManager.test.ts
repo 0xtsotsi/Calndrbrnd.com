@@ -1,13 +1,13 @@
-import { mockCrmApp } from "@calcom/web/test/utils/bookingScenario/bookingScenario";
+import { mockCrmApp } from "@calndrbrnd/web/test/utils/bookingScenario/bookingScenario";
 
 import type { TFunction } from "i18next";
 import { describe, expect, test, vi } from "vitest";
 
-import { getCrm } from "@calcom/app-store/_utils/getCrm";
+import { getCrm } from "@calndrbrnd/app-store/_utils/getCrm";
 
 import CrmManager from "./crmManager";
 
-// vi.mock("@calcom/app-store/_utils/getCrm");
+// vi.mock("@calndrbrnd/app-store/_utils/getCrm");
 
 describe.skip("crmManager tests", () => {
   test("Set crmService if not set", async () => {

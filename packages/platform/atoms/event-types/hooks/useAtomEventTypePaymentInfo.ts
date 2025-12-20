@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
-import type { PaymentPageProps } from "@calcom/features/ee/payments/pages/payment";
-import { SUCCESS_STATUS } from "@calcom/platform-constants";
-import type { ApiResponse } from "@calcom/platform-types";
+import type { PaymentPageProps } from "@calndrbrnd/features/ee/payments/pages/payment";
+import { SUCCESS_STATUS } from "@calndrbrnd/platform-constants";
+import type { ApiResponse } from "@calndrbrnd/platform-types";
 
 import { useAtomsContext } from "../../hooks/useAtomsContext";
 import http from "../../lib/http";

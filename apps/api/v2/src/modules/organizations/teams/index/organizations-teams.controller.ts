@@ -42,9 +42,9 @@ import { ApiHeader, ApiOperation, ApiTags as DocsTags } from "@nestjs/swagger";
 import { plainToClass } from "class-transformer";
 import { Request } from "express";
 
-import { SUCCESS_STATUS, X_CAL_CLIENT_ID } from "@calcom/platform-constants";
-import { OrgTeamOutputDto, type SkipTakePagination } from "@calcom/platform-types";
-import type { Team } from "@calcom/prisma/client";
+import { SUCCESS_STATUS, X_CAL_CLIENT_ID } from "@calndrbrnd/platform-constants";
+import { OrgTeamOutputDto, type SkipTakePagination } from "@calndrbrnd/platform-types";
+import type { Team } from "@calndrbrnd/prisma/client";
 
 @Controller({
   path: "/v2/organizations/:orgId/teams",

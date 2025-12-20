@@ -1,6 +1,6 @@
-import { IS_TEAM_BILLING_ENABLED } from "@calcom/lib/constants";
-import logger from "@calcom/lib/logger";
-import { safeStringify } from "@calcom/lib/safeStringify";
+import { IS_TEAM_BILLING_ENABLED } from "@calndrbrnd/lib/constants";
+import logger from "@calndrbrnd/lib/logger";
+import { safeStringify } from "@calndrbrnd/lib/safeStringify";
 
 import { BillingEnabledOrgOnboardingService } from "./BillingEnabledOrgOnboardingService";
 import type { IOrganizationOnboardingService } from "./IOrganizationOnboardingService";

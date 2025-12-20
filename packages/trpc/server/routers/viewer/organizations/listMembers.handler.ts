@@ -1,12 +1,12 @@
-import { makeWhereClause } from "@calcom/features/data-table/lib/server";
-import { type TypedColumnFilter, ColumnFilterType } from "@calcom/features/data-table/lib/types";
-import type { FilterType } from "@calcom/types/data-table";
-import { FeaturesRepository } from "@calcom/features/flags/features.repository";
-import { PermissionCheckService } from "@calcom/features/pbac/services/permission-check.service";
-import { UserRepository } from "@calcom/features/users/repositories/UserRepository";
-import { prisma } from "@calcom/prisma";
-import type { Prisma } from "@calcom/prisma/client";
-import { MembershipRole } from "@calcom/prisma/enums";
+import { makeWhereClause } from "@calndrbrnd/features/data-table/lib/server";
+import { type TypedColumnFilter, ColumnFilterType } from "@calndrbrnd/features/data-table/lib/types";
+import type { FilterType } from "@calndrbrnd/types/data-table";
+import { FeaturesRepository } from "@calndrbrnd/features/flags/features.repository";
+import { PermissionCheckService } from "@calndrbrnd/features/pbac/services/permission-check.service";
+import { UserRepository } from "@calndrbrnd/features/users/repositories/UserRepository";
+import { prisma } from "@calndrbrnd/prisma";
+import type { Prisma } from "@calndrbrnd/prisma/client";
+import { MembershipRole } from "@calndrbrnd/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
