@@ -185,7 +185,7 @@ describe("RetellAIService", () => {
       );
     });
 
-    it("should include Cal.com tools when API key and eventTypeId are provided", async () => {
+    it("should include Calndrbrnd.com tools when API key and eventTypeId are provided", async () => {
       const mockLLM = { llm_id: "llm-123" };
       const mockAgent = { agent_id: "agent-123" };
 

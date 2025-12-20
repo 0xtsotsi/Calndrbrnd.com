@@ -1,4 +1,4 @@
-export const downloadAsCsv = (data: string | Record<string, any>[], filename: string) => {
+export const downloadAsCsv = (data: string | Record<string, unknown>[], filename: string) => {
   // If data is an array of objects, convert it to CSV string
   const csvString = typeof data === "string" ? data : objectsToCsv(data);
 
@@ -20,7 +20,7 @@ export const downloadAsCsv = (data: string | Record<string, any>[], filename: st
   window.URL.revokeObjectURL(url);
 };
 
-export const objectsToCsv = (data: Record<string, any>[]): string => {
+export const objectsToCsv = (data: Record<string, unknown>[]): string => {
   if (!data.length) return "";
 
   // Get headers from the first object

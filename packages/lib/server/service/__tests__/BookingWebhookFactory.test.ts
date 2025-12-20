@@ -8,7 +8,7 @@ const createTestOrganizer = (overrides?: Partial<Person>): Person => ({
   email: "organizer@example.com",
   name: "Test Organizer",
   timeZone: "UTC",
-  language: { locale: "en", translate: (() => "") as any },
+  language: { locale: "en", translate: (() => "") as (key: string) => string },
   ...overrides,
 });
 
@@ -16,11 +16,11 @@ const createTestAttendee = (overrides?: Partial<Person>): Person => ({
   email: "attendee@example.com",
   name: "Test Attendee",
   timeZone: "UTC",
-  language: { locale: "en", translate: (() => "") as any },
+  language: { locale: "en", translate: (() => "") as (key: string) => string },
   ...overrides,
 });
 
-const createTestBooking = (overrides?: Record<string, any>) => ({
+const createTestBooking = (overrides?: Record<string, unknown>) => ({
   id: 12345,
   uid: "test-uid-123",
   title: "Test Event",

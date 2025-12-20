@@ -53,7 +53,6 @@ import { EmptyScreen } from "@calcom/ui/components/empty-screen";
 import { EmailInput, TextArea } from "@calcom/ui/components/form";
 import { Icon } from "@calcom/ui/components/icon";
 import { showToast } from "@calcom/ui/components/toast";
-import { Tooltip } from "@calcom/ui/components/tooltip";
 import { useCalcomTheme } from "@calcom/ui/styles";
 import CancelBooking from "@calcom/web/components/booking/CancelBooking";
 import EventReservationSchema from "@calcom/web/components/schemas/EventReservationSchema";
@@ -221,7 +220,6 @@ export default function Success(props: PageProps) {
     if (noShow) {
       hostNoShowMutation.mutate({ bookingUid: bookingInfo.uid, noShowHost: true });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const sendFeedback = async (rating: string, comment: string) => {
@@ -285,12 +283,10 @@ export default function Success(props: PageProps) {
   useEffect(() => {
     setDate(date.tz(localStorage.getItem("timeOption.preferredTimeZone") || CURRENT_TIMEZONE));
     setIs24h(props?.userTimeFormat ? props.userTimeFormat === 24 : !!getIs24hClockFromLocalStorage());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [eventType, needsConfirmation]);
 
   useEffect(() => {
     setCalculatedDuration(dayjs(bookingInfo.endTime).diff(dayjs(bookingInfo.startTime), "minutes"));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function getTitle(): string {
@@ -510,7 +506,6 @@ export default function Success(props: PageProps) {
                         />
                       )}
                       {giphyImage && !needsConfirmation && isReschedulable && (
-                        // eslint-disable-next-line @next/next/no-img-element
                         <img src={giphyImage} className="w-full rounded-lg" alt="Gif from Giphy" />
                       )}
                       <div
@@ -801,15 +796,14 @@ export default function Success(props: PageProps) {
                           </span>
                           {/* Login button but redirect to here */}
                           <span className="text-default inline">
-                            <span className="underline" data-testid="reschedule-link">
-                              <Link
-                                href={`/auth/login?callbackUrl=${encodeURIComponent(
-                                  `/booking/${bookingInfo?.uid}`
-                                )}`}
-                                legacyBehavior>
-                                {t("login")}
-                              </Link>
-                            </span>
+                            <Link
+                              href={`/auth/login?callbackUrl=${encodeURIComponent(
+                                `/booking/${bookingInfo?.uid}`
+                              )}`}
+                              className="underline"
+                              data-testid="reschedule-link">
+                              {t("login")}
+                            </Link>
                           </span>
                         </div>
                       </>
@@ -839,17 +833,16 @@ export default function Success(props: PageProps) {
                                     canReschedule &&
                                     !isRescheduleDisabled && (
                                       <span className="text-default inline">
-                                        <span className="underline" data-testid="reschedule-link">
-                                          <Link
-                                            href={`/reschedule/${seatReferenceUid || bookingInfo?.uid}${
-                                              currentUserEmail
-                                                ? `?rescheduledBy=${encodeURIComponent(currentUserEmail)}`
-                                                : ""
-                                            }`}
-                                            legacyBehavior>
-                                            {t("reschedule")}
-                                          </Link>
-                                        </span>
+                                        <Link
+                                          href={`/reschedule/${seatReferenceUid || bookingInfo?.uid}${
+                                            currentUserEmail
+                                              ? `?rescheduledBy=${encodeURIComponent(currentUserEmail)}`
+                                              : ""
+                                          }`}
+                                          className="underline"
+                                          data-testid="reschedule-link">
+                                          {t("reschedule")}
+                                        </Link>
                                         {!isBookingInPast && canCancel && (
                                           <span className="mx-2">{t("or_lowercase")}</span>
                                         )}

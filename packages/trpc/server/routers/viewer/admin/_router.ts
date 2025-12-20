@@ -20,10 +20,6 @@ import {
 } from "./workspacePlatform/schema";
 import { watchlistRouter } from "./watchlist/_router";
 
-const NAMESPACE = "admin";
-
-const namespaced = (s: string) => `${NAMESPACE}.${s}`;
-
 export const adminRouter = router({
   listPaginated: authedAdminProcedure.input(ZListMembersSchema).query(async (opts) => {
     const { default: handler } = await import("./listPaginated.handler");

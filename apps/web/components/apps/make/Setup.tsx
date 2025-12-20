@@ -1,5 +1,4 @@
 import type { InferGetServerSidePropsType } from "next";
-import Link from "next/link";
 import { useState } from "react";
 import { Toaster } from "sonner";
 
@@ -17,6 +16,7 @@ const MAKE = "make";
 
 export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [newApiKeys, setNewApiKeys] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState<Record<string, boolean>>({});
 
   const { t } = useLocale();
   const utils = trpc.useUtils();
@@ -57,11 +57,20 @@ export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<ty
   }
 
   async function generateApiKey(teamId?: number) {
-    const apiKey = await createApiKey(teamId);
-    setNewApiKeys({ ...newApiKeys, [teamId || ""]: apiKey });
+    const key = teamId ? String(teamId) : "user";
+    setLoading((prev) => ({ ...prev, [key]: true }));
+    try {
+      const apiKey = await createApiKey(teamId);
+      setNewApiKeys((prev) => ({ ...prev, [teamId || ""]: apiKey }));
+      showToast(t("api_key_generated"), "success");
+    } catch {
+      showToast(t("something_went_wrong"), "error");
+    } finally {
+      setLoading((prev) => ({ ...prev, [key]: false }));
+    }
   }
 
-  if (integrations.isPending) {
+  if (integrations.isPending || oldApiKey.isPending || teamsList.isPending) {
     return <div className="bg-emphasis absolute z-50 flex h-screen w-full items-center" />;
   }
 
@@ -79,14 +88,22 @@ export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<ty
               <>
                 <div className="mt-1 text-xl">{t("generate_api_key")}:</div>
                 {!teams ? (
-                  <Button color="secondary" onClick={() => createApiKey()} className="mb-4 mt-2">
+                  <Button
+                    color="secondary"
+                    loading={loading["user"]}
+                    onClick={() => generateApiKey()}
+                    className="mb-4 mt-2">
                     {t("generate_api_key")}
                   </Button>
                 ) : (
                   <>
                     <div className="mt-8 text-sm font-semibold">Your event types:</div>
                     {!newApiKeys[""] ? (
-                      <Button color="secondary" onClick={() => generateApiKey()} className="mb-4 mt-2">
+                      <Button
+                        color="secondary"
+                        loading={loading["user"]}
+                        onClick={() => generateApiKey()}
+                        className="mb-4 mt-2">
                         {t("generate_api_key")}
                       </Button>
                     ) : (
@@ -94,11 +111,12 @@ export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<ty
                     )}
                     {teams.map((team) => {
                       return (
-                        <div key={team.name}>
+                        <div key={team.id}>
                           <div className="mt-2 text-sm font-semibold">{team.name}:</div>
                           {!newApiKeys[team.id] ? (
                             <Button
                               color="secondary"
+                              loading={loading[String(team.id)]}
                               onClick={() => generateApiKey(team.id)}
                               className="mb-4 mt-2">
                               {t("generate_api_key")}
@@ -134,9 +152,9 @@ export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<ty
                 <li>{t("make_setup_instructions_5")}</li>
                 <li>{t("make_setup_instructions_6")}</li>
               </ol>
-              <Link href="/apps/installed/automation?hl=make" passHref={true} legacyBehavior>
-                <Button color="secondary">{t("done")}</Button>
-              </Link>
+              <Button color="secondary" href="/apps/installed/automation?hl=make">
+                {t("done")}
+              </Button>
             </div>
           </div>
         </div>

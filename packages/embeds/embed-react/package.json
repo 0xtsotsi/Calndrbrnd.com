@@ -1,5 +1,5 @@
 {
-  "name": "@calcom/embed-react",
+  "name": "@calndrbrnd/embed-react",
   "sideEffects": false,
   "version": "1.5.3",
   "description": "Embed Cal Link as a React Component",
@@ -21,9 +21,9 @@
     "embed-tests-update-snapshots:ci": "yarn embed-tests-quick --update-snapshots",
     "packaged:tests": "cd test/packaged && yarn tsc --noEmit && yarn run -T test -- --packaged-embed-tests-only",
     "withEmbedPublishEnv": "NEXT_PUBLIC_EMBED_LIB_URL='https://app.cal.com/embed/embed.js' NEXT_PUBLIC_WEBAPP_URL='https://app.cal.com' yarn",
-    "prepack": "yarn ../../../ lint --filter='@calcom/embed-react' && yarn withEmbedPublishEnv build && yarn packaged:tests",
-    "embed-web-start": "yarn workspace @calcom/web start",
-    "embed-dev": "yarn workspace @calcom/embed-react dev",
+    "prepack": "yarn ../../../ lint --filter='@calndrbrnd/embed-react' && yarn withEmbedPublishEnv build && yarn packaged:tests",
+    "embed-web-start": "yarn workspace @calndrbrnd/web start",
+    "embed-dev": "yarn workspace @calndrbrnd/embed-react dev",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "main": "./dist/Cal.umd.js",
@@ -44,7 +44,7 @@
     }
   },
   "devDependencies": {
-    "@calcom/eslint-config": "workspace:*",
+    "@calndrbrnd/eslint-config": "workspace:*",
     "@playwright/test": "^1.45.3",
     "@types/react": "18.0.26",
     "@types/react-dom": "^18.0.9",
@@ -54,7 +54,7 @@
     "vite": "^4.5.2"
   },
   "dependencies": {
-    "@calcom/embed-core": "workspace:*",
-    "@calcom/embed-snippet": "workspace:*"
+    "@calndrbrnd/embed-core": "workspace:*",
+    "@calndrbrnd/embed-snippet": "workspace:*"
   }
 }

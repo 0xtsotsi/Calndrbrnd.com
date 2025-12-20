@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "private": true,
-  "name": "@calcom/horizon-workrooms",
+  "name": "@calndrbrnd/horizon-workrooms",
   "version": "0.0.0",
   "main": "./index.ts",
   "dependencies": {
-    "@calcom/lib": "workspace:*"
+    "@calndrbrnd/lib": "workspace:*"
   },
   "devDependencies": {
-    "@calcom/types": "workspace:*"
+    "@calndrbrnd/types": "workspace:*"
   },
   "description": "Workrooms is an immersive virtual space, where you and your team can work better together, from anywhere"
 }

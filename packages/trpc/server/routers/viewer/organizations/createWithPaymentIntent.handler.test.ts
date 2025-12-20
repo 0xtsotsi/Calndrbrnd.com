@@ -295,7 +295,7 @@ describe("createWithPaymentIntent handler", () => {
     });
   });
 
-  // Cal.com admin shouldn't be able to reach this step
+  // Calndrbrnd.com admin shouldn't be able to reach this step
   it.skip("should create payment intent for valid organization onboarding (admin user)", async () => {
     // Create admin user
     const adminUser = await createTestUser({

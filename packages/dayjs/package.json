@@ -1,5 +1,5 @@
 {
-  "name": "@calcom/dayjs",
+  "name": "@calndrbrnd/dayjs",
   "description": "Cal.com's Day.js shared library",
   "private": true,
   "version": "1.0.0",

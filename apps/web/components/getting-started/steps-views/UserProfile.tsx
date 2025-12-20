@@ -71,7 +71,11 @@ const UserProfile = ({ user }: UserProfileProps) => {
       await utils.viewer.me.get.refetch();
       const redirectUrl = localStorage.getItem("onBoardingRedirect");
       localStorage.removeItem("onBoardingRedirect");
-      redirectUrl ? router.push(redirectUrl) : router.push("/");
+      if (redirectUrl) {
+        router.push(redirectUrl);
+      } else {
+        router.push("/");
+      }
     },
     onError: () => {
       showToast(t("problem_saving_user_profile"), "error");

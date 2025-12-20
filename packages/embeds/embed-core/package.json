@@ -1,5 +1,5 @@
 {
-  "name": "@calcom/embed-core",
+  "name": "@calndrbrnd/embed-core",
   "version": "1.5.3",
   "description": "This is the vanilla JS core script that embeds Cal Link",
   "main": "./dist/embed/embed.js",
@@ -11,8 +11,8 @@
     "directory": "packages/embeds/embed-core"
   },
   "scripts": {
-    "embed-dev": "yarn workspace @calcom/embed-core dev",
-    "embed-web-start": "yarn workspace @calcom/web start",
+    "embed-dev": "yarn workspace @calndrbrnd/embed-core dev",
+    "embed-web-start": "yarn workspace @calndrbrnd/web start",
     "__build": "yarn tailwind && vite build && tsc --emitDeclarationOnly --declarationDir dist && cp -r ../../../apps/web/public/embed ./dist/",
     "__dev": "yarn tailwind && vite build --mode development",
     "build": "rm -rf dist && NEXT_PUBLIC_EMBED_FINGER_PRINT=$(git rev-parse --short HEAD) NEXT_PUBLIC_EMBED_VERSION=$(node -p 'require(\"./package.json\").version') yarn __build",
@@ -34,7 +34,7 @@
     "embed-tests-quick": "QUICK=true yarn embed-tests",
     "embed-tests-update-snapshots:ci": "yarn embed-tests-quick --update-snapshots",
     "withEmbedPublishEnv": "NEXT_PUBLIC_EMBED_LIB_URL='https://app.cal.com/embed/embed.js' NEXT_PUBLIC_WEBAPP_URL='https://app.cal.com' yarn",
-    "prepack": "yarn ../../../ lint --filter='@calcom/embed-core' && yarn withEmbedPublishEnv build",
+    "prepack": "yarn ../../../ lint --filter='@calndrbrnd/embed-core' && yarn withEmbedPublishEnv build",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf ../../../apps/web/public/embed"
   },
   "files": [

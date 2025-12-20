@@ -24,7 +24,7 @@ export interface CreatePaymentData {
   refunded: boolean;
   success: boolean;
   currency: string;
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 }
 
 export interface IBookingPaymentRepository {
@@ -33,5 +33,5 @@ export interface IBookingPaymentRepository {
     credentialType: string
   ): Promise<BookingPaymentWithCredentials | null>;
 
-  createPaymentRecord(data: CreatePaymentData): Promise<any>;
+  createPaymentRecord(data: CreatePaymentData): Promise<Record<string, unknown>>;
 }

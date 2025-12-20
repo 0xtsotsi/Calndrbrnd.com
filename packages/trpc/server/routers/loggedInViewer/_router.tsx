@@ -9,18 +9,6 @@ import { teamsAndUserProfilesQuery } from "./procedures/teamsAndUserProfilesQuer
 import { ZRemoveNotificationsSubscriptionInputSchema } from "./removeNotificationsSubscription.schema";
 import { ZRoutingFormOrderInputSchema } from "./routingFormOrder.schema";
 
-type AppsRouterHandlerCache = {
-  stripeCustomer?: typeof import("./stripeCustomer.handler").stripeCustomerHandler;
-  eventTypeOrder?: typeof import("./eventTypeOrder.handler").eventTypeOrderHandler;
-  routingFormOrder?: typeof import("./routingFormOrder.handler").routingFormOrderHandler;
-  teamsAndUserProfilesQuery?: typeof import("./teamsAndUserProfilesQuery.handler").teamsAndUserProfilesQuery;
-  connectAndJoin?: typeof import("./connectAndJoin.handler").Handler;
-  addSecondaryEmail?: typeof import("./addSecondaryEmail.handler").addSecondaryEmailHandler;
-  addNotificationsSubscription?: typeof import("./addNotificationsSubscription.handler").addNotificationsSubscriptionHandler;
-  removeNotificationsSubscription?: typeof import("./removeNotificationsSubscription.handler").removeNotificationsSubscriptionHandler;
-  markNoShow?: typeof import("./markNoShow.handler").markNoShow;
-};
-
 export const loggedInViewerRouter = router({
   stripeCustomer: authedProcedure.query(async ({ ctx }) => {
     const { stripeCustomerHandler } = await import("./stripeCustomer.handler");

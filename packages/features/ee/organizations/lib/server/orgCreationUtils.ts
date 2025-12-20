@@ -318,7 +318,7 @@ export const setupDomain = async ({
   log.debug("Starting domain setup", safeStringify({ slug, isPlatform }));
   const areDomainsConfigured = isPlatform ? true : await createDomain(slug);
 
-  // On Cal.com, we expect the domains to be configured.
+  // On Calndrbrnd.com, we expect the domains to be configured.
   if (IS_CALCOM && !areDomainsConfigured) {
     log.error("Failed to create domain in Vercel/Cloudflare", safeStringify({ slug }));
     throw new OrgCreationError("could_not_create_domain");

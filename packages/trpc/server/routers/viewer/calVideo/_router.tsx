@@ -4,12 +4,6 @@ import { ZGetCalVideoRecordingsInputSchema } from "./getCalVideoRecordings.schem
 import { ZGetDownloadLinkOfCalVideoRecordingsInputSchema } from "./getDownloadLinkOfCalVideoRecordings.schema";
 import { ZGetMeetingInformationInputSchema } from "./getMeetingInformation.schema";
 
-type CalVideoRouterHandlerCache = {
-  getCalVideoRecordings?: typeof import("./getCalVideoRecordings.handler").getCalVideoRecordingsHandler;
-  getDownloadLinkOfCalVideoRecordings?: typeof import("./getDownloadLinkOfCalVideoRecordings.handler").getDownloadLinkOfCalVideoRecordingsHandler;
-  getMeetingInformation?: typeof import("./getMeetingInformation.handler").getMeetingInformationHandler;
-};
-
 export const calVideoRouter = router({
   getCalVideoRecordings: authedProcedure
     .input(ZGetCalVideoRecordingsInputSchema)

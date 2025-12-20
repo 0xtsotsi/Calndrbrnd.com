@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "private": true,
-  "name": "@calcom/granola",
+  "name": "@calndrbrnd/granola",
   "version": "0.0.0",
   "main": "./index.ts",
   "dependencies": {
-    "@calcom/lib": "workspace:*"
+    "@calndrbrnd/lib": "workspace:*"
   },
   "devDependencies": {
-    "@calcom/types": "workspace:*"
+    "@calndrbrnd/types": "workspace:*"
   },
   "description": "The AI notepad for people in back-to-back meetings for MacOS"
 }

@@ -27,11 +27,15 @@ export function addRecentImpersonation(usernameRaw: string): void {
     const updated = [{ username, timestamp: Date.now() }, ...filtered].slice(0, MAX_RECENT);
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
-  } catch {}
+  } catch {
+    // Silently ignore errors
+  }
 }
 
 export function clearRecentImpersonations(): void {
   try {
     localStorage.removeItem(STORAGE_KEY);
-  } catch {}
+  } catch {
+    // Silently ignore errors
+  }
 }

@@ -4,7 +4,7 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 
 import { LicenseKeySingleton } from "@calcom/ee/common/server/LicenseKeyService";
 import { OrganizationPaymentService } from "@calcom/features/ee/organizations/lib/OrganizationPaymentService";
-import { BillingPeriod, UserPermissionRole, CreationSource } from "@calcom/prisma/enums";
+import { BillingPeriod, UserPermissionRole } from "@calcom/prisma/enums";
 
 import { TRPCError } from "@trpc/server";
 
@@ -82,6 +82,7 @@ describe("intentToCreateOrgHandler", () => {
           subscription: {},
           sessionId: "session-123",
         }),
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } as any;
     });
   });
@@ -182,6 +183,7 @@ describe("intentToCreateOrgHandler", () => {
         intentToCreateOrgHandler({
           input: mockInput,
           ctx: {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             user: null as any,
           },
         })
@@ -459,6 +461,7 @@ describe("intentToCreateOrgHandler", () => {
       expect(organizationOnboarding?.invitedMembers).toBeDefined();
       expect(organizationOnboarding?.invitedMembers).toHaveLength(2);
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const invitedMembers = organizationOnboarding?.invitedMembers as any[];
       expect(invitedMembers[0]).toMatchObject({
         email: "new@new.com",

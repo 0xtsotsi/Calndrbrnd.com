@@ -200,11 +200,8 @@ describe.skip("editLocation.handler", () => {
           uid: scenarioData.bookings[0].uid,
         },
         include: {
-          // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
           user: true,
-          // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
           attendees: true,
-          // eslint-disable-next-line @calcom/eslint/no-prisma-include-true
           references: true,
         },
       });

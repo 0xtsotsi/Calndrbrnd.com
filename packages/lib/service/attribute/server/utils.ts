@@ -4,7 +4,7 @@ export const getWhereClauseForAttributeOptionsManagedByCalcom = () => {
   // Neither created nor updated by DSync
   return {
     createdByDSyncId: null,
-    // An option created by Cal.com can be updated by DSync, in that case the ownership is transferred to DSync
+    // An option created by Calndrbrnd.com can be updated by DSync, in that case the ownership is transferred to DSync
     updatedByDSyncId: null,
   };
 };

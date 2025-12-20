@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 export function useCopy() {
   const [isCopied, setIsCopied] = useState(false);
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   const noop = () => {};
 
   const copyToClipboard = (
@@ -41,7 +40,7 @@ export function useCopy() {
     options: { onSuccess?: () => void; onFailure?: () => void } = {}
   ) => {
     const { onSuccess = noop, onFailure = noop } = options;
-    if (typeof ClipboardItem && navigator.clipboard?.write) {
+    if (typeof ClipboardItem !== "undefined" && navigator.clipboard?.write) {
       // NOTE: Safari locks down the clipboard API to only work when triggered
       //   by a direct user interaction. You can't use it async in a promise.
       //   But! You can wrap the promise in a ClipboardItem, and give that to

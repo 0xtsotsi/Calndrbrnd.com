@@ -10,18 +10,6 @@ import { ZGetByEventSlugInputSchema } from "./getScheduleByEventTypeSlug.schema"
 import { ZGetByUserIdInputSchema } from "./getScheduleByUserId.schema";
 import { ZUpdateInputSchema } from "./update.schema";
 
-type ScheduleRouterHandlerCache = {
-  get?: typeof import("./get.handler").getHandler;
-  create?: typeof import("./create.handler").createHandler;
-  delete?: typeof import("./delete.handler").deleteHandler;
-  update?: typeof import("./update.handler").updateHandler;
-  duplicate?: typeof import("./duplicate.handler").duplicateHandler;
-  getScheduleByUserId?: typeof import("./getScheduleByUserId.handler").getScheduleByUserIdHandler;
-  getAllSchedulesByUserId?: typeof import("./getAllSchedulesByUserId.handler").getAllSchedulesByUserIdHandler;
-  getScheduleByEventSlug?: typeof import("./getScheduleByEventTypeSlug.handler").getScheduleByEventSlugHandler;
-  bulkUpdateToDefaultAvailability?: typeof import("./bulkUpdateDefaultAvailability.handler").bulkUpdateToDefaultAvailabilityHandler;
-};
-
 export const scheduleRouter = router({
   get: authedProcedure.input(ZGetInputSchema).query(async ({ input, ctx }) => {
     const { getHandler } = await import("./get.handler");

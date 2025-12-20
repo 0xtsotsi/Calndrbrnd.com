@@ -17,8 +17,6 @@ export const getMembersHandler = async ({ input, ctx }: CreateOptions) => {
 
   if (!ctx.user.organizationId) return [];
 
-  const isOrgPrivate = ctx.user.organization.isPrivate;
-
   const permissionCheckService = new PermissionCheckService();
 
   const hasPermissionToViewMembers = await permissionCheckService.checkPermission({

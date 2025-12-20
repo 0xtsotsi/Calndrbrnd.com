@@ -8,7 +8,6 @@ import { BookingStatus } from "@calcom/prisma/enums";
 import type { TrpcSessionUser } from "../../../types";
 import { confirmHandler } from "./confirm.handler";
 
-//eslint-disable-next-line playwright/no-skipped-test
 describe.skip("confirmHandler", () => {
   beforeEach(() => {
     // Reset all mocks before each test
@@ -34,7 +33,7 @@ describe.skip("confirmHandler", () => {
     });
 
     const uidOfBooking = "n5Wv3eHgconAED2j4gcVhP";
-    const iCalUID = `${uidOfBooking}@Cal.com`;
+    const iCalUID = `${uidOfBooking}@Calndrbrnd.com`;
 
     const { dateString: plus1DateString } = getDate({ dateIncrement: 1 });
 
@@ -131,7 +130,7 @@ describe.skip("confirmHandler", () => {
     });
 
     const uidOfBooking = "n5Wv3eHgconAED2j4gcVhP";
-    const iCalUID = `${uidOfBooking}@Cal.com`;
+    const iCalUID = `${uidOfBooking}@Calndrbrnd.com`;
 
     const { dateString: plus1DateString } = getDate({ dateIncrement: 1 });
 

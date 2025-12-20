@@ -15,7 +15,7 @@ function fromEntriesWithDuplicateKeys(entries: IterableIterator<[string, string]
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   for (const [key, value] of entries) {
-    if (result.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(result, key)) {
       let currentValue = result[key];
       if (!Array.isArray(currentValue)) {
         currentValue = [currentValue];

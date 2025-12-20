@@ -240,24 +240,26 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonPr
   } = props;
   // Buttons are **always** disabled if we're in a `loading` state
   const disabled = props.disabled || loading;
-  // If pass an `href`-attr is passed it's `<a>`, otherwise it's a `<button />`
+  // If pass an `href`-attr is passed it's a Link, otherwise it's a `<button />`
   const isLink = typeof props.href !== "undefined";
-  const elementType = isLink ? "a" : "button";
+  const elementType = "button";
+
+  const buttonProps = {
+    ...passThroughProps,
+    disabled,
+    type: !isLink ? type : undefined,
+    className: classNames(buttonClasses({ color, size, loading, variant }), props.className),
+    // if we click a disabled button, we prevent going through the click handler
+    onClick: disabled
+      ? (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+          e.preventDefault();
+        }
+      : props.onClick,
+  };
+
   const element = React.createElement(
     elementType,
-    {
-      ...passThroughProps,
-      disabled,
-      type: !isLink ? type : undefined,
-      ref: forwardedRef,
-      className: classNames(buttonClasses({ color, size, loading, variant }), props.className),
-      // if we click a disabled button, we prevent going through the click handler
-      onClick: disabled
-        ? (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-            e.preventDefault();
-          }
-        : props.onClick,
-    },
+    isLink ? { ...buttonProps, type: undefined } : { ...buttonProps, ref: forwardedRef },
     <>
       {CustomStartIcon ||
         (StartIcon && (
@@ -335,9 +337,21 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonPr
   );
 
   return props.href ? (
-    <Link data-testid="link-component" passHref href={props.href} shallow={shallow && shallow} legacyBehavior>
-      {element}
-    </Link>
+    <Wrapper
+      data-testid="wrapper"
+      tooltip={props.tooltip}
+      tooltipSide={tooltipSide}
+      tooltipOffset={tooltipOffset}
+      tooltipClassName={tooltipClassName}>
+      <Link
+        data-testid="link-component"
+        href={props.href}
+        shallow={shallow && shallow}
+        ref={forwardedRef as React.ForwardedRef<HTMLAnchorElement>}
+        className={classNames(buttonClasses({ color, size, loading, variant }), props.className)}>
+        {element.props.children}
+      </Link>
+    </Wrapper>
   ) : (
     <Wrapper
       data-testid="wrapper"

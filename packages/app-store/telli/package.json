@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "private": true,
-  "name": "@calcom/telli",
+  "name": "@calndrbrnd/telli",
   "version": "0.0.0",
   "main": "./index.ts",
   "dependencies": {
-    "@calcom/lib": "workspace:*"
+    "@calndrbrnd/lib": "workspace:*"
   },
   "devDependencies": {
-    "@calcom/types": "workspace:*"
+    "@calndrbrnd/types": "workspace:*"
   },
   "description": "telli AI agents reach your customers, make calls independently & enhance your customer experience - fully integrated into Cal.com."
 }

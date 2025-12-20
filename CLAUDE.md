@@ -1,4 +1,4 @@
-# Cal.com
+# Calndrbrnd
 
 Open-source scheduling infrastructure and Calendly alternative with full control over data, workflows, and appearance.
 

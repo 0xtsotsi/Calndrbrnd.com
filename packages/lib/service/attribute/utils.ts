@@ -10,7 +10,7 @@ import type { AttributeOptionAssignment, BulkAttributeAssigner } from "./types";
  * What is a pool?
  * There can be two pools:
  * 1. SCIM Pool - All assignments in this pool are created/updated by SCIM.
- * 2. Cal.com User Pool - All assignments in this pool are created/updated by Cal.com Users.
+ * 2. Calndrbrnd.com User Pool - All assignments in this pool are created/updated by Calndrbrnd.com Users.
  */
 export const isAssignmentForTheSamePool = ({
   assignment,
@@ -23,14 +23,14 @@ export const isAssignmentForTheSamePool = ({
   updater: BulkAttributeAssigner;
 }) => {
   if ("dsyncId" in updater) {
-    // Cal.com user updated an assignment created by SCIM. It no longer belongs to the SCIM pool.
+    // Calndrbrnd.com user updated an assignment created by SCIM. It no longer belongs to the SCIM pool.
     if (assignment.updatedById) {
       return false;
     }
     // Either SCIM created the assignment or updated it
     return !!assignment.updatedByDSyncId || !!assignment.createdByDSyncId;
   }
-  // SCIM neither created nor updated the assignment, it has to belong to the only left pool(i.e. Cal.com User Pool)
+  // SCIM neither created nor updated the assignment, it has to belong to the only left pool(i.e. Calndrbrnd.com User Pool)
   return !assignment.createdByDSyncId && !assignment.updatedByDSyncId;
 };
 

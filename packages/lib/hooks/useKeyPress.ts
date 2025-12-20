@@ -13,7 +13,9 @@ export function useKeyPress(
   function downHandler({ key }: { key: string }) {
     if (key === targetKey) {
       setKeyPressed(true);
-      handler && handler();
+      if (handler) {
+        handler();
+      }
     }
   }
   // If released key is our target key then set to false

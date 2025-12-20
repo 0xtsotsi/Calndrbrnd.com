@@ -13,23 +13,6 @@ import { ZToggleInputSchema } from "./toggle.schema";
 import { ZUpdateAppCredentialsInputSchema } from "./updateAppCredentials.schema";
 import { ZUpdateUserDefaultConferencingAppInputSchema } from "./updateUserDefaultConferencingApp.schema";
 
-type AppsRouterHandlerCache = {
-  appById?: typeof import("./appById.handler").appByIdHandler;
-  appCredentialsByType?: typeof import("./appCredentialsByType.handler").appCredentialsByTypeHandler;
-  getUsersDefaultConferencingApp?: typeof import("./getUsersDefaultConferencingApp.handler").getUsersDefaultConferencingAppHandler;
-  integrations?: typeof import("./integrations.handler").integrationsHandler;
-  listLocal?: typeof import("./listLocal.handler").listLocalHandler;
-  locationOptions?: typeof import("./locationOptions.handler").locationOptionsHandler;
-  toggle?: typeof import("./toggle.handler").toggleHandler;
-  saveKeys?: typeof import("./saveKeys.handler").saveKeysHandler;
-  checkForGCal?: typeof import("./checkForGCal.handler").checkForGCalHandler;
-  updateAppCredentials?: typeof import("./updateAppCredentials.handler").updateAppCredentialsHandler;
-  queryForDependencies?: typeof import("./queryForDependencies.handler").queryForDependenciesHandler;
-  checkGlobalKeys?: typeof import("./checkGlobalKeys.handler").checkForGlobalKeysHandler;
-  setDefaultConferencingApp?: typeof import("./setDefaultConferencingApp.handler").setDefaultConferencingAppHandler;
-  updateUserDefaultConferencingApp?: typeof import("./updateUserDefaultConferencingApp.handler").updateUserDefaultConferencingAppHandler;
-};
-
 export const appsRouter = router({
   appById: authedProcedure.input(ZAppByIdInputSchema).query(async ({ ctx, input }) => {
     const { appByIdHandler } = await import("./appById.handler");

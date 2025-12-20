@@ -1,6 +1,6 @@
 import type { TFunction } from "i18next";
 import type { ReactNode, ReactElement, FC } from "react";
-import React, { isValidElement, Fragment, createElement, cloneElement } from "react";
+import React, { isValidElement, createElement, cloneElement } from "react";
 
 type ServerTransProps = {
   i18nKey: string; // Translation key
@@ -62,7 +62,7 @@ const ServerTrans: FC<ServerTransProps> = ({
 };
 
 // Utility function to check if object
-const isObject = (obj: any): obj is Record<string, unknown> =>
+const isObject = (obj: unknown): obj is Record<string, unknown> =>
   obj !== null && typeof obj === "object" && !Array.isArray(obj);
 
 // Parse array-based components like <0>content</0>
@@ -200,7 +200,7 @@ const parseObjectComponents = (content: string, components: Record<string, React
   // First handle {{tag}} interpolation
   Object.keys(components).forEach((tag) => {
     const interpolationRegex = new RegExp(`{{\\s*${tag}\\s*}}`, "g");
-    processedContent = processedContent.replace(interpolationRegex, (match) => {
+    processedContent = processedContent.replace(interpolationRegex, (_match) => {
       const placeholder = `__INTERP_${tag}_${Math.random().toString(36).substring(2)}__`;
 
       if (isValidElement(components[tag])) {
@@ -218,7 +218,7 @@ const parseObjectComponents = (content: string, components: Record<string, React
   Object.keys(components).forEach((tag) => {
     const tagRegex = new RegExp(`<${tag}>(.*?)<\\/${tag}>`, "gs");
 
-    processedContent = processedContent.replace(tagRegex, (match, content) => {
+    processedContent = processedContent.replace(tagRegex, (_match: string, content: string) => {
       const placeholder = `__TAG_${tag}_${Math.random().toString(36).substring(2)}__`;
 
       if (isValidElement(components[tag])) {
@@ -309,7 +309,7 @@ const parseHtmlTags = (content: string): ReactNode[] => {
       // Handle self-closing tags like <br/>
       const selfClosingRegex = new RegExp(`<${tag}\\s*\\/>`, "g");
 
-      processedContent = processedContent.replace(selfClosingRegex, (match) => {
+      processedContent = processedContent.replace(selfClosingRegex, (_match) => {
         const placeholder = `__HTML_${tag}_${Math.random().toString(36).substring(2)}__`;
         placeholders[placeholder] = createElement(component, { key: placeholder });
         return placeholder;

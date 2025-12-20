@@ -211,9 +211,9 @@ export const useBookingSuccessRedirect = () => {
 
       const bookingExtraParams = getBookingRedirectExtraParams(booking);
 
-      // Filter internal Cal.com params when redirecting to external URLs.
+      // Filter internal Calndrbrnd.com params when redirecting to external URLs.
       // - It prevents leaking internal state.
-      // - Certain websites might break due to the presence of certain params e.g. Wordpress has different meaning for `embed` param and an embed param passed by Cal.com breaks a wordpress webpage
+      // - Certain websites might break due to the presence of certain params e.g. Wordpress has different meaning for `embed` param and an embed param passed by Calndrbrnd.com breaks a wordpress webpage
       const newSearchParams = getNewSearchParams({
         query: {
           ...query,

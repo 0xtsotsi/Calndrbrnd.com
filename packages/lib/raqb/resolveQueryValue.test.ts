@@ -25,7 +25,7 @@ const createAttributesQueryValue = (overrides?: {
   id?: string;
   type?: "group" | "switch_group";
   children1?: Record<string, RaqbChild>;
-  properties?: any;
+  properties?: Record<string, unknown>;
 }): AttributesQueryValue => ({
   id: overrides?.id || "test-id",
   type: overrides?.type || "group",
@@ -45,7 +45,7 @@ const createQueryValueWithRule = ({
   ruleId: string;
   field: string;
   operator: string;
-  value: any[];
+  value: unknown[];
   valueSrc?: string[];
   valueError?: (string | null)[];
   valueType?: string[];
@@ -76,7 +76,7 @@ const createComplexQueryValue = ({
     ruleId: string;
     field: string;
     operator: string;
-    value: any[];
+    value: unknown[];
     valueSrc?: string[];
     valueError?: (string | null)[];
     valueType?: string[];
@@ -113,7 +113,7 @@ const createNestedGroupQueryValue = ({
       ruleId: string;
       field: string;
       operator?: string;
-      value: any[];
+      value: unknown[];
       valueSrc?: string[];
       valueError?: (string | null)[];
       valueType?: string[];
@@ -1085,7 +1085,7 @@ describe("resolveQueryValue", () => {
         fields: mockFields,
         response: {
           location: { value: ["Delhi"], label: "Delhi" },
-          city: { value: null as any, label: "" }, // null value
+          city: { value: null as unknown, label: "" }, // null value
         },
       },
       attributes: mockAttributes,
@@ -1412,7 +1412,7 @@ describe("resolveQueryValue", () => {
       dynamicFieldValueOperands: {
         fields: mockFields,
         response: {
-          location: {} as any, // Empty object, no value property
+          location: {} as unknown, // Empty object, no value property
         },
       },
       attributes: mockAttributes,
@@ -1610,7 +1610,7 @@ describe("resolveQueryValue", () => {
     });
 
     // Verify all nested properties are preserved with templates resolved
-    const props = result.children1?.rule1.properties as any;
+    const props = result.children1?.rule1.properties as Record<string, unknown>;
     expect(props.metadata.level1.level2.level3.static).toBe("preserved");
     expect(props.metadata.level1.value).toBe("mumbai");
     expect(props.metadata.level1.level2.items).toEqual(["delhi", "chennai"]);
@@ -1619,7 +1619,7 @@ describe("resolveQueryValue", () => {
   });
 
   it("should handle extremely deep object nesting without stack overflow", () => {
-    let deepObj: any = { value: "{field:city}" };
+    let deepObj: Record<string, unknown> = { value: "{field:city}" };
     for (let i = 0; i < 100; i++) {
       deepObj = { nested: deepObj, level: i };
     }
@@ -1645,10 +1645,10 @@ describe("resolveQueryValue", () => {
     });
 
     // Navigate to deepest level to verify it was processed
-    let current = result.children1?.rule1.properties as any;
+    let current = result.children1?.rule1.properties as Record<string, unknown>;
     for (let i = 99; i >= 0; i--) {
       expect(current.level).toBe(i);
-      current = current.nested;
+      current = (current.nested as Record<string, unknown>) || {};
     }
     expect(current.value).toBe("mumbai");
   });
@@ -1689,7 +1689,7 @@ describe("resolveQueryValue", () => {
       attributes: mockAttributes,
     });
 
-    const props = result.children1?.rule1.properties as any;
+    const props = result.children1?.rule1.properties as Record<string, unknown>;
     expect(props.stringField).toBe("mumbai");
     expect(props.numberField).toBe(42);
     expect(props.bigintField).toBe(9007199254740991);
@@ -1731,7 +1731,7 @@ describe("resolveQueryValue", () => {
       attributes: mockAttributes,
     });
 
-    const props = result.children1?.rule1.properties as any;
+    const props = result.children1?.rule1.properties as Record<string, unknown>;
     expect(props.value[0]).toEqual({ id: 1, city: "mumbai" });
     expect(props.value[1]).toEqual({
       id: 2,

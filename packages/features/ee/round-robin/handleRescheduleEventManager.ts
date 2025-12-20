@@ -78,7 +78,7 @@ export const handleRescheduleEventManager = async ({
   const results = updateManager.results ?? [];
 
   const calVideoResult = results.find((result) => result.type === "daily_video");
-  // Check if Cal Video Creation Failed - That is the fallback for Cal.com and is expected to always work
+  // Check if Cal Video Creation Failed - That is the fallback for Calndrbrnd.com and is expected to always work
   if (calVideoResult && !calVideoResult.success) {
     handleRescheduleEventManager.error("Cal Video creation failed", {
       error: calVideoResult.error,

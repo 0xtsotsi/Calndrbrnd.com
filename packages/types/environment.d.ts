@@ -60,9 +60,9 @@ declare namespace NodeJS {
      * This is used so we can enable Mailhog in E2E tests.
      */
     readonly E2E_TEST_MAILHOG_ENABLED: "1" | undefined;
-    readonly NEXT_PUBLIC_APP_NAME: string | "Cal";
-    readonly NEXT_PUBLIC_SUPPORT_MAIL_ADDRESS: string | "help@cal.com";
-    readonly NEXT_PUBLIC_COMPANY_NAME: string | "Cal.com, Inc.";
+    readonly NEXT_PUBLIC_APP_NAME: string | "Calndrbrnd";
+    readonly NEXT_PUBLIC_SUPPORT_MAIL_ADDRESS: string | "help@calndrbrnd.com";
+    readonly NEXT_PUBLIC_COMPANY_NAME: string | "Calndrbrnd, Inc.";
     readonly NEXT_PUBLIC_WEBSITE_PRIVACY_POLICY_URL: string | undefined;
     readonly NEXT_PUBLIC_WEBSITE_TERMS_URL: string | undefined;
     /**

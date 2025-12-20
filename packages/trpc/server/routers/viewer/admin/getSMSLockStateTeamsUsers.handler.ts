@@ -9,7 +9,7 @@ type GetOptions = {
   };
 };
 
-const getSMSLockStateTeamsUsers = async ({ ctx }: GetOptions) => {
+const getSMSLockStateTeamsUsers = async (_options: GetOptions) => {
   const userSelect = {
     id: true,
     smsLockState: true,

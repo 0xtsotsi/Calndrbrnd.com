@@ -19,7 +19,7 @@ const checkDelegationCredentialFeature = async ({
   next,
 }: {
   ctx: { user: { id: number; locale?: string; organizationId: number | null } };
-  next: () => Promise<any>;
+  next: () => Promise<{ hasDelegationCredential: boolean }>;
 }) => {
   const user = ctx.user;
   const t = await getTranslation(user.locale ?? "en", "common");

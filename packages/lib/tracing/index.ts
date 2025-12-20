@@ -80,11 +80,13 @@ export class DistributedTracing {
       if (parsed._traceContext && parsed._traceContext.traceId) {
         return parsed._traceContext;
       }
-    } catch {}
+    } catch {
+      // Silently ignore parse errors
+    }
     return null;
   }
 
-  injectTraceIntoPayload(payload: any, traceContext?: TraceContext): any {
+  injectTraceIntoPayload(payload: Record<string, unknown>, traceContext?: TraceContext): Record<string, unknown> {
     if (!traceContext) return payload;
 
     return {

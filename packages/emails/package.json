@@ -1,5 +1,5 @@
 {
-  "name": "@calcom/emails",
+  "name": "@calndrbrnd/emails",
   "sideEffects": false,
   "version": "0.0.0",
   "private": true,
@@ -7,14 +7,14 @@
     "dx": "docker compose up -d || docker-compose up -d"
   },
   "dependencies": {
-    "@calcom/dayjs": "workspace:*",
-    "@calcom/lib": "workspace:*",
+    "@calndrbrnd/dayjs": "workspace:*",
+    "@calndrbrnd/lib": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rrule": "^2.7.1"
   },
   "devDependencies": {
-    "@calcom/tsconfig": "workspace:*",
-    "@calcom/types": "workspace:*"
+    "@calndrbrnd/tsconfig": "workspace:*",
+    "@calndrbrnd/types": "workspace:*"
   }
 }

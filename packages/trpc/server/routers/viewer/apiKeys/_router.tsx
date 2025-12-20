@@ -5,14 +5,6 @@ import { ZDeleteInputSchema } from "./delete.schema";
 import { ZEditInputSchema } from "./edit.schema";
 import { ZFindKeyOfTypeInputSchema } from "./findKeyOfType.schema";
 
-type ApiKeysRouterHandlerCache = {
-  list?: typeof import("./list.handler").listHandler;
-  findKeyOfType?: typeof import("./findKeyOfType.handler").findKeyOfTypeHandler;
-  create?: typeof import("./create.handler").createHandler;
-  edit?: typeof import("./edit.handler").editHandler;
-  delete?: typeof import("./delete.handler").deleteHandler;
-};
-
 export const apiKeysRouter = router({
   // List keys
   list: authedProcedure.query(async ({ ctx }) => {

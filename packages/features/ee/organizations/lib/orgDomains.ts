@@ -26,7 +26,7 @@ export function getOrgSlug(hostname: string, forcedSlug?: string) {
     });
   }
 
-  // If SINGLE_ORG_SLUG is set we know that the Cal.com instance is configured to run just one organization, so we can return the slug directly.
+  // If SINGLE_ORG_SLUG is set we know that the Calndrbrnd.com instance is configured to run just one organization, so we can return the slug directly.
   if (SINGLE_ORG_SLUG) {
     log.debug("In Single Org Mode, using SINGLE_ORG_SLUG as the Org slug", { SINGLE_ORG_SLUG });
     return SINGLE_ORG_SLUG;

@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "private": true,
-  "name": "@calcom/fonio-ai",
+  "name": "@calndrbrnd/fonio-ai",
   "version": "0.0.0",
   "main": "./index.ts",
   "dependencies": {
-    "@calcom/lib": "*"
+    "@calndrbrnd/lib": "*"
   },
   "devDependencies": {
-    "@calcom/types": "*"
+    "@calndrbrnd/types": "*"
   },
   "description": "Der KI-Telefonassistent auf Deutsch\r"
 }

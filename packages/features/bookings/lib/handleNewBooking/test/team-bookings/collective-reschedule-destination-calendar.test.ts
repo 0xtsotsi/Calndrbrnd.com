@@ -72,7 +72,7 @@ describe("handleNewBooking", () => {
         const { dateString: plus1DateString } = getDate({ dateIncrement: 1 });
         const { dateString: plus2DateString } = getDate({ dateIncrement: 2 });
         const uidOfBookingToBeRescheduled = "n5Wv3eHgconAED2j4gcVhP";
-        const iCalUID = `${uidOfBookingToBeRescheduled}@Cal.com`;
+        const iCalUID = `${uidOfBookingToBeRescheduled}@Calndrbrnd.com`;
 
         await createBookingScenario(
           getScenarioData({

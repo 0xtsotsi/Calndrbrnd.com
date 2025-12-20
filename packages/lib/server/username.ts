@@ -34,7 +34,7 @@ type UsernameStatus = {
 export type CustomNextApiHandler = (
   body: Record<string, string>,
   usernameStatus: UsernameStatus
-) => Promise<NextResponse<any>>;
+) => Promise<NextResponse<Record<string, unknown>>>;
 
 export async function isBlacklisted(username: string) {
   // NodeJS forEach is very, very fast (these days) so even though we only have to construct the Set

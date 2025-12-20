@@ -173,7 +173,9 @@ const OnboardingPage = ({
   });
 
   useEffect(() => {
-    eventTypeGroups && formMethods.setValue("eventTypeGroups", eventTypeGroups);
+    if (eventTypeGroups) {
+      formMethods.setValue("eventTypeGroups", eventTypeGroups);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [eventTypeGroups]);
 

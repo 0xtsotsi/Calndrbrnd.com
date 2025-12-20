@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "private": true,
-  "name": "@calcom/amie",
+  "name": "@calndrbrnd/amie",
   "version": "0.0.0",
   "main": "./index.ts",
   "description": "The joyful productivity app\r\r",
   "dependencies": {
-    "@calcom/lib": "workspace:*"
+    "@calndrbrnd/lib": "workspace:*"
   },
   "devDependencies": {
-    "@calcom/types": "workspace:*"
+    "@calndrbrnd/types": "workspace:*"
   }
 }

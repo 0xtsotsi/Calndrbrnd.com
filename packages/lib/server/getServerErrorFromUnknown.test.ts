@@ -176,7 +176,10 @@ describe("ZodError handling", () => {
 
 describe("Prisma error handling", () => {
   test("should handle Prisma P2025 error (record not found)", () => {
-    const prismaError = new Error("Record to delete does not exist.") as any;
+    const prismaError = new Error("Record to delete does not exist.") as Error & {
+      code: string;
+      clientVersion: string;
+    };
     prismaError.code = "P2025";
     prismaError.clientVersion = "5.0.0";
     Object.setPrototypeOf(prismaError, Prisma.PrismaClientKnownRequestError.prototype);
@@ -189,7 +192,10 @@ describe("Prisma error handling", () => {
   });
 
   test("should handle other Prisma errors as 400", () => {
-    const prismaError = new Error("Foreign key constraint failed") as any;
+    const prismaError = new Error("Foreign key constraint failed") as Error & {
+      code: string;
+      clientVersion: string;
+    };
     prismaError.code = "P2003";
     prismaError.clientVersion = "5.0.0";
     Object.setPrototypeOf(prismaError, Prisma.PrismaClientKnownRequestError.prototype);

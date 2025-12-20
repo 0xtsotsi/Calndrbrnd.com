@@ -1,9 +1,9 @@
 {
-  "name": "@calcom/features",
+  "name": "@calndrbrnd/features",
   "sideEffects": false,
   "private": true,
   "description": "Cal.com's main collocation of features",
-  "authors": "Cal.com, Inc.",
+  "authors": "Calndrbrnd, Inc.",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
@@ -12,11 +12,11 @@
     "deploy:trigger": "npx trigger.dev@latest deploy"
   },
   "dependencies": {
-    "@calcom/atoms": "workspace:*",
-    "@calcom/dayjs": "workspace:*",
-    "@calcom/lib": "workspace:*",
-    "@calcom/trpc": "workspace:*",
-    "@calcom/ui": "workspace:*",
+    "@calndrbrnd/atoms": "workspace:*",
+    "@calndrbrnd/dayjs": "workspace:*",
+    "@calndrbrnd/lib": "workspace:*",
+    "@calndrbrnd/trpc": "workspace:*",
+    "@calndrbrnd/ui": "workspace:*",
     "@lexical/react": "^0.9.0",
     "@tanstack/react-table": "^8.20.6",
     "@tanstack/react-virtual": "^3.10.9",

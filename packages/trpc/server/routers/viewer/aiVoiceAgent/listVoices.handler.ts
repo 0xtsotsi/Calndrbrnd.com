@@ -8,7 +8,7 @@ type ListVoicesHandlerOptions = {
   };
 };
 
-export const listVoicesHandler = async ({ ctx }: ListVoicesHandlerOptions) => {
+export const listVoicesHandler = async (_options: ListVoicesHandlerOptions) => {
   const aiService = createDefaultAIPhoneServiceProvider();
 
   return await aiService.listVoices();

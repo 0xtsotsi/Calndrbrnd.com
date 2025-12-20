@@ -35,7 +35,10 @@ export const getMeetingInformationHandler = async ({ ctx: _ctx, input }: GetMeet
     }
     const res = await videoApiAdapter.getMeetingInformation(roomName);
     return res;
-  } catch (err) {
+  } catch (
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _err
+  ) {
     throw new TRPCError({
       code: "BAD_REQUEST",
     });

@@ -1,13 +1,13 @@
 {
-  "name": "@calcom/ee",
+  "name": "@calndrbrnd/ee",
   "description": "Cal.com Commercial License features",
   "version": "0.0.0",
   "private": true,
   "license": "See license in LICENSE",
   "main": "./index.ts",
   "dependencies": {
-    "@calcom/lib": "workspace:*",
-    "@calcom/ui": "workspace:*",
+    "@calndrbrnd/lib": "workspace:*",
+    "@calndrbrnd/ui": "workspace:*",
     "@hookform/error-message": "^2.0.0",
     "@hookform/resolvers": "^2.9.7",
     "@sendgrid/client": "^7.7.0",
@@ -17,6 +17,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@calcom/tsconfig": "workspace:*"
+    "@calndrbrnd/tsconfig": "workspace:*"
   }
 }

@@ -30,7 +30,10 @@ export const getDownloadLinkOfCalVideoRecordingsHandler = async ({
   try {
     const res = await getDownloadLinkOfCalVideoByRecordingId(recordingId);
     return res;
-  } catch (err) {
+  } catch (
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _err
+  ) {
     throw new TRPCError({
       code: "BAD_REQUEST",
     });

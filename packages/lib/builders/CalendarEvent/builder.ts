@@ -39,15 +39,10 @@ interface PersonAttendeeCommonFields {
 // Team members extend the common fields with language
 interface TeamMember extends PersonAttendeeCommonFields {
   language: {
-    translate: any;
+    translate: (key: string) => string;
     locale: string;
   };
 }
-
-// Add type for event type users that matches Prisma schema
-type EventTypeUser = Prisma.UserGetPayload<{
-  select: typeof userSelect;
-}>;
 
 interface ICalendarEventBuilder {
   calendarEvent: CalendarEventClass;
@@ -120,7 +115,7 @@ export class CalendarEventBuilder implements ICalendarEventBuilder {
         where: { id: userId },
         select: userSelect,
       });
-    } catch (error) {
+    } catch {
       throw new Error("getUsersById.users.notFound");
     }
   }
@@ -163,7 +158,7 @@ export class CalendarEventBuilder implements ICalendarEventBuilder {
           disableRescheduling: true,
         },
       });
-    } catch (error) {
+    } catch {
       throw new Error("Error while getting eventType");
     }
   }
@@ -254,7 +249,7 @@ export class CalendarEventBuilder implements ICalendarEventBuilder {
     try {
       const resultUser = await this.getUserById(userId);
       this.setUsers([resultUser]);
-    } catch (error) {
+    } catch {
       throw new Error("getUsersById.users.notFound");
     }
   }
@@ -269,9 +264,9 @@ export class CalendarEventBuilder implements ICalendarEventBuilder {
         calEvent: this.calendarEvent,
         allowRescheduleForCancelledBooking,
       });
-    } catch (error) {
-      if (error instanceof Error) {
-        throw new Error(`buildRescheduleLink.error: ${error.message}`);
+    } catch (err) {
+      if (err instanceof Error) {
+        throw new Error(`buildRescheduleLink.error: ${err.message}`);
       }
     }
   }

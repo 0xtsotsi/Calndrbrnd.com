@@ -147,7 +147,7 @@ describe("createTeams handler - Comprehensive Tests", () => {
 
   describe("Authorization", () => {
     it("should throw NotAuthorizedError when user is not the organization owner", async () => {
-      const { owner, organization } = await createScenario();
+      const { organization } = await createScenario();
 
       const otherUser = await createTestUser({
         email: "other@example.com",
@@ -256,7 +256,7 @@ describe("createTeams handler - Comprehensive Tests", () => {
     });
 
     it("should throw NoOrganizationError when organization does not exist but user passes authorization", async () => {
-      const { owner, organization } = await createScenario();
+      const { organization } = await createScenario();
 
       // Create a user that owns a different org, but try to create teams in a non-existent org
       const otherUser = await createTestUser({
@@ -1152,6 +1152,7 @@ describe("createTeams handler - Comprehensive Tests", () => {
       });
 
       const stripeModule = await import("@calcom/features/ee/payments/server/stripe");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const cancelSpy = vi.spyOn(stripeModule.default.subscriptions, "cancel").mockResolvedValue({} as any);
 
       await createTeamsHandler({

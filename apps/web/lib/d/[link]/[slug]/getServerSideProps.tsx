@@ -41,7 +41,7 @@ async function getUserPageProps(context: GetServerSidePropsContext) {
   const hashedLinkService = new HashedLinkService();
   try {
     await hashedLinkService.validate(link);
-  } catch (error) {
+  } catch (_error) {
     // Link is expired, invalid, or doesn't exist
     return notFound;
   }

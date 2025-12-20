@@ -117,15 +117,16 @@ export const AvailabilitySettingsWebWrapper = ({
       weekStart={me.data?.weekStart || "Sunday"}
       backPath={fromEventType ? true : "/availability"}
       handleDelete={() => {
-        scheduleId && deleteMutation.mutate({ scheduleId });
+        if (scheduleId) deleteMutation.mutate({ scheduleId });
       }}
       handleSubmit={async ({ dateOverrides, ...values }) => {
-        scheduleId &&
+        if (scheduleId) {
           updateMutation.mutate({
             scheduleId,
             dateOverrides: dateOverrides.flatMap((override) => override.ranges),
             ...values,
           });
+        }
       }}
       bulkUpdateModalProps={{
         isOpen: isBulkUpdateModalOpen,

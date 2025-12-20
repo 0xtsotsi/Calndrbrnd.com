@@ -1,11 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "private": true,
-  "name": "@calcom/alby",
+  "name": "@calndrbrnd/alby",
   "version": "0.0.0",
   "main": "./index.ts",
   "dependencies": {
-    "@calcom/lib": "workspace:*",
+    "@calndrbrnd/lib": "workspace:*",
     "@getalby/lightning-tools": "^5.1.2",
     "@getalby/sdk": "^4.0.0",
     "@webbtc/webln-types": "^3.0.0",
@@ -13,7 +13,7 @@
     "svix": "^0.85.1"
   },
   "devDependencies": {
-    "@calcom/types": "workspace:*"
+    "@calndrbrnd/types": "workspace:*"
   },
   "description": "Your Bitcoin & Nostr companion for the web. Use Alby to charge Satoshi for your Cal.com meetings.\r"
 }

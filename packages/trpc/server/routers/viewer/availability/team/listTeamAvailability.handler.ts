@@ -20,7 +20,7 @@ type GetOptions = {
 
 async function getTeamMembers({
   teamId,
-  organizationId,
+  organizationId: _organizationId,
   teamIds,
   cursor,
   limit,
@@ -211,7 +211,7 @@ export const listTeamAvailabilityHandler = async ({ ctx, input }: GetOptions) =>
       teamMembers = [];
       totalTeamMembers = 0;
     } else {
-      const { cursor, limit } = input;
+      const { limit } = input;
 
       totalTeamMembers = await prisma.membership.count({
         where: {

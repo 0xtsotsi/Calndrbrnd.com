@@ -74,10 +74,10 @@ export class BookingWebhookFactory {
   private createBasePayload(params: BaseWebhookPayload) {
     const {
       bookingId,
-      title,
-      eventSlug,
+      _title,
+      _eventSlug,
       description,
-      customInputs,
+      _customInputs,
       startTime,
       endTime,
       uid,
@@ -86,7 +86,7 @@ export class BookingWebhookFactory {
       attendees,
       responses,
       userFieldsResponses,
-      destinationCalendar,
+      _destinationCalendar,
       smsReminderNumber,
       iCalUID,
     } = params;

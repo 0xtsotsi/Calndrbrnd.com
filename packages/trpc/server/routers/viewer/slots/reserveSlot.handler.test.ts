@@ -31,6 +31,7 @@ const buildContext = () => {
     selectedSlots: {
       upsert: vi.fn().mockResolvedValue(null),
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as unknown as any;
 
   // Capture header values to assert on.

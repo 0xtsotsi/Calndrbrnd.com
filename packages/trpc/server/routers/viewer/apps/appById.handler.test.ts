@@ -2,8 +2,6 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 
 import { TRPCError } from "@trpc/server";
 
-import type { CredentialForCalendarService } from "@calcom/types/Credential";
-
 import { appByIdHandler } from "./appById.handler";
 import type { TAppByIdInputSchema } from "./appById.schema";
 
@@ -69,7 +67,7 @@ describe("appByIdHandler", () => {
       slug: "daily-video",
       categories: ["conferencing"],
       logo: "icon.svg",
-      publisher: "Cal.com",
+      publisher: "Calndrbrnd.com",
       url: "https://daily.co",
       email: "help@cal.com",
       isGlobal: true,

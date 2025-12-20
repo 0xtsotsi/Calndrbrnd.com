@@ -210,7 +210,7 @@ describe("addValueForMember", () => {
       });
 
       const { user, membership } = await createMockUserWithMembership({ orgId });
-      // In Cal.com user created pool
+      // In Calndrbrnd.com user created pool
       await createMockAssignment({
         orgId,
         membershipId: membership.id,
@@ -256,7 +256,7 @@ describe("addValueForMember", () => {
         dsyncDoingAssignment_id = dsync.id as unknown as string;
       });
 
-      it("should reset all the options(Multi-Select) in all the SCIM Pools and Cal.com User Pool", async () => {
+      it("should reset all the options(Multi-Select) in all the SCIM Pools and Calndrbrnd.com User Pool", async () => {
         await createMockAttribute({
           teamId: orgId,
           id: "1",
@@ -272,7 +272,7 @@ describe("addValueForMember", () => {
         });
 
         const { user, membership } = await createMockUserWithMembership({ orgId });
-        // In Cal.com user created pool
+        // In Calndrbrnd.com user created pool
         await createMockAssignment({
           orgId,
           membershipId: membership.id,
@@ -324,7 +324,7 @@ describe("addValueForMember", () => {
         });
 
         expect(attributeToUsers).toHaveLength(1);
-        // Cal.com User Pool - Intact
+        // Calndrbrnd.com User Pool - Intact
         expect(attributeToUsers[0].attributeOptionId).toEqual("103");
       });
 
@@ -344,7 +344,7 @@ describe("addValueForMember", () => {
         });
 
         const { user, membership } = await createMockUserWithMembership({ orgId });
-        // In Cal.com user created pool
+        // In Calndrbrnd.com user created pool
         await createMockAssignment({
           orgId,
           membershipId: membership.id,
@@ -416,7 +416,7 @@ describe("addValueForMember", () => {
 
         const { user, membership } = await createMockUserWithMembership({ orgId });
 
-        // In Cal.com user created pool
+        // In Calndrbrnd.com user created pool
         await createMockAssignment({
           orgId,
           membershipId: membership.id,
@@ -455,7 +455,7 @@ describe("addValueForMember", () => {
         expect(afterAssignments[0].updatedByDSyncId).toEqual(dsyncDoingAssignment_id);
       });
 
-      it("should be able to set a value for TEXT(non-enum) attribute that already has an option set by Cal.com user", async () => {
+      it("should be able to set a value for TEXT(non-enum) attribute that already has an option set by Calndrbrnd.com user", async () => {
         await createMockAttribute({
           teamId: orgId,
           id: "1",
@@ -525,7 +525,7 @@ describe("addValueForMember", () => {
         dsyncDoingAssignment_id = dsync.id as unknown as string;
       });
 
-      it("should reset the options(Multi-Select) in the SCIM Pool only and keep Cal.com User Pool options intact when assignValueToUserInOrgBulk is from SCIM", async () => {
+      it("should reset the options(Multi-Select) in the SCIM Pool only and keep Calndrbrnd.com User Pool options intact when assignValueToUserInOrgBulk is from SCIM", async () => {
         await createMockAttribute({
           teamId: orgId,
           id: "1",
@@ -541,7 +541,7 @@ describe("addValueForMember", () => {
         });
 
         const { user, membership } = await createMockUserWithMembership({ orgId });
-        // In Cal.com user created pool
+        // In Calndrbrnd.com user created pool
         await createMockAssignment({
           orgId,
           membershipId: membership.id,
@@ -577,13 +577,13 @@ describe("addValueForMember", () => {
         });
 
         expect(attributeToUsers).toHaveLength(2);
-        // Cal.com User Pool - Intact
+        // Calndrbrnd.com User Pool - Intact
         expect(attributeToUsers[0].attributeOptionId).toEqual("calcom-102");
         // SCIM Pool - Previous value removed
         expect(attributeToUsers[1].attributeOptionId).toEqual("103");
       });
 
-      it("should not be able to set a value for single-select attribute that already has an option set by Cal.com user", async () => {
+      it("should not be able to set a value for single-select attribute that already has an option set by Calndrbrnd.com user", async () => {
         await createMockAttribute({
           teamId: orgId,
           id: "1",
@@ -645,7 +645,7 @@ describe("addValueForMember", () => {
         expect(attributeToUsers[0].attributeOption.id).toEqual("102");
       });
 
-      it("should not be able to set a value for TEXT(non-enum) attribute that already has an option set by Cal.com user", async () => {
+      it("should not be able to set a value for TEXT(non-enum) attribute that already has an option set by Calndrbrnd.com user", async () => {
         await createMockAttribute({
           teamId: orgId,
           id: "1",
@@ -719,7 +719,7 @@ describe("addValueForMember", () => {
 
         const { user, membership } = await createMockUserWithMembership({ orgId });
 
-        // In Cal.com user created pool
+        // In Calndrbrnd.com user created pool
         await createMockAssignment({
           orgId,
           membershipId: membership.id,
@@ -761,9 +761,9 @@ describe("addValueForMember", () => {
       });
     });
 
-    describe("Update from Cal.com", () => {
+    describe("Update from Calndrbrnd.com", () => {
       const userDoingAssignment_id = 999;
-      it("should reset the options(Multi-Select) in the Cal.com User Pool only and keep SCIM Pool options intact when assignValueToUserInOrgBulk is from Cal.com User Pool", async () => {
+      it("should reset the options(Multi-Select) in the Calndrbrnd.com User Pool only and keep SCIM Pool options intact when assignValueToUserInOrgBulk is from Calndrbrnd.com User Pool", async () => {
         await createMockAttribute({
           teamId: orgId,
           id: "1",
@@ -780,7 +780,7 @@ describe("addValueForMember", () => {
 
         const { user, membership } = await createMockUserWithMembership({ orgId });
 
-        // In Cal.com user created pool
+        // In Calndrbrnd.com user created pool
         await createMockAssignment({
           orgId,
           membershipId: membership.id,
@@ -823,7 +823,7 @@ describe("addValueForMember", () => {
 
         expect(attributeToUsers).toHaveLength(2);
 
-        // Cal.com User Pool - Previous value removed and new value added
+        // Calndrbrnd.com User Pool - Previous value removed and new value added
         expect(attributeToUsers[1].attributeOptionId).toEqual("103");
       });
 

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-// eslint-disable-next-line no-restricted-imports
+ 
 import { noop } from "lodash";
 import { useSession } from "next-auth/react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -104,12 +104,12 @@ const PremiumTextfield = (props: ICustomUsernameProps) => {
 
   const updateUsername = trpc.viewer.me.updateProfile.useMutation({
     onSuccess: async () => {
-      onSuccessMutation && (await onSuccessMutation());
+      if (onSuccessMutation) await onSuccessMutation();
       await update({ username: inputUsernameValue });
       setOpenDialogSaveUsername(false);
     },
     onError: (error) => {
-      onErrorMutation && onErrorMutation(error);
+      if (onErrorMutation) onErrorMutation(error);
     },
   });
 

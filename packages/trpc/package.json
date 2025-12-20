@@ -1,5 +1,5 @@
 {
-  "name": "@calcom/trpc",
+  "name": "@calndrbrnd/trpc",
   "sideEffects": false,
   "private": true,
   "description": "Shared tRPC library for Cal.com",
@@ -22,7 +22,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@calcom/eslint-config": "workspace:*",
+    "@calndrbrnd/eslint-config": "workspace:*",
     "typescript": "^5.9.0-beta"
   }
 }

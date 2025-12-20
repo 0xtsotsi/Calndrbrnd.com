@@ -1,5 +1,5 @@
 {
-  "name": "@calcom/platform-libraries",
+  "name": "@calndrbrnd/platform-libraries",
   "version": "0.0.0",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -17,8 +17,8 @@
     "publish-npm": "yarn && node scripts/prepublish.js && rm -rf dist && yarn build && npm publish --access public && node scripts/postpublish.js"
   },
   "dependencies": {
-    "@calcom/features": "workspace:*",
-    "@calcom/lib": "workspace:*"
+    "@calndrbrnd/features": "workspace:*",
+    "@calndrbrnd/lib": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",

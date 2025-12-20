@@ -665,7 +665,7 @@ const EmailEmbedPreview = ({
             }}>
             <span>{t("powered_by")}</span>{" "}
             <b style={{ color: "black" }}>
-              <span> Cal.com</span>
+              <span> Calndrbrnd.com</span>
             </b>
           </div>
         </div>

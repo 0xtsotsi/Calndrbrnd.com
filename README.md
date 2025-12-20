@@ -4,10 +4,12 @@
    <img src="https://user-images.githubusercontent.com/8019099/210054112-5955e812-a76e-4160-9ddd-58f2c72f1cce.png" alt="Logo">
   </a>
 
-  <h3 align="center">Cal.com</h3>
+  <h3 align="center">Calndrbrnd</h3>
 
   <p align="center">
-    The open-source Calendly successor.
+    A fork of Cal.com - The open-source Calendly successor.
+    <br/>
+    <em>This is Calndrbrnd.com, rebranded from <a href="https://github.com/calcom/cal.com">Cal.com</a></em>
     <br />
     <a href="https://cal.com"><strong>Learn more »</strong></a>
     <br />

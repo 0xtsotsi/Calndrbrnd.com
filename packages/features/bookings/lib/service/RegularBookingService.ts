@@ -2754,7 +2754,7 @@ async function handler(
       bookingInfo: {
         name: fullName,
         email: bookerEmail,
-        eventName: "Cal.com lead",
+        eventName: "Calndrbrnd.com lead",
       },
       isTeamEventType,
     });

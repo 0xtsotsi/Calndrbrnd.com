@@ -3,7 +3,7 @@ import type { Prisma } from "@calcom/prisma/client";
 
 interface RecordFormResponseInput {
   formId: string;
-  response: Record<string, any> | Prisma.JsonValue;
+  response: Record<string, unknown> | Prisma.JsonValue;
   chosenRouteId: string | null;
 }
 

@@ -5,18 +5,17 @@ import { WEBAPP_URL } from "@calcom/lib/constants";
 import { fetchWithTimeout } from "../fetchWithTimeout";
 import logger from "../logger";
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { i18n } = require("@calcom/config/next-i18next.config");
 const log = logger.getSubLogger({ prefix: ["[i18n]"] });
 
 // Import only English translations directly to avoid HTTP requests
 // Other languages will be loaded dynamically to minimize bundle size
-const englishTranslations: Record<
-  string,
-  string
-> = require("../../../apps/web/public/static/locales/en/common.json");
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const englishTranslations: Record<string, string> = require("../../../apps/web/public/static/locales/en/common.json");
 
 const translationCache = new Map<string, Record<string, string>>();
-const i18nInstanceCache = new Map<string, any>();
+const i18nInstanceCache = new Map<string, Record<string, unknown>>();
 const SUPPORTED_NAMESPACES = ["common"];
 
 export function mergeWithEnglishFallback(localeTranslations: Record<string, string>): Record<string, string> {

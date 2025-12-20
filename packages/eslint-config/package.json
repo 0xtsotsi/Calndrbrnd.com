@@ -1,5 +1,5 @@
 {
-  "name": "@calcom/eslint-config",
+  "name": "@calndrbrnd/eslint-config",
   "version": "0.0.0",
   "type": "module",
   "private": true,

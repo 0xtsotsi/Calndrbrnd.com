@@ -118,7 +118,7 @@ const AppConnectionItem = (props: IAppConnectionItem) => {
                 });
                 // Save cookie key to return url step
                 document.cookie = `return-to=${window.location.href};path=/;max-age=3600;SameSite=Lax`;
-                buttonProps && buttonProps.onClick && buttonProps?.onClick(event);
+                if (buttonProps?.onClick) buttonProps.onClick(event);
                 setInstalling(true);
               }}>
               {installed ? t("installed") : t("connect")}
